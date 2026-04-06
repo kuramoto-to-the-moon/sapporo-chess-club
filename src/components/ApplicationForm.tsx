@@ -42,7 +42,7 @@ export default function ApplicationForm({ formspreeId, tournamentName, locale }:
     return (
       <button
         onClick={() => setIsOpen(true)}
-        className="w-full bg-[#171717] text-white text-center py-2.5 rounded-[5px] text-sm font-medium hover:bg-[#3f3f46] transition-colors duration-200 cursor-pointer"
+        className="w-full bg-[#171717] text-white text-center py-2.5 rounded-[5px] text-sm font-medium hover:bg-[#3f3f46] hover:scale-[1.02] active:scale-100 transition-all duration-150 cursor-pointer"
       >
         {i.tournament.register}
       </button>
@@ -80,7 +80,7 @@ export default function ApplicationForm({ formspreeId, tournamentName, locale }:
       />
       <button
         type="submit"
-        className="w-full bg-[#171717] text-white text-center py-2.5 rounded-[5px] text-sm font-medium hover:bg-[#3f3f46] transition-colors duration-200 cursor-pointer"
+        className="w-full bg-[#171717] text-white text-center py-2.5 rounded-[5px] text-sm font-medium hover:bg-[#3f3f46] hover:scale-[1.02] active:scale-100 transition-all duration-150 cursor-pointer"
       >
         {locale === "ja" ? "送信する" : "Submit"}
       </button>

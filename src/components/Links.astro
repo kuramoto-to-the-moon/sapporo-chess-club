@@ -21,10 +21,10 @@ const links = linksData[0]?.data.links ?? [];
         href={link.url}
         target="_blank"
         rel="noopener noreferrer"
-        class="flex justify-between arrow-link hover:text-[#525252] transition-colors"
+        class="group flex justify-between items-center -mx-3 px-3 py-3 rounded-md hover:bg-[#fafafa] transition-colors duration-150"
       >
-        <span>{link.title[locale]}</span>
-        <span class="text-[#a3a3a3] arrow">→</span>
+        <span class="text-base">{link.title[locale]}</span>
+        <span class="text-[#a3a3a3] group-hover:text-[#171717] group-hover:translate-x-1 transition-all duration-150">→</span>
       </a>
     ))}
   </div>
