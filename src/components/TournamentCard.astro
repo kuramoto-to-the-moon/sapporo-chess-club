@@ -42,7 +42,7 @@ const fileLinks = [
 ].filter(Boolean) as { label: string; href: string }[];
 ---
 
-<div class={`border ${borderClass} rounded-md p-4 hover:border-[#a3a3a3] transition-colors duration-150`}>
+<div class={`border ${borderClass} rounded-md p-4`}>
   <Badge className={`text-xs px-2 py-0.5 rounded font-semibold inline-block mb-2 ${badgeStyles[status]}`}>
     {badgeLabels[status]}
   </Badge>
@@ -57,12 +57,12 @@ const fileLinks = [
           target="_blank"
           rel="noopener noreferrer"
           class:list={[
-            "group flex justify-between items-center py-3 px-2 -mx-2 rounded transition-all duration-150 hover:bg-[#fafafa]",
+            "flex justify-between items-center py-3 px-2 -mx-2 rounded hover:bg-[#fafafa] transition-colors duration-150",
             idx < fileLinks.length - 1 && "border-b border-[#f5f5f5]",
           ]}
         >
           <span class="text-base">{link.label}</span>
-          <span class="text-[#a3a3a3] group-hover:text-[#171717] group-hover:translate-x-1 transition-all duration-150">→</span>
+          <span class="text-[#a3a3a3]">→</span>
         </a>
       ))}
     </div>
