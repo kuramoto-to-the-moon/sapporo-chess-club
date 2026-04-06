@@ -16,7 +16,10 @@ const cards = [
 ---
 
 <section id="activities" class="px-5 py-6 animate-fade-in-up">
-  <h2 class="text-sm font-semibold uppercase tracking-wider text-[#a3a3a3] mb-4">{i.activities.label}</h2>
+  <h2 class="text-sm font-semibold uppercase tracking-wider text-[#a3a3a3] mb-4 flex items-center gap-2">
+    <span class="inline-block w-1 h-3 bg-[#2563eb]"></span>
+    {i.activities.label}
+  </h2>
   <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
     {cards.map((card) => (
       <div class="flex flex-col justify-between bg-[#fafafa] rounded-lg p-4 min-h-[90px]">

@@ -19,6 +19,9 @@ const upcomingDates = allDates
 ---
 
 <section id="schedule" class="px-5 py-6 animate-fade-in-up">
-  <h2 class="text-sm font-semibold uppercase tracking-wider text-[#a3a3a3] mb-2">{i.schedule.label}</h2>
+  <h2 class="text-sm font-semibold uppercase tracking-wider text-[#a3a3a3] mb-2 flex items-center gap-2">
+    <span class="inline-block w-1 h-3 bg-[#2563eb]"></span>
+    {i.schedule.label}
+  </h2>
   <ScheduleList dates={upcomingDates} locale={locale} client:visible />
 </section>
