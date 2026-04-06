@@ -28,6 +28,27 @@ dates:
     room: "810A"
     venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
     type: meeting
+  - date: "2026-06-07"
+    dayOfWeek: { ja: "日", en: "Sun" }
+    startTime: "13:00"
+    endTime: "17:00"
+    room: "810A"
+    venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
+    type: meeting
+  - date: "2026-06-21"
+    dayOfWeek: { ja: "日", en: "Sun" }
+    startTime: "13:00"
+    endTime: "17:00"
+    room: "810A"
+    venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
+    type: meeting
+  - date: "2026-07-05"
+    dayOfWeek: { ja: "日", en: "Sun" }
+    startTime: "13:00"
+    endTime: "17:00"
+    room: "810A"
+    venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
+    type: meeting
   - date: "2026-07-19"
     dayOfWeek: { ja: "日", en: "Sun" }
     startTime: "10:00"
@@ -35,6 +56,7 @@ dates:
     room: "1010"
     venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
     type: tournament
+    note: { ja: "札幌サマーチェス大会", en: "Sapporo Summer Tournament" }
   - date: "2026-07-20"
     dayOfWeek: { ja: "月", en: "Mon" }
     startTime: "10:00"
@@ -42,3 +64,123 @@ dates:
     room: "1010"
     venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
     type: tournament
+    note: { ja: "札幌サマーチェス大会", en: "Sapporo Summer Tournament" }
+  - date: "2026-08-02"
+    dayOfWeek: { ja: "日", en: "Sun" }
+    startTime: "13:00"
+    endTime: "17:00"
+    room: "740"
+    venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
+    type: meeting
+    note: { ja: "注意：810Aではなく740", en: "Note: Room 740, not 810A" }
+  - date: "2026-08-23"
+    dayOfWeek: { ja: "日", en: "Sun" }
+    startTime: "13:00"
+    endTime: "17:00"
+    room: "740"
+    venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
+    type: meeting
+    note: { ja: "注意：810Aではなく740", en: "Note: Room 740, not 810A" }
+  - date: "2026-09-06"
+    dayOfWeek: { ja: "日", en: "Sun" }
+    startTime: "13:00"
+    endTime: "17:00"
+    room: "740"
+    venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
+    type: meeting
+    note: { ja: "注意：810Aではなく740", en: "Note: Room 740, not 810A" }
+  - date: "2026-09-20"
+    dayOfWeek: { ja: "日", en: "Sun" }
+    startTime: "13:00"
+    endTime: "17:00"
+    room: "740"
+    venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
+    type: meeting
+    note: { ja: "注意：810Aではなく740", en: "Note: Room 740, not 810A" }
+  - date: "2026-10-11"
+    dayOfWeek: { ja: "日", en: "Sun" }
+    startTime: "10:00"
+    endTime: "18:00"
+    room: "940"
+    venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
+    type: tournament
+    note: { ja: "札幌オータムチェス大会", en: "Sapporo Autumn Tournament" }
+  - date: "2026-10-12"
+    dayOfWeek: { ja: "月", en: "Mon" }
+    startTime: "10:00"
+    endTime: "18:00"
+    room: "940"
+    venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
+    type: tournament
+    note: { ja: "札幌オータムチェス大会", en: "Sapporo Autumn Tournament" }
+  - date: "2026-10-25"
+    dayOfWeek: { ja: "日", en: "Sun" }
+    startTime: "13:00"
+    endTime: "17:00"
+    room: "760"
+    venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
+    type: meeting
+    note: { ja: "注意：810A・740ではなく760", en: "Note: Room 760, not 810A or 740" }
+  - date: "2026-11-08"
+    dayOfWeek: { ja: "日", en: "Sun" }
+    startTime: "13:00"
+    endTime: "17:00"
+    room: "740"
+    venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
+    type: meeting
+  - date: "2026-11-22"
+    dayOfWeek: { ja: "日", en: "Sun" }
+    startTime: "13:00"
+    endTime: "17:00"
+    room: "740"
+    venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
+    type: meeting
+  - date: "2026-12-06"
+    dayOfWeek: { ja: "日", en: "Sun" }
+    startTime: "13:00"
+    endTime: "17:00"
+    room: "740"
+    venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
+    type: meeting
+  - date: "2026-12-20"
+    dayOfWeek: { ja: "日", en: "Sun" }
+    startTime: "13:00"
+    endTime: "17:00"
+    room: "740"
+    venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
+    type: meeting
+  - date: "2027-01-10"
+    dayOfWeek: { ja: "日", en: "Sun" }
+    startTime: "13:00"
+    endTime: "17:00"
+    room: "740"
+    venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
+    type: meeting
+  - date: "2027-01-24"
+    dayOfWeek: { ja: "日", en: "Sun" }
+    startTime: "13:00"
+    endTime: "17:00"
+    room: "740"
+    venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
+    type: meeting
+  - date: "2027-02-07"
+    dayOfWeek: { ja: "日", en: "Sun" }
+    startTime: "13:00"
+    endTime: "17:00"
+    room: "740"
+    venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
+    type: meeting
+  - date: "2027-02-21"
+    dayOfWeek: { ja: "日", en: "Sun" }
+    startTime: "13:00"
+    endTime: "17:00"
+    room: "740"
+    venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
+    type: meeting
+  - date: "2027-03-07"
+    dayOfWeek: { ja: "日", en: "Sun" }
+    startTime: "13:00"
+    endTime: "17:00"
+    room: "740"
+    venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
+    type: meeting
