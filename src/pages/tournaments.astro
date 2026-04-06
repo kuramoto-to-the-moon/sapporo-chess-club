@@ -21,15 +21,15 @@ const groupedByYear = years.map((year) => ({
 ---
 
 <BaseLayout title={i.tournament.pageTitle} locale={locale}>
-  <section class="px-5 pt-8 pb-5 animate-fade-in-up">
+  <section class="px-5 pt-16 md:pt-20 pb-10 animate-fade-in-up">
     <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">{i.tournament.pageTitle}</h1>
-    <p class="text-sm text-[#a3a3a3] mt-1.5">{i.tournament.pageSubtitle}</p>
+    <p class="text-sm text-[#a3a3a3] mt-3">{i.tournament.pageSubtitle}</p>
   </section>
 
-  <section class="px-5 pb-5">
+  <section class="px-5 pb-10">
     {groupedByYear.map(({ year, tournaments }) => (
-      <div id={`year-${year}`} class="mb-8">
-        <h2 class="text-sm font-semibold uppercase tracking-wider text-[#a3a3a3] mb-3">{year}{locale === "ja" ? "年" : ""}</h2>
+      <div id={`year-${year}`} class="mb-12">
+        <h2 class="text-sm font-semibold uppercase tracking-wider text-[#a3a3a3] mb-4">{year}{locale === "ja" ? "年" : ""}</h2>
         <div class="flex flex-col gap-4">
           {tournaments.map((tournament) => (
             <TournamentCard
