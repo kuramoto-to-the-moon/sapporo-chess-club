@@ -8,18 +8,76 @@ interface Props {
   locale: Locale;
 }
 
+type FieldName = "name" | "email" | "jca_number" | "notes";
+type Errors = Partial<Record<FieldName, string>>;
+
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const JCA_RE = /^[A-Za-z0-9-]{1,20}$/;
+
 export default function ApplicationForm({ formspreeId, tournamentName, locale }: Props) {
   const [isOpen, setIsOpen] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [errors, setErrors] = useState<Errors>({});
   const i = t(locale);
+  const e = i.form.errors;
 
   const formId = `application-form-${formspreeId}`;
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
+  function validateValue(field: FieldName, raw: string): string | undefined {
+    const v = raw.trim();
+    switch (field) {
+      case "name":
+        if (!v) return e.nameRequired;
+        if (v.length > 50) return e.nameTooLong;
+        return;
+      case "email":
+        if (!v) return e.emailRequired;
+        if (!EMAIL_RE.test(v)) return e.emailInvalid;
+        return;
+      case "jca_number":
+        if (v && !JCA_RE.test(v)) return e.jcaInvalid;
+        return;
+      case "notes":
+        if (v.length > 500) return e.notesTooLong;
+        return;
+    }
+  }
+
+  function validateAll(form: HTMLFormElement): Errors {
+    const data = new FormData(form);
+    const next: Errors = {};
+    (["name", "email", "jca_number", "notes"] as const).forEach((f) => {
+      const msg = validateValue(f, String(data.get(f) ?? ""));
+      if (msg) next[f] = msg;
+    });
+    return next;
+  }
+
+  function handleBlur(field: FieldName) {
+    return (ev: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+      const msg = validateValue(field, ev.currentTarget.value);
+      setErrors((prev) => {
+        const next = { ...prev };
+        if (msg) next[field] = msg;
+        else delete next[field];
+        return next;
+      });
+    };
+  }
+
+  async function handleSubmit(ev: React.FormEvent<HTMLFormElement>) {
+    ev.preventDefault();
     setError(null);
-    const form = e.currentTarget;
+    const form = ev.currentTarget;
+
+    const found = validateAll(form);
+    if (Object.keys(found).length > 0) {
+      setErrors(found);
+      return;
+    }
+    setErrors({});
+
     const data = new FormData(form);
     data.append("_subject", `大会申込: ${tournamentName}`);
 
@@ -71,9 +129,16 @@ export default function ApplicationForm({ formspreeId, tournamentName, locale }:
     );
   }
 
-  const inputClass =
-    "w-full bg-white border border-[#e5e5e5] rounded px-2 py-1.5 text-sm outline-none focus:border-[#2563eb] focus:ring-1 focus:ring-[#2563eb] transition-colors";
+  const inputBase =
+    "w-full bg-white border rounded px-2 py-1.5 text-sm outline-none focus:ring-1 transition-colors";
+  const inputClass = (field: FieldName) =>
+    `${inputBase} ${
+      errors[field]
+        ? "border-red-500 focus:border-red-500 focus:ring-red-500"
+        : "border-[#e5e5e5] focus:border-[#2563eb] focus:ring-[#2563eb]"
+    }`;
   const labelClass = "block text-xs text-[#525252] mb-0.5 font-medium";
+  const errorClass = "text-xs text-red-600 mt-1";
 
   return (
     <form
@@ -101,9 +166,18 @@ export default function ApplicationForm({ formspreeId, tournamentName, locale }:
           name="name"
           required
           aria-required="true"
-          placeholder={locale === "ja" ? "お名前" : "Name"}
-          className={inputClass}
+          aria-invalid={!!errors.name}
+          aria-describedby={errors.name ? `${formId}-name-error` : undefined}
+          onBlur={handleBlur("name")}
+          autoComplete="name"
+          placeholder={locale === "ja" ? "山田 太郎" : "Taro Yamada"}
+          className={inputClass("name")}
         />
+        {errors.name && (
+          <p id={`${formId}-name-error`} role="alert" className={errorClass}>
+            {errors.name}
+          </p>
+        )}
       </div>
 
       <div>
@@ -117,22 +191,40 @@ export default function ApplicationForm({ formspreeId, tournamentName, locale }:
           name="email"
           required
           aria-required="true"
-          placeholder={locale === "ja" ? "メールアドレス" : "Email"}
-          className={inputClass}
+          aria-invalid={!!errors.email}
+          aria-describedby={errors.email ? `${formId}-email-error` : undefined}
+          onBlur={handleBlur("email")}
+          autoComplete="email"
+          inputMode="email"
+          placeholder="you@example.com"
+          className={inputClass("email")}
         />
+        {errors.email && (
+          <p id={`${formId}-email-error`} role="alert" className={errorClass}>
+            {errors.email}
+          </p>
+        )}
       </div>
 
       <div>
         <label htmlFor={`${formId}-jca`} className={labelClass}>
-          {locale === "ja" ? "JCA会員番号（任意）" : "JCA Number (optional)"}
+          {locale === "ja" ? "JCA会員番号(任意)" : "JCA Number (optional)"}
         </label>
         <input
           id={`${formId}-jca`}
           type="text"
           name="jca_number"
-          placeholder={locale === "ja" ? "JCA会員番号（任意）" : "JCA Number (optional)"}
-          className={inputClass}
+          aria-invalid={!!errors.jca_number}
+          aria-describedby={errors.jca_number ? `${formId}-jca-error` : undefined}
+          onBlur={handleBlur("jca_number")}
+          placeholder="J12345"
+          className={inputClass("jca_number")}
         />
+        {errors.jca_number && (
+          <p id={`${formId}-jca-error`} role="alert" className={errorClass}>
+            {errors.jca_number}
+          </p>
+        )}
       </div>
 
       <div>
@@ -142,10 +234,17 @@ export default function ApplicationForm({ formspreeId, tournamentName, locale }:
         <textarea
           id={`${formId}-notes`}
           name="notes"
-          placeholder={locale === "ja" ? "備考" : "Notes"}
+          aria-invalid={!!errors.notes}
+          aria-describedby={errors.notes ? `${formId}-notes-error` : undefined}
+          onBlur={handleBlur("notes")}
           rows={2}
-          className={`${inputClass} resize-none`}
+          className={`${inputClass("notes")} resize-none`}
         />
+        {errors.notes && (
+          <p id={`${formId}-notes-error`} role="alert" className={errorClass}>
+            {errors.notes}
+          </p>
+        )}
       </div>
 
       <button
