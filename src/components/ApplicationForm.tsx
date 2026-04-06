@@ -4,6 +4,7 @@ import { t } from "@/i18n";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { Button } from "@/components/ui/button";
 
 interface Props {
   formspreeId: string;
@@ -123,12 +124,14 @@ export default function ApplicationForm({ formspreeId, tournamentName, locale }:
 
   if (!isOpen) {
     return (
-      <button
+      <Button
+        type="button"
+        variant="link"
         onClick={() => setIsOpen(true)}
-        className="text-sm text-primary hover:opacity-80 transition-opacity duration-150 font-medium cursor-pointer"
+        className="h-auto p-0 text-sm font-medium hover:no-underline hover:opacity-80"
       >
         {i.tournament.register} →
-      </button>
+      </Button>
     );
   }
 
@@ -212,19 +215,17 @@ export default function ApplicationForm({ formspreeId, tournamentName, locale }:
         <Textarea {...props} rows={3} />
       ))}
 
-      <button
-        type="submit"
-        className="w-full bg-primary text-primary-foreground text-center py-2.5 rounded-md text-sm font-medium hover:opacity-90 active:opacity-80 transition-opacity duration-150 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-      >
+      <Button type="submit" className="w-full">
         {locale === "ja" ? "送信する" : "Submit"}
-      </button>
-      <button
+      </Button>
+      <Button
         type="button"
+        variant="link"
         onClick={() => setIsOpen(false)}
-        className="text-xs text-muted-foreground text-center cursor-pointer hover:text-foreground transition-colors duration-150"
+        className="h-auto p-0 text-xs text-muted-foreground hover:text-foreground hover:no-underline"
       >
         {locale === "ja" ? "閉じる" : "Cancel"}
-      </button>
+      </Button>
     </form>
   );
 }

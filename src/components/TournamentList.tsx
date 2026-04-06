@@ -7,6 +7,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { Button } from "@/components/ui/button";
 
 interface Tournament {
   title: string;
@@ -59,30 +60,28 @@ export default function TournamentList({ tournaments, years, locale }: Props) {
           </Select>
         </div>
         <div className="hidden sm:flex flex-wrap gap-2">
-          <button
-            onClick={() => setSelectedYear("all")}
+          <Button
+            type="button"
+            size="sm"
+            variant={selectedYear === "all" ? "default" : "secondary"}
             aria-pressed={selectedYear === "all"}
-            className={`px-3 py-2 rounded text-sm font-medium transition-colors duration-150 cursor-pointer min-h-[44px] ${
-              selectedYear === "all"
-                ? "bg-[#2563eb] text-white"
-                : "bg-[#fafafa] text-[#525252] hover:bg-[#f5f5f5]"
-            }`}
+            onClick={() => setSelectedYear("all")}
+            className="min-h-[44px]"
           >
             {locale === "ja" ? "すべて" : "All"}
-          </button>
+          </Button>
           {years.map((year) => (
-            <button
+            <Button
               key={year}
-              onClick={() => setSelectedYear(year)}
+              type="button"
+              size="sm"
+              variant={selectedYear === year ? "default" : "secondary"}
               aria-pressed={selectedYear === year}
-              className={`px-3 py-2 rounded text-sm font-medium transition-colors duration-150 cursor-pointer min-h-[44px] ${
-                selectedYear === year
-                  ? "bg-[#2563eb] text-white"
-                  : "bg-[#fafafa] text-[#525252] hover:bg-[#f5f5f5]"
-              }`}
+              onClick={() => setSelectedYear(year)}
+              className="min-h-[44px]"
             >
               {year}
-            </button>
+            </Button>
           ))}
         </div>
       </div>
