@@ -52,6 +52,16 @@ export default {
     resultsPdf: "Results PDF",
     gamesPgn: "Game Records PGN",
   },
+  form: {
+    errors: {
+      nameRequired: "Please enter your name",
+      nameTooLong: "Name must be 50 characters or fewer",
+      emailRequired: "Please enter your email",
+      emailInvalid: "Please enter a valid email address",
+      jcaInvalid: "JCA number must be alphanumeric with hyphens",
+      notesTooLong: "Notes must be 500 characters or fewer",
+    },
+  },
   badge: {
     open: "Open",
     results: "Results",

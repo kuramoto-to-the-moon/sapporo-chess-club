@@ -52,6 +52,16 @@ export default {
     resultsPdf: "結果 PDF",
     gamesPgn: "棋譜 PGN",
   },
+  form: {
+    errors: {
+      nameRequired: "お名前を入力してください",
+      nameTooLong: "お名前は50文字以内で入力してください",
+      emailRequired: "メールアドレスを入力してください",
+      emailInvalid: "メールアドレスの形式が正しくありません",
+      jcaInvalid: "JCA会員番号は半角英数とハイフンで入力してください",
+      notesTooLong: "備考は500文字以内で入力してください",
+    },
+  },
   badge: {
     open: "申込受付中",
     results: "結果",
