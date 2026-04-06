@@ -77,7 +77,11 @@ const venue = showTournament
         ) : (
           <>
             <p class="text-base font-semibold">{dayOfWeek}{locale === "ja" ? "曜日" : ""}</p>
-            <p class="text-sm text-[#a3a3a3] mt-0.5">{time} / {venue} {nextSchedule?.room}{locale === "ja" ? "室" : ""}</p>
+            <p class="text-sm text-[#a3a3a3] mt-0.5 flex flex-wrap gap-x-3">
+              <span>{time}</span>
+              <span>{venue}</span>
+              <span>{nextSchedule?.room}{locale === "ja" ? "室" : ""}</span>
+            </p>
           </>
         )}
       </div>
