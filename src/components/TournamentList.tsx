@@ -109,34 +109,48 @@ export default function TournamentList({ tournaments, years, locale }: Props) {
 
               {fileLinks.length > 0 && (
                 <div className="mt-3.5">
-                  {fileLinks.map((link, linkIdx) => (
-                    <div
-                      key={link.href}
-                      className={`flex justify-between items-center py-3 px-2 -mx-2 rounded ${
-                        linkIdx < fileLinks.length - 1 ? "border-b border-[#f5f5f5]" : ""
-                      }`}
-                    >
-                      <span className="text-sm">{link.label}</span>
-                      <span className="flex items-center gap-3 text-sm">
-                        <a
-                          href={link.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-[#2563eb] hover:text-[#1d4ed8] transition-colors duration-150"
-                        >
-                          {locale === "ja" ? "表示" : "View"}
-                        </a>
-                        <span className="text-[#e5e5e5]" aria-hidden="true">|</span>
-                        <a
-                          href={link.href}
-                          download=""
-                          className="text-[#2563eb] hover:text-[#1d4ed8] transition-colors duration-150"
-                        >
-                          {locale === "ja" ? "保存" : "Save"}
-                        </a>
-                      </span>
-                    </div>
-                  ))}
+                  {fileLinks.map((link, linkIdx) => {
+                    const rowClass = `flex justify-between items-center py-3 px-2 -mx-2 rounded ${
+                      linkIdx < fileLinks.length - 1 ? "border-b border-[#f5f5f5]" : ""
+                    }`;
+                    if (link.isPgn) {
+                      return (
+                        <div key={link.href} className={rowClass}>
+                          <span className="text-sm">{link.label}</span>
+                          <span className="flex items-center gap-3 text-sm">
+                            <a
+                              href={link.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-[#2563eb] hover:text-[#1d4ed8] transition-colors duration-150"
+                            >
+                              {locale === "ja" ? "表示" : "View"}
+                            </a>
+                            <span className="text-[#e5e5e5]" aria-hidden="true">|</span>
+                            <a
+                              href={link.href}
+                              download=""
+                              className="text-[#2563eb] hover:text-[#1d4ed8] transition-colors duration-150"
+                            >
+                              {locale === "ja" ? "保存" : "Save"}
+                            </a>
+                          </span>
+                        </div>
+                      );
+                    }
+                    return (
+                      <a
+                        key={link.href}
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`${rowClass} hover:bg-[#fafafa] transition-colors duration-150`}
+                      >
+                        <span className="text-sm">{link.label}</span>
+                        <span className="text-[#737373]" aria-hidden="true">→</span>
+                      </a>
+                    );
+                  })}
                 </div>
               )}
 
