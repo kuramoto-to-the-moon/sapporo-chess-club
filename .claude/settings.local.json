@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(file /Users/koutarou/Downloads/sapporo_chess/sapporo_chess/*.html)",
+      "Bash(/Users/koutarou/.claude/plugins/cache/claude-plugins-official/superpowers/5.0.6/skills/brainstorming/scripts/start-server.sh:*)",
+      "WebFetch(domain:sankoudesign.com)",
+      "WebFetch(domain:81-web.com)",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m ':*)",
+      "WebSearch",
+      "WebFetch(domain:ui.shadcn.com)",
+      "WebFetch(domain:docs.astro.build)",
+      "WebFetch(domain:pagescms.org)",
+      "WebFetch(domain:formspree.io)",
+      "WebFetch(domain:github.com)",
+      "Bash(npm --version)",
+      "Bash(pnpm --version)",
+      "Bash(pnpm install:*)",
+      "Bash(pnpm approve-builds:*)",
+      "Bash(pnpm config:*)",
+      "Bash(pnpm build:*)",
+      "Bash(git commit:*)",
+      "Bash(iconv -f SHIFT_JIS -t UTF-8 /Users/koutarou/Downloads/sapporo_chess/sapporo_chess/competition.html)",
+      "Bash(ls /Users/koutarou/Downloads/sapporo_chess/sapporo_chess/competition/*.pdf /Users/koutarou/Downloads/sapporo_chess/sapporo_chess/competition/*.pgn)",
+      "Bash(xargs -I{} basename {})"
+    ]
+  }
+}
