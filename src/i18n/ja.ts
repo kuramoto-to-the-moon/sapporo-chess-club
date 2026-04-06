@@ -30,7 +30,7 @@ export default {
     viewFullSchedule: "年間スケジュールを見る →",
   },
   clubInfo: {
-    fee: "例会参加費用",
+    fee: "参加案内",
     feeGeneral: "一般1,000円",
     feeStudent: "学生500円",
     venue: "会場",
@@ -66,7 +66,7 @@ export default {
     sectionLabel: "セクション",
     schedule: "スケジュール",
     activities: "活動内容",
-    info: "参加費用・会場",
+    info: "参加案内・会場",
     lessons: "チェス講座",
     links: "リンク",
     contact: "お問い合わせ",
