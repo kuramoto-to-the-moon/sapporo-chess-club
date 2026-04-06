@@ -45,7 +45,9 @@
       "Bash(pnpm add:*)",
       "Bash(node scripts/generate-og.mjs)",
       "Bash(curl -s https://kuramoto-to-the-moon.github.io/sapporo-chess-club/)",
-      "Bash(curl -sI https://kuramoto-to-the-moon.github.io/sapporo-chess-club/images/og.png)"
+      "Bash(curl -sI https://kuramoto-to-the-moon.github.io/sapporo-chess-club/images/og.png)",
+      "Bash(iconv -f SHIFT_JIS -t UTF-8 /Users/koutarou/Downloads/sapporo_chess/sapporo_chess/news.txt)",
+      "Bash(iconv -f UTF-8 -t UTF-8 /Users/koutarou/Downloads/sapporo_chess/sapporo_chess/old_News_Schedule/news20251125.txt)"
     ]
   }
 }
