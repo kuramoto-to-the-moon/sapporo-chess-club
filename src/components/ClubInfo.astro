@@ -16,7 +16,7 @@ const site = siteData[0].data;
 <section id="info" class="px-5 py-6 border-t border-[#f5f5f5] animate-fade-in-up">
   <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
     <div class="flex flex-col gap-2">
-      <h2 class="text-sm font-semibold uppercase tracking-wider text-[#a3a3a3] flex items-center gap-2">
+      <h2 class="text-sm font-semibold uppercase tracking-wider text-[#737373] flex items-center gap-2">
         <span class="inline-block w-1 h-3 bg-[#2563eb]"></span>
         {i.clubInfo.fee}
       </h2>
@@ -36,14 +36,14 @@ const site = siteData[0].data;
       </dl>
     </div>
     <div class="flex flex-col gap-2">
-      <h2 class="text-sm font-semibold uppercase tracking-wider text-[#a3a3a3] flex items-center gap-2">
+      <h2 class="text-sm font-semibold uppercase tracking-wider text-[#737373] flex items-center gap-2">
         <span class="inline-block w-1 h-3 bg-[#2563eb]"></span>
         {i.clubInfo.venue}
       </h2>
       <div class="flex flex-col gap-1 text-sm text-[#525252]">
         <p class="text-[#171717] font-medium">{site.venue.name[locale]} {site.venue.floor}</p>
         <p>{site.venue.address[locale]}</p>
-        <p class="text-[#a3a3a3] text-xs mt-1">{site.venue.access[locale]}</p>
+        <p class="text-[#737373] text-xs mt-1">{site.venue.access[locale]}</p>
         <a
           href="https://www.google.com/maps/search/?api=1&query=%E3%81%8B%E3%81%A7%E3%82%8B2.7"
           target="_blank"
@@ -51,6 +51,7 @@ const site = siteData[0].data;
           class="text-sm text-[#2563eb] hover:text-[#1d4ed8] transition-colors duration-150 font-medium mt-1 w-fit"
         >
           {locale === "ja" ? "Google マップで見る →" : "View on Google Maps →"}
+          <span class="sr-only">{locale === "ja" ? "（新しいタブで開く）" : "(opens in new tab)"}</span>
         </a>
       </div>
     </div>

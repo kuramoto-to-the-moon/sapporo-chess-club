@@ -118,6 +118,17 @@
   transition: transform 0.15s ease-out;
 }
 
+/* Global focus-visible styles for keyboard navigation */
+:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+/* Suppress focus ring for mouse users, show for keyboard */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .animate-fade-in-up,
   .animate-fade-in,
@@ -131,5 +142,11 @@
   }
   .arrow {
     transition: none;
+  }
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
   }
 }

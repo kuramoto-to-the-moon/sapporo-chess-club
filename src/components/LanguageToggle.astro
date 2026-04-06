@@ -14,7 +14,9 @@ const otherPath = getLocalePath(otherLocale, path);
 
 <a
   href={otherPath}
-  class="text-sm tracking-[1px] text-[#a3a3a3] hover:text-[#171717] transition-colors duration-150 px-3 py-2 -mx-3 -my-2 rounded"
+  class="text-sm tracking-[1px] text-[#737373] hover:text-[#171717] transition-colors duration-150 px-3 py-2 -mx-3 -my-2 rounded"
+  aria-label={locale === "ja" ? "Switch to English" : "日本語に切り替え"}
+  hreflang={otherLocale}
 >
   {locale === "ja" ? "EN" : "JA"}
 </a>

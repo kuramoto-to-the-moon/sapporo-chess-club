@@ -20,8 +20,8 @@ const i = t(locale);
 const badgeStyles: Record<string, string> = {
   open: "bg-[#2563eb] text-white hover:bg-[#2563eb]",
   results: "bg-[#e5e5e5] text-[#525252] hover:bg-[#e5e5e5]",
-  closed: "bg-[#f5f5f5] text-[#a3a3a3] hover:bg-[#f5f5f5]",
-  upcoming: "bg-[#f5f5f5] text-[#a3a3a3] hover:bg-[#f5f5f5]",
+  closed: "bg-[#f5f5f5] text-[#737373] hover:bg-[#f5f5f5]",
+  upcoming: "bg-[#f5f5f5] text-[#737373] hover:bg-[#f5f5f5]",
 };
 
 const badgeLabels: Record<string, string> = {
@@ -47,7 +47,7 @@ const fileLinks = [
     {badgeLabels[status]}
   </Badge>
   <p class="text-base font-semibold">{title}</p>
-  <p class="text-sm text-[#a3a3a3] mt-1">{date}</p>
+  <p class="text-sm text-[#737373] mt-1">{date}</p>
 
   {hasFiles && (
     <div class="mt-3.5">
@@ -62,7 +62,7 @@ const fileLinks = [
           ]}
         >
           <span class="text-sm">{link.label}</span>
-          <span class="text-[#a3a3a3]">→</span>
+          <span class="text-[#737373]" aria-hidden="true">→</span>
         </a>
       ))}
     </div>

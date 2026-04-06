@@ -31,10 +31,11 @@ export default function TournamentList({ tournaments, years, locale }: Props) {
       {/* Year filter — select on mobile, buttons on desktop */}
       <div className="mb-8">
         <div className="sm:hidden">
-          <label className="block text-xs uppercase tracking-wider text-[#a3a3a3] mb-2">
+          <label htmlFor="year-filter-select" className="block text-xs uppercase tracking-wider text-[#737373] mb-2">
             {locale === "ja" ? "年で絞り込み" : "Filter by year"}
           </label>
           <select
+            id="year-filter-select"
             value={selectedYear}
             onChange={(e) => setSelectedYear(e.target.value === "all" ? "all" : Number(e.target.value))}
             className="w-full px-3 py-2 rounded border border-[#e5e5e5] text-sm bg-white text-[#171717] focus:outline-none focus:border-[#2563eb] transition-colors duration-150"
@@ -48,7 +49,8 @@ export default function TournamentList({ tournaments, years, locale }: Props) {
         <div className="hidden sm:flex flex-wrap gap-2">
           <button
             onClick={() => setSelectedYear("all")}
-            className={`px-3 py-1.5 rounded text-sm font-medium transition-colors duration-150 cursor-pointer ${
+            aria-pressed={selectedYear === "all"}
+            className={`px-3 py-2 rounded text-sm font-medium transition-colors duration-150 cursor-pointer min-h-[44px] ${
               selectedYear === "all"
                 ? "bg-[#2563eb] text-white"
                 : "bg-[#fafafa] text-[#525252] hover:bg-[#f5f5f5]"
@@ -60,7 +62,8 @@ export default function TournamentList({ tournaments, years, locale }: Props) {
             <button
               key={year}
               onClick={() => setSelectedYear(year)}
-              className={`px-3 py-1.5 rounded text-sm font-medium transition-colors duration-150 cursor-pointer ${
+              aria-pressed={selectedYear === year}
+              className={`px-3 py-2 rounded text-sm font-medium transition-colors duration-150 cursor-pointer min-h-[44px] ${
                 selectedYear === year
                   ? "bg-[#2563eb] text-white"
                   : "bg-[#fafafa] text-[#525252] hover:bg-[#f5f5f5]"
@@ -89,7 +92,7 @@ export default function TournamentList({ tournaments, years, locale }: Props) {
               className={`border ${borderClass} rounded-md p-4 animate-fade-in`}
             >
               <p className="text-base font-semibold">{tournament.title}</p>
-              <p className="text-sm text-[#a3a3a3] mt-1">{tournament.date}</p>
+              <p className="text-sm text-[#737373] mt-1">{tournament.date}</p>
 
               {fileLinks.length > 0 && (
                 <div className="mt-3.5">
@@ -104,7 +107,7 @@ export default function TournamentList({ tournaments, years, locale }: Props) {
                       }`}
                     >
                       <span className="text-sm">{link.label}</span>
-                      <span className="text-[#a3a3a3]">→</span>
+                      <span className="text-[#737373]" aria-hidden="true">→</span>
                     </a>
                   ))}
                 </div>
