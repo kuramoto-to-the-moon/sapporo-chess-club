@@ -47,7 +47,7 @@ export default function HamburgerMenu({ locale }: Props) {
 
       {isOpen && (
         <div
-          className="fixed inset-0 z-50 bg-[#171717] text-[#fafafa] animate-slide-in-right"
+          className="fixed inset-0 z-50 bg-[#171717] text-[#fafafa] animate-fade-in"
           role="dialog"
           aria-modal="true"
         >
