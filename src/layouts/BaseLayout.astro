@@ -42,6 +42,16 @@ const ogImage = new URL(`${base}/images/og.png`, Astro.site).toString();
     <link rel="icon" type="image/png" sizes="32x32" href={`${base}/favicon-32x32.png`} />
     <link rel="apple-touch-icon" sizes="180x180" href={`${base}/apple-touch-icon.png`} />
 
+    {/* PWA */}
+    <link
+      rel="manifest"
+      href={`${base}/${locale === "en" ? "manifest.en.webmanifest" : "manifest.webmanifest"}`}
+    />
+    <meta name="theme-color" content="#2563eb" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content={siteName} />
+
     {/* Twitter card type: large image since we have an OG image */}
 
     {/* Open Graph */}
