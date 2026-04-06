@@ -69,10 +69,13 @@ export default function ScheduleList({ dates, locale }: Props) {
               key={date.date + idx}
               className={`py-2 ${idx < collapsedDates.length - 1 ? "border-b border-[#f5f5f5]" : ""}`}
             >
-              <div className="flex justify-between gap-3">
+              <div className="flex flex-wrap items-baseline gap-x-4">
                 <span>{formatDate(date.date, date.dayOfWeek[locale], locale)}</span>
                 <span className="text-[#a3a3a3] whitespace-nowrap">
-                  {date.startTime} / {date.room}{locale === "ja" ? "室" : ""}
+                  {date.startTime}
+                </span>
+                <span className="text-[#a3a3a3] whitespace-nowrap">
+                  {date.room}{locale === "ja" ? "室" : ""}
                 </span>
               </div>
               {date.note && (
@@ -114,7 +117,7 @@ export default function ScheduleList({ dates, locale }: Props) {
       {dates.length > 5 && (
         <button
           onClick={() => setShowAll((v) => !v)}
-          className="mt-3 text-xs text-[#a3a3a3] hover:text-[#525252] transition-colors duration-150 cursor-pointer"
+          className="mt-4 text-sm text-[#2563eb] hover:text-[#1d4ed8] transition-colors duration-150 cursor-pointer font-medium"
         >
           {showAll ? `${i.schedule.collapse} ↑` : `${i.schedule.viewAll} ↓`}
         </button>

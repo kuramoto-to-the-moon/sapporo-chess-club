@@ -23,7 +23,9 @@
       "Bash(git commit:*)",
       "Bash(iconv -f SHIFT_JIS -t UTF-8 /Users/koutarou/Downloads/sapporo_chess/sapporo_chess/competition.html)",
       "Bash(ls /Users/koutarou/Downloads/sapporo_chess/sapporo_chess/competition/*.pdf /Users/koutarou/Downloads/sapporo_chess/sapporo_chess/competition/*.pgn)",
-      "Bash(xargs -I{} basename {})"
+      "Bash(xargs -I{} basename {})",
+      "Bash(cat /Users/koutarou/sapporo_chess_club/src/content/schedule/*.yml)",
+      "Bash(cat /Users/koutarou/sapporo_chess_club/src/content/schedule/*.yaml)"
     ]
   }
 }
