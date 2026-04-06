@@ -1,0 +1,139 @@
+media: public/competition
+
+content:
+  - name: schedule
+    label: スケジュール
+    type: file
+    path: src/content/schedule/current.yaml
+    format: yaml
+    fields:
+      - name: dates
+        label: 日程
+        type: object
+        list: true
+        fields:
+          - { name: date, label: 日付, type: date, required: true }
+          - name: dayOfWeek
+            label: 曜日
+            type: object
+            fields:
+              - { name: ja, label: 日本語, type: string, required: true }
+              - { name: en, label: English, type: string, required: true }
+          - { name: startTime, label: 開始時間, type: string, required: true }
+          - { name: endTime, label: 終了時間, type: string, required: true }
+          - name: venue
+            label: 会場
+            type: object
+            fields:
+              - { name: ja, label: 日本語, type: string, required: true }
+              - { name: en, label: English, type: string, required: true }
+
+  - name: tournaments
+    label: 大会
+    type: collection
+    path: src/content/tournaments
+    format: yaml-frontmatter
+    fields:
+      - name: title
+        label: 大会名
+        type: object
+        fields:
+          - { name: ja, label: 日本語, type: string, required: true }
+          - { name: en, label: English, type: string, required: true }
+      - { name: date, label: 日付, type: date, required: true }
+      - name: venue
+        label: 会場
+        type: object
+        fields:
+          - { name: ja, label: 日本語, type: string }
+          - { name: en, label: English, type: string }
+      - name: status
+        label: ステータス
+        type: select
+        options: [open, closed, upcoming, results]
+        required: true
+      - { name: detailsPdf, label: 要項 PDF, type: file }
+      - { name: resultsPdf, label: 結果 PDF, type: file }
+      - { name: gamesPgn, label: 棋譜 PGN, type: file }
+      - { name: formspreeId, label: Formspree ID, type: string }
+      - { name: year, label: 年, type: number, required: true }
+      - { name: sortOrder, label: 並び順, type: number }
+
+  - name: lessons
+    label: チェス講座
+    type: collection
+    path: src/content/lessons
+    format: yaml-frontmatter
+    fields:
+      - name: title
+        label: タイトル
+        type: object
+        fields:
+          - { name: ja, label: 日本語, type: string, required: true }
+          - { name: en, label: English, type: string, required: true }
+      - name: description
+        label: 説明
+        type: object
+        fields:
+          - { name: ja, label: 日本語, type: string, required: true }
+          - { name: en, label: English, type: string, required: true }
+      - name: period
+        label: 期間
+        type: object
+        fields:
+          - { name: ja, label: 日本語, type: string, required: true }
+          - { name: en, label: English, type: string, required: true }
+
+  - name: links
+    label: リンク集
+    type: file
+    path: src/content/links/links.yaml
+    format: yaml
+    fields:
+      - name: links
+        label: リンク
+        type: object
+        list: true
+        fields:
+          - name: title
+            label: タイトル
+            type: object
+            fields:
+              - { name: ja, label: 日本語, type: string, required: true }
+              - { name: en, label: English, type: string, required: true }
+          - { name: url, label: URL, type: string, required: true }
+
+  - name: site
+    label: サイト情報
+    type: file
+    path: src/content/site/info.yaml
+    format: yaml
+    fields:
+      - { name: email, label: メール, type: string, required: true }
+      - { name: phone, label: 電話番号, type: string, required: true }
+      - name: venue
+        label: 会場
+        type: object
+        fields:
+          - name: name
+            type: object
+            fields:
+              - { name: ja, type: string, required: true }
+              - { name: en, type: string, required: true }
+          - { name: floor, type: string }
+          - name: address
+            type: object
+            fields:
+              - { name: ja, type: string, required: true }
+              - { name: en, type: string, required: true }
+          - name: access
+            type: object
+            fields:
+              - { name: ja, type: string, required: true }
+              - { name: en, type: string, required: true }
+      - name: fee
+        label: 参加費
+        type: object
+        fields:
+          - { name: general, label: 一般, type: number, required: true }
+          - { name: student, label: 学生, type: number, required: true }
