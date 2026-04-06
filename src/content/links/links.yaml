@@ -1,0 +1,7 @@
+links:
+  - title: { ja: "日本チェス協会", en: "Japan Chess Association" }
+    url: "https://www.chess.or.jp/"
+  - title: { ja: "Chess.com", en: "Chess.com" }
+    url: "https://www.chess.com/"
+  - title: { ja: "lichess.org", en: "lichess.org" }
+    url: "https://lichess.org/"

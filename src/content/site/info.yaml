@@ -1,0 +1,10 @@
+email: "sapporochessclub@gmail.com"
+phone: "011-865-0355"
+venue:
+  name: { ja: "かでる2.7", en: "Kaderu 2.7" }
+  floor: "10F"
+  address: { ja: "札幌市中央区北2条西7丁目", en: "Kita 2 Nishi 7, Chuo-ku, Sapporo" }
+  access: { ja: "JR札幌駅 徒歩15分", en: "15 min walk from JR Sapporo Station" }
+fee:
+  general: 1000
+  student: 500
