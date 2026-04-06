@@ -108,7 +108,7 @@ export default function TournamentList({ tournaments, years, locale }: Props) {
                         linkIdx < fileLinks.length - 1 ? "border-b border-[#f5f5f5]" : ""
                       }`}
                     >
-                      <span className="text-base">{link.label}</span>
+                      <span className="text-sm">{link.label}</span>
                       <span className="text-[#a3a3a3]">→</span>
                     </a>
                   ))}

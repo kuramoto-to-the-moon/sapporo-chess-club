@@ -1,4 +1,5 @@
 ---
+import { getCollection } from "astro:content";
 import { t, type Locale } from "@/i18n";
 
 interface Props {
@@ -7,13 +8,28 @@ interface Props {
 
 const { locale } = Astro.props;
 const i = t(locale);
+
+const linksData = await getCollection("links");
+const jcaLink = linksData[0]?.data.links?.[0] ?? null;
 ---
 
 <footer class="border-t border-[#f5f5f5]">
   <div class="max-w-4xl mx-auto flex items-center justify-between px-5 py-4 text-xs text-[#d4d4d4]">
     <span>© {new Date().getFullYear()} Sapporo Chess Club</span>
-    <a href="#top" class="text-[#a3a3a3] hover:text-[#2563eb] transition-colors duration-150 px-2 py-1 -mx-2 -my-1">
-      {i.footer.top}
-    </a>
+    <div class="flex items-center gap-4">
+      {jcaLink && (
+        <a
+          href={jcaLink.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-[#a3a3a3] hover:text-[#171717] transition-colors duration-150"
+        >
+          {jcaLink.title[locale]} →
+        </a>
+      )}
+      <a href="#top" class="text-[#a3a3a3] hover:text-[#171717] transition-colors duration-150 px-2 py-1 -mx-2 -my-1">
+        {i.footer.top}
+      </a>
+    </div>
   </div>
 </footer>

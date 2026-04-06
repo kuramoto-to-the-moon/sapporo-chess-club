@@ -30,7 +30,6 @@ export default function HamburgerMenu({ locale }: Props) {
     { label: i.menu.activities, href: "#activities" },
     { label: i.menu.info, href: "#info" },
     { label: i.menu.lessons, href: "#lessons" },
-    { label: i.menu.links, href: "#links" },
     { label: i.menu.contact, href: "#contact" },
   ];
 
@@ -93,7 +92,7 @@ export default function HamburgerMenu({ locale }: Props) {
                   key={anchor.href}
                   href={anchor.href}
                   onClick={() => setIsOpen(false)}
-                  className="group flex items-center gap-2 text-base text-[#a3a3a3] hover:text-[#fafafa] transition-colors duration-150 animate-fade-in-up"
+                  className="group flex items-center gap-2 text-sm text-[#a3a3a3] hover:text-[#fafafa] transition-colors duration-150 animate-fade-in-up"
                   style={{ animationDelay: `${(pages.length + idx) * 0.05}s` }}
                 >
                   {anchor.label}
