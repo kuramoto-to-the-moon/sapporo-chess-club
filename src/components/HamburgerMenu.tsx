@@ -98,26 +98,22 @@ export default function HamburgerMenu({ locale, currentPath }: Props) {
             {i.menu.sectionLabel}
           </p>
           <div className="flex flex-col gap-3">
-            {anchors.map((anchor, idx) => {
-              const isSamePage = anchor.href.startsWith("#");
-              const anchorEl = (
-                <a
-                  href={anchor.href}
-                  className="group flex items-center gap-2 text-sm text-[#d4d4d4] hover:text-[#fafafa] transition-colors duration-150 animate-fade-in-up"
-                  style={{ animationDelay: `${(pages.length + idx) * 0.05}s` }}
-                >
-                  {anchor.label}
-                  <span className="opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-150" aria-hidden="true">→</span>
-                </a>
-              );
-              return isSamePage ? (
-                <SheetClose asChild key={anchor.href}>
-                  {anchorEl}
-                </SheetClose>
-              ) : (
-                <span key={anchor.href}>{anchorEl}</span>
-              );
-            })}
+            {anchors.map((anchor, idx) => (
+              <a
+                key={anchor.href}
+                href={anchor.href}
+                onClick={() => {
+                  // 同一ページ内アンカーのみ Sheet を閉じる。
+                  // ページ遷移するアンカーは閉じない (アンマウントされる + 閉じアニメで遷移先がチラつくため)
+                  if (anchor.href.startsWith("#")) setIsOpen(false);
+                }}
+                className="group flex items-center gap-2 text-sm text-[#d4d4d4] hover:text-[#fafafa] transition-colors duration-150 animate-fade-in-up"
+                style={{ animationDelay: `${(pages.length + idx) * 0.05}s` }}
+              >
+                {anchor.label}
+                <span className="opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-150" aria-hidden="true">→</span>
+              </a>
+            ))}
           </div>
         </nav>
 

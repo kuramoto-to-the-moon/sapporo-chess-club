@@ -78,7 +78,7 @@ function formatMonthHeading(monthKey: string): string {
 
 <div class="flex flex-col gap-8">
   {groupedByMonth.map(({ key, dates: monthDates }) => (
-    <div>
+    <div class="reveal">
       <h3 class="text-sm font-semibold uppercase tracking-wider text-[#737373] mb-3 pb-2 border-b border-[#e5e5e5]">
         {formatMonthHeading(key)}
       </h3>
