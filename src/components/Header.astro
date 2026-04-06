@@ -20,7 +20,7 @@ const tournamentsHref = getLocalePath(locale, "/tournaments");
 
 <header
   id="site-header"
-  class="border-b border-[#f5f5f5] bg-white/95 backdrop-blur transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] data-[state=hidden]:-translate-y-full data-[state=pinned]:fixed data-[state=pinned]:top-0 data-[state=pinned]:left-0 data-[state=pinned]:right-0 data-[state=pinned]:z-30 data-[state=pinned]:shadow-sm"
+  class="sticky top-0 z-30 border-b border-[#f5f5f5] bg-white/95 backdrop-blur transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] data-[state=hidden]:-translate-y-full"
   aria-label="Site header"
 >
   <div class="max-w-4xl mx-auto flex items-center justify-between px-5 py-4">
@@ -71,7 +71,8 @@ const tournamentsHref = getLocalePath(locale, "/tournaments");
       }
       if (y >= maxY - 4) return;
       if (Math.abs(y - lastY) < delta) return;
-      header!.dataset.state = y > lastY ? "hidden" : "pinned";
+      if (y > lastY) header!.dataset.state = "hidden";
+      else header!.removeAttribute("data-state");
       lastY = y;
     }
     let ticking = false;
