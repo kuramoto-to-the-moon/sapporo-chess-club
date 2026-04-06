@@ -13,9 +13,9 @@ const siteData = await getCollection("site");
 const site = siteData[0].data;
 ---
 
-<section id="info" class="px-5 py-8 border-t border-[#f5f5f5] animate-fade-in-up">
-  <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-    <div class="flex flex-col gap-3">
+<section id="info" class="px-5 py-6 border-t border-[#f5f5f5] animate-fade-in-up">
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+    <div class="flex flex-col gap-2">
       <h2 class="text-sm font-semibold uppercase tracking-wider text-[#a3a3a3]">{i.clubInfo.fee}</h2>
       <dl class="flex flex-col gap-2 text-sm text-[#525252]">
         <div class="flex justify-between gap-4">
@@ -28,7 +28,7 @@ const site = siteData[0].data;
         </div>
       </dl>
     </div>
-    <div class="flex flex-col gap-3">
+    <div class="flex flex-col gap-2">
       <h2 class="text-sm font-semibold uppercase tracking-wider text-[#a3a3a3]">{i.clubInfo.venue}</h2>
       <div class="flex flex-col gap-1 text-sm text-[#525252]">
         <p class="text-[#171717] font-medium">{site.venue.name[locale]} {site.venue.floor}</p>
