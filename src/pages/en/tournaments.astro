@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import TournamentCard from "@/components/TournamentCard.astro";
+import TournamentList from "@/components/TournamentList.tsx";
 import { t } from "@/i18n";
 
 const locale = "en";
@@ -13,11 +13,18 @@ const sorted = tournamentsData.sort((a, b) => {
   return (a.data.sortOrder ?? 99) - (b.data.sortOrder ?? 99);
 });
 
-const years = [...new Set(sorted.map((t) => t.data.year))].sort((a, b) => b - a);
-const groupedByYear = years.map((year) => ({
-  year,
-  tournaments: sorted.filter((t) => t.data.year === year),
+const tournaments = sorted.map((t) => ({
+  title: t.data.title[locale],
+  date: t.data.date,
+  status: t.data.status,
+  detailsPdf: t.data.detailsPdf,
+  resultsPdf: t.data.resultsPdf,
+  gamesPgn: t.data.gamesPgn,
+  formspreeId: t.data.formspreeId,
+  year: t.data.year,
 }));
+
+const years = [...new Set(tournaments.map((t) => t.year))].sort((a, b) => b - a);
 ---
 
 <BaseLayout title={i.tournament.pageTitle} locale={locale}>
@@ -27,24 +34,6 @@ const groupedByYear = years.map((year) => ({
   </section>
 
   <section class="px-5 pb-10">
-    {groupedByYear.map(({ year, tournaments }) => (
-      <div id={`year-${year}`} class="mb-12">
-        <h2 class="text-sm font-semibold uppercase tracking-wider text-[#a3a3a3] mb-4">{year}</h2>
-        <div class="flex flex-col gap-4">
-          {tournaments.map((tournament) => (
-            <TournamentCard
-              locale={locale}
-              title={tournament.data.title[locale]}
-              date={tournament.data.date}
-              status={tournament.data.status}
-              detailsPdf={tournament.data.detailsPdf}
-              resultsPdf={tournament.data.resultsPdf}
-              gamesPgn={tournament.data.gamesPgn}
-              formspreeId={tournament.data.formspreeId}
-            />
-          ))}
-        </div>
-      </div>
-    ))}
+    <TournamentList tournaments={tournaments} years={years} locale={locale} client:load />
   </section>
 </BaseLayout>
