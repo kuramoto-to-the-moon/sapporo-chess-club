@@ -56,7 +56,8 @@ dates:
     room: "1010"
     venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
     type: tournament
-    note: { ja: "札幌サマーチェス大会", en: "Sapporo Summer Tournament" }
+    eventName: { ja: "札幌サマーチェス大会", en: "Sapporo Summer Tournament" }
+    formspreeId: "xyzabc12"
   - date: "2026-07-20"
     dayOfWeek: { ja: "月", en: "Mon" }
     startTime: "10:00"
@@ -64,7 +65,7 @@ dates:
     room: "1010"
     venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
     type: tournament
-    note: { ja: "札幌サマーチェス大会", en: "Sapporo Summer Tournament" }
+    eventName: { ja: "札幌サマーチェス大会", en: "Sapporo Summer Tournament" }
   - date: "2026-08-02"
     dayOfWeek: { ja: "日", en: "Sun" }
     startTime: "13:00"
@@ -104,7 +105,7 @@ dates:
     room: "940"
     venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
     type: tournament
-    note: { ja: "札幌オータムチェス大会", en: "Sapporo Autumn Tournament" }
+    eventName: { ja: "札幌オータムチェス大会", en: "Sapporo Autumn Tournament" }
   - date: "2026-10-12"
     dayOfWeek: { ja: "月", en: "Mon" }
     startTime: "10:00"
@@ -112,7 +113,7 @@ dates:
     room: "940"
     venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
     type: tournament
-    note: { ja: "札幌オータムチェス大会", en: "Sapporo Autumn Tournament" }
+    eventName: { ja: "札幌オータムチェス大会", en: "Sapporo Autumn Tournament" }
   - date: "2026-10-25"
     dayOfWeek: { ja: "日", en: "Sun" }
     startTime: "13:00"

@@ -1,15 +1,13 @@
 import { useState } from "react";
-import ApplicationForm from "@/components/ApplicationForm.tsx";
 import { t, type Locale } from "@/i18n";
 
 interface Tournament {
   title: string;
   date: string;
-  status: "open" | "closed" | "upcoming" | "results";
+  status: "upcoming" | "results";
   detailsPdf?: string;
   resultsPdf?: string;
   gamesPgn?: string;
-  formspreeId?: string;
   year: number;
 }
 
@@ -29,16 +27,12 @@ export default function TournamentList({ tournaments, years, locale }: Props) {
       : tournaments.filter((t) => t.year === selectedYear);
 
   const badgeStyles: Record<string, string> = {
-    open: "bg-[#2563eb] text-white",
     results: "bg-[#e5e5e5] text-[#525252]",
-    closed: "bg-[#f5f5f5] text-[#a3a3a3]",
     upcoming: "bg-[#f5f5f5] text-[#a3a3a3]",
   };
 
   const badgeLabels: Record<string, string> = {
-    open: i.badge.open,
     results: i.badge.results,
-    closed: i.badge.closed,
     upcoming: i.badge.upcoming,
   };
 
@@ -91,8 +85,7 @@ export default function TournamentList({ tournaments, years, locale }: Props) {
       {/* Tournament cards */}
       <div className="flex flex-col gap-4">
         {filtered.map((tournament, idx) => {
-          const isOpen = tournament.status === "open";
-          const borderClass = isOpen ? "border-[#e5e5e5]" : "border-[#f5f5f5]";
+          const borderClass = "border-[#f5f5f5]";
 
           const fileLinks = [
             tournament.detailsPdf && { label: i.tournament.detailsPdf, href: tournament.detailsPdf },
@@ -132,15 +125,6 @@ export default function TournamentList({ tournaments, years, locale }: Props) {
                 </div>
               )}
 
-              {isOpen && tournament.formspreeId && (
-                <div className="mt-4">
-                  <ApplicationForm
-                    formspreeId={tournament.formspreeId}
-                    tournamentName={tournament.title}
-                    locale={locale}
-                  />
-                </div>
-              )}
             </div>
           );
         })}

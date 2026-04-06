@@ -29,7 +29,8 @@
       "Bash(git rm:*)",
       "Bash(git revert:*)",
       "Bash(ls:*)",
-      "Bash(iconv -f SHIFT_JIS -t UTF-8 /Users/koutarou/Downloads/sapporo_chess/sapporo_chess/chess_class.html)"
+      "Bash(iconv -f SHIFT_JIS -t UTF-8 /Users/koutarou/Downloads/sapporo_chess/sapporo_chess/chess_class.html)",
+      "Bash(grep:*)"
     ]
   }
 }
