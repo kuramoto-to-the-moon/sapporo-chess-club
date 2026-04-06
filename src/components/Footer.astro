@@ -24,7 +24,12 @@ const jcaLink = linksData[0]?.data.links?.[0] ?? null;
         class="flex items-center gap-2 text-[#737373] hover:text-[#c8102e] transition-colors duration-150"
       >
         <img src={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/images/jca-logo.jpg`} alt="" class="h-5 w-auto" />
-        <span>{jcaLink.title[locale]} →</span>
+        <span>{jcaLink.title[locale]}</span>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+          <polyline points="15 3 21 3 21 9"></polyline>
+          <line x1="10" y1="14" x2="21" y2="3"></line>
+        </svg>
         <span class="sr-only">{locale === "ja" ? "（新しいタブで開く）" : "(opens in new tab)"}</span>
       </a>
     )}
