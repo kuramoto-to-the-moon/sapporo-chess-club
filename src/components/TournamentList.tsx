@@ -118,15 +118,18 @@ export default function TournamentList({ tournaments, years, locale }: Props) {
 
                       const handleView = async (e: React.MouseEvent) => {
                         e.preventDefault();
+                        const newWindow = window.open("", "_blank");
+                        if (!newWindow) return;
+                        newWindow.document.write(
+                          `<!doctype html><html><head><meta charset="utf-8"><title>${filename}</title><style>body{margin:0;padding:24px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px;line-height:1.6;background:#fff;color:#171717;white-space:pre-wrap;word-wrap:break-word}</style></head><body>Loading…</body></html>`
+                        );
                         try {
                           const res = await fetch(link.href);
                           const text = await res.text();
-                          const blob = new Blob([text], { type: "text/plain;charset=utf-8" });
-                          const url = URL.createObjectURL(blob);
-                          window.open(url, "_blank");
-                          setTimeout(() => URL.revokeObjectURL(url), 60000);
+                          newWindow.document.body.textContent = text;
                         } catch {
-                          window.open(link.href, "_blank");
+                          newWindow.document.body.textContent =
+                            locale === "ja" ? "読み込みに失敗しました" : "Failed to load";
                         }
                       };
 
