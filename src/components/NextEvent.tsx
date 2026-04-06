@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { t, type Locale } from "@/i18n";
 
 interface ScheduleDate {
@@ -19,16 +18,7 @@ interface Props {
 
 export default function NextEvent({ dates, locale }: Props) {
   const i = t(locale);
-  const [now, setNow] = useState<Date | null>(null);
-
-  useEffect(() => {
-    setNow(new Date());
-  }, []);
-
-  if (!now) {
-    // Server render placeholder to keep layout stable
-    return <section className="px-5 py-6 border-t border-[#f5f5f5] min-h-[120px]" />;
-  }
+  const now = new Date();
 
   const next = dates
     .filter((d) => new Date(d.date) >= now)

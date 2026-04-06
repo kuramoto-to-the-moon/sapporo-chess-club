@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { t, type Locale } from "@/i18n";
 
 interface ScheduleDate {
@@ -21,15 +20,7 @@ interface Props {
 
 export default function UpcomingScheduleList({ dates, locale, scheduleHref }: Props) {
   const i = t(locale);
-  const [now, setNow] = useState<Date | null>(null);
-
-  useEffect(() => {
-    setNow(new Date());
-  }, []);
-
-  if (!now) {
-    return <div className="min-h-[300px]" />;
-  }
+  const now = new Date();
 
   const upcoming = dates
     .filter((d) => new Date(d.date) >= now)

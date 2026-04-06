@@ -15,4 +15,4 @@ const dates = scheduleData
   .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
 ---
 
-<NextEventClient dates={dates} locale={locale} client:load />
+<NextEventClient dates={dates} locale={locale} client:only="react" />
