@@ -69,10 +69,13 @@ export default function HamburgerMenu({ locale }: Props) {
               <a
                 key={page.href}
                 href={page.href}
-                className="block mb-6 animate-fade-in-up"
+                className="group block mb-6 animate-fade-in-up"
                 style={{ animationDelay: `${idx * 0.05}s` }}
               >
-                <span className="text-4xl font-light">{page.label}</span>
+                <span className="text-4xl font-light group-hover:text-white transition-colors duration-150 inline-flex items-center gap-3">
+                  {page.label}
+                  <span className="text-2xl text-[#525252] group-hover:text-white group-hover:translate-x-2 transition-all duration-150">→</span>
+                </span>
                 <span className="block text-xs tracking-[1px] text-[#525252] mt-1">
                   {page.sub}
                 </span>
@@ -90,10 +93,11 @@ export default function HamburgerMenu({ locale }: Props) {
                   key={anchor.href}
                   href={anchor.href}
                   onClick={() => setIsOpen(false)}
-                  className="text-base text-[#a3a3a3] hover:text-[#fafafa] transition-colors animate-fade-in-up"
+                  className="group flex items-center gap-2 text-base text-[#a3a3a3] hover:text-[#fafafa] transition-colors duration-150 animate-fade-in-up"
                   style={{ animationDelay: `${(pages.length + idx) * 0.05}s` }}
                 >
                   {anchor.label}
+                  <span className="opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-150">→</span>
                 </a>
               ))}
             </div>
