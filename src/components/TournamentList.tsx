@@ -1,5 +1,12 @@
 import { useState } from "react";
 import { t, type Locale } from "@/i18n";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 interface Tournament {
   title: string;
@@ -28,23 +35,28 @@ export default function TournamentList({ tournaments, years, locale }: Props) {
 
   return (
     <div>
-      {/* Year filter — select on mobile, buttons on desktop */}
+      {/* Year filter — shadcn Select on mobile, buttons on desktop */}
       <div className="mb-8">
         <div className="sm:hidden">
           <label htmlFor="year-filter-select" className="block text-xs uppercase tracking-wider text-[#737373] mb-2">
             {locale === "ja" ? "年で絞り込み" : "Filter by year"}
           </label>
-          <select
-            id="year-filter-select"
-            value={selectedYear}
-            onChange={(e) => setSelectedYear(e.target.value === "all" ? "all" : Number(e.target.value))}
-            className="w-full px-3 py-2 rounded border border-[#e5e5e5] text-sm bg-white text-[#171717] focus:outline-none focus:border-[#2563eb] transition-colors duration-150"
+          <Select
+            value={String(selectedYear)}
+            onValueChange={(v) => setSelectedYear(v === "all" ? "all" : Number(v))}
           >
-            <option value="all">{locale === "ja" ? "すべての年" : "All years"}</option>
-            {years.map((year) => (
-              <option key={year} value={year}>{year}{locale === "ja" ? "年" : ""}</option>
-            ))}
-          </select>
+            <SelectTrigger id="year-filter-select" className="w-full">
+              <SelectValue />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="all">{locale === "ja" ? "すべての年" : "All years"}</SelectItem>
+              {years.map((year) => (
+                <SelectItem key={year} value={String(year)}>
+                  {year}{locale === "ja" ? "年" : ""}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
         </div>
         <div className="hidden sm:flex flex-wrap gap-2">
           <button
