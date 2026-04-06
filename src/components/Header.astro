@@ -58,12 +58,22 @@ const tournamentsHref = getLocalePath(locale, "/tournaments");
 <script>
   const header = document.getElementById("site-header");
   if (header) {
+    const vv = window.visualViewport;
     let lastY = window.scrollY;
+    let lastVH = vv?.height ?? window.innerHeight;
     const topThreshold = 100;
     const delta = 8;
     function update() {
+      const vh = vv?.height ?? window.innerHeight;
+      // iOS Safari: URL バー開閉でビューポート高が変わるフレームは
+      // ユーザー操作ではないので state を変えずに基準値を更新するだけ
+      if (vh !== lastVH) {
+        lastVH = vh;
+        lastY = window.scrollY;
+        return;
+      }
       const y = Math.max(0, window.scrollY);
-      const maxY = document.documentElement.scrollHeight - window.innerHeight;
+      const maxY = document.documentElement.scrollHeight - vh;
       if (y < topThreshold) {
         header!.removeAttribute("data-state");
         lastY = y;
@@ -76,18 +86,16 @@ const tournamentsHref = getLocalePath(locale, "/tournaments");
       lastY = y;
     }
     let ticking = false;
-    window.addEventListener(
-      "scroll",
-      () => {
-        if (!ticking) {
-          requestAnimationFrame(() => {
-            update();
-            ticking = false;
-          });
-          ticking = true;
-        }
-      },
-      { passive: true }
-    );
+    function onScroll() {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          update();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    vv?.addEventListener("resize", onScroll);
   }
 </script>
