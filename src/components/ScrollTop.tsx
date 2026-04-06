@@ -24,15 +24,16 @@ export default function ScrollTop() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  function scrollToTop() {
+  function scrollToTop(e: React.MouseEvent<HTMLButtonElement>) {
     window.scrollTo({ top: 0, behavior: "smooth" });
+    e.currentTarget.blur();
   }
 
   return (
     <button
       onClick={scrollToTop}
       aria-label="Scroll to top"
-      className={`fixed bottom-6 right-6 z-40 flex items-center gap-2 px-4 py-3 bg-white border border-[#e5e5e5] text-[#171717] hover:border-[#2563eb] hover:text-[#2563eb] transition-all duration-150 cursor-pointer shadow-sm ${
+      className={`fixed bottom-6 right-6 z-40 flex items-center gap-2 px-4 py-3 bg-white border border-[#e5e5e5] text-[#171717] [@media(hover:hover)]:hover:border-[#2563eb] [@media(hover:hover)]:hover:text-[#2563eb] transition-all duration-150 cursor-pointer shadow-sm ${
         visible ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 translate-y-2 pointer-events-none"
       }`}
     >
