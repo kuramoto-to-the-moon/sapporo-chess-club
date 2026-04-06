@@ -62,11 +62,14 @@ function formatMonthHeading(monthKey: string): string {
               <div class="flex-1 pt-1">
                 <p class="text-sm font-semibold flex items-center gap-2 flex-wrap">
                   {isTournament && <span class="text-xs px-1.5 py-0.5 rounded bg-[#2563eb] text-white font-semibold">{locale === "ja" ? "大会" : "Tournament"}</span>}
-                  <span>{date.note?.[locale] ?? (locale === "ja" ? "例会" : "Meeting")}</span>
+                  <span>{isTournament ? (date.note?.[locale] ?? (locale === "ja" ? "大会" : "Tournament")) : (locale === "ja" ? "例会" : "Meeting")}</span>
                 </p>
                 <p class="text-xs text-[#a3a3a3] mt-1">
                   {date.startTime}–{date.endTime} / {date.room}{locale === "ja" ? "室" : ""}
                 </p>
+                {!isTournament && date.note && (
+                  <p class="text-xs text-[#a3a3a3] mt-1">{date.note[locale]}</p>
+                )}
               </div>
             </li>
           );

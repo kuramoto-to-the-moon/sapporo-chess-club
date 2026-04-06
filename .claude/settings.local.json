@@ -26,7 +26,8 @@
       "Bash(xargs -I{} basename {})",
       "Bash(cat /Users/koutarou/sapporo_chess_club/src/content/schedule/*.yml)",
       "Bash(cat /Users/koutarou/sapporo_chess_club/src/content/schedule/*.yaml)",
-      "Bash(git rm:*)"
+      "Bash(git rm:*)",
+      "Bash(git revert:*)"
     ]
   }
 }
