@@ -81,10 +81,10 @@ export default function TournamentList({ tournaments, years, locale }: Props) {
           const borderClass = "border-[#f5f5f5]";
 
           const fileLinks = [
-            tournament.detailsPdf && { label: i.tournament.detailsPdf, href: tournament.detailsPdf },
-            tournament.resultsPdf && { label: i.tournament.resultsPdf, href: tournament.resultsPdf },
-            tournament.gamesPgn && { label: i.tournament.gamesPgn, href: tournament.gamesPgn },
-          ].filter(Boolean) as { label: string; href: string }[];
+            tournament.detailsPdf && { label: i.tournament.detailsPdf, href: tournament.detailsPdf, download: false },
+            tournament.resultsPdf && { label: i.tournament.resultsPdf, href: tournament.resultsPdf, download: false },
+            tournament.gamesPgn && { label: i.tournament.gamesPgn, href: tournament.gamesPgn, download: true },
+          ].filter(Boolean) as { label: string; href: string; download: boolean }[];
 
           return (
             <div
@@ -100,8 +100,9 @@ export default function TournamentList({ tournaments, years, locale }: Props) {
                     <a
                       key={link.href}
                       href={link.href}
-                      target="_blank"
+                      target={link.download ? undefined : "_blank"}
                       rel="noopener noreferrer"
+                      {...(link.download ? { download: "" } : {})}
                       className={`flex justify-between items-center py-3 px-2 -mx-2 rounded hover:bg-[#fafafa] transition-colors duration-150 ${
                         linkIdx < fileLinks.length - 1 ? "border-b border-[#f5f5f5]" : ""
                       }`}
