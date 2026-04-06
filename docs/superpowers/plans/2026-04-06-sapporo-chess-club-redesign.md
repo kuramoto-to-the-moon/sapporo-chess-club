@@ -454,7 +454,9 @@ const schedule = defineCollection({
         dayOfWeek: z.object({ ja: z.string(), en: z.string() }),
         startTime: z.string(),
         endTime: z.string(),
+        room: z.string(),
         venue: z.object({ ja: z.string(), en: z.string() }),
+        type: z.enum(["meeting", "tournament"]).default("meeting"),
         note: z.object({ ja: z.string(), en: z.string() }).optional(),
       })
     ),
@@ -539,26 +541,49 @@ git commit -m "feat: add i18n translations and content collection schemas"
 
 ```yaml
 dates:
-  - date: "2026-04-13"
+  - date: "2026-04-05"
     dayOfWeek: { ja: "日", en: "Sun" }
     startTime: "13:00"
     endTime: "17:00"
-    venue: { ja: "かでる2.7 10F", en: "Kaderu 2.7 10F" }
-  - date: "2026-04-20"
+    room: "810A"
+    venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
+    type: meeting
+  - date: "2026-04-19"
     dayOfWeek: { ja: "日", en: "Sun" }
     startTime: "13:00"
     endTime: "17:00"
-    venue: { ja: "かでる2.7 10F", en: "Kaderu 2.7 10F" }
-  - date: "2026-05-11"
+    room: "740"
+    venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
+    type: meeting
+    note: { ja: "注意：810Aではなく740", en: "Note: Room 740, not 810A" }
+  - date: "2026-05-10"
     dayOfWeek: { ja: "日", en: "Sun" }
     startTime: "13:00"
     endTime: "17:00"
-    venue: { ja: "かでる2.7 10F", en: "Kaderu 2.7 10F" }
-  - date: "2026-05-25"
+    room: "810A"
+    venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
+    type: meeting
+  - date: "2026-05-24"
     dayOfWeek: { ja: "日", en: "Sun" }
     startTime: "13:00"
     endTime: "17:00"
-    venue: { ja: "かでる2.7 10F", en: "Kaderu 2.7 10F" }
+    room: "810A"
+    venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
+    type: meeting
+  - date: "2026-07-19"
+    dayOfWeek: { ja: "日", en: "Sun" }
+    startTime: "10:00"
+    endTime: "18:00"
+    room: "1010"
+    venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
+    type: tournament
+  - date: "2026-07-20"
+    dayOfWeek: { ja: "月", en: "Mon" }
+    startTime: "10:00"
+    endTime: "18:00"
+    room: "1010"
+    venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
+    type: tournament
 ```
 
 - [ ] **Step 2: 大会データを作成**
@@ -1068,7 +1093,7 @@ const venue = showTournament
         ) : (
           <>
             <p class="text-[10px] font-semibold">{dayOfWeek}{locale === "ja" ? "曜日" : ""}</p>
-            <p class="text-[8px] text-[#a3a3a3] mt-0.5">{time} / {venue}</p>
+            <p class="text-[8px] text-[#a3a3a3] mt-0.5">{time} / {venue} {nextSchedule?.room}{locale === "ja" ? "室" : ""}</p>
           </>
         )}
       </div>
@@ -1196,8 +1221,11 @@ function formatDate(dateStr: string, dow: string): string {
           idx < upcomingDates.length - 1 && "border-b border-[#f5f5f5]",
         ]}
       >
-        <span>{formatDate(date.date, date.dayOfWeek[locale])}</span>
-        <span class="text-[#a3a3a3]">{date.startTime}</span>
+        <span>
+          {formatDate(date.date, date.dayOfWeek[locale])}
+          {date.note && <span class="text-[#a3a3a3] text-[8px] ml-1">{date.note[locale]}</span>}
+        </span>
+        <span class="text-[#a3a3a3]">{date.startTime} / {date.room}{locale === "ja" ? "室" : ""}</span>
       </div>
     ))}
   </div>
