@@ -69,7 +69,6 @@ export default function HamburgerMenu({ locale }: Props) {
               <a
                 key={page.href}
                 href={page.href}
-                onClick={() => setIsOpen(false)}
                 className="block mb-6 animate-fade-in-up"
                 style={{ animationDelay: `${idx * 0.05}s` }}
               >
