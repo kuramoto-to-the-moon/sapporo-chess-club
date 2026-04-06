@@ -42,10 +42,9 @@ export default function ApplicationForm({ formspreeId, tournamentName, locale }:
     return (
       <button
         onClick={() => setIsOpen(true)}
-        className="inline-flex items-center gap-1 bg-[#2563eb] text-white px-4 py-1.5 rounded text-sm font-medium hover:bg-[#1d4ed8] transition-colors duration-150 cursor-pointer"
+        className="text-sm text-[#2563eb] hover:text-[#1d4ed8] transition-colors duration-150 font-medium cursor-pointer"
       >
-        {i.tournament.register}
-        <span className="text-xs">→</span>
+        {i.tournament.register} →
       </button>
     );
   }
