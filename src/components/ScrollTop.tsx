@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
 
 export default function ScrollTop() {
   const [visible, setVisible] = useState(false);
@@ -36,21 +35,21 @@ export default function ScrollTop() {
     e.currentTarget.blur();
   }
 
+  const colorClass = pressed
+    ? "border-[#2563eb] text-[#2563eb]"
+    : "border-[#e5e5e5] text-[#171717] [@media(hover:hover)]:hover:border-[#2563eb] [@media(hover:hover)]:hover:text-[#2563eb]";
+
+  const visibilityClass = visible
+    ? "opacity-100 translate-y-0 pointer-events-auto"
+    : "opacity-0 translate-y-2 pointer-events-none";
+
   return (
-    <Button
+    <button
       type="button"
-      variant="outline"
       onClick={scrollToTop}
       aria-label="Scroll to top"
-      className={`fixed bottom-6 right-6 z-40 h-auto px-4 py-3 bg-white hover:bg-white shadow-sm transition-all duration-150 [@media(hover:hover)]:hover:border-[#2563eb] [@media(hover:hover)]:hover:text-[#2563eb] ${
-        pressed
-          ? "border-[#2563eb] text-[#2563eb] hover:text-[#2563eb]"
-          : "border-[#e5e5e5] text-[#171717] hover:text-[#171717]"
-      } ${
-        visible
-          ? "opacity-100 translate-y-0 pointer-events-auto"
-          : "opacity-0 translate-y-2 pointer-events-none"
-      }`}
+      style={{ right: "max(1.5rem, calc((100vw - 56rem) / 2 - 1rem))" }}
+      className={`fixed bottom-6 z-40 inline-flex items-center gap-2 px-4 py-3 rounded-md bg-white border shadow-sm text-sm font-medium transition-all duration-150 cursor-pointer ${colorClass} ${visibilityClass}`}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -66,6 +65,6 @@ export default function ScrollTop() {
         <polyline points="18 15 12 9 6 15" />
       </svg>
       <span className="text-xs font-semibold uppercase tracking-wider">Top</span>
-    </Button>
+    </button>
   );
 }

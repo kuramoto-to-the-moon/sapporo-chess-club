@@ -18,7 +18,11 @@ const scheduleHref = getLocalePath(locale, "/schedule");
 const tournamentsHref = getLocalePath(locale, "/tournaments");
 ---
 
-<header class="border-b border-[#f5f5f5]" aria-label="Site header">
+<header
+  id="site-header"
+  class="border-b border-[#f5f5f5] bg-white/95 backdrop-blur transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] data-[state=hidden]:-translate-y-full data-[state=pinned]:fixed data-[state=pinned]:top-0 data-[state=pinned]:left-0 data-[state=pinned]:right-0 data-[state=pinned]:z-30 data-[state=pinned]:shadow-sm"
+  aria-label="Site header"
+>
   <div class="max-w-4xl mx-auto flex items-center justify-between px-5 py-4">
     <a
       href={homeHref}
@@ -50,3 +54,36 @@ const tournamentsHref = getLocalePath(locale, "/tournaments");
     </div>
   </div>
 </header>
+
+<script>
+  const header = document.getElementById("site-header");
+  if (header) {
+    let lastY = window.scrollY;
+    const threshold = 100;
+    function update() {
+      const y = window.scrollY;
+      if (y < threshold) {
+        header!.removeAttribute("data-state");
+      } else if (y > lastY) {
+        header!.dataset.state = "hidden";
+      } else {
+        header!.dataset.state = "pinned";
+      }
+      lastY = y;
+    }
+    let ticking = false;
+    window.addEventListener(
+      "scroll",
+      () => {
+        if (!ticking) {
+          requestAnimationFrame(() => {
+            update();
+            ticking = false;
+          });
+          ticking = true;
+        }
+      },
+      { passive: true }
+    );
+  }
+</script>
