@@ -8,9 +8,21 @@ import type { Locale } from "@/i18n";
 interface Props {
   title: string;
   locale: Locale;
+  description?: string;
 }
 
-const { title, locale } = Astro.props;
+const { title, locale, description } = Astro.props;
+
+const siteName = locale === "ja" ? "札幌チェスクラブ" : "Sapporo Chess Club";
+const fullTitle = `${siteName} | ${title}`;
+const defaultDescription =
+  locale === "ja"
+    ? "札幌チェスクラブは、北海道のチェス愛好家が集まるコミュニティです。月2回の例会、年3回の公式大会、初心者向けチェス講座を開催。見学無料、初心者歓迎。"
+    : "Sapporo Chess Club is a community for chess enthusiasts in Hokkaido. We hold meetups twice a month, three official tournaments a year, and a beginner chess course. Observation is free, beginners welcome.";
+const metaDescription = description ?? defaultDescription;
+
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
+const ogImage = new URL(`${import.meta.env.BASE_URL.replace(/\/$/, "")}/images/jca-logo.jpg`, Astro.site).toString();
 ---
 
 <!doctype html>
@@ -18,7 +30,24 @@ const { title, locale } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{locale === "ja" ? "札幌チェスクラブ" : "Sapporo Chess Club"} | {title}</title>
+    <title>{fullTitle}</title>
+    <meta name="description" content={metaDescription} />
+    <link rel="canonical" href={canonicalUrl} />
+
+    {/* Open Graph */}
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={metaDescription} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:locale" content={locale === "ja" ? "ja_JP" : "en_US"} />
+    <meta property="og:image" content={ogImage} />
+
+    {/* Twitter */}
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={metaDescription} />
+    <meta name="twitter:image" content={ogImage} />
   </head>
   <body class="bg-white text-[#171717] font-sans antialiased">
     <a
