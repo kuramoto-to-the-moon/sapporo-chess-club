@@ -39,10 +39,10 @@ export default function HamburgerMenu({ locale }: Props) {
       <button
         onClick={() => setIsOpen(true)}
         aria-label="Open menu"
-        className="flex flex-col gap-[3px] cursor-pointer"
+        className="flex flex-col items-center justify-center gap-[5px] cursor-pointer p-3 -m-3"
       >
-        <span className="w-4 h-[1.5px] bg-[#171717]" />
-        <span className="w-4 h-[1.5px] bg-[#171717]" />
+        <span className="w-6 h-[2px] bg-[#171717]" />
+        <span className="w-6 h-[2px] bg-[#171717]" />
       </button>
 
       {isOpen && (
@@ -58,7 +58,7 @@ export default function HamburgerMenu({ locale }: Props) {
             <button
               onClick={() => setIsOpen(false)}
               aria-label="Close menu"
-              className="text-xl font-extralight cursor-pointer"
+              className="text-2xl font-extralight cursor-pointer p-3 -m-3"
             >
               ✕
             </button>
