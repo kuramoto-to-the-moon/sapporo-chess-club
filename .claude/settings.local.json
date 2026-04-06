@@ -43,7 +43,9 @@
       "Bash(gh issue:*)",
       "Bash(curl -sI \"https://kuramoto-to-the-moon.github.io/sapporo-chess-club/competition/HokkaidoChessCh2026_NoAnalysis.pgn\")",
       "Bash(pnpm add:*)",
-      "Bash(node scripts/generate-og.mjs)"
+      "Bash(node scripts/generate-og.mjs)",
+      "Bash(curl -s https://kuramoto-to-the-moon.github.io/sapporo-chess-club/)",
+      "Bash(curl -sI https://kuramoto-to-the-moon.github.io/sapporo-chess-club/images/og.png)"
     ]
   }
 }
