@@ -1,0 +1,17 @@
+---
+import { t, type Locale } from "@/i18n";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const i = t(locale);
+---
+
+<footer class="flex items-center justify-between px-5 py-3 border-t border-[#f5f5f5] text-[8px] text-[#d4d4d4]">
+  <span>© {new Date().getFullYear()} Sapporo Chess Club</span>
+  <a href="#top" class="text-[#a3a3a3] hover:text-[#171717] transition-colors">
+    {i.footer.top}
+  </a>
+</footer>

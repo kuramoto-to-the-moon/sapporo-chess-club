@@ -1,0 +1,20 @@
+---
+import LanguageToggle from "./LanguageToggle.astro";
+import HamburgerMenu from "./HamburgerMenu.tsx";
+import type { Locale } from "@/i18n";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const currentPath = Astro.url.pathname.replace(/^\/(en\/)?/, "/");
+---
+
+<header class="flex items-center justify-between px-5 py-3">
+  <span class="text-[9px] tracking-[3px] text-[#a3a3a3]">SAPPORO CHESS CLUB</span>
+  <div class="flex items-center gap-4">
+    <LanguageToggle locale={locale} path={currentPath} />
+    <HamburgerMenu locale={locale} client:load />
+  </div>
+</header>
