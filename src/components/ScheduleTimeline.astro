@@ -19,7 +19,6 @@ interface Props {
 
 const { dates, locale } = Astro.props;
 
-// Group by month
 function getMonthKey(dateStr: string): string {
   const d = new Date(dateStr);
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}`;
@@ -32,50 +31,47 @@ for (const d of dates) {
   monthMap.get(key)!.push(d);
 }
 const groupedByMonth = Array.from(monthMap.entries()).map(([key, dates]) => ({ key, dates }));
+
+function formatMonthHeading(monthKey: string): string {
+  const [year, month] = monthKey.split("-");
+  if (locale === "ja") {
+    return `${year}年 ${parseInt(month)}月`;
+  }
+  const d = new Date(`${monthKey}-01`);
+  return d.toLocaleDateString("en", { year: "numeric", month: "long" });
+}
 ---
 
-<div class="relative pl-16 mt-2">
-  <div class="absolute left-[60px] top-2 bottom-2 w-px bg-[#e5e5e5]"></div>
-  {groupedByMonth.map(({ key, dates: monthDates }) => {
-    const hasTournament = monthDates.some((d) => d.type === "tournament");
-    const dotColor = hasTournament ? "bg-[#dc2626]" : "bg-[#2563eb]";
-    const monthLabel = locale === "ja"
-      ? `${parseInt(key.split("-")[1])}月`
-      : new Date(`${key}-01`).toLocaleDateString("en", { month: "short" });
-    return (
-      <div class="relative mb-6">
-        <div class="absolute -left-16 top-0 w-10 text-right text-sm font-semibold text-[#a3a3a3]">
-          {monthLabel}
-        </div>
-        <div class={`absolute -left-[19px] top-1.5 w-[9px] h-[9px] rounded-full border-2 border-white ${dotColor}`}></div>
-        <div class="flex flex-col gap-1.5">
-          {monthDates.map((date) => {
-            const d = new Date(date.date);
-            const day = d.getDate();
-            const isTournament = date.type === "tournament";
-            return (
-              <div class="text-sm">
-                <div class="flex flex-wrap items-baseline gap-x-3">
-                  <span class={isTournament ? "font-semibold" : ""}>
-                    {day}{locale === "ja" ? "日" : ""} {date.dayOfWeek[locale]}
-                  </span>
-                  <span class="text-[#a3a3a3] whitespace-nowrap">
-                    {isTournament
-                      ? (locale === "ja" ? "大会" : "Tournament")
-                      : (locale === "ja" ? "例会" : "Meeting")}
-                  </span>
-                  <span class="text-[#a3a3a3] whitespace-nowrap">
-                    {date.room}{locale === "ja" ? "室" : ""}
-                  </span>
-                </div>
-                {date.note && (
-                  <p class="text-[#a3a3a3] text-xs mt-0.5">{date.note[locale]}</p>
-                )}
+<div class="flex flex-col gap-8">
+  {groupedByMonth.map(({ key, dates: monthDates }) => (
+    <div>
+      <h3 class="text-sm font-semibold uppercase tracking-wider text-[#a3a3a3] mb-3 pb-2 border-b border-[#e5e5e5]">
+        {formatMonthHeading(key)}
+      </h3>
+      <ul class="flex flex-col">
+        {monthDates.map((date) => {
+          const d = new Date(date.date);
+          const day = d.getDate();
+          const isTournament = date.type === "tournament";
+          return (
+            <li class="flex items-start gap-4 py-3 border-b border-[#f5f5f5] last:border-0">
+              <div class="flex flex-col items-center min-w-[44px] pt-0.5">
+                <span class={`text-2xl font-bold leading-none ${isTournament ? "text-[#dc2626]" : "text-[#171717]"}`}>{day}</span>
+                <span class="text-xs text-[#a3a3a3] mt-1">{date.dayOfWeek[locale]}</span>
               </div>
-            );
-          })}
-        </div>
-      </div>
-    );
-  })}
+              <div class="flex-1 pt-1">
+                <p class="text-sm font-semibold flex items-center gap-2 flex-wrap">
+                  {isTournament && <span class="text-xs px-1.5 py-0.5 rounded bg-[#dc2626] text-white font-semibold">{locale === "ja" ? "大会" : "Tournament"}</span>}
+                  <span>{date.note?.[locale] ?? (locale === "ja" ? "例会" : "Meeting")}</span>
+                </p>
+                <p class="text-xs text-[#a3a3a3] mt-1">
+                  {date.startTime}–{date.endTime} / {date.room}{locale === "ja" ? "室" : ""}
+                </p>
+              </div>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  ))}
 </div>
