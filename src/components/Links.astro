@@ -1,0 +1,31 @@
+---
+import { getCollection } from "astro:content";
+import { t, type Locale } from "@/i18n";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const i = t(locale);
+
+const linksData = await getCollection("links");
+const links = linksData[0]?.data.links ?? [];
+---
+
+<section id="links" class="px-5 py-3.5 border-t border-[#f5f5f5] reveal">
+  <h2 class="text-[10px] font-semibold text-[#a3a3a3] mb-2">{i.links.label}</h2>
+  <div class="text-[10px] leading-[2]">
+    {links.map((link) => (
+      <a
+        href={link.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex justify-between arrow-link hover:text-[#525252] transition-colors"
+      >
+        <span>{link.title[locale]}</span>
+        <span class="text-[#a3a3a3] arrow">→</span>
+      </a>
+    ))}
+  </div>
+</section>

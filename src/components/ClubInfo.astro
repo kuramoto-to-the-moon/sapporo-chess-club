@@ -1,0 +1,34 @@
+---
+import { getCollection } from "astro:content";
+import { t, type Locale } from "@/i18n";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const i = t(locale);
+
+const siteData = await getCollection("site");
+const site = siteData[0].data;
+---
+
+<section id="info" class="px-5 py-3.5 border-t border-[#f5f5f5] reveal">
+  <div class="grid grid-cols-2 gap-3.5">
+    <div>
+      <h2 class="text-[10px] font-semibold text-[#a3a3a3] mb-1">{i.clubInfo.fee}</h2>
+      <p class="text-[9px] leading-[1.8] text-[#525252]">
+        {locale === "ja" ? `一般${site.fee.general.toLocaleString()}円` : `General ¥${site.fee.general.toLocaleString()}`}<br />
+        {locale === "ja" ? `学生${site.fee.student}円` : `Students ¥${site.fee.student}`}
+      </p>
+    </div>
+    <div>
+      <h2 class="text-[10px] font-semibold text-[#a3a3a3] mb-1">{i.clubInfo.venue}</h2>
+      <p class="text-[9px] leading-[1.8] text-[#525252]">
+        {site.venue.name[locale]} {site.venue.floor}<br />
+        {site.venue.address[locale]}<br />
+        <span class="text-[#a3a3a3]">{site.venue.access[locale]}</span>
+      </p>
+    </div>
+  </div>
+</section>
