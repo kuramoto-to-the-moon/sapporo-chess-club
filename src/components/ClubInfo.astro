@@ -13,22 +13,28 @@ const siteData = await getCollection("site");
 const site = siteData[0].data;
 ---
 
-<section id="info" class="px-5 py-6 border-t border-[#f5f5f5] animate-fade-in-up">
-  <div class="grid grid-cols-2 gap-3.5">
-    <div>
-      <h2 class="text-sm font-semibold uppercase tracking-wider text-[#a3a3a3] mb-1">{i.clubInfo.fee}</h2>
-      <p class="text-sm leading-[1.8] text-[#525252]">
-        {locale === "ja" ? `一般${site.fee.general.toLocaleString()}円` : `General ¥${site.fee.general.toLocaleString()}`}<br />
-        {locale === "ja" ? `学生${site.fee.student}円` : `Students ¥${site.fee.student}`}
-      </p>
+<section id="info" class="px-5 py-8 border-t border-[#f5f5f5] animate-fade-in-up">
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+    <div class="flex flex-col gap-3">
+      <h2 class="text-sm font-semibold uppercase tracking-wider text-[#a3a3a3]">{i.clubInfo.fee}</h2>
+      <dl class="flex flex-col gap-2 text-sm text-[#525252]">
+        <div class="flex justify-between gap-4">
+          <dt>{locale === "ja" ? "一般" : "General"}</dt>
+          <dd class="font-medium text-[#171717]">¥{site.fee.general.toLocaleString()}</dd>
+        </div>
+        <div class="flex justify-between gap-4">
+          <dt>{locale === "ja" ? "学生" : "Students"}</dt>
+          <dd class="font-medium text-[#171717]">¥{site.fee.student.toLocaleString()}</dd>
+        </div>
+      </dl>
     </div>
-    <div>
-      <h2 class="text-sm font-semibold uppercase tracking-wider text-[#a3a3a3] mb-1">{i.clubInfo.venue}</h2>
-      <p class="text-sm leading-[1.8] text-[#525252]">
-        {site.venue.name[locale]} {site.venue.floor}<br />
-        {site.venue.address[locale]}<br />
-        <span class="text-[#a3a3a3]">{site.venue.access[locale]}</span>
-      </p>
+    <div class="flex flex-col gap-3">
+      <h2 class="text-sm font-semibold uppercase tracking-wider text-[#a3a3a3]">{i.clubInfo.venue}</h2>
+      <div class="flex flex-col gap-1 text-sm text-[#525252]">
+        <p class="text-[#171717] font-medium">{site.venue.name[locale]} {site.venue.floor}</p>
+        <p>{site.venue.address[locale]}</p>
+        <p class="text-[#a3a3a3] text-xs mt-1">{site.venue.access[locale]}</p>
+      </div>
     </div>
   </div>
 </section>
