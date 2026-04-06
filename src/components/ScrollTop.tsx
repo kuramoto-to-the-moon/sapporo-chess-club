@@ -9,7 +9,11 @@ export default function ScrollTop() {
     function onScroll() {
       if (!ticking) {
         requestAnimationFrame(() => {
-          setVisible(window.scrollY > 400);
+          const scrolled = window.scrollY > 400;
+          const nearBottom =
+            window.innerHeight + window.scrollY >=
+            document.body.offsetHeight - 120;
+          setVisible(scrolled && !nearBottom);
           ticking = false;
         });
         ticking = true;
