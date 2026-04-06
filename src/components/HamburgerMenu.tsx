@@ -151,7 +151,7 @@ export default function HamburgerMenu({ locale, currentPath }: Props) {
 
             <div className="border-t border-[#2a2a2a] my-5" role="separator" />
 
-            <p className="text-xs tracking-[1px] text-[#d4d4d4] mb-3">
+            <p className="text-xs uppercase tracking-wider text-[#737373] mb-3">
               {i.menu.sectionLabel}
             </p>
             <div className="flex flex-col gap-3">
