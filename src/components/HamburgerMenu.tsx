@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { t, getLocalePath, type Locale } from "@/i18n";
+const BASE = import.meta.env.BASE_URL.replace(/\/$/, "");
 
 interface Props {
   locale: Locale;
@@ -132,7 +133,7 @@ export default function HamburgerMenu({ locale, currentPath }: Props) {
                 onClick={() => setIsOpen(false)}
                 className="group block mb-6 animate-fade-in-up"
                 style={{ animationDelay: `${idx * 0.05}s` }}
-                aria-current={page.href === currentPath ? "page" : undefined}
+                aria-current={page.href === getLocalePath(locale, currentPath) ? "page" : undefined}
               >
                 <span className="text-4xl font-light group-hover:text-white transition-colors duration-150 inline-flex items-center gap-3">
                   {page.label}

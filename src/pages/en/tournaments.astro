@@ -13,13 +13,20 @@ const sorted = tournamentsData.sort((a, b) => {
   return (a.data.sortOrder ?? 99) - (b.data.sortOrder ?? 99);
 });
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+function withBase(path: string | undefined): string | undefined {
+  if (!path) return path;
+  if (path.startsWith("http")) return path;
+  return base + path;
+}
+
 const tournaments = sorted.map((t) => ({
   title: t.data.title[locale],
   date: t.data.date,
   status: t.data.status,
-  detailsPdf: t.data.detailsPdf,
-  resultsPdf: t.data.resultsPdf,
-  gamesPgn: t.data.gamesPgn,
+  detailsPdf: withBase(t.data.detailsPdf),
+  resultsPdf: withBase(t.data.resultsPdf),
+  gamesPgn: withBase(t.data.gamesPgn),
   year: t.data.year,
 }));
 

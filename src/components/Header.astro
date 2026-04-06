@@ -9,7 +9,10 @@ interface Props {
 
 const { locale } = Astro.props;
 const i = t(locale);
-const currentPath = Astro.url.pathname.replace(/^\/(en\/)?/, "/");
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const currentPath = Astro.url.pathname
+  .replace(new RegExp(`^${base}`), "")
+  .replace(/^\/(en\/)?/, "/");
 const homeHref = getLocalePath(locale, "/");
 const scheduleHref = getLocalePath(locale, "/schedule");
 const tournamentsHref = getLocalePath(locale, "/tournaments");
