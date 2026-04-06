@@ -110,7 +110,7 @@ export default function TournamentList({ tournaments, years, locale }: Props) {
               {fileLinks.length > 0 && (
                 <div className="mt-3.5">
                   {fileLinks.map((link, linkIdx) => {
-                    const rowClass = `flex justify-between items-center py-3 px-2 -mx-2 rounded hover:bg-[#fafafa] transition-colors duration-150 ${
+                    const rowClass = `flex items-center gap-1.5 py-3 px-2 -mx-2 rounded hover:bg-[#fafafa] transition-colors duration-150 ${
                       linkIdx < fileLinks.length - 1 ? "border-b border-[#f5f5f5]" : ""
                     }`;
                     if (link.isPgn) {
