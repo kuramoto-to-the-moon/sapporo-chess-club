@@ -27,7 +27,9 @@
       "Bash(cat /Users/koutarou/sapporo_chess_club/src/content/schedule/*.yml)",
       "Bash(cat /Users/koutarou/sapporo_chess_club/src/content/schedule/*.yaml)",
       "Bash(git rm:*)",
-      "Bash(git revert:*)"
+      "Bash(git revert:*)",
+      "Bash(ls:*)",
+      "Bash(iconv -f SHIFT_JIS -t UTF-8 /Users/koutarou/Downloads/sapporo_chess/sapporo_chess/chess_class.html)"
     ]
   }
 }
