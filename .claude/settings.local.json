@@ -38,7 +38,8 @@
       "Bash(git push:*)",
       "Bash(gh api:*)",
       "Bash(gh run:*)",
-      "Bash(curl -sI https://kuramoto-to-the-moon.github.io/sapporo-chess-club/)"
+      "Bash(curl -sI https://kuramoto-to-the-moon.github.io/sapporo-chess-club/)",
+      "Bash(pnpm dlx:*)"
     ]
   }
 }
