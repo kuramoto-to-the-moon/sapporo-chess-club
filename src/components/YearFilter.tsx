@@ -30,7 +30,7 @@ export default function YearFilter({ tournaments, years, locale, renderCard }: P
           <button
             key={year}
             onClick={() => setSelectedYear(year)}
-            className={`text-[9px] px-2 py-0.5 rounded-[3px] cursor-pointer transition-colors duration-200 ${
+            className={`text-sm px-2 py-0.5 rounded-[3px] cursor-pointer transition-colors duration-200 ${
               year === selectedYear
                 ? "bg-[#171717] text-white"
                 : "bg-[#fafafa] text-[#525252] hover:bg-[#e5e5e5]"

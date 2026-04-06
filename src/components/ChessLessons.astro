@@ -14,9 +14,9 @@ const lesson = lessonsData[0]?.data;
 ---
 
 {lesson && (
-  <section id="lessons" class="px-5 py-3.5 bg-[#fafafa] border-t border-[#f5f5f5] reveal">
-    <h2 class="text-[10px] font-semibold text-[#a3a3a3] mb-1.5">{i.lessons.label}</h2>
-    <p class="text-xs font-semibold mb-1">{lesson.title[locale]}</p>
-    <p class="text-[9px] text-[#a3a3a3] leading-[1.7]">{lesson.description[locale]}</p>
+  <section id="lessons" class="px-5 py-6 bg-[#fafafa] border-t border-[#f5f5f5]">
+    <h2 class="text-sm font-semibold uppercase tracking-wider text-[#a3a3a3] mb-1.5">{i.lessons.label}</h2>
+    <p class="text-base font-semibold mb-1">{lesson.title[locale]}</p>
+    <p class="text-sm text-[#a3a3a3] leading-[1.7]">{lesson.description[locale]}</p>
   </section>
 )}

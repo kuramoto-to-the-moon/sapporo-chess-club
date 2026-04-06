@@ -53,31 +53,31 @@ const venue = showTournament
 ---
 
 {displayDate && (
-  <section class="px-5 py-3.5 border-t border-[#f5f5f5] reveal">
+  <section class="px-5 py-6 border-t border-[#f5f5f5]">
     <div class="flex items-center gap-1.5 mb-1.5">
-      <span class="text-[10px] font-semibold text-[#a3a3a3]">
+      <span class="text-sm font-semibold uppercase tracking-wider text-[#a3a3a3]">
         {showTournament ? i.nextEvent.event : i.nextEvent.meeting}
       </span>
       {showTournament && (
-        <Badge className="bg-[#171717] text-white text-[8px] px-1.5 py-0 rounded-[3px] font-semibold hover:bg-[#171717]">
+        <Badge className="bg-[#171717] text-white text-xs px-1.5 py-0 rounded-[3px] font-semibold hover:bg-[#171717]">
           {i.badge.tournamentTag}
         </Badge>
       )}
     </div>
     <div class="flex items-baseline gap-2.5">
-      <span class="text-[30px] font-extralight leading-none">
+      <span class="text-5xl font-extralight leading-none">
         {month}/{day}
       </span>
       <div>
         {showTournament ? (
           <>
-            <p class="text-[10px] font-semibold">{openTournament!.data.title[locale]}</p>
-            {venue && <p class="text-[8px] text-[#a3a3a3] mt-0.5">{venue}</p>}
+            <p class="text-base font-semibold">{openTournament!.data.title[locale]}</p>
+            {venue && <p class="text-sm text-[#a3a3a3] mt-0.5">{venue}</p>}
           </>
         ) : (
           <>
-            <p class="text-[10px] font-semibold">{dayOfWeek}{locale === "ja" ? "曜日" : ""}</p>
-            <p class="text-[8px] text-[#a3a3a3] mt-0.5">{time} / {venue} {nextSchedule?.room}{locale === "ja" ? "室" : ""}</p>
+            <p class="text-base font-semibold">{dayOfWeek}{locale === "ja" ? "曜日" : ""}</p>
+            <p class="text-sm text-[#a3a3a3] mt-0.5">{time} / {venue} {nextSchedule?.room}{locale === "ja" ? "室" : ""}</p>
           </>
         )}
       </div>

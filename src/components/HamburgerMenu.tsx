@@ -51,14 +51,14 @@ export default function HamburgerMenu({ locale }: Props) {
           role="dialog"
           aria-modal="true"
         >
-          <div className="flex items-center justify-between px-5 py-3">
-            <span className="text-[9px] tracking-[3px] text-[#525252]">
+          <div className="flex items-center justify-between px-5 py-4">
+            <span className="text-xs tracking-[3px] text-[#525252]">
               SAPPORO CHESS CLUB
             </span>
             <button
               onClick={() => setIsOpen(false)}
               aria-label="Close menu"
-              className="text-lg font-extralight cursor-pointer"
+              className="text-xl font-extralight cursor-pointer"
             >
               ✕
             </button>
@@ -73,8 +73,8 @@ export default function HamburgerMenu({ locale }: Props) {
                 className="block mb-6 animate-fade-in-up"
                 style={{ animationDelay: `${idx * 0.05}s` }}
               >
-                <span className="text-[28px] font-light">{page.label}</span>
-                <span className="block text-[8px] tracking-[1px] text-[#525252] mt-1">
+                <span className="text-4xl font-light">{page.label}</span>
+                <span className="block text-xs tracking-[1px] text-[#525252] mt-1">
                   {page.sub}
                 </span>
               </a>
@@ -82,7 +82,7 @@ export default function HamburgerMenu({ locale }: Props) {
 
             <div className="border-t border-[#2a2a2a] my-5" />
 
-            <p className="text-[8px] tracking-[1px] text-[#525252] mb-3">
+            <p className="text-xs tracking-[1px] text-[#525252] mb-3">
               {i.menu.sectionLabel}
             </p>
             <div className="flex flex-col gap-3">
@@ -91,7 +91,7 @@ export default function HamburgerMenu({ locale }: Props) {
                   key={anchor.href}
                   href={anchor.href}
                   onClick={() => setIsOpen(false)}
-                  className="text-sm text-[#a3a3a3] hover:text-[#fafafa] transition-colors animate-fade-in-up"
+                  className="text-base text-[#a3a3a3] hover:text-[#fafafa] transition-colors animate-fade-in-up"
                   style={{ animationDelay: `${(pages.length + idx) * 0.05}s` }}
                 >
                   {anchor.label}
@@ -100,8 +100,8 @@ export default function HamburgerMenu({ locale }: Props) {
             </div>
           </nav>
 
-          <div className="absolute bottom-0 left-0 right-0 px-5 py-3 border-t border-[#2a2a2a]">
-            <span className="text-[8px] text-[#525252]">sapporochessclub@gmail.com</span>
+          <div className="absolute bottom-0 left-0 right-0 px-5 py-4 border-t border-[#2a2a2a]">
+            <span className="text-xs text-[#525252]">sapporochessclub@gmail.com</span>
           </div>
         </div>
       )}
