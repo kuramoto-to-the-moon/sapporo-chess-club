@@ -19,9 +19,9 @@ const upcomingDates = allDates
 function formatDate(dateStr: string, dow: string): string {
   const d = new Date(dateStr);
   if (locale === "ja") {
-    return `${d.getMonth() + 1}月${d.getDate()}日 ${dow}`;
+    return `${d.getFullYear()}年${d.getMonth() + 1}月${d.getDate()}日 ${dow}`;
   }
-  return `${d.toLocaleDateString("en", { month: "short" })} ${d.getDate()} ${dow}`;
+  return `${d.toLocaleDateString("en", { month: "short" })} ${d.getDate()}, ${d.getFullYear()} ${dow}`;
 }
 ---
 

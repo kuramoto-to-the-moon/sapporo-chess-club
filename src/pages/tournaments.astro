@@ -27,17 +27,6 @@ const groupedByYear = years.map((year) => ({
   </section>
 
   <section class="px-5 pb-5">
-    <div class="flex gap-1.5 flex-wrap mb-5">
-      {years.map((year) => (
-        <a
-          href={`#year-${year}`}
-          class="text-sm px-2 py-0.5 rounded-[3px] bg-[#fafafa] text-[#525252] hover:bg-[#e5e5e5] transition-colors"
-        >
-          {year}
-        </a>
-      ))}
-    </div>
-
     {groupedByYear.map(({ year, tournaments }) => (
       <div id={`year-${year}`} class="mb-8">
         <h2 class="text-sm font-semibold uppercase tracking-wider text-[#a3a3a3] mb-3">{year}{locale === "ja" ? "年" : ""}</h2>
