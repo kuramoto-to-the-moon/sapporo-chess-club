@@ -56,46 +56,20 @@ const tournamentsHref = getLocalePath(locale, "/tournaments");
 </header>
 
 <script>
+  import { observeScroll } from "@/lib/scroll-observer";
+
   const header = document.getElementById("site-header");
   if (header) {
-    const vv = window.visualViewport;
-    let lastY = window.scrollY;
-    let lastVH = vv?.height ?? window.innerHeight;
     const topThreshold = 100;
-    const delta = 8;
-    function update() {
-      const vh = vv?.height ?? window.innerHeight;
-      // iOS Safari: URL バー開閉でビューポート高が変わるフレームは
-      // ユーザー操作ではないので state を変えずに基準値を更新するだけ
-      if (vh !== lastVH) {
-        lastVH = vh;
-        lastY = window.scrollY;
-        return;
-      }
-      const y = Math.max(0, window.scrollY);
-      const maxY = document.documentElement.scrollHeight - vh;
+    observeScroll(({ y, direction, maxY }) => {
       if (y < topThreshold) {
-        header!.removeAttribute("data-state");
-        lastY = y;
+        header.removeAttribute("data-state");
         return;
       }
+      // 最下部付近では state を変更しない (ラバーバンド対策)
       if (y >= maxY - 4) return;
-      if (Math.abs(y - lastY) < delta) return;
-      if (y > lastY) header!.dataset.state = "hidden";
-      else header!.removeAttribute("data-state");
-      lastY = y;
-    }
-    let ticking = false;
-    function onScroll() {
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          update();
-          ticking = false;
-        });
-        ticking = true;
-      }
-    }
-    window.addEventListener("scroll", onScroll, { passive: true });
-    vv?.addEventListener("resize", onScroll);
+      if (direction === "down") header.dataset.state = "hidden";
+      else if (direction === "up") header.removeAttribute("data-state");
+    });
   }
 </script>

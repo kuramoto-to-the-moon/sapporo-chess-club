@@ -1,28 +1,20 @@
 import { useState, useEffect } from "react";
+import { observeScroll } from "@/lib/scroll-observer";
 
 export default function ScrollTop() {
   const [visible, setVisible] = useState(false);
   const [pressed, setPressed] = useState(false);
 
   useEffect(() => {
-    let ticking = false;
-
-    function onScroll() {
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          const scrolled = window.scrollY > 400;
-          const nearBottom =
-            window.innerHeight + window.scrollY >=
-            document.body.offsetHeight - 120;
-          setVisible(scrolled && !nearBottom);
-          ticking = false;
-        });
-        ticking = true;
-      }
-    }
-
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    return observeScroll(({ y, direction, viewportHeight }) => {
+      const scrolled = y > 400;
+      const nearBottom = viewportHeight + y >= document.body.offsetHeight - 120;
+      setVisible((prev) => {
+        if (!scrolled || nearBottom) return false;
+        if (direction === "idle") return prev;
+        return direction === "up";
+      });
+    });
   }, []);
 
   useEffect(() => {
