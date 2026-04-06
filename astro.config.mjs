@@ -3,7 +3,8 @@ import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
 
 export default defineConfig({
-  site: "https://sapporo-chess-club.github.io",
+  site: "https://kuramoto-to-the-moon.github.io",
+  base: "/sapporo-chess-club",
   integrations: [react(), tailwind()],
   i18n: {
     locales: ["ja", "en"],

@@ -23,7 +23,7 @@ const jcaLink = linksData[0]?.data.links?.[0] ?? null;
         rel="noopener noreferrer"
         class="flex items-center gap-2 text-[#737373] hover:text-[#c8102e] transition-colors duration-150"
       >
-        <img src="/images/jca-logo.jpg" alt="" class="h-5 w-auto" />
+        <img src={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/images/jca-logo.jpg`} alt="" class="h-5 w-auto" />
         <span>{jcaLink.title[locale]} →</span>
         <span class="sr-only">{locale === "ja" ? "（新しいタブで開く）" : "(opens in new tab)"}</span>
       </a>
