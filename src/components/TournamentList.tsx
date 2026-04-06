@@ -26,16 +26,6 @@ export default function TournamentList({ tournaments, years, locale }: Props) {
       ? tournaments
       : tournaments.filter((t) => t.year === selectedYear);
 
-  const badgeStyles: Record<string, string> = {
-    results: "bg-[#e5e5e5] text-[#525252]",
-    upcoming: "bg-[#f5f5f5] text-[#a3a3a3]",
-  };
-
-  const badgeLabels: Record<string, string> = {
-    results: i.badge.results,
-    upcoming: i.badge.upcoming,
-  };
-
   return (
     <div>
       {/* Year filter — select on mobile, buttons on desktop */}
@@ -98,11 +88,6 @@ export default function TournamentList({ tournaments, years, locale }: Props) {
               key={`${tournament.year}-${idx}`}
               className={`border ${borderClass} rounded-md p-4 animate-fade-in`}
             >
-              <span
-                className={`text-xs px-2 py-0.5 rounded font-semibold inline-block mb-2 ${badgeStyles[tournament.status]}`}
-              >
-                {badgeLabels[tournament.status]}
-              </span>
               <p className="text-base font-semibold">{tournament.title}</p>
               <p className="text-sm text-[#a3a3a3] mt-1">{tournament.date}</p>
 
