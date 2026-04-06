@@ -109,84 +109,32 @@ export default function TournamentList({ tournaments, years, locale }: Props) {
 
               {fileLinks.length > 0 && (
                 <div className="mt-3.5">
-                  {fileLinks.map((link, linkIdx) => {
-                    const rowClass = `flex justify-between items-center py-3 px-2 -mx-2 rounded ${
-                      linkIdx < fileLinks.length - 1 ? "border-b border-[#f5f5f5]" : ""
-                    }`;
-                    if (link.isPgn) {
-                      const filename = link.href.split("/").pop() || "game.pgn";
-
-                      const handleView = async (e: React.MouseEvent) => {
-                        e.preventDefault();
-                        const newWindow = window.open("", "_blank");
-                        if (!newWindow) return;
-                        newWindow.document.write(
-                          `<!doctype html><html><head><meta charset="utf-8"><title>${filename}</title><style>body{margin:0;padding:24px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px;line-height:1.6;background:#fff;color:#171717;white-space:pre-wrap;word-wrap:break-word}</style></head><body>Loading…</body></html>`
-                        );
-                        try {
-                          const res = await fetch(link.href);
-                          const text = await res.text();
-                          newWindow.document.body.textContent = text;
-                        } catch {
-                          newWindow.document.body.textContent =
-                            locale === "ja" ? "読み込みに失敗しました" : "Failed to load";
-                        }
-                      };
-
-                      const handleSave = async (e: React.MouseEvent) => {
-                        e.preventDefault();
-                        try {
-                          const res = await fetch(link.href);
-                          const blob = await res.blob();
-                          const url = URL.createObjectURL(blob);
-                          const a = document.createElement("a");
-                          a.href = url;
-                          a.download = filename;
-                          document.body.appendChild(a);
-                          a.click();
-                          document.body.removeChild(a);
-                          setTimeout(() => URL.revokeObjectURL(url), 1000);
-                        } catch {
-                          window.location.href = link.href;
-                        }
-                      };
-
-                      return (
-                        <div key={link.href} className={rowClass}>
-                          <span className="text-sm">{link.label}</span>
-                          <span className="flex items-center gap-3 text-sm">
-                            <button
-                              type="button"
-                              onClick={handleView}
-                              className="text-[#2563eb] hover:text-[#1d4ed8] transition-colors duration-150 cursor-pointer"
-                            >
-                              {locale === "ja" ? "表示" : "View"}
-                            </button>
-                            <span className="text-[#e5e5e5]" aria-hidden="true">|</span>
-                            <button
-                              type="button"
-                              onClick={handleSave}
-                              className="text-[#2563eb] hover:text-[#1d4ed8] transition-colors duration-150 cursor-pointer"
-                            >
-                              {locale === "ja" ? "保存" : "Save"}
-                            </button>
-                          </span>
-                        </div>
-                      );
-                    }
-                    return (
-                      <a
-                        key={link.href}
-                        href={link.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={`${rowClass} hover:bg-[#fafafa] transition-colors duration-150`}
-                      >
-                        <span className="text-sm">{link.label}</span>
-                        <span className="text-[#737373]" aria-hidden="true">→</span>
-                      </a>
-                    );
-                  })}
+                  {fileLinks.map((link, linkIdx) => (
+                    <a
+                      key={link.href}
+                      href={link.href}
+                      target={link.isPgn ? undefined : "_blank"}
+                      rel="noopener noreferrer"
+                      {...(link.isPgn ? { download: "" } : {})}
+                      aria-label={link.isPgn ? `${link.label}${locale === "ja" ? "をダウンロード" : " download"}` : undefined}
+                      className={`flex justify-between items-center py-3 px-2 -mx-2 rounded hover:bg-[#fafafa] transition-colors duration-150 ${
+                        linkIdx < fileLinks.length - 1 ? "border-b border-[#f5f5f5]" : ""
+                      }`}
+                    >
+                      <span className="text-sm">{link.label}</span>
+                      <span className="text-[#737373]" aria-hidden="true">
+                        {link.isPgn ? (
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                            <polyline points="7 10 12 15 17 10" />
+                            <line x1="12" y1="15" x2="12" y2="3" />
+                          </svg>
+                        ) : (
+                          "→"
+                        )}
+                      </span>
+                    </a>
+                  ))}
                 </div>
               )}
 
