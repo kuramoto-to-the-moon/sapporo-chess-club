@@ -109,36 +109,64 @@ export default function TournamentList({ tournaments, years, locale }: Props) {
 
               {fileLinks.length > 0 && (
                 <div className="mt-3.5">
-                  {fileLinks.map((link, linkIdx) => (
-                    <a
-                      key={link.href}
-                      href={link.href}
-                      target={link.isPgn ? undefined : "_blank"}
-                      rel="noopener noreferrer"
-                      {...(link.isPgn ? { download: "" } : {})}
-                      aria-label={link.isPgn ? `${link.label}${locale === "ja" ? "をダウンロード" : " download"}` : undefined}
-                      className={`flex justify-between items-center py-3 px-2 -mx-2 rounded hover:bg-[#fafafa] transition-colors duration-150 ${
-                        linkIdx < fileLinks.length - 1 ? "border-b border-[#f5f5f5]" : ""
-                      }`}
-                    >
-                      <span className="text-sm">{link.label}</span>
-                      <span className="text-[#737373]" aria-hidden="true">
-                        {link.isPgn ? (
-                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                            <polyline points="7 10 12 15 17 10" />
-                            <line x1="12" y1="15" x2="12" y2="3" />
-                          </svg>
-                        ) : (
+                  {fileLinks.map((link, linkIdx) => {
+                    const rowClass = `flex justify-between items-center py-3 px-2 -mx-2 rounded hover:bg-[#fafafa] transition-colors duration-150 ${
+                      linkIdx < fileLinks.length - 1 ? "border-b border-[#f5f5f5]" : ""
+                    }`;
+                    if (link.isPgn) {
+                      const filename = link.href.split("/").pop() || "game.pgn";
+                      const handleDownload = async (e: React.MouseEvent) => {
+                        e.preventDefault();
+                        const res = await fetch(link.href);
+                        const text = await res.text();
+                        const blob = new Blob([text], { type: "application/octet-stream" });
+                        const url = URL.createObjectURL(blob);
+                        const a = document.createElement("a");
+                        a.href = url;
+                        a.download = filename;
+                        document.body.appendChild(a);
+                        a.click();
+                        document.body.removeChild(a);
+                        setTimeout(() => URL.revokeObjectURL(url), 1000);
+                      };
+                      return (
+                        <a
+                          key={link.href}
+                          href={link.href}
+                          onClick={handleDownload}
+                          aria-label={`${link.label}${locale === "ja" ? "をダウンロード" : " download"}`}
+                          className={rowClass}
+                        >
+                          <span className="text-sm">{link.label}</span>
+                          <span className="text-[#737373]" aria-hidden="true">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                              <polyline points="7 10 12 15 17 10" />
+                              <line x1="12" y1="15" x2="12" y2="3" />
+                            </svg>
+                          </span>
+                        </a>
+                      );
+                    }
+                    return (
+                      <a
+                        key={link.href}
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={rowClass}
+                      >
+                        <span className="text-sm">{link.label}</span>
+                        <span className="text-[#737373]" aria-hidden="true">
                           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                             <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
                             <polyline points="15 3 21 3 21 9" />
                             <line x1="10" y1="14" x2="21" y2="3" />
                           </svg>
-                        )}
-                      </span>
-                    </a>
-                  ))}
+                        </span>
+                      </a>
+                    );
+                  })}
                 </div>
               )}
 
