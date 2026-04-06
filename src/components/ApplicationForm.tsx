@@ -1,6 +1,9 @@
 import { useState } from "react";
 import type { Locale } from "@/i18n";
 import { t } from "@/i18n";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
 
 interface Props {
   formspreeId: string;
@@ -109,7 +112,7 @@ export default function ApplicationForm({ formspreeId, tournamentName, locale }:
   if (submitted) {
     return (
       <div
-        className="p-4 bg-[#fafafa] text-center text-sm text-[#525252] rounded-b-md"
+        className="p-4 bg-muted text-center text-sm text-muted-foreground rounded-md"
         role="status"
         aria-live="polite"
       >
@@ -122,141 +125,103 @@ export default function ApplicationForm({ formspreeId, tournamentName, locale }:
     return (
       <button
         onClick={() => setIsOpen(true)}
-        className="text-sm text-[#2563eb] hover:text-[#1d4ed8] transition-colors duration-150 font-medium cursor-pointer"
+        className="text-sm text-primary hover:opacity-80 transition-opacity duration-150 font-medium cursor-pointer"
       >
         {i.tournament.register} →
       </button>
     );
   }
 
-  const inputBase =
-    "w-full bg-white border rounded px-2 py-1.5 text-sm outline-none focus:ring-1 transition-colors";
-  const inputClass = (field: FieldName) =>
-    `${inputBase} ${
-      errors[field]
-        ? "border-red-500 focus:border-red-500 focus:ring-red-500"
-        : "border-[#e5e5e5] focus:border-[#2563eb] focus:ring-[#2563eb]"
-    }`;
-  const labelClass = "block text-xs text-[#525252] mb-0.5 font-medium";
-  const errorClass = "text-xs text-red-600 mt-1";
+  function field(
+    name: FieldName,
+    labelText: string,
+    required: boolean,
+    children: (props: {
+      id: string;
+      name: FieldName;
+      "aria-invalid": boolean;
+      "aria-describedby": string | undefined;
+      onBlur: ReturnType<typeof handleBlur>;
+    }) => React.ReactNode
+  ) {
+    const id = `${formId}-${name}`;
+    const errorId = `${id}-error`;
+    return (
+      <div className="flex flex-col gap-1.5">
+        <Label htmlFor={id}>
+          {labelText}
+          {required && <span aria-hidden="true" className="text-destructive ml-0.5">*</span>}
+        </Label>
+        {children({
+          id,
+          name,
+          "aria-invalid": !!errors[name],
+          "aria-describedby": errors[name] ? errorId : undefined,
+          onBlur: handleBlur(name),
+        })}
+        {errors[name] && (
+          <p id={errorId} role="alert" className="text-xs text-destructive">
+            {errors[name]}
+          </p>
+        )}
+      </div>
+    );
+  }
 
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col gap-3 animate-fade-in-up"
+      className="flex flex-col gap-4 animate-fade-in-up"
       aria-label={locale === "ja" ? `${tournamentName} 参加申込フォーム` : `${tournamentName} registration form`}
       noValidate
     >
       <input type="hidden" name="tournament" value={tournamentName} />
 
       {error && (
-        <p role="alert" className="text-xs text-red-600 bg-red-50 border border-red-200 rounded px-2 py-1.5">
+        <p role="alert" className="text-xs text-destructive bg-destructive/10 border border-destructive/30 rounded px-3 py-2">
           {error}
         </p>
       )}
 
-      <div>
-        <label htmlFor={`${formId}-name`} className={labelClass}>
-          {locale === "ja" ? "お名前" : "Name"}
-          <span aria-hidden="true" className="text-red-500 ml-0.5">*</span>
-        </label>
-        <input
-          id={`${formId}-name`}
+      {field("name", locale === "ja" ? "お名前" : "Name", true, (props) => (
+        <Input
+          {...props}
           type="text"
-          name="name"
           required
-          aria-required="true"
-          aria-invalid={!!errors.name}
-          aria-describedby={errors.name ? `${formId}-name-error` : undefined}
-          onBlur={handleBlur("name")}
           autoComplete="name"
           placeholder={locale === "ja" ? "山田 太郎" : "Taro Yamada"}
-          className={inputClass("name")}
         />
-        {errors.name && (
-          <p id={`${formId}-name-error`} role="alert" className={errorClass}>
-            {errors.name}
-          </p>
-        )}
-      </div>
+      ))}
 
-      <div>
-        <label htmlFor={`${formId}-email`} className={labelClass}>
-          {locale === "ja" ? "メールアドレス" : "Email"}
-          <span aria-hidden="true" className="text-red-500 ml-0.5">*</span>
-        </label>
-        <input
-          id={`${formId}-email`}
+      {field("email", locale === "ja" ? "メールアドレス" : "Email", true, (props) => (
+        <Input
+          {...props}
           type="email"
-          name="email"
           required
-          aria-required="true"
-          aria-invalid={!!errors.email}
-          aria-describedby={errors.email ? `${formId}-email-error` : undefined}
-          onBlur={handleBlur("email")}
           autoComplete="email"
           inputMode="email"
           placeholder="you@example.com"
-          className={inputClass("email")}
         />
-        {errors.email && (
-          <p id={`${formId}-email-error`} role="alert" className={errorClass}>
-            {errors.email}
-          </p>
-        )}
-      </div>
+      ))}
 
-      <div>
-        <label htmlFor={`${formId}-jca`} className={labelClass}>
-          {locale === "ja" ? "JCA会員番号(任意)" : "JCA Number (optional)"}
-        </label>
-        <input
-          id={`${formId}-jca`}
-          type="text"
-          name="jca_number"
-          aria-invalid={!!errors.jca_number}
-          aria-describedby={errors.jca_number ? `${formId}-jca-error` : undefined}
-          onBlur={handleBlur("jca_number")}
-          placeholder="J12345"
-          className={inputClass("jca_number")}
-        />
-        {errors.jca_number && (
-          <p id={`${formId}-jca-error`} role="alert" className={errorClass}>
-            {errors.jca_number}
-          </p>
-        )}
-      </div>
+      {field("jca_number", locale === "ja" ? "JCA会員番号(任意)" : "JCA Number (optional)", false, (props) => (
+        <Input {...props} type="text" placeholder="J12345" />
+      ))}
 
-      <div>
-        <label htmlFor={`${formId}-notes`} className={labelClass}>
-          {locale === "ja" ? "備考" : "Notes"}
-        </label>
-        <textarea
-          id={`${formId}-notes`}
-          name="notes"
-          aria-invalid={!!errors.notes}
-          aria-describedby={errors.notes ? `${formId}-notes-error` : undefined}
-          onBlur={handleBlur("notes")}
-          rows={2}
-          className={`${inputClass("notes")} resize-none`}
-        />
-        {errors.notes && (
-          <p id={`${formId}-notes-error`} role="alert" className={errorClass}>
-            {errors.notes}
-          </p>
-        )}
-      </div>
+      {field("notes", locale === "ja" ? "備考" : "Notes", false, (props) => (
+        <Textarea {...props} rows={3} />
+      ))}
 
       <button
         type="submit"
-        className="w-full bg-[#2563eb] text-white text-center py-2.5 rounded-[5px] text-sm font-medium hover:bg-[#1d4ed8] hover:scale-[1.02] active:scale-100 transition-all duration-150 cursor-pointer"
+        className="w-full bg-primary text-primary-foreground text-center py-2.5 rounded-md text-sm font-medium hover:opacity-90 active:opacity-80 transition-opacity duration-150 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
       >
         {locale === "ja" ? "送信する" : "Submit"}
       </button>
       <button
         type="button"
         onClick={() => setIsOpen(false)}
-        className="text-xs text-[#737373] text-center cursor-pointer hover:text-[#171717] transition-colors duration-150"
+        className="text-xs text-muted-foreground text-center cursor-pointer hover:text-foreground transition-colors duration-150"
       >
         {locale === "ja" ? "閉じる" : "Cancel"}
       </button>
