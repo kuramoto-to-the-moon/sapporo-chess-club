@@ -25,7 +25,8 @@
       "Bash(ls /Users/koutarou/Downloads/sapporo_chess/sapporo_chess/competition/*.pdf /Users/koutarou/Downloads/sapporo_chess/sapporo_chess/competition/*.pgn)",
       "Bash(xargs -I{} basename {})",
       "Bash(cat /Users/koutarou/sapporo_chess_club/src/content/schedule/*.yml)",
-      "Bash(cat /Users/koutarou/sapporo_chess_club/src/content/schedule/*.yaml)"
+      "Bash(cat /Users/koutarou/sapporo_chess_club/src/content/schedule/*.yaml)",
+      "Bash(git rm:*)"
     ]
   }
 }
