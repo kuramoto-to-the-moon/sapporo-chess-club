@@ -44,31 +44,48 @@ export default function TournamentList({ tournaments, years, locale }: Props) {
 
   return (
     <div>
-      {/* Year filter buttons */}
-      <div className="flex flex-wrap gap-2 mb-8">
-        <button
-          onClick={() => setSelectedYear("all")}
-          className={`px-3 py-1.5 rounded text-sm font-medium transition-colors duration-150 cursor-pointer ${
-            selectedYear === "all"
-              ? "bg-[#2563eb] text-white"
-              : "bg-[#fafafa] text-[#525252] hover:bg-[#f5f5f5]"
-          }`}
-        >
-          {locale === "ja" ? "すべて" : "All"}
-        </button>
-        {years.map((year) => (
+      {/* Year filter — select on mobile, buttons on desktop */}
+      <div className="mb-8">
+        <div className="sm:hidden">
+          <label className="block text-xs uppercase tracking-wider text-[#a3a3a3] mb-2">
+            {locale === "ja" ? "年で絞り込み" : "Filter by year"}
+          </label>
+          <select
+            value={selectedYear}
+            onChange={(e) => setSelectedYear(e.target.value === "all" ? "all" : Number(e.target.value))}
+            className="w-full px-3 py-2 rounded border border-[#e5e5e5] text-sm bg-white text-[#171717] focus:outline-none focus:border-[#2563eb] transition-colors duration-150"
+          >
+            <option value="all">{locale === "ja" ? "すべての年" : "All years"}</option>
+            {years.map((year) => (
+              <option key={year} value={year}>{year}{locale === "ja" ? "年" : ""}</option>
+            ))}
+          </select>
+        </div>
+        <div className="hidden sm:flex flex-wrap gap-2">
           <button
-            key={year}
-            onClick={() => setSelectedYear(year)}
+            onClick={() => setSelectedYear("all")}
             className={`px-3 py-1.5 rounded text-sm font-medium transition-colors duration-150 cursor-pointer ${
-              selectedYear === year
+              selectedYear === "all"
                 ? "bg-[#2563eb] text-white"
                 : "bg-[#fafafa] text-[#525252] hover:bg-[#f5f5f5]"
             }`}
           >
-            {year}
+            {locale === "ja" ? "すべて" : "All"}
           </button>
-        ))}
+          {years.map((year) => (
+            <button
+              key={year}
+              onClick={() => setSelectedYear(year)}
+              className={`px-3 py-1.5 rounded text-sm font-medium transition-colors duration-150 cursor-pointer ${
+                selectedYear === year
+                  ? "bg-[#2563eb] text-white"
+                  : "bg-[#fafafa] text-[#525252] hover:bg-[#f5f5f5]"
+              }`}
+            >
+              {year}
+            </button>
+          ))}
+        </div>
       </div>
 
       {/* Tournament cards */}
