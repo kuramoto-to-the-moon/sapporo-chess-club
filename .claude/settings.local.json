@@ -32,7 +32,13 @@
       "Bash(iconv -f SHIFT_JIS -t UTF-8 /Users/koutarou/Downloads/sapporo_chess/sapporo_chess/chess_class.html)",
       "Bash(grep:*)",
       "Bash(iconv -f SHIFT_JIS -t UTF-8 /Users/koutarou/Downloads/sapporo_chess/sapporo_chess/sankahi.html)",
-      "Bash(git config:*)"
+      "Bash(git config:*)",
+      "Bash(gh auth:*)",
+      "Bash(gh repo:*)",
+      "Bash(git push:*)",
+      "Bash(gh api:*)",
+      "Bash(gh run:*)",
+      "Bash(curl -sI https://kuramoto-to-the-moon.github.io/sapporo-chess-club/)"
     ]
   }
 }
