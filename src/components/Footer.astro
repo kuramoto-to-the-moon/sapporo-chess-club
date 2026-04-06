@@ -21,9 +21,10 @@ const jcaLink = linksData[0]?.data.links?.[0] ?? null;
         href={jcaLink.url}
         target="_blank"
         rel="noopener noreferrer"
-        class="text-[#a3a3a3] hover:text-[#171717] transition-colors duration-150"
+        class="flex items-center gap-2 text-[#a3a3a3] hover:text-[#171717] transition-colors duration-150"
       >
-        {jcaLink.title[locale]} →
+        <img src="/images/jca-logo.jpg" alt="" class="h-5 w-auto" />
+        <span>{jcaLink.title[locale]} →</span>
       </a>
     )}
   </div>
