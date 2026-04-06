@@ -52,6 +52,10 @@ export default {
     resultsPdf: "結果 PDF",
     gamesPgn: "棋譜 PGN",
   },
+  application: {
+    opensOn: "申込開始",
+    closed: "申込締切",
+  },
   form: {
     errors: {
       nameRequired: "お名前を入力してください",

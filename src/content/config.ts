@@ -14,6 +14,8 @@ const schedule = defineCollection({
         type: z.enum(["meeting", "tournament"]).default("meeting"),
         eventName: z.object({ ja: z.string(), en: z.string() }).optional(),
         formspreeId: z.string().optional(),
+        applicationOpenFrom: z.string().optional(),
+        applicationCloseAt: z.string().optional(),
         note: z.object({ ja: z.string(), en: z.string() }).optional(),
       })
     ),
