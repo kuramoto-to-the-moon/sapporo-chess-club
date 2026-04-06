@@ -40,6 +40,14 @@ const site = siteData[0].data;
         <p class="text-[#171717] font-medium">{site.venue.name[locale]} {site.venue.floor}</p>
         <p>{site.venue.address[locale]}</p>
         <p class="text-[#a3a3a3] text-xs mt-1">{site.venue.access[locale]}</p>
+        <a
+          href="https://www.google.com/maps/search/?api=1&query=%E3%81%8B%E3%81%A7%E3%82%8B2.7"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-sm text-[#2563eb] hover:text-[#1d4ed8] transition-colors duration-150 font-medium mt-1 w-fit"
+        >
+          {locale === "ja" ? "Google マップで見る →" : "View on Google Maps →"}
+        </a>
       </div>
     </div>
   </div>
