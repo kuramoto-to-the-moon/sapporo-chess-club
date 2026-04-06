@@ -92,11 +92,12 @@ export default function TournamentList({ tournaments, years, locale }: Props) {
         {filtered.map((tournament, idx) => {
           const borderClass = "border-[#f5f5f5]";
 
-          const fileLinks = [
-            tournament.detailsPdf && { label: i.tournament.detailsPdf, href: tournament.detailsPdf, download: false },
-            tournament.resultsPdf && { label: i.tournament.resultsPdf, href: tournament.resultsPdf, download: false },
-            tournament.gamesPgn && { label: i.tournament.gamesPgn, href: tournament.gamesPgn, download: true },
-          ].filter(Boolean) as { label: string; href: string; download: boolean }[];
+          type FileLink = { label: string; href: string; isPgn?: boolean };
+          const fileLinks: FileLink[] = [
+            tournament.detailsPdf && { label: i.tournament.detailsPdf, href: tournament.detailsPdf },
+            tournament.resultsPdf && { label: i.tournament.resultsPdf, href: tournament.resultsPdf },
+            tournament.gamesPgn && { label: i.tournament.gamesPgn, href: tournament.gamesPgn, isPgn: true },
+          ].filter(Boolean) as FileLink[];
 
           return (
             <div
@@ -108,21 +109,48 @@ export default function TournamentList({ tournaments, years, locale }: Props) {
 
               {fileLinks.length > 0 && (
                 <div className="mt-3.5">
-                  {fileLinks.map((link, linkIdx) => (
-                    <a
-                      key={link.href}
-                      href={link.href}
-                      target={link.download ? undefined : "_blank"}
-                      rel="noopener noreferrer"
-                      {...(link.download ? { download: "" } : {})}
-                      className={`flex justify-between items-center py-3 px-2 -mx-2 rounded hover:bg-[#fafafa] transition-colors duration-150 ${
-                        linkIdx < fileLinks.length - 1 ? "border-b border-[#f5f5f5]" : ""
-                      }`}
-                    >
-                      <span className="text-sm">{link.label}</span>
-                      <span className="text-[#737373]" aria-hidden="true">→</span>
-                    </a>
-                  ))}
+                  {fileLinks.map((link, linkIdx) => {
+                    const rowClass = `flex justify-between items-center py-3 px-2 -mx-2 rounded transition-colors duration-150 ${
+                      linkIdx < fileLinks.length - 1 ? "border-b border-[#f5f5f5]" : ""
+                    }`;
+                    if (link.isPgn) {
+                      return (
+                        <div key={link.href} className={rowClass}>
+                          <span className="text-sm">{link.label}</span>
+                          <span className="flex items-center gap-3 text-sm">
+                            <a
+                              href={link.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-[#2563eb] hover:text-[#1d4ed8] transition-colors duration-150"
+                            >
+                              {locale === "ja" ? "表示" : "View"}
+                            </a>
+                            <span className="text-[#e5e5e5]" aria-hidden="true">|</span>
+                            <a
+                              href={link.href}
+                              download=""
+                              className="text-[#2563eb] hover:text-[#1d4ed8] transition-colors duration-150"
+                            >
+                              {locale === "ja" ? "保存" : "Save"}
+                            </a>
+                          </span>
+                        </div>
+                      );
+                    }
+                    return (
+                      <a
+                        key={link.href}
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`${rowClass} hover:bg-[#fafafa]`}
+                      >
+                        <span className="text-sm">{link.label}</span>
+                        <span className="text-[#737373]" aria-hidden="true">→</span>
+                      </a>
+                    );
+                  })}
                 </div>
               )}
 
