@@ -31,7 +31,8 @@
       "Bash(ls:*)",
       "Bash(iconv -f SHIFT_JIS -t UTF-8 /Users/koutarou/Downloads/sapporo_chess/sapporo_chess/chess_class.html)",
       "Bash(grep:*)",
-      "Bash(iconv -f SHIFT_JIS -t UTF-8 /Users/koutarou/Downloads/sapporo_chess/sapporo_chess/sankahi.html)"
+      "Bash(iconv -f SHIFT_JIS -t UTF-8 /Users/koutarou/Downloads/sapporo_chess/sapporo_chess/sankahi.html)",
+      "Bash(git config:*)"
     ]
   }
 }

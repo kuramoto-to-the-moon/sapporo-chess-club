@@ -18,7 +18,7 @@ const { title, locale } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>札幌チェスクラブ | {title}</title>
+    <title>{locale === "ja" ? "札幌チェスクラブ" : "Sapporo Chess Club"} | {title}</title>
   </head>
   <body class="bg-white text-[#171717] font-sans antialiased">
     <a
