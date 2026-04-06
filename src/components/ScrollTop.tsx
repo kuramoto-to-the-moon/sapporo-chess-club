@@ -28,23 +28,24 @@ export default function ScrollTop() {
     <button
       onClick={scrollToTop}
       aria-label="Scroll to top"
-      className={`fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full bg-[#171717] text-white flex items-center justify-center hover:bg-[#3f3f46] transition-all duration-150 cursor-pointer ${
-        visible ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+      className={`fixed bottom-6 right-6 z-40 flex items-center gap-2 px-4 py-3 bg-white border border-[#e5e5e5] text-[#171717] hover:border-[#2563eb] hover:text-[#2563eb] transition-all duration-150 cursor-pointer shadow-sm ${
+        visible ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 translate-y-2 pointer-events-none"
       }`}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="20"
-        height="20"
+        width="14"
+        height="14"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        strokeWidth="2"
+        strokeWidth="2.5"
         strokeLinecap="round"
         strokeLinejoin="round"
       >
         <polyline points="18 15 12 9 6 15" />
       </svg>
+      <span className="text-xs font-semibold uppercase tracking-wider">Top</span>
     </button>
   );
 }
