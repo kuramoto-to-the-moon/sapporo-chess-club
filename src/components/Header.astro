@@ -1,5 +1,4 @@
 ---
-import LanguageToggle from "./LanguageToggle.astro";
 import HamburgerMenu from "./HamburgerMenu.tsx";
 import { t, getLocalePath, type Locale } from "@/i18n";
 
@@ -36,8 +35,7 @@ const tournamentsHref = getLocalePath(locale, "/tournaments");
       >
         {i.nav.tournaments}
       </a>
-      <LanguageToggle locale={locale} path={currentPath} />
-      <HamburgerMenu locale={locale} client:load />
+      <HamburgerMenu locale={locale} currentPath={currentPath} client:load />
     </div>
   </div>
 </header>
