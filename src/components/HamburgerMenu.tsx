@@ -56,6 +56,7 @@ export default function HamburgerMenu({ locale, currentPath }: Props) {
       <SheetContent
         side="full"
         aria-label="Navigation menu"
+        onCloseAutoFocus={(e) => e.preventDefault()}
         className="bg-[#171717] text-[#fafafa] border-0 p-0 [&>button]:hidden"
       >
         <SheetTitle className="sr-only">Navigation menu</SheetTitle>
