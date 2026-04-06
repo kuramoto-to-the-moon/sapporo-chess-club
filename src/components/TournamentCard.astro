@@ -43,15 +43,11 @@ const fileLinks = [
 ---
 
 <div class={`border ${borderClass} rounded-md p-4 animate-fade-in-up hover:border-[#a3a3a3] transition-colors duration-150`}>
-  <div class="flex justify-between items-start">
-    <div>
-      <p class="text-base font-semibold">{title}</p>
-      <p class="text-sm text-[#a3a3a3] mt-1">{date}</p>
-    </div>
-    <Badge className={`text-xs px-1.5 py-0 rounded-[3px] font-semibold ${badgeStyles[status]}`}>
-      {badgeLabels[status]}
-    </Badge>
-  </div>
+  <Badge className={`text-xs px-2 py-0.5 rounded font-semibold inline-block mb-2 ${badgeStyles[status]}`}>
+    {badgeLabels[status]}
+  </Badge>
+  <p class="text-base font-semibold">{title}</p>
+  <p class="text-sm text-[#a3a3a3] mt-1">{date}</p>
 
   {hasFiles && (
     <div class="mt-3.5">
