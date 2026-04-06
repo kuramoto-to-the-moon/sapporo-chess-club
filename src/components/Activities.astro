@@ -1,0 +1,28 @@
+---
+import { t, getLocalePath, type Locale } from "@/i18n";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const i = t(locale);
+
+const cards = [
+  { title: i.activities.meetup, desc: i.activities.meetupDesc },
+  { title: i.activities.tournament, desc: i.activities.tournamentDesc },
+  { title: i.activities.lesson, desc: i.activities.lessonDesc },
+];
+---
+
+<section id="activities" class="px-5 py-3.5 reveal">
+  <h2 class="text-[10px] font-semibold text-[#a3a3a3] mb-2">{i.activities.label}</h2>
+  <div class="flex gap-1.5">
+    {cards.map((card) => (
+      <div class="flex-1 p-2.5 bg-[#fafafa] rounded-md">
+        <p class="text-[10px] font-semibold">{card.title}</p>
+        <p class="text-[8px] text-[#a3a3a3] mt-0.5">{card.desc}</p>
+      </div>
+    ))}
+  </div>
+</section>

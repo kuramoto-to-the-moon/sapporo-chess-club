@@ -1,17 +1,22 @@
 ---
-import "../styles/globals.css";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Hero from "@/components/Hero.astro";
+import NextEvent from "@/components/NextEvent.astro";
+import Activities from "@/components/Activities.astro";
+import Schedule from "@/components/Schedule.astro";
+import ClubInfo from "@/components/ClubInfo.astro";
+import ChessLessons from "@/components/ChessLessons.astro";
+import Links from "@/components/Links.astro";
+import Contact from "@/components/Contact.astro";
 ---
 
-<html lang="ja">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>札幌チェスクラブ</title>
-  </head>
-  <body>
-    <main class="container mx-auto p-8">
-      <h1 class="text-4xl font-bold">札幌チェスクラブ</h1>
-      <p class="mt-4 text-muted-foreground">サイト準備中...</p>
-    </main>
-  </body>
-</html>
+<BaseLayout title="ホーム" locale="ja">
+  <Hero locale="ja" />
+  <NextEvent locale="ja" />
+  <Activities locale="ja" />
+  <Schedule locale="ja" />
+  <ClubInfo locale="ja" />
+  <ChessLessons locale="ja" />
+  <Links locale="ja" />
+  <Contact locale="ja" />
+</BaseLayout>
