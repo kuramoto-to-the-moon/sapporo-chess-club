@@ -52,6 +52,10 @@ export default {
     resultsPdf: "Results PDF",
     gamesPgn: "Game Records PGN",
   },
+  application: {
+    opensOn: "Registration opens",
+    closed: "Registration closed",
+  },
   form: {
     errors: {
       nameRequired: "Please enter your name",
