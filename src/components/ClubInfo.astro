@@ -18,11 +18,11 @@ const site = siteData[0].data;
     <div class="flex flex-col gap-2">
       <h2 class="text-sm font-semibold uppercase tracking-wider text-[#a3a3a3]">{i.clubInfo.fee}</h2>
       <dl class="flex flex-col gap-2 text-sm text-[#525252]">
-        <div class="flex justify-between gap-4">
+        <div class="flex gap-3">
           <dt>{locale === "ja" ? "一般" : "General"}</dt>
           <dd class="font-medium text-[#171717]">¥{site.fee.general.toLocaleString()}</dd>
         </div>
-        <div class="flex justify-between gap-4">
+        <div class="flex gap-3">
           <dt>{locale === "ja" ? "学生" : "Students"}</dt>
           <dd class="font-medium text-[#171717]">¥{site.fee.student.toLocaleString()}</dd>
         </div>
