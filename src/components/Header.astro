@@ -59,16 +59,19 @@ const tournamentsHref = getLocalePath(locale, "/tournaments");
   const header = document.getElementById("site-header");
   if (header) {
     let lastY = window.scrollY;
-    const threshold = 100;
+    const topThreshold = 100;
+    const delta = 8;
     function update() {
-      const y = window.scrollY;
-      if (y < threshold) {
+      const y = Math.max(0, window.scrollY);
+      const maxY = document.documentElement.scrollHeight - window.innerHeight;
+      if (y < topThreshold) {
         header!.removeAttribute("data-state");
-      } else if (y > lastY) {
-        header!.dataset.state = "hidden";
-      } else {
-        header!.dataset.state = "pinned";
+        lastY = y;
+        return;
       }
+      if (y >= maxY - 4) return;
+      if (Math.abs(y - lastY) < delta) return;
+      header!.dataset.state = y > lastY ? "hidden" : "pinned";
       lastY = y;
     }
     let ticking = false;
