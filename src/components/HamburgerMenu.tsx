@@ -172,7 +172,12 @@ export default function HamburgerMenu({ locale, currentPath }: Props) {
 
           <div className="absolute bottom-0 left-0 right-0 border-t border-[#2a2a2a]">
             <div className="max-w-4xl mx-auto px-5 py-4 flex items-center justify-between">
-              <span className="text-xs text-[#d4d4d4]">sapporochessclub@gmail.com</span>
+              <a
+                href="mailto:sapporochessclub@gmail.com"
+                className="text-xs text-[#d4d4d4] hover:text-[#fafafa] transition-colors duration-150"
+              >
+                sapporochessclub@gmail.com
+              </a>
               <a
                 href={otherPath}
                 className="text-xs tracking-[2px] text-[#d4d4d4] hover:text-[#fafafa] transition-colors duration-150"
