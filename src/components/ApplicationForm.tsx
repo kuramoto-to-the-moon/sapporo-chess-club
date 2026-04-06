@@ -32,7 +32,7 @@ export default function ApplicationForm({ formspreeId, tournamentName, locale }:
 
   if (submitted) {
     return (
-      <div className="p-4 bg-[#fafafa] text-center text-[10px] text-[#525252] rounded-b-md">
+      <div className="p-4 bg-[#fafafa] text-center text-sm text-[#525252] rounded-b-md">
         {locale === "ja" ? "送信しました。ありがとうございます。" : "Submitted. Thank you."}
       </div>
     );
@@ -42,7 +42,7 @@ export default function ApplicationForm({ formspreeId, tournamentName, locale }:
     return (
       <button
         onClick={() => setIsOpen(true)}
-        className="w-full bg-[#171717] text-white text-center py-2.5 rounded-[5px] text-[10px] font-medium hover:bg-[#3f3f46] transition-colors duration-200 cursor-pointer"
+        className="w-full bg-[#171717] text-white text-center py-2.5 rounded-[5px] text-sm font-medium hover:bg-[#3f3f46] transition-colors duration-200 cursor-pointer"
       >
         {i.tournament.register}
       </button>
@@ -57,37 +57,37 @@ export default function ApplicationForm({ formspreeId, tournamentName, locale }:
         name="name"
         required
         placeholder={locale === "ja" ? "お名前" : "Name"}
-        className="w-full bg-white border border-[#e5e5e5] rounded px-2 py-1.5 text-[9px] outline-none focus:border-[#a3a3a3] transition-colors"
+        className="w-full bg-white border border-[#e5e5e5] rounded px-2 py-1.5 text-sm outline-none focus:border-[#a3a3a3] transition-colors"
       />
       <input
         type="email"
         name="email"
         required
         placeholder={locale === "ja" ? "メールアドレス" : "Email"}
-        className="w-full bg-white border border-[#e5e5e5] rounded px-2 py-1.5 text-[9px] outline-none focus:border-[#a3a3a3] transition-colors"
+        className="w-full bg-white border border-[#e5e5e5] rounded px-2 py-1.5 text-sm outline-none focus:border-[#a3a3a3] transition-colors"
       />
       <input
         type="text"
         name="jca_number"
         placeholder={locale === "ja" ? "JCA会員番号（任意）" : "JCA Number (optional)"}
-        className="w-full bg-white border border-[#e5e5e5] rounded px-2 py-1.5 text-[9px] outline-none focus:border-[#a3a3a3] transition-colors"
+        className="w-full bg-white border border-[#e5e5e5] rounded px-2 py-1.5 text-sm outline-none focus:border-[#a3a3a3] transition-colors"
       />
       <textarea
         name="notes"
         placeholder={locale === "ja" ? "備考" : "Notes"}
         rows={2}
-        className="w-full bg-white border border-[#e5e5e5] rounded px-2 py-1.5 text-[9px] outline-none focus:border-[#a3a3a3] transition-colors resize-none"
+        className="w-full bg-white border border-[#e5e5e5] rounded px-2 py-1.5 text-sm outline-none focus:border-[#a3a3a3] transition-colors resize-none"
       />
       <button
         type="submit"
-        className="w-full bg-[#171717] text-white text-center py-2.5 rounded-[5px] text-[10px] font-medium hover:bg-[#3f3f46] transition-colors duration-200 cursor-pointer"
+        className="w-full bg-[#171717] text-white text-center py-2.5 rounded-[5px] text-sm font-medium hover:bg-[#3f3f46] transition-colors duration-200 cursor-pointer"
       >
         {locale === "ja" ? "送信する" : "Submit"}
       </button>
       <button
         type="button"
         onClick={() => setIsOpen(false)}
-        className="text-[8px] text-[#a3a3a3] text-center cursor-pointer"
+        className="text-xs text-[#a3a3a3] text-center cursor-pointer"
       >
         {locale === "ja" ? "閉じる" : "Cancel"}
       </button>

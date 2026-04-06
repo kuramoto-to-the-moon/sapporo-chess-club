@@ -25,9 +25,9 @@ function formatDate(dateStr: string, dow: string): string {
 }
 ---
 
-<section id="schedule" class="px-5 py-3.5 reveal">
-  <h2 class="text-[10px] font-semibold text-[#a3a3a3] mb-2">{i.schedule.label}</h2>
-  <div class="text-[10px]">
+<section id="schedule" class="px-5 py-6">
+  <h2 class="text-sm font-semibold uppercase tracking-wider text-[#a3a3a3] mb-2">{i.schedule.label}</h2>
+  <div class="text-sm">
     {upcomingDates.map((date, idx) => (
       <div
         class:list={[
@@ -37,7 +37,7 @@ function formatDate(dateStr: string, dow: string): string {
       >
         <span>
           {formatDate(date.date, date.dayOfWeek[locale])}
-          {date.note && <span class="text-[#a3a3a3] text-[8px] ml-1">{date.note[locale]}</span>}
+          {date.note && <span class="text-[#a3a3a3] text-xs ml-1">{date.note[locale]}</span>}
         </span>
         <span class="text-[#a3a3a3]">{date.startTime} / {date.room}{locale === "ja" ? "室" : ""}</span>
       </div>

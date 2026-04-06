@@ -42,13 +42,13 @@ const fileLinks = [
 ].filter(Boolean) as { label: string; href: string }[];
 ---
 
-<div class={`border ${borderClass} rounded-md p-4 reveal`}>
+<div class={`border ${borderClass} rounded-md p-4`}>
   <div class="flex justify-between items-start">
     <div>
-      <p class="text-[11px] font-semibold">{title}</p>
-      <p class="text-[9px] text-[#a3a3a3] mt-1">{date}</p>
+      <p class="text-base font-semibold">{title}</p>
+      <p class="text-sm text-[#a3a3a3] mt-1">{date}</p>
     </div>
-    <Badge className={`text-[8px] px-1.5 py-0 rounded-[3px] font-semibold ${badgeStyles[status]}`}>
+    <Badge className={`text-xs px-1.5 py-0 rounded-[3px] font-semibold ${badgeStyles[status]}`}>
       {badgeLabels[status]}
     </Badge>
   </div>
@@ -61,7 +61,7 @@ const fileLinks = [
           target="_blank"
           rel="noopener noreferrer"
           class:list={[
-            "flex justify-between py-2.5 text-[10px] arrow-link hover:text-[#525252] transition-colors",
+            "flex justify-between py-2.5 text-sm arrow-link hover:text-[#525252] transition-colors",
             idx < fileLinks.length - 1 && "border-b border-[#f5f5f5]",
           ]}
         >

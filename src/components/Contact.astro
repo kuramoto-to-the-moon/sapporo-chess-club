@@ -13,9 +13,9 @@ const siteData = await getCollection("site");
 const site = siteData[0].data;
 ---
 
-<section id="contact" class="px-5 py-3.5 border-t border-[#f5f5f5] reveal">
-  <h2 class="text-[10px] font-semibold text-[#a3a3a3] mb-1.5">{i.contact.label}</h2>
-  <p class="text-[10px] leading-[1.8] text-[#525252]">
+<section id="contact" class="px-5 py-6 border-t border-[#f5f5f5]">
+  <h2 class="text-sm font-semibold uppercase tracking-wider text-[#a3a3a3] mb-1.5">{i.contact.label}</h2>
+  <p class="text-sm leading-[1.8] text-[#525252]">
     {site.email}<br />
     <span class="text-[#a3a3a3]">Tel: {site.phone}</span>
   </p>

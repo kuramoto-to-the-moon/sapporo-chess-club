@@ -23,28 +23,9 @@ const { title, locale } = Astro.props;
   </head>
   <body class="bg-white text-[#171717] font-sans antialiased">
     <Header locale={locale} />
-    <main>
+    <main class="max-w-2xl mx-auto">
       <slot />
     </main>
     <Footer locale={locale} />
-
-    <script>
-      function setupReveal() {
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
-                observer.unobserve(entry.target);
-              }
-            });
-          },
-          { threshold: 0.1 }
-        );
-        document.querySelectorAll(".reveal:not(.visible)").forEach((el) => observer.observe(el));
-      }
-      setupReveal();
-      document.addEventListener("astro:page-load", setupReveal);
-    </script>
   </body>
 </html>
