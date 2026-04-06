@@ -25,8 +25,9 @@ export default {
   },
   schedule: {
     label: "Schedule",
-    viewAll: "View full schedule",
-    collapse: "Collapse",
+    pageTitle: "Schedule",
+    pageSubtitle: "Annual Schedule",
+    viewFullSchedule: "View full schedule →",
   },
   clubInfo: {
     fee: "Entry Fee",

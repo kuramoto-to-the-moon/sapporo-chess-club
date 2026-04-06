@@ -25,8 +25,9 @@ export default {
   },
   schedule: {
     label: "スケジュール",
-    viewAll: "年間スケジュールを見る",
-    collapse: "閉じる",
+    pageTitle: "スケジュール",
+    pageSubtitle: "年間スケジュール",
+    viewFullSchedule: "年間スケジュールを見る →",
   },
   clubInfo: {
     fee: "参加案内",

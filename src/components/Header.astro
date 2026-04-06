@@ -11,6 +11,7 @@ const { locale } = Astro.props;
 const i = t(locale);
 const currentPath = Astro.url.pathname.replace(/^\/(en\/)?/, "/");
 const homeHref = getLocalePath(locale, "/");
+const scheduleHref = getLocalePath(locale, "/schedule");
 const tournamentsHref = getLocalePath(locale, "/tournaments");
 ---
 
@@ -23,6 +24,12 @@ const tournamentsHref = getLocalePath(locale, "/tournaments");
       SAPPORO CHESS CLUB
     </a>
     <div class="flex items-center gap-2 sm:gap-4">
+      <a
+        href={scheduleHref}
+        class="text-sm text-[#525252] hover:text-[#2563eb] transition-colors duration-150 px-3 py-2 -my-2 rounded"
+      >
+        {i.schedule.label}
+      </a>
       <a
         href={tournamentsHref}
         class="text-sm text-[#525252] hover:text-[#2563eb] transition-colors duration-150 px-3 py-2 -my-2 rounded"
