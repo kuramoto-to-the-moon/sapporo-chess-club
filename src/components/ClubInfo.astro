@@ -29,6 +29,10 @@ const site = siteData[0].data;
           <dt>{locale === "ja" ? "学生" : "Students"}</dt>
           <dd class="font-medium text-[#171717]">¥{site.fee.student.toLocaleString()}</dd>
         </div>
+        <div class="flex gap-3">
+          <dt>{locale === "ja" ? "見学" : "Observation"}</dt>
+          <dd class="font-medium text-[#2563eb]">{locale === "ja" ? "無料" : "Free"}</dd>
+        </div>
       </dl>
     </div>
     <div class="flex flex-col gap-2">
