@@ -25,6 +25,8 @@ export default {
   },
   schedule: {
     label: "Schedule",
+    viewAll: "View full schedule",
+    collapse: "Collapse",
   },
   clubInfo: {
     fee: "Entry Fee",
