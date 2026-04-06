@@ -3,9 +3,12 @@ import { t, getLocalePath, type Locale } from "@/i18n";
 
 interface Props {
   locale: Locale;
+  currentPath: string;
 }
 
-export default function HamburgerMenu({ locale }: Props) {
+export default function HamburgerMenu({ locale, currentPath }: Props) {
+  const otherLocale: Locale = locale === "ja" ? "en" : "ja";
+  const otherPath = getLocalePath(otherLocale, currentPath);
   const [isOpen, setIsOpen] = useState(false);
   const i = t(locale);
 
@@ -104,8 +107,14 @@ export default function HamburgerMenu({ locale }: Props) {
           </nav>
 
           <div className="absolute bottom-0 left-0 right-0 border-t border-[#2a2a2a]">
-            <div className="max-w-4xl mx-auto px-5 py-4">
+            <div className="max-w-4xl mx-auto px-5 py-4 flex items-center justify-between">
               <span className="text-xs text-[#525252]">sapporochessclub@gmail.com</span>
+              <a
+                href={otherPath}
+                className="text-xs tracking-[2px] text-[#a3a3a3] hover:text-[#fafafa] transition-colors duration-150"
+              >
+                {locale === "ja" ? "EN" : "JA"}
+              </a>
             </div>
           </div>
         </div>
