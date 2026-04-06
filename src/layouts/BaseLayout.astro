@@ -23,6 +23,8 @@ const metaDescription = description ?? defaultDescription;
 
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const normalizedPath = Astro.url.pathname.replace(new RegExp(`^${base}`), "").replace(/\/$/, "");
+const isHome = normalizedPath === "" || normalizedPath === "/en";
 const ogImage = new URL(`${base}/images/og.png`, Astro.site).toString();
 ---
 
@@ -71,7 +73,7 @@ const ogImage = new URL(`${base}/images/og.png`, Astro.site).toString();
       <slot />
     </main>
     <Footer locale={locale} />
-    <ScrollTop client:load />
+    {!isHome && <ScrollTop client:load />}
     <script>
       const observer = new IntersectionObserver(
         (entries) => {
