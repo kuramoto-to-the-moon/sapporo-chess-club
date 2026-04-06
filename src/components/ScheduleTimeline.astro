@@ -1,0 +1,81 @@
+---
+import type { Locale } from "@/i18n";
+
+interface ScheduleDate {
+  date: string;
+  dayOfWeek: { ja: string; en: string };
+  startTime: string;
+  endTime: string;
+  room: string;
+  venue: { ja: string; en: string };
+  type?: "meeting" | "tournament";
+  note?: { ja: string; en: string };
+}
+
+interface Props {
+  dates: ScheduleDate[];
+  locale: Locale;
+}
+
+const { dates, locale } = Astro.props;
+
+// Group by month
+function getMonthKey(dateStr: string): string {
+  const d = new Date(dateStr);
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}`;
+}
+
+const monthMap = new Map<string, ScheduleDate[]>();
+for (const d of dates) {
+  const key = getMonthKey(d.date);
+  if (!monthMap.has(key)) monthMap.set(key, []);
+  monthMap.get(key)!.push(d);
+}
+const groupedByMonth = Array.from(monthMap.entries()).map(([key, dates]) => ({ key, dates }));
+---
+
+<div class="relative pl-16 mt-2">
+  <div class="absolute left-[60px] top-2 bottom-2 w-px bg-[#e5e5e5]"></div>
+  {groupedByMonth.map(({ key, dates: monthDates }) => {
+    const hasTournament = monthDates.some((d) => d.type === "tournament");
+    const dotColor = hasTournament ? "bg-[#dc2626]" : "bg-[#2563eb]";
+    const monthLabel = locale === "ja"
+      ? `${parseInt(key.split("-")[1])}月`
+      : new Date(`${key}-01`).toLocaleDateString("en", { month: "short" });
+    return (
+      <div class="relative mb-6">
+        <div class="absolute -left-16 top-0 w-10 text-right text-sm font-semibold text-[#a3a3a3]">
+          {monthLabel}
+        </div>
+        <div class={`absolute -left-[19px] top-1.5 w-[9px] h-[9px] rounded-full border-2 border-white ${dotColor}`}></div>
+        <div class="flex flex-col gap-1.5">
+          {monthDates.map((date) => {
+            const d = new Date(date.date);
+            const day = d.getDate();
+            const isTournament = date.type === "tournament";
+            return (
+              <div class="text-sm">
+                <div class="flex flex-wrap items-baseline gap-x-3">
+                  <span class={isTournament ? "font-semibold" : ""}>
+                    {day}{locale === "ja" ? "日" : ""} {date.dayOfWeek[locale]}
+                  </span>
+                  <span class="text-[#a3a3a3] whitespace-nowrap">
+                    {isTournament
+                      ? (locale === "ja" ? "大会" : "Tournament")
+                      : (locale === "ja" ? "例会" : "Meeting")}
+                  </span>
+                  <span class="text-[#a3a3a3] whitespace-nowrap">
+                    {date.room}{locale === "ja" ? "室" : ""}
+                  </span>
+                </div>
+                {date.note && (
+                  <p class="text-[#a3a3a3] text-xs mt-0.5">{date.note[locale]}</p>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    );
+  })}
+</div>

@@ -22,6 +22,7 @@ export default function HamburgerMenu({ locale }: Props) {
 
   const pages = [
     { label: i.nav.home, sub: i.sections.home, href: getLocalePath(locale, "/") },
+    { label: i.schedule.label, sub: "SCHEDULE", href: getLocalePath(locale, "/schedule") },
     { label: i.nav.tournaments, sub: i.sections.tournaments, href: getLocalePath(locale, "/tournaments") },
   ];
 
