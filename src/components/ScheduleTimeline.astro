@@ -54,12 +54,12 @@ function formatMonthHeading(monthKey: string): string {
           const day = d.getDate();
           const isTournament = date.type === "tournament";
           return (
-            <li class="flex items-start gap-4 py-3 border-b border-[#f5f5f5] last:border-0">
-              <div class="flex flex-col items-center min-w-[44px] pt-0.5">
+            <li class="flex items-baseline gap-4 py-3 border-b border-[#f5f5f5] last:border-0">
+              <div class="flex items-baseline gap-1.5 min-w-[60px]">
                 <span class={`text-2xl font-bold leading-none ${isTournament ? "text-[#2563eb]" : "text-[#171717]"}`}>{day}</span>
-                <span class="text-xs text-[#a3a3a3] mt-1">{date.dayOfWeek[locale]}</span>
+                <span class="text-xs text-[#a3a3a3]">({date.dayOfWeek[locale]})</span>
               </div>
-              <div class="flex-1 pt-1">
+              <div class="flex-1">
                 <p class="text-sm font-semibold flex items-center gap-2 flex-wrap">
                   {isTournament && <span class="text-xs px-1.5 py-0.5 rounded bg-[#2563eb] text-white font-semibold">{locale === "ja" ? "大会" : "Tournament"}</span>}
                   <span>{isTournament ? (date.note?.[locale] ?? (locale === "ja" ? "大会" : "Tournament")) : (locale === "ja" ? "例会" : "Meeting")}</span>
