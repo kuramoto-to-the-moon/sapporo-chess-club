@@ -1,0 +1,80 @@
+---
+import { Badge } from "@/components/ui/badge";
+import ApplicationForm from "@/components/ApplicationForm.tsx";
+import { t, type Locale } from "@/i18n";
+
+interface Props {
+  locale: Locale;
+  title: string;
+  date: string;
+  status: "open" | "closed" | "upcoming" | "results";
+  detailsPdf?: string;
+  resultsPdf?: string;
+  gamesPgn?: string;
+  formspreeId?: string;
+}
+
+const { locale, title, date, status, detailsPdf, resultsPdf, gamesPgn, formspreeId } = Astro.props;
+const i = t(locale);
+
+const badgeStyles: Record<string, string> = {
+  open: "bg-[#171717] text-white hover:bg-[#171717]",
+  results: "bg-[#e5e5e5] text-[#525252] hover:bg-[#e5e5e5]",
+  closed: "bg-[#f5f5f5] text-[#a3a3a3] hover:bg-[#f5f5f5]",
+  upcoming: "bg-[#f5f5f5] text-[#a3a3a3] hover:bg-[#f5f5f5]",
+};
+
+const badgeLabels: Record<string, string> = {
+  open: i.badge.open,
+  results: i.badge.results,
+  closed: i.badge.closed,
+  upcoming: i.badge.upcoming,
+};
+
+const isOpen = status === "open";
+const hasFiles = detailsPdf || resultsPdf || gamesPgn;
+const borderClass = isOpen ? "border-[#e5e5e5]" : "border-[#f5f5f5]";
+
+const fileLinks = [
+  detailsPdf && { label: i.tournament.detailsPdf, href: detailsPdf },
+  resultsPdf && { label: i.tournament.resultsPdf, href: resultsPdf },
+  gamesPgn && { label: i.tournament.gamesPgn, href: gamesPgn },
+].filter(Boolean) as { label: string; href: string }[];
+---
+
+<div class={`border ${borderClass} rounded-md p-4 reveal`}>
+  <div class="flex justify-between items-start">
+    <div>
+      <p class="text-[11px] font-semibold">{title}</p>
+      <p class="text-[9px] text-[#a3a3a3] mt-1">{date}</p>
+    </div>
+    <Badge className={`text-[8px] px-1.5 py-0 rounded-[3px] font-semibold ${badgeStyles[status]}`}>
+      {badgeLabels[status]}
+    </Badge>
+  </div>
+
+  {hasFiles && (
+    <div class="mt-3.5">
+      {fileLinks.map((link, idx) => (
+        <a
+          href={link.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          class:list={[
+            "flex justify-between py-2.5 text-[10px] arrow-link hover:text-[#525252] transition-colors",
+            idx < fileLinks.length - 1 && "border-b border-[#f5f5f5]",
+          ]}
+        >
+          <span>{link.label}</span>
+          <span class="text-[#a3a3a3] arrow">→</span>
+        </a>
+      ))}
+    </div>
+  )}
+
+  {isOpen && formspreeId && (
+    <div class="mt-4">
+      <ApplicationForm formspreeId={formspreeId} tournamentName={title} locale={locale} client:visible />
+    </div>
+  )}
+</div>
