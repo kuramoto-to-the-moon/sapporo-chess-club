@@ -40,7 +40,8 @@
       "Bash(gh run:*)",
       "Bash(curl -sI https://kuramoto-to-the-moon.github.io/sapporo-chess-club/)",
       "Bash(pnpm dlx:*)",
-      "Bash(gh issue:*)"
+      "Bash(gh issue:*)",
+      "Bash(curl -sI \"https://kuramoto-to-the-moon.github.io/sapporo-chess-club/competition/HokkaidoChessCh2026_NoAnalysis.pgn\")"
     ]
   }
 }

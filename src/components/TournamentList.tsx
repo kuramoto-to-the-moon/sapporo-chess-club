@@ -114,26 +114,59 @@ export default function TournamentList({ tournaments, years, locale }: Props) {
                       linkIdx < fileLinks.length - 1 ? "border-b border-[#f5f5f5]" : ""
                     }`;
                     if (link.isPgn) {
+                      const filename = link.href.split("/").pop() || "game.pgn";
+
+                      const handleView = async (e: React.MouseEvent) => {
+                        e.preventDefault();
+                        try {
+                          const res = await fetch(link.href);
+                          const text = await res.text();
+                          const blob = new Blob([text], { type: "text/plain;charset=utf-8" });
+                          const url = URL.createObjectURL(blob);
+                          window.open(url, "_blank");
+                          setTimeout(() => URL.revokeObjectURL(url), 60000);
+                        } catch {
+                          window.open(link.href, "_blank");
+                        }
+                      };
+
+                      const handleSave = async (e: React.MouseEvent) => {
+                        e.preventDefault();
+                        try {
+                          const res = await fetch(link.href);
+                          const blob = await res.blob();
+                          const url = URL.createObjectURL(blob);
+                          const a = document.createElement("a");
+                          a.href = url;
+                          a.download = filename;
+                          document.body.appendChild(a);
+                          a.click();
+                          document.body.removeChild(a);
+                          setTimeout(() => URL.revokeObjectURL(url), 1000);
+                        } catch {
+                          window.location.href = link.href;
+                        }
+                      };
+
                       return (
                         <div key={link.href} className={rowClass}>
                           <span className="text-sm">{link.label}</span>
                           <span className="flex items-center gap-3 text-sm">
-                            <a
-                              href={link.href}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-[#2563eb] hover:text-[#1d4ed8] transition-colors duration-150"
+                            <button
+                              type="button"
+                              onClick={handleView}
+                              className="text-[#2563eb] hover:text-[#1d4ed8] transition-colors duration-150 cursor-pointer"
                             >
                               {locale === "ja" ? "表示" : "View"}
-                            </a>
+                            </button>
                             <span className="text-[#e5e5e5]" aria-hidden="true">|</span>
-                            <a
-                              href={link.href}
-                              download=""
-                              className="text-[#2563eb] hover:text-[#1d4ed8] transition-colors duration-150"
+                            <button
+                              type="button"
+                              onClick={handleSave}
+                              className="text-[#2563eb] hover:text-[#1d4ed8] transition-colors duration-150 cursor-pointer"
                             >
                               {locale === "ja" ? "保存" : "Save"}
-                            </a>
+                            </button>
                           </span>
                         </div>
                       );
