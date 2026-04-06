@@ -81,12 +81,16 @@ export default function HamburgerMenu({ locale, currentPath }: Props) {
     { label: i.nav.tournaments, sub: i.sections.tournaments, href: getLocalePath(locale, "/tournaments") },
   ];
 
+  const homeHref = getLocalePath(locale, "/");
+  const isHome = currentPath === "/" || currentPath === "";
+  const anchorHref = (id: string) => (isHome ? `#${id}` : `${homeHref}#${id}`);
+
   const anchors = [
-    { label: i.menu.schedule, href: "#schedule" },
-    { label: i.menu.activities, href: "#activities" },
-    { label: i.menu.info, href: "#info" },
-    { label: i.menu.lessons, href: "#lessons" },
-    { label: i.menu.contact, href: "#contact" },
+    { label: i.menu.schedule, href: anchorHref("schedule") },
+    { label: i.menu.activities, href: anchorHref("activities") },
+    { label: i.menu.info, href: anchorHref("info") },
+    { label: i.menu.lessons, href: anchorHref("lessons") },
+    { label: i.menu.contact, href: anchorHref("contact") },
   ];
 
   return (
