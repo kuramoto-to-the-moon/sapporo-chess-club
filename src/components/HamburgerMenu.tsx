@@ -51,7 +51,7 @@ export default function HamburgerMenu({ locale }: Props) {
           role="dialog"
           aria-modal="true"
         >
-          <div className="flex items-center justify-between px-5 py-4">
+          <div className="max-w-4xl mx-auto flex items-center justify-between px-5 py-4">
             <span className="text-xs tracking-[3px] text-[#525252]">
               SAPPORO CHESS CLUB
             </span>
@@ -64,7 +64,7 @@ export default function HamburgerMenu({ locale }: Props) {
             </button>
           </div>
 
-          <nav className="px-5 pt-8">
+          <nav className="max-w-4xl mx-auto px-5 pt-8">
             {pages.map((page, idx) => (
               <a
                 key={page.href}
@@ -100,8 +100,10 @@ export default function HamburgerMenu({ locale }: Props) {
             </div>
           </nav>
 
-          <div className="absolute bottom-0 left-0 right-0 px-5 py-4 border-t border-[#2a2a2a]">
-            <span className="text-xs text-[#525252]">sapporochessclub@gmail.com</span>
+          <div className="absolute bottom-0 left-0 right-0 border-t border-[#2a2a2a]">
+            <div className="max-w-4xl mx-auto px-5 py-4">
+              <span className="text-xs text-[#525252]">sapporochessclub@gmail.com</span>
+            </div>
           </div>
         </div>
       )}
