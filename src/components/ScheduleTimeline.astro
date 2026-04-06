@@ -1,5 +1,6 @@
 ---
 import type { Locale } from "@/i18n";
+import ApplicationForm from "@/components/ApplicationForm.tsx";
 
 interface ScheduleDate {
   date: string;
@@ -9,6 +10,8 @@ interface ScheduleDate {
   room: string;
   venue: { ja: string; en: string };
   type?: "meeting" | "tournament";
+  eventName?: { ja: string; en: string };
+  formspreeId?: string;
   note?: { ja: string; en: string };
 }
 
@@ -62,13 +65,23 @@ function formatMonthHeading(monthKey: string): string {
               <div class="flex-1 pt-1">
                 <p class="text-sm font-semibold flex items-center gap-2 flex-wrap">
                   {isTournament && <span class="text-xs px-1.5 py-0.5 rounded bg-[#2563eb] text-white font-semibold">{locale === "ja" ? "大会" : "Tournament"}</span>}
-                  <span>{isTournament ? (date.note?.[locale] ?? (locale === "ja" ? "大会" : "Tournament")) : (locale === "ja" ? "例会" : "Meeting")}</span>
+                  <span>{isTournament ? (date.eventName?.[locale] ?? (locale === "ja" ? "大会" : "Tournament")) : (locale === "ja" ? "例会" : "Meeting")}</span>
                 </p>
                 <p class="text-xs text-[#a3a3a3] mt-1">
                   {date.startTime}–{date.endTime} / {date.room}{locale === "ja" ? "室" : ""}
                 </p>
-                {!isTournament && date.note && (
+                {date.note && (
                   <p class="text-xs text-[#a3a3a3] mt-1">{date.note[locale]}</p>
+                )}
+                {date.formspreeId && (
+                  <div class="mt-3">
+                    <ApplicationForm
+                      formspreeId={date.formspreeId}
+                      tournamentName={date.eventName?.[locale] ?? (locale === "ja" ? "大会" : "Tournament")}
+                      locale={locale}
+                      client:visible
+                    />
+                  </div>
                 )}
               </div>
             </li>
