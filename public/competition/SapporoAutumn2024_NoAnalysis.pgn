@@ -1,0 +1,786 @@
+[Event "Sapporo Autumn Chess Tournament 2024"]
+[Site "Sapporo Chess Club"]
+[Date "2024.10.13"]
+[Round "1"]
+[Board "1"]
+[White "Furuse, Mizuki"]
+[Black "Honda, Yoshiki"]
+[Result "1/2-1/2"]
+[ECO "A38"]
+[WhiteElo "1564"]
+[BlackElo "1848"]
+[PlyCount "101"]
+[EventDate "2024.10.13"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. Nf3 Nf6 2. g3 g6 3. Bg2 Bg7 4. O-O O-O 5. c4 d6 6. Nc3 c5 7. d3 Nc6 8. Rb1 Ne8
+9. Bd2 Bd7 10. a3 a5 11. Qc2 Nc7 12. Na2 Qc8 13. b4 axb4 14. axb4 Nxb4 15. Nxb4 cxb4
+16. Bxb4 Ne6 17. Bc3 Bc6 18. Bxg7 Nxg7 19. Qb2 Qd7 20. Ra1 b5 21. cxb5 Bxb5 22. Ne5
+Rxa1 23. Nxd7 Rxf1+ 24. Kxf1 Bxd7 25. f4 Be6 26. Kf2 Rc8 27. h3 h5 28. d4 Kf8 29.
+d5 Bd7 30. Qb4 Ke8 31. Qb2 Kf8 32. Kg1 Rd8 33. Kh2 Rc8 34. Qb7 Rd8 35. Bf3 Ke8 36.
+g4 hxg4 37. Bxg4 Bxg4 38. hxg4 Kf8 39. e4 Re8 40. f5 gxf5 41. exf5 f6 42. Qb3 Kf7
+43. Kg2 Rh8 44. Qe3 Rh7 45. Qf4 Rh4 46. Kg3 Nh5+ 47. gxh5 Rxf4 48. Kxf4 Kg7 49. Kg4
+Kh7 50. Kh4 Kg7 51. Kg4  1/2-1/2
+
+[Event "Sapporo Autumn Chess Tournament 2024"]
+[Site "Sapporo Chess Club"]
+[Date "2024.10.13"]
+[Round "1"]
+[Board "2"]
+[White "Yoshii, Yukihiko"]
+[Black "Yajima, Machiko"]
+[Result "1-0"]
+[ECO "A53"]
+[WhiteElo "1750"]
+[BlackElo "1469"]
+[PlyCount "63"]
+[EventDate "2024.10.13"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. c4 d6 2. d4 Nf6 3. Nc3 Nc6 4. Nf3 Bd7 5. e4 e5 6. d5 Nb4 7. a3 Na6 8. b4 c6 9.
+dxc6 bxc6 10. c5 Qc8 11. cxd6 Nb8 12. Be2 a5 13. Bb2 c5 14. b5 c4 15. Nxe5 Be6 16.
+a4 Nbd7 17. Nc6 g6 18. e5 Ng4 19. Bxg4 Bxg4 20. Qxg4 Nxe5 21. Qxc8+ Rxc8 22. Nxe5
+Bxd6 23. Nc6 Bb4 24. O-O Bc5 25. Ne4 Bf8 26. Bxh8 Kd7 27. Rad1+ Ke6 28. Ng5+ Kf5
+29. Rd5+ Kg4 30. h3+ Kh5 31. Nxf7+ Kh4 32. Bf6+  1-0
+
+[Event "Sapporo Autumn Chess Tournament 2024"]
+[Site "Sapporo Chess Club"]
+[Date "2024.10.13"]
+[Round "1"]
+[Board "3"]
+[White "Ito, Katsuhide"]
+[Black "Nishimori, Toshiyuki"]
+[Result "0-1"]
+[ECO "B33"]
+[WhiteElo "1448"]
+[BlackElo "1746"]
+[PlyCount "88"]
+[EventDate "2024.10.13"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 e5 6. Ndb5 d6 7. Bg5 a6 8. Na3
+b5 9. Bxf6 gxf6 10. Nd5 f5 11. Bd3 Be6 12. Qh5 f4 13. O-O Bg7 14. c3 Rb8 15. Nc2
+Ne7 16. Ncb4 Nxd5 17. exd5 Bc8 18. Nc6 Qb6 19. Qg5 O-O 20. Nxb8 Qxb8 21. Qh5 h6 22.
+Be4 f5 23. Bc2 Qb7 24. Rad1 Qe7 25. Rd3 e4 26. Rh3 Qf6 27. Re1 Bd7 28. Rh4 Be8 29.
+Qd1 Qxh4 30. b4 Be5 31. f3 e3 32. Qe2 Bxc3 33. Rc1 Bd2 34. Rf1 Bd7 35. a3 Rc8 36.
+Bd3 Rc3 37. Rd1 Rxa3 38. Rxd2 exd2 39. Qxd2 Ra1+ 40. Bf1 Qe1 41. Qf2 Qxf2+ 42. Kxf2
+Rb1 43. g3 fxg3+ 44. Kxg3 Rxf1  0-1
+
+[Event "Sapporo Autumn Chess Tournament 2024"]
+[Site "Sapporo Chess Club"]
+[Date "2024.10.13"]
+[Round "1"]
+[Board "4"]
+[White "Aoki, Yasuhiro"]
+[Black "Okimura, Mikiko"]
+[Result "1-0"]
+[ECO "D12"]
+[WhiteElo "1721"]
+[BlackElo "1000"]
+[PlyCount "67"]
+[EventDate "2024.10.13"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. c4 c6 2. Nf3 d5 3. e3 Bf5 4. Be2 Nf6 5. Nc3 e6 6. O-O Bd6 7. d4 O-O 8. Nh4 Qc7
+9. h3 Nbd7 10. Nxf5 exf5 11. Bd3 Rae8 12. cxd5 Nxd5 13. Bxf5 Nxc3 14. bxc3 h6 15.
+Bd3 Re6 16. e4 Rfe8 17. e5 Be7 18. Bf5 c5 19. Bxe6 fxe6 20. Qg4 Nb6 21. Qxe6+ Kh8
+22. d5 Qd7 23. Qxd7 Nxd7 24. f4 Nb6 25. Rd1 Rd8 26. d6 Bf8 27. Be3 Nd7 28. e6 Nf6
+29. e7 Nd7 30. exd8=Q Kg8 31. Qxd7 Kh7 32. Qf7 h5 33. Rd5 Bxd6 34. Rxh5#  1-0
+
+[Event "Sapporo Autumn Chess Tournament 2024"]
+[Site "Sapporo Chess Club"]
+[Date "2024.10.13"]
+[Round "1"]
+[Board "5"]
+[White "Ono, Yukiko"]
+[Black "Tang, Yichen"]
+[Result "0-1"]
+[ECO "B50"]
+[WhiteElo "1000"]
+[BlackElo "1696"]
+[PlyCount "34"]
+[EventDate "2024.10.13"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. e4 c5 2. Nc3 d6 3. Bc4 Nf6 4. d3 g6 5. Nf3 Bg7 6. Be3 Nc6 7. a3 O-O 8. Qd2 e6
+9. O-O d5 10. exd5 exd5 11. Nxd5 Nxd5 12. Bg5 Qd6 13. c3 Re8 14. Rab1 Nb6 15. Bf4
+Qd7 16. Ne5 Nxe5 17. Bxe5 Bxe5  0-1
+
+[Event "Sapporo Autumn Chess Tournament 2024"]
+[Site "Sapporo Chess Club"]
+[Date "2024.10.13"]
+[Round "1"]
+[Board "6"]
+[White "Nakamura, Mitsuru"]
+[Black "Chay, Florian"]
+[Result "0-1"]
+[ECO "B76"]
+[WhiteElo "1644"]
+[BlackElo "0"]
+[PlyCount "58"]
+[EventDate "2024.10.13"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nc6 5. Nc3 g6 6. Be3 Bg7 7. f3 Nf6 8. Qd2 Nxd4
+9. Bxd4 O-O 10. O-O-O Bd7 11. Kb1 a6 12. a3 b5 13. g4 Rb8 14. g5 Ne8 15. Bxg7 Kxg7
+16. h4 b4 17. axb4 Rxb4 18. Nd5 Ra4 19. Qc3+ e5 20. Qb3 Qa5 21. c3 Ra1+ 22. Kc2 Ba4
+23. Rxa1 Bxb3+ 24. Kxb3 Qxa1 25. Bg2 Qa5 26. h5 Nc7 27. h6+ Kh8 28. Nf6 Qb6+ 29.
+Ka2 Rb8  0-1
+
+[Event "Sapporo Autumn Chess Tournament 2024"]
+[Site "Sapporo Chess Club"]
+[Date "2024.10.13"]
+[Round "1"]
+[Board "7"]
+[White "Dryglas, Maciej"]
+[Black "kuramoto, koutarou"]
+[Result "1-0"]
+[ECO "B23"]
+[WhiteElo "0"]
+[BlackElo "1622"]
+[PlyCount "53"]
+[EventDate "2024.10.13"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. e4 c5 2. Nc3 d6 3. f4 g6 4. Nf3 Bg7 5. Bc4 Nf6 6. d3 Nc6 7. O-O O-O 8. Qe1 e6
+9. f5 exf5 10. Qh4 Ne5 11. Bg5 Be6 12. exf5 Bxf5 13. Nxe5 dxe5 14. Nd5 b5 15. Nxf6+
+Bxf6 16. Bxf6 Qb6 17. Rxf5 bxc4 18. Qh6 Qxf6 19. Rxf6 cxd3 20. cxd3 Rad8 21. Raf1
+c4 22. dxc4 e4 23. h4 Rd7 24. h5 Re7 25. hxg6 hxg6 26. Rxg6+ fxg6 27. Rxf8#  1-0
+
+[Event "Sapporo Autumn Chess Tournament 2024"]
+[Site "Sapporo Chess Club"]
+[Date "2024.10.13"]
+[Round "2"]
+[Board "1"]
+[White "Tang, Yichen"]
+[Black "Yoshii, Yukihiko"]
+[Result "1-0"]
+[ECO "C21"]
+[WhiteElo "1696"]
+[BlackElo "1750"]
+[PlyCount "53"]
+[EventDate "2024.10.13"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. e4 e5 2. d4 exd4 3. c3 dxc3 4. Bc4 d6 5. Nf3 Be7 6. O-O Nf6 7. Nxc3 O-O 8. Bf4
+Nc6 9. h3 h6 10. Re1 a6 11. e5 dxe5 12. Nxe5 Bd6 13. Nxc6 bxc6 14. Be3 Bb7 15. Qb3
+Qc8 16. Na4 Nd7 17. Nc3 c5 18. Rad1 Rb8 19. Qc2 Nf6 20. Bxh6 gxh6 21. Qg6+ Kh8 22.
+Qxf6+ Kg8 23. Re3 Qd8 24. Qg6+ Kh8 25. Qxh6+ Kg8 26. f4 Bxf4 27. Qxf4  1-0
+
+[Event "Sapporo Autumn Chess Tournament 2024"]
+[Site "Sapporo Chess Club"]
+[Date "2024.10.13"]
+[Round "2"]
+[Board "2"]
+[White "Nishimori, Toshiyuki"]
+[Black "Dryglas, Maciej"]
+[Result "0-1"]
+[ECO "A48"]
+[WhiteElo "1746"]
+[BlackElo "0"]
+[PlyCount "82"]
+[EventDate "2024.10.13"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. d4 c5 2. e3 Nf6 3. Nf3 g6 4. b3 cxd4 5. exd4 Bg7 6. Bb2 O-O 7. Nbd2 d5 8. Bd3
+Nc6 9. Ne5 Nb4 10. Be2 Bf5 11. Nd3 Nxd3+ 12. Bxd3 Bxd3 13. cxd3 Qa5 14. O-O Rac8
+15. Nf3 Rc7 16. Qe2 Rfc8 17. Rfc1 e6 18. h3 Bh6 19. Rxc7 Qxc7 20. g4 Qf4 21. Kg2
+Bf8 22. Qe1 Rc2 23. Bc1 Qc7 24. Bg5 Nd7 25. Ne5 Nxe5 26. dxe5 Bc5 27. Rc1 Bd4 28.
+Bf4 Rxc1 29. Bxc1 Qxe5 30. Qb4 b6 31. Qe7 Qe2 32. Qh4 Qxd3 33. Qe7 Qe2 34. Qh4 Qd3
+35. Qd8+ Kg7 36. Ba3 Qe4+ 37. Kf1 Bc5 38. Bb2+ e5 39. g5 Qb1+ 40. Kg2 Qxb2 41. Qf6+
+Kg8  0-1
+
+[Event "Sapporo Autumn Chess Tournament 2024"]
+[Site "Sapporo Chess Club"]
+[Date "2024.10.13"]
+[Round "2"]
+[Board "3"]
+[White "Chay, Florian"]
+[Black "Aoki, Yasuhiro"]
+[Result "0-1"]
+[ECO "B08"]
+[WhiteElo "0"]
+[BlackElo "1721"]
+[PlyCount "106"]
+[EventDate "2024.10.13"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. e4 d6 2. d4 Nf6 3. Nc3 g6 4. Nf3 Bg7 5. Be2 O-O 6. Be3 c6 7. h3 Nbd7 8. Qd2 b5
+9. O-O b4 10. Na4 Nxe4 11. Qxb4 Rb8 12. Qe1 c5 13. Nd2 cxd4 14. Bf4 Nxd2 15. Qxd2
+Bb7 16. Bd3 Bc6 17. b3 Bxa4 18. bxa4 Nc5 19. Bb5 Ne4 20. Qd3 Nc3 21. Bd2 Qc7 22.
+Rfe1 e6 23. Bxc3 Qxc3 24. Rab1 Rbc8 25. Re2 Rc5 26. Rb3 Qa1+ 27. Kh2 Be5+ 28. g3
+h5 29. Kg2 Rc3 30. Rxc3 Qxc3 31. f4 Qxd3 32. cxd3 Bf6 33. Kf3 e5 34. g4 hxg4+ 35.
+hxg4 Rc8 36. Bc4 Rc5 37. f5 d5 38. Bb3 gxf5 39. gxf5 Kg7 40. Rg2+ Kh6 41. Kg4 e4
+42. Rh2+ Kg7 43. dxe4 dxe4 44. Rc2 Rxc2 45. Bxc2 d3 46. Bb1 Be5 47. Kh3 Kf6 48. Kg4
+Bd6 49. a3 Ke5 50. Kg3 Kd4+ 51. Kf2 e3+ 52. Ke1 Bg3+ 53. Kd1 e2+  0-1
+
+[Event "Sapporo Autumn Chess Tournament 2024"]
+[Site "Sapporo Chess Club"]
+[Date "2024.10.13"]
+[Round "2"]
+[Board "4"]
+[White "Honda, Yoshiki"]
+[Black "Sugimoto, Koichi"]
+[Result "0-1"]
+[ECO "B23"]
+[WhiteElo "1848"]
+[BlackElo "1872"]
+[PlyCount "44"]
+[EventDate "2024.10.13"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. e4 c5 2. Nc3 Nc6 3. f4 g6 4. Nf3 Bg7 5. Bc4 e6 6. d3 Nge7 7. f5 d5 8. Bb3 O-O
+9. O-O d4 10. Ne2 exf5 11. Qe1 fxe4 12. dxe4 d3 13. cxd3 Qxd3 14. Ng5 c4 15. Nf4
+Qd4+ 16. Be3 Qe5 17. Qh4 h6 18. Nxf7 Qxe4 19. Nxh6+ Bxh6 20. Bxc4+ Kh7 21. Nxg6 Qxe3+
+22. Kh1 Nxg6  0-1
+
+[Event "Sapporo Autumn Chess Tournament 2024"]
+[Site "Sapporo Chess Club"]
+[Date "2024.10.13"]
+[Round "2"]
+[Board "5"]
+[White "kuramoto, koutarou"]
+[Black "Furuse, Mizuki"]
+[Result "1/2-1/2"]
+[ECO "E94"]
+[WhiteElo "1622"]
+[BlackElo "1564"]
+[PlyCount "71"]
+[EventDate "2024.10.13"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. e4 g6 2. c4 Bg7 3. d4 d6 4. Nc3 Nf6 5. Nf3 O-O 6. Be2 e5 7. d5 a5 8. O-O Nbd7
+9. Bd2 Ne8 10. Be3 Nc5 11. a3 f5 12. Nd2 f4 13. Bxc5 dxc5 14. b4 axb4 15. axb4 Rxa1
+16. Qxa1 cxb4 17. Nb5 Nd6 18. c5 Nxb5 19. Bxb5 g5 20. Nc4 g4 21. Qd1 f3 22. g3 Qg5
+23. c6 Qh5 24. d6 Qh3 25. Ne3 bxc6 26. Bxc6 Be6 27. dxc7 Bh6 28. Qd2 Qg2+ 29. Nxg2
+Bxd2 30. Rd1 Bg5 31. Ne3 Rc8 32. Bd7 Bxd7 33. Rxd7 b3 34. Nc4 Ra8 35. Rd1 Rc8 36.
+Rd7  1/2-1/2
+
+[Event "Sapporo Autumn Chess Tournament 2024"]
+[Site "Sapporo Chess Club"]
+[Date "2024.10.13"]
+[Round "2"]
+[Board "6"]
+[White "Okimura, Mikiko"]
+[Black "Nakamura, Mitsuru"]
+[Result "0-1"]
+[ECO "D02"]
+[WhiteElo "1000"]
+[BlackElo "1644"]
+[PlyCount "76"]
+[EventDate "2024.10.13"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. d4 d5 2. Nf3 c6 3. g3 Nf6 4. Bg2 e6 5. O-O Be7 6. c4 dxc4 7. Qc2 b5 8. a3 Bb7
+9. Nbd2 Qb6 10. Re1 Nbd7 11. e4 O-O 12. e5 Nd5 13. b3 cxb3 14. Nxb3 Rac8 15. Bb2
+a5 16. Rac1 a4 17. Nbd2 c5 18. Qd1 c4 19. Nf1 c3 20. Ba1 Bxa3 21. Rc2 Be7 22. Qd3
+Nb4 23. Qd1 Nxc2 24. Qxc2 Qa5 25. Ne3 b4 26. Qe2 Ba6 27. Qd1 b3 28. Bf1 b2 29. Bxb2
+cxb2 30. Nd2 Rc1 31. Nec4 Bxc4 32. Nxc4 Qc3 33. Qd3 Qxe1 34. Kg2 b1=Q 35. Ne3 Qxd3
+36. Kf3 Qdxe3+ 37. fxe3 Qxf1+ 38. Kg4 Qf5#  0-1
+
+[Event "Sapporo Autumn Chess Tournament 2024"]
+[Site "Sapporo Chess Club"]
+[Date "2024.10.13"]
+[Round "2"]
+[Board "7"]
+[White "Yajima, Machiko"]
+[Black "Ito, Katsuhide"]
+[Result "0-1"]
+[ECO "A00"]
+[WhiteElo "1469"]
+[BlackElo "1448"]
+[PlyCount "96"]
+[EventDate "2024.10.13"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. g3 Nc6 2. Bg2 d5 3. c3 e5 4. Nh3 h6 5. O-O Nf6 6. d3 Bc5 7. b4 Bb6 8. e3 O-O 9.
+a4 a6 10. Na3 Re8 11. Bb2 e4 12. c4 Ng4 13. Nf4 Nxb4 14. d4 c5 15. Bc3 Nc6 16. Nxd5
+Ba5 17. h3 Bxc3 18. Nxc3 cxd4 19. Nd5 Nf6 20. Qc2 Qa5 21. Nxf6+ gxf6 22. Bxe4 f5
+23. Bd5 Nb4 24. Qd2 Be6 25. Qxd4 Rad8 26. e4 Nc6 27. Qb2 fxe4 28. Bxe4 Qe5 29. Qxe5
+Nxe5 30. Bxb7 Bxh3 31. Rfc1 Nd3 32. Rc3 Nc5 33. Nc2 Nxb7 34. c5 Na5 35. Ne3 Nc6 36.
+Kh2 Bc8 37. Rc4 Ne5 38. Rf4 Rd2 39. Kg1 Nd3 40. Rf3 Bb7 41. Rf6 Re6 42. Nc4 Rde2
+43. Rxe6 Rxe6 44. Nd6 Bc6 45. Rb1 Nxc5 46. Rb8+ Kg7 47. Nc4 Re1+ 48. Kh2 Rh1#  0-1
+
+[Event "Sapporo Autumn Chess Tournament 2024"]
+[Site "Sapporo Chess Club"]
+[Date "2024.10.13"]
+[Round "3"]
+[Board "1"]
+[White "Aoki, Yasuhiro"]
+[Black "Tang, Yichen"]
+[Result "1-0"]
+[ECO "A29"]
+[WhiteElo "1721"]
+[BlackElo "1696"]
+[PlyCount "45"]
+[EventDate "2024.10.13"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. c4 e5 2. Nc3 Bc5 3. Nf3 Nc6 4. g3 Nf6 5. Bg2 O-O 6. O-O d6 7. d3 Be6 8. a3 a6
+9. b4 Ba7 10. Rb1 Rb8 11. Qc2 Qd7 12. Ng5 Bf5 13. Nge4 Bd4 14. Nxf6+ gxf6 15. Nd5
+Qd8 16. Bh6 Re8 17. e3 Ba7 18. Qe2 Bg6 19. Rbd1 Ne7 20. Nxf6+ Kh8 21. Nxe8 Nf5 22.
+Nxc7 Qxc7 23. Bg5  1-0
+
+[Event "Sapporo Autumn Chess Tournament 2024"]
+[Site "Sapporo Chess Club"]
+[Date "2024.10.13"]
+[Round "3"]
+[Board "2"]
+[White "Sugimoto, Koichi"]
+[Black "Dryglas, Maciej"]
+[Result "0-1"]
+[ECO "D00"]
+[WhiteElo "1872"]
+[BlackElo "0"]
+[PlyCount "72"]
+[EventDate "2024.10.13"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. d4 d5 2. Bf4 c5 3. e3 Nc6 4. Nf3 Bg4 5. Be2 e6 6. c3 Qb6 7. Qc1 cxd4 8. exd4 Rc8
+9. Nbd2 Nf6 10. h3 Bh5 11. O-O Ne4 12. Be3 f5 13. Re1 Be7 14. c4 O-O 15. c5 Qd8 16.
+Nxe4 dxe4 17. Ng5 Bxg5 18. Bxg5 Qe8 19. Bb5 Qg6 20. Bxc6 Rxc6 21. b4 h6 22. Bf4 Bf3
+23. g3 Qh5 24. Kh2 g5 25. Bd6 Bg4 26. h4 Rxd6 27. cxd6 gxh4 28. Kg1 hxg3 29. fxg3
+Bf3 30. Qf4 Qh1+ 31. Kf2 Qg2+ 32. Ke3 Qc2 33. Qxh6 f4+ 34. gxf4 Qd3+ 35. Kf2 Qd2+
+36. Kg3 Qg2+  0-1
+
+[Event "Sapporo Autumn Chess Tournament 2024"]
+[Site "Sapporo Chess Club"]
+[Date "2024.10.13"]
+[Round "3"]
+[Board "3"]
+[White "Yoshii, Yukihiko"]
+[Black "Chay, Florian"]
+[Result "1-0"]
+[ECO "A34"]
+[WhiteElo "1750"]
+[BlackElo "0"]
+[PlyCount "95"]
+[EventDate "2024.10.13"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. c4 c5 2. Nc3 Nf6 3. g3 d5 4. cxd5 Nxd5 5. Bg2 Nc7 6. Nf3 Nc6 7. e3 e5 8. O-O Bg4
+9. Qc2 Qd7 10. d3 O-O-O 11. Ne1 Bh3 12. a3 Bxg2 13. Kxg2 g5 14. Ne4 Qd5 15. f3 Be7
+16. Bd2 h5 17. Nc3 Qd7 18. Rd1 h4 19. g4 f5 20. h3 e4 21. dxe4 Qd6 22. f4 fxg4 23.
+hxg4 h3+ 24. Kg3 gxf4+ 25. exf4 Bh4+ 26. Kh2 Nd4 27. Qd3 Qd7 28. f5 Rdg8 29. Bf4
+Rxg4 30. Rd2 Bxe1 31. Rd1 Bxc3 32. bxc3 Nd5 33. Be5 Qc6 34. cxd4 c4 35. Qf3 Qa4 36.
+Bxh8 Qc2+ 37. Kh1 Qg2+ 38. Qxg2 hxg2+ 39. Kg1 Ne3 40. Rfe1 Nxd1 41. Rxd1 Rh4 42.
+Kxg2 Rxh8 43. Kg3 Kd7 44. e5 Rc8 45. Kf3 c3 46. Rc1 Rc4 47. Ke3 b5 48. Kd3  1-0
+
+[Event "Sapporo Autumn Chess Tournament 2024"]
+[Site "Sapporo Chess Club"]
+[Date "2024.10.13"]
+[Round "3"]
+[Board "4"]
+[White "Furuse, Mizuki"]
+[Black "Nishimori, Toshiyuki"]
+[Result "1-0"]
+[ECO "A13"]
+[WhiteElo "1564"]
+[BlackElo "1746"]
+[PlyCount "76"]
+[EventDate "2024.10.13"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. Nf3 d5 2. g3 Nf6 3. Bg2 e6 4. O-O c5 5. c4 d4 6. b4 Nc6 7. b5 Nb8 8. Qa4 Bd7 9.
+Ne5 Qc7 10. Nxd7 Nbxd7 11. d3 Nb6 12. Qb3 Bd6 13. a4 Rd8 14. Bg5 Be7 15. Nd2 Nbd7
+16. a5 b6 17. axb6 axb6 18. Ra2 O-O 19. Rfa1 h6 20. Bxf6 Nxf6 21. Ra7 Qd6 22. Ne4
+Nxe4 23. Bxe4 f5 24. Bg2 f4 25. Rb7 fxg3 26. hxg3 Rb8 27. Rxb8 Rxb8 28. Qa3 Bd8 29.
+Qc1 Bc7 30. Ra7 Qe5 31. Qd2 h5 32. f4 Qd6 33. Bf3 h4 34. gxh4 Qxf4 35. Qxf4 Bxf4
+36. h5 Kh7 37. Re7 e5 38. Kg2 Kh6  1-0
+
+[Event "Sapporo Autumn Chess Tournament 2024"]
+[Site "Sapporo Chess Club"]
+[Date "2024.10.13"]
+[Round "3"]
+[Board "5"]
+[White "Nakamura, Mitsuru"]
+[Black "Ono, Yukiko"]
+[Result "1-0"]
+[ECO "D10"]
+[WhiteElo "1644"]
+[BlackElo "1000"]
+[PlyCount "33"]
+[EventDate "2024.10.13"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. d4 d5 2. c4 c6 3. e3 Nf6 4. h3 b6 5. Nf3 a5 6. Bd3 b5 7. cxb5 cxb5 8. Bxb5+ Nbd7
+9. Nc3 e6 10. O-O Bd6 11. a4 O-O 12. Qc2 Re8 13. e4 Bb7 14. e5 Qc7 15. exd6 Qxd6
+16. Ne5 Bc8 17. Bg5  1-0
+
+[Event "Sapporo Autumn Chess Tournament 2024"]
+[Site "Sapporo Chess Club"]
+[Date "2024.10.13"]
+[Round "3"]
+[Board "6"]
+[White "Ito, Katsuhide"]
+[Black "Honda, Yoshiki"]
+[Result "0-1"]
+[ECO "C88"]
+[WhiteElo "1448"]
+[BlackElo "1848"]
+[PlyCount "56"]
+[EventDate "2024.10.13"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O b5 6. Bb3 Be7 7. Re1 O-O 8. d4 exd4
+9. Nxd4 Nxd4 10. Qxd4 c5 11. Qd1 c4 12. e5 Ne8 13. c3 cxb3 14. Qxb3 Qb6 15. Be3 Bc5
+16. Nd2 Bb7 17. Bxc5 Qxc5 18. Ne4 Bxe4 19. Rxe4 d5 20. Rd4 Nc7 21. Re1 Rfe8 22. Qd1
+Rad8 23. b4 Qxc3 24. Re3 Qc6 25. Qe1 Ne6 26. Rc3 Nxd4 27. Rxc6 Nxc6 28. f4 d4  0-1
+
+[Event "Sapporo Autumn Chess Tournament 2024"]
+[Site "Sapporo Chess Club"]
+[Date "2024.10.13"]
+[Round "3"]
+[Board "7"]
+[White "Yajima, Machiko"]
+[Black "kuramoto, koutarou"]
+[Result "0-1"]
+[ECO "A06"]
+[WhiteElo "1469"]
+[BlackElo "1622"]
+[PlyCount "60"]
+[EventDate "2024.10.13"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. Nf3 Nf6 2. d3 d5 3. Bf4 Bf5 4. Nh4 Bg6 5. Nxg6 hxg6 6. e3 c5 7. c3 Nc6 8. Nd2
+e5 9. Bg5 Be7 10. Nf3 Qd6 11. Be2 O-O-O 12. Qd2 Kb8 13. O-O-O Ng4 14. Bxe7 Qxe7 15.
+Rdf1 e4 16. Ne1 Nxh2 17. Rfg1 Qf6 18. Bd1 Ne5 19. d4 cxd4 20. Qxd4 Qf5 21. g4 Nhxg4
+22. Rxh8 Rxh8 23. Qxd5 Nd3+ 24. Qxd3 exd3 25. Bxg4 Qxf2 26. Nxd3 Qxg1+ 27. Kc2 Qxg4
+28. Kb3 Qd1+ 29. Kc4 Rc8+ 30. Nc5 b6  0-1
+
+[Event "Sapporo Autumn Chess Tournament 2024"]
+[Site "Sapporo Chess Club"]
+[Date "2024.10.14"]
+[Round "4"]
+[Board "1"]
+[White "Dryglas, Maciej"]
+[Black "Aoki, Yasuhiro"]
+[Result "1-0"]
+[ECO "B09"]
+[WhiteElo "0"]
+[BlackElo "1721"]
+[PlyCount "37"]
+[EventDate "2024.10.13"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. Nc3 Nf6 2. e4 d6 3. d4 g6 4. f4 Bg7 5. e5 dxe5 6. fxe5 Nd5 7. Bc4 c6 8. Qf3 Be6
+9. Nh3 Bxh3 10. gxh3 e6 11. Ne4 Qh4+ 12. Ke2 Qe7 13. Nd6+ Kf8 14. Bg5 f6 15. Raf1
+Nd7 16. Kd1 Kg8 17. Bxd5 cxd5 18. exf6 Bxf6 19. Bxf6  1-0
+
+[Event "Sapporo Autumn Chess Tournament 2024"]
+[Site "Sapporo Chess Club"]
+[Date "2024.10.14"]
+[Round "4"]
+[Board "2"]
+[White "Nakamura, Mitsuru"]
+[Black "Yoshii, Yukihiko"]
+[Result "0-1"]
+[ECO "C96"]
+[WhiteElo "1644"]
+[BlackElo "1750"]
+[PlyCount "98"]
+[EventDate "2024.10.13"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O Be7 6. Re1 b5 7. Bb3 d6 8. c3 O-O
+9. h3 Na5 10. Bc2 c5 11. d4 cxd4 12. cxd4 Nc6 13. Be3 Bd7 14. Nc3 Rc8 15. a3 exd4
+16. Bxd4 h6 17. Rc1 Nxd4 18. Qxd4 Be6 19. Nd5 Bxd5 20. exd5 Rc5 21. Be4 Nxe4 22.
+Qxe4 Bf6 23. Rxc5 dxc5 24. Ne5 Qd6 25. f4 Re8 26. g3 Re7 27. Kf1 g5 28. Re2 Bg7 29.
+Qf3 Bxe5 30. fxe5 Rxe5 31. Rxe5 Qxe5 32. Qg2 f5 33. h4 f4 34. hxg5 hxg5 35. gxf4
+Qxf4+ 36. Kg1 Kf7 37. Kh1 Kf6 38. Qe2 Qe5 39. Qf2+ Qf4 40. Qxc5 Qf1+ 41. Kh2 Qe2+
+42. Kg3 Qe5+ 43. Kh3 Qf5+ 44. Kg2 Qe4+ 45. Kf1 Qb1+ 46. Ke2 Qxb2+ 47. Kf3 Qb3+ 48.
+Ke2 Qc4+ 49. Qxc4 bxc4  0-1
+
+[Event "Sapporo Autumn Chess Tournament 2024"]
+[Site "Sapporo Chess Club"]
+[Date "2024.10.14"]
+[Round "4"]
+[Board "3"]
+[White "Tang, Yichen"]
+[Black "Furuse, Mizuki"]
+[Result "0-1"]
+[ECO "B08"]
+[WhiteElo "1696"]
+[BlackElo "1564"]
+[PlyCount "100"]
+[EventDate "2024.10.13"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. e4 g6 2. d4 Bg7 3. Nc3 d6 4. Nf3 Nf6 5. Bd3 O-O 6. O-O a6 7. Be3 Nc6 8. Qd2 Ng4
+9. Bf4 Nxd4 10. Nxd4 Bxd4 11. Be2 Bg7 12. h3 Nf6 13. Bh6 Be6 14. Bxg7 Kxg7 15. h4
+h5 16. Qg5 Kh7 17. f4 Qc8 18. Bd3 Bg4 19. e5 dxe5 20. fxe5 Ng8 21. Nd5 Qd7 22. Nf4
+Bf5 23. Bxf5 Qxf5 24. Qxf5 gxf5 25. Nxh5 e6 26. Rad1 Rad8 27. Nf4 Nh6 28. Nh3 Ng4
+29. Rfe1 Rxd1 30. Rxd1 Nxe5 31. Kf2 f6 32. Nf4 Re8 33. Nh5 Kg6 34. Nf4+ Kf7 35. h5
+Ke7 36. Rh1 Rh8 37. Ke3 Rh6 38. Kd4 b6 39. b4 c6 40. a3 Ng4 41. Kc4 e5 42. Nd3 Ne3+
+43. Kc3 Kd6 44. Nb2 Nd5+ 45. Kd3 f4 46. Nc4+ Ke6 47. Ke4 f5+ 48. Kd3 Nf6 49. Re1
+e4+ 50. Kc3 Nd5+  0-1
+
+[Event "Sapporo Autumn Chess Tournament 2024"]
+[Site "Sapporo Chess Club"]
+[Date "2024.10.14"]
+[Round "4"]
+[Board "4"]
+[White "kuramoto, koutarou"]
+[Black "Sugimoto, Koichi"]
+[Result "0-1"]
+[ECO "B76"]
+[WhiteElo "1622"]
+[BlackElo "1872"]
+[PlyCount "44"]
+[EventDate "2024.10.13"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. f3 O-O 8. Qd2 Nc6
+9. O-O-O d5 10. exd5 Nxd5 11. Nxc6 bxc6 12. Bd4 e5 13. Bc5 Re8 14. Bc4 Be6 15. Nxd5
+cxd5 16. Bxd5 Bxd5 17. Qxd5 Qg5+ 18. Qd2 Qxd2+ 19. Rxd2 Bh6 20. Rhd1 Red8 21. c3
+Rxd2 22. Rxd2 Rd8  0-1
+
+[Event "Sapporo Autumn Chess Tournament 2024"]
+[Site "Sapporo Chess Club"]
+[Date "2024.10.14"]
+[Round "4"]
+[Board "5"]
+[White "Honda, Yoshiki"]
+[Black "Okimura, Mikiko"]
+[Result "1-0"]
+[ECO "B13"]
+[WhiteElo "1848"]
+[BlackElo "1000"]
+[PlyCount "39"]
+[EventDate "2024.10.13"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. e4 c6 2. d4 d5 3. exd5 cxd5 4. c4 Nf6 5. Nc3 Bf5 6. Nf3 Nc6 7. Bg5 g6 8. Bxf6
+exf6 9. cxd5 Nb4 10. Bb5+ Bd7 11. Qe2+ Be7 12. d6 O-O 13. dxe7 Qxe7 14. Qxe7 Bxb5
+15. Qxb4 Rfe8+ 16. Kd2 Bd7 17. Nd5 Kh8 18. Nc7 Rac8 19. Nxe8 Bxe8 20. Qf8#  1-0
+
+[Event "Sapporo Autumn Chess Tournament 2024"]
+[Site "Sapporo Chess Club"]
+[Date "2024.10.14"]
+[Round "4"]
+[Board "6"]
+[White "Nishimori, Toshiyuki"]
+[Black "Ono, Yukiko"]
+[Result "1-0"]
+[ECO "D00"]
+[WhiteElo "1746"]
+[BlackElo "1000"]
+[PlyCount "33"]
+[EventDate "2024.10.13"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. d4 d5 2. Nf3 Nf6 3. Nc3 Nc6 4. Bf4 e6 5. e3 Be7 6. Bd3 O-O 7. h4 a6 8. h5 Ng4
+9. Nh2 Nxf2 10. Kxf2 b5 11. Nf3 Nb4 12. g4 c5 13. a3 Nc6 14. g5 c4 15. Be2 b4 16.
+axb4 Nxb4 17. Qd2  1-0
+
+[Event "Sapporo Autumn Chess Tournament 2024"]
+[Site "Sapporo Chess Club"]
+[Date "2024.10.14"]
+[Round "4"]
+[Board "7"]
+[White "Chay, Florian"]
+[Black "Ito, Katsuhide"]
+[Result "1-0"]
+[ECO "B24"]
+[WhiteElo "0"]
+[BlackElo "1448"]
+[PlyCount "69"]
+[EventDate "2024.10.13"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. e4 c5 2. Nc3 Nc6 3. f4 e6 4. Nf3 Nge7 5. d3 g6 6. g3 Bg7 7. Bg2 a6 8. O-O O-O
+9. Qe1 Re8 10. g4 d5 11. e5 d4 12. Ne4 f5 13. exf6 Bf8 14. fxe7 Bxe7 15. Nfg5 h6
+16. Nh3 Rf8 17. f5 exf5 18. gxf5 Bxf5 19. Bxh6 Bh4 20. Qd2 Re8 21. Bg5 Bxg5 22. Nhxg5
+Ne5 23. h3 c4 24. c3 Nxd3 25. Rad1 Bxe4 26. Nxe4 dxc3 27. Qxc3 Qb6+ 28. Kh2 Qc7+
+29. Kh1 Rf8 30. Nf6+ Rxf6 31. Qxf6 Ne5 32. Bd5+ Kh7 33. Qh4+ Kg7 34. Qd4 Rh8 35.
+Rf7+  1-0
+
+[Event "Sapporo Autumn Chess Tournament 2024"]
+[Site "Sapporo Chess Club"]
+[Date "2024.10.14"]
+[Round "5"]
+[Board "1"]
+[White "Yoshii, Yukihiko"]
+[Black "Dryglas, Maciej"]
+[Result "0-1"]
+[ECO "D07"]
+[WhiteElo "1750"]
+[BlackElo "0"]
+[PlyCount "114"]
+[EventDate "2024.10.13"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. c4 Nc6 2. Nc3 Nf6 3. d4 d5 4. e3 Bg4 5. Be2 Bxe2 6. Qxe2 e5 7. a3 dxc4 8. Qxc4
+exd4 9. exd4 Qxd4 10. Qe2+ Be7 11. Nf3 Qg4 12. O-O O-O-O 13. h3 Qf5 14. Be3 Qd3 15.
+Rfe1 Qxe2 16. Rxe2 Nd5 17. Nxd5 Rxd5 18. Rc1 Bf6 19. Bf4 Rhd8 20. b4 Rd1+ 21. Re1
+Rxe1+ 22. Rxe1 a6 23. Kh2 Bb2 24. Bc1 Bxc1 25. Rxc1 Rd3 26. Ng5 f6 27. Ne6 g5 28.
+a4 Rd6 29. Nc5 Nxb4 30. Ne4 Re6 31. f3 Nd3 32. Rc2 b6 33. Rd2 Ne5 34. Rc2 h6 35.
+Ng3 Kb7 36. Nf5 Nf7 37. Rd2 h5 38. Ng7 Rd6 39. Rxd6 Nxd6 40. Nxh5 f5 41. g4 b5 42.
+axb5 a5 43. Nf6 a4 44. Nd5 a3 45. Nc3 Nxb5 46. Na2 fxg4 47. hxg4 Kc6 48. Kg3 Nd4
+49. Nc3 Kc5 50. Kf2 Kc4 51. Na2 Kb3 52. Nc1+ Kc2 53. Na2 Kb2 54. Nb4 c5 55. Nd3+
+Kc3 56. Nc1 Kc2 57. Na2 Kb2  0-1
+
+[Event "Sapporo Autumn Chess Tournament 2024"]
+[Site "Sapporo Chess Club"]
+[Date "2024.10.14"]
+[Round "5"]
+[Board "2"]
+[White "Aoki, Yasuhiro"]
+[Black "Furuse, Mizuki"]
+[Result "1-0"]
+[ECO "A26"]
+[WhiteElo "1721"]
+[BlackElo "1564"]
+[PlyCount "119"]
+[EventDate "2024.10.13"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. c4 Nf6 2. Nf3 g6 3. g3 Bg7 4. Bg2 O-O 5. O-O d6 6. Nc3 e5 7. d3 Nc6 8. a3 a5 9.
+Rb1 Re8 10. Bg5 Bd7 11. Ne4 h6 12. Nxf6+ Bxf6 13. Bxh6 Qc8 14. Qd2 Bg4 15. Bg5 Bxg5
+16. Nxg5 f6 17. Bd5+ Kg7 18. f3 Bh3 19. Nxh3 Qxh3 20. e3 Nd8 21. f4 c6 22. Bg2 Qh6
+23. Qf2 Rh8 24. h3 f5 25. e4 Rf8 26. fxe5 dxe5 27. Qc5 Qg5 28. Qxe5+ Kg8 29. Qf4
+Qxf4 30. Rxf4 Ne6 31. Rf2 Nc5 32. Rd1 Rad8 33. d4 Nxe4 34. Bxe4 fxe4 35. Rxf8+ Kxf8
+36. Kf2 Kg7 37. Ke3 Rh8 38. h4 Re8 39. Rf1 Re7 40. Rf4 Kh6 41. Rxe4 Rf7 42. d5 Rd7
+43. Rd4 Kg7 44. dxc6 Re7+ 45. Re4 Rxe4+ 46. Kxe4 bxc6 47. Ke5 Kh6 48. g4 g5 49. h5
+Kg7 50. Kf5 a4 51. Kxg5 c5 52. Kf5 Kf7 53. h6 Kg8 54. Kf6 Kh7 55. g5 Kh8 56. Kf7
+Kh7 57. g6+ Kh8 58. g7+ Kh7 59. g8=Q+ Kxh6 60. Qg6#  1-0
+
+[Event "Sapporo Autumn Chess Tournament 2024"]
+[Site "Sapporo Chess Club"]
+[Date "2024.10.14"]
+[Round "5"]
+[Board "3"]
+[White "Sugimoto, Koichi"]
+[Black "Nishimori, Toshiyuki"]
+[Result "1-0"]
+[ECO "D00"]
+[WhiteElo "1872"]
+[BlackElo "1746"]
+[PlyCount "67"]
+[EventDate "2024.10.13"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. d4 d5 2. Nc3 Nf6 3. Bf4 e6 4. e3 c5 5. dxc5 Bxc5 6. Nf3 O-O 7. Bd3 Nc6 8. O-O
+Re8 9. e4 d4 10. Na4 b6 11. Nxc5 bxc5 12. e5 Nd5 13. Bg3 Rb8 14. Qc1 a5 15. Ng5 h6
+16. Ne4 Ncb4 17. Bc4 Ba6 18. Bxa6 Nxa6 19. Nd6 Rf8 20. Re1 Nab4 21. Re4 f5 22. exf6
+Nxf6 23. Rxe6 Nbd5 24. Nf5 Qd7 25. Re5 Rb6 26. Nh4 Ng4 27. Re4 h5 28. h3 Ngf6 29.
+Re5 Re8 30. Rg5 Rbe6 31. Nf5 Re1+ 32. Qxe1 Rxe1+ 33. Rxe1 Kf8 34. Bd6+  1-0
+
+[Event "Sapporo Autumn Chess Tournament 2024"]
+[Site "Sapporo Chess Club"]
+[Date "2024.10.14"]
+[Round "5"]
+[Board "4"]
+[White "Honda, Yoshiki"]
+[Black "Nakamura, Mitsuru"]
+[Result "1-0"]
+[ECO "B23"]
+[WhiteElo "1848"]
+[BlackElo "1644"]
+[PlyCount "77"]
+[EventDate "2024.10.13"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. e4 c5 2. Nc3 d6 3. f4 Nc6 4. Nf3 Qc7 5. Bc4 e6 6. d3 Nf6 7. O-O Be7 8. Qe1 e5
+9. fxe5 dxe5 10. Nd5 Nxd5 11. exd5 Nd4 12. Nxe5 f6 13. Nf7 Nxc2 14. d6 Nxe1 15. Rxe1
+Qc6 16. Rxe7+ Kf8 17. Nxh8 Qxd6 18. Rf7+ Ke8 19. Rxg7 Qd4+ 20. Kh1 f5 21. Bb5+ Kf8
+22. Bh6 Be6 23. Rd7+ Kg8 24. Rxd4 cxd4 25. Bc4 Bxc4 26. dxc4 Kxh8 27. Rd1 Rd8 28.
+Be3 d3 29. g3 a6 30. Kg2 Kg7 31. Kf3 Kf6 32. Bf4 Rd4 33. b3 b5 34. cxb5 axb5 35.
+Ke3 Rd8 36. Rxd3 Ra8 37. Rd2 Re8+ 38. Kd4 Rd8+ 39. Kc5  1-0
+
+[Event "Sapporo Autumn Chess Tournament 2024"]
+[Site "Sapporo Chess Club"]
+[Date "2024.10.14"]
+[Round "5"]
+[Board "5"]
+[White "Chay, Florian"]
+[Black "Tang, Yichen"]
+[Result "0-1"]
+[ECO "B41"]
+[WhiteElo "0"]
+[BlackElo "1696"]
+[PlyCount "72"]
+[EventDate "2024.10.13"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. e4 c5 2. Nf3 e6 3. d4 cxd4 4. Nxd4 a6 5. Be2 Qc7 6. O-O Nf6 7. f3 Bc5 8. Kh1 Bxd4
+9. Qxd4 Qxc2 10. Nc3 Nc6 11. Qd1 Qxd1 12. Rxd1 O-O 13. Be3 Rd8 14. Na4 b5 15. Nc5
+d6 16. Nb3 Bb7 17. Rac1 Rac8 18. a3 d5 19. Bb6 Rd7 20. Nc5 Re7 21. Nxb7 Rxb7 22.
+e5 Nd7 23. Bd4 Rbb8 24. f4 Nxd4 25. Rxc8+ Rxc8 26. Rxd4 Rc1+ 27. Rd1 Rxd1+ 28. Bxd1
+f6 29. Bg4 Kf7 30. f5 exf5 31. Bxf5 Nxe5 32. Bc8 a5 33. b4 axb4 34. axb4 Nd3 35.
+Bb7 Nxb4 36. Bxd5+ Nxd5  0-1
+
+[Event "Sapporo Autumn Chess Tournament 2024"]
+[Site "Sapporo Chess Club"]
+[Date "2024.10.14"]
+[Round "5"]
+[Board "6"]
+[White "Ono, Yukiko"]
+[Black "kuramoto, koutarou"]
+[Result "0-1"]
+[ECO "B23"]
+[WhiteElo "1000"]
+[BlackElo "1622"]
+[PlyCount "30"]
+[EventDate "2024.10.13"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. e4 c5 2. Nc3 d6 3. Bc4 Nf6 4. d3 g6 5. Be3 Bg7 6. Nge2 O-O 7. O-O Ng4 8. Qd2 Nxe3
+9. Qxe3 Nd7 10. a4 Qb6 11. Rab1 Ne5 12. Rfd1 Nxc4 13. dxc4 Be6 14. b3 Rac8 15. Nd5
+Qd8  0-1
+
+[Event "Sapporo Autumn Chess Tournament 2024"]
+[Site "Sapporo Chess Club"]
+[Date "2024.10.14"]
+[Round "5"]
+[Board "7"]
+[White "Okimura, Mikiko"]
+[Black "Yajima, Machiko"]
+[Result "0-1"]
+[ECO "A40"]
+[WhiteElo "1000"]
+[BlackElo "1469"]
+[PlyCount "48"]
+[EventDate "2024.10.13"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. d4 b6 2. Nf3 Bb7 3. c4 g6 4. g3 Bg7 5. Bg2 d6 6. O-O Nh6 7. Bf4 O-O 8. Nc3 a6
+9. a4 e6 10. Re1 Nf5 11. e4 Ne7 12. e5 Nbc6 13. Qd2 Na5 14. Na2 Nxc4 15. Qc3 d5 16.
+Nb4 Na5 17. b3 Rc8 18. Nd3 c5 19. dxc5 bxc5 20. Nxc5 Qb6 21. Nd7 Rxc3 22. Nxb6 Nxb3
+23. Nd7 Rd8 24. Rab1 Rxd7  0-1
+

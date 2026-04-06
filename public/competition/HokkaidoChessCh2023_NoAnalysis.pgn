@@ -1,0 +1,613 @@
+﻿[Event "HokkaidoChessCh2023"]
+[Site "?"]
+[Date "2023.03.25"]
+[Round "1.1"]
+[White "Sugimoto, Koichi"]
+[Black "Matsumoto, Kenshin"]
+[Result "1-0"]
+[ECO "D66"]
+[WhiteElo "1959"]
+[BlackElo "1413"]
+[PlyCount "37"]
+[SourceDate "2023.03.26"]
+
+1. d4 d5 2. c4 e6 3. Nf3 Nf6 4. Bg5 Be7 5. Nc3 Nbd7 6. e3 O-O 7. Rc1 c6 8. Bd3
+c5 9. cxd5 exd5 10. O-O a6 11. Ne5 cxd4 12. exd4 Nxe5 13. dxe5 Nd7 14. Bxe7
+Qxe7 15. Nxd5 Qxe5 16. Re1 Qxb2 17. Bxh7+ Kh8 18. Qh5 Nf6 19. Nxf6 1-0
+
+[Event "HokkaidoChessCh2023"]
+[Site "?"]
+[Date "2023.03.25"]
+[Round "1.2"]
+[White "Nakamura, Mitsuru"]
+[Black "Akai, Kiyotaka"]
+[Result "0-1"]
+[ECO "C80"]
+[WhiteElo "1413"]
+[BlackElo "1705"]
+[PlyCount "82"]
+[SourceDate "2023.03.26"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O Nxe4 6. d4 b5 7. Bb3 d5 8. Nxe5
+Nxe5 9. dxe5 Be6 10. Nd2 Nxd2 11. Bxd2 c5 12. c3 Be7 13. Qf3 O-O 14. Rad1 d4
+15. Bxe6 fxe6 16. Qe4 d3 17. Qc6 Qd5 18. Qxd5 exd5 19. Be3 c4 20. Bd4 Kf7 21.
+f4 Ke6 22. g4 g6 23. Kg2 Rf7 24. Rf3 Raf8 25. Be3 b4 26. Kf2 bxc3 27. bxc3 Rb8
+28. Kg3 h5 29. gxh5 gxh5 30. h4 Kf5 31. Kh3 Rg7 32. Rg3 Rxg3+ 33. Kxg3 Rg8+ 34.
+Kh3 Rg4 35. Rb1 Rxh4+ 36. Kg3 Rg4+ 37. Kf3 h4 38. Rb7 Rg3+ 39. Kf2 Ke4 40. Bd2
+Bc5+ 41. Kf1 Rg1# 0-1
+
+[Event "HokkaidoChessCh2023"]
+[Site "?"]
+[Date "2023.03.25"]
+[Round "1.3"]
+[White "Kanda, Daigo"]
+[Black "KiharaK, Kotaro"]
+[Result "1-0"]
+[ECO "A45"]
+[WhiteElo "1705"]
+[BlackElo "1351"]
+[PlyCount "51"]
+[SourceDate "2023.03.26"]
+
+1. d4 Nf6 2. Bf4 g6 3. e3 Bg7 4. h4 d5 5. Be2 h5 6. Nc3 c6 7. Nf3 Bf5 8. Ne5
+Nbd7 9. f3 Bh6 10. Bxh6 Rxh6 11. Qd2 Rh7 12. O-O-O Nxe5 13. dxe5 Nd7 14. e4
+dxe4 15. fxe4 Bg4 16. Bxg4 hxg4 17. e6 Nc5 18. exf7+ Rxf7 19. Qg5 Qc7 20. Qxc5
+Rd8 21. Rxd8+ Kxd8 22. Rd1+ Ke8 23. e5 b6 24. Qd4 c5 25. Qd5 Qc8 26. Ne4 1-0
+
+[Event "HokkaidoChessCh2023"]
+[Site "?"]
+[Date "2023.03.25"]
+[Round "1.4"]
+[White "Al Jabarat, Thamer"]
+[Black "Yoshii, Yukihiko"]
+[Result "0-1"]
+[ECO "D00"]
+[WhiteElo "1309"]
+[BlackElo "1699"]
+[PlyCount "92"]
+[SourceDate "2023.03.26"]
+
+1. d4 d5 2. e3 Nf6 3. Nc3 e6 4. Bd3 Be7 5. Nf3 h6 6. Bd2 a6 7. a3 Nc6 8. h3 Bd7
+9. Qe2 b5 10. b4 O-O 11. O-O Bd6 12. e4 dxe4 13. Nxe4 Nxe4 14. Bxe4 Rb8 15. Be3
+Ne7 16. c3 c6 17. Bc2 Nd5 18. Bd2 Qc7 19. Rfe1 Rfe8 20. Qd3 f5 21. Bb3 Nf6 22.
+Nh4 Kh7 23. f3 Bg3 24. Bxe6 Bxh4 25. Bxf5+ Bxf5 26. Qxf5+ g6 27. Qd3 Bxe1 28.
+Bxe1 Re6 29. Bh4 Nd5 30. Qc2 Rbe8 31. Rf1 Re2 32. Qc1 Nf4 33. g3 Nxh3+ 34. Kh1
+Nf2+ 35. Kg1 Nd3 36. Qd1 R8e3 37. f4 Qd7 38. f5 g5 39. Rf3 Re1+ 40. Qxe1 Rxe1+
+41. Kg2 Qd5 42. g4 gxh4 43. f6 Re2+ 44. Kg1 Qxf3 45. g5 Re1+ 46. Kh2 Qh1# 0-1
+
+[Event "HokkaidoChessCh2023"]
+[Site "?"]
+[Date "2023.03.25"]
+[Round "1.5"]
+[White "Kawamura, Takuto"]
+[Black "Ito, Katsuhide"]
+[Result "1-0"]
+[ECO "D08"]
+[WhiteElo "1554"]
+[BlackElo "1233"]
+[PlyCount "71"]
+[SourceDate "2023.03.26"]
+
+1. d4 d5 2. c4 e5 3. dxe5 d4 4. Nf3 Nc6 5. Nbd2 Bb4 6. a3 Bxd2+ 7. Bxd2 Nge7 8.
+g3 Ng6 9. Bg2 Ncxe5 10. O-O Nxf3+ 11. Bxf3 O-O 12. Rc1 c5 13. Qc2 Re8 14. Rcd1
+Rb8 15. Rfe1 Ne5 16. Bg2 g6 17. Bf4 g5 18. Bxe5 Rxe5 19. Qd2 Bf5 20. e3 Bg4 21.
+exd4 Rxe1+ 22. Rxe1 Qf6 23. Re5 h6 24. Rxc5 Re8 25. Re5 Re7 26. Qe3 Be6 27. d5
+Kf8 28. dxe6 Rxe6 29. Rxe6 Qxe6 30. Qxe6 fxe6 31. Bxb7 Ke7 32. Kf1 Kd6 33. Ke2
+Kc5 34. Kd3 Kb6 35. Bc8 Ka5 36. Bxe6 1-0
+
+[Event "HokkaidoChessCh2023"]
+[Site "?"]
+[Date "2023.03.25"]
+[Round "1.6"]
+[White "Furuse, Mizuki"]
+[Black "Takeuchi, Hiroshi"]
+[Result "1-0"]
+[ECO "B07"]
+[WhiteElo "922"]
+[BlackElo "1418"]
+[PlyCount "43"]
+[SourceDate "2023.03.26"]
+
+1. e4 d6 2. d4 Nf6 3. Nc3 g6 4. h3 Bg7 5. Be3 O-O 6. Qd2 a6 7. Bh6 e5 8. Bxg7
+Kxg7 9. Nf3 exd4 10. Qxd4 Nc6 11. Qd2 Re8 12. Bd3 Nb4 13. O-O Nxd3 14. cxd3 Bd7
+15. Rfe1 Bc6 16. Rac1 Qd7 17. Qe3 h6 18. d4 Nxe4 19. d5 Bxd5 20. Nxd5 f5 21.
+Rxc7 Qxc7 22. Nxc7 1-0
+
+[Event "HokkaidoChessCh2023"]
+[Site "?"]
+[Date "2023.03.25"]
+[Round "2.1"]
+[White "Yoshii, Yukihiko"]
+[Black "Sugimoto, Koichi"]
+[Result "0-1"]
+[ECO "A25"]
+[WhiteElo "1699"]
+[BlackElo "1959"]
+[PlyCount "74"]
+[SourceDate "2023.03.26"]
+
+1. c4 e5 2. Nc3 Nc6 3. g3 Nf6 4. Bg2 Bb4 5. d3 O-O 6. e3 Re8 7. Nge2 b6 8. a3
+Bf8 9. b4 Bb7 10. b5 Na5 11. e4 h6 12. O-O Bc5 13. h3 c6 14. a4 a6 15. Bd2 d6
+16. bxc6 Nxc6 17. Nd5 Nxd5 18. cxd5 Nb4 19. Qb3 a5 20. Bxb4 Bxb4 21. Rac1 Qd7
+22. d4 Ba6 23. Rc2 exd4 24. Nf4 Bxf1 25. Bxf1 Rxe4 26. Bb5 Re1+ 27. Kg2 Qf5 28.
+Bd3 Qd7 29. Bb5 Qe7 30. Bd3 Rb8 31. Bf5 g6 32. Bg4 h5 33. Bf3 Ra1 34. Re2 Qd7
+35. Qb2 Bc3 36. Qc2 Qxa4 37. Qe4 Qd1 0-1
+
+[Event "HokkaidoChessCh2023"]
+[Site "?"]
+[Date "2023.03.25"]
+[Round "2.2"]
+[White "Akai, Kiyotaka"]
+[Black "Kawamura, Takuto"]
+[Result "0-1"]
+[ECO "E32"]
+[WhiteElo "1705"]
+[BlackElo "1554"]
+[PlyCount "71"]
+[SourceDate "2023.03.26"]
+
+1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. Qc2 O-O 5. e4 Bxc3+ 6. bxc3 d6 7. Bd3 e5 8.
+Ne2 h6 9. O-O Nc6 10. f4 b6 11. fxe5 dxe5 12. Ba3 Re8 13. d5 Na5 14. c5 Nb7 15.
+Bb5 Rf8 16. Bc6 bxc5 17. Rab1 Rb8 18. Bxb7 Bxb7 19. Bxc5 Ba6 20. Bxf8 Rxb1 21.
+Rxb1 Qxf8 22. Ng3 Qc5+ 23. Qf2 Qxc3 24. h3 Kf8 25. Rb8+ Ke7 26. Nf5+ Kd7 27.
+Ng3 Qd4 28. Qxd4 exd4 29. Rb4 d3 30. Kf2 g6 31. Ke3 Kd6 32. Ra4 Bb5 33. Rxa7
+Nd7 34. Ra5 Bc4 35. Ra8 Ne5 36. Ra5 0-1
+
+[Event "HokkaidoChessCh2023"]
+[Site "?"]
+[Date "2023.03.25"]
+[Round "2.3"]
+[White "Furuse, Mizuki"]
+[Black "Kanda, Daigo"]
+[Result "0-1"]
+[ECO "B15"]
+[WhiteElo "922"]
+[BlackElo "1705"]
+[PlyCount "144"]
+[SourceDate "2023.03.26"]
+
+1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Nf6 5. Nxf6+ exf6 6. c3 Bd6 7. Nf3 O-O 8.
+Be2 Re8 9. O-O Nd7 10. Re1 Nf8 11. Be3 Be6 12. Qc2 Qd7 13. Rad1 Rad8 14. Bd3
+Bb8 15. c4 Qc7 16. Bf5 Qa5 17. Bxe6 fxe6 18. Bd2 Qh5 19. Qb3 Qf7 20. Bc3 Ng6
+21. d5 e5 22. dxc6 bxc6 23. Rxd8 Rxd8 24. Ba5 Re8 25. Rd1 Qe7 26. c5+ Kh8 27.
+Rc1 Nf4 28. Kf1 h5 29. Qc4 e4 30. Re1 Nd3 31. Re2 Qxc5 32. Qxc5 Nxc5 33. Nd2 f5
+34. f3 Bf4 35. Ke1 Nd3+ 36. Kf1 Nc1 37. Re1 Nd3 38. Re2 Nxb2 39. fxe4 Bxd2 40.
+Bxd2 Rxe4 41. Rxe4 fxe4 42. Ke2 Nc4 43. Be3 a6 44. Bd4 Kg8 45. Kd1 Kf7 46. Kc2
+g6 47. Kc3 Nd6 48. Kb4 Nb7 49. Kc3 Ke6 50. Kd2 Kd5 51. Ke3 Nd6 52. Bc3 Nf5+ 53.
+Kd2 Kc4 54. Bf6 a5 55. Ke2 a4 56. Kd2 c5 57. Kc2 Ne3+ 58. Kd2 Nxg2 59. Bc3 g5
+60. Bf6 g4 61. Bg5 e3+ 62. Bxe3 Nxe3 63. Kxe3 Kc3 64. Kf4 Kd3 65. Kg5 c4 66.
+Kxh5 c3 67. Kxg4 c2 68. h4 c1=Q 69. h5 Ke4 70. a3 Qg1+ 71. Kh4 Kf4 72. Kh3 Qg3#
+0-1
+
+[Event "HokkaidoChessCh2023"]
+[Site "?"]
+[Date "2023.03.25"]
+[Round "2.4"]
+[White "Takeuchi, Hiroshi"]
+[Black "Nishimori, Toshiyuki"]
+[Result "1-0"]
+[ECO "A80"]
+[WhiteElo "1418"]
+[BlackElo "1585"]
+[PlyCount "53"]
+[SourceDate "2023.03.26"]
+
+1. d4 f5 2. Bf4 e6 3. Nf3 Nf6 4. e3 Bb4+ 5. c3 Be7 6. Bd3 O-O 7. h3 d6 8. O-O
+b6 9. Nbd2 Bb7 10. Re1 Nbd7 11. Bh2 Qe8 12. e4 Qg6 13. exf5 Bxf3 14. Nxf3 Qh5
+15. Rxe6 Rfe8 16. Qc2 Nf8 17. Re2 Kh8 18. Rae1 Ng8 19. Bb5 Red8 20. Rxe7 Nxe7
+21. Rxe7 c5 22. Qe4 d5 23. Qe5 Qh6 24. Qe1 cxd4 25. Nxd4 Rac8 26. Be5 Qg5 27.
+Rxg7 1-0
+
+[Event "HokkaidoChessCh2023"]
+[Site "?"]
+[Date "2023.03.25"]
+[Round "2.5"]
+[White "Matsumoto, Kenshin"]
+[Black "Al Jabarat, Thamer"]
+[Result "0-1"]
+[ECO "A60"]
+[WhiteElo "1413"]
+[BlackElo "1309"]
+[PlyCount "62"]
+[SourceDate "2023.03.26"]
+
+1. d4 e6 2. c4 c5 3. d5 Nf6 4. Nc3 Bd6 5. Nb5 Bc7 6. Nxc7+ Qxc7 7. dxe6 fxe6 8.
+Nf3 O-O 9. g3 Nc6 10. a3 d5 11. cxd5 exd5 12. Bg2 Bg4 13. O-O Rad8 14. Qc2 b6
+15. Bf4 Qd7 16. Rfd1 Bh3 17. Ne5 Nxe5 18. Bxe5 Bxg2 19. Kxg2 Ne4 20. f3 Ng5 21.
+g4 Rde8 22. Bc3 d4 23. Qb3+ Kh8 24. Be1 Rxe2+ 25. Kg3 Rxf3+ 26. Qxf3 Nxf3 27.
+Kxf3 Rxb2 28. h3 h6 29. Bg3 d3 30. Be5 Rb3 31. Kg2 Qd5+ 0-1
+
+[Event "HokkaidoChessCh2023"]
+[Site "?"]
+[Date "2023.03.25"]
+[Round "2.6"]
+[White "Kihara, Kotaro"]
+[Black "Ito, Katsuhide"]
+[Result "1-0"]
+[ECO "D08"]
+[WhiteElo "1351"]
+[BlackElo "1233"]
+[PlyCount "89"]
+[SourceDate "2023.03.26"]
+
+1. d4 d5 2. c4 e5 3. dxe5 d4 4. Nf3 Nc6 5. Bg5 Bb4+ 6. Nbd2 Be7 7. Bxe7 Qxe7 8.
+a3 Bf5 9. Nb3 O-O-O 10. g3 Be4 11. Bg2 d3 12. O-O Nxe5 13. Nxe5 Qxe5 14. Bxe4
+Qxe4 15. exd3 Rxd3 16. Nc5 Rxd1 17. Nxe4 Rd4 18. Ng5 Nh6 19. Rac1 Re8 20. Rfd1
+Nf5 21. Rxd4 Nxd4 22. Rd1 c5 23. Nxf7 Rf8 24. Nd6+ Kc7 25. Nb5+ Nxb5 26. cxb5
+a6 27. bxa6 bxa6 28. Kf1 Rb8 29. Rd2 c4 30. Rc2 Kd6 31. Ke2 Kd5 32. Kd2 Rb3 33.
+Kc1 Kd4 34. Rd2+ Kc5 35. Rd7 Rd3 36. Rxg7 c3 37. Rc7+ Kd4 38. bxc3+ Rxc3+ 39.
+Rxc3 Kxc3 40. f4 Kd4 41. Kd2 Ke4 42. Kc3 Kd5 43. Kb4 Kc6 44. Ka5 Kb7 45. f5 1-0
+
+[Event "HokkaidoChessCh2023"]
+[Site "?"]
+[Date "2023.03.25"]
+[Round "3.1"]
+[White "Sugimoto, Koichi"]
+[Black "Kanda, Daigo"]
+[Result "1-0"]
+[ECO "E14"]
+[WhiteElo "1959"]
+[BlackElo "1705"]
+[PlyCount "31"]
+[SourceDate "2023.03.26"]
+
+1. d4 Nf6 2. c4 e6 3. Nf3 b6 4. e3 Bb7 5. Bd3 d5 6. cxd5 exd5 7. O-O Be7 8. Nc3
+O-O 9. b3 Ba6 10. Bb2 Qc8 11. Rc1 Bxd3 12. Qxd3 Qa6 13. Qxa6 Nxa6 14. Ne5 Rfc8
+15. Nc6 Bf8 16. Nb5 1-0
+
+[Event "HokkaidoChessCh2023"]
+[Site "?"]
+[Date "2023.03.25"]
+[Round "3.2"]
+[White "Kawamura, Takuto"]
+[Black "Yoshii, Yukihiko"]
+[Result "1-0"]
+[ECO "E08"]
+[WhiteElo "1554"]
+[BlackElo "1699"]
+[PlyCount "75"]
+[SourceDate "2023.03.26"]
+
+1. d4 d5 2. c4 e6 3. Nf3 Nf6 4. g3 Be7 5. Bg2 c6 6. Qc2 h6 7. O-O O-O 8. Nbd2
+Nbd7 9. b3 Bd6 10. Bb2 Re8 11. Ne5 Nh7 12. Nxf7 Kxf7 13. Qxh7 Nf6 14. Qd3 Kg8
+15. e4 dxe4 16. Nxe4 Be7 17. Rad1 Rf8 18. Bc3 Qc7 19. Rfe1 Bd7 20. Bh3 Rae8 21.
+Bg2 Qc8 22. Nd2 Bd8 23. Nf3 Bc7 24. Ne5 Bxe5 25. dxe5 Ng4 26. f3 Nxe5 27. Bxe5
+Rd8 28. Qg6 Rf7 29. Bh3 Re8 30. c5 Ree7 31. f4 Be8 32. Qe4 Bd7 33. Bd6 Re8 34.
+Bg4 Rf6 35. Be5 Ref8 36. Bxf6 Rxf6 37. Rxd7 Qxd7 38. Bxe6+ 1-0
+
+[Event "HokkaidoChessCh2023"]
+[Site "?"]
+[Date "2023.03.25"]
+[Round "3.3"]
+[White "Kihara, Kotaro"]
+[Black "Akai, Kiyotaka"]
+[Result "0-1"]
+[ECO "D40"]
+[WhiteElo "1351"]
+[BlackElo "1705"]
+[PlyCount "80"]
+[SourceDate "2023.03.26"]
+
+1. d4 d5 2. c4 e6 3. Nc3 c5 4. Nf3 Nc6 5. e3 Nf6 6. Bd3 Be7 7. dxc5 Bxc5 8. O-O
+O-O 9. a3 a5 10. Qb3 d4 11. Na4 Ba7 12. exd4 Nxd4 13. Nxd4 Bxd4 14. Bg5 h6 15.
+Bh4 Bd7 16. Bxf6 Bxa4 17. Qxa4 Qxf6 18. Qb3 b6 19. Rab1 Rad8 20. Be4 Qf4 21.
+Bf3 Bc5 22. Rbd1 Rd2 23. g3 Qd6 24. Qa4 Rd8 25. b4 axb4 26. axb4 Bxb4 27. Rxd2
+Bxd2 28. Rd1 Qc7 29. Qc2 Bg5 30. Ra1 g6 31. Ra6 Rd2 32. Ra8+ Rd8 33. Ra6 Bf6
+34. Ra3 Kg7 35. Rd3 Rc8 36. Rb3 Bd4 37. Rb4 Qc5 38. Ra4 Rc7 39. Kg2 b5 40. Ra5
+Qxc4 0-1
+
+[Event "HokkaidoChessCh2023"]
+[Site "?"]
+[Date "2023.03.25"]
+[Round "3.4"]
+[White "Al Jabarat, Thamer"]
+[Black "Takeuchi, Hiroshi"]
+[Result "0-1"]
+[ECO "A45"]
+[WhiteElo "1418"]
+[BlackElo "1309"]
+[PlyCount "102"]
+[SourceDate "2023.03.26"]
+
+1. d4 Nf6 2. Nc3 d6 3. b3 g6 4. Bb2 Bg7 5. Nf3 O-O 6. e3 c6 7. Bd3 Qc7 8. h4
+Bg4 9. Qd2 Nbd7 10. Nh2 Be6 11. f3 c5 12. O-O-O c4 13. Be2 cxb3 14. axb3 Nb6
+15. e4 a5 16. d5 Bd7 17. Ng4 Nxg4 18. fxg4 a4 19. bxa4 Nxa4 20. Nxa4 Bxb2+ 21.
+Kxb2 Rxa4 22. Rb1 Rfa8 23. Bf3 Ra2+ 24. Kc1 Ba4 25. Bd1 Rc8 26. Rb2 Rxb2 27.
+Kxb2 Bd7 28. h5 Qb6+ 29. Kc1 Ra8 30. Qc3 g5 31. Rh3 f6 32. Rd3 Rc8 33. Qd4 Qa5
+34. Bf3 Bb5 35. Rb3 Rc4 36. Rxb5 Qxb5 37. Qd3 Qa4 38. Kd2 Rd4 39. Be2 Rxd3+ 40.
+Bxd3 Qa1 41. c4 Qb2+ 42. Ke3 Qxg2 43. Kd4 Qxg4 44. c5 Qg1+ 45. Kc4 Qxc5+ 46.
+Kb3 g4 47. e5 g3 48. e6 g2 49. h6 g1=Q 50. Ka4 Qa1+ 51. Kb3 Qaa3# 0-1
+
+[Event "HokkaidoChessCh2023"]
+[Site "?"]
+[Date "2023.03.25"]
+[Round "3.5"]
+[White "Nishimori, Toshiyuki"]
+[Black "Furuse, Mizuki"]
+[Result "1-0"]
+[ECO "B18"]
+[WhiteElo "1585"]
+[BlackElo "922"]
+[PlyCount "129"]
+[SourceDate "2023.03.26"]
+
+1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Bf5 5. Nc5 e6 6. Nxb7 Qb6 7. Nc5 Bxc5 8.
+dxc5 Qxc5 9. c3 Nf6 10. Be3 Qe5 11. Nf3 Qc7 12. Bd3 Bxd3 13. Qxd3 O-O 14. O-O
+Nbd7 15. h3 Rad8 16. Qc2 Ne5 17. Nxe5 Qxe5 18. Bd4 Qe4 19. Qxe4 Nxe4 20. Rfe1
+Nd6 21. Bxa7 Rd7 22. Bc5 Rfd8 23. Rad1 Nf5 24. Rxd7 Rxd7 25. Re2 Rd5 26. Bb4 c5
+27. Ba3 Nd6 28. b3 c4 29. Bxd6 Rxd6 30. bxc4 Rd3 31. Rb2 h6 32. Rb3 Rd6 33. a4
+Ra6 34. Rb4 Rd6 35. a5 Rd1+ 36. Kh2 Ra1 37. Rb5 Rc1 38. a6 Ra1 39. Rb6 Kf8 40.
+c5 Ke7 41. Rb7+ Kf6 42. a7 Ke5 43. c6 Kd6 44. c7 Kd7 45. Rb8 Kxc7 46. a8=Q Rxa8
+47. Rxa8 Kc6 48. Ra7 Kb6 49. Rxf7 Kc5 50. Rxg7 Kc4 51. Rg6 Kxc3 52. Rxe6 Kd4
+53. f4 Kd5 54. f5 h5 55. g4 hxg4 56. hxg4 Kd4 57. g5 Kd5 58. g6 Kd4 59. g7 Kd5
+60. g8=Q Kd4 61. Qd8+ Kc5 62. Re1 Kb5 63. Rc1 Kb4 64. Qb8+ Ka5 65. Ra1# 1-0
+
+[Event "HokkaidoChessCh2023"]
+[Site "?"]
+[Date "2023.03.25"]
+[Round "3.6"]
+[White "Ito, Katsuhide"]
+[Black "Matsumoto, Kenshin"]
+[Result "0-1"]
+[ECO "C15"]
+[WhiteElo "1233"]
+[BlackElo "1413"]
+[PlyCount "72"]
+[SourceDate "2023.03.26"]
+
+1. e4 e6 2. d4 d5 3. Nc3 Bb4 4. Bd2 Nf6 5. e5 Nfd7 6. Nf3 c5 7. a3 Bxc3 8. Bxc3
+Nc6 9. Bb5 cxd4 10. Bxd4 Qa5+ 11. b4 Qxb5 12. c3 Nxd4 13. Nxd4 Qc4 14. Ne2 Nxe5
+15. O-O Bd7 16. Qd4 Qxe2 17. Rae1 Nf3+ 18. gxf3 Qxf3 19. Re3 Qh5 20. Qxg7 Qg6+
+21. Rg3 Qxg7 22. Rxg7 Kf8 23. Rg3 Rg8 24. Kh1 Rxg3 25. fxg3 Rc8 26. Rc1 Bb5 27.
+Kg2 d4 28. c4 Bxc4 29. Kf2 e5 30. Ke1 d3 31. Kd2 e4 32. Ke3 f5 33. Kd4 b5 34.
+Ra1 Rd8+ 35. Kc3 e3 36. Rd1 e2 0-1
+
+[Event "HokkaidoChessCh2023"]
+[Site "?"]
+[Date "2023.03.26"]
+[Round "4.1"]
+[White "Kawamura, Takuto"]
+[Black "Sugimoto, Koichi"]
+[Result "0-1"]
+[ECO "D11"]
+[WhiteElo "1554"]
+[BlackElo "1959"]
+[PlyCount "56"]
+[SourceDate "2023.03.26"]
+
+1. d4 d5 2. c4 c6 3. Nf3 Nf6 4. g3 Bf5 5. Bg2 e6 6. O-O Nbd7 7. Nbd2 h6 8. b3
+Bd6 9. Bb2 Qb8 10. Qc1 O-O 11. Qc3 b5 12. c5 Bc7 13. b4 a5 14. Nb3 Ne4 15. Qe1
+axb4 16. Qxb4 Ra4 17. Qe1 Qa8 18. a3 Re8 19. Nh4 Bh7 20. Bh3 Rc4 21. Rc1 Qa4
+22. Rxc4 bxc4 23. Nd2 Ba5 24. Bc1 Ra8 25. Nhf3 c3 26. Nxe4 Bxe4 27. Bg2 Rb8 28.
+Qd1 c2 0-1
+
+[Event "HokkaidoChessCh2023"]
+[Site "?"]
+[Date "2023.03.26"]
+[Round "4.2"]
+[White "Akai, Kiyotaka"]
+[Black "Takeuchi, Hiroshi"]
+[Result "1-0"]
+[ECO "E69"]
+[WhiteElo "1705"]
+[BlackElo "1418"]
+[PlyCount "49"]
+[SourceDate "2023.03.26"]
+
+1. d4 Nf6 2. c4 d6 3. Nf3 g6 4. g3 Bg7 5. Bg2 O-O 6. Nc3 c6 7. O-O Nbd7 8. e4
+e5 9. h3 exd4 10. Nxd4 Qc7 11. b3 b6 12. Bb2 Bb7 13. Re1 Rfe8 14. Qd2 c5 15.
+Ndb5 Qb8 16. Nxd6 Re6 17. Nxb7 Qxb7 18. e5 Qc7 19. exf6 Rd8 20. Nd5 Qb8 21.
+fxg7 Ne5 22. Bxe5 Rxe5 23. Rxe5 Qxe5 24. Re1 Qb8 25. Qc3 1-0
+
+[Event "HokkaidoChessCh2023"]
+[Site "?"]
+[Date "2023.03.26"]
+[Round "4.3"]
+[White "Kanda, Daigo"]
+[Black "Nishimori, Toshiyuki"]
+[Result "1-0"]
+[ECO "D00"]
+[WhiteElo "1705"]
+[BlackElo "1585"]
+[PlyCount "65"]
+[SourceDate "2023.03.26"]
+
+1. d4 Nf6 2. Nc3 d5 3. Bf4 e6 4. Nb5 Bd6 5. Nxd6+ cxd6 6. Nf3 Nc6 7. e3 O-O 8.
+h3 h6 9. Be2 Re8 10. Bh2 e5 11. O-O e4 12. Nd2 Be6 13. c3 a6 14. Qb3 Qe7 15. a4
+Red8 16. Rfc1 Rac8 17. a5 Na7 18. Qa3 Nb5 19. Qb4 Na7 20. c4 dxc4 21. Nxc4 Nd5
+22. Qd2 Nb5 23. Kh1 Rc6 24. f3 f5 25. g4 Kh8 26. fxe4 fxe4 27. Bf1 Bf7 28. Bg3
+g5 29. Qf2 Bg6 30. Qd2 Rf8 31. Bg2 Qe6 32. Nb6 Qe8 33. Nxd5 1-0
+
+[Event "HokkaidoChessCh2023"]
+[Site "?"]
+[Date "2023.03.26"]
+[Round "4.4"]
+[White "Yoshii, Yukihiko"]
+[Black "Kihara, Kotaro"]
+[Result "0-1"]
+[ECO "D85"]
+[WhiteElo "1699"]
+[BlackElo "1351"]
+[PlyCount "68"]
+[SourceDate "2023.03.26"]
+
+1. c4 Nf6 2. Nc3 d5 3. cxd5 Nxd5 4. e4 Nxc3 5. bxc3 g6 6. d4 Bg7 7. Nf3 Bg4 8.
+Be2 c5 9. Be3 Nc6 10. e5 Qa5 11. Qd2 Bxf3 12. Bxf3 Rd8 13. Bxc6+ bxc6 14. Rd1
+Bxe5 15. O-O O-O 16. Qc2 Bg7 17. Rd3 Rd7 18. Rfd1 Rfd8 19. g3 c4 20. R3d2 Re8
+21. Rc1 Rb7 22. Bf4 e5 23. dxe5 Bxe5 24. Qe4 Qb5 25. Bxe5 Rxe5 26. Rd8+ Kg7 27.
+Qd4 Qc5 28. Rd1 Rbe7 29. Kg2 Qxd4 30. R1xd4 Rc5 31. Rb8 Re2 32. a4 Rc2 33. Rb7
+a5 34. Rdd7 Rf5 0-1
+
+[Event "HokkaidoChessCh2023"]
+[Site "?"]
+[Date "2023.03.26"]
+[Round "4.5"]
+[White "Matsumoto, Kenshin"]
+[Black "Furuse, Mizuki"]
+[Result "1-0"]
+[ECO "D20"]
+[WhiteElo "1413"]
+[BlackElo "922"]
+[PlyCount "39"]
+[SourceDate "2023.03.26"]
+
+1. d4 d5 2. c4 dxc4 3. e3 e6 4. Bxc4 c5 5. d5 Nf6 6. Nc3 Be7 7. Nf3 O-O 8. O-O
+exd5 9. Nxd5 Nxd5 10. Bxd5 Qc7 11. Qc2 Nc6 12. Bd2 Bd7 13. Rfd1 Rfd8 14. Qc4
+Be6 15. Bxe6 fxe6 16. Qxe6+ Kf8 17. Bc3 Re8 18. Rd7 Qc8 19. Ng5 Nd8 20. Nxh7#
+1-0
+
+[Event "HokkaidoChessCh2023"]
+[Site "?"]
+[Date "2023.03.26"]
+[Round "4.6"]
+[White "Al Jbarat, Thamer"]
+[Black "Nakamura, Mitsuru"]
+[Result "0-1"]
+[ECO "D00"]
+[WhiteElo "1309"]
+[BlackElo "1413"]
+[PlyCount "174"]
+[SourceDate "2023.03.26"]
+
+1. d4 d5 2. e3 Nf6 3. Nc3 e6 4. Bd3 c6 5. Nf3 Nbd7 6. O-O Bd6 7. Bd2 O-O 8. h3
+h6 9. Qe2 Qc7 10. Ne1 b6 11. a3 Bb7 12. b4 a6 13. f4 Rfe8 14. Nd1 c5 15. Nf3
+cxd4 16. Nxd4 e5 17. fxe5 Bxe5 18. c3 Ne4 19. Bxe4 dxe4 20. Qh5 Nf6 21. Qe2 Bd5
+22. Nb2 b5 23. Rac1 Qb6 24. c4 bxc4 25. Nxc4 Bxc4 26. Rxc4 Rac8 27. Rfc1 Rxc4
+28. Qxc4 Bxd4 29. Qxd4 Qxd4 30. exd4 e3 31. Be1 e2 32. Rc6 Ra8 33. Kf2 a5 34.
+Kxe2 axb4 35. Bxb4 Nd5 36. Bc5 Nf4+ 37. Kf3 Nd3 38. Bd6 Ra4 39. Ke4 Ne1 40. g3
+Ra5 41. Rc8+ Kh7 42. Bc5 Nc2 43. d5 Ra4+ 44. Kd3 Nxa3 45. d6 Nc4 46. d7 Ne5+
+47. Ke3 Nxd7 48. Bd6 Nf6 49. Rc1 Re4+ 50. Kf3 Rd4 51. Be5 Rd3+ 52. Ke2 Rd5 53.
+Ba1 Nh5 54. Rc3 Ra5 55. Bb2 Ra2 56. Rb3 Nxg3+ 57. Kf3 Nf1 58. Ke2 Ng3+ 59. Kf3
+Nf5 60. Kf4 Nd6 61. Be5 Ra4+ 62. Kf3 Nc4 63. Bc3 Nd6 64. Be5 Nf5 65. Bb2 g5 66.
+Bf6 Rf4+ 67. Ke2 Nd4+ 68. Bxd4 Rxd4 69. Rf3 Kg6 70. Ke3 Ra4 71. Kd2 Ra2+ 72.
+Ke1 f5 73. Rb3 f4 74. Kf1 Kh5 75. Rc3 Kh4 76. Kg1 g4 77. hxg4 Kxg4 78. Rc6 h5
+79. Rg6+ Kf5 80. Rb6 f3 81. Rb5+ Kg4 82. Rb4+ Kg3 83. Rb1 Rg2+ 84. Kh1 Rh2+ 85.
+Kg1 f2+ 86. Kf1 Rh1+ 87. Ke2 Rxb1 0-1
+
+[Event "HokkaidoChessCh2023"]
+[Site "?"]
+[Date "2023.03.26"]
+[Round "5.1"]
+[White "Kanda, Daido"]
+[Black "Kawamura, Takuto"]
+[Result "1/2-1/2"]
+[ECO "D00"]
+[WhiteElo "1705"]
+[BlackElo "1554"]
+[PlyCount "101"]
+[SourceDate "2023.03.26"]
+
+1. d4 Nf6 2. Nc3 d5 3. Bf4 e6 4. Nb5 Na6 5. e3 c6 6. Nc3 Bd6 7. Nf3 O-O 8. Ne5
+Qc7 9. Bxa6 bxa6 10. O-O Bb7 11. Na4 c5 12. Nxc5 Bxc5 13. dxc5 Qxc5 14. c3 h6
+15. h3 Rad8 16. Rc1 Ne4 17. Qc2 Nd6 18. b3 a5 19. Rfd1 Ba6 20. Qb2 Qb5 21. Qc2
+Qb6 22. c4 dxc4 23. bxc4 Qc5 24. Qa4 Qb4 25. Qxb4 axb4 26. c5 Ne4 27. Nd7 Nc3
+28. Nxf8 Rxd1+ 29. Rxd1 Nxd1 30. Nd7 Nc3 31. c6 f6 32. Nc5 Bc8 33. Nb3 e5 34.
+Bg3 Nxa2 35. f3 Kf7 36. e4 Ke7 37. Bf2 Kd6 38. Na5 Be6 39. Bxa7 Kc7 40. Bc5 b3
+41. Nxb3 Bxb3 42. Bf8 g6 43. Bg7 f5 44. Bxe5+ Kxc6 45. exf5 gxf5 46. Kf2 Kd5
+47. Bg7 h5 48. Kg3 Ke6 49. Kf4 Kf7 50. Bd4 Kg6 51. g4 1/2-1/2
+
+[Event "HokkaidoChessCh2023"]
+[Site "?"]
+[Date "2023.03.26"]
+[Round "5.2"]
+[White "Matsumoto, Kenshin"]
+[Black "Akai, Kiyotaka"]
+[Result "0-1"]
+[ECO "D32"]
+[WhiteElo "1413"]
+[BlackElo "1705"]
+[PlyCount "58"]
+[SourceDate "2023.03.26"]
+
+1. d4 d5 2. c4 e6 3. Nc3 c5 4. cxd5 exd5 5. Nf3 Nc6 6. e3 Nf6 7. dxc5 Bxc5 8.
+a3 a5 9. Bd3 O-O 10. O-O Re8 11. Qc2 Bf8 12. Rd1 Bg4 13. Be2 Rc8 14. Qb3 Qe7
+15. Nxd5 Nxd5 16. Qxd5 Rcd8 17. Qb3 Ne5 18. Bd2 Bxf3 19. Bxf3 Rd3 20. Qxb7 Qxb7
+21. Bxb7 Red8 22. f4 Ng6 23. Re1 Rxd2 24. Rab1 Rb8 25. Be4 Rbxb2 26. Ra1 Bc5
+27. h3 Nxf4 28. Rac1 Ne6 29. Kh1 g6 0-1
+
+[Event "HokkaidoChessCh2023"]
+[Site "?"]
+[Date "2023.03.26"]
+[Round "5.3"]
+[White "Takeuchi, Hiroshi"]
+[Black "Nakamura, Mitsuru"]
+[Result "0-1"]
+[ECO "D00"]
+[WhiteElo "1418"]
+[BlackElo "1413"]
+[PlyCount "74"]
+[SourceDate "2023.03.26"]
+
+1. d4 Nf6 2. Bf4 e6 3. e3 d5 4. Bd3 Be7 5. h3 h6 6. Nf3 Nbd7 7. Nbd2 c6 8. c3
+O-O 9. O-O a6 10. Re1 Re8 11. e4 dxe4 12. Nxe4 b5 13. Nd6 Bxd6 14. Bxd6 Nb6 15.
+Bh2 Bb7 16. Ne5 Nbd7 17. Nf3 Qb6 18. Qc2 Rad8 19. Ne5 Nf8 20. b4 Nd5 21. Rac1
+f6 22. Ng6 Bc8 23. Nxf8 Rxf8 24. Qe2 Qb7 25. Qh5 Qe7 26. Qg6 f5 27. g4 Rf6 28.
+Qh5 Rdf8 29. gxf5 Rxf5 30. Bxf5 Rxf5 31. Qd1 Qf7 32. Re2 Rg5+ 33. Kf1 Qf3 34.
+Ke1 Nxc3 35. Rxc3 Qxc3+ 36. Qd2 Qxh3 37. Be5 Rg1# 0-1
+
+[Event "HokkaidoChessCh2023"]
+[Site "?"]
+[Date "2023.03.26"]
+[Round "5.4"]
+[White "Nishimori, Toshiyuki"]
+[Black "Kihara, Kotaro"]
+[Result "1-0"]
+[ECO "B01"]
+[WhiteElo "1585"]
+[BlackElo "1351"]
+[PlyCount "155"]
+[SourceDate "2023.03.26"]
+
+1. e4 d5 2. exd5 Nf6 3. d4 Nxd5 4. Nf3 g6 5. Bc4 Nb6 6. Bb3 Nc6 7. Be3 Bg7 8.
+c3 O-O 9. O-O Bf5 10. Nbd2 e5 11. dxe5 Nxe5 12. Nxe5 Bxe5 13. Re1 Re8 14. Qc1
+Nd5 15. Nf3 Bf6 16. Bd4 Rxe1+ 17. Qxe1 Bxd4 18. Nxd4 Qd7 19. Rd1 Re8 20. Qd2
+Nb6 21. h3 h5 22. Qg5 c5 23. Nxf5 Qxf5 24. Qxf5 gxf5 25. Kf1 Kg7 26. Bc2 Kf6
+27. Rd6+ Re6 28. Rd2 f4 29. b3 Ke7 30. c4 Na8 31. Rd5 Rd6 32. Be4 Ra6 33. a4
+Rb6 34. Bc2 Rc6 35. Rxh5 Nc7 36. Be4 Rb6 37. Rxc5 Ne6 38. Rb5 Rxb5 39. cxb5 Nd4
+40. Bd5 b6 41. g4 fxg3 42. fxg3 f6 43. Kf2 Kf8 44. g4 Kg7 45. Kg3 Ne2+ 46. Kh4
+Nf4 47. Bc4 Kh6 48. Bf7 Kg7 49. Bc4 Kh6 50. Kg3 Ng6 51. h4 Ne5 52. Kf4 Ng6+ 53.
+Kg3 Ne5 54. Be6 Ng6 55. Bf5 Ne7 56. Be4 Kg7 57. Kf4 Kh6 58. g5+ fxg5+ 59. hxg5+
+Kg7 60. Ke5 Kf8 61. Ke6 Ke8 62. g6 Nxg6 63. Bxg6+ Kd8 64. Kd6 Kc8 65. Be4 Kb8
+66. b4 Kc8 67. a5 Kb8 68. Kd7 bxa5 69. bxa5 a6 70. bxa6 Ka7 71. Bb7 Kb8 72. Kc6
+Ka7 73. Kb5 Kb8 74. Be4 Ka7 75. Bd5 Kb8 76. Kb6 Kc8 77. a7 Kd7 78. a8=Q 1-0
+
+[Event "HokkaidoChessCh2023"]
+[Site "?"]
+[Date "2023.03.26"]
+[Round "5.5"]
+[White "Furuse, Mizuki"]
+[Black "Yoshii, Yukihiko"]
+[Result "0-1"]
+[ECO "C68"]
+[WhiteElo "922"]
+[BlackElo "1699"]
+[PlyCount "106"]
+[SourceDate "2023.03.26"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Bxc6 dxc6 5. O-O Bg4 6. h3 Bxf3 7. Qxf3 Nf6 8.
+d3 Be7 9. Nc3 O-O 10. Be3 Re8 11. Rad1 c5 12. Rfe1 c6 13. Ne2 Qc7 14. Ng3 g6
+15. Bg5 Kg7 16. c3 h6 17. Bxf6+ Bxf6 18. Ne2 Rad8 19. Qg3 Qe7 20. Qf3 Rd7 21.
+Qe3 Red8 22. Qd2 c4 23. d4 exd4 24. Nxd4 Bxd4 25. cxd4 Rxd4 26. Qxd4+ Rxd4 27.
+Rxd4 b5 28. f3 Qb4 29. Rb1 Qa4 30. a3 Qc2 31. Rdd1 a5 32. Rdc1 Qd3 33. Rd1 Qe3+
+34. Kf1 h5 35. Rbc1 a4 36. Rc3 Qc5 37. Ke2 h4 38. Rd2 Qg5 39. Kd1 Qc5 40. Ke2
+Qg1 41. Rd7 Qxg2+ 42. Ke3 Qxb2 43. Kd4 Qd2+ 44. Kc5 Qxc3 45. Rd4 Qe3 46. e5
+Qxe5+ 47. Kb4 Qxd4 48. f4 c3+ 49. Ka5 c2 50. Ka6 c1=Q 51. Kb7 Qdxf4 52. Ka6 Qb8
+53. Ka5 Qc3+ 0-1
+
+[Event "HokkaidoChessCh2023"]
+[Site "?"]
+[Date "2023.03.26"]
+[Round "5.6"]
+[White "Ito, Katsuhide"]
+[Black "Al Jbarat, Thamer"]
+[Result "0-1"]
+[ECO "B22"]
+[WhiteElo "1233"]
+[BlackElo "1309"]
+[PlyCount "34"]
+[SourceDate "2023.03.26"]
+
+1. e4 e6 2. d4 c5 3. c3 Nf6 4. Bd3 Be7 5. e5 Nd5 6. Nf3 Qb6 7. O-O Nc6 8. Bc2
+h5 9. h3 Rg8 10. a3 g5 11. Re1 g4 12. hxg4 hxg4 13. Nh2 cxd4 14. Nxg4 dxc3 15.
+Nxc3 Nxc3 16. bxc3 Qa5 17. Qf3 b6 0-1
+

@@ -1,0 +1,305 @@
+﻿[Event "SapporoSummer2023"]
+[Site "?"]
+[Date "2023.07.16"]
+[Round "1.1"]
+[White "Yoshii, Yukihiko"]
+[Black "Takeuchi, Hiroshi"]
+[Result "1-0"]
+[ECO "E91"]
+[WhiteElo "1708"]
+[BlackElo "1407"]
+[PlyCount "59"]
+[SourceVersionDate "2023.09.05"]
+
+1. c4 d6 2. d4 Nf6 3. Nc3 g6 4. e4 Bg7 5. Nf3 O-O 6. Be2 Nbd7 7. O-O c5 8. h3
+cxd4 9. Nxd4 Nc5 10. Bf3 a5 11. Be3 Bd7 12. Rc1 Rc8 13. b3 b6 14. Re1 Rb8 15.
+Qc2 Qc8 16. Kh2 Ne8 17. Red1 f5 18. exf5 gxf5 19. Nd5 Bf6 20. Bh6 Ng7 21. Qe2
+e6 22. Nxf6+ Rxf6 23. Qe3 e5 24. Bxg7 Kxg7 25. Qg5+ Rg6 26. Qe7+ Kh6 27. Nb5
+Bxb5 28. Rxd6 Be8 29. h4 Rxd6 30. Qg5# 1-0
+
+[Event "SapporoSummer2023"]
+[Site "?"]
+[Date "2023.07.16"]
+[Round "1.2"]
+[White "Nakamura, Mitsuru"]
+[Black "Kawamura, Takuto"]
+[Result "0-1"]
+[ECO "B48"]
+[WhiteElo "1406"]
+[BlackElo "1576"]
+[PlyCount "86"]
+[SourceVersionDate "2023.09.05"]
+
+1. e4 c5 2. Nf3 e6 3. d4 cxd4 4. Nxd4 Nc6 5. Be3 Qc7 6. Nc3 a6 7. a3 Nf6 8. Be2
+Be7 9. O-O O-O 10. h3 b5 11. Re1 Bb7 12. Bf1 Rac8 13. Rc1 Rfd8 14. Qe2 Na5 15.
+Qd2 Bxa3 16. Bf4 Qc5 17. Nd1 e5 18. Bxe5 Bb4 19. c3 Qxe5 20. cxb4 Rxc1 21. Qxc1
+Qxd4 22. bxa5 Rc8 23. Qf4 Qb4 24. Nc3 Qxb2 25. Nd5 Bxd5 26. exd5 Qc3 27. Re3
+Qxa5 28. Rg3 Nh5 29. Rxg7+ Nxg7 30. Qg5 Qd8 31. Qg4 Rc5 32. d6 a5 33. h4 Kh8
+34. Qf3 Rf5 35. Qh3 Rh5 36. g3 Ne6 37. Qg4 Rc5 38. h5 Qg5 39. Qf3 Kg7 40. g4
+Qd5 41. Qg3 b4 42. Bd3 Rc1+ 43. Kh2 Qh1# 0-1
+
+[Event "SapporoSummer2023"]
+[Site "?"]
+[Date "2023.07.16"]
+[Round "1.3"]
+[White "Nishimori, Toshiyuki"]
+[Black "Ito, Katsuhide"]
+[Result "1-0"]
+[ECO "B33"]
+[WhiteElo "1565"]
+[BlackElo "1203"]
+[PlyCount "57"]
+[SourceVersionDate "2023.09.05"]
+
+1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 e5 6. Ndb5 d6 7. Bg5 a6 8.
+Na3 b5 9. Bxf6 gxf6 10. Nd5 f5 11. Bd3 Be6 12. Qh5 Bg7 13. c3 f4 14. Nc2 Rb8
+15. O-O O-O 16. a4 bxa4 17. Rxa4 Rxb2 18. Rxa6 Qb8 19. Rxc6 f5 20. Ne7+ Kh8 21.
+Ng6+ Kg8 22. Nxf8 Qxf8 23. Nb4 Bf7 24. Qxf5 Qe8 25. Rc8 Bg6 26. Rxe8+ Bxe8 27.
+Nd5 Bf7 28. Bc4 Rb7 29. Qc8+ 1-0
+
+[Event "SapporoSummer2023"]
+[Site "?"]
+[Date "2023.07.16"]
+[Round "2.1"]
+[White "Kawamura, Takuto"]
+[Black "Yoshii, Yukihiko"]
+[Result "1-0"]
+[ECO "E07"]
+[WhiteElo "1576"]
+[BlackElo "1708"]
+[PlyCount "83"]
+[SourceVersionDate "2023.09.05"]
+
+1. d4 d5 2. c4 e6 3. Nf3 Nf6 4. g3 Be7 5. Bg2 Nbd7 6. Nbd2 h6 7. Qc2 O-O 8. O-O
+Re8 9. Re1 c6 10. b3 Bd6 11. Bb2 a5 12. Ne5 Nf8 13. e4 Bb4 14. Bc3 Bxc3 15.
+Qxc3 dxe4 16. Nxe4 Nxe4 17. Bxe4 Qc7 18. Qf3 Rd8 19. Rad1 Rb8 20. c5 f6 21. Nc4
+Bd7 22. h4 Be8 23. Bd3 Bf7 24. Nd6 Rd7 25. Re3 b5 26. Be4 Rb6 27. Nxf7 Ra6 28.
+Nd6 Rxd6 29. cxd6 Qxd6 30. Rc3 Qa3 31. Bxc6 Qxa2 32. Bxb5 Rb6 33. Bc4 Qb2 34.
+Re3 Qc2 35. Qe2 Qf5 36. g4 Qf4 37. Re4 Qd6 38. Ra1 Kf7 39. Rxa5 Ng6 40. Ra7+
+Ne7 41. Kg2 Kg6 42. Rxe6 1-0
+
+[Event "SapporoSummer2023"]
+[Site "?"]
+[Date "2023.07.16"]
+[Round "2.2"]
+[White "Takeuchi, Hiroshi"]
+[Black "Nishimori, Toshiyuki"]
+[Result "1-0"]
+[ECO "C01"]
+[WhiteElo "1407"]
+[BlackElo "1565"]
+[PlyCount "49"]
+[SourceVersionDate "2023.09.05"]
+
+1. d4 e5 2. e3 d5 3. Nc3 exd4 4. exd4 Nc6 5. Nf3 Bg4 6. h3 Bh5 7. Be2 Nf6 8.
+Bf4 Bd6 9. Bg3 O-O 10. O-O Ne7 11. Ne5 Bxe2 12. Qxe2 Re8 13. Qd3 c6 14. a3 a6
+15. Rfe1 Nd7 16. Qf3 f6 17. Nxd7 Qxd7 18. Ne2 Ng6 19. Bxd6 Qxd6 20. Ng3 Nh4 21.
+Qg4 Ng6 22. h4 Re7 23. h5 Nf8 24. Nf5 Rxe1+ 25. Rxe1 1-0
+
+[Event "SapporoSummer2023"]
+[Site "?"]
+[Date "2023.07.16"]
+[Round "2.3"]
+[White "Ito, Katsuhide"]
+[Black "Nakamura, Mitsuru"]
+[Result "0-1"]
+[ECO "C97"]
+[WhiteElo "1203"]
+[BlackElo "1406"]
+[PlyCount "80"]
+[SourceVersionDate "2023.09.05"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O Be7 6. Re1 b5 7. Bb3 d6 8. h3
+O-O 9. c3 Na5 10. Bc2 c5 11. d4 Qc7 12. b3 Bd7 13. Bb2 Rfe8 14. Nbd2 h6 15. Nf1
+Nb7 16. Ng3 a5 17. a4 bxa4 18. bxa4 Rab8 19. Bd3 Nd8 20. Qc2 c4 21. Bf1 Ne6 22.
+Ba3 Nf4 23. Nf5 Bxf5 24. exf5 Bf8 25. Qa2 Rbc8 26. Nd2 Nd3 27. Re3 e4 28. Rb1
+Nd5 29. Rxe4 Nxc3 30. Rxe8 Rxe8 31. Qc2 Nxb1 32. Qxb1 Re1 33. Qb5 d5 34. Bxf8
+Kxf8 35. Qxd5 c3 36. Nf3 c2 37. Nxe1 Nxe1 38. Qc5+ Qxc5 39. dxc5 c1=Q 40. Kh2
+Qxc5 0-1
+
+[Event "SapporoSummer2023"]
+[Site "?"]
+[Date "2023.07.16"]
+[Round "3.1"]
+[White "Nishimori, Toshiyuki"]
+[Black "Kawamura, Takuto"]
+[Result "1-0"]
+[ECO "B49"]
+[WhiteElo "1565"]
+[BlackElo "1576"]
+[PlyCount "167"]
+[SourceVersionDate "2023.09.05"]
+
+1. e4 c5 2. Nf3 e6 3. d4 cxd4 4. Nxd4 Nc6 5. Nc3 Qc7 6. Be3 a6 7. Be2 Nf6 8.
+O-O Bb4 9. Nxc6 Bxc3 10. bxc3 bxc6 11. Bf3 d6 12. Rb1 Rb8 13. Rb3 O-O 14. Qb1
+Rb5 15. a4 Rxb3 16. Qxb3 e5 17. Bb6 Qb7 18. a5 Be6 19. Qa4 c5 20. Re1 Bd7 21.
+Qb3 Bc6 22. Qc4 Rc8 23. h3 Nd7 24. Rb1 Nf6 25. Re1 Bb5 26. Qb3 Rb8 27. c4 Bc6
+28. Qd3 Qe7 29. Rb1 Rb7 30. c3 g6 31. Rd1 Rd7 32. Qe2 h5 33. g4 hxg4 34. hxg4
+Nh7 35. Kg2 Kg7 36. Rh1 Ng5 37. Kg3 Qf6 38. Qe3 Rb7 39. Rb1 Rb8 40. Rh1 Bd7 41.
+Be2 Bc6 42. f3 Re8 43. Bd3 Bd7 44. Be2 Bc6 45. Qd2 Bxe4 46. Qe3 Bc6 47. Bc7 Re6
+48. Rf1 Qe7 49. Bb6 Qf6 50. Bc7 Kf8 51. Rb1 Qe7 52. Rb8+ Kg7 53. Bd8 Qa7 54.
+Rb6 Nxf3 55. Bxf3 Bxf3 56. Qxf3 Qd7 57. Rb7 e4 58. Rxd7 exf3 59. Kxf3 Kf8 60.
+Rb7 f5 61. g5 Re4 62. Bf6 Rxc4 63. Rg7 Ra4 64. Rxg6 Rxa5 65. Bg7+ Ke7 66. Bf6+
+Kd7 67. Rg8 Rb5 68. g6 Ke6 69. Bh8 Rb3 70. Re8+ Kd7 71. Re3 Rb8 72. Bf6 d5 73.
+g7 Rg8 74. Re7+ Kd6 75. Re5 a5 76. Rxf5 Ke6 77. Kf4 a4 78. Kg5 a3 79. Re5+ Kd6
+80. Re2 Kc6 81. Ra2 Ra8 82. Kg6 Kb5 83. Kf7 Kc4 84. Rxa3 1-0
+
+[Event "SapporoSummer2023"]
+[Site "?"]
+[Date "2023.07.16"]
+[Round "3.2"]
+[White "Nakamura, Mitsuru"]
+[Black "Takeuchi, Hiroshi"]
+[Result "1-0"]
+[ECO "B08"]
+[WhiteElo "1406"]
+[BlackElo "1407"]
+[PlyCount "85"]
+[SourceVersionDate "2023.09.05"]
+
+1. e4 d6 2. d4 Nf6 3. Nc3 g6 4. Nf3 Bg7 5. Be2 O-O 6. O-O Nbd7 7. h3 c5 8. Be3
+b6 9. Bd3 Bb7 10. Qe2 a6 11. Qd2 b5 12. a3 c4 13. Be2 Nxe4 14. Nxe4 Bxe4 15.
+Bh6 Nf6 16. Bxg7 Kxg7 17. c3 Qd7 18. Ng5 Bb7 19. Rae1 h6 20. Nf3 Rae8 21. Nh2
+Ne4 22. Qe3 f5 23. f3 Ng3 24. Rf2 f4 25. Qd2 Rf5 26. Bd1 Ref8 27. Bc2 Rg5 28.
+Ng4 h5 29. Nh2 Nf5 30. Qxf4 Nxd4 31. Qxd4+ e5 32. Qd2 Rg3 33. Rxe5 Qxh3 34.
+Re7+ Rf7 35. Rxf7+ Kxf7 36. Qf4+ Ke6 37. Re2+ Kd7 38. Be4 Bxe4 39. Qxe4 Kc7 40.
+Nf1 Kb6 41. Nxg3 Qxg3 42. Qd4+ Ka5 43. b3 1-0
+
+[Event "SapporoSummer2023"]
+[Site "?"]
+[Date "2023.07.16"]
+[Round "3.3"]
+[White "Yoshii, Yukihiko"]
+[Black "Ito, Katsuhide"]
+[Result "1-0"]
+[ECO "E65"]
+[WhiteElo "1708"]
+[BlackElo "1203"]
+[PlyCount "67"]
+[SourceVersionDate "2023.09.05"]
+
+1. c4 c5 2. Nc3 Nc6 3. g3 g6 4. Bg2 Bg7 5. Nf3 Nf6 6. O-O O-O 7. e3 d6 8. d4
+cxd4 9. exd4 Qc7 10. b3 Bf5 11. Nh4 Bd7 12. Bb2 d5 13. Nxd5 Nxd5 14. Bxd5 Rad8
+15. Qd2 Bh3 16. Rfd1 e6 17. Bxc6 Qxc6 18. Qe3 Bf6 19. Nf3 Bg5 20. d5 Bxe3 21.
+dxc6 Bb6 22. cxb7 Rb8 23. Rd7 f6 24. Rad1 e5 25. R7d2 Rxb7 26. Ba3 Re8 27. c5
+Ba5 28. Rd6 Bg4 29. Rxf6 e4 30. c6 Rf7 31. Rxf7 exf3 32. Rxa7 Re1+ 33. Rxe1
+Bxe1 34. c7 1-0
+
+[Event "SapporoSummer2023"]
+[Site "?"]
+[Date "2023.07.17"]
+[Round "4.1"]
+[White "Nishimori, Toshiyuki"]
+[Black "Yoshii, Yukihiko"]
+[Result "1-0"]
+[ECO "C50"]
+[WhiteElo "1565"]
+[BlackElo "1708"]
+[PlyCount "67"]
+[SourceVersionDate "2023.09.05"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 4. Nc3 d6 5. h3 Be7 6. d4 exd4 7. Nxd4 Bd7 8.
+O-O O-O 9. a3 a6 10. Be3 Ne5 11. Ba2 b5 12. b4 h6 13. f3 Qc8 14. Nd5 Nxd5 15.
+Bxd5 c6 16. Ba2 Qc7 17. Qe2 Bf6 18. Rad1 Rad8 19. f4 Ng6 20. f5 Ne5 21. Nf3 c5
+22. Qf2 Nxf3+ 23. gxf3 Rc8 24. Kh1 c4 25. Rg1 Kh7 26. Bd4 Be5 27. f4 Bc6 28.
+fxe5 Bxe4+ 29. Kh2 dxe5 30. Qg3 f6 31. Qg6+ Kh8 32. Bc5 Rfe8 33. Rd6 Rcd8 34.
+Bb6 1-0
+
+[Event "SapporoSummer2023"]
+[Site "?"]
+[Date "2023.07.17"]
+[Round "4.2"]
+[White "Kawamura, Takuto"]
+[Black "Nakamura, Mitsuru"]
+[Result "1-0"]
+[ECO "D30"]
+[WhiteElo "1576"]
+[BlackElo "1406"]
+[PlyCount "67"]
+[SourceVersionDate "2023.09.05"]
+
+1. d4 d5 2. c4 c6 3. e3 Nf6 4. Nf3 e6 5. Bd3 dxc4 6. Bxc4 b5 7. Bd3 Bd6 8. O-O
+Qc7 9. Qc2 Bb7 10. Nbd2 Nbd7 11. b3 Rc8 12. Bb2 O-O 13. Rac1 Qb8 14. h3 h6 15.
+Rfd1 Rfd8 16. Bc3 b4 17. Bb2 c5 18. Qb1 Bxf3 19. Nxf3 a5 20. Nd2 e5 21. Nc4
+exd4 22. exd4 Bf4 23. Rc2 Qa7 24. g3 Bb8 25. h4 Kh8 26. Bf5 Rc6 27. dxc5 Bxg3
+28. fxg3 Qxc5+ 29. Rf2 Re8 30. Bxd7 Re2 31. Bd4 Qh5 32. Bxc6 Qg4 33. Qd3 Nh5
+34. Rxe2 1-0
+
+[Event "SapporoSummer2023"]
+[Site "?"]
+[Date "2023.07.17"]
+[Round "4.3"]
+[White "Takeuchi, Hiroshi"]
+[Black "Ito, Katsuhide"]
+[Result "1-0"]
+[ECO "D02"]
+[WhiteElo "1407"]
+[BlackElo "1203"]
+[PlyCount "53"]
+[SourceVersionDate "2023.09.05"]
+
+1. d4 d5 2. Bf4 Nc6 3. Nf3 Bf5 4. e3 f6 5. c3 Qd7 6. Nbd2 a6 7. Be2 g5 8. Bg3
+Nh6 9. Qb3 O-O-O 10. c4 Na5 11. Qb4 Nc6 12. Qc3 Nf7 13. cxd5 Na7 14. e4 Bg6 15.
+Rc1 Nd6 16. Bd3 Nab5 17. Qb4 e6 18. Qb3 g4 19. dxe6 Qe7 20. Bxb5 Nxb5 21. Nh4
+Rxd4 22. Nxg6 hxg6 23. a4 Rb4 24. Qd5 Nd6 25. b3 Bg7 26. Bxd6 Qxd6 27. Qxd6 1-0
+
+[Event "SapporoSummer2023"]
+[Site "?"]
+[Date "2023.07.17"]
+[Round "5.1"]
+[White "Kawamura, Takuto"]
+[Black "Nishimori, Toshiyuki"]
+[Result "1-0"]
+[ECO "A40"]
+[WhiteElo "1576"]
+[BlackElo "1565"]
+[PlyCount "53"]
+[SourceVersionDate "2023.09.05"]
+
+1. d4 e5 2. dxe5 d6 3. exd6 Bxd6 4. Nf3 Nc6 5. e3 Nf6 6. Nc3 Bg4 7. Be2 O-O 8.
+O-O Qe7 9. h3 Bf5 10. Nd4 Rad8 11. Nxf5 Qe5 12. Nxd6 Rxd6 13. Qe1 Rfd8 14. a3
+h5 15. Bd3 g5 16. Bd2 g4 17. f4 gxf3 18. Rxf3 Kh8 19. Qh4 Rg8 20. Raf1 Nh7 21.
+Rxf7 Rh6 22. Ne4 Qe6 23. Nc5 Qd5 24. Rxh7+ Rxh7 25. Bc3+ Ne5 26. Qf6+ Rhg7 27.
+Qh6+ 1-0
+
+[Event "SapporoSummer2023"]
+[Site "?"]
+[Date "2023.07.17"]
+[Round "5.2"]
+[White "Takeuchi, Hiroshi"]
+[Black "Yoshii, Yukihiko"]
+[Result "0-1"]
+[ECO "A48"]
+[WhiteElo "1407"]
+[BlackElo "1708"]
+[PlyCount "104"]
+[SourceVersionDate "2023.09.05"]
+
+1. d4 Nf6 2. Bf4 d6 3. e3 g6 4. Nf3 Bg7 5. Bd3 O-O 6. O-O Nbd7 7. c3 Re8 8. h3
+e5 9. Bc4 exf4 10. exf4 Nb6 11. Bb3 h6 12. Nbd2 Nh5 13. f5 Bxf5 14. g4 Bxg4 15.
+hxg4 Nf4 16. Qc2 Qd7 17. Nh2 Kh8 18. Ne4 d5 19. Ng3 Re7 20. Qd2 Qd6 21. Rae1
+Rae8 22. Rxe7 Rxe7 23. Re1 Rxe1+ 24. Qxe1 Qe6 25. Qxe6 fxe6 26. Nf3 Bf6 27. Kf1
+Kg7 28. Ne5 Bxe5 29. dxe5 Nd3 30. f3 Nxe5 31. Ke2 c5 32. Nf1 c4 33. Bc2 Nbd7
+34. Nd2 Nc5 35. b3 b5 36. b4 Ncd3 37. a4 a6 38. Nf1 Kf6 39. axb5 axb5 40. Ng3
+Kg5 41. Ke3 Kh4 42. Ne2 Ne1 43. f4 Nxc2+ 44. Kd2 Nf3+ 45. Kxc2 Kxg4 46. Kd1 Kh3
+47. Nc1 Kg2 48. Ke2 h5 49. Ke3 h4 50. Ne2 h3 51. Nd4 Nxd4 52. Kxd4 h2 0-1
+
+[Event "SapporoSummer2023"]
+[Site "?"]
+[Date "2023.07.17"]
+[Round "5.3"]
+[White "Nakamura, Mitsuru"]
+[Black "Ito, Katsuhide"]
+[Result "1-0"]
+[ECO "D08"]
+[WhiteElo "1406"]
+[BlackElo "1203"]
+[PlyCount "59"]
+[SourceVersionDate "2023.09.05"]
+
+1. d4 d5 2. c4 e5 3. dxe5 d4 4. Nf3 Nc6 5. a3 a5 6. g3 Nge7 7. Bg2 Ng6 8. Bf4
+Bg4 9. Qb3 Rb8 10. Nbd2 Nxf4 11. gxf4 Be7 12. O-O O-O 13. Rfe1 Kh8 14. Rad1 f6
+15. h3 Bxf3 16. Nxf3 fxe5 17. fxe5 Bc5 18. e3 Qe7 19. exd4 Nxd4 20. Nxd4 Qh4
+21. Qg3 Qh6 22. Re2 Rf4 23. Re4 Rbf8 24. Rxf4 Rxf4 25. Nf3 g6 26. e6 Bd6 27.
+Rxd6 cxd6 28. Ng5 Qg7 29. Qxf4 Qxb2 30. Qf8# 1-0
+

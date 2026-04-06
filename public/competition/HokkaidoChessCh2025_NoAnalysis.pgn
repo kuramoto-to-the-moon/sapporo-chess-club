@@ -1,0 +1,1095 @@
+[Event "Hokkaido Chess Championship 2025"]
+[Site ""]
+[Date "2025.03.22"]
+[Round "1"]
+[Board "1"]
+[White "Nakamura, Mitsuru"]
+[Black "Dryglas, Maciej"]
+[Result "0-1"]
+[ECO "A43"]
+[WhiteElo "1603"]
+[BlackElo "2135"]
+[PlyCount "92"]
+[EventDate "2025.03.22"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+{[%evp 0,49,15,23,18,15,18,-7,31,-11,-27,-34,21,-46,-49,-43,-27,-50,-20,-41,
+-38,-171,-136,-362,-294,-285,-282,-143,-348,-332,-330,-430,-370,-250,-413,-383,
+-317,-359,-318,-358,-310,-346,-187,-374,-325,-263,-359,-394,-428,-394,-373,
+-385]} 1. d4 d5 2. Nf3 c5 3. Bf4 cxd4 4. Nxd4 f6 5. Nf3 e5 6. Bg3 Nc6 7. e3 Qb6
+8. b3 Bf5 9. Be2 Nb4 10. e4 Bxe4 11. Bd3 Bxd3 12. cxd3 Rc8 13. Na3 Qa5 14. O-O
+Qxa3 15. Nxe5 Ne7 16. Nf3 Nf5 17. Qe2+ Kf7 18. Rae1 Qa6 19. Nh4 Nxh4 20. Bxh4
+Bc5 21. Qh5+ g6 22. Qf3 Rhd8 23. Bg5 Nxd3 24. Re2 Rc6 25. Rd1 Nb4 26. Rde1 Qd3
+27. Bd2 Qxf3 28. gxf3 Nd3 29. Rd1 Re6 30. Rxe6 Kxe6 31. Ba5 b6 32. Bxb6 axb6
+33. Rxd3 Ra8 34. a4 Ke5 35. Rd1 d4 36. Kf1 Kd5 37. f4 Re8 38. Kg2 Bb4 39. Rd3
+Ke4 40. Rf3 Bd2 41. Rh3 h5 42. Rg3 g5 43. fxg5 fxg5 44. Rh3 h4 45. Rf3 Bf4 46.
+b4 d3  0-1
+
+[Event "Hokkaido Chess Championship 2025"]
+[Site ""]
+[Date "2025.03.22"]
+[Round "1"]
+[Board "2"]
+[White "Sugimoto, Koichi"]
+[Black "Furuse, Mizuki"]
+[Result "1-0"]
+[ECO "B07"]
+[WhiteElo "1908"]
+[BlackElo "1588"]
+[PlyCount "105"]
+[EventDate "2025.03.22"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. d4 Nf6 2. Nc3 g6 3. Bf4 Bg7 4. e4 d6 5. Qd2 O-O 6. O-O-O a6 7. Nf3 b5 8. Qe1
+Bb7 9. e5 Nd5 10. Bd2 Nxc3 11. Bxc3 Bd5 12. Kb1 Nc6 13. Bd3 Rb8 14. Be4 Bxe4
+15. Qxe4 d5 16. Qe2 a5 17. e6 f6 18. Bd2 Rb6 19. h4 h5 20. Qd3 Qe8 21. Bf4 Nb4
+22. Qe2 Qc8 23. Rhe1 Rb7 24. c3 Nc6 25. Qd3 Qe8 26. Nh2 f5 27. Nf3 Kh7 28. Ng5+
+Kg8 29. Qg3 Qc8 30. Nf7 Rxf7 31. exf7+ Kxf7 32. Qe3 Qd7 33. f3 Bf6 34. Bg5 Rb8
+35. Bxf6 exf6 36. Qh6 Rg8 37. Rg1 Qd8 38. Qf4 Qd7 39. g4 hxg4 40. fxg4 Ne7 41.
+g5 fxg5 42. hxg5 Nc6 43. Rh1 Rg7 44. Rde1 Qd8 45. Qe3 Ne7 46. Qe6+ Kf8 47. Rh8+
+Ng8 48. Qc6 Kf7 49. Qxb5 f4 50. Qc6 f3 51. Qe6+ Kf8 52. Rf1 Re7 53. Rxg8#  1-0
+
+[Event "Hokkaido Chess Championship 2025"]
+[Site ""]
+[Date "2025.03.22"]
+[Round "1"]
+[Board "3"]
+[White "Shishido, Kenta"]
+[Black "Honda, Yoshiki"]
+[Result "0-1"]
+[ECO "B20"]
+[WhiteElo "1431"]
+[BlackElo "1828"]
+[PlyCount "68"]
+[EventDate "2025.03.22"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. e4 c5 2. a3 Nc6 3. b4 d6 4. bxc5 dxc5 5. Nf3 e5 6. Bb5 Bg4 7. Bxc6+ bxc6 8.
+h3 Bh5 9. c4 Qd3 10. Qe2 Qxe2+ 11. Kxe2 f5 12. d3 fxe4 13. dxe4 Bd6 14. g4 Bg6
+15. Nbd2 Nf6 16. Ke3 Rb8 17. Nh4 Bxe4 18. Nxe4 Rb3+ 19. Ke2 Nxe4 20. Bd2 O-O
+21. Rh2 Rb2 22. Nf3 Rxf3 23. Kxf3 Nxd2+ 24. Ke3 Nxc4+ 25. Kd3 e4+ 26. Kxc4 Bxh2
+27. Kxc5 Rxf2 28. Kxc6 e3 29. Kb7 e2 30. Re1 Bf4 31. Kxa7 Bd2 32. Rb1 e1=Q 33.
+Rb8+ Rf8 34. Rxf8+ Kxf8  0-1
+
+[Event "Hokkaido Chess Championship 2025"]
+[Site ""]
+[Date "2025.03.22"]
+[Round "1"]
+[Board "4"]
+[White "Etabag, John Vincent"]
+[Black "Ito, Katsuhide"]
+[Result "1-0"]
+[ECO "B23"]
+[WhiteElo "1821"]
+[BlackElo "1389"]
+[PlyCount "69"]
+[EventDate "2025.03.22"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. e4 c5 2. Nc3 Nc6 3. f4 g6 4. Nf3 Bg7 5. a3 a6 6. Bc4 e6 7. d3 b5 8. Ba2 Nd4
+9. O-O Nxf3+ 10. Qxf3 Bb7 11. f5 exf5 12. Qg3 Ne7 13. Bg5 O-O 14. exf5 Nxf5 15.
+Rxf5 Qb6 16. Rff1 d5 17. Nxd5 Bxd5 18. Bxd5 Ra7 19. c3 Kh8 20. Rae1 f6 21. Bf4
+Rd7 22. Be6 c4+ 23. d4 Re7 24. Bd6 Ree8 25. Bxf8 Rxe6 26. Bxg7+ Kxg7 27. Rxe6
+Qxe6 28. Re1 Qd7 29. Qe3 Kf7 30. Qe4 Qd8 31. Qe6+ Kf8 32. d5 Qc7 33. Qxf6+ Qf7
+34. Qxf7+ Kxf7 35. d6  1-0
+
+[Event "Hokkaido Chess Championship 2025"]
+[Site ""]
+[Date "2025.03.22"]
+[Round "1"]
+[Board "5"]
+[White "Yajima, Machiko"]
+[Black "Yoshii, Yukihiko"]
+[Result "0-1"]
+[ECO "C01"]
+[WhiteElo "1367"]
+[BlackElo "1771"]
+[PlyCount "90"]
+[EventDate "2025.03.22"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. e3 e5 2. d4 exd4 3. exd4 d5 4. Nf3 Bf5 5. c4 Nf6 6. Nc3 c6 7. Be2 Be7 8. O-O
+O-O 9. a3 Nbd7 10. Qe1 Re8 11. c5 Qc7 12. g3 Bh3 13. Bf4 Qd8 14. Ng5 Bxf1 15.
+Qxf1 h6 16. Nf3 Ne4 17. Qc1 Ndf6 18. Ne5 Nxc3 19. bxc3 Ne4 20. Bh5 Rf8 21. Bxh6
+gxh6 22. Qf4 Bg5 23. Bxf7+ Kg7 24. Qf5 Qf6 25. Qxf6+ Bxf6 26. f4 Bxe5 27. Bh5
+Bc7 28. Rc1 Nf6 29. Bf3 Rae8 30. Kf2 Re7 31. Rc2 Rfe8 32. h3 Ba5 33. c4 Be1+
+34. Kg2 Re3 35. a4 Ne4 36. Bxe4 R8xe4 37. Kf1 Bxg3 38. Kg2 Bxf4 39. Kf2 Rxd4
+40. cxd5 Rxd5 41. Rc4 Rd2+ 42. Kf1 Bg3 43. Rg4+ Kf6 44. Rxg3 Rxg3 45. Ke1 Ra2
+ 0-1
+
+[Event "Hokkaido Chess Championship 2025"]
+[Site ""]
+[Date "2025.03.22"]
+[Round "1"]
+[Board "6"]
+[White "kuramoto, koutarou"]
+[Black "Ono, Yukiko"]
+[Result "1-0"]
+[ECO "A00"]
+[WhiteElo "1757"]
+[BlackElo "1000"]
+[PlyCount "65"]
+[EventDate "2025.03.22"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. d4 d5 2. Nf3 Nf6 3. g3 Nc6 4. Bg2 e6 5. O-O Bd6 6. c4 O-O 7. Qc2 Ne4 8. Nc3
+f5 9. a3 e5 10. cxd5 Nxd4 11. Nxd4 exd4 12. Nxe4 fxe4 13. Qxe4 c5 14. dxc6 Qb6
+15. Qd5+ Rf7 16. Qxd6 bxc6 17. Qxc6 Qxc6 18. Bxc6 Rb8 19. Bd5 Bh3 20. Bxf7+
+Kxf7 21. Rd1 Rd8 22. b4 Bd7 23. Bb2 Rc8 24. Rxd4 Ba4 25. Rc1 Re8 26. e3 h5 27.
+Rc7+ Ke6 28. Re4+ Kd6 29. Rxe8 Kxc7 30. Re7+ Bd7 31. Rxg7 Kd8 32. Rxd7+ Kxd7
+33. f4 {(Time)}  1-0
+
+[Event "Hokkaido Chess Championship 2025"]
+[Site ""]
+[Date "2025.03.22"]
+[Round "1"]
+[Board "7"]
+[White "Arunabh, Chakravorty"]
+[Black "Kawamura, Takuto"]
+[Result "0-1"]
+[ECO "A00"]
+[WhiteElo "0"]
+[BlackElo "1745"]
+[PlyCount "0"]
+[EventDate "2025.03.22"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+{0F-1F}   0-1
+
+[Event "Hokkaido Chess Championship 2025"]
+[Site ""]
+[Date "2025.03.22"]
+[Round "1"]
+[Board "8"]
+[White "Aoki, Yasuhiro"]
+[Black "Denta, Seiichi"]
+[Result "1-0"]
+[ECO "A30"]
+[WhiteElo "1731"]
+[BlackElo "0"]
+[PlyCount "69"]
+[EventDate "2025.03.22"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+{[%evp 0,69,15,-12,19,11,10,10,14,13,16,13,37,17,70,69,94,58,104,24,24,13,13,0,
+42,1,80,88,115,115,110,63,335,325,486,225,225,221,221,225,240,239,232,239,464,
+351,536,518,718,731,856,905,1218,1224,1279,1255,1298,1244,2603,2828,2920,2964,
+2964,2964,2964,3046,2896,3151,29989,29982,2666,3265]} 1. c4 c5 2. Nf3 Nf6 3. g3
+Nc6 4. Bg2 d6 5. O-O Bf5 6. Nc3 a6 7. d4 e6 8. Re1 Be7 9. e4 Bg4 10. Be3 O-O
+11. Qd2 h6 12. b3 Qd7 13. d5 Ne5 14. Nxe5 dxe5 15. Na4 Qd6 16. Bxc5 Qc7 17.
+Bxe7 Qxe7 18. d6 Qd8 19. c5 Rc8 20. b4 Nd7 21. Rac1 f5 22. exf5 Bxf5 23. Bxb7
+Rb8 24. c6 Rxb7 25. cxb7 Nb8 26. Rc8 Qd7 27. Rxf8+ Kxf8 28. Nc5 Qc6 29. d7 Bh3
+30. d8=Q+ Kf7 31. Ne4 Bf5 32. Qxb8 Bxe4 33. Rxe4 Qxe4 34. Qc7+ Kg6 35. Qcc2  1-0
+
+[Event "Hokkaido Chess Championship 2025"]
+[Site ""]
+[Date "2025.03.22"]
+[Round "1"]
+[Board "9"]
+[White "Kramskoy, Damir"]
+[Black "Miyatani, Ryouhei"]
+[Result "0-1"]
+[ECO "A00"]
+[WhiteElo "0"]
+[BlackElo "1672"]
+[PlyCount "112"]
+[EventDate "2025.03.22"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. Nc3 Nf6 5. O-O d6 6. d3 a5 7. Bg5 h6 8. Be3
+O-O 9. h3 b6 10. Nd2 Ne7 11. Nb3 Bxe3 12. fxe3 c6 13. d4 b5 14. Be2 a4 15. dxe5
+dxe5 16. Qxd8 Rxd8 17. Rad1 Rxd1 18. Rxd1 axb3 19. cxb3 Be6 20. b4 Nd7 21. Bg4
+Bxg4 22. hxg4 Nf6 23. b3 Kf8 24. a4 Ke8 25. axb5 Rd8 26. Ra1 cxb5 27. Nxb5 Nc6
+28. Nc7+ Kd7 29. Nd5 Nxd5 30. exd5 Nxb4 31. Ra7+ Kd6 32. Ra5 Nxd5 33. e4 Nf6
+34. b4 Nxe4 35. b5 Nc5 36. b6 Rb8 37. Rb5 Kc6 38. Rb4 Rxb6 39. Rxb6+ Kxb6 40.
+Kf2 Kc6 41. g5 hxg5 42. g3 f5 43. g4 f4 44. Kg2 e4 45. Kf2 Kd5 46. Ke2 Kd4 47.
+Kd2 e3+ 48. Kc2 f3 49. Kb2 f2 50. Ka3 f1=Q 51. Kb4 Qc4+ 52. Ka5 Nb3+ 53. Kb6
+Kd5 54. Ka7 Qb5 55. Ka8 Kc6 56. Ka7 Qb7#  0-1
+
+[Event "Hokkaido Chess Championship 2025"]
+[Site ""]
+[Date "2025.03.22"]
+[Round "1"]
+[Board "10"]
+[White "Takeuchi, Hiroshi"]
+[Black "Uematsu, Maya"]
+[Result "1-0"]
+[ECO "A40"]
+[WhiteElo "1629"]
+[BlackElo "0"]
+[PlyCount "65"]
+[EventDate "2025.03.22"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. d4 c6 2. Nf3 d5 3. Bf4 Bf5 4. e3 Nf6 5. Bd3 Bxd3 6. Qxd3 e6 7. O-O Bd6 8.
+Bxd6 Qxd6 9. c4 h6 10. Nc3 Nbd7 11. cxd5 cxd5 12. Rac1 O-O 13. a3 a6 14. e4 e5
+15. dxe5 Nxe5 16. Nxe5 Qxe5 17. exd5 Rad8 18. Rcd1 Nxd5 19. Nxd5 Rfe8 20. Qb3
+b5 21. Ne3 Rb8 22. Rd7 Re7 23. Rfd1 Rb7 24. Rxb7 Rxb7 25. Rd8+ Kh7 26. Qc2+ g6
+27. Qc8 Re7 28. Rh8+ Qxh8 29. Qxa6 Qxb2 30. h3 Qb1+ 31. Kh2 Rd7 32. Qf6 Rd2 33.
+Qxf7+  1-0
+
+[Event "Hokkaido Chess Championship 2025"]
+[Site ""]
+[Date "2025.03.22"]
+[Round "2"]
+[Board "1"]
+[White "Dryglas, Maciej"]
+[Black "kuramoto, koutarou"]
+[Result "1-0"]
+[ECO "A00"]
+[WhiteElo "2135"]
+[BlackElo "1757"]
+[PlyCount "65"]
+[EventDate "2025.03.22"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+{[%evp 0,40,17,0,28,18,18,27,30,79,20,21,-16,32,102,80,101,101,101,114,119,106,
+113,103,120,120,176,143,343,413,368,338,497,523,561,428,540,618,607,635,560,
+637,715]} 1. Nc3 g6 2. h4 d5 3. h5 e5 4. d4 e4 5. hxg6 fxg6 6. Bf4 Bd6 7. Nxd5
+Be6 8. Bxd6 Qxd6 9. Nc3 Nf6 10. Qd2 Nc6 11. O-O-O Nb4 12. a3 a5 13. Qg5 Nfd5
+14. Nxe4 Qc6 15. Nc5 b6 16. Qe5 Ke7 17. Qxe6+ Qxe6 18. Nxe6 Kxe6 19. e4 Na2+
+20. Kd2 Nf4 21. g3 Nh5 22. Bc4+ Kd6 23. Bxa2 Rhf8 24. Ke3 Nf6 25. e5+ Ke7 26.
+exf6+ Kxf6 27. Nf3 Rae8+ 28. Ne5 Re7 29. f4 c5 30. d5 Rfe8 31. d6 Rxe5+ 32.
+fxe5+ Rxe5+ 33. Kf3  1-0
+
+[Event "Hokkaido Chess Championship 2025"]
+[Site ""]
+[Date "2025.03.22"]
+[Round "2"]
+[Board "2"]
+[White "Kawamura, Takuto"]
+[Black "Sugimoto, Koichi"]
+[Result "1-0"]
+[ECO "D11"]
+[WhiteElo "1745"]
+[BlackElo "1908"]
+[PlyCount "59"]
+[EventDate "2025.03.22"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. d4 d5 2. c4 c6 3. Nf3 Nf6 4. Qc2 g6 5. g3 Bg7 6. Bg2 O-O 7. O-O Bf5 8. Qb3
+Qc8 9. Nc3 dxc4 10. Qxc4 Nbd7 11. Nh4 Be6 12. Qd3 Nb6 13. Rd1 Rd8 14. b3 a5 15.
+Ba3 Qc7 16. e4 Ng4 17. Bc5 Nc8 18. Ne2 b6 19. Ba3 a4 20. Qc2 axb3 21. axb3 Na7
+22. Bb2 Nb5 23. Rxa8 Rxa8 24. Ra1 Rxa1+ 25. Bxa1 Qa7 26. Bb2 Qa2 27. Nc1 Qa8
+28. e5 Bd5 29. Bxd5 cxd5 30. Qe2  1-0
+
+[Event "Hokkaido Chess Championship 2025"]
+[Site ""]
+[Date "2025.03.22"]
+[Round "2"]
+[Board "3"]
+[White "Honda, Yoshiki"]
+[Black "Aoki, Yasuhiro"]
+[Result "1/2-1/2"]
+[ECO "B54"]
+[WhiteElo "1828"]
+[BlackElo "1731"]
+[PlyCount "54"]
+[EventDate "2025.03.22"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+{[%evp 0,54,24,33,86,2,2,-1,16,22,21,13,17,23,34,41,25,-32,-29,-27,-18,-58,-27,
+-45,-50,-64,-35,-47,-3,-62,-15,-99,-100,-120,-124,-127,-49,-59,-78,-100,-47,
+-54,-59,-63,-59,-62,-49,-33,0,0,0,0,0,0,0,0,0]} 1. e4 d6 2. c4 Nf6 3. Nc3 c5 4.
+Nf3 Nc6 5. d4 cxd4 6. Nxd4 e6 7. Nxc6 bxc6 8. e5 dxe5 9. Qxd8+ Kxd8 10. Bg5 Be7
+11. O-O-O+ Kc7 12. f3 h6 13. Bh4 Bc5 14. Kc2 a5 15. Bxf6 gxf6 16. Ne4 Be7 17.
+c5 Ba6 18. Nd6 Bxd6 19. Rxd6 Rhd8 20. Bxa6 Rxa6 21. Rxd8 Kxd8 22. Re1 Kc7 23.
+Re4 Ra8 24. Rh4 Rh8 25. Ra4 Ra8 26. Rh4 Rh8 27. Ra4 Ra8  1/2-1/2
+
+[Event "Hokkaido Chess Championship 2025"]
+[Site ""]
+[Date "2025.03.22"]
+[Round "2"]
+[Board "4"]
+[White "Miyatani, Ryouhei"]
+[Black "Etabag, John Vincent"]
+[Result "0-1"]
+[ECO "B47"]
+[WhiteElo "1672"]
+[BlackElo "1821"]
+[PlyCount "88"]
+[EventDate "2025.03.22"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. e4 c5 2. Nf3 e6 3. d4 cxd4 4. Nxd4 Nc6 5. Nc3 Qc7 6. g3 a6 7. Bg2 Nf6 8. O-O
+Be7 9. Re1 Nxd4 10. Qxd4 d6 11. Be3 O-O 12. Na4 Nd7 13. Qc3 Qxc3 14. Nxc3 b5
+15. Red1 Bb7 16. Ne2 Rac8 17. c3 Nf6 18. e5 Nd5 19. exd6 Bxd6 20. Nf4 Bxf4 21.
+Bxf4 Ba8 22. Be3 Nxe3 23. fxe3 Bxg2 24. Kxg2 Rfd8 25. Kf3 Kf8 26. Rac1 Ke7 27.
+h4 h5 28. a3 f6 29. Kf4 g6 30. Kf3 e5 31. Rxd8 Rxd8 32. Rc2 Ke6 33. c4 bxc4 34.
+Rxc4 Kd5 35. Rc7 Rb8 36. b4 Rb6 37. Rc5+ Kd6 38. g4 hxg4+ 39. Kxg4 Ke6 40. h5
+gxh5+ 41. Kxh5 Kf5 42. Rc4 Ke6 43. Kg4 Kd5 44. Kf5 Kxc4  0-1
+
+[Event "Hokkaido Chess Championship 2025"]
+[Site ""]
+[Date "2025.03.22"]
+[Round "2"]
+[Board "5"]
+[White "Yoshii, Yukihiko"]
+[Black "Takeuchi, Hiroshi"]
+[Result "1-0"]
+[ECO "D35"]
+[WhiteElo "1771"]
+[BlackElo "1629"]
+[PlyCount "81"]
+[EventDate "2025.03.22"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. c4 Nf6 2. Nc3 e6 3. d4 d5 4. cxd5 exd5 5. Bg5 Be7 6. Nf3 Nc6 7. e3 h6 8. Bh4
+g5 9. Bg3 Bd6 10. Bb5 Bxg3 11. Bxc6+ bxc6 12. hxg3 Bg4 13. Qc2 Bxf3 14. gxf3
+Qd7 15. Na4 Kf8 16. Nc5 Qe7 17. Qf5 Kg7 18. Ke2 Rae8 19. Rh2 g4 20. fxg4 Ne4
+21. Nxe4 Qxe4 22. Qxe4 Rxe4 23. f3 Re6 24. Kd3 Rhe8 25. Re1 Kg6 26. Rh5 Rb8 27.
+b3 a5 28. e4 a4 29. Rb1 dxe4+ 30. fxe4 axb3 31. Rxb3 Rxb3+ 32. axb3 Re8 33. Rc5
+Re6 34. b4 Rf6 35. Rf5 Rxf5 36. gxf5+ Kg5 37. Ke3 Kg4 38. Kf2 h5 39. f6 Kg5 40.
+e5 Kg4 41. e6  1-0
+
+[Event "Hokkaido Chess Championship 2025"]
+[Site ""]
+[Date "2025.03.22"]
+[Round "2"]
+[Board "6"]
+[White "Ono, Yukiko"]
+[Black "Nakamura, Mitsuru"]
+[Result "0-1"]
+[ECO "D02"]
+[WhiteElo "1000"]
+[BlackElo "1603"]
+[PlyCount "54"]
+[EventDate "2025.03.22"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. d4 d5 2. Bf4 Bf5 3. Nf3 Nf6 4. e3 e6 5. Nbd2 Bd6 6. c3 Bxf4 7. exf4 O-O 8.
+Qe2 h6 9. h3 c6 10. Ne5 Nbd7 11. Nxd7 Qxd7 12. f3 Qc7 13. g3 Qb6 14. O-O-O Rac8
+15. g4 Bh7 16. Bg2 c5 17. f5 exf5 18. gxf5 Bxf5 19. Nb3 Rfe8 20. Qd2 c4 21. Nc5
+Qc6 22. Rde1 b6 23. Na6 Bd3 24. Rxe8+ Rxe8 25. Re1 Rxe1+ 26. Qxe1 Qa4 27. Qe8+
+Nxe8  0-1
+
+[Event "Hokkaido Chess Championship 2025"]
+[Site ""]
+[Date "2025.03.22"]
+[Round "2"]
+[Board "7"]
+[White "Furuse, Mizuki"]
+[Black "Yajima, Machiko"]
+[Result "1-0"]
+[ECO "A15"]
+[WhiteElo "1588"]
+[BlackElo "1367"]
+[PlyCount "73"]
+[EventDate "2025.03.22"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. Nf3 g6 2. g3 Bg7 3. Bg2 Nf6 4. O-O O-O 5. c4 d6 6. d3 h6 7. Nc3 c6 8. Rb1
+Be6 9. b4 Nfd7 10. Bd2 b6 11. b5 Qc7 12. bxc6 Nxc6 13. Nb5 Qd8 14. Bc3 f6 15.
+Nfd4 Nde5 16. Nxe6 Qd7 17. Nxf8 Rxf8 18. Nd4 Nxd4 19. Bxd4 Nf7 20. Qb3 e5 21.
+Be3 g5 22. Qb5 Rd8 23. Qxd7 Rxd7 24. a4 a5 25. Rxb6 Kh7 26. Be4+ Kg8 27. Bf5
+Re7 28. Rb8+ Bf8 29. c5 d5 30. Bg6 d4 31. Bxf7+ Kxf7 32. Bd2 Rc7 33. Bxa5 Rxc5
+34. Rxf8+ Kxf8 35. Bb4 Ke8 36. Bxc5 Kd7 37. a5  1-0
+
+[Event "Hokkaido Chess Championship 2025"]
+[Site ""]
+[Date "2025.03.22"]
+[Round "2"]
+[Board "8"]
+[White "Denta, Seiichi"]
+[Black "Shishido, Kenta"]
+[Result "0-1"]
+[ECO "A00"]
+[WhiteElo "0"]
+[BlackElo "1431"]
+[PlyCount "88"]
+[EventDate "2025.03.22"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. e4 c5 2. Bc4 e6 3. Nc3 d6 4. Nf3 a6 5. h3 Nd7 6. O-O Ngf6 7. d3 b5 8. Bb3
+Bb7 9. Re1 Be7 10. e5 Bxf3 11. Qxf3 Nxe5 12. Qg3 Nh5 13. Qe3 O-O 14. g3 c4 15.
+dxc4 bxc4 16. Ba4 h6 17. f4 Nd7 18. g4 Nhf6 19. Re2 Nb6 20. g5 hxg5 21. fxg5
+Nfd5 22. Nxd5 Nxd5 23. Qd4 Bxg5 24. Bxg5 Qxg5+ 25. Rg2 Qe3+ 26. Qxe3 Nxe3 27.
+Rg3 Nf5 28. Rg5 Rab8 29. b3 cxb3 30. axb3 Nd4 31. Rh5 Nxc2 32. Rc1 Rfc8 33. Rg5
+Nd4 34. Rxc8+ Rxc8 35. Rg4 Rc1+ 36. Kf2 e5 37. Ke3 Rc3+ 38. Ke4 f5+ 39. Kd5
+fxg4 40. hxg4 Nxb3 41. Bd7 Nc5 42. Bf5 a5 43. Kxd6 e4 44. Bc8 e3  0-1
+
+[Event "Hokkaido Chess Championship 2025"]
+[Site ""]
+[Date "2025.03.22"]
+[Round "2"]
+[Board "9"]
+[White "Ito, Katsuhide"]
+[Black "Kramskoy, Damir"]
+[Result "1-0"]
+[ECO "A00"]
+[WhiteElo "1389"]
+[BlackElo "0"]
+[PlyCount "59"]
+[EventDate "2025.03.22"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 Nf6 4. O-O Nxe4 5. d4 exd4 6. Nxd4 Bc5 7. Bxc6 bxc6
+8. Re1 d5 9. f3 Bxd4+ 10. Qxd4 Bf5 11. Nc3 O-O 12. fxe4 dxe4 13. Be3 Rb8 14. b4
+c5 15. Qxc5 Bg6 16. Rad1 Qh4 17. Bf2 Qg4 18. h3 Qf4 19. Nd5 Qe5 20. Ne7+ Kh8
+21. Qxe5 f6 22. Nxg6+ Kg8 23. Qd5+ Rf7 24. Rxe4 hxg6 25. Re7 Rbf8 26. Bc5 Kh8
+27. Rd4 c6 28. Rxf7 cxd5 29. Rxf8+ Kh7 30. Rh4#  1-0
+
+[Event "Hokkaido Chess Championship 2025"]
+[Site ""]
+[Date "2025.03.22"]
+[Round "3"]
+[Board "1"]
+[White "Yoshii, Yukihiko"]
+[Black "Dryglas, Maciej"]
+[Result "0-1"]
+[ECO "A16"]
+[WhiteElo "1771"]
+[BlackElo "2135"]
+[PlyCount "38"]
+[EventDate "2025.03.22"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+{[%evp 0,38,12,-10,20,68,39,15,23,-39,13,7,32,35,38,12,0,2,1,1,-24,-24,20,-21,
+-5,-227,-270,-280,-294,-477,-499,-478,-547,-926,-865,-1385,-1345,-1448,-1471,
+-1724,-1742]} 1. c4 d5 2. cxd5 Nf6 3. Nc3 Nxd5 4. e4 Nxc3 5. bxc3 e5 6. Nf3 Bd6
+7. h3 O-O 8. Bc4 Nc6 9. d4 exd4 10. cxd4 Bb4+ 11. Bd2 Qe7 12. e5 Nxd4 13. Nxd4
+Qxe5+ 14. Qe2 Bxd2+ 15. Kxd2 Qxd4+ 16. Bd3 Qb2+ 17. Bc2 Rd8+ 18. Ke3 Re8+ 19.
+Be4 Rxe4+  0-1
+
+[Event "Hokkaido Chess Championship 2025"]
+[Site ""]
+[Date "2025.03.22"]
+[Round "3"]
+[Board "2"]
+[White "Etabag, John Vincent"]
+[Black "Kawamura, Takuto"]
+[Result "1/2-1/2"]
+[ECO "B23"]
+[WhiteElo "1821"]
+[BlackElo "1745"]
+[PlyCount "75"]
+[EventDate "2025.03.22"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. e4 c5 2. Nc3 e6 3. f4 Nc6 4. Nf3 Qc7 5. Bb5 d6 6. O-O Bd7 7. Bxc6 Bxc6 8. a4
+Nf6 9. d3 Be7 10. Qe1 h5 11. Nb5 Bxb5 12. axb5 c4 13. Be3 a6 14. b6 Qc8 15. h3
+Nd7 16. Bd4 e5 17. fxe5 dxe5 18. Nxe5 Nxe5 19. Bxe5 Qc5+ 20. d4 Qxb6 21. c3 Bd6
+22. Bxd6 Qxd6 23. Qe2 Rc8 24. Rf5 g6 25. Rf3 O-O 26. Raf1 Qe7 27. e5 f5 28. Qe3
+Kh7 29. Re1 Rcd8 30. Qe2 Qe6 31. Ra1 Rf7 32. Kh1 Rd5 33. Ra4 b5 34. Ra2 Rc7 35.
+Rf1 Rd8 36. Qe3 Ra7 37. Qf3 Rda8 38. Re1  1/2-1/2
+
+[Event "Hokkaido Chess Championship 2025"]
+[Site ""]
+[Date "2025.03.22"]
+[Round "3"]
+[Board "3"]
+[White "Sugimoto, Koichi"]
+[Black "Honda, Yoshiki"]
+[Result "1/2-1/2"]
+[ECO "D00"]
+[WhiteElo "1908"]
+[BlackElo "1828"]
+[PlyCount "151"]
+[EventDate "2025.03.22"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. d4 Nf6 2. Nc3 d5 3. Bf4 a6 4. e3 e6 5. g4 Bd6 6. g5 Ne4 7. Nxe4 dxe4 8. Bg2
+Bxf4 9. exf4 Nc6 10. c3 f5 11. gxf6 Qxf6 12. Ne2 Bd7 13. Qc2 O-O-O 14. Bxe4 Ne7
+15. O-O-O Bc6 16. Bxc6 Nxc6 17. Qe4 Ne7 18. Rhg1 g6 19. Rg5 Nf5 20. Rgg1 Rhf8
+21. Rd3 Rd5 22. Kb1 Nd6 23. Qe3 Nc4 24. Qh3 Qf5 25. Kc2 Ra5 26. Qxf5 Rfxf5 27.
+Kb1 Rab5 28. b3 Rh5 29. h3 Nd6 30. Re3 Kd7 31. Kc2 Nf5 32. Rd3 Rd5 33. Rg5 Ne7
+34. Rdg3 Rdxg5 35. fxg5 Nf5 36. Rf3 Rxg5 37. Ng3 h5 38. Ne4 Rg2 39. Nc5+ Ke7
+40. Nxb7 g5 41. Nc5 g4 42. hxg4 hxg4 43. Rf4 g3 44. Ne4 Ne3+ 45. Kd3 Nd5 46.
+Rf3 gxf2 47. Rxf2 Rg1 48. Nc5 Rg3+ 49. Kd2 Nxc3 50. a4 a5 51. Rh2 Kd6 52. Rh6
+Nb1+ 53. Kc2 Na3+ 54. Kb2 Kd5 55. Nxe6 Nc4+ 56. bxc4+ Kxc4 57. Rh5 Rg2+ 58. Kc1
+Kb4 59. Nc5 Kc3 60. Rh3+ Kxd4 61. Ne6+ Kc4 62. Nxc7 Kb4 63. Rh4+ Kb3 64. Nb5
+Ra2 65. Rh3+ Kb4 66. Nc3 Rg2 67. Kb1 Rf2 68. Nd1 Rg2 69. Rh4+ Kb3 70. Rd4 Rh2
+71. Kc1 Rc2+ 72. Kb1 Rh2 73. Rf4 Rg2 74. Ne3 Re2 75. Nd1 Rg2 76. Kc1 {(=)}
+ 1/2-1/2
+
+[Event "Hokkaido Chess Championship 2025"]
+[Site ""]
+[Date "2025.03.22"]
+[Round "3"]
+[Board "4"]
+[White "Aoki, Yasuhiro"]
+[Black "kuramoto, koutarou"]
+[Result "0-1"]
+[ECO "A34"]
+[WhiteElo "1731"]
+[BlackElo "1757"]
+[PlyCount "48"]
+[EventDate "2025.03.22"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+{[%evp 0,48,15,-17,-11,-9,31,25,12,1,13,3,-6,10,18,10,29,-3,59,38,70,59,43,35,
+56,67,72,65,403,-160,65,-20,104,110,104,54,31,17,11,4,5,5,5,-26,-31,-82,-46,
+-77,-57,-221,-56]} 1. c4 Nf6 2. Nf3 g6 3. g3 Bg7 4. Bg2 O-O 5. O-O d5 6. cxd5
+Nxd5 7. Nc3 c5 8. Qb3 Nxc3 9. dxc3 Nc6 10. Be3 b6 11. Rad1 Qc7 12. Bf4 e5 13.
+Nxe5 Be6 14. Qb5 Bxe5 15. Qxc6 Qxc6 16. Bxc6 Rac8 17. Bxe5 Rxc6 18. a3 Re8 19.
+Rd6 Rxd6 20. Bxd6 Bc4 21. Bf4 Rxe2 22. Bc1 a6 23. Kg2 h5 24. Kf3 Rxb2  0-1
+
+[Event "Hokkaido Chess Championship 2025"]
+[Site ""]
+[Date "2025.03.22"]
+[Round "3"]
+[Board "5"]
+[White "Uematsu, Maya"]
+[Black "Miyatani, Ryouhei"]
+[Result "0-1"]
+[ECO "A00"]
+[WhiteElo "0"]
+[BlackElo "1672"]
+[PlyCount "66"]
+[EventDate "2025.03.22"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. d4 Nf6 2. Bf4 b6 3. Nf3 Bb7 4. e3 e6 5. Nbd2 c5 6. c3 Be7 7. h3 O-O 8. Bd3
+d5 9. Ne5 Nc6 10. Ndf3 Rc8 11. Qc2 cxd4 12. Nxd4 Nb4 13. Qe2 Nxd3+ 14. Qxd3 a6
+15. O-O Ne4 16. Rfc1 f6 17. Nef3 Nc5 18. Qc2 e5 19. b4 Ne4 20. Ne6 Qd6 21. Nxf8
+exf4 22. Nd4 Bxf8 23. Qb3 Nd2 24. Nf5 Qe6 25. Nd4 Nxb3 26. Nxe6 Nxc1 27. Nxf8
+Ne2+ 28. Kh2 Kxf8 29. Re1 Nxc3 30. a3 fxe3 31. Rxe3 d4 32. Re6 Rd8 33. Rxb6 Rd7
+{(Time)}  0-1
+
+[Event "Hokkaido Chess Championship 2025"]
+[Site ""]
+[Date "2025.03.22"]
+[Round "3"]
+[Board "6"]
+[White "Takeuchi, Hiroshi"]
+[Black "Furuse, Mizuki"]
+[Result "1/2-1/2"]
+[ECO "A48"]
+[WhiteElo "1629"]
+[BlackElo "1588"]
+[PlyCount "149"]
+[EventDate "2025.03.22"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. d4 Nf6 2. Nf3 g6 3. Bf4 Bg7 4. e3 O-O 5. Be2 c5 6. Nc3 cxd4 7. exd4 d6 8. h4
+Nc6 9. Qd2 h5 10. O-O-O Bf5 11. a3 Qa5 12. Bh6 Bxh6 13. Qxh6 Ng4 14. Qf4 Nxf2
+15. Nd2 Nxd1 16. Bxd1 e5 17. dxe5 Qxe5 18. Qg5 f6 19. Qh6 Rf7 20. Nf3 Qa5 21.
+Qf4 Rd8 22. Nd2 Qe5 23. Qa4 a6 24. g4 Bxg4 25. Bxg4 hxg4 26. Qxg4 Qh5 27. Qe6
+Qe5 28. Qg4 Rg7 29. Qf3 Nd4 30. Qf2 Nb5 31. Qb6 Re8 32. Kb1 Nxc3+ 33. bxc3 Qb5+
+34. Qxb5 axb5 35. Kb2 Rge7 36. Nb3 Re1 37. Rh3 R8e3 38. Rh2 Rg1 39. Nd4 Re4 40.
+Nxb5 Rd1 41. Rh3 Kf7 42. Nd4 Rg1 43. h5 gxh5 44. Rxh5 Re5 45. Rh7+ Rg7 46. Rh8
+f5 47. Rb8 Kg6 48. Rd8 Rd5 49. Kb3 Re7 50. Kc4 Rc5+ 51. Kb4 Rd5 52. Kc4 Ree5
+53. Rb8 Rc5+ 54. Kd3 f4 55. Rxb7 Re3+ 56. Kd2 Rcxc3 57. Rd7 Rxa3 58. Rxd6+ Kf7
+59. Rd5 Rh3 60. Rf5+ Ke7 61. Rxf4 Rh2+ 62. Kc1 Rc3 63. Kb2 Rhh3 64. Re4+ Kd7
+65. Rg4 Rhe3 66. Rg7+ Kc8 67. Rf7 Rc5 68. Rf4 Rd5 69. Nb3 Rb5 70. Rc4+ Kd8 71.
+Ka2 Rb8 72. Kb2 Rb7 73. Ka2 Rb8 74. Kb2 Rb7 75. Ka2  1/2-1/2
+
+[Event "Hokkaido Chess Championship 2025"]
+[Site ""]
+[Date "2025.03.22"]
+[Round "3"]
+[Board "7"]
+[White "Nakamura, Mitsuru"]
+[Black "Ito, Katsuhide"]
+[Result "1-0"]
+[ECO "D08"]
+[WhiteElo "1603"]
+[BlackElo "1389"]
+[PlyCount "93"]
+[EventDate "2025.03.22"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. d4 d5 2. c4 e5 3. dxe5 d4 4. Nf3 Nc6 5. a3 Bg4 6. Nbd2 Nge7 7. b4 Ng6 8. Bb2
+Ncxe5 9. Nxe5 Nxe5 10. Qb3 b6 11. Qg3 Bd6 12. Qb3 O-O 13. Bxd4 c5 14. Bb2 a5
+15. b5 a4 16. Qc2 Qd7 17. g3 Bf5 18. Qc3 Rfe8 19. Bg2 Nd3+ 20. Kf1 Nxb2 21.
+Bxa8 Rxa8 22. Qxb2 Re8 23. Re1 Bh3+ 24. Kg1 Be5 25. Qc2 Qb7 26. f3 Bd4+ 27. e3
+Bxe3+ 28. Rxe3 Rxe3 29. Kf2 Qe7 30. Ne4 Rxa3 31. Re1 Qe5 32. Nf6+ gxf6 33. Rxe5
+fxe5 34. Qb2 Rb3 35. Qxe5 Be6 36. Qb8+ Kg7 37. Qxb6 Bxc4 38. Qxc5 Rb2+ 39. Ke3
+Rb3+ 40. Kf4 Bxb5 41. h4 Be2 42. Qd4+ Kg8 43. Qxa4 Rxf3+ 44. Ke4 Rxg3 45. Qe8+
+Kg7 46. Qe5+ Kg6 47. Qxg3+  1-0
+
+[Event "Hokkaido Chess Championship 2025"]
+[Site ""]
+[Date "2025.03.22"]
+[Round "3"]
+[Board "8"]
+[White "Shishido, Kenta"]
+[Black "Ono, Yukiko"]
+[Result "1-0"]
+[ECO "A00"]
+[WhiteElo "1431"]
+[BlackElo "1000"]
+[PlyCount "39"]
+[EventDate "2025.03.22"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 Nf6 4. O-O Bc5 5. Re1 O-O 6. c3 d6 7. h3 d5 8. Bxc6
+bxc6 9. exd5 cxd5 10. Nxe5 Ne4 11. d4 Be7 12. Nc6 Qd7 13. Nxe7+ Qxe7 14. f3 f5
+15. fxe4 fxe4 16. Be3 Ba6 17. Nd2 Qd6 18. Qg4 Rf7 19. b3 h6 20. c4 {(Time)}  1-0
+
+[Event "Hokkaido Chess Championship 2025"]
+[Site ""]
+[Date "2025.03.22"]
+[Round "3"]
+[Board "9"]
+[White "Yajima, Machiko"]
+[Black "Denta, Seiichi"]
+[Result "0-1"]
+[ECO "A00"]
+[WhiteElo "1367"]
+[BlackElo "0"]
+[PlyCount "88"]
+[EventDate "2025.03.22"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. g3 d5 2. d4 Nf6 3. Bf4 Bf5 4. Nd2 e6 5. a3 a6 6. Ngf3 h6 7. Bg2 Nc6 8. O-O
+Bd6 9. e3 Bxf4 10. exf4 O-O 11. c4 Na5 12. c5 c6 13. b4 Nc4 14. Nxc4 dxc4 15.
+Ne5 Be4 16. Nxc4 Bxg2 17. Re1 Qd5 18. Ne3 Qf3 19. Nxg2 Qxd1 20. Raxd1 Nd5 21.
+Rd3 a5 22. Ne3 axb4 23. Nxd5 cxd5 24. Ra1 Ra4 25. Rb3 Rfa8 26. Rab1 R8a7 27.
+axb4 Ra1 28. Rxa1 Rxa1+ 29. Kg2 Ra4 30. Kf3 g5 31. Kg4 f6 32. f5 e5 33. Kf3
+exd4 34. Ke2 Ra2+ 35. Kd3 Rxf2 36. Kxd4 Rxf5 37. g4 Re5 38. Rf3 Kg7 39. Rf5
+Rxf5 40. gxf5 g4 41. Kxd5 h5 42. Ke4 h4 43. Kf4 g3 44. hxg3 h3  0-1
+
+[Event "Hokkaido Chess Championship 2025"]
+[Site ""]
+[Date "2025.03.23"]
+[Round "4"]
+[Board "1"]
+[White "Dryglas, Maciej"]
+[Black "Etabag, John Vincent"]
+[Result "1-0"]
+[ECO "D05"]
+[WhiteElo "2135"]
+[BlackElo "1821"]
+[PlyCount "109"]
+[EventDate "2025.03.22"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+{[%evp 0,109,11,35,15,21,7,10,13,5,1,0,3,-2,7,8,11,11,8,-2,15,17,28,12,30,29,
+29,22,35,12,-34,20,26,12,54,136,68,71,84,109,91,96,91,105,85,206,99,98,115,165,
+115,188,94,126,177,36,214,177,216,369,235,303,285,225,331,232,230,225,235,304,
+418,419,432,397,396,378,408,409,341,384,319,392,391,343,403,400,388,388,377,
+355,274,408,457,494,381,585,598,514,329,532,578,402,208,410,525,497,502,547,
+580,755,761,826]} 1. d4 Nf6 2. Nf3 d5 3. e3 e6 4. Bd3 c5 5. b3 Nc6 6. a3 cxd4
+7. exd4 Bd6 8. O-O O-O 9. Re1 h6 10. Bb2 a5 11. Nbd2 b6 12. Ne5 Ne7 13. Ndf3
+Ba6 14. c4 a4 15. bxa4 dxc4 16. Nxc4 Bxc4 17. Bxc4 Nfd5 18. Ne5 Rc8 19. Qb3
+Bxe5 20. dxe5 Nc6 21. Qg3 Nd4 22. Rac1 Nf5 23. Qf3 Nfe7 24. Bd3 Ng6 25. g3 Qg5
+26. Qe4 h5 27. Rcd1 Ndf4 28. Bc1 Nh3+ 29. Kg2 Rxc1 30. Rxc1 Nhf4+ 31. Kh1 Nh3
+32. Qg2 Nhf4 33. Qf3 Nh3 34. Bf1 Qg4 35. Qg2 Ng5 36. f4 Nh7 37. Qe2 Qf5 38. Qe4
+Qg4 39. Rc3 h4 40. h3 Qf5 41. Qxf5 exf5 42. Kg2 hxg3 43. Kxg3 Ra8 44. Bb5 Nhf8
+45. Rec1 Kh7 46. Rc8 Rxc8 47. Rxc8 Ne6 48. Rc4 Ne7 49. Bd7 Nc5 50. Rxc5 bxc5
+51. a5 Kg6 52. a6 Nd5 53. a7 Nb6 54. Bc6 c4 55. Kf3  1-0
+
+[Event "Hokkaido Chess Championship 2025"]
+[Site ""]
+[Date "2025.03.23"]
+[Round "4"]
+[Board "2"]
+[White "Kawamura, Takuto"]
+[Black "Yoshii, Yukihiko"]
+[Result "1-0"]
+[ECO "E08"]
+[WhiteElo "1745"]
+[BlackElo "1771"]
+[PlyCount "47"]
+[EventDate "2025.03.22"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. d4 d5 2. c4 e6 3. Nf3 Nf6 4. g3 Be7 5. Bg2 Nbd7 6. Qc2 c6 7. O-O O-O 8. b3
+h6 9. Ba3 Bxa3 10. Nxa3 Qc7 11. Qb2 Ne4 12. Rac1 a6 13. Nc2 Re8 14. Nce1 f6 15.
+Nd3 Qd6 16. Rfd1 Nf8 17. e3 Ng6 18. Qc2 Ne7 19. Nf4 Bd7 20. Bh3 Kf7 21. cxd5
+exd5 22. Bxd7 Qxd7 23. Nd3 Rab8 24. Nfe5+  1-0
+
+[Event "Hokkaido Chess Championship 2025"]
+[Site ""]
+[Date "2025.03.23"]
+[Round "4"]
+[Board "3"]
+[White "Honda, Yoshiki"]
+[Black "Nakamura, Mitsuru"]
+[Result "1-0"]
+[ECO "C47"]
+[WhiteElo "1828"]
+[BlackElo "1603"]
+[PlyCount "39"]
+[EventDate "2025.03.22"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nf6 5. Nc3 Bb4 6. Nxc6 bxc6 7. Bd3 O-O
+8. O-O h6 9. e5 Bxc3 10. bxc3 Nd5 11. Qh5 Ne7 12. Re1 Rb8 13. Bxh6 gxh6 14.
+Qxh6 Ng6 15. Bxg6 fxg6 16. Qxg6+ Kh8 17. Re3 d5 18. e6 Bxe6 19. Qxe6 Qf6 20.
+Qh3+  1-0
+
+[Event "Hokkaido Chess Championship 2025"]
+[Site ""]
+[Date "2025.03.23"]
+[Round "4"]
+[Board "4"]
+[White "kuramoto, koutarou"]
+[Black "Shishido, Kenta"]
+[Result "1-0"]
+[ECO "A00"]
+[WhiteElo "1757"]
+[BlackElo "1431"]
+[PlyCount "63"]
+[EventDate "2025.03.22"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. d4 Nf6 2. Bf4 e6 3. Nf3 b6 4. e3 Bb7 5. Nbd2 d6 6. Bd3 Nbd7 7. h3 Be7 8. c3
+a6 9. O-O c5 10. Qe2 b5 11. e4 c4 12. Bc2 h6 13. e5 dxe5 14. dxe5 Nd5 15. Bh2
+O-O 16. Qe4 g6 17. Qg4 h5 18. Qg3 Kg7 19. Nd4 Bg5 20. h4 Bxd2 21. Nxe6+ Kh6 22.
+Nxd8 Raxd8 23. e6 Bf4 24. Qf3 fxe6 25. Bxf4+ Rxf4 26. Qe2 e5 27. Rad1 Rxh4 28.
+Rxd5 Bxd5 29. Qd2+ g5 30. Qxd5 Rg4 31. Bf5 Rf4 32. Bxd7 {(Time)}  1-0
+
+[Event "Hokkaido Chess Championship 2025"]
+[Site ""]
+[Date "2025.03.23"]
+[Round "4"]
+[Board "5"]
+[White "Miyatani, Ryouhei"]
+[Black "Takeuchi, Hiroshi"]
+[Result "1-0"]
+[ECO "B08"]
+[WhiteElo "1672"]
+[BlackElo "1629"]
+[PlyCount "83"]
+[EventDate "2025.03.22"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. e4 d6 2. d4 Nf6 3. Nc3 g6 4. Nf3 Bg7 5. Be2 O-O 6. O-O e5 7. dxe5 dxe5 8.
+Qxd8 Rxd8 9. Bg5 Re8 10. Rfd1 Bg4 11. Bxf6 Bxf6 12. h3 Be6 13. Nd5 Bxd5 14.
+Rxd5 Nc6 15. Bb5 Red8 16. Bxc6 bxc6 17. Rxd8+ Rxd8 18. Kf1 Bg7 19. Ke2 f6 20.
+Rd1 Rxd1 21. Kxd1 Kf7 22. Ke2 Bh6 23. Ne1 Ke6 24. Kd3 Bf8 25. Kc4 h6 26. Nd3 f5
+27. f4 fxe4 28. Nxe5 Kf5 29. Kd4 Bd6 30. Nxc6 Kxf4 31. Nxa7 Kg3 32. Nb5 Bf4 33.
+Kxe4 g5 34. a4 c6 35. Nd4 Bc7 36. Kf5 Kxg2 37. Kg4 Bf4 38. Ne6 Bd2 39. c3 Be3
+40. b4 h5+ 41. Kxh5 Kxh3 42. Nxg5+  1-0
+
+[Event "Hokkaido Chess Championship 2025"]
+[Site ""]
+[Date "2025.03.23"]
+[Round "4"]
+[Board "6"]
+[White "Furuse, Mizuki"]
+[Black "Aoki, Yasuhiro"]
+[Result "1/2-1/2"]
+[ECO "A24"]
+[WhiteElo "1588"]
+[BlackElo "1731"]
+[PlyCount "110"]
+[EventDate "2025.03.22"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+{[%evp 0,110,32,23,27,2,25,23,12,11,11,10,23,-13,33,33,47,26,44,42,35,17,25,37,
+33,-11,3,-14,-15,-37,-18,-56,-52,-44,-53,-73,-75,-76,-55,-57,-74,-67,-79,-63,
+-70,-58,-16,-12,-11,-17,-28,-21,19,19,26,26,26,-15,-8,-5,-3,-4,-9,-7,-8,-8,-6,
+-1,-1,-97,-102,-82,-104,-134,-41,-46,-33,-37,-45,-38,-34,-49,-48,-72,-78,-135,
+-133,-132,-81,-236,-213,-202,-202,-228,-164,-177,-166,-176,-183,-181,-170,-178,
+-181,-182,-182,-182,-180,-182,-124,-124,-124,-121,-54]} 1. Nf3 Nf6 2. g3 g6 3.
+Bg2 Bg7 4. O-O O-O 5. c4 d6 6. d3 c6 7. Nc3 e5 8. Rb1 Nbd7 9. b4 Qc7 10. b5 Nc5
+11. bxc6 bxc6 12. Na4 Ne6 13. Bd2 Bd7 14. Nc3 Rfb8 15. Rxb8+ Rxb8 16. Qc2 d5
+17. cxd5 cxd5 18. Rc1 d4 19. Ne4 Qxc2 20. Nxf6+ Bxf6 21. Rxc2 Rb1+ 22. Rc1
+Rxc1+ 23. Bxc1 Bg7 24. Ba3 f6 25. Nd2 Nc7 26. Bc5 Be6 27. a4 a6 28. Bd6 Nd5 29.
+Ne4 Nc3 30. Nc5 Bc8 31. Bf3 Bf8 32. Bxf8 Kxf8 33. a5 Ke7 34. Nb3 Kd6 35. Kf1
+Be6 36. Nd2 Bd5 37. Bxd5 Kxd5 38. Nc4 Na2 39. Ke1 Nb4 40. Nb6+ Kc6 41. Nc4 Kb5
+42. Nb6 Kxa5 43. Nd7 Nd5 44. Nf8 Kb4 45. Kd2 Kb3 46. Kc1 Nc3 47. e3 a5 48. exd4
+exd4 49. Ne6 Nb5 50. Kd2 a4 51. Nc5+ Kb4 52. Na6+ Ka5 53. Nc5 a3 54. Kc2 Kb4
+55. Na6+ Ka4  1/2-1/2
+
+[Event "Hokkaido Chess Championship 2025"]
+[Site ""]
+[Date "2025.03.23"]
+[Round "4"]
+[Board "7"]
+[White "Ito, Katsuhide"]
+[Black "Sugimoto, Koichi"]
+[Result "0-1"]
+[ECO "B70"]
+[WhiteElo "1389"]
+[BlackElo "1908"]
+[PlyCount "48"]
+[EventDate "2025.03.22"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Bc4 Bg7 7. O-O O-O 8.
+Bb3 Nc6 9. Nxc6 bxc6 10. h3 Qa5 11. Re1 Nd7 12. a3 Nc5 13. Ba2 Qb6 14. Bg5 Re8
+15. Qd2 Qxb2 16. Nd5 cxd5 17. Qxd5 Be6 18. Bb3 Bxd5 19. exd5 Nxb3 20. cxb3 Qxa1
+21. Rxa1 Bxa1 22. Be3 a6 23. b4 Rab8 24. Bc1 Rec8  0-1
+
+[Event "Hokkaido Chess Championship 2025"]
+[Site ""]
+[Date "2025.03.23"]
+[Round "4"]
+[Board "8"]
+[White "Kramskoy, Damir"]
+[Black "Uematsu, Maya"]
+[Result "0-1"]
+[ECO "A00"]
+[WhiteElo "0"]
+[BlackElo "0"]
+[PlyCount "98"]
+[EventDate "2025.03.22"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Nf6 5. Nc3 Bf5 6. Nf3 e6 7. Bd3 Bxd3 8.
+Qxd3 Bd6 9. Ne4 O-O 10. Bg5 Be7 11. Qb3 b6 12. O-O Nxe4 13. Bxe7 Qxe7 14. Rae1
+Nf6 15. c4 Nbd7 16. d5 cxd5 17. cxd5 e5 18. Qd1 Rfe8 19. d6 Qe6 20. Ng5 Qxa2
+21. Re2 h6 22. Nf3 Qd5 23. Qxd5 Nxd5 24. Rd1 N5f6 25. h3 a5 26. Rde1 e4 27. Nd4
+Nc5 28. Nc6 Re6 29. Ne7+ Kh7 30. Nf5 Nd3 31. Rb1 a4 32. b3 a3 33. Ra1 b5 34.
+Re3 Nf4 35. f3 b4 36. Ra2 N4d5 37. Ree2 Nc3 38. Nd4 Ree8 39. Rec2 Nxa2 40. Rxa2
+e3 41. Kf1 Nd5 42. Ke2 Nc3+ 43. Ke1 Nxa2 44. d7 Re7 45. Nb5 Rd8 46. Nxa3 bxa3
+47. Kd1 Rdxd7+ 48. Ke2 Nc3+ 49. Kf1 Rd1#  0-1
+
+[Event "Hokkaido Chess Championship 2025"]
+[Site ""]
+[Date "2025.03.23"]
+[Round "4"]
+[Board "9"]
+[White "Denta, Seiichi"]
+[Black "Ono, Yukiko"]
+[Result "1-0"]
+[ECO "A00"]
+[WhiteElo "0"]
+[BlackElo "1000"]
+[PlyCount "23"]
+[EventDate "2025.03.22"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. e4 e5 2. Nc3 Nc6 3. Bc4 Bc5 4. d3 d6 5. Nf3 Nf6 6. Ng5 O-O 7. O-O Re8 8.
+Bxf7+ Kf8 9. Bxe8 Qxe8 10. Nd5 Qg6 11. Nxf6 gxf6 12. Be3  1-0
+
+[Event "Hokkaido Chess Championship 2025"]
+[Site ""]
+[Date "2025.03.23"]
+[Round "5"]
+[Board "1"]
+[White "Kawamura, Takuto"]
+[Black "Dryglas, Maciej"]
+[Result "0-1"]
+[ECO "A43"]
+[WhiteElo "1745"]
+[BlackElo "2135"]
+[PlyCount "72"]
+[EventDate "2025.03.22"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+{[%evp 0,51,21,26,44,40,57,50,40,64,56,46,49,7,38,13,-1,-71,-32,-80,28,2,12,13,
+0,-28,-61,108,-49,-46,-51,65,-104,0,-149,-168,-225,-87,-223,-251,-260,-275,
+-276,-370,-339,-383,-399,-539,-566,-572,-632,-604,-504,-499]} 1. d4 c5 2. d5 f5
+3. c4 Nf6 4. Nc3 g6 5. Nf3 Bg7 6. Bf4 Qb6 7. Nb5 d6 8. Qc1 Ne4 9. Nd2 Nf6 10.
+Nc3 e5 11. dxe6 Bxe6 12. Nb5 O-O 13. Bxd6 Re8 14. Be5 Nbd7 15. Bc3 Bf7 16. e3
+f4 17. Nf3 fxe3 18. fxe3 Bh6 19. Bd2 Ne4 20. Be2 Ne5 21. Nxe5 Rxe5 22. Bc3 Nxc3
+23. Qxc3 Rxe3 24. Qc2 Rae8 25. Nc3 Bxc4 26. O-O Bxe2 27. Nd5 Qe6 28. Nf6+ Kh8
+29. Nxe8 Bxf1 30. Rxf1 Qxe8 31. Qxc5 Re2 32. Qc3+ Bg7 33. Qa3 Qe3+ 34. Qxe3
+Rxe3 35. Rf7 Bd4 36. Kf1 b5  0-1
+
+[Event "Hokkaido Chess Championship 2025"]
+[Site ""]
+[Date "2025.03.23"]
+[Round "5"]
+[Board "2"]
+[White "Miyatani, Ryouhei"]
+[Black "Honda, Yoshiki"]
+[Result "1/2-1/2"]
+[ECO "B52"]
+[WhiteElo "1672"]
+[BlackElo "1828"]
+[PlyCount "52"]
+[EventDate "2025.03.22"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. e4 c5 2. Nf3 d6 3. Bb5+ Bd7 4. Bxd7+ Qxd7 5. c4 Nc6 6. d4 cxd4 7. Nxd4 Nf6
+8. Nc3 g6 9. b3 Bg7 10. Bb2 O-O 11. O-O Rad8 12. Nxc6 bxc6 13. Qc2 Qb7 14. Nd1
+d5 15. exd5 cxd5 16. cxd5 Nxd5 17. Bxg7 Kxg7 18. Qb2+ Kg8 19. Nc3 Nxc3 20. Qxc3
+Rc8 21. Qb2 Rfd8 22. Rac1 Rxc1 23. Rxc1 Qd7 24. h3 Qd6 25. b4 Qd2 26. Qxd2 Rxd2
+ 1/2-1/2
+
+[Event "Hokkaido Chess Championship 2025"]
+[Site ""]
+[Date "2025.03.23"]
+[Round "5"]
+[Board "3"]
+[White "Sugimoto, Koichi"]
+[Black "kuramoto, koutarou"]
+[Result "1-0"]
+[ECO "A45"]
+[WhiteElo "1908"]
+[BlackElo "1757"]
+[PlyCount "61"]
+[EventDate "2025.03.22"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. d4 Nf6 2. Nc3 g6 3. Bf4 d5 4. e3 Bg7 5. h4 h5 6. Nf3 c5 7. Nb5 Na6 8. c3 Bd7
+9. Ne5 c4 10. Nxd7 Qxd7 11. a4 Ne4 12. g3 f6 13. Bh3 Qc6 14. f3 e5 15. dxe5
+fxe5 16. fxe4 exf4 17. exd5 Qc5 18. gxf4 Qxe3+ 19. Qe2 Qxe2+ 20. Kxe2 Rf8 21.
+Ke3 Nc5 22. Nc7+ Ke7 23. Nxa8 Bh6 24. Kd4 Nb3+ 25. Kxc4 Nxa1 26. Rxa1 Kd6 27.
+Rf1 Rxa8 28. f5 Rc8+ 29. Kd4 Rf8 30. f6 Rxf6 31. Rxf6+  1-0
+
+[Event "Hokkaido Chess Championship 2025"]
+[Site ""]
+[Date "2025.03.23"]
+[Round "5"]
+[Board "4"]
+[White "Etabag, John Vincent"]
+[Black "Aoki, Yasuhiro"]
+[Result "1-0"]
+[ECO "C33"]
+[WhiteElo "1821"]
+[BlackElo "1731"]
+[PlyCount "59"]
+[EventDate "2025.03.22"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. e4 d6 2. Nc3 Nf6 3. f4 e5 4. Nf3 exf4 5. d4 Nc6 6. Bc4 Be7 7. O-O O-O 8. Bb3
+Na5 9. Bxf4 Nxb3 10. axb3 Bg4 11. Qd3 a6 12. Rae1 Nh5 13. Bd2 c6 14. d5 Bxf3
+15. Qxf3 Bg5 16. Bxg5 Qxg5 17. dxc6 bxc6 18. Nd1 Nf6 19. Ne3 Nd7 20. Kh1 Ne5
+21. Qe2 a5 22. Nf5 Rfd8 23. Rd1 f6 24. Nxd6 a4 25. bxa4 Rxa4 26. b3 Ra2 27. h3
+Rda8 28. Rf5 Qh4 29. Rxe5 fxe5 30. Qc4+  1-0
+
+[Event "Hokkaido Chess Championship 2025"]
+[Site ""]
+[Date "2025.03.23"]
+[Round "5"]
+[Board "5"]
+[White "Shishido, Kenta"]
+[Black "Yoshii, Yukihiko"]
+[Result "0-1"]
+[ECO "B19"]
+[WhiteElo "1431"]
+[BlackElo "1771"]
+[PlyCount "100"]
+[EventDate "2025.03.22"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. e4 c6 2. d4 d5 3. Nd2 dxe4 4. Nxe4 Bf5 5. Ng3 Bg6 6. h4 h6 7. h5 Bh7 8. Nf3
+Nd7 9. Bf4 e6 10. Bd3 Bxd3 11. Qxd3 Ngf6 12. O-O-O Be7 13. Ne5 O-O 14. Kb1 Qb6
+15. f3 Rad8 16. Nc4 Qa6 17. Ne4 Nxe4 18. fxe4 Nc5 19. Qe2 Na4 20. Bc1 Qb5 21.
+Rh3 Qa6 22. Rg3 Kh8 23. Qg4 Rg8 24. b3 Nb6 25. Nxb6 Qxb6 26. Bb2 Bg5 27. Rf3
+Qc7 28. e5 Rd7 29. Ba3 Rgd8 30. Bd6 Rxd6 31. exd6 Rxd6 32. Rdf1 Rd7 33. R3f2
+Be3 34. Rf3 Bxd4 35. Rd3 Bf6 36. Rxd7 Qxd7 37. Qd1 Qc7 38. Qd3 Qe5 39. c3 Qxh5
+40. Kb2 Qg5 41. Rf2 Qc5 42. Rc2 b5 43. b4 Qxb4+ 44. Kc1 Bg5+ 45. Kd1 Qb1+ 46.
+Ke2 Qg1 47. Qf3 f6 48. Qxc6 Qe3+ 49. Kf1 Bh4 50. Qf3 Qe1#  0-1
+
+[Event "Hokkaido Chess Championship 2025"]
+[Site ""]
+[Date "2025.03.23"]
+[Round "5"]
+[Board "6"]
+[White "Nakamura, Mitsuru"]
+[Black "Denta, Seiichi"]
+[Result "1-0"]
+[ECO "C67"]
+[WhiteElo "1603"]
+[BlackElo "0"]
+[PlyCount "69"]
+[EventDate "2025.03.22"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 Nf6 4. O-O Nxe4 5. d4 Bd6 6. Re1 f5 7. Bxc6 bxc6 8.
+dxe5 Bc5 9. a3 Bxf2+ 10. Kf1 Bxe1 11. Qxe1 Ba6+ 12. Kg1 Qb8 13. Nc3 O-O 14.
+Nxe4 Qb5 15. Nc3 Qb6+ 16. Kh1 Rae8 17. h4 f4 18. b4 Bc4 19. Na4 Qb8 20. Nc5 Be6
+21. Ng5 h6 22. Ngxe6 Rf7 23. Nxf4 Qb5 24. Bd2 Qc4 25. c3 g5 26. hxg5 Rxf4 27.
+Bxf4 Qxf4 28. Nxd7 Re7 29. Nf6+ Kh8 30. Rd1 Qxg5 31. Rd8+ Kg7 32. Rg8+ Kf7 33.
+Rxg5 hxg5 34. Qe4 Re6 35. Qh7+  1-0
+
+[Event "Hokkaido Chess Championship 2025"]
+[Site ""]
+[Date "2025.03.23"]
+[Round "5"]
+[Board "7"]
+[White "Uematsu, Maya"]
+[Black "Furuse, Mizuki"]
+[Result "0-1"]
+[ECO "A48"]
+[WhiteElo "0"]
+[BlackElo "1588"]
+[PlyCount "56"]
+[EventDate "2025.03.22"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. d4 Nf6 2. Bf4 g6 3. Nf3 Bg7 4. c3 O-O 5. Nbd2 c5 6. dxc5 Nc6 7. e4 b6 8. a4
+bxc5 9. h3 d6 10. Qc2 Bd7 11. Be2 Rb8 12. O-O Qb6 13. Nc4 Qb3 14. Bd3 Qxc2 15.
+Bxc2 Rb7 16. Rab1 Be6 17. Nfd2 Nd7 18. Rfe1 Nde5 19. b3 Nxc4 20. Nxc4 Bxc3 21.
+Red1 Bg7 22. a5 Nd4 23. Bd3 Rxb3 24. Rxb3 Nxb3 25. a6 Nd4 26. Rc1 Rb8 27. e5 d5
+28. Na5 c4  0-1
+
+[Event "Hokkaido Chess Championship 2025"]
+[Site ""]
+[Date "2025.03.23"]
+[Round "5"]
+[Board "8"]
+[White "Takeuchi, Hiroshi"]
+[Black "Kramskoy, Damir"]
+[Result "1-0"]
+[ECO "D02"]
+[WhiteElo "1629"]
+[BlackElo "0"]
+[PlyCount "85"]
+[EventDate "2025.03.22"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. d4 d5 2. Nf3 Nc6 3. e3 Nf6 4. Bd3 g6 5. b3 Bg4 6. Nbd2 e6 7. a3 Qd7 8. Bb2
+O-O-O 9. h3 Bf5 10. Bxf5 gxf5 11. Ne5 Qe7 12. Nxc6 bxc6 13. Qe2 Nd7 14. Qa6+
+Kb8 15. Qxc6 Qd6 16. Qb5+ Qb6 17. Qe2 Bg7 18. a4 c5 19. a5 Qc6 20. c3 Rhg8 21.
+O-O Kc7 22. Nf3 Kd6 23. Rfc1 Rb8 24. Ra3 Ke7 25. c4 Bh6 26. cxd5 exd5 27. dxc5
+Nxc5 28. Ne5 Qe6 29. Rxc5 Bg7 30. f4 f6 31. Rc6 Qxc6 32. Nxc6+ Ke8 33. Nxb8 Ke7
+34. Qa6 Rxb8 35. Qxa7+ Ke6 36. Qxb8 Kf7 37. Ra4 Bf8 38. Rd4 Ke6 39. Qxf8 Kd7
+40. Rxd5+ Kc6 41. Qc5+ Kb7 42. Rd7+ Ka6 43. Ra7#  1-0
+
+[Event "Hokkaido Chess Championship 2025"]
+[Site ""]
+[Date "2025.03.23"]
+[Round "5"]
+[Board "9"]
+[White "Ito, Katsuhide"]
+[Black "Yajima, Machiko"]
+[Result "0-1"]
+[ECO "A00"]
+[WhiteElo "1389"]
+[BlackElo "1367"]
+[PlyCount "68"]
+[EventDate "2025.03.22"]
+[EventRounds "5"]
+[EventCountry "JPN"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O Nxe4 6. d4 exd4 7. Nxd4 Nc5 8.
+Re1+ Ne7 9. c3 Nxa4 10. Qxa4 g6 11. Bg5 h6 12. Bf6 Rh7 13. Qd1 c5 14. Nf3 Qb6
+15. b3 Qxf6 16. Re3 d6 17. Nbd2 Be6 18. Ne4 Qf4 19. Nxd6+ Kd8 20. Nxf7+ Kc7 21.
+N7e5 Nd5 22. Rd3 Bd6 23. Qe1 Re8 24. c4 Bxe5 25. cxd5 Bxa1 26. Qxa1 Bd7 27. Qc3
+Qb4 28. d6+ Kd8 29. Qf6+ Kc8 30. h3 Qe4 31. Re3 Qf5 32. Rxe8+ Bxe8 33. Qc3 Qd5
+34. Qf6 Rf7 {(Time)}  0-1
+

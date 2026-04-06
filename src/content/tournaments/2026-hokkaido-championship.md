@@ -1,14 +1,11 @@
 ---
 title:
-  ja: "第32回 北海道チェス選手権"
-  en: "32nd Hokkaido Chess Championship"
-date: "2026-06-15"
-venue:
-  ja: "かでる2.7"
-  en: "Kaderu 2.7"
-status: "open"
-detailsPdf: "/competition/hokkaido_32_ann.pdf"
-formspreeId: "xyzabc12"
+  ja: "北海道チェス選手権2026（第32回）"
+  en: "2026 Hokkaido Chess Championship (32nd)"
+date: "2026-03-21"
+status: "results"
+resultsPdf: "/competition/HokkaidoChessCh2026_V1.0.pdf"
+gamesPgn: "/competition/HokkaidoChessCh2026_NoAnalysis.pgn"
 year: 2026
 sortOrder: 1
 ---

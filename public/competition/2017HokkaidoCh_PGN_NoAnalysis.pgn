@@ -1,0 +1,843 @@
+﻿[Event "Hokkaido Ch.2017"]
+[Site "Sapporo"]
+[Date "2017.03.25"]
+[Round "1.1"]
+[White "Yamada, Akihiro"]
+[Black "Shibuya, Kaisei"]
+[Result "1-0"]
+[ECO "D26"]
+[WhiteElo "1970"]
+[BlackElo "1529"]
+[Annotator "Nishimori,Toshiyuki"]
+[PlyCount "49"]
+[TimeControl "240+2"]
+
+{256MB, Fritz11.ctg, TN080515} 1. d4 d5 2. c4 dxc4 3. Nf3 Nf6 4. e3 e6 5. Bxc4
+Be7 6. O-O O-O 7. Qe2 Nbd7 8. Nc3 Nb6 9. Bb3 c6 10. e4 Qc7 11. h3 c5 12. Be3
+Rd8 13. Rac1 Qc6 14. dxc5 Bxc5 15. Bxc5 Qxc5 16. Nd5 Qf8 17. Nxf6+ gxf6 18.
+Rfd1 Bd7 19. Nd4 Qg7 20. Rc3 Kh8 21. Rg3 Qh6 22. Nb5 Nc8 23. Qg4 Qg6 24. Qf4
+Qh5 25. Qxf6# 1-0
+
+[Event "Hokkaido Ch.2017"]
+[Site "Sapporo"]
+[Date "2017.03.25"]
+[Round "1.2"]
+[White "Hakamada, Eiji"]
+[Black "Yoshii, Yukihiko"]
+[Result "1/2-1/2"]
+[ECO "A53"]
+[WhiteElo "1828"]
+[BlackElo "1432"]
+[Annotator "Nishimori,Toshiyuki"]
+[PlyCount "123"]
+[TimeControl "240+2"]
+
+{256MB, Fritz11.ctg, TN080515} 1. c4 e5 2. Nc3 Nf6 3. e4 Be7 4. Nf3 d6 5. d4
+Bg4 6. Be2 Nbd7 7. Bg5 h6 8. Be3 O-O 9. h3 Bh5 10. O-O c6 11. dxe5 dxe5 12. Qc2
+Qc7 13. Rad1 Rfd8 14. Nh4 Bxe2 15. Nxe2 Nc5 16. Bxc5 Bxc5 17. a3 a5 18. Nf5 Bf8
+19. Kh1 g6 20. Ne3 Qe7 21. Nc3 Rac8 22. Qe2 Rd4 23. Nc2 Rd7 24. Rxd7 Qxd7 25.
+Rd1 Qe6 26. Na4 b5 27. cxb5 cxb5 28. Nc3 Qc6 29. Rd2 b4 30. axb4 Bxb4 31. Nxb4
+axb4 32. Nd5 Nxd5 33. Rxd5 Kg7 34. Qd2 Qc1+ 35. Kh2 Qxd2 36. Rxd2 Rc4 37. f3 h5
+38. Kg3 g5 39. Rf2 b3 40. Rd2 Rc2 41. Rd5 f6 42. Rd7+ Kg6 43. Rd8 h4+ 44. Kh2
+Rxb2 45. Rg8+ Kf7 46. Rb8 Rb1 47. Rb7+ Kg6 48. Rb8 b2 49. Rg8+ Kf7 50. Rb8 Ke7
+51. Rb6 Kd7 52. Rb3 Kc6 53. Rb8 Kc5 54. Rc8+ Kd4 55. Rb8 Kd3 56. Rd8+ Ke2 57.
+Rb8 Kd2 58. Rd8+ Kc2 59. Rc8+ Kd2 60. Rd8+ Ke2 61. Rb8 Kf2 62. Rb7 1/2-1/2
+
+[Event "Hokkaido Ch.2017"]
+[Site "Sapporo"]
+[Date "2017.03.25"]
+[Round "1.3"]
+[White "Aoki, Yasuhiro"]
+[Black "Koyahata, Taku"]
+[Result "1-0"]
+[ECO "A29"]
+[WhiteElo "1778"]
+[BlackElo "1349"]
+[Annotator "Nishimori,Toshiyuki"]
+[PlyCount "65"]
+[TimeControl "240+2"]
+
+{256MB, Fritz11.ctg, TN080515} 1. c4 e5 2. Nc3 Bc5 3. Nf3 Nc6 4. g3 Nf6 5. Bg2
+O-O 6. O-O d6 7. d3 h6 8. Bd2 Be6 9. Ne1 Qd7 10. Nc2 Bh3 11. Ne3 Bxg2 12. Kxg2
+Rfe8 13. Ned5 Nxd5 14. Nxd5 Re6 15. b4 Bd4 16. Rb1 a6 17. Qa4 Rc8 18. e3 Ba7
+19. b5 Nb8 20. Rfc1 c6 21. b6 cxd5 22. Qxd7 Nxd7 23. bxa7 Nb6 24. Rxb6 Re7 25.
+Rcb1 Ra8 26. Rxb7 Rxa7 27. Rxa7 Rxa7 28. cxd5 Kf8 29. Rb6 Ke7 30. Bb4 f6 31.
+Rxd6 Ke8 32. Bc5 Rb7 33. Rxa6 1-0
+
+[Event "Hokkaido Ch.2017"]
+[Site "Sapporo"]
+[Date "2017.03.25"]
+[Round "1.4"]
+[White "Ito, Katsuhide"]
+[Black "Manabe, Hiroaki"]
+[Result "0-1"]
+[ECO "B02"]
+[WhiteElo "1328"]
+[BlackElo "1755"]
+[Annotator "Nishimori,Toshiyuki"]
+[PlyCount "66"]
+[TimeControl "240+2"]
+
+{256MB, Fritz11.ctg, TN080515} 1. e4 Nf6 2. Nc3 d5 3. exd5 Nxd5 4. Nge2 e5 5.
+d4 Nxc3 6. bxc3 Nc6 7. g3 Qd5 8. Rg1 Bg4 9. Qd3 O-O-O 10. Bg2 Qd6 11. f4 Bxe2
+12. Qf5+ Kb8 13. fxe5 Nxe5 14. Qxe5 Qxe5 15. dxe5 Bg4 16. Bg5 Rd7 17. Rb1 c5
+18. h3 Bf5 19. Rb2 Be7 20. Bxb7 Bxg5 21. Bc6+ Kc7 22. Bxd7 Bxd7 23. h4 Bh6 24.
+Kf2 Re8 25. Rgb1 Bc6 26. Re1 Bd2 27. Rd1 Bxc3 28. Rb3 Bd4+ 29. Kf1 Rxe5 30. c3
+Rf5+ 31. Ke1 Bf2+ 32. Ke2 Bf3+ 33. Kd2 Rd5+ 0-1
+
+[Event "Hokkaido Ch.2017"]
+[Site "Sapporo"]
+[Date "2017.03.25"]
+[Round "1.5"]
+[White "Watanabe, Katsumi"]
+[Black "Sato, Takeru"]
+[Result "1-0"]
+[ECO "A52"]
+[WhiteElo "1732"]
+[BlackElo "1230"]
+[Annotator "Nishimori,Toshiyuki"]
+[PlyCount "45"]
+[TimeControl "240+2"]
+
+{256MB, Fritz11.ctg, TN080515} 1. d4 Nf6 2. c4 e5 3. dxe5 Ng4 4. f4 Bb4+ 5. Nc3
+O-O 6. Nf3 b6 7. e3 Bb7 8. Be2 Bxc3+ 9. bxc3 d6 10. exd6 Re8 11. Qd3 Be4 12.
+Qd1 cxd6 13. O-O Qf6 14. Ng5 Nh6 15. Nxe4 Rxe4 16. Bf3 Rxc4 17. Bxa8 Nf5 18.
+Bf3 Rxc3 19. Bb2 Nxe3 20. Bxc3 Qxc3 21. Qc1 Nc2 22. Rb1 Nd7 23. Rf2 1-0
+
+[Event "Hokkaido Ch.2017"]
+[Site "Sapporo"]
+[Date "2017.03.25"]
+[Round "1.6"]
+[White "Kimura, Yusei"]
+[Black "Sato, Tsubasa"]
+[Result "0-1"]
+[ECO "C24"]
+[WhiteElo "1009"]
+[BlackElo "1677"]
+[Annotator "Nishimori,Toshiyuki"]
+[PlyCount "94"]
+[TimeControl "240+2"]
+
+{256MB, Fritz11.ctg, TN080515} 1. e4 e5 2. Bc4 Nf6 3. d3 h6 4. Nf3 d6 5. h3 b6
+6. b4 Bb7 7. Nc3 Be7 8. O-O O-O 9. Re1 Re8 10. d4 Nbd7 11. Ba3 a6 12. Bd5 Nxd5
+13. exd5 Bf6 14. Kf1 b5 15. Qd2 Nb6 16. dxe5 dxe5 17. Re4 Nc4 18. Qc1 Bxd5 19.
+Nxd5 Qxd5 20. Re2 e4 21. Ne1 Bxa1 22. Qxa1 Nxa3 23. Qc1 Nc4 24. c3 Rad8 25. Kg1
+Qd1 26. Qxd1 Rxd1 27. Kh2 Rd2 28. Rxd2 Nxd2 29. Kg3 Nb1 30. Kf4 Nxc3 31. a3
+Nd5+ 32. Kg3 f5 33. f4 g5 34. fxg5 hxg5 35. Kf2 f4 36. a4 Nxb4 37. axb5 axb5
+38. g3 Rd8 39. gxf4 gxf4 40. h4 Rd2+ 41. Kf1 Nd5 42. Ng2 f3 43. Ne1 Ne3+ 44.
+Kg1 f2+ 45. Kh2 fxe1=Q+ 46. Kh3 Qh1+ 47. Kg3 Qh2# 0-1
+
+[Event "Hokkaido Ch.2017"]
+[Site "Sapporo"]
+[Date "2017.03.25"]
+[Round "1.7"]
+[White "Numata, Takeshi"]
+[Black "Kudo, Sotaro"]
+[Result "1-0"]
+[ECO "A13"]
+[WhiteElo "1656"]
+[BlackElo "952"]
+[Annotator "Nishimori,Toshiyuki"]
+[PlyCount "57"]
+[TimeControl "240+2"]
+
+{256MB, Fritz11.ctg, TN080515} 1. d4 {[%emt 0:00:00]} Nc6 2. Nf3 e6 3. c4 Qf6
+4. Bg5 Bb4+ 5. Nc3 Qf5 6. e3 e5 7. d5 Na5 8. Bh4 e4 9. Nd4 Qe5 10. Bg3 Qe7 11.
+Bxc7 Qc5 12. Bxa5 Bxa5 13. Nb3 Qb4 14. Nxa5 Qxa5 15. Qg4 Nf6 16. Qxg7 Rg8 17.
+Qxf6 Qb4 18. d6 Kf8 19. Qh6+ Rg7 20. O-O-O Qa5 21. Rd5 Qb4 22. Rg5 Qxd6 23.
+Qxd6+ Kg8 24. Rxg7+ Kxg7 25. Nxe4 b6 26. h4 Ba6 27. Rh3 Rc8 28. Rg3+ Kh8 29.
+Qf6# 1-0
+
+[Event "Hoikkaido Ch.2017"]
+[Site "Sapporo"]
+[Date "2017.03.25"]
+[Round "1.8"]
+[White "Drakakis, Athanasios"]
+[Black "Sato, Yasuji"]
+[Result "1-0"]
+[ECO "D02"]
+[BlackElo "1555"]
+[Annotator "Nishimori,Toshiyuki"]
+[PlyCount "91"]
+[TimeControl "240+2"]
+
+{256MB, Fritz11.ctg, TN080515} 1. d4 d5 2. Nf3 Nc6 3. Bf4 Nf6 4. Nbd2 Nh5 5.
+Bg3 Nxg3 6. hxg3 e6 7. e3 Bd6 8. c3 Ne7 9. Bd3 g6 10. Qc2 Bd7 11. O-O-O c5 12.
+Ng5 h6 13. Ndf3 c4 14. Be2 Qa5 15. Qb1 f6 16. Nh3 b5 17. a3 Rb8 18. Kd2 g5 19.
+Nh2 h5 20. Ke1 Qc7 21. Nf1 h4 22. Ng1 Kf7 23. gxh4 Rh6 24. h5 Nf5 25. Rd2 a5
+26. g4 Ne7 27. Rh3 b4 28. Qc1 bxc3 29. bxc3 Rb3 30. Ra2 Qb6 31. Nd2 a4 32. Bd1
+Rh8 33. h6 Rb8 34. h7 Rh8 35. Ne2 Kg7 36. Bc2 Ng6 37. Bb1 Rxh7 38. Rxh7+ Kxh7
+39. Qc2 Be8 40. f4 Rxa3 41. Rxa3 Bxa3 42. f5 Nf8 43. Nf3 Kg7 44. Ng3 Bb2 45.
+fxe6 a3 46. Nf5+ 1-0
+
+[Event "Hokkaido Ch.2017"]
+[Site "Sapporo"]
+[Date "2017.03.25"]
+[Round "2.1"]
+[White "Watanabe, Katsumi"]
+[Black "Yamada, Akihiro"]
+[Result "0-1"]
+[ECO "D94"]
+[WhiteElo "1732"]
+[BlackElo "1970"]
+[Annotator "Nishimori,Toshiyuki"]
+[PlyCount "72"]
+[TimeControl "240+2"]
+
+{256MB, Fritz11.ctg, TN080515} 1. d4 Nf6 2. c4 c5 3. e3 g6 4. Nf3 d5 5. Nc3 Bg7
+6. Be2 cxd4 7. exd4 O-O 8. O-O Nc6 9. a3 a5 10. Be3 Bg4 11. Ne5 Be6 12. cxd5
+Nxd5 13. Nxc6 bxc6 14. Qc1 Rb8 15. Na4 Bf5 16. Bh6 Nb6 17. Bxg7 Kxg7 18. Qd1
+Nxa4 19. Qxa4 Be4 20. b3 Qd5 21. Bc4 Qg5 22. f3 Bd5 23. Rae1 e6 24. Re5 Qd2 25.
+Bxd5 cxd5 26. Rfe1 Rfc8 27. R5e2 Qc3 28. Re3 Qd2 29. R3e2 Qd3 30. Re3 Qc2 31.
+Qxa5 Rxb3 32. Rxb3 Qxb3 33. Qb4 Qd3 34. Rb1 Rc4 35. Qb2 Rc2 36. Qb3 Qd2 0-1
+
+[Event "Hokkaido Ch.2017"]
+[Site "Sapporo"]
+[Date "2017.03.25"]
+[Round "2.2"]
+[White "Sato, Tsubasa"]
+[Black "Aoki, Yasuhiro"]
+[Result "1/2-1/2"]
+[ECO "B07"]
+[WhiteElo "1677"]
+[BlackElo "1778"]
+[Annotator "Nishimori,Toshiyuki"]
+[PlyCount "128"]
+[TimeControl "240+2"]
+
+{256MB, Fritz11.ctg, TN080515} 1. e4 d6 2. Nf3 Nf6 3. d3 g6 4. h3 Bg7 5. Be3
+O-O 6. Nbd2 c5 7. c3 Nc6 8. d4 cxd4 9. cxd4 Qa5 10. Qb3 Nxe4 11. Bd3 Nxd2 12.
+Bxd2 Qd8 13. Bc3 Na5 14. Qb5 Nc6 15. Be4 a6 16. Qb3 Qd7 17. O-O Rb8 18. a4 b6
+19. Rfc1 Nd8 20. Nd2 Ne6 21. Nf3 Nf4 22. Re1 Bb7 23. Nd2 Bxe4 24. Rxe4 Ne6 25.
+Rae1 d5 26. R4e2 Nxd4 27. Bxd4 Bxd4 28. Rxe7 Qf5 29. Nf3 Bf6 30. Ra7 Rfe8 31.
+Rd1 Re2 32. Qxd5 Qxd5 33. Rxd5 Rxb2 34. Rxa6 Rb1+ 35. Kh2 Rb2 36. Rd2 Rxd2 37.
+Nxd2 Bd4 38. f3 Rc8 39. Ne4 Be5+ 40. Kg1 Rc1+ 41. Kf2 Rc2+ 42. Kf1 Rc1+ 43. Kf2
+Rc2+ 44. Kf1 f5 45. Ra8+ Kg7 46. Ng5 Bg3 47. Ra7+ Kf6 48. Nxh7+ Ke5 49. Ra6
+Rf2+ 50. Kg1 Rb2 51. Kf1 Kf4 52. Ra8 Bf2 53. Re8 Kg3 54. Nf6 Rb1+ 55. Ke2 Re1+
+56. Kd3 Rxe8 57. Nxe8 Kxg2 58. Ke2 Bg3 59. Nf6 Bc7 60. Nd5 Bd8 61. Nf4+ Kg3 62.
+Nxg6 Kxh3 63. Ne5 Kg3 64. Nc4 Kf4 1/2-1/2
+
+[Event "Hokkaido Ch.2017"]
+[Site "Sapporo"]
+[Date "2017.03.25"]
+[Round "2.3"]
+[White "Manabe, Hiroaki"]
+[Black "Numata, Takeshi"]
+[Result "0-1"]
+[ECO "C06"]
+[WhiteElo "1755"]
+[BlackElo "1656"]
+[Annotator "Nishimori,Toshiyuki"]
+[PlyCount "60"]
+[TimeControl "240+2"]
+
+{256MB, Fritz11.ctg, TN080515} 1. e4 e6 2. d4 d5 3. Nd2 Nf6 4. e5 Nfd7 5. Bd3
+c5 6. c3 Nc6 7. Ngf3 Qb6 8. O-O cxd4 9. cxd4 Nxd4 10. Nxd4 Qxd4 11. Nf3 Qb6 12.
+Qa4 Bc5 13. Qg4 Kf8 14. h4 f6 15. Qf4 Qb4 16. Qg3 fxe5 17. Nxe5 Nxe5 18. Qxe5
+Bd6 19. Qh5 Bd7 20. Bxh7 Qe4 21. Bxe4 Rxh5 22. Bd3 Rxh4 23. Be3 Kf7 24. g3 Rh3
+25. Rfc1 Bc6 26. Kf1 g6 27. Ke2 e5 28. Bg5 e4 29. Bc2 Rh5 30. Be3 Bb5+ 0-1
+
+[Event "Hokkaido Ch.2017"]
+[Site "Sapporo"]
+[Date "2017.03.25"]
+[Round "2.4"]
+[White "Yoshii, Yukihiko"]
+[Black "Drakakis, Athanasios"]
+[Result "0-1"]
+[ECO "D53"]
+[WhiteElo "1828"]
+[Annotator "Nishimori,Toshiyuki"]
+[PlyCount "56"]
+[TimeControl "240+2"]
+
+{256MB, Fritz11.ctg, TN080515} 1. c4 Nf6 2. d4 e6 3. Nc3 d5 4. Bg5 Be7 5. Nf3
+h6 6. Bxf6 Bxf6 7. e3 c6 8. Bd3 Nd7 9. c5 Qa5 10. a3 e5 11. b4 Qc7 12. dxe5
+Nxe5 13. Nd4 Nxd3+ 14. Qxd3 O-O 15. O-O a6 16. Rad1 Bg4 17. f3 Bh5 18. e4 Bg6
+19. Rfe1 Rae8 20. Nf5 Bxf5 21. exf5 Re5 22. Rxe5 Qxe5 23. Ne2 Re8 24. Ng3 Bg5
+25. Nf1 Qb2 26. Nd2 Re3 27. Qb1 Qd4 28. Nf1 Rd3+ 0-1
+
+[Event "Hokkaido Ch.2017"]
+[Site "Sapporo"]
+[Date "2017.03.25"]
+[Round "2.5"]
+[White "Sato, Yasuji"]
+[Black "Hakamada, Eiji"]
+[Result "0-1"]
+[ECO "C02"]
+[WhiteElo "1555"]
+[BlackElo "1432"]
+[Annotator "Nishimori,Toshiyuki"]
+[PlyCount "142"]
+[TimeControl "240+2"]
+
+{256MB, Fritz11.ctg, TN080515} 1. e4 e6 2. d4 d5 3. e5 c5 4. c3 Nc6 5. Nf3 Qb6
+6. Bd3 Bd7 7. Nbd2 cxd4 8. cxd4 Nh6 9. O-O Nf5 10. Bxf5 exf5 11. Nb3 Bb4 12. a3
+Be7 13. Bg5 h6 14. Bxe7 Nxe7 15. Nc5 Bb5 16. Re1 O-O 17. e6 f6 18. a4 Bc6 19.
+b3 Qb4 20. Qd3 b6 21. Na6 Qd6 22. Nh4 Bb7 23. Rac1 Bxa6 24. Qxa6 Qb4 25. Qd3
+Rac8 26. Kf1 g5 27. Nxf5 Rxc1 28. Nxe7+ Qxe7 29. Qg6+ Qg7 30. Qxg7+ Kxg7 31.
+Rxc1 Re8 32. Rc6 Kg6 33. g4 h5 34. h3 hxg4 35. hxg4 f5 36. e7+ Kf7 37. Rd6 Rxe7
+38. Rxd5 fxg4 39. Rxg5 Re4 40. d5 Kf6 41. Rh5 Kg6 42. Rh8 Rd4 43. Rg8+ Kf7 44.
+Rg5 Kf6 45. Rh5 Kg6 46. Re5 Kf7 47. Kg2 Rd3 48. Rf5+ Ke7 49. Re5+ Kd6 50. Re8
+Kc5 51. Re5 Rxb3 52. Re3 Rb4 53. Ra3 a5 54. Rd3 Kd6 55. Kg3 Rxa4 56. Rb3 Rb4
+57. Rd3 a4 58. Kh4 b5 59. Kg5 Rb3 60. Rd2 b4 61. Kxg4 a3 62. f4 Rb2 63. Rd1 b3
+64. Ra1 a2 65. f5 Kxd5 66. Rd1+ Ke5 67. Re1+ Kf6 68. Re6+ Kf7 69. Ra6 Rg2+ 70.
+Kf3 Rg1 71. Kf2 a1=Q 0-1
+
+[Event "Hokkaido Ch.2017"]
+[Site "Sapporo"]
+[Date "2017.03.25"]
+[Round "2.6"]
+[White "Shibuya, Kaisei"]
+[Black "Sato, Takeru"]
+[Result "1-0"]
+[ECO "B07"]
+[WhiteElo "1529"]
+[BlackElo "1230"]
+[Annotator "Nishimori,Toshiyuki"]
+[PlyCount "79"]
+[TimeControl "240+2"]
+
+{256MB, Fritz11.ctg, TN080515} 1. e4 Nf6 2. Nc3 d6 3. Nf3 g6 4. Bc4 Bg7 5. O-O
+O-O 6. d3 Bg4 7. h3 Bxf3 8. Qxf3 c6 9. Re1 b5 10. Bb3 a5 11. a3 a4 12. Ba2 Qc7
+13. Bf4 e5 14. Bh2 Nbd7 15. Ne2 c5 16. c3 c4 17. Rad1 Qc6 18. Nc1 cxd3 19. Nxd3
+Nc5 20. Nb4 Qc7 21. Nd5 Nxd5 22. Bxd5 Rae8 23. Rc1 Nb3 24. Bxb3 axb3 25. Qd1
+Bh6 26. Qxb3 Bxc1 27. Rxc1 Qc4 28. Qd1 Qxe4 29. Qxd6 Rd8 30. Qxe5 Qc2 31. Bf4
+Qf5 32. Qxf5 gxf5 33. Re1 Rfe8 34. Kf1 Re4 35. g3 Rde8 36. Be3 h5 37. h4 Kg7
+38. Rd1 Kf6 39. Rd5 R4e5 40. Bd4 1-0
+
+[Event "Hokkaido Ch.2017"]
+[Site "Sapporo"]
+[Date "2017.03.25"]
+[Round "2.7"]
+[White "Koyahata, Taku"]
+[Black "Kimura, Yusei"]
+[Result "1-0"]
+[ECO "D06"]
+[WhiteElo "1349"]
+[BlackElo "1009"]
+[Annotator "Nishimori,Toshiyuki"]
+[PlyCount "63"]
+[TimeControl "240+2"]
+
+{256MB, Fritz11.ctg, TN080515} 1. d4 d5 2. c4 Be6 3. c5 Nc6 4. Nf3 Bg4 5. e3
+Bxf3 6. Qxf3 e5 7. Bb5 exd4 8. exd4 Qe7+ 9. Be3 Qe6 10. O-O Nf6 11. Nc3 Be7 12.
+Rfe1 O-O 13. Re2 b6 14. Bxc6 Qxc6 15. cxb6 axb6 16. Rc1 Rfc8 17. Bg5 Kf8 18.
+Bxf6 Bxf6 19. Rec2 Ra5 20. Ne4 dxe4 21. Qf4 Bg5 22. Qxg5 Rxg5 23. Rxc6 Ra5 24.
+Rxb6 cxb6 25. Rxc8+ Ke7 26. Rc7+ Ke8 27. a3 Rd5 28. Rc4 f5 29. g3 g5 30. b4 Ke7
+31. a4 Kf6 32. Rc6+ 1-0
+
+[Event "Hokkaido Ch.2017"]
+[Site "Sapporo"]
+[Date "2017.03.25"]
+[Round "2.8"]
+[White "Kudo, Soichiro"]
+[Black "Ito, Katsuhide"]
+[Result "0-1"]
+[ECO "B20"]
+[WhiteElo "952"]
+[BlackElo "1328"]
+[Annotator "Nishimori,Toshiyuki"]
+[PlyCount "66"]
+[TimeControl "240+2"]
+
+{256MB, Fritz11.ctg, TN080515} 1. e4 c5 2. Bc4 Nc6 3. Qf3 Nf6 4. Nh3 Nd4 5. Qf4
+Nxc2+ 6. Kd1 Nxa1 7. Ng5 e6 8. Nc3 d5 9. exd5 Bd6 10. Qf3 e5 11. Nb5 Bg4 12.
+Nxd6+ Qxd6 13. Bb5+ Ke7 14. h3 Bxf3+ 15. Nxf3 Qxd5 16. Re1 e4 17. Nh4 c4 18. f3
+Kd6 19. Ba4 b5 20. Bxb5 Qxb5 21. fxe4 Qe5 22. Nf3 Qxe4 23. Rxe4 Nxe4 24. d3
+cxd3 25. Bf4+ Kd5 26. b4 Rhe8 27. Be3 Rac8 28. a4 Nc3+ 29. Kc1 Rxe3 30. Ng5
+Nxa4+ 31. Kd2 Kd4 32. Nxh7 Nb3+ 33. Kd1 Rc1# 0-1
+
+[Event "Hokkaido Ch.2017"]
+[Site "Sapporo"]
+[Date "2017.03.25"]
+[Round "3.1"]
+[White "Yamada, Akihiro"]
+[Black "Drakakis, Athanasios"]
+[Result "1/2-1/2"]
+[ECO "D36"]
+[WhiteElo "1970"]
+[Annotator "Nishimori,Toshiyuki"]
+[PlyCount "40"]
+[TimeControl "240+2"]
+
+{256MB, Fritz11.ctg, TN080515} 1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. Bg5 Be7 5. cxd5
+exd5 6. Qc2 c6 7. e3 h6 8. Bh4 Qa5 9. Bd3 Na6 10. Qb3 O-O 11. Nge2 Re8 12. O-O
+Nc7 13. Rac1 Ne6 14. Bb1 g6 15. Rfd1 Ng7 16. a3 Nf5 17. Bg3 Nxg3 18. Nxg3 Rb8
+19. Qc2 Bd6 20. Qd2 Qd8 1/2-1/2
+
+[Event "Hokkaido Ch.2017"]
+[Site "Sapporo"]
+[Date "2017.03.25"]
+[Round "3.2"]
+[White "Numata, Takeshi"]
+[Black "Aoki, Yasuhiro"]
+[Result "1-0"]
+[ECO "A21"]
+[WhiteElo "1656"]
+[BlackElo "1778"]
+[Annotator "Nishimori,Toshiyuki"]
+[PlyCount "65"]
+[TimeControl "240+2"]
+
+{256MB, Fritz11.ctg, TN080515} 1. Nf3 d6 2. g3 e5 3. d3 f5 4. Bg2 Nf6 5. O-O
+Be7 6. c4 O-O 7. Nc3 Na6 8. a3 c6 9. b4 Nc7 10. Bb2 Kh8 11. Nd2 Qe8 12. e3 Be6
+13. Rc1 Qg6 14. Qe2 Qh6 15. Rfd1 Rae8 16. b5 f4 17. e4 Ng4 18. Nf1 fxg3 19. f3
+Nxh2 20. Nxg3 Bg5 21. Nh1 Be3+ 22. Nf2 Ng4 23. fxg4 Rxf2 24. Qxf2 Bxf2+ 25.
+Kxf2 Rf8+ 26. Kg1 Qe3+ 27. Kh1 Rf6 28. Bf1 Rh6+ 29. Kg2 Qh3+ 30. Kf2 Rf6+ 31.
+Ke2 Bxg4+ 32. Kd2 Bxd1 33. Bxh3 1-0
+
+[Event "Hokkaido Ch.2017"]
+[Site "Sapporo"]
+[Date "2017.03.25"]
+[Round "3.3"]
+[White "Hakamada, Eiji"]
+[Black "Sato, Tsubasa"]
+[Result "1-0"]
+[ECO "A16"]
+[WhiteElo "1432"]
+[BlackElo "1677"]
+[Annotator "Nishimori,Toshiyuki"]
+[PlyCount "66"]
+[TimeControl "240+2"]
+
+{256MB, Fritz11.ctg, TN080515} 1. c4 e5 2. Nc3 Nf6 3. e4 b6 4. Nf3 d6 5. d4
+exd4 6. Nxd4 Bb7 7. Bd3 Be7 8. O-O O-O 9. Bg5 Nbd7 10. Re1 Re8 11. Nf3 Ng4 12.
+Bxe7 Rxe7 13. Nd5 Re8 14. h3 Ngf6 15. b4 c6 16. Nc3 Rc8 17. Bc2 Ne5 18. Nxe5
+Rxe5 19. Qd2 b5 20. Rad1 Ne8 21. c5 d5 22. f4 Rh5 23. exd5 cxd5 24. Qe2 Nf6 25.
+Qe7 Bc6 26. Qxa7 Ra8 27. Qe7 d4 28. Qxd8+ Rxd8 29. g4 Rxh3 30. Ne4 Nxg4 31. Kg2
+Rh2+ 32. Kg3 Rxc2 33. Kxg4 Rxa2 1-0
+
+[Event "Hokkaido Ch.2017"]
+[Site "Sapporo"]
+[Date "2017.03.25"]
+[Round "3.4"]
+[White "Shibuya, Kaisei"]
+[Black "Manabe, Hiroaki"]
+[Result "1/2-1/2"]
+[ECO "B02"]
+[WhiteElo "1529"]
+[BlackElo "1755"]
+[Annotator "Nishimori,Toshiyuki"]
+[PlyCount "86"]
+[TimeControl "240+2"]
+
+{256MB, Fritz11.ctg, TN080515} 1. e4 Nf6 2. Nc3 d5 3. exd5 Nxd5 4. Nxd5 Qxd5 5.
+Nf3 Nc6 6. d4 Bg4 7. Be2 O-O-O 8. c3 e5 9. Be3 exd4 10. Bxd4 Qh5 11. h3 Bc5 12.
+O-O Nxd4 13. Nxd4 Bxe2 14. Qxe2 Qxe2 15. Nxe2 Rd2 16. b4 Rxe2 17. bxc5 Kd7 18.
+a4 Kc6 19. Rfe1 Rhe8 20. Red1 Rc2 21. Re1 Ree2 22. Rxe2 Rxe2 23. Rd1 Re7 24.
+Rb1 Re2 25. Rd1 Rc2 26. Rd3 f6 27. g4 g6 28. Kg2 Kxc5 29. Rd7 Kb6 30. Rxh7 Rxc3
+31. Rh6 c5 32. Rxg6 c4 33. Rxf6+ Ka5 34. g5 Rd3 35. g6 Rd8 36. Rf4 Kb4 37. g7
+Rg8 38. Rf7 a5 39. Rxb7+ Kxa4 40. Kf1 Re8 41. Re7 Rd8 42. Rd7 Re8 43. Re7 Rd8
+1/2-1/2
+
+[Event "Hokkaido Ch.2017"]
+[Site "Sapporo"]
+[Date "2017.03.25"]
+[Round "3.5"]
+[White "Ito, Katsuhide"]
+[Black "Watanabe, Katsumi"]
+[Result "1-0"]
+[ECO "C41"]
+[WhiteElo "1328"]
+[BlackElo "1732"]
+[Annotator "Nishimori,Toshiyuki"]
+[PlyCount "69"]
+[TimeControl "240+2"]
+
+{256MB, Fritz11.ctg, TN080515} 1. e4 e5 2. Nf3 d6 3. d4 Nd7 4. Be2 Ngf6 5. Nc3
+Be7 6. O-O O-O 7. h3 b6 8. Be3 Bb7 9. d5 c5 10. dxc6 Bxc6 11. Nd5 Nxe4 12. Qd3
+f5 13. b4 Rc8 14. c4 Bg5 15. Nxg5 Nxg5 16. h4 f4 17. hxg5 fxe3 18. Qxe3 Bxd5
+19. cxd5 Rf5 20. f4 g6 21. Bg4 exf4 22. Qe6+ Kh8 23. Bxf5 gxf5 24. Rxf4 Ne5 25.
+Rxf5 Ng6 26. Raf1 Qe8 27. Qxd6 Rd8 28. Qf6+ Kg8 29. Qe6+ Qxe6 30. dxe6 Re8 31.
+Re1 Re7 32. Rf6 Kg7 33. Rd1 Nf8 34. Rd6 Kg8 35. Rd8 1-0
+
+[Event "Hokkaido Ch.2017"]
+[Site "Sapporo"]
+[Date "2017.03.25"]
+[Round "3.6"]
+[White "Yoshii, Yukihiko"]
+[Black "Koyahata, Taku"]
+[Result "1-0"]
+[ECO "A28"]
+[WhiteElo "1828"]
+[BlackElo "1349"]
+[Annotator "Nishimori,Toshiyuki"]
+[PlyCount "57"]
+[TimeControl "240+2"]
+
+{256MB, Fritz11.ctg, TN080515} 1. c4 e5 2. Nc3 Nf6 3. Nf3 Nc6 4. d4 exd4 5.
+Nxd4 Ne5 6. e4 Bc5 7. Be2 c6 8. O-O O-O 9. Bg5 h6 10. Bh4 d6 11. h3 Be6 12. b3
+Kh7 13. Kh1 Ng6 14. Bg3 Ne5 15. f4 Nfd7 16. fxe5 Nxe5 17. Qd2 Bxd4 18. Qxd4 Qc8
+19. Bxe5 dxe5 20. Qxe5 Re8 21. Qg3 b6 22. Rad1 c5 23. Bd3 Qb7 24. e5+ g6 25.
+Be4 Qa6 26. Bxa8 Rxa8 27. Qf3 Qc8 28. Ne4 Rb8 29. Nd6 1-0
+
+[Event "Hokkaido Ch.2017"]
+[Site "Sapporo"]
+[Date "2017.03.25"]
+[Round "3.7"]
+[White "Kimura, Yusei"]
+[Black "Sato, Yasuji"]
+[Result "0-1"]
+[ECO "C24"]
+[WhiteElo "1009"]
+[BlackElo "1555"]
+[Annotator "Nishimori,Toshiyuki"]
+[PlyCount "52"]
+[TimeControl "240+2"]
+
+{256MB, Fritz11.ctg, TN080515} 1. e4 e5 2. Bc4 Bc5 3. d3 Nf6 4. Bg5 h6 5. Bxf6
+Qxf6 6. Nf3 d6 7. h3 O-O 8. O-O Nc6 9. c3 Ne7 10. d4 exd4 11. cxd4 Bb6 12. e5
+Qg6 13. exd6 Bxh3 14. Ne1 cxd6 15. f3 Nf5 16. Rf2 Bxd4 17. Qc2 Rae8 18. Nc3
+Bxf2+ 19. Qxf2 Ne3 20. Bd3 Bf5 21. Bxf5 Nxf5 22. Nb5 a6 23. Nd4 Nxd4 24. Qxd4
+Re2 25. b3 Rfe8 26. Qc3 Qg3 0-1
+
+[Event "Hokkaido Ch.2017"]
+[Site "Sapporo"]
+[Date "2017.03.25"]
+[Round "3.8"]
+[White "Sato, Takeru"]
+[Black "Kudo, Sonosuke"]
+[Result "1-0"]
+[ECO "A40"]
+[WhiteElo "1230"]
+[BlackElo "952"]
+[Annotator "Nishimori,Toshiyuki"]
+[PlyCount "49"]
+[TimeControl "240+2"]
+
+{256MB, Fritz11.ctg, TN080515} 1. d4 Nc6 2. Bf4 e6 3. e3 Nf6 4. h3 Bd6 5. Bxd6
+cxd6 6. Nf3 O-O 7. Bd3 e5 8. dxe5 Nxe5 9. O-O Nxd3 10. cxd3 d5 11. Nc3 d6 12.
+Qb3 Be6 13. Qxb7 Rb8 14. Qxa7 Rxb2 15. Rab1 Rxb1 16. Rxb1 Nd7 17. d4 Qc8 18.
+Rb3 f5 19. Ng5 Qe8 20. Rb7 f4 21. Nxe6 Qxe6 22. Rxd7 fxe3 23. Rxg7+ Kh8 24.
+Rxh7+ Kg8 25. Qg7# 1-0
+
+[Event "Hokkaido Ch.2017"]
+[Site "Sapporo"]
+[Date "2017.03.26"]
+[Round "4.1"]
+[White "Yamada, Akihiro"]
+[Black "Numata, Takeshi"]
+[Result "1/2-1/2"]
+[ECO "D11"]
+[WhiteElo "1970"]
+[BlackElo "1656"]
+[Annotator "Nishimori,Toshiyuki"]
+[PlyCount "194"]
+[TimeControl "240+2"]
+
+{256MB, Fritz11.ctg, TN080515} 1. d4 d5 2. c4 c6 3. Nf3 Nf6 4. Qc2 g6 5. e3 Bf5
+6. Bd3 Bxd3 7. Qxd3 Bg7 8. O-O O-O 9. Nc3 e6 10. b4 dxc4 11. Qxc4 Nd5 12. Rb1
+Nxc3 13. Qxc3 Qd5 14. Qc2 Nd7 15. e4 Qh5 16. Rd1 Rfc8 17. Be3 Nf6 18. h3 Bh6
+19. Qd2 Bxe3 20. Qxe3 Kg7 21. Rdc1 Qb5 22. Rc5 Qb6 23. Rb3 a6 24. Ne5 Qd8 25.
+Rcc3 h5 26. Rd3 Qe7 27. Qf4 Nd7 28. Nc4 Rf8 29. e5 f6 30. Qh4 Qd8 31. Qe4 f5
+32. Qe2 Nb6 33. Nd6 Rb8 34. g3 Nd5 35. a3 Qg5 36. Kh2 Qd8 37. f4 Kh6 38. Rf3
+Qe7 39. Rb1 Rg8 40. Qd2 Kh7 41. h4 Rgf8 42. a4 Qd7 43. b5 axb5 44. axb5 cxb5
+45. Rxb5 b6 46. Rfb3 Rfd8 47. Nc4 Qc6 48. Qd3 Rd7 49. Rb2 Kg7 50. Ne3 Nxe3 51.
+Qxe3 Rd5 52. R5b3 b5 53. Rc3 Qb6 54. Rc5 Rbd8 55. Qe2 Rxc5 56. dxc5 Qxc5 57.
+Rxb5 Qc6 58. Qb2 Rd7 59. Rb6 Qc8 60. Rd6 Kf7 61. Qb3 Rc7 62. Qd3 Ke7 63. Qa3
+Kf7 64. Qd3 Ke7 65. Qa3 Kf7 66. Rd2 Rd7 67. Qe3 Rc7 68. Qd3 Rc3 69. Qd7+ Qxd7
+70. Rxd7+ Kg8 71. Re7 Rc6 72. Kg2 Kf8 73. Rd7 Rc2+ 74. Kf3 Rc3+ 75. Kf2 Rc2+
+76. Ke3 Rc3+ 77. Rd3 Rc2 78. Rd7 Rc3+ 79. Rd3 Rc2 80. Kd4 Ke7 81. Rb3 Rd2+ 82.
+Kc4 Rc2+ 83. Kb5 Rc1 84. Kb6 Rc2 85. Kb5 Rc1 86. Ra3 Rb1+ 87. Kc6 Rc1+ 88. Kb6
+Rb1+ 89. Ka5 Rb2 90. Ka4 Rb1 91. Rb3 Rxb3 92. Kxb3 Kd7 93. Kb4 Kc6 94. Ka5 Kc5
+95. Ka6 Kc6 96. Ka5 Kc5 97. Ka4 Kc4 1/2-1/2
+
+[Event "Hokkaido Ch.2017"]
+[Site "Sapporo"]
+[Date "2017.03.26"]
+[Round "4.2"]
+[White "Drakakis, Athanasios"]
+[Black "Hakamada, Eiji"]
+[Result "1-0"]
+[ECO "D02"]
+[BlackElo "1432"]
+[Annotator "Nishimori,Toshiyuki"]
+[PlyCount "61"]
+[TimeControl "240+2"]
+
+{256MB, Fritz11.ctg, TN080515} 1. d4 {[%emt 0:00:00]} d5 {[%emt 0:00:00]} 2.
+Nf3 Nf6 3. Bf4 e6 4. e3 Nc6 5. c3 Bd7 6. Bd3 Bd6 7. Bg3 Bxg3 8. hxg3 Qe7 9.
+Nbd2 e5 10. dxe5 Nxe5 11. Nxe5 Qxe5 12. Nf3 Qe7 13. Qc2 h6 14. O-O-O O-O-O 15.
+Nd4 Qc5 16. b4 Qb6 17. a4 a5 18. b5 c5 19. bxc6 bxc6 20. Kd2 Kc7 21. Rb1 Qa7
+22. c4 Rb8 23. cxd5 Nxd5 24. Nb5+ Rxb5 25. axb5 Nb4 26. Qc3 c5 27. Qe5+ Kc8 28.
+Rhc1 Nxd3 29. Kxd3 Bxb5+ 30. Rxb5 Qd7+ 31. Kc4 1-0
+
+[Event "Hokkaido Ch.2017"]
+[Site "Sapporo"]
+[Date "2017.03.26"]
+[Round "4.3"]
+[White "Sato, Tsubasa"]
+[Black "Ito, Katsuhide"]
+[Result "1-0"]
+[ECO "B50"]
+[WhiteElo "1677"]
+[BlackElo "1328"]
+[Annotator "Nishimori,Toshiyuki"]
+[PlyCount "65"]
+[TimeControl "240+2"]
+
+{256MB, Fritz11.ctg, TN080515} 1. e4 c5 2. Nf3 Nc6 3. Bc4 d6 4. h3 Nf6 5. d3 e6
+6. Bg5 Be7 7. O-O O-O 8. Bb3 a6 9. c4 e5 10. Nc3 Be6 11. a3 Na5 12. Bxf6 Bxf6
+13. Qc2 b5 14. Nd5 Rb8 15. Ba2 bxc4 16. Bxc4 Nxc4 17. dxc4 Bxd5 18. cxd5 Qb6
+19. Rfb1 Rfc8 20. Nd2 Rb7 21. Nc4 Qd8 22. Qa4 Rb5 23. Qxa6 Rcb8 24. f3 Bh4 25.
+Ra2 Qg5 26. Qxd6 Rb3 27. Qxe5 Qg6 28. Nd2 Bf6 29. Qc7 Bd4+ 30. Kh1 R3b7 31. Qf4
+Bxb2 32. Raxb2 Rxb2 33. Qxb8+ 1-0
+
+[Event "Hokkaido Ch.2017"]
+[Site "Sapporo"]
+[Date "2017.03.26"]
+[Round "4.4"]
+[White "Manabe, Hiroaki"]
+[Black "Yoshii, Yukihiko"]
+[Result "0-1"]
+[ECO "C55"]
+[WhiteElo "1755"]
+[BlackElo "1828"]
+[Annotator "Nishimori,Toshiyuki"]
+[PlyCount "90"]
+[TimeControl "240+2"]
+
+{256MB, Fritz11.ctg, TN080515} 1. e4 e5 2. Bc4 Nf6 3. d4 Nc6 4. Nf3 Be7 5. Nc3
+d6 6. Be3 O-O 7. h4 Bg4 8. Qd2 a6 9. Ng5 h6 10. f3 Bh5 11. O-O-O b5 12. Be2
+exd4 13. Bxd4 Nxd4 14. Qxd4 c5 15. Qf2 b4 16. Na4 Qc7 17. g4 Bg6 18. h5 Bh7 19.
+Nxh7 Nxh7 20. Bc4 Ng5 21. Rd5 Bf6 22. Rhd1 Rfd8 23. Rf5 Ne6 24. Qg3 Nd4 25.
+Rxc5 Qe7 26. Rd5 Rac8 27. R5xd4 Bxd4 28. Rxd4 Qc7 29. Bb3 a5 30. Rc4 Qa7 31.
+Rxc8 Qe3+ 32. Kb1 Rxc8 33. a3 bxa3 34. bxa3 Qd4 35. Qf4 Qd1+ 36. Ka2 Rc7 37.
+Nb2 Qd4 38. Qf5 Qc3 39. Qb5 Rc8 40. Qd7 Rf8 41. Nd3 Qd4 42. Qc7 a4 43. Bd5 Qe3
+44. Qxd6 Qxf3 45. Ne5 Qf2 0-1
+
+[Event "Hokkaido Ch.2017"]
+[Site "Sapporo"]
+[Date "2017.03.26"]
+[Round "4.6"]
+[White "Koyahata, Taku"]
+[Black "Watanabe, Katsumi"]
+[Result "0-1"]
+[ECO "E00"]
+[WhiteElo "1349"]
+[BlackElo "1732"]
+[Annotator "Nishimori,Toshiyuki"]
+[PlyCount "94"]
+[TimeControl "240+2"]
+
+{256MB, Fritz11.ctg, TN080515} 1. d4 {[%emt 0:00:00]} d5 {[%emt 0:00:00]} 2. c4
+Nf6 3. Nc3 e6 4. a3 Be7 5. Nf3 O-O 6. c5 b6 7. b4 a5 8. Bb2 c6 9. Na4 Nbd7 10.
+Ne5 Bb7 11. e3 b5 12. Nc3 Qc7 13. Nxd7 Nxd7 14. Be2 a4 15. O-O Bf6 16. f4 g6
+17. Kh1 Bg7 18. e4 Rae8 19. e5 f6 20. Qc2 f5 21. g4 Rf7 22. gxf5 Rxf5 23. Bg4
+Rf7 24. Ne2 Bc8 25. Rf3 Nb8 26. Rg1 Qe7 27. Rh3 Na6 28. Ng3 Nc7 29. f5 exf5 30.
+Nxf5 Bxf5 31. Bxf5 Rxf5 32. Qg2 Bh8 33. Bc1 Ref8 34. Bh6 Bg7 35. Qg4 Bxh6 36.
+Rxh6 Qg7 37. Rh3 Qf7 38. Qh4 Rf1 39. Qg3 Ne6 40. Rh4 Rxg1+ 41. Qxg1 Qf3+ 42.
+Qg2 Qd1+ 43. Qg1 Rf1 44. Rg4 Qf3+ 45. Rg2 Rxg1+ 46. Kxg1 Nf4 47. Ra2 Ne2+ 0-1
+
+[Event "Hokkaido Ch.2017"]
+[Site "Sapporo"]
+[Date "2017.03.26"]
+[Round "4.7"]
+[White "Sato, Yasuji"]
+[Black "Sato, Takeru"]
+[Result "0-1"]
+[ECO "B04"]
+[WhiteElo "1555"]
+[BlackElo "1230"]
+[Annotator "Nishimori,Toshiyuki"]
+[PlyCount "72"]
+[TimeControl "240+2"]
+
+{256MB, Fritz11.ctg, TN080515} 1. e4 Nf6 2. e5 Nd5 3. d4 d6 4. Nf3 Nc6 5. Bc4
+Nb6 6. Bxf7+ Kxf7 7. Ng5+ Kg8 8. e6 h6 9. Nf7 Qe8 10. Qh5 Bxe6 11. Nxh6+ gxh6
+12. Qh4 Qg6 13. Nc3 Nd5 14. Ne4 Nxd4 15. O-O Nf3+ 16. Kh1 Nxh4 17. Ng3 Bg7 18.
+c3 Rf8 19. f3 Be5 20. Rf2 Bxg3 21. hxg3 Qxg3 22. Kg1 Bh3 23. Kf1 Nxg2 24. Ke2
+Ngf4+ 25. Bxf4 Nxf4+ 26. Ke3 Nd5+ 27. Ke2 Bg4 28. Raf1 Bh3 29. Re1 Bg2 30. Rg1
+Bxf3+ 31. Rxf3 Qxg1 32. Rxf8+ Kxf8 33. c4 Qe3+ 34. Kd1 Qd3+ 35. Kc1 Nb4 36. b3
+Qc2# 0-1
+
+[Event "Hokkaido Ch.2017"]
+[Site "Sapporo"]
+[Date "2017.03.26"]
+[Round "4.8"]
+[White "Kudo, Sonosuke"]
+[Black "Kimura, Yusei"]
+[Result "0-1"]
+[ECO "C50"]
+[WhiteElo "952"]
+[BlackElo "1009"]
+[Annotator "Nishimori,Toshiyuki"]
+[PlyCount "70"]
+[TimeControl "240+2"]
+
+{256MB, Fritz11.ctg, TN080515} 1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. O-O d6 5. d3
+Bg4 6. h3 Bh5 7. g4 Bg6 8. Ng5 Qe7 9. Nxf7 Bxf7 10. Bxf7+ Qxf7 11. Be3 Bd4 12.
+Bxd4 Nxd4 13. Qd2 Nf3+ 14. Kg2 Nxd2 15. Nxd2 O-O-O 16. Nf3 h6 17. d4 Rf8 18.
+Nd2 exd4 19. b3 d5 20. exd5 Qxd5+ 21. f3 Rf6 22. Rae1 Re6 23. Rxe6 Qxe6 24. Ne4
+Nf6 25. Nc5 Qc6 26. b4 Nd7 27. Nxd7 Qxd7 28. Rc1 Qa4 29. c3 d3 30. Re1 Qxa2+
+31. Kg1 d2 32. Rf1 Re8 33. Kf2 d1=Q+ 34. Kg1 Re1 35. Rxe1 Qxe1# 0-1
+
+[Event "Hokkaido Ch.2017"]
+[Site "Sapporo"]
+[Date "2017.03.26"]
+[Round "5.1"]
+[White "Numata, Takeshi"]
+[Black "Drakakis, Athanasios"]
+[Result "1/2-1/2"]
+[ECO "D53"]
+[WhiteElo "1656"]
+[PlyCount "106"]
+
+1. d4 d5 2. c4 e6 3. Nf3 Nf6 4. Bg5 Be7 5. e3 h6 6. Bh4 c6 7. Nc3 O-O 8. Bd3
+dxc4 9. Bxc4 Re8 10. O-O Nd5 11. Bxe7 Qxe7 12. Rc1 Nxc3 13. Rxc3 Nd7 14. Qc2 e5
+15. dxe5 Nxe5 16. Nxe5 Qxe5 17. Qb3 Re7 18. Rd1 Be6 19. Bxe6 Rxe6 20. Qxb7 Rb8
+21. Qxa7 Rxb2 22. Qa3 Rb5 23. Qc1 Qe4 24. Qc2 Qxc2 25. Rxc2 Rd6 26. Rdc1 Ra5
+27. g3 Ra6 28. Ra1 f6 29. a4 Ra5 30. Rc4 c5 31. Rb1 Rda6 32. Rb7 Rxa4 33. Rxc5
+Ra7 34. Rcc7 Rxb7 35. Rxb7 Kh7 36. h4 h5 37. Kg2 Kg6 38. Kf3 Ra2 39. Rb5 Rc2
+40. e4 Rc3+ 41. Kf4 Rc4 42. Rd5 Ra4 43. f3 Rb4 44. Rc5 Ra4 45. Rd5 Rb4 46. g4
+hxg4 47. Kxg4 Rb1 48. Rd2 Rg1+ 49. Kh3 Rh1+ 50. Rh2 Ra1 51. Kg3 Kh5 52. Rg2 g6
+53. Kf4 Ra4 1/2-1/2
+
+[Event "Hokkaido Ch.2017"]
+[Site "Sapporo"]
+[Date "2017.03.26"]
+[Round "5.2"]
+[White "Yoshii, Yukihiko"]
+[Black "Yamada, Akihiro"]
+[Result "1-0"]
+[ECO "D13"]
+[WhiteElo "1828"]
+[BlackElo "1970"]
+[PlyCount "157"]
+
+1. c4 Nf6 2. Nc3 c6 3. d4 d5 4. cxd5 cxd5 5. Nf3 e6 6. a3 a6 7. Bg5 Nbd7 8. e3
+h6 9. Bh4 Qa5 10. b4 Qb6 11. Rc1 Qa7 12. Bd3 Bd6 13. O-O b5 14. Bg3 Bxg3 15.
+hxg3 Bb7 16. Nd2 O-O 17. Qe2 Rfc8 18. Nb3 Rab8 19. g4 Qb6 20. f3 Qd8 21. Qf2
+Rc7 22. Rc2 e5 23. Nc5 Nxc5 24. bxc5 e4 25. Be2 Bc8 26. Rb1 Re7 27. Nd1 Be6 28.
+Qg3 Ra8 29. Rb3 Qc7 30. f4 Bd7 31. Rbc3 Bc6 32. g5 hxg5 33. Qxg5 Nh7 34. Qh4 f5
+35. Nf2 Re6 36. Nh3 Rh6 37. Qg3 Kh8 38. Kf2 Rf8 39. Rc1 Rff6 40. Rh1 Rfg6 41.
+Qh2 Nf6 42. Qg1 Kg8 43. Ng5 Be8 44. Rc1 Rxh1 45. Qxh1 Rh6 46. Qg1 Bh5 47. g3
+Nh7 48. Nxh7 Kxh7 49. Bxh5 Rxh5 50. g4 fxg4 51. Qxg4 Rh6 52. Rg1 Qf7 53. Rg2 a5
+54. Qg3 b4 55. axb4 axb4 56. Ke2 Qd7 57. f5 Ra6 58. Rh2+ Kg8 59. Qb8+ Kf7 60.
+Rh8 Ra2+ 61. Ke1 Ra1+ 62. Kd2 Qe7 63. c6 Ra2+ 64. Kc1 Ra7 65. Qg8+ Kf6 66. Qh7
+Qf7 67. Qh4+ g5 68. Rh6+ Kxf5 69. Qh3+ g4 70. Rh5+ Kf6 71. Qxg4 Ra1+ 72. Kb2
+Rf1 73. Rh6+ Ke7 74. Qd7+ Kf8 75. Qd8+ Qe8 76. Qxe8+ Kxe8 77. Rh8+ Ke7 78. c7
+Rf2+ 79. Kb3 1-0
+
+[Event "Hokkaido Ch.2017"]
+[Site "Sapporo"]
+[Date "2017.03.26"]
+[Round "5.3"]
+[White "Shibuya, Kaisei"]
+[Black "Sato, Tsubasa"]
+[Result "1-0"]
+[ECO "C54"]
+[WhiteElo "1529"]
+[BlackElo "1677"]
+[PlyCount "107"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 4. d3 h6 5. O-O Bc5 6. c3 d6 7. Re1 Bg4 8. Nbd2
+O-O 9. Nf1 Ne7 10. Bb3 c6 11. h3 Bh5 12. Ng3 Bg6 13. Nh4 Qb6 14. Qf3 Rae8 15.
+Nxg6 Nxg6 16. Bxh6 Bxf2+ 17. Qxf2 Qxf2+ 18. Kxf2 gxh6 19. Nf5 Kh7 20. Nxd6 Rd8
+21. Nxb7 Rxd3 22. Nc5 Rd2+ 23. Re2 Rfd8 24. g3 Kg7 25. Ke3 Rxe2+ 26. Kxe2 Nh5
+27. Kf3 Rd2 28. Na4 Rd3+ 29. Ke2 Rxg3 30. Rf1 Nhf4+ 31. Kf2 Rg2+ 32. Ke1 Rg3
+33. Nc5 Rxh3 34. Bc2 Re3+ 35. Kd1 h5 36. Nd3 Nxd3 37. Bxd3 Rxd3+ 38. Ke2 Nf4+
+39. Rxf4 exf4 40. Kxd3 h4 41. Ke2 h3 42. Kf2 Kg6 43. c4 Kf6 44. Kf3 Ke5 45. b4
+Kd4 46. c5 Kc4 47. a3 Kb3 48. b5 Kc3 49. bxc6 Kd3 50. c7 h2 51. Kg2 f3+ 52.
+Kxh2 f2 53. c8=Q f1=Q 54. Qa6+ 1-0
+
+[Event "Hokkaido Ch.2017"]
+[Site "Sapporo"]
+[Date "2017.03.26"]
+[Round "5.4"]
+[White "Watanabe, Katsumi"]
+[Black "Hakamada, Eiji"]
+[Result "1-0"]
+[ECO "E54"]
+[WhiteElo "1732"]
+[BlackElo "1432"]
+[PlyCount "115"]
+
+1. d4 Nf6 2. c4 e6 3. Nf3 Bb4+ 4. Nc3 O-O 5. e3 d5 6. Be2 dxc4 7. Bxc4 c5 8.
+O-O cxd4 9. Nxd4 Bd7 10. Qc2 Qc7 11. Ncb5 Bxb5 12. Nxb5 Qe5 13. Be2 Nc6 14. Bd2
+a6 15. Bc3 Bxc3 16. Nxc3 Rac8 17. Rfd1 Rfd8 18. Qb3 Qc7 19. Bf3 h6 20. Rdc1 Qb8
+21. h3 Qa7 22. a4 Na5 23. Qb4 b6 24. Qa3 Nc4 25. Qa2 Rd2 26. Rab1 Ne5 27. Bd1
+Nd3 28. Rc2 Rxc2 29. Bxc2 Nb4 30. Qb3 Nxc2 31. Qxc2 Nd5 32. Qb3 Nxc3 33. bxc3
+Qc7 34. Rc1 Qc4 35. Qxb6 Qxa4 36. Qb2 Qc4 37. Ra1 Rc6 38. Qb4 Qb5 39. Qxb5 axb5
+40. Ra3 f5 41. Rb3 Rc5 42. Kf1 Kf7 43. Ke2 e5 44. Kd3 Ke6 45. f3 g5 46. e4 f4
+47. Ra3 Rc6 48. Ra7 Rd6+ 49. Kc2 Rb6 50. Rh7 Rb8 51. Rxh6+ Kf7 52. Rd6 Rb7 53.
+Kb3 Rb8 54. Kb4 Rb7 55. Rd5 Ke6 56. Rxb5 Rc7 57. Rb6+ Kf7 58. c4 1-0
+
+[Event "Hokkaido Ch.2017"]
+[Site "Sapporo"]
+[Date "2017.03.26"]
+[Round "5.5"]
+[White "Sato, Takeru"]
+[Black "Ito, Katsuhide"]
+[Result "1-0"]
+[ECO "D00"]
+[WhiteElo "1230"]
+[BlackElo "1328"]
+[PlyCount "57"]
+
+1. d4 d5 2. Bf4 Nf6 3. e3 e6 4. Bd3 Bd6 5. Bxd6 Qxd6 6. c3 O-O 7. Nf3 Nc6 8.
+O-O a6 9. Qe2 Re8 10. Nbd2 Bd7 11. h3 e5 12. Nh2 e4 13. Bc2 Ne7 14. Kh1 Ng6 15.
+Rg1 Bb5 16. c4 dxc4 17. Nxc4 Qb4 18. b3 Rad8 19. a4 Bc6 20. Rgf1 b5 21. axb5
+Bxb5 22. g4 Ne5 23. dxe5 Bxc4 24. Qxc4 Nd5 25. Bxe4 Rxe5 26. Bxd5 Qd2 27. Bxf7+
+Kh8 28. Nf3 Re7 29. Nxd2 1-0
+
+[Event "Hokkaido Ch.2017"]
+[Site "Sapporo"]
+[Date "2017.03.26"]
+[Round "5.6"]
+[White "Kimura, Kaisei"]
+[Black "Manabe, Hiroaki"]
+[Result "0-1"]
+[ECO "B02"]
+[WhiteElo "1009"]
+[BlackElo "1755"]
+[PlyCount "60"]
+
+1. e4 Nf6 2. Nc3 d5 3. exd5 Nxd5 4. Nxd5 Qxd5 5. Nf3 Nc6 6. Be2 e5 7. d3 Bg4 8.
+O-O O-O-O 9. c4 Qd7 10. b3 h5 11. a3 Qf5 12. Nh4 Bxe2 13. Nxf5 Bxd1 14. Rxd1 e4
+15. d4 g6 16. Bg5 gxf5 17. Bxd8 Kxd8 18. d5 Ne5 19. Re1 Rg8 20. h3 Nf3+ 21. Kf1
+Nxe1 22. Rxe1 Bxa3 23. Ra1 Bc5 24. b4 Bd4 25. Rd1 Bc3 26. b5 f4 27. d6 Rg6 28.
+c5 cxd6 29. cxd6 Kd7 30. Rc1 Ba5 0-1
+
+[Event "Hokkaido Ch.2017"]
+[Site "Sapporo"]
+[Date "2017.03.26"]
+[Round "5.7"]
+[White "Koyahata, Taku"]
+[Black "Sato, Yasuji"]
+[Result "1-0"]
+[ECO "C01"]
+[WhiteElo "1349"]
+[BlackElo "1555"]
+[PlyCount "49"]
+
+1. d4 d5 2. c4 e5 3. e3 Bb4+ 4. Nc3 exd4 5. exd4 Nf6 6. a3 Bxc3+ 7. bxc3 O-O 8.
+Bd3 Re8+ 9. Ne2 Ng4 10. O-O Qh4 11. h3 Nf6 12. Nf4 g5 13. Nxd5 Nxd5 14. cxd5 g4
+15. Re1 Rf8 16. Re3 gxh3 17. Rg3+ Kh8 18. Bg5 Qxg3 19. fxg3 f6 20. Qh5 f5 21.
+Re1 Bd7 22. Re7 h2+ 23. Kxh2 Rf7 24. Qxf7 f4 25. Qxh7# 1-0
+
+[Event "Hokkaido Ch.2017"]
+[Site "Sapporo"]
+[Date "2017.03.25"]
+[Round "1.2"]
+[White "Hakamada, Eiji"]
+[Black "Yoshii, Yukihiko"]
+[Result "1/2-1/2"]
+[ECO "A53"]
+[WhiteElo "1432"]
+[BlackElo "1828"]
+[Annotator "Nishimori,Toshiyuki"]
+[PlyCount "123"]
+[TimeControl "240+2"]
+
+{256MB, Fritz11.ctg, TN080515} 1. c4 e5 2. Nc3 Nf6 3. e4 Be7 4. Nf3 d6 5. d4
+Bg4 6. Be2 Nbd7 7. Bg5 h6 8. Be3 O-O 9. h3 Bh5 10. O-O c6 11. dxe5 dxe5 12. Qc2
+Qc7 13. Rad1 Rfd8 14. Nh4 Bxe2 15. Nxe2 Nc5 16. Bxc5 Bxc5 17. a3 a5 18. Nf5 Bf8
+19. Kh1 g6 20. Ne3 Qe7 21. Nc3 Rac8 22. Qe2 Rd4 23. Nc2 Rd7 24. Rxd7 Qxd7 25.
+Rd1 Qe6 26. Na4 b5 27. cxb5 cxb5 28. Nc3 Qc6 29. Rd2 b4 30. axb4 Bxb4 31. Nxb4
+axb4 32. Nd5 Nxd5 33. Rxd5 Kg7 34. Qd2 Qc1+ 35. Kh2 Qxd2 36. Rxd2 Rc4 37. f3 h5
+38. Kg3 g5 39. Rf2 b3 40. Rd2 Rc2 41. Rd5 f6 42. Rd7+ Kg6 43. Rd8 h4+ 44. Kh2
+Rxb2 45. Rg8+ Kf7 46. Rb8 Rb1 47. Rb7+ Kg6 48. Rb8 b2 49. Rg8+ Kf7 50. Rb8 Ke7
+51. Rb6 Kd7 52. Rb3 Kc6 53. Rb8 Kc5 54. Rc8+ Kd4 55. Rb8 Kd3 56. Rd8+ Ke2 57.
+Rb8 Kd2 58. Rd8+ Kc2 59. Rc8+ Kd2 60. Rd8+ Ke2 61. Rb8 Kf2 62. Rb7 1/2-1/2
+

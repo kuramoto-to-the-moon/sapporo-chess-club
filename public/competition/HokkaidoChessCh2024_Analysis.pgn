@@ -1,0 +1,1997 @@
+﻿[Event "Hokkaido Chess Championship 2024"]
+[Site "?"]
+[Date "2024.03.23"]
+[Round "1.1"]
+[White "Yamaguchi, Tosei"]
+[Black "Takeuchi, Hiroshi"]
+[Result "1-0"]
+[ECO "E71"]
+[WhiteElo "1940"]
+[BlackElo "1388"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "85"]
+[EventDate "2024.03.23"]
+
+{E71: King's Indian: 4 e4 d6 5 h3} 1. d4 Nf6 2. c4 d6 3. Nc3 g6 4.
+e4 Bg7 5. h3 O-O 6. Be3 e5 7. d5 Nbd7 8. g4 (8. Bd3 Nh5 (8... Nc5 9. Bc2 a5 10.
+Nge2 Nh5 11. Qd2 f5 12. exf5 Bxf5 13. Bxf5 gxf5 14. O-O-O a4 15. g4 Nf4 16.
+Nxf4 exf4 17. Bd4 fxg4 18. Bxg7 Kxg7 19. hxg4 Qf6 20. Rh5 Qg6 21. f3 Rae8 22.
+Rdh1 Re3 23. Qh2 {Lovkov,R (2424)-Ljubarov,M (2158) St Petersburg 2012 1-0 (46)
+}) 9. Nge2 Nc5 10. Bc2 f5 11. exf5 gxf5 12. b4 Na6 13. Rb1 Qh4 14. g3 Qe7 15.
+Qd3 Bd7 16. g4 Nf4 17. Bxf4 exf4 18. Kf1 Qh4 19. Qf3 Rae8 20. gxf5 Bxf5 21.
+Bxf5 Rxf5 22. Nb5 Qh5 {Rivas Pastor,M (2505)-Polgar,Z (2510) Salamanca 1989 1/
+2-1/2 (46)}) 8... b6 $146 {Controls c5} (8... Nc5 9. Qc2 (9. Bg2 a5 10. Nge2 c6
+11. Ng3 cxd5 12. Nxd5 Nxd5 13. cxd5 b6 14. Bf3 Ba6 15. Be2 Bxe2 16. Qxe2 Qd7
+17. O-O Rfc8 18. Rac1 Rc7 19. Rc2 Rac8 20. Rfc1 b5 21. Kg2 Bf6 22. Qd2 b4 23.
+Bg5 Qe7 {Neyman,I (2217)-Boehlig,H (2236) Germany 2003 1/2-1/2 (68)}) 9... c6
+10. Nge2 cxd5 11. cxd5 Qa5 12. Ng3 Bd7 13. Bd2 Rfc8 14. Rb1 Qd8 15. Qd1 a5 16.
+Qf3 Rab8 17. g5 Ne8 18. h4 f6 19. Be2 Nc7 20. Kf1 Qe7 21. gxf6 Qxf6 22. Qxf6
+Bxf6 23. h5 {Bronstein,D-Gligoric,S Zuerich 1953 1-0 (57)}) (8... Nc5 $5 {
+should not be overlooked} 9. Qc2 a5 $11) 9. Nge2 $14 a5 10. Ng3 Ne8 (10... Nc5
+11. g5 Nfd7 12. Qc2 $14) 11. Qd2 Nc5 12. Be2 {Black has a cramped position} Bd7
+{[%cal Ya5a4] Black intends a4} 13. h4 f6 {Covers g5} (13... a4 $5 $16) 14.
+O-O-O a4 15. f3 a3 16. b3 Rb8 (16... Rf7 17. Kb1 $16) 17. Rdg1 (17. Nb5 Ra8 $18
+) 17... Ra8 18. Bd1 Rb8 (18... Qb8 19. h5 $16) 19. Bc2 (19. b4 Nb7 $18) 19...
+b5 (19... Ra8 20. h5 $16) 20. cxb5 $18 Bxb5 21. Nxb5 Rxb5 22. g5 (22. h5 $142
+$18) 22... f5 $4 {another bit of territory lost} (22... fxg5 23. hxg5 Qd7 24.
+Bd1 $16) 23. Ne2 (23. exf5 $142 {secures victory} Qb8 24. f6 Nxb3+ 25. axb3
+Rxb3 26. Kd1 (26. fxg7 $6 {is much worse} Rxf3 27. Bxb3 Qxb3 $16) 26... Bxf6
+27. Bxb3 Qxb3+ 28. Ke2 $18) 23... f4 24. Bf2 Na6 $2 (24... Qc8 $142 $16) 25.
+Bd3 $18 Qb8 26. Bxb5 Qxb5 27. Nc3 Qb4 28. Na4 Qb7 (28... Qb5 {doesn't improve
+anything} 29. h5 $18) 29. Kb1 c6 (29... Rf7 {cannot change destiny} 30. h5 $18)
+30. dxc6 Qxc6 31. Rc1 Qb7 32. Rhd1 Rf7 33. Qd5 Qb8 (33... Bf8 {is not much help
+} 34. Qc6 Rd7 35. Nb6 Qxc6 36. Rxc6 $18) 34. Qc4 Nac7 35. Bb6 (35. Nb6 $142 {
+and White can already relax} Qb7 $18) 35... Qc8 (35... Bf8 {cannot undo what
+has already been done} 36. Rd3 $18) 36. Bxc7 Nxc7 (36... Qxc7 {there is
+nothing else anyway} 37. Qxc7 Nxc7 38. Rxd6 Nb5 39. Rc8+ Rf8 40. Rxf8+ Bxf8 $18
+) 37. Rxd6 Qh3 (37... Qe8 38. Rc6 Qd7 39. Rxc7 Qxc7 40. Qxc7 Rxc7 41. Rxc7 Bf8
+42. Nc5 Bxc5 43. Rxc5 Kf8 44. Rc8+ Ke7 45. b4 Kd7 46. Rc1 Kd6 47. b5 h6 48. b6
+Ke7 49. b7 Kd8 50. b8=Q+ Kd7 51. Qb7+ Ke6 52. Rc6#) 38. Qd3 (38. Nc5 Bf8 39.
+Rf6 Ne6 40. Nxe6 Qg2 $18) 38... Ne6 (38... Bf8 {there is nothing better in the
+position} 39. Rf6 Rd7 40. Qc4+ Kg7 $18) 39. Qd5 Nd4 (39... Nf8 {doesn't get
+the cat off the tree} 40. b4 Qxf3 41. Rd8 $18) 40. Rd8+ (40. Nc5 Bf8 41. Rf6
+Bg7 42. Qxf7+ Kh8 43. Qe8+ Bf8 44. Qxf8#) 40... Bf8 41. Qxe5 (41. Rxf8+ $142 {
+and the rest is a matter of technique} Kxf8 42. Qxe5 Kg8 43. Qxd4 Qd7 44. Qxd7
+Rxd7 45. Rc8+ Kf7 $18) 41... Nxf3 42. Qd5 Qg2 (42... Kg7 43. Nc5 Bxc5 44. Qxc5
+Qe6 $18) 43. Rd7 (43. Rd7 Nd2+ 44. Qxd2 Qxe4+ 45. Qd3 Qxd3+ 46. Rxd3 $18) 1-0
+
+[Event "Hokkaido Chess Championship 2024"]
+[Site "?"]
+[Date "2024.03.23"]
+[Round "1.2"]
+[White "Miyatani, Ryohei"]
+[Black "Shinoda, Taro"]
+[Result "0-1"]
+[ECO "B90"]
+[WhiteElo "1313"]
+[BlackElo "1911"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "58"]
+[EventDate "2024.03.23"]
+
+{B90: Sicilian Najdorf: Unusual White 6th moves, 6 Be3 Ng4 and 6 Be3 e5} 1. e4
+c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Rg1 e5 7. Nb3 Be6 8. g4 d5 9.
+exd5 Nxd5 10. Nxd5 Qxd5 11. Qxd5 Bxd5 12. Be3 Nc6 13. O-O-O Bf3 {Black
+threatens to win material: Bf3xd1} (13... O-O-O 14. Be2 Be7 15. g5 Be6 16. Nc5
+Nd4 17. Bxd4 Rxd4 18. Rxd4 exd4 19. Nd3 g6 20. h4 h6 21. Bg4 Bxg4 22. Rxg4 hxg5
+23. hxg5 Rh5 24. Rxd4 Rxg5 25. Kd2 Rf5 26. a4 Kc7 27. b4 b6 28. Ke2 {Savchenko,
+B (2652)-Brkic,A (2543) Rijeka 2010 1/2-1/2 (40)}) 14. Re1 $146 (14. Rd2 Rd8 (
+14... Rc8 15. Rg3 (15. Bg2 Bxg2 16. Rxg2 Be7 17. f4 exf4 18. Bxf4 O-O 19. Rd7
+b5 20. Re2 Rfe8 21. a3 h6 22. c3 Kh7 23. Kc2 Kg6 24. Bd6 Bf6 25. Rxe8 Rxe8 26.
+Nc5 Re2+ 27. Kb1 Na5 28. Nd3 Kh7 29. Bf4 g5 {Belousov,D (2354)-Zuykov,A (2320)
+Vladimir 2009 1/2-1/2 (50)}) 15... e4 16. g5 Rd8 17. Bf4 Be7 18. Rxd8+ Nxd8 19.
+Nd2 Ne6 20. Be3 Bd6 21. Rg1 Bxh2 22. Nxf3 exf3 23. Rg4 Bd6 24. Re4 Kd7 25. Bh3
+Rc8 26. b4 a5 27. a3 axb4 28. axb4 Re8 29. Bg4 {Nadj Hedjesi,B (2371)-Bulajic,
+R (2321) Zlatibor 2007 1-0}) 15. Nc5 Rxd2 16. Kxd2 Nb4 17. Nd3 Nxd3 18. Bxd3
+Bd6 19. h3 Ke7 20. Re1 f6 21. c3 g5 22. Bf5 h5 23. gxh5 Rxh5 24. Bg4 Bxg4 25.
+hxg4 Rh4 26. Rg1 e4 27. b3 Ke6 28. Ke2 Rh2 {Kadric,D (2156)-Krstic,P (2309)
+Senta 2009 1/2-1/2 (46)}) 14... O-O-O 15. Bb6 {White threatens to win material:
+Bb6xd8} Rd7 16. Bd3 g6 {Secures f5} 17. Be4 Bxe4 18. Rxe4 Be7 19. Nd2 Bg5 20.
+Be3 Bxe3 {Black forks: d2+f2} 21. Rxe3 Rd4 22. c3 {White threatens to win
+material: c3xd4} Rf4 {A classical outpost} 23. f3 h5 24. h3 hxg4 25. hxg4 Rh3
+26. Rge1 f6 27. Re4 Rxe4 28. Rxe4 Rg3 (28... Kd7 29. Re2 $15) 29. Kc2 Nd8 0-1
+
+[Event "Hokkaido Chess Championship 2024"]
+[Site "?"]
+[Date "2024.03.23"]
+[Round "1.3"]
+[White "Sugimoto, Koichi"]
+[Black "Ito, Katsuhide"]
+[Result "1-0"]
+[ECO "D00"]
+[WhiteElo "1864"]
+[BlackElo "1199"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "71"]
+[EventDate "2024.03.23"]
+
+{D00: 1 d4 d5: Unusual lines} 1. d4 d5 2. Bf4 Nf6 3. Nc3 e6 4. e3
+Bb4 5. Bd3 (5. Nge2 O-O 6. a3 Bd6 7. g3 b6 8. Bg2 Bb7 9. O-O c5 10. Re1 Be7 11.
+h3 Nc6 12. g4 Rc8 13. Qd2 a6 14. dxc5 bxc5 15. Rad1 Qa5 16. Nc1 c4 17. N1e2
+Rfd8 18. Nd4 Qb6 19. Qc1 Nd7 {Jobava,B (2727)-Caruana,F (2820) Wijk aan Zee
+2015 0-1 (54)}) 5... O-O 6. Nge2 $146 (6. Nf3 b6 7. O-O Bb7 8. Nb5 Na6 9. a3
+Be7 10. Ne5 c6 11. Nc3 Nc7 12. Qf3 Nce8 13. Qh3 c5 14. g4 c4 15. Be2 Nd6 16.
+Qg2 Kh8 17. Bd1 Nfe4 18. Nxe4 dxe4 19. g5 f6 20. gxf6 gxf6 {Bergez,L (2339)
+-Narciso Dublan,M (2517) Barcelona 2015 0-1 (62)}) 6... a6 {Prevents intrusion
+on b5} 7. O-O c5 (7... Nc6 8. Ng3 $11) 8. dxc5 (8. a3 Bxc3 9. Nxc3 $14 (9. bxc3
+$2 c4 $19)) 8... Nc6 $2 (8... Bxc5 $142 {and Black could well hope to play on}
+9. Nd4 Bd6 10. Bxd6 Qxd6 $11) 9. Bd6 $16 Re8 10. a3 Ba5 11. b4 Bc7 12. Bxc7
+Qxc7 13. e4 b6 14. cxb6 Qxb6 15. exd5 exd5 16. Nf4 Be6 17. Re1 Rad8 (17... Qc7
+18. Qd2 $16) 18. Na4 Qa7 19. Nc5 Bg4 20. f3 Rxe1+ 21. Qxe1 Re8 (21... Bc8 22.
+Rd1 $16) 22. Qf2 (22. Qh4 Be6 23. Bxa6 Bf5 $18) 22... Bc8 23. c3 Rd8 (23... Qb8
+24. Ne2 $18) 24. Re1 $18 d4 $2 (24... h6 $18) 25. c4 (25. Qh4 $142 {might be
+the shorter path} Kf8 26. Bxh7 dxc3 $18) 25... a5 (25... Qb8 26. Qh4 h6 27. Nd5
+$18) 26. Ne4 (26. Qh4 {seems even better} Kf8 27. Nd5 Re8 28. Rxe8+ Kxe8 29.
+Nxf6+ gxf6 30. Qe4+ Ne5 $18) 26... Nd7 (26... Nxe4 27. Bxe4 axb4 28. axb4 Ne7
+29. Bxh7+ Kxh7 30. Qh4+ Kg8 31. Rxe7 Bd7 $18) 27. b5 Nce5 28. Bf1 (28. Qh4 {
+makes it even easier for White} f6 29. Nxf6+ Nxf6 30. Rxe5 Qc7 31. Bxh7+ Nxh7
+$18) 28... Qb6 (28... Bb7 29. Nd6 Ba8 $18) 29. Nd5 Qe6 (29... Qh6 {the only
+chance to get some counterplay} 30. Qxd4 Bb7 $18) 30. Qxd4 Nb6 (30... Kf8 {
+otherwise it's curtains at once} 31. Qa7 Qg6 $18) 31. Qxb6 Qxb6+ 32. Nxb6 Be6 (
+32... f5 {doesn't change anything anymore} 33. Nc5 Nf7 34. Nxc8 Rxc8 35. Nd7
+$18) 33. Nc5 Nd7 34. Ncxd7 Rxd7 35. Nxd7 Bxd7 (35... g5 {doesn't get the bull
+off the ice} 36. Nc5 Bf5 37. b6 Kg7 38. b7 Kh6 39. b8=Q f6 40. Re7 g4 41. Qf4+
+Kg6 42. Qxf5+ Kxf5 43. Bd3+ Kf4 44. g3+ Kg5 45. f4+ Kh5 46. Rxh7#) 36. Re7 (36.
+Re7 Bc6 37. bxc6 Kf8 38. Rd7 Ke8 39. Rd5 g6 40. c7 Ke7 41. c8=Q f5 42. Rd7+ Ke6
+43. f4 Kf6 44. Qc6#) 1-0
+
+[Event "Hokkaido Chess Championship 2024"]
+[Site "?"]
+[Date "2024.03.23"]
+[Round "1.4"]
+[White "Shimomura, Kensei"]
+[Black "Yoshii, Yukihiko"]
+[Result "0-1"]
+[ECO "B13"]
+[WhiteElo "1199"]
+[BlackElo "1644"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "88"]
+[EventDate "2024.03.23"]
+
+{[%mdl 8256] B13: Caro-Kann: Exchange Variation and Panov-Botvinnik Attack} 1.
+e4 c6 2. Nf3 d5 3. exd5 cxd5 4. d4 Nc6 5. Nc3 (5. Ne5 e6 6. c3 Nxe5 7. dxe5 Ne7
+8. Nd2 Nc6 9. Nf3 Qc7 10. Bf4 Be7 11. Bg3 Bd7 12. Bd3 g5 13. Qe2 h5 14. h4 g4
+15. Nd2 a6 16. a4 Bf8 17. O-O Bg7 18. Rfe1 Qb6 19. b4 a5 {Carlsen,M (2714)
+-Dreev,A (2607) Moscow 2007 1/2-1/2 (69)}) 5... Nf6 $146 (5... Bg4 6. Bb5 (6.
+Be2 e6 7. h3 Bf5 8. Bf4 Nf6 9. O-O Bd6 10. Bxd6 Qxd6 11. Nb5 Qe7 12. c3 O-O 13.
+Na3 Ne4 14. Nc2 Bg6 15. Ne3 Rfd8 16. Qe1 a6 17. Nd2 e5 18. dxe5 Nxd2 19. Qxd2
+d4 20. Ng4 h5 {Plotkin,V (2306)-Lalith,B (2537) Caleta 2015 0-1 (35)}) 6... Nf6
+7. h3 Bxf3 8. Qxf3 a6 9. Bxc6+ bxc6 10. O-O e6 11. Bg5 Be7 12. Na4 Rb8 13. Qd3
+Qa5 14. b3 Qb5 15. Qe3 O-O 16. Nc5 Bxc5 17. Bxf6 gxf6 18. dxc5 Qb7 19. Rad1 Kh8
+20. Rd4 {Blanco,C (2185)-Ordonez,F (2295) Valencia 2000 0-1}) 6. Bd3 e6 {
+Black is behind in developement} 7. O-O {White has an active position} Be7 8.
+Bf4 a6 {Consolidates b5} 9. Na4 {White has a very active position} O-O 10. c4
+$4 {White lets it slip away} (10. Re1 $142 $11 {would allow White to play on})
+10... dxc4 $19 11. Bc2 (11. Bxc4 $2 {doesn't work because of} b5 12. Ne5 Bb7
+$19 (12... bxc4 {is clearly weaker} 13. Nxc6 Qe8 14. Nxe7+ Qxe7 15. Nc5 $14))
+11... b5 12. Nc5 (12. Nc3 Nb4 $19) 12... Nxd4 $1 {Remove defender: d4.} 13.
+Nxd4 (13. Qxd4 Qxd4 14. Nxd4 Bxc5 {Remove defender}) (13. Nxd4 Bxc5 {Remove
+defender}) 13... Bxc5 14. Be3 $6 {not the greatest defence} (14. Nf3 Bb7 $19)
+14... Qb6 15. a3 (15. Qf3 {hardly improves anything} Bb7 (15... Bxd4 $6 {
+is clearly inferior} 16. Bxd4 Qxd4 17. Qxa8 $19) 16. Qf4 e5 17. Bxh7+ Kh8 18.
+Qxe5 Rfe8 $19 (18... Nxh7 $6 {is the less attractive alternative} 19. Nf5 Qg6
+20. Nh4 $17) (18... Kxh7 $143 19. Ne6 Qxe6 20. Qxe6 fxe6 21. Bxc5 $19)) 15...
+Bb7 (15... Rd8 $142 {it becomes clear that Black will call all the shots} 16.
+Qe2 Bxd4 17. Bxd4 Rxd4 18. h3 $19) 16. b4 (16. Nf3 {doesn't change the outcome
+of the game} Bxe3 17. fxe3 Qxe3+ 18. Kh1 Rad8 $19) 16... cxb3 17. Nxb3 Bxe3 18.
+fxe3 Qxe3+ 19. Kh1 (19. Rf2 {does not save the day} Rfd8 20. Qe1 Qb6 $19) 19...
+Rfd8 (19... Qh3 $142 $1 {might be the shorter path} 20. Rf2 Ng4 21. Qg1 Nxf2+
+22. Qxf2 $19) 20. Qe1 Qxe1 (20... Ng4 {keeps an even firmer grip} 21. Qh4 f5
+22. Rfe1 $19) 21. Raxe1 (21. Rfxe1 {cannot change what is in store for White}
+Rac8 22. Rac1 Bd5 $19) 21... Rac8 22. Bb1 (22. Rf2 {doesn't do any good} Rc3
+$19) 22... h6 (22... Rc3 $142 {makes it even easier for Black} 23. Rd1 Rdc8 24.
+Nd2 $19) 23. Nc1 (23. Re3 $19 {is one last hope}) 23... Rd2 24. Ne2 Ng4 25. Kg1
+Ne3 26. Rf2 Nxg2 (26... Nd1 $5 {and Black can already relax} 27. Rf4 Nc3 28.
+Nxc3 Rxg2+ 29. Kf1 Rxc3 30. Re2 Rc1+ 31. Re1 Rxe1+ 32. Kxe1 Rxh2 33. Rb4 $19)
+27. Rxg2 Bxg2 28. Kxg2 Rc4 (28... Rc3 {keeps an even firmer grip} 29. Be4 $19)
+29. Kf2 Rc3 30. Rd1 (30. Be4 $19 {is the last straw}) 30... Rxd1 31. Nxc3 Rc1
+32. Be4 (32. Nxb5 {a fruitless try to alter the course of the game} Rxb1 33.
+Nd6 Rb2+ 34. Kg1 Rb3 $19) 32... Rxc3 33. h4 Rxa3 34. Ke2 f5 35. Bc6 Rc3 36. Bd7
+Kf7 37. Kd2 (37. Bc8 {does not improve anything} Rc2+ 38. Kf3 Rxc8 39. Kf2 b4
+40. Kg3 b3 41. Kh3 Rc3+ 42. Kg2 b2 43. h5 b1=Q 44. Kf2 Qb2+ 45. Kf1 Rc1#) 37...
+b4 (37... Rc7 38. Bc8 Rxc8 39. Ke3 b4 40. Kd3 b3 41. h5 a5 42. Ke3 b2 43. Kf4
+b1=Q 44. Ke3 Rc3+ 45. Kd4 Qb4+ 46. Ke5 Re3#) 38. Ba4 Kf6 39. h5 e5 40. Bc2 (40.
+Bb3 {is no salvation} Rxb3 41. Kc2 Rc3+ 42. Kd2 e4 43. Kd1 b3 44. Ke1 Rc2 45.
+Kd1 e3 46. Ke1 b2 47. Kd1 b1=Q#) 40... e4 41. Kd1 (41. Bb1 {is not the saving
+move} Ke5 42. Kd1 Rd3+ 43. Ke1 Rh3 44. Ke2 Rh2+ 45. Kf1 Rh1+ 46. Ke2 Rxb1 47.
+Ke3 Ra1 48. Kd2 Ra2+ 49. Kc1 b3 50. Kd1 Rc2 51. Ke1 b2 52. Kd1 b1=Q#) 41... Ke5
+42. Kd2 (42. Bb1 {does not solve anything} Rd3+ 43. Ke2 Rh3 44. Kd2 Rh2+ 45.
+Kd1 b3 46. Ke1 Rb2 47. Kf1 Rxb1+ 48. Ke2 Rb2+ 49. Ke1 Rg2 50. Kf1 Rc2 51. Kg1
+b2 52. Kf1 b1=Q#) 42... Kd4 {[%cal Ye4e3] Black prepares the advance e3} 43.
+Bd3 (43. Ba4 {does not help much} e3+ 44. Ke2 b3 45. Kf3 b2 46. Kf4 b1=Q 47.
+Bc6 Qg1 48. Bg2 Qxg2 49. Kxf5 Qe4#) 43... Rxd3+ 44. Kc2 (44. Ke2 {hardly
+improves anything} b3 45. Ke1 b2 46. Ke2 b1=Q 47. Kf2 Qc2+ 48. Kf1 Rd1#) 44...
+e3 (44... e3 45. Kb1 e2 46. Kb2 e1=Q 47. Kc2 Kc4 48. Kb2 Rd2#) 0-1
+
+[Event "Hokkaido Chess Championship 2024"]
+[Site "?"]
+[Date "2024.03.23"]
+[Round "1.5"]
+[White "Kawamura, Takuto"]
+[Black "Furuse, Mizuki"]
+[Result "1-0"]
+[ECO "E60"]
+[WhiteElo "1601"]
+[BlackElo "1157"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "81"]
+[EventDate "2024.03.23"]
+
+{[%mdl 8256] E60: King's Indian: Unusual lines and Fianchetto Variation
+without Nc3} 1. d4 Nf6 2. Nf3 g6 3. g3 Bg7 4. Bg2 O-O 5. c4 d6 6. O-O Nbd7 7.
+Qc2 Re8 (7... a6 8. Rd1 c5 9. e4 Qc7 10. Be3 cxd4 11. Bxd4 Ne5 12. Nbd2 Be6 13.
+Rac1 Rfc8 14. Qb1 Nxf3+ 15. Nxf3 Qa5 16. b3 Bh6 17. Rc3 Nd7 18. Qb2 Qh5 19. Re1
+b5 20. cxb5 axb5 21. e5 dxe5 22. Nxe5 {Stangl,M (2530)-Ankerst,M (2360)
+Germany 1998 0-1 (46)}) 8. e4 (8. Rd1 c5 9. Nc3 a6 10. h3 Qc7 11. b3 b6 12. e4
+cxd4 13. Nxd4 Bb7 14. a4 Rac8 15. Be3 Qb8 16. Rac1 Qa8 17. Qb1 e6 18. Nde2 Bf8
+19. g4 h6 20. Ng3 Qb8 21. Bd4 Bg7 22. Qb2 Ba8 {Melkumyan,H (2673)-Kraus,O 
+(2190) Jerusalem 2015 0-1 (43)}) 8... e5 9. d5 {Black's piece can't move: c8}
+Nc5 $146 {Black threatens to win material: Nc5xe4} (9... a5 10. Nc3 Nc5 11. Ne1
+Rf8 12. Nd3 Nfd7 13. Nxc5 Nxc5 14. f4 exf4 15. Bxf4 Bd7 16. Rae1 Qe7 17. Qd2
+Rae8 18. Re2 Bg4 19. Ree1 Bd7 20. Re2 Qd8 21. Rfe1 Bg4 22. Rf2 h6 23. h3 Bd7
+24. h4 {Junge,K (2238)-Lichman,P (2324) Germany 2007 0-1 (61)}) 10. Re1 a5 11.
+Nc3 Nh5 12. Bg5 {White threatens to win material: Bg5xd8} f6 {Black threatens
+to win material: f6xg5} (12... Nf6 13. b3 $11) 13. Be3 $14 Na6 14. a3 f5 {
+Black has a cramped position} 15. Bg5 (15. exf5 Bxf5 16. Qd2 Nf6 $14) 15... Nf6
+16. Nh4 h6 (16... fxe4 17. Nxe4 Nc5 18. Nxc5 dxc5 19. a4 $14) 17. Bxf6 (17. Bd2
+$142 $5 $16) 17... Qxf6 $14 18. exf5 gxf5 {Black has the pair of bishops} 19.
+Bh3 {White threatens to win material: Bh3xf5} Rf8 {Black has a cramped position
+} 20. Rad1 e4 {This push gains space} (20... Qg5 21. f3 $11) 21. Ng2 (21. f3 $5
+$14 {is worth looking at}) 21... Qg5 $11 22. Nf4 {A comfortable square for the
+white knight} Be5 23. Nce2 Bd7 24. b3 {Prevents intrusion on a4} Nc5 {[%cal
+Ya5a4] Black plans a4} (24... h5 25. Qc1 $15) 25. Bg2 a4 {Black threatens to
+win material: a4xb3} (25... h5 $142 $5 $15 {is interesting}) 26. b4 $11 {
+White threatens to win material: b4xc5} Nb3 {Black can be proud of that piece}
+27. c5 (27. f3 h5 28. h4 Qg7 $11) 27... dxc5 28. bxc5 Ra6 $4 {allows the
+opponent back into the game} (28... Ra5 $5 {should be examined more closely}
+29. c6 Rc5 $11) 29. Qc4 (29. c6 Bc8 30. cxb7 Bxb7 31. Ne6 $18) 29... Kh8 $2 (
+29... Na5 $142 {is a viable option} 30. Qb4 Re8 $14) 30. c6 $18 {Deflection: a6
+} Na5 $4 {a blunder in a bad position} (30... bxc6 31. Qxa6 {Deflection}) 31.
+Qb5 (31. Qb4 $142 {makes sure everything is clear} Rfa8 32. cxd7 Qd8 $18) 31...
+Be8 (31... Bc8 32. cxb7 Bxb7 33. Ne6 $18) 32. Ne6 Qg8 (32... Qe7 33. Nxf8 Qxf8
+34. f3 $18) 33. Nxf8 (33. Qb4 $142 {might be the shorter path} Rf6 34. cxb7
+Nxb7 35. Qxb7 Rd6 $18) 33... Qxf8 34. Nd4 Bxd4 (34... Ra8 {is still a small
+chance} 35. Qb4 Qxb4 36. axb4 bxc6 37. Nxf5 Nc4 38. Rxe4 Bg6 $18) 35. Rxd4 Qxa3
+(35... Nb3 {what else?} 36. Qxb7 Nxd4 37. Qxa6 Qxa3 $18) 36. cxb7 $3 {Mate
+threat} Bxb5 (36... Z0 $140 37. Qxe8+ {Mate threat}) 37. b8=Q+ Kh7 38. Qxb5 Ra8
+(38... Qc3 39. Qd7+ Kg8 40. Qe8+ Kg7 41. Rdxe4 fxe4 42. Rxe4 Qe5 43. Qxe5+ Rf6
+44. Qe7+ Kg6 45. Rg4+ Kh5 46. Qg7 Rxf2 47. Rh4#) 39. Qd7+ (39. d6 Rf8 40. dxc7
+Kg6 41. Qd7 h5 42. Qe6+ Rf6 43. Qg8+ Kh6 44. c8=Q Rg6 45. Qh8+ Kg5 46. h4+ Kg4
+47. Rdxe4#) 39... Kg6 40. Qe6+ (40. Bxe4 Qa1 41. Bxf5+ Kf6 42. Qe7+ Kxf5 43.
+Qf7+ Kg5 44. h4#) 40... Kh5 41. Qxf5# 1-0
+
+[Event "Hokkaido Chess Championship 2024"]
+[Site "?"]
+[Date "2024.03.23"]
+[Round "1.6"]
+[White "Kuramoto, koutarou"]
+[Black "Aoki, Yasuhiro"]
+[Result "0-1"]
+[ECO "E97"]
+[BlackElo "1598"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "68"]
+[EventDate "2024.03.23"]
+
+{[%mdl 8256] E97: King's Indian: Classical Main Line (6...e5 7 0-0 Nc6): 8 Be3
+and 8 d5 Ne7, not 9 Ne1} 1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. Nf3 O-O 6.
+Be2 e5 7. O-O Nc6 8. d5 Ne7 9. b4 Nd7 10. a4 f5 (10... h6 11. Ba3 f5 12. c5 Nf6
+13. Nd2 fxe4 14. Ndxe4 Nf5 15. b5 b6 16. cxd6 cxd6 17. Nxf6+ Bxf6 18. Ne4 Be7
+19. Bg4 Nd4 20. Rc1 Rf4 21. Bxc8 Rxe4 22. Qd3 Rh4 23. Qxg6+ Kh8 24. Bf5 Qg8 25.
+Rc7 {Karjakin,S (2723)-Polgar,J (2680) Moscow 2009 1-0 (35)}) 11. Ba3 (11. Ng5
+Nf6 12. f3 h6 13. Ne6 Bxe6 14. dxe6 c6 15. Be3 Kh7 16. a5 Ne8 17. a6 b6 18. b5
+f4 19. Bc1 c5 20. Ra2 Qc8 21. Rf2 Qxe6 22. Bf1 Nf6 23. g4 Ne8 24. h4 Bf6 25.
+Rh2 {1/2-1/2 (25) Podkriznik,G (2332)-Plakalovic,P (2258) Rogaska Slatina 2011}
+) 11... b6 $146 {Black has a cramped position} (11... Nf6 12. Nd2 Bh6 13. Bf3 (
+13. Bd3 Bxd2 14. Qxd2 f4 15. Rfc1 g5 16. c5 Ng6 17. b5 b6 18. cxd6 cxd6 19. Nd1
+Ne8 20. Bb4 Rf7 21. a5 Rb8 22. axb6 axb6 23. Ra3 g4 24. Qa2 Bb7 25. Rcc3 Rg7
+26. Bf1 Nf6 27. Qc2 h5 {Sellos,D (2372)-Lode,S (2207) Paris 2000 1-0 (39)})
+13... f4 (13... Bxd2 14. Qxd2 f4 15. Be2 g5 16. f3 Ng6 17. Kf2 Rf7 18. Ke1 Kh8
+19. Kd1 g4 20. Kc2 gxf3 21. gxf3 Bh3 22. Rg1 a5 23. b5 b6 24. Bf1 Bd7 25. Qf2
+Nh5 26. Ra2 Qf6 27. Nd1 Rg8 28. Kb3 {Samakov,N (2179)-Nguyen,V (2325) Bikaner
+2004 1-0 (37)}) 14. c5 g5 15. Nc4 g4 16. Be2 Qd7 17. g3 Rf7 18. b5 f3 19. Bd3
+Ne8 20. b6 cxb6 21. cxd6 Ng6 22. Nb5 Qd8 23. Qb3 Bd7 24. Nc7 Rc8 25. Ne6 Qf6
+26. Nc7 {Bellaiche,A (2189)-Lode,S (2203) Pau 2000 1-0 (54)}) (11... Nf6 12.
+Nd2 $11) 12. Ne1 (12. Ng5 $5 Nf6 13. Bf3 $14) 12... a5 13. Nd3 (13. bxa5 Rxa5
+14. Bb4 Ra6 $11) 13... axb4 $15 {Black forks: a3+c3} 14. Bxb4 fxe4 15. Nxe4 {
+The knight feels good on e4} Nf5 16. a5 {White has a very active position} Nd4
+{Menacing} 17. Bg4 Nf6 18. Nxf6+ Rxf6 19. Bxc8 Qxc8 20. axb6 Rxa1 21. Qxa1 cxb6
+22. Qa2 Bh6 23. Bc3 Qg4 24. Bxd4 Qxd4 ({Less advisable is} 24... exd4 25. Re1
+$14) 25. Qc2 e4 {Black threatens to win material: e4xd3} 26. Nc1 $2 (26. Qb2
+$142 {and White can hope to live} Qxb2 27. Nxb2 $15) 26... e3 $19 27. Nd3 $2 (
+27. Qd3 $142 exf2+ 28. Kh1 $19) 27... exf2+ 28. Nxf2 (28. Kh1 {the last chance
+for counterplay} Bg5 29. Nb2 $19) 28... Rxf2 $1 {Decoy: f2} 29. Rxf2 (29. Qxf2
+Be3 {Decoy}) (29. Rxf2 Qa1+ 30. Qb1 (30. Qd1 Qxd1+ {Mate attack}) (30. Qc1
+Qxc1+ {Mate attack}) (30. Rf1 Be3+ {Decoy Double attack}) 30... Qxb1+ {Mate
+attack}) (29. Z0 $140 Rxc2+ {Mate threat}) 29... Qa1+ 30. Rf1 Be3+ 31. Qf2
+Bxf2+ 32. Kxf2 Qa2+ 33. Kg1 (33. Kg3 {does not win a prize} Qxc4 34. Rf4 Qc3+
+35. Kf2 Qd2+ 36. Kg3 b5 $19) 33... Qxc4 34. Ra1 Qd4+ (34... Qd4+ 35. Kf1 Qxa1+
+36. Kf2 b5 37. Kf3 b4 38. h3 b3 39. Ke2 b2 40. Kf2 b1=Q 41. Kf3 Qd3+ 42. Kg4
+Qe5 43. g3 Qdxg3#) 0-1
+
+[Event "Hokkaido Chess Championship 2024"]
+[Site "?"]
+[Date "2024.03.23"]
+[Round "1.7"]
+[White "Hasegawa, Emi"]
+[Black "Ono, Yukiko"]
+[Result "1-0"]
+[ECO "D20"]
+[WhiteElo "1417"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "57"]
+[EventDate "2024.03.23"]
+
+{D20: Queen's Gambit Accepted: 3 e3 and 3 e4} 1. d4 d5 2. c4 dxc4
+3. e4 Nf6 4. Nc3 Bg4 (4... c6 5. Bxc4 b5 6. Bd3 a6 7. Nf3 e6 8. Bg5 h6 9. Bh4
+Nbd7 10. O-O Bb7 11. d5 e5 12. Rc1 c5 13. a4 c4 14. Be2 Qb6 15. Bxf6 gxf6 16.
+Nh4 Nc5 17. Bh5 Rh7 18. Nf5 Rd8 19. Qg4 {Aliev,K (2385)-Ghorbani,M (2430)
+Teheran 1998 1-0 (37)}) (4... a6 5. e5 Nd5 6. Bxc4 e6 7. Nxd5 exd5 8. Bb3 c5 9.
+dxc5 Be6 10. Be3 Nc6 11. Nf3 Bxc5 12. Bxc5 Qa5+ 13. Qd2 Qxc5 14. Rc1 Qa5 15.
+Qxa5 Nxa5 16. Rc5 b6 17. Rc7 Kd8 18. Rc3 Ke7 19. Kd2 {Siebrecht,S (2457)-Lubbe,
+N (2353) Bad Liebenzell 2010 0-1 (59)}) 5. f3 Bh5 6. Bxc4 Nc6 $146 (6... e6 7.
+Nge2 a6 8. Be3 c6 9. Qd2 Nbd7 10. h3 Bg6 11. g4 e5 12. h4 h6 13. O-O-O b5 14.
+Bb3 exd4 15. Bxd4 c5 16. Bxf6 Nxf6 17. Qf4 Qb8 18. e5 Nd7 19. h5 Bxh5 20. Rxh5
+c4 21. Bc2 {Cherednichenko,S (2166)-Vinogradov,P (2234) Alushta 2000 1-0}) 7.
+Be3 e6 8. Nge2 Bd6 $2 (8... Bb4 $142 $16) 9. e5 $18 Bb4 (9... Nxe5 10. dxe5
+Bxe5 11. Qb3 $18) 10. exf6 gxf6 11. Qb3 a5 (11... O-O {does not help much} 12.
+O-O Qe7 13. a3 $18) 12. O-O-O (12. O-O {keeps an even firmer grip} O-O $18)
+12... O-O (12... Bg6 {does not solve anything} 13. d5 exd5 14. Nf4 $18 (14.
+Nxd5 a4 15. Qxb4 Nxb4 16. Nxb4 Qc8 $18) (14. Rxd5 $143 Qe7 15. Ne4 a4 $18)) 13.
+d5 Ne5 14. dxe6 Nd3+ (14... Qe8 {a last effort to resist the inevitable} 15.
+Ne4 fxe6 16. Bxe6+ Kh8 $18) 15. Rxd3 Qe7 16. Rd7 (16. Nd5 $142 {and the result
+of the game is clear: White will win} Qxe6 17. Nef4 b5 18. Bxb5 Qf5 $18) 16...
+Qe8 17. Nd5 (17. Ne4 $142 {makes it even easier for White} fxe6 18. Bxe6+ Kh8
+$18) 17... Qxe6 (17... fxe6 {doesn't get the bull off the ice} 18. Nxc7 Qxd7
+19. Nxa8 $18) 18. Ne7+ (18. Nef4 $142 {and White wins} Qf5 19. Nxh5 Kh8 20.
+Ndxf6 Rad8 $18) 18... Qxe7 19. Rxe7 Rad8 20. Rxc7 Bg6 21. Nf4 Bf5 22. Bxf7+ Kg7
+23. Nh5+ (23. Be6+ Rf7 24. Rxf7+ Kg8 25. Bxf5 Rc8+ 26. Rc7+ Kh8 27. Rxc8+ Bf8
+28. Rxf8+ Kg7 29. Ne6#) 23... Kh8 24. Nxf6 (24. Bh6 Bd2+ 25. Bxd2 Rd7 26. Rxd7
+Rc8+ 27. Bc3 Bxd7 28. Qb6 Rxc3+ 29. bxc3 h6 30. Qxf6+ Kh7 31. Qg7#) 24... Bd2+
+25. Bxd2 b5 (25... Rxd2 {is not much help} 26. Kxd2 h5 27. Qc3 Rd8+ 28. Nd5+
+Kh7 29. Bg8+ Kxg8 30. Qg7#) 26. Qc3 b4 (26... Rxf7 {doesn't change the outcome
+of the game} 27. Ng4+ Rd4 28. Qxd4+ Kg8 29. Nh6+ Kf8 30. Qh8#) 27. Qe5 (27.
+Nd5+ bxc3 28. Bxc3#) 27... h6 (27... Rxf7 {doesn't change anything anymore} 28.
+Ng4+ Kg8 29. Nh6+ Kf8 30. Rxf7#) 28. Nh5+ Kh7 29. Qg7# 1-0
+
+[Event "Hokkaido Chess Championship 2024"]
+[Site "?"]
+[Date "2024.03.23"]
+[Round "1.8"]
+[White "Shishido, Kenta"]
+[Black "Nakamura, Mitsuru"]
+[Result "1/2-1/2"]
+[ECO "B86"]
+[BlackElo "1406"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "153"]
+[EventDate "2024.03.23"]
+
+{B86: Sicilian Scheveningen/Najdorf: 6 Bc4, without early ...b5} 1.
+e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. a4 e6 7. Bc4 Qc7 8. Qe2 (8.
+Ba2 Nc6 9. O-O Be7 10. Kh1 O-O 11. f4 Nb4 12. Bb3 Rd8 13. f5 e5 14. Nde2 b6 15.
+Ng3 d5 16. exd5 Bb7 17. Nh5 Nxh5 18. Qxh5 Nxd5 19. Bg5 Bxg5 20. Nxd5 Bxd5 21.
+Qxg5 h6 22. Qg3 Bxb3 {Suran,J (2401)-Fedorchuk,S (2569) Czechia 2004 0-1 (66)})
+8... Be7 9. O-O h6 $146 {Covers g5} (9... O-O 10. Be3 Nc6 11. Nxc6 Qxc6 12. Bd4
+Bd7 13. a5 Rfe8 14. Bb3 Qc8 15. Na4 Bb5 16. c4 Bxa4 17. Bxa4 Rf8 18. Rfd1 Nd7
+19. b4 Ne5 20. c5 Nc6 21. cxd6 Bxd6 22. Bxg7 Bxh2+ 23. Kxh2 Qc7+ 24. e5 {
+Berzinsh,R (2421)-Germanavicius,S (2376) Lithuania 2014 0-1 (45)}) (9... Nc6
+10. Be3 Nxd4 (10... Bd7 11. f4 Rc8 12. Ba2 Na5 13. Rad1 Nc4 14. Bc1 Qc5 15. Kh1
+O-O 16. e5 dxe5 17. fxe5 Nd5 18. Ne4 Qc7 19. Bxc4 Qxc4 20. Qxc4 Rxc4 21. b3 Rc7
+22. c4 Nb4 23. Ba3 b6 24. Rd2 a5 25. Rfd1 {Nuri,K (2322)-Ganguly,S (2619) Biel
+2014 0-1 (41)}) 11. Bxd4 e5 12. Be3 Be6 13. Bb3 h6 14. Rfd1 O-O 15. a5 Rac8 16.
+Bb6 Qc6 17. Rd3 Bxb3 {1/2-1/2 (17) Chojnacki,K (2416)-Szelag,M (2455) Poznan
+2010}) 10. Be3 O-O {Black is behind in development.} 11. Rad1 Nc6 12. Nxc6 bxc6
+{Black has a cramped position} 13. b4 $4 {with this move White loses his
+initiative} (13. Bf4 $5 $11) 13... Bb7 (13... d5 14. Bd3 $17 (14. exd5 $4 cxd5
+15. b5 axb5 16. axb5 Qxc4 17. Qxc4 dxc4 $19)) 14. b5 $2 (14. Bf4 $142 $5 $11 {
+and White hangs on}) 14... cxb5 $17 15. axb5 axb5 (15... Rac8 $142 {Black has
+the better game} 16. bxa6 Ba8 $17) 16. Nxb5 $11 Qc6 {Black threatens to win
+material: Qc6xe4} 17. Bd4 $2 (17. f3 $142 $5 $11 {and White is still in the
+game}) 17... e5 18. Na7 (18. Bb2 $142 $5 $17) 18... Qxe4 $19 19. Qxe4 Bxe4 20.
+Be3 d5 (20... Bxc2 $6 21. Nc6 Rfe8 22. Nxe7+ Rxe7 23. Rxd6 $15) 21. Bb3 $2 (21.
+f3 d4 22. fxe4 dxe3 23. Nc6 $19) 21... d4 22. Bxd4 exd4 23. Nb5 Bc5 24. Rfe1 (
+24. Nxd4 {is not the saving move} Rfd8 25. Nf3 Ng4 $19) 24... Rfd8 25. c3 (25.
+h3 {doesn't get the cat off the tree} Rab8 26. Ba4 Bb4 $19) 25... dxc3 (25...
+d3 $5 {makes it even easier for Black} 26. h3 $19) 26. Nxc3 Rxd1 27. Rxd1 Bb4 (
+27... Bg6 $142 {and Black has triumphed} 28. Bd5 Ra3 29. Rc1 $19) 28. Nxe4 Nxe4
+29. f3 (29. g3 {doesn't improve anything} Bc5 30. Rd7 Bxf2+ 31. Kg2 Rf8 $19)
+29... Nd2 (29... Bc5+ $5 {keeps an even firmer grip} 30. Kf1 Nc3 31. Rc1 $19)
+30. Bd5 Ra5 31. Be4 (31. Bc6 {a fruitless try to alter the course of the game}
+Rc5 32. Ba4 Rc4 $19) 31... Bc5+ 32. Kh1 Be3 (32... Nxe4 {seems even better} 33.
+fxe4 Ra4 34. Rc1 $19) 33. h4 (33. Bc6 {doesn't do any good} Rc5 34. Ba8 g5 $19)
+33... Re5 (33... Nxe4 {might be the shorter path} 34. fxe4 Bf2 35. Rd3 Bxh4 36.
+g3 $19) 34. Re1 (34. Bc6 {cannot change what is in store for White} Rc5 35. Bb7
+Rc7 $19) 34... Nc4 (34... Nxe4 $142 {and Black can celebrate victory} 35. fxe4
+Bf2 36. Re2 $19) 35. Ra1 g6 36. Ra4 Nd2 37. g4 (37. Bc6 {does not improve
+anything} Bc5 $19) 37... Rc5 38. Ra3 (38. Ra1 {cannot change destiny} Nxe4 39.
+fxe4 Rc1+ 40. Rxc1 Bxc1 $19) 38... Rc1+ 39. Kg2 (39. Kh2 {does not save the day
+} Re1 40. Bd3 Bc5 $19) 39... Bf4 (39... Rg1+ 40. Kh3 Nf1 41. Ra8+ Kg7 42. Rg8+
+Kxg8 43. h5 Rg3+ 44. Kh4 Bg5#) 40. h5 (40. Bd5 {is no salvation} Nf1 41. Bb3
+Ne3+ 42. Kf2 Rc3 $19) 40... Nc4 (40... gxh5 {and Black can already relax} 41.
+gxh5 Rc5 42. Ra4 $19) 41. Ra8+ Kg7 42. hxg6 Ne3+ (42... fxg6 $142 {keeps an
+even firmer grip} 43. Ra7+ Kf6 44. Ra6+ Nd6 45. Bd3 $19) 43. Kf2 Rf1+ (43...
+fxg6 44. Ra7+ Kf6 45. Ra6+ Kg5 46. Ke2 $19) 44. Ke2 fxg6 45. Ra6 Rg1 46. Rxg6+
+Kh8 47. Rf6 Rg2+ 48. Kd3 Bg5 49. Rf8+ Kg7 50. Re8 Nd1 51. f4 $2 (51. Kc4 $142
+Rd2 52. Kc5 $19) 51... Bf6 $4 {forfeits the clear win} (51... Nb2+ $142 {
+secures the point} 52. Ke3 Rg3+ 53. Bf3 Nd1+ 54. Ke2 Bxf4 $19) 52. Bxg2 $18
+Nf2+ 53. Ke3 Nxg4+ 54. Kf3 (54. Ke4 {makes it even easier for White} h5 $18)
+54... h5 55. Bh3 Nh6 56. Ke4 Kf7 57. Bd7 h4 58. Ra8 Ke7 (58... Bc3 59. Ra7 $18)
+59. Ra6 (59. Ra7 {might be the shorter path} Bg7 $18) 59... Nf7 $2 (59... Kf7
+60. Bf5 $18) 60. Bh3 (60. Re6+ $142 $5 {seems even better} Kxd7 61. Rxf6 Ke7
+$18) 60... Nd6+ 61. Kd5 Ne8 $4 {terrible, but the game is lost in any case} (
+61... Nb5 62. Kc5 Nc3 $18) 62. Ra7+ Kf8 63. Ke6 Bd4 64. Rf7+ (64. Ra8 $5 {
+seems even better} Bc3 $18) 64... Kg8 65. Ke7 (65. Rd7 $142 {and White can
+already relax} Ng7+ 66. Ke7 Bc5+ 67. Kf6 Nh5+ 68. Kg5 $18) 65... Ng7 (65... Nd6
+66. Rf8+ Kg7 $18) 66. Rf8+ Kh7 67. f5 {Loses material} (67. Kf7 Nh5 68. Rd8 $18
+) 67... Bc5+ $11 {Black skewers: f8} 68. Kf7 Bxf8 69. Kxf8 {A minor pieces
+endgame occured} Nh5 70. Kf7 Nf4 71. f6 $4 {lets it slip away} (71. Bg4 Kh6 $11
+) 71... Nd5 (71... Nxh3 $142 {secures the win} 72. Ke8 Ng5 $19) 72. Ke6 Nxf6 {
+Sacrifices material.} 73. Kxf6 {White wins a piece} Kh6 74. Kf5 Kh5 75. Kf4 Kg6
+76. Kg4 {White threatens to win material: Kg4xh4} Kf6 77. Kxh4 1/2-1/2
+
+[Event "Hokkaido Chess Championship 2024"]
+[Site "?"]
+[Date "2024.03.23"]
+[Round "2.1"]
+[White "Aoki, Yasuhiro"]
+[Black "Yamaguchi, Tosei"]
+[Result "0-1"]
+[ECO "A26"]
+[WhiteElo "1598"]
+[BlackElo "1940"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "80"]
+[EventDate "2024.03.23"]
+
+{A26: English Opening vs King's Indian with ...Nc6 and d3} 1. c4 g6 2. Nf3 Bg7
+3. g3 e5 4. Nc3 Nc6 5. Bg2 Nge7 6. O-O d6 7. d3 h6 8. e4 $146 (8. Bd2 O-O 9.
+Rb1 Be6 10. b4 Qd7 11. b5 Nd8 12. Qc1 Kh7 13. Ne1 Bh3 14. Nd5 Bxg2 15. Nxg2 Ng8
+16. f4 f5 17. Bc3 Ne6 18. fxe5 dxe5 19. Qb2 c6 20. Nde3 Nd4 21. bxc6 bxc6 22.
+Bxd4 exd4 {Walach,M (2220)-Morkisz,B (2185) Slask 1996 1/2-1/2 (58)}) (8. Rb1
+a5 (8... Be6 9. b4 Qd7 10. b5 Nd8 11. Ba3 f5 (11... O-O 12. Qa4 f5 13. Rfc1 Rf7
+14. Nd2 g5 15. Nb3 f4 16. Na5 Bh3 17. Be4 Nf5 18. Bd5 Ne6 19. Nxb7 Raf8 20.
+Qxa7 Nfd4 21. b6 fxg3 22. fxg3 e4 23. Nc5 dxc5 24. b7 Nf4 25. Bxc5 Nxd5 26.
+Bxf8 {Aijala,J (2200)-Krnic,Z (2400) Graz 1972 0-1}) 12. e3 g5 13. c5 O-O 14.
+Nd2 e4 15. Qc2 dxc5 16. dxe4 f4 17. exf4 gxf4 18. Bxc5 Rf7 19. Rbd1 Bh3 20. Nb3
+Qe6 21. f3 Bxg2 22. Kxg2 Qc4 23. Rc1 {Heberla,B (2527)-Angskog,K (2215)
+Bugibba 2011 1-0 (34)}) 9. a3 Nd4 10. b4 axb4 11. axb4 O-O 12. b5 Bg4 13. Nd2
+Qc8 14. Re1 Bh3 15. Bh1 Kh7 16. e3 Ne6 17. Nd5 Nxd5 18. cxd5 Nc5 19. Qc2 b6 20.
+Nc4 Qf5 21. e4 Qd7 22. Be3 Qe7 {Rechlis,G (2445)-Speelman,J (2555) Beersheba
+1987 1/2-1/2}) (8. Ne1 O-O 9. Rb1 a5 10. a3 Be6 11. Nd5 f5 12. f4 Qd7 13. Qa4
+Ra6 14. Bd2 Rb8 15. Nc2 Kh7 16. e4 Ng8 17. Nce3 exf4 18. Nxf4 Nd4 19. Qd1 fxe4
+20. Bxe4 Bf7 21. Nh5 Be5 22. Nd5 Re8 {Popov,L (2410)-Krnic,Z (2435) Wijk aan
+Zee 1977 1-0 (46)}) 8... Bg4 9. h3 {White threatens to win material: h3xg4} Be6
+10. Be3 Qd7 11. Kh2 O-O 12. Nd5 f5 13. Nxe7+ (13. Qb3 fxe4 14. dxe4 Nd4 15.
+Nxd4 exd4 $11) 13... Nxe7 14. exf5 Nxf5 15. Qd2 c6 16. Rac1 c5 (16... Qc7 17.
+Qe2 $15) 17. b3 Rae8 18. g4 Nxe3 19. Qxe3 {Black has the pair of bishops} Rf4 {
+An ideal square for the black rook.} 20. Nd2 Ref8 21. Ne4 b6 22. f3 (22. Nc3
+Bf6 $15) 22... d5 23. Nf2 Qd6 {[%cal Yd5d4] Black prepares d4} 24. Kh1 (24.
+cxd5 Bxd5 25. Ne4 Qe7 $17) 24... Qe7 25. Kh2 Qh4 26. Qe2 $2 (26. cxd5 Bxd5 27.
+Ne4 Qe7 $17) 26... d4 $4 {releasing the pressure on the opponent} (26... e4
+$142 {and Black has reached his goal} 27. Nh1 Be5 $19) 27. Ne4 $17 h5 28. Qf2 (
+28. Kg1 Bh6 $17) 28... Qe7 (28... Rxg4 $5 29. Qxh4 Rxh4 30. Kg3 $19) 29. Qg3 h4
+30. Qe1 Bh6 31. Rc2 Bc8 32. Re2 (32. b4 cxb4 33. c5 Bb7 $17) 32... Bb7 33. Ref2
+R4f7 34. Re2 Rf4 {Twofold repetition} 35. Ref2 R8f7 (35... Kg7 36. Re2 $17) 36.
+Qe2 (36. Re2 Bc6 $17) 36... Bc6 37. Qe1 Ba8 38. Qe2 (38. Re2 Rf8 $17) 38... Rf8
+39. Qe1 R4f7 40. Qe2 $2 (40. Re2 $142 $17) 40... Be3 $19 0-1
+
+[Event "Hokkaido Chess Championship 2024"]
+[Site "?"]
+[Date "2024.03.23"]
+[Round "2.2"]
+[White "Shinoda, Taro"]
+[Black "Kawamura, Takuto"]
+[Result "1-0"]
+[ECO "E00"]
+[WhiteElo "1911"]
+[BlackElo "1601"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "57"]
+[EventDate "2024.03.23"]
+
+{E00: Catalan Bogo-Indian (3 g3 Bb4+)} 1. d4 Nf6 2. c4 e6 3. g3
+Bb4+ 4. Nd2 O-O 5. Bg2 d5 6. Qc2 c6 7. Ngf3 Re8 8. O-O Nbd7 9. e4 dxe4 10. Nxe4
+Nxe4 11. Qxe4 Nf6 12. Qe2 $146 (12. Qc2 Be7 13. Rd1 Qa5 14. a3 Bd7 15. Ne5 Red8
+16. Bf4 Rac8 17. a4 Be8 18. c5 b6 19. Bf1 bxc5 20. Nc4 Qb4 21. Bd2 Qb8 22. Bf4
+Qb4 23. Bd2 Qb8 {1/2-1/2 (23) Kopylov,M (2445)-Reddmann,H (2338) Hamburg 2004})
+12... Bd6 13. Rd1 Bd7 14. Ne5 h6 15. h4 Be7 16. Rb1 Rc8 17. b4 b6 (17... b5 $5
+$16) 18. a4 $18 b5 (18... Bd6 $18) 19. axb5 cxb5 20. c5 Nd5 (20... Rc7 21. c6
+Bc8 22. Qxb5 $18) 21. Bd2 (21. Bxh6 $142 {and White can already relax} Bf6 22.
+Qg4 $18) 21... Bf6 $16 22. Ra1 Rc7 23. Ra5 Bc8 24. Bxd5 (24. Qg4 $142 {the
+advantage is on the side of White} a6 25. Bxh6 Nxb4 26. c6 $16) 24... Qxd5 $11
+25. Qxb5 ({Inferior is} 25. Rxb5 Ba6 26. Ng4 Be7 $11 (26... Bxb5 $143 27. Qxb5
+Rd8 28. Bf4 $11)) 25... Rd8 26. Bf4 Bxe5 27. Bxe5 Bb7 28. c6 {White threatens
+to win material: c6xb7} Bxc6 $4 (28... Qxc6 29. Qxc6 Rxc6 $11 (29... Bxc6 $4
+30. Bxc7 Rd7 31. Rxa7 $18)) 29. Qxd5 $18 (29. Qxd5 Rxd5 30. Bxc7 Rxa5 31. bxa5
+$18) 1-0
+
+[Event "Hokkaido Chess Championship 2024"]
+[Site "?"]
+[Date "2024.03.23"]
+[Round "2.3"]
+[White "Yoshii, Yukihiko"]
+[Black "Hasegawa, Emi"]
+[Result "1-0"]
+[ECO "A38"]
+[WhiteElo "1644"]
+[BlackElo "1417"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "105"]
+[EventDate "2024.03.23"]
+
+{A38: Symmetrical English vs ...g6: 4 Bg2 Bg7 5 Nf3 Nf6} 1. c4 c5
+2. Nc3 Nc6 3. g3 g6 4. Bg2 Bg7 5. Nf3 Nf6 6. O-O O-O 7. e3 e5 (7... d5 8. cxd5
+Nxd5 9. d4 cxd4 10. Nxd4 Nxd4 11. exd4 Be6 12. Qf3 Nxc3 13. bxc3 Rc8 14. Bg5 b6
+15. Rfc1 Qd7 16. d5 Bg4 17. Qd3 h6 18. Bf4 Bf5 19. Qd2 g5 20. Be3 Rfd8 21. h4
+gxh4 22. Bxh6 {Van Wely,L (2636)-Dlugy,M (2531) Internet 1999 0-1 (67)}) (7...
+d6 8. Qe2 e5 9. d3 h6 10. Bd2 Be6 11. a3 e4 12. dxe4 Na5 13. Nd5 Nxe4 14. Bxa5
+Qxa5 15. Nf4 Bd7 16. Rfd1 Rae8 17. Nd2 Nf6 18. b4 Qc7 19. Rab1 b6 20. Rdc1 Bf5
+21. Rb3 g5 22. Nd5 {Balog,I (2491)-Shyam,N (2393) Kemer 2009 1-0 (61)}) 8. d4
+$146 (8. d3 d6 9. e4 Ne8 10. Ne1 Nc7 11. Be3 f5 12. f4 {1/2-1/2 (12) Poliakov,
+Y (2249)-Kagramanianz,V (2346) Pavlograd 2000}) 8... exd4 (8... d6 9. d5 Na5
+10. Nd2 $11) 9. exd4 cxd4 10. Nxd4 Nh5 (10... Nxd4 $142 $5 {is noteworthy} 11.
+Qxd4 Re8 $14) 11. Be3 $16 Ne5 12. Qe2 a6 13. Rfd1 Qc7 (13... Re8 14. Nf5 $1 {
+Deflection: h5} gxf5 15. Qxh5 $18) 14. b3 (14. Nd5 Qd8 15. Nf5 gxf5 16. Qxh5 d6
+$18) 14... Nc6 (14... Nf6 $5 $16) 15. Rac1 Qa5 (15... Re8 16. Nf5 $1 {
+Deflection: h5} Nf4 17. gxf4 gxf5 18. Nd5 $18) 16. Qd2 (16. Nd5 $5 Nf6 17. Nxc6
+dxc6 $18) 16... Nf6 17. h3 (17. Na4 Qxd2 18. Rxd2 Ng4 19. Nxc6 dxc6 $18) 17...
+Re8 $16 18. Kh2 Qh5 19. Bf3 Qa5 20. Kg2 Ne5 21. Bd5 Nxd5 (21... Rb8 22. f4 Nc6
+$16 (22... Nxd5 $2 {doesn't lead to the expected results} 23. cxd5 (23. Nxd5 $6
+Qxd2+ 24. Rxd2 Nc6 $16) 23... Nc6 24. dxc6 dxc6 25. Nf3 $18)) 22. Nxd5 (22.
+cxd5 $6 b5 23. Ne4 Qxd2 24. Rxd2 Nd3 25. Rxd3 Rxe4 $14) 22... Qd8 $2 (22...
+Qxd2 $142 23. Rxd2 Rb8 $18) 23. Bf4 (23. Nf5 $142 $1 {and White has prevailed}
+Re6 24. Nxg7 Kxg7 25. Re1 $18) 23... d6 {Controls e5} 24. Ne2 (24. Bg5 $5 f6
+25. Bh6 $16) 24... Be6 {White has an active position} 25. Nec3 Rc8 (25... Qc8
+26. Rh1 $11) 26. Ne4 Rc6 $2 (26... Bf5 $142 {and Black can hope to survive} 27.
+Re1 b5 $14) 27. Bg5 $18 Qc8 28. Qf4 (28. Ndf6+ $142 $5 Kh8 29. g4 $18 (29. Nxe8
+$4 {is definitely not advisable} Bxh3+ 30. Kh1 Bf1 $19)) 28... Bxd5 29. Rxd5 (
+29. cxd5 Rxc1 30. Rxc1 Qb8 31. Nf6+ Bxf6 32. Bxf6 Nd7 $16) 29... Qe6 $14 30.
+Bf6 (30. Rcd1 Nxc4 31. Nxd6 Nxd6 32. Rxd6 Rxd6 33. Rxd6 Qe2 $14) 30... Nd3 {
+Black threatens to win material: Nd3xf4. Black forks: f4+c1} (30... Nxc4 31.
+Rd4 d5 32. Bxg7 dxe4 $11 (32... Kxg7 $2 33. Ng5 Qf6 34. bxc4 $18)) 31. Rxd3 $14
+{[%cal Rd3d6,Re4d6,Rf4d6,Gc6d6,Ge6d6] The pressure on the isolated pawn grows}
+Qxe4+ 32. Qxe4 Rxe4 33. Bxg7 Kxg7 {A double rook endgame occured} 34. Rcd1 Re6
+35. R1d2 h5 36. h4 Kf6 37. f4 Ke7 38. Kf3 Rc5 39. Rd4 f6 40. b4 {White
+threatens to win material: b4xc5} Rc7 41. a4 b6 42. R2d3 Kd7 43. Re3 Rxe3+ 44.
+Kxe3 f5 45. Kd3 Kc6 46. Rd5 b5 $4 {Black loses the upper hand} (46... Re7 $142
+$11 {would bring relief}) 47. axb5+ $18 axb5 48. Rxb5 Ra7 $4 {causes even
+greater problems} (48... Re7 $142 $16) 49. Ra5 $18 Rb7 50. Ra6+ Kc7 (50... Kd7
+{praying for a miracle} 51. b5 Rb8 $18) 51. b5 Kd7 (51... d5 {doesn't improve
+anything} 52. Rxg6 dxc4+ 53. Kxc4 $18) 52. Kd4 Kc7 (52... Rc7 {doesn't change
+the outcome of the game} 53. Ra8 Ke6 54. b6 $18) 53. Kd5 (53. Kd5 Rb8 54. Rc6+
+Kb7 55. Rxd6 $18) 1-0
+
+[Event "Hokkaido Chess Championship 2024"]
+[Site "?"]
+[Date "2024.03.23"]
+[Round "2.4"]
+[White "Nakamura, Mitsuru"]
+[Black "Nishimori, Toshiyuki"]
+[Result "0-1"]
+[ECO "B00"]
+[WhiteElo "1406"]
+[BlackElo "1570"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "76"]
+[EventDate "2024.03.23"]
+
+{B00: Queen's Fianchetto Defence, Nimzowitsch Defence} 1. e4 e6 2.
+Nf3 Nc6 3. Nc3 (3. Bb5 Nge7 4. d4 a6 5. Bd3 Ng6 6. h4 h6 7. h5 Nge7 8. c3 d6 9.
+Nh4 Ng8 10. f4 Bd7 11. e5 Qe7 12. a4 O-O-O 13. Qc2 Nb8 14. b4 Qe8 15. b5 a5 16.
+b6 cxb6 17. Qb3 dxe5 {Govedarica,R (2445)-Lazic,L (2245) Belgrade 1989 1-0 (39)
+}) (3. d4 d6 4. Nc3 Nf6 5. Bb5 Bd7 6. O-O Ne7 7. Bd3 Ng6 8. e5 dxe5 9. dxe5 Ng4
+10. Qe2 Bc5 11. h3 Nh6 12. Ne4 Be7 13. Bxh6 gxh6 14. Rad1 c6 15. Bc4 Qa5 16.
+Nd6+ Bxd6 17. Rxd6 O-O-O {Feher,A (2344)-Frink,F (2264) Zalakaros 2011 1-0})
+3... d5 4. d3 $146 (4. Bb5 a6 5. Bxc6+ bxc6 6. O-O Nf6 7. e5 Nd7 8. d3 Be7 9.
+Ne2 c5 10. c3 Nb6 11. Be3 Bd7 12. Qc2 Rb8 13. b3 a5 14. Nd2 Qc8 15. f4 g6 16.
+Bf2 Qb7 17. Ng3 h5 18. h3 Rg8 {Rigo,J (2320)-Sibilio,M (2200) Rome 1982 1-0 
+(45)}) (4. d4 Nf6 5. Bd3 Bb4 $14) 4... d4 $11 {Black threatens to win material:
+d4xc3} 5. Ne2 e5 6. a3 {Prevents intrusion on b4} Nf6 7. h3 {Controls g4} h6 {
+Consolidates g5} 8. c3 {Secures b4} Bc5 {White has a cramped position. White's
+piece can't move: f1} (8... dxc3 9. Nxc3 Bc5 10. b4 $11) 9. b4 $11 {White
+threatens to win material: b4xc5} Bb6 10. Bb2 (10. cxd4 exd4 11. g3 O-O $11)
+10... O-O (10... dxc3 11. Nxc3 Qd6 12. Be2 $15) 11. Ng3 (11. c4 a6 $11) 11...
+a6 (11... dxc3 12. Bxc3 Qd6 13. Be2 $15) 12. Be2 (12. c4 Nh7 $11) 12... Re8 {
+Black has an active position} (12... dxc3 13. Bxc3 Re8 14. O-O $15) 13. O-O (
+13. c4 Be6 $11) 13... Ba7 (13... dxc3 14. Bxc3 Nh7 15. Bd2 $15) 14. Qd2 b5 (
+14... dxc3 15. Bxc3 Nh7 16. Qb2 $11) 15. Rac1 Bb6 16. Bd1 (16. cxd4 Nxd4 17.
+Nxd4 exd4 $14) 16... dxc3 $11 {Black forks: b2+d2} 17. Rxc3 Nd4 18. Nxd4 Bxd4
+19. Rc2 (19. Rc1 Bb6 $11) 19... Re7 (19... Bxb2 $142 $5 {must be considered}
+20. Rxb2 a5 $11) 20. Bxd4 $14 Qxd4 21. Bf3 Be6 22. Nf5 (22. Rc5 $5 $14) 22...
+Bxf5 $11 23. exf5 Rd8 24. Rd1 Rd6 25. Rc6 Rxc6 26. Bxc6 Qd6 {Black threatens
+to win material: Qd6xc6} 27. Bf3 Rd7 28. Qe3 Nd5 29. Bxd5 Qxd5 30. Qg3 (30. f6
+Qb3 31. Re1 Rd6 $11 (31... Qxd3 $143 32. Qxe5 Rd6 33. Qe8+ Kh7 34. fxg7 Kxg7
+35. Qe5+ Kg8 36. Rc1 $14)) 30... Rd6 (30... Qb3 31. Ra1 Qc3 32. Rd1 $17) 31.
+Qe3 (31. Re1 $5 $11) 31... e4 $17 32. g4 $2 (32. d4 $142 $5 $17) 32... exd3 $19
+33. Qe8+ (33. f6 $142 $19) 33... Kh7 34. Qe3 Qb3 35. f6 (35. Ra1 {desperation}
+Qb2 36. Rc1 Qxa3 37. Qd2 $19) 35... Qxd1+ 36. Kg2 (36. Kh2 {doesn't do any good
+} d2 37. Qe4+ g6 38. f4 Qe1 39. Qe3 Qxe3 40. Kg2 d1=Q 41. a4 Rd2#) 36... Rxf6
+37. Qe4+ (37. g5 {does not save the day} hxg5 38. Qe4+ g6 39. Qd5 Qe2 40. Qc5
+d2 41. Qa7 Qf3+ 42. Kh2 d1=R 43. Qxc7 Qxf2#) 37... g6 38. Qe7 (38. g5 {cannot
+change what is in store for White} hxg5 39. a4 d2 40. a5 Qe1 41. f3 Qxe4 42.
+fxe4 d1=Q 43. e5 Qe2+ 44. Kg3 Rf3+ 45. Kg4 Qg2#) 38... Qf3+ (38... Qf3+ 39. Kg1
+Qxf2+ 40. Kh1 Qf1+ 41. Kh2 Rf2+ 42. Kg3 Rg2+ 43. Kh4 Qf2#) 0-1
+
+[Event "Hokkaido Chess Championship 2024"]
+[Site "?"]
+[Date "2024.03.23"]
+[Round "2.5"]
+[White "Takeuchi, Hiroshi"]
+[Black "Shishido, Kenta"]
+[Result "1-0"]
+[ECO "D02"]
+[WhiteElo "1388"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "103"]
+[EventDate "2024.03.23"]
+
+{D02: 1 d4 d5 2 Nf3 sidelines, including 2...Nf6 3 g3 and 2...Nf6
+3 Bf4} 1. d4 d5 2. Nf3 Nf6 3. Bf4 Nc6 4. e3 Bg4 5. Be2 Bxf3 $146 (5... e6 6.
+O-O (6. Nbd2 Bd6 7. Bxd6 (7. Bg3 Qe7 8. O-O O-O 9. Ne5 Bxe2 10. Qxe2 Bxe5 11.
+dxe5 Nd7 12. Nf3 Qb4 13. c3 Qg4 14. Qc2 Rfc8 15. Rfd1 Qh5 16. e4 Ncxe5 17. Nxe5
+Nxe5 18. exd5 exd5 19. Qb3 Nc4 20. Qxb7 Rab8 21. Qc6 Rxb2 {Laliena Solanes,L 
+(2234)-Soriano Ascaso,I (2160) Spain 2010 1-0}) 7... cxd6 8. h3 Bh5 9. O-O O-O
+10. c3 Rc8 11. Re1 Ne4 12. Nxe4 dxe4 13. Nd2 Bxe2 14. Qxe2 f5 15. f3 d5 16.
+fxe4 fxe4 17. Rf1 Qg5 18. Rxf8+ Rxf8 19. Rf1 Ne7 20. Rxf8+ Kxf8 {Manakov,I 
+(2345)-Starostits,I (2468) Schwaebisch Gmuend 2013 1/2-1/2}) 6... Be7 7. Nbd2
+O-O 8. c4 Nh5 9. Bg3 Nxg3 10. hxg3 dxc4 11. Nxc4 Rb8 12. Rc1 Qd5 13. b3 Qh5 14.
+Re1 Rfd8 15. Nce5 Nxe5 16. Nxe5 Bxe2 17. Qxe2 Qxe2 18. Rxe2 c6 19. Rc4 Rd5 20.
+Rec2 {Davidov,R (2280)-Zhunusov,M (2220) Tomsk 2006 1/2-1/2 (60)}) 6. Bxf3 e6
+7. Nc3 Bb4 8. O-O Bxc3 9. bxc3 O-O 10. Re1 Re8 11. h3 {Secures g4} e5 12. dxe5
+Nxe5 13. Be2 (13. Bxe5 Rxe5 14. Rb1 b6 $14) 13... c5 (13... Ne4 14. Bd3 $11)
+14. Rb1 b6 15. Bb5 {White threatens to win material: Bb5xe8} (15. Bg5 Re6 $11)
+15... Re6 16. c4 (16. f3 Qe7 $11) 16... dxc4 (16... Nxc4 $5 {is an interesting
+alternative} 17. Bxc4 dxc4 $17) 17. Qxd8+ $11 Rxd8 {Black has new doubled
+pawns: c4+c5} 18. Rbd1 {White threatens to win material: Rd1xd8} Rf8 (18... Ra8
+19. Bxe5 Rxe5 20. Bxc4 $11) 19. Bxe5 (19. f3 c3 $14) 19... Rxe5 $11 20. Rd6 Ne4
+{Black threatens to win material: Ne4xd6} 21. Rd7 {White threatens to win
+material: Rd7xa7} Nc3 22. Bxc4 b5 {Black threatens to win material: b5xc4} (
+22... Re4 23. Bd5 Nxd5 24. Rxd5 $11) 23. Bf1 (23. Rd3 b4 $11) 23... Ra8 (23...
+a6 24. Ra1 $11) 24. Ra1 a5 25. g3 (25. a4 b4 $14) 25... c4 {Black wins space} (
+25... a4 26. Bg2 Rb8 27. Rd3 $15) 26. a3 (26. a4 Nxa4 27. Bxc4 bxc4 28. Rxa4
+Rc5 $14) 26... a4 {Black has a new backward pawn: b5} 27. Re1 (27. Bg2 Rc8 $11)
+27... Ne4 (27... Ree8 $142 $5 {is the best option Black has} 28. Bg2 Rad8 $15)
+28. Bg2 $14 Rf8 $2 (28... Rb8 $142 $5 $14 {and Black has air to breath}) 29.
+Bxe4 $16 Rxe4 30. Red1 (30. Rd5 $5 Rb8 31. Rb1 g6 $18) 30... h5 (30... Rb8 31.
+Kg2 $16) 31. R1d5 h4 32. gxh4 (32. Rxb5 $6 hxg3 33. Rd4 Rxd4 34. exd4 Re8 $11)
+32... Rxh4 (32... Rb8 33. h5 b4 34. axb4 Rxb4 35. Ra5 $16) 33. Kg2 (33. Rxb5
+Rxh3 34. Rc5 Ra8 $16) 33... b4 (33... Rb8 34. Rd8+ Rxd8 35. Rxd8+ Kh7 36. Rd5
+$14) 34. axb4 c3 35. Rb7 (35. f4 $5 Re8 36. Rd8 Kf8 37. Rxe8+ Kxe8 $16) 35...
+Ra8 36. Rd1 (36. Rdd7 $5 a3 37. Ra7 (37. Rxf7 $143 a2 38. Rxg7+ Kh8 $17) 37...
+Rxa7 38. Rxa7 Rxb4 39. Rxa3 $16) 36... a3 $11 {Is this a dangerous pawn?} 37.
+f4 a2 38. Ra1 Ra4 (38... Re8 39. Rxa2 Rxe3 40. Ra8+ Kh7 41. Rxf7 Rhxh3 42. b5
+$11) 39. Rb5 (39. Rc7 g5 $14) 39... f6 (39... Rh6 40. Ra5 Rxb4 41. R1xa2 $11)
+40. Kg3 {White threatens to win material: Kg3xh4} Kf7 $4 {causes further
+problems for White} (40... Rh6 $142 $16) 41. Kxh4 $18 Ke6 (41... Kg6 {a
+fruitless try to alter the course of the game} 42. Kg4 $18) 42. Kg4 g6 (42...
+Kf7 {is no salvation} 43. Ra5 Rxb4 44. R5xa2 $18) 43. e4 {[%cal Yf4f5] White
+prepares f5} Kd6 (43... Kf7 {is not much help} 44. Kf3 $18) 44. f5 gxf5+ 45.
+Kxf5 Kc6 46. Rc5+ Kb6 47. Rxc3 Kb5 48. h4 Kxb4 49. Rc8 Ka3 50. Rb8 Rc4 (50...
+Rb4 {hardly improves anything} 51. Rxa2+ $1 {Deflection: b4} Kxa2 52. Rxb4 Ka3
+53. Rb3+ Ka4 54. h5 Ka5 55. h6 Ka4 56. h7 Ka5 57. h8=Q Ka4 58. Qa8#) 51. Ra8+ (
+51. Rb3+ Ka4 52. Rxa2#) 51... Kb2 $18 52. R1xa2+ (52. R1xa2+ Kc1 53. R8a5 $18)
+1-0
+
+[Event "Hokkaido Chess Championship 2024"]
+[Site "?"]
+[Date "2024.03.23"]
+[Round "2.6"]
+[White "Furuse, Mizuki"]
+[Black "Miyatani, Ryohei"]
+[Result "0-1"]
+[ECO "A06"]
+[WhiteElo "1157"]
+[BlackElo "1313"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "66"]
+[EventDate "2024.03.23"]
+
+{A06: R騁i Opening:1 Nf3 d5} 1. Nf3 Nf6 2. g3 d5 3. Bg2 e6 4. O-O
+c5 5. b3 Nc6 6. Bb2 Be7 (6... Bd6 7. d4 O-O 8. c4 dxc4 9. bxc4 Qb6 10. Qb3 cxd4
+11. Qxb6 axb6 12. Nxd4 Be5 13. e3 Rd8 14. Rd1 Ne8 15. Na3 Na5 16. Bc3 Bd7 17.
+Rab1 Bd6 18. Nab5 Be7 19. Bxa5 Rxa5 20. Bxb7 Rxa2 21. Nc3 {Hausrath,D (2526)
+-Ernst,S (2554) Dieren 2014 1/2-1/2}) 7. d3 O-O 8. Nbd2 b5 $146 (8... b6 9. e4
+Bb7 10. Qe2 Rc8 (10... Nb4 11. Ne1 Qc7 12. f4 Rad8 13. a3 Nc6 14. e5 Nd7 15.
+Nef3 Rfe8 16. Bh3 Nf8 17. Rae1 b5 18. Bg2 c4 19. Kh1 c3 20. Bxc3 Bxa3 21. Nb1
+Be7 22. d4 b4 23. Bd2 Nb8 24. Qd1 Rc8 25. c3 {Siepelt,H (2328)-Weiss,C (2376)
+Bayern 2011 0-1 (55)}) 11. a4 a6 12. e5 Ne8 13. Ne1 b5 14. f4 c4 15. dxc4 bxc4
+16. bxc4 Na5 17. Rb1 Nxc4 18. Bd4 Nxd2 19. Qxd2 Bc6 20. Bh3 Bxa4 21. f5 Rc6 22.
+Rb7 Nc7 23. f6 {Knudsen,P (2325)-Kaspersen,M (2215) Copenhagen 1986 1-0}) 9. c4
+bxc4 10. dxc4 Bb7 (10... Qc7 11. Re1 $11) 11. cxd5 exd5 {Black has new hanging
+pawns: c5+d5. Black has an active position} 12. Rc1 Qa5 {Black threatens to
+win material: Qa5xa2} 13. Bc3 {White threatens to win material: Bc3xa5} Qa3 {
+White has a cramped position} (13... Qxa2 $4 {Black will not be able to digest
+the pawn} 14. Ra1 Nb4 15. Rxa2 Nxa2 16. Bb2 $18) 14. Ne5 Nb4 (14... Qxa2 $4 {
+Taking that pawn is naive} 15. Ra1 Qxa1 16. Qxa1 $18) 15. Bxb4 Qxb4 {Black has
+the pair of bishops} 16. Nd3 {White threatens to win material: Nd3xb4} Qa5 17.
+a4 (17. Qc2 $5 {is an interesting idea} Bd6 18. Rfd1 $11) 17... Rac8 $17 18.
+Nf4 Rfd8 19. Qc2 Ba6 {[%cal Yc5c4] Black prepares the advance c4} 20. Rfe1 (20.
+Nf3 c4 $17) 20... g5 21. Nh3 (21. Nd3 c4 22. Ne5 cxb3 $17) 21... h6 22. Rcd1 (
+22. Red1 $5 $17) 22... c4 $19 23. bxc4 dxc4 24. Ne4 (24. Nf1 c3 $19) 24... Nd5
+{[%cal Yc4c3] Black plans c3} 25. e3 $2 (25. Nd2 Bb4 26. Ne4 Bxe1 27. Rxd5 Qb6
+28. Nexg5 hxg5 29. Rxg5+ Kf8 $19) 25... c3 26. Rd4 (26. Nexg5 hxg5 27. Nxg5 $19
+) 26... Nb4 27. Rxd8+ (27. Qd1 {there is nothing else anyway} Nd3 28. Nxc3 Rxd4
+29. Rf1 $19) 27... Qxd8 (27... Rxd8 $6 28. Qxc3 Rc8 29. Qd2 $17) 28. Qb1 (28.
+Qd1 {there is nothing better in the position} Qxd1 29. Rxd1 $19) 28... c2 29.
+Qa1 Nd3 30. Rc1 Nxc1 31. Qxc1 (31. Kh1 {doesn't get the bull off the ice} Qd1+
+32. Ng1 Ne2 33. Nxg5 Qxa1 34. N5f3 c1=Q 35. Bf1 Qxf1 36. e4 Qxg1+ 37. Nxg1
+Qxg1#) 31... Qd1+ 32. Qxd1 (32. Bf1 {cannot undo what has already been done}
+Bxf1 33. Nf6+ Bxf6 34. f3 Bxh3+ 35. Kf2 Qxc1 36. g4 Qf1+ 37. Kg3 Qg2#) 32...
+cxd1=Q+ 33. Bf1 Qxf1# 0-1
+
+[Event "Hokkaido Chess Championship 2024"]
+[Site "?"]
+[Date "2024.03.23"]
+[Round "2.7"]
+[White "Ito, Katsuhide"]
+[Black "Kuramoto, koutarou"]
+[Result "1-0"]
+[ECO "C91"]
+[WhiteElo "1199"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "81"]
+[EventDate "2024.03.23"]
+
+{C91: Closed Ruy Lopez: 7...d6 8 c3 0-0 9 d4} 1. e4 e5 2. Nf3 Nc6
+3. Bb5 a6 4. Ba4 Nf6 5. O-O Be7 6. Re1 b5 7. Bb3 d6 8. c3 O-O 9. d4 Na5 (9...
+Re8) 10. Bc2 (10. dxe5 dxe5 11. Nxe5 Nxb3 12. Qxb3 Bb7 13. Nd2 Bc5 14. Qc2 Re8
+15. Nd3 Nxe4 16. Nxc5 Nxc5 17. Rxe8+ Qxe8 18. Nf1 Qe6 19. Be3 Ne4 20. f3 Nd6
+21. Bf2 h6 22. b3 Nf5 23. Re1 Qg6 24. Ng3 Nh4 {Nolte,R (2489)-Friedel,J (2498)
+Beijing 2008 1-0 (62)}) 10... exd4 $146 (10... c5 11. Nbd2 Re8 12. Nf1 Nc6 13.
+h3 Bb7 14. d5 Nb8 15. Ng3 g6 {1/2-1/2 (15) Budimir,B (2293)-Savic,M (2300)
+Dvorovi 2005}) 11. cxd4 Re8 12. e5 dxe5 13. dxe5 ({Instead of} 13. Nxe5 Bb7 $15
+) 13... Qxd1 14. Rxd1 (14. Bxd1 $6 Nd7 $11) 14... Ng4 15. Be4 Bb7 16. Bxb7 Nxb7
+17. h3 Nh6 18. Bxh6 gxh6 19. Nc3 Rad8 20. Nd5 Rc8 21. Re1 c6 22. Nf6+ (22. Ne3
+Rcd8 $16) 22... Bxf6 $14 23. exf6 Re6 (23... Nd6 $5 $14) 24. Rxe6 $16 fxe6 25.
+Ne5 c5 26. Rd1 Rd8 27. Re1 (27. Rxd8+ $142 Nxd8 28. f4 $16) 27... Rd2 $4 (27...
+Kf8 $142 $14 {saving the game}) 28. Re3 $18 Rd5 (28... Kf8 29. Rg3 Nd6 30. Nd7+
+Ke8 31. Rg7 $18) 29. Rg3+ Kf8 30. f4 Nd6 31. Rg7 Rxe5 (31... Nc4 {does not
+improve anything} 32. Nd7+ Rxd7 33. Rxd7 Nxb2 34. g4 $18) 32. fxe5 Nf7 (32...
+Nc4 {does not solve anything} 33. Kf2 $18) 33. Rxh7 Kg8 (33... a5 {doesn't
+change anything anymore} 34. Kf2 a4 35. Ke3 Nxe5 36. Rxh6 $18) 34. Rg7+ Kf8 35.
+Kf2 Nxe5 36. Ra7 Nd3+ 37. Ke3 Nxb2 (37... Nb4 {does not win a prize} 38. a3
+Nd5+ 39. Ke4 Nxf6+ 40. Ke5 $18) 38. Ke4 c4 (38... b4 {does not help much} 39.
+Rc7 Nc4 40. Rxc5 $18) 39. Ke5 Nd3+ 40. Kxe6 Nc5+ (40... Nf4+ {what else?} 41.
+Ke5 Nxg2 $18) 41. Kf5 (41. Kf5 Nd3 42. g3 c3 43. Rc7 c2 44. Rxc2 Kf7 45. Rc7+
+Kf8 46. Ke6 Kg8 47. f7+ Kg7 48. Rc8 Nc5+ 49. Rxc5 a5 50. Ke7 b4 51. f8=Q+ Kh7
+52. Rc6 b3 53. Rxh6#) 1-0
+
+[Event "Hokkaido Chess Championship 2024"]
+[Site "?"]
+[Date "2024.03.23"]
+[Round "2.8"]
+[White "Ono, Yukiko"]
+[Black "Shimomura, Kensei"]
+[Result "0-1"]
+[ECO "C50"]
+[BlackElo "1199"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "68"]
+[EventDate "2024.03.23"]
+
+{[%mdl 8256] C50: Hungarian Defence and Giuoco Pianissimo} 1. e4 e5 2. Nc3 Nf6
+3. Bc4 Bc5 4. Nf3 Nc6 5. d3 Ng4 $146 {Black threatens to win material: Ng4xf2}
+(5... a6 6. Be3 (6. O-O d6 7. Bg5 (7. h3 Na5 8. a3 Nxc4 9. dxc4 Be6 10. Qd3 Nh5
+11. Nd5 c6 12. Nc3 b5 13. cxb5 axb5 14. Rd1 Bc4 15. Qd2 Nf4 16. b3 Be6 17. Ne2
+Nxe2+ 18. Qxe2 Qe7 19. a4 O-O 20. Be3 Bxe3 21. Qxe3 bxa4 {Luther,T (2425)
+-Borkowski,F (2450) Naleczow 1987 1/2-1/2 (55)}) 7... h6 8. Bxf6 Qxf6 9. Nd5
+Qd8 10. c3 Ba7 11. d4 Bg4 12. Ne3 Bxf3 13. Qxf3 O-O 14. d5 {1/2-1/2 (14)
+Bratanov,Z (2398)-Nikolov,S (2407) Velingrad 2004}) 6... d6 (6... Qe7 7. O-O
+Bxe3 8. fxe3 Na5 9. Nd5 Nxd5 10. Bxd5 O-O 11. Qd2 Nc6 12. Qc3 Re8 13. d4 exd4
+14. exd4 d6 15. Ng5 Qxg5 16. Bxf7+ Kf8 17. d5 Qe5 18. Bxe8+ Kxe8 19. dxc6 Qxc3
+20. bxc3 bxc6 21. Rab1 {Sugar,K (2220)-Morvay,M (2270) Budapest 1986 1/2-1/2 
+(60)}) 7. Qd2 (7. h3 Bxe3 8. fxe3 Na5 9. Bb3 O-O 10. O-O Nxb3 11. axb3 d5 12.
+Nxe5 dxe4 13. d4 Nd5 14. Rxf7 Rxf7 15. Nxf7 Nxc3 16. Nxd8 Nxd1 17. Rxd1 a5 18.
+Rf1 a4 19. bxa4 Rxa4 20. Rf7 Rc4 21. c3 b5 {Short,N (2686)-Stefanova,A (2550)
+West Bromwich 2003 1-0 (53)}) 7... Bg4 8. Bxc5 dxc5 9. Ng5 Bh5 10. f3 h6 11.
+Nh3 Nd4 12. Qf2 g5 13. Nd1 b5 14. Bb3 Qd6 15. Ne3 Bg6 16. O-O O-O 17. Kh1 Rad8
+18. Qd2 Kh7 19. Rad1 Qb6 20. Nf2 {Mason,J-Bird,H London 1899 1-0 (64)}) (5...
+h6 $5 $11) 6. O-O $14 O-O 7. Bg5 {White threatens to win material: Bg5xd8} Nf6
+8. Qd2 h6 {Black threatens to win material: h6xg5} 9. Bh4 (9. Bxf6 Qxf6 10. Nd5
+$14) 9... d6 $2 (9... Be7 10. Bg3 d6 11. h3 $11) 10. a4 (10. Nd5 Kh7 $16) 10...
+a5 (10... Bb4 $142 $5 $11 {has some apparent merit}) 11. Nd5 $16 Ne7 $4 {
+leads to further unpleasantness} (11... Kh7 $142 $16) 12. c3 {Loses material} (
+12. Nxf6+ $142 {nails it down} Kh8 13. Nd5 Re8 $18) 12... Be6 $4 (12... Nexd5
+$142 {the rescuing straw} 13. Bxd5 c6 $11) 13. d4 (13. Nxf6+ $142 {and White
+wins} Kh8 14. Nd5 Bxd5 15. Bxd5 $18) 13... exd4 (13... Nfxd5 $4 14. exd5 (14.
+Bxd5 $6 Bxd5 15. exd5 exd4 $11) 14... Bg4 15. dxc5 Bxf3 16. cxd6 cxd6 17. Bxe7
+(17. gxf3 $6 g5 $18) 17... Qxe7 18. gxf3 $18) 14. cxd4 $4 {simply marches past
+the door to victory} (14. Bxf6 $142 gxf6 15. Nxf6+ Kg7 16. Nh5+ Kh7 17. Qd3
+Bxc4 18. Qxc4 $18) 14... Ba7 $4 {gives away a clear win} (14... Nexd5 $142 {
+had to be tried to avoid defeat} 15. exd5 Bb4 $11) 15. Nxf6+ $18 gxf6 16. d5
+Bg4 (16... Bc8 {doesn't change the outcome of the game} 17. Bxf6 Kh7 18. Bd3
+$18) 17. Bxf6 Kh7 18. e5 Rg8 (18... Qd7 19. Ng5+ $1 {Decoy: g5} Kg6 20. Bd3+
+Nf5 21. h3 dxe5 22. hxg4 Kxf6 23. Bxf5 $18 (23. gxf5 $6 hxg5 24. Qe2 Bd4 $15))
+19. Bd3+ Rg6 20. Bxg6+ (20. Ng5+ $142 $5 {keeps an even firmer grip} Kg8 21.
+Bxg6 fxg6 22. exd6 cxd6 $18) 20... fxg6 21. Ng5+ $1 {Decoy: g5} hxg5 22. Qxg5
+Qd7 (22... Qc8 {cannot change destiny} 23. Bxe7 Qf5 24. Rac1 Qxg5 25. Bxg5 $18)
+23. Bxe7 (23. e6 $142 {and White has it in the bag} Qe8 24. Qxg4 Qf8 25. Qh4+
+Qh6 26. Bxe7 Bc5 $18) 23... Re8 (23... dxe5 {is not the saving move} 24. Rac1
+c6 25. h3 $18) 24. e6 (24. exd6 $5 {might be the shorter path} cxd6 25. Qh4+
+Bh5 $18) 24... Qxe7 25. Qxe7+ (25. Qxg4 $142 {and White takes home the point}
+Bc5 26. Rae1 $18) 25... Rxe7 $15 26. Rfe1 (26. Rac1 Bc5 $15) 26... Bh5 (26...
+c6 $5 27. dxc6 bxc6 $17) 27. h3 {Covers g4} Bd4 $4 {Black is ruining his
+position} (27... g5 $142 $11 {is the best chance}) 28. g4 $18 Be5 (28... Bxb2
+29. Rab1 (29. gxh5 $6 {is no comparison} Bxa1 30. Rxa1 gxh5 $11) 29... Bc3 30.
+Re4 (30. gxh5 $6 {is the weaker alternative} Bxe1 31. Rxe1 c6 $14) 30... Bxg4
+31. hxg4 $18) 29. gxh5 gxh5 (29... c6 {doesn't get the cat off the tree} 30.
+hxg6+ Kxg6 31. Rad1 $18) 30. f4 $1 {a devastating blow} Bxf4 31. Kf1 (31. Kf2
+$5 {and White can already relax} Be5 32. Ke3 c6 $18) 31... Be5 32. Rxe5 $1 {
+Decoy: e5} dxe5 33. Re1 h4 $2 (33... Kg6 34. Ke2 Kf6 35. Rf1+ Kg7 $18) 34. Rxe5
+$18 Kg6 0-1
+
+[Event "Hokkaido Chess Championship 2024"]
+[Site "?"]
+[Date "2024.03.23"]
+[Round "3.1"]
+[White "Yamaguchi, Tosei"]
+[Black "Shinoda, Taro"]
+[Result "1-0"]
+[ECO "A61"]
+[WhiteElo "1940"]
+[BlackElo "1911"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "63"]
+[EventDate "2024.03.23"]
+
+{A61: Modern Benoni: Nf3 without early e4} 1. d4 Nf6 2. c4 e6 3.
+Nf3 c5 4. d5 exd5 5. cxd5 d6 6. Nc3 g6 7. Nd2 Nbd7 8. e4 Bg7 9. Be2 a6 10. a4
+Rb8 11. O-O O-O 12. h3 Ne8 13. Qc2 $146 (13. Re1 Nc7 14. a5 b5 15. axb6 Nxb6
+16. Nb3 Bd7 17. Bf4 Nc8 18. Bxa6 Nxa6 19. Rxa6 Rb6 20. Ra3 Re8 21. e5 c4 22. e6
+Rxb3 23. Bg5 Qc7 24. exd7 Rxe1+ 25. Qxe1 Qxd7 26. Ra8 h6 27. Qe7 Qf5 {Navara,D
+(2736)-Kristjansson,S (2482) Reykjavik 2015 1-0}) (13. Nc4 Qh4 14. a5 Ne5 15.
+Nxe5 Bxe5 16. f4 Bd4+ 17. Kh2 Ng7 18. Ra4 f5 19. Rxd4 cxd4 20. Qxd4 fxe4 21.
+Nxe4 Nf5 22. Qc3 Bd7 23. g3 Qe7 24. Bd3 Rbc8 25. Qe1 Bb5 26. Bxb5 Rc2+ 27. Nf2
+Qxe1 {Jorgensen,M (2230)-Aagaard,J (2542) Copenhagen 2010 0-1 (35)}) 13... Nc7
+{Black has a cramped position. Black's piece can't move: c8} 14. Nc4 {White
+threatens to win material: Nc4xd6} Ne5 15. Na3 (15. Ne3 $142 $5 $16) 15... f5
+$11 {Black has a cramped position} 16. f4 {White threatens to win material:
+f4xe5} Nf7 {Black has a cramped position} 17. Nc4 b5 (17... fxe4 18. Qxe4 Bd4+
+19. Kh2 $15) 18. axb5 (18. Na5 b4 19. Nc6 bxc3 20. bxc3 Qe8 21. Nxb8 Qxe4 22.
+Qxe4 fxe4 $14) 18... Nxb5 $11 19. Be3 (19. Nxb5 axb5 20. Na5 Bd7 $11) 19...
+Nxc3 (19... Nd4 $5 {is worth consideration} 20. Qd1 fxe4 21. Nxe4 Nxe2+ 22.
+Qxe2 Re8 $17) 20. bxc3 $11 fxe4 {Black has new passed pawns: a6+e4} 21. Na5 Bd7
+(21... Qh4 $5 22. Nc6 Ra8 $11) 22. Nc6 $16 Bxc6 23. dxc6 {White has the pair
+of bishops} Rb6 (23... Qf6 $5 $14) 24. Rxa6 $16 (24. Qxe4 $6 Re8 25. Qd3 d5 $14
+) 24... Rxa6 25. Bxa6 Qb6 26. Bb7 Re8 27. Qa4 Kf8 (27... Qc7 $5 $16) 28. f5 $18
+g5 $2 (28... Qc7 $142 29. Qc4 Be5 $18) 29. f6 Bh8 30. Qc4 (30. Qa6 $142 Qc7 31.
+c4 $18) 30... Nd8 $2 (30... h6 $142 $18) 31. Bxg5 Nxb7 (31... Nf7 {a last
+effort to resist the inevitable} 32. Be3 h5 $18) 32. Bh6+ (32. Bh6+ Bg7 33.
+Bxg7#) 1-0
+
+[Event "Hokkaido Chess Championship 2024"]
+[Site "?"]
+[Date "2024.03.23"]
+[Round "3.2"]
+[White "Nishimori, Toshiyuki"]
+[Black "Yoshii, Yukihiko"]
+[Result "1-0"]
+[ECO "B13"]
+[WhiteElo "1570"]
+[BlackElo "1644"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "115"]
+[EventDate "2024.03.23"]
+
+{B13: Caro-Kann: Exchange Variation and Panov-Botvinnik Attack} 1.
+e4 c6 2. d4 d5 3. exd5 cxd5 4. Nf3 Nc6 5. Bf4 (5. Ne5 e6 6. c3 Nxe5 7. dxe5 Ne7
+8. Nd2 Nc6 9. Nf3 Qc7 10. Bf4 Be7 11. Bg3 Bd7 12. Bd3 g5 13. Qe2 h5 14. h4 g4
+15. Nd2 a6 16. a4 Bf8 17. O-O Bg7 18. Rfe1 Qb6 19. b4 a5 {Carlsen,M (2714)
+-Dreev,A (2607) Moscow 2007 1/2-1/2 (69)}) 5... Bf5 6. Nc3 $146 (6. c3 e6 7.
+Qb3 (7. Bd3 Bxd3 8. Qxd3 Bd6 9. Bxd6 Qxd6 10. O-O Nf6 11. Nbd2 O-O 12. Rae1 Qc7
+{1/2-1/2 (12) Sveshnikov,E (2514)-Horvath,J (2535) Presolana 2011}) 7... Qd7 8.
+Ne5 Nxe5 9. Bxe5 Ne7 10. Nd2 Nc6 11. Bg3 (11. Nf3 Be4 12. Nd2 Bg6 13. Nf3 Be4 {
+1/2-1/2 (13) Sveshnikov,E (2504)-Riazantsev,A (2629) Cheliabinsk 2007}) 11...
+Bd6 12. Bxd6 Qxd6 13. Be2 O-O 14. O-O Qc7 15. Rfe1 Na5 16. Qd1 b5 17. Nb3 Nc4
+18. Bxc4 Qxc4 19. Nc5 b4 20. b3 Qb5 {Sveshnikov,E (2487)-Macieja,B (2639)
+Warsaw 2010 1/2-1/2 (67)}) 6... a6 {Covers b5} 7. a3 {Prevents intrusion on b4}
+(7. Bd3 Bxd3 8. cxd3 e6 $14) 7... h6 {Secures g5} 8. Bd3 Bxd3 9. Qxd3 (9. cxd3
+e6 $11) 9... Nf6 10. O-O {Black has a cramped position. Black's piece can't
+move: f8} e6 {Black should quickly conclude development.} 11. Rfe1 Be7 12. Rad1
+O-O {White has a very active position} 13. Ne5 Rc8 14. Ne2 {White has an
+active position} (14. h3 Qb6 15. Na4 Qa5 $11) 14... Ne4 15. c3 {Consolidates b4
+} Bd6 16. Ng3 Nf6 17. h3 {Consolidates g4} Qc7 18. Re2 Rfe8 19. Rde1 Re7 $2 (
+19... Na5 $142 $5 $11 {would keep Black in the game}) 20. Nxc6 $16 Bxf4 21.
+Nxe7+ Qxe7 22. Qf3 Bb8 23. Nf5 {White threatens to win material: Nf5xe7} (23.
+Nh5 $142 $16) 23... Qc7 $11 {Black has a mate threat} 24. Ng3 Ne4 (24... Qe7
+25. Nh5 Ne4 $16) 25. Re3 (25. Nxe4 $4 {mating quickly in 2} Qh2+ 26. Kf1 Qh1#)
+25... Nd2 26. Qd1 Nc4 27. R3e2 Qb6 28. Qc1 Nd6 29. Re3 (29. Qe3 $142 $5 $16)
+29... Nc4 $11 {Black threatens to win material: Nc4xe3. Black forks: e3+b2} 30.
+R3e2 Bxg3 (30... Nd6 31. Qc2 Nc4 $16) 31. fxg3 $16 Nd6 32. g4 Ne4 33. Re3 Qd6
+34. Qd1 b5 35. Rf1 Rc7 36. Rff3 Ng5 37. Rf1 Ne4 38. Qd3 f6 39. Rxe4 dxe4 40.
+Qxe4 Qc6 41. Re1 Kf7 42. Kf2 g6 (42... Qxe4 43. Rxe4 Ke7 44. Ke3 $16) 43. Qxc6
+(43. Qe3 $5 g5 44. h4 $18) 43... Rxc6 $16 44. Kf3 a5 45. Ke4 Rd6 46. Rd1 Rd5
+47. b3 f5+ 48. gxf5 gxf5+ 49. Ke3 e5 50. Rd2 f4+ $4 {the position is going
+down the drain} (50... Kf6 $142 $16) 51. Ke4 $18 Ke6 52. c4 bxc4 53. bxc4 Rd8
+54. d5+ Kd6 55. Rc2 Re8 (55... Kc5 {hardly improves anything} 56. Kxe5 f3 57.
+gxf3 Re8+ 58. Kf4 $18) 56. c5+ Kd7 (56... Kc7 $18 {praying for a miracle}) 57.
+Rb2 Kc7 (57... Ke7 {is one last hope} 58. Rb7+ Kf6 59. Rb6+ Kf7 $18) 58. Rb6 (
+58. Rb6 Kc8 59. d6 $18) 1-0
+
+[Event "Hokkaido Chess Championship 2024"]
+[Site "?"]
+[Date "2024.03.23"]
+[Round "3.3"]
+[White "Kawamura, Takuto"]
+[Black "Sugimoto, Koichi"]
+[Result "0-1"]
+[ECO "D11"]
+[WhiteElo "1601"]
+[BlackElo "1864"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "94"]
+[EventDate "2024.03.23"]
+
+{[%mdl 64] D11: Slav Defence: 3 Nf3 sidelines and 3...Nf6 4 e3 Bg4} 1. d4 d5 2.
+Nf3 Nf6 3. c4 c6 4. g3 Bf5 5. Bg2 e6 6. O-O Bd6 7. Nbd2 $146 (7. Nc3 Nbd7 (7...
+O-O 8. Qb3 b6 9. Nh4 Bg4 10. e4 dxe4 11. Nxe4 Nxe4 12. Bxe4 Be7 13. Nf3 f5 14.
+Ne5 Qxd4 15. Nxc6 Nxc6 16. Bxc6 Rad8 17. Be3 Qd6 18. Bg2 Kh8 19. Rac1 Rc8 20.
+f3 Bh5 21. Rfd1 Qc6 22. Rd3 {Schmuecker,M (2251)-Westermann,J (2158) Solingen
+2014 0-1 (34)}) (7... h6 8. Nd2 O-O 9. e4 dxe4 10. Ndxe4 Nxe4 11. Nxe4 Be7 12.
+Bf4 Na6 13. c5 Bxe4 14. Bxe4 Qd7 15. Be5 Rfd8 16. Qb3 Qc8 17. Rad1 Nc7 18. h4
+Nd5 19. Bb1 f6 20. Bf4 Nxf4 21. gxf4 Rd5 22. Rfe1 {Qendro,L (2235)-Sisniega,M 
+(2455) Luzern 1982 0-1 (40)}) 8. Nh4 (8. Qb3 Qb6 9. Bf4 Bxf4 10. gxf4 Qxb3 11.
+axb3 Ne4 12. Ra5 Nxc3 13. bxc3 Be4 14. Rfa1 a6 15. Nd2 Bxg2 16. Kxg2 Rc8 17. f3
+Nb6 18. e4 f6 19. c5 Na8 20. f5 exf5 21. exd5 cxd5 22. c4 Rd8 {Brito Garcia,A 
+(2360)-Lezcano Montalvo,P (2250) Spain 1989 1-0 (44)}) 8... Bg4 9. h3 Bh5 10.
+cxd5 Nxd5 11. Nf3 O-O 12. e4 Nxc3 13. bxc3 c5 14. Be3 Qc7 15. Qb3 Bxf3 16. Bxf3
+Bxg3 17. e5 Bh4 18. Qxb7 Qxb7 19. Bxb7 Rab8 20. Bc6 cxd4 21. Bxd4 Nb6 {
+Romanishin,O (2585)-Ekstroem,R (2405) URS 1981 1-0 (53)}) (7. Nc3 Nbd7 $16)
+7... O-O 8. b3 (8. Nh4 Nbd7 $11) 8... h6 {Controls g5} 9. Bb2 Ne4 10. Ne5 Nxd2
+11. Qxd2 Nd7 12. Rae1 Qc7 (12... a5 13. Nd3 $11) 13. Nxd7 Qxd7 14. f3 {
+Controls e4+g4} a5 15. e4 Bg6 16. c5 {White threatens to win material: c5xd6}
+Bc7 17. a4 b6 18. Ba3 Rfb8 19. Re3 bxc5 (19... b5 20. axb5 Rxb5 21. Qd1 $15)
+20. Bxc5 $11 dxe4 21. fxe4 e5 22. d5 {White gets more space} Bb6 {Black
+threatens to win material: Bb6xc5} 23. Rc3 Bxc5+ 24. Rxc5 {White forks: a5+c6}
+Qa7 {Black threatens to win material: Qa7xc5} 25. Qc3 $2 (25. Rfc1 $142 {
+would allow White to play on} cxd5 26. Qxd5 $15) 25... Rxb3 $1 $19 {Deflection:
+c5.} 26. Qxb3 Qxc5+ 27. Kh1 cxd5 28. exd5 (28. Qxd5 Rc8 $19) 28... Rd8 29. Qb5
+Qxb5 (29... Qb4 30. h4 $19) 30. axb5 $17 Bd3 31. Ra1 e4 32. Rxa5 Rxd5 33. Ra8+
+$2 (33. Kg1 $142 $17) 33... Kh7 $19 34. b6 Rb5 35. Kg1 (35. h4 Rxb6 36. Re8 f5
+$19) 35... Rxb6 36. Re8 Rb1+ 37. Kf2 Rb2+ 38. Kg1 Re2 39. Rd8 (39. Rc8 {
+doesn't get the bull off the ice} Kg6 $19) 39... Rc2 (39... e3 {might be the
+shorter path} 40. Kf1 (40. Rxd3 $4 {too greedy} Re1+ 41. Bf1 e2 $19) 40... Bb5
+41. Be4+ g6 42. Bd3 $19) 40. Rd7 (40. Re8 {is no salvation} f5 $19) 40... Kg6 (
+40... e3 $142 {and Black can already relax} 41. Bf3 (41. Rxd3 $4 {capturing
+the bishop is not a good idea} Rc1+ 42. Bf1 e2 $19) 41... Rc1+ 42. Kg2 Bf1+ 43.
+Kg1 $19) 41. Rd4 Kf5 42. Rd5+ Ke6 43. Rd8 Rc7 (43... Rc1+ {seems even better}
+44. Kf2 $19) 44. Kf2 Re7 (44... f5 $142 $5 {makes it even easier for Black} 45.
+Re8+ Kd7 46. Re5 $19) 45. Ke3 (45. g4 Ke5 46. Ke3 h5 $19) 45... Ke5 46. Rd4 $2
+(46. Rf8 $19) 46... f5 47. h4 (47. Bf3 {does not win a prize} g5 (47... exf3 $6
+48. Rxd3 f2 49. Kxf2 $15) 48. Rd8 f4+ (48... exf3 $6 {is the less attractive
+alternative} 49. Rxd3 g4 50. Kf2 $19) 49. Kf2 Ra7 (49... exf3 $6 {is no
+comparison} 50. Rxd3 g4 51. Ra3 $19) 50. gxf4+ gxf4 51. Re8+ Kd4 52. Rd8+ Kc5
+53. Rc8+ Kd6 54. Rd8+ Kc7 $19) 47... g5 (47... g5 48. Rd8 gxh4 $19) 0-1
+
+[Event "Hokkaido Chess Championship 2024"]
+[Site "?"]
+[Date "2024.03.23"]
+[Round "3.4"]
+[White "Miyatani, Ryohei"]
+[Black "Aoki, Yasuhiro"]
+[Result "0-1"]
+[ECO "B07"]
+[WhiteElo "1313"]
+[BlackElo "1598"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "64"]
+[EventDate "2024.03.23"]
+
+{[%mdl 8256] B07: Pirc Defence: Miscellaneous Systems} 1. e4 d6 2. d4 Nf6 3.
+Bd3 e5 4. c3 d5 5. dxe5 Nxe4 6. Bxe4 dxe4 7. Qxd8+ Kxd8 8. Bf4 (8. Bg5+ Be7 9.
+Bxe7+ Kxe7 10. Nd2 Nc6 11. Nxe4 Nxe5 12. O-O-O Bf5 13. Nf3 Nxf3 14. gxf3 Rhd8
+15. b3 Rxd1+ 16. Rxd1 b6 17. Ng3 Be6 18. Ne2 a5 19. Nd4 a4 20. Kb2 Bd7 21. b4
+a3+ 22. Kc1 c5 {Ruiz Marana,A (2210)-Guerra Bastida,D (2397) Don Benito 2012
+0-1 (73)}) 8... Nc6 (8... Nd7 9. Ne2 Nc5 10. Nc1 a5 11. O-O Ke8 12. Nd2 Be6 13.
+Be3 Rd8 14. Ncb3 Nxb3 15. Nxb3 a4 16. Nd4 Bc4 17. Rfe1 Bd3 18. b4 h6 19. Rad1
+g6 20. a3 c5 21. Ne2 Bxe2 22. Rxd8+ Kxd8 23. Rxe2 {Sulskis,S (2562)-Moser,E 
+(2383) Liverpool 2008 1/2-1/2 (99)}) 9. Nd2 Bf5 10. O-O-O {Black king safety
+dropped} Kc8 $146 {Black king safety improved} (10... Ke7 11. Re1 Ke6 12. Nxe4
+Bxe4 13. Rxe4 Kf5 14. f3 g5 15. g4+ Kg6 16. Bg3 Bg7 17. h4 h5 18. Nh3 Rae8 19.
+e6 fxe6 20. Nxg5 e5 21. Kc2 Rhf8 22. Kd1 Bh6 23. Ke2 hxg4 24. Rxg4 Kh5 25. Be1
+{Drljevic,L (2188)-Marin,I (2261) Bucharest 2004 1-0 (44)}) (10... Ke8 11. Ne2
+$11) 11. Ne2 Bc5 {Black threatens to win material: Bc5xf2} 12. Ng3 {White
+threatens to win material: Ng3xf5. White forks: e4+f5} Bg4 {Black threatens to
+win material: Bg4xd1} 13. Rdf1 ({Worse is} 13. Ngxe4 Bxd1 14. Rxd1 Be7 $15)
+13... Re8 (13... e3 14. fxe3 Rd8 15. Nge4 $14) 14. h3 {White threatens to win
+material: h3xg4} Be6 {Black threatens to win material: Be6xa2} 15. Ngxe4 Bb6
+16. Re1 h6 {Consolidates g5} 17. Bg3 a6 (17... Bxa2 $2 {doesn't solve anything}
+18. b3 Nxe5 19. Bxe5 Rxe5 20. Kb2 $18) 18. f4 Kb8 19. Rhf1 Bf5 (19... a5 20.
+Kb1 $16) 20. Bh4 Ka7 21. g4 Be6 22. Bf2 Rad8 (22... Bxa2 $2 {is a blank shot}
+23. Bxb6+ Kxb6 24. b3 $18) 23. Ng3 {[%cal Yf4f5] White intends f5} (23. Bxb6+
+Kxb6 24. Re3 a5 $16 (24... Bxa2 $2 {doesn't work} 25. b3 $18)) 23... Bxf2 {
+Black forks: e1+g3} (23... Rd3 24. Nf3 $14) 24. Rxf2 $16 Rd3 25. Nh5 g6 26. Nf6
+Red8 27. f5 (27. Kc2 $5 $16) 27... gxf5 $11 (27... Bxa2 $2 {is worthless
+because of} 28. e6 gxf5 29. e7 Nxe7 30. Rxe7 $18) 28. gxf5 Bxf5 29. Nb3 (29.
+Rxf5 $142 $5 {is the best option White has} Rxd2 30. Ng4 $11) 29... Bg6 $17 30.
+h4 h5 (30... Nxe5 31. Rff1 Nf3 32. Re7 $17) 31. Nc5 (31. e6 $142 $5 {deserves
+consideration} fxe6 32. Nc5 $15) 31... Nxe5 $1 $17 {Deflection: d1.} 32. Nxh5
+$4 {White has lost his nerve... understandable when you consider his position}
+(32. Rxe5 Rd1# {Mate attack Deflection}) 32... R3d5 $19 (32... R3d5 33. Rfe2
+Nf3 $19 (33... Rxc5 $6 {is much worse} 34. Rxe5 Rc4 35. Rh1 $17) (33... Bxh5
+$143 34. Rxe5 Bg6 35. Rxd5 Rxd5 36. Nb3 $11)) (32... Bxh5 $6 {is clearly weaker
+} 33. Rxe5 Rd1+ 34. Kc2 Bg6+ 35. Kb3 $11) 0-1
+
+[Event "Hokkaido Chess Championship 2024"]
+[Site "?"]
+[Date "2024.03.23"]
+[Round "3.5"]
+[White "Hasegawa, Emi"]
+[Black "Ito, Katsuhide"]
+[Result "1-0"]
+[ECO "D08"]
+[WhiteElo "1417"]
+[BlackElo "1199"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "67"]
+[EventDate "2024.03.23"]
+
+{D08: Albin Counter Gambit} 1. d4 d5 2. c4 e5 3. dxe5 d4 4. Nf3 Nc6
+5. Bf4 Bb4+ $146 (5... Nge7 6. Nbd2 (6. a3 Ng6 7. Bg3 a5 8. e3 dxe3 9. Qxd8+
+Nxd8 10. fxe3 Bc5 11. Kf2 Ne6 12. Nc3 O-O 13. Rd1 f5 14. exf6 gxf6 15. Na4 Ba7
+16. c5 f5 17. Bc4 f4 18. exf4 b5 19. cxb6 cxb6 20. Kf1 b5 {Kukov,V (2258)
+-Karpatchev,A (2533) Istanbul 2006 0-1 (43)}) (6. e4 Ng6 7. Bg3 Bg4 8. h3 Bxf3
+9. gxf3 Bb4+ 10. Nd2 Ngxe5 11. f4 Nd7 12. Qf3 Bxd2+ 13. Kxd2 Qe7 14. Rd1 O-O-O
+15. Kc1 Nc5 16. Bg2 Kb8 17. Rhe1 d3 18. Rd2 Qe6 19. Kb1 Qxc4 20. Rc1 Qb5 {
+Nordstrom,F (2165)-Thornert,H (2193) Sweden 2010 1/2-1/2 (63)}) 6... Ng6 7. Bg5
+f6 8. exf6 gxf6 9. Bh4 Bg4 10. Bg3 Qe7 11. Qb3 O-O-O 12. O-O-O Bh6 13. Kb1 Nge5
+14. Ka1 Bf5 15. h3 Nb4 16. Ne1 Rhe8 17. Bh2 Qc5 18. f4 Nec6 19. a3 Qa5 20. Nd3
+{Polak,T (2410)-Neubauer,M (2295) Stockerau 1993 1-0 (49)}) (5... Be6 6. Nbd2
+Qd7 7. Qa4 Nge7 8. O-O-O Ng6 9. g3 Bg4 10. Bg2 Nxf4 11. gxf4 O-O-O 12. Nb3 Qf5
+13. Nfxd4 Nxd4 14. Nxd4 Qxf4+ 15. e3 Qxf2 16. Qxa7 Qxg2 17. Qa8+ Kd7 18. Qxd8+
+{1-0 (18) Santos,A (2290)-Rodrigues,N (2165) Almada 1998}) (5... Bg4 6. a3 Nge7
+7. Nbd2 Ng6 8. Bg3 Qd7 9. h3 Be6 10. e4 dxe3 11. fxe3 O-O-O 12. Qc2 Bc5 13. Qc3
+Rhe8 14. b4 Bf8 15. Be2 f6 16. exf6 gxf6 17. Rd1 Qg7 18. Kf2 Be7 19. Rhg1 Rg8
+20. Bh2 {Charkhalashvili,I (2278)-Koneru,H (2387) Athens 2001 1/2-1/2}) (5...
+f6 6. e3 Bb4+ 7. Nbd2 fxe5 8. Nxe5 (8. Bxe5 $143 dxe3 9. fxe3 Nxe5 10. Nxe5 Qe7
+$15) 8... dxe3 9. Bxe3 (9. fxe3 $143 Nxe5 10. Bxe5 Qe7 $15) 9... Bxd2+ 10. Qxd2
+Qxd2+ 11. Kxd2 Nxe5 12. Bd4 $14) 6. Nbd2 $16 Nge7 7. a3 Ng6 (7... Bxd2+ $142 8.
+Qxd2 Bg4 $16) 8. Bg5 $4 {letting the wind out of his own sails} (8. axb4 $142
+Nxf4 9. b5 $16) 8... Be7 $15 9. Bxe7 Qxe7 {[%cal Rc6e5,Re7e5,Rg6e5,Gf3e5] Will
+e5 fall?} 10. Nb3 {[%cal Rb3d4,Rd1d4,Rf3d4,Gc6d4] Now all is on d4} (10. g3 Bf5
+$15) 10... Ngxe5 (10... Bg4 $5 11. Qc2 Bxf3 12. gxf3 Qxe5 $17) 11. Nbxd4 $11
+Nxc4 $4 {a transit from better to worse.} (11... Bg4 $142 {is a viable option}
+12. Nxe5 Nxe5 $11) 12. Nxc6 $16 bxc6 13. Qc2 Be6 (13... Nb6 $5 $16) 14. e3 $18
+Ne5 $4 {sad, but how else could Black save the game?} (14... Nb6 $142 15. Qxc6+
+Bd7 16. Qxc7 O-O $18) 15. Nd4 (15. Nxe5 $142 {and White has it in the bag} O-O
+16. Nxc6 $18) 15... c5 (15... O-O $5 $16) 16. Nxe6 fxe6 $4 {terrible, but what
+else could Black do to save the game?} (16... Qxe6 17. Qxc5 Rd8 18. Be2 $16)
+17. Bb5+ (17. Qe4 {and White can already relax} O-O 18. Qxe5 Qd6 $18) 17... Nd7
+$4 {further deteriorates the position} (17... c6 $142 18. Be2 O-O $16) 18. Rd1
+(18. Qa4 {keeps an even firmer grip} Rb8 19. O-O-O O-O 20. Rxd7 Qg5 $18) 18...
+Rd8 (18... c6 19. Bxc6 O-O-O $18) 19. Qa4 O-O (19... Rf8 {cannot change what
+is in store for White} 20. O-O a6 21. Bc6 $18) 20. Bxd7 Qf6 (20... Rf7 {
+cannot undo what has already been done} 21. Bc6 $18) 21. O-O Qxb2 22. Bxe6+ Kh8
+23. Rxd8 Rxd8 24. Rd1 Rf8 25. Qh4 (25. Qf4 $142 {makes it even easier for White
+} Qb8 26. Qg5 c4 $18) 25... Qf6 (25... Qc2 {does not improve anything} 26. Rf1
+Qd3 27. Qa4 $18) 26. Qxf6 gxf6 27. h4 Re8 28. Bf5 Kg7 (28... Re7 {does not
+solve anything} 29. Rd8+ Kg7 30. Rd5 $18) 29. Rd7+ Kf8 30. Rxc7 Re7 (30... h6 {
+cannot change destiny} 31. Rh7 $18) 31. Rxc5 (31. Rxe7 $142 {seems even better}
+Kxe7 32. Bxh7 $18) 31... Re5 (31... Kg7 $18 {hoping against hope}) 32. Rxe5
+fxe5 33. Bxh7 Kg7 34. Be4 1-0
+
+[Event "Hokkaido Chess Championship 2024"]
+[Site "?"]
+[Date "2024.03.23"]
+[Round "3.6"]
+[White "Shimomura, Kensei"]
+[Black "Takeuchi, Hiroshi"]
+[Result "0-1"]
+[ECO "B08"]
+[WhiteElo "1199"]
+[BlackElo "1388"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "80"]
+[EventDate "2024.03.23"]
+
+{B08: Pirc Defence: Classical System} 1. e4 d6 2. d4 Nf6 3. Nc3 g6
+4. Nf3 Bg7 5. Bc4 Bg4 (5... e6 6. O-O a6 7. a4 O-O 8. h3 Nc6 9. Bg5 h6 10. Be3
+d5 11. Bd3 Nb4 12. e5 Nd7 13. Ne2 c5 14. dxc5 Nc6 15. Ned4 Ndxe5 16. Nxe5 Nxe5
+17. Be2 Nc6 18. f4 Qe7 19. Qd2 Bd7 20. b4 {Honos,A (2323)-Horvath,T (2426)
+Hungary 2007 1-0 (40)}) 6. h3 $146 (6. Be3 Nc6 7. h3 Bxf3 8. Qxf3 O-O 9. Ne2 e5
+10. d5 Ne7 11. Bb3 Nd7 12. g4 a5 13. c3 a4 14. Bc2 c6 15. dxc6 bxc6 16. h4 d5
+17. h5 d4 18. Bc1 Nc5 19. cxd4 exd4 20. Nf4 d3 {Cao,K (2184)-Naroditsky,D 
+(2486) Saint Louis 2012 0-1 (38)}) (6. e5 dxe5 7. Bxf7+ Kf8 8. Bb3 Nc6 9. d5 e4
+10. h3 exf3 11. hxg4 fxg2 12. Rg1 Ne5 13. Rxg2 Qd7 14. Qe2 Nexg4 15. Bf4 Bh6
+16. Bxh6+ Nxh6 17. O-O-O Nf5 18. Kb1 Nd6 19. Ba4 Qd8 20. Qd2 a6 {Sarbok,T 
+(2362)-Gaerths,R (2269) Berlin 2004 1/2-1/2 (47)}) (6. O-O Nc6 7. d5 Ne5 8. Be2
+Nxf3+ 9. Bxf3 Bxf3 10. Qxf3 O-O 11. Be3 c6 12. dxc6 bxc6 13. e5 dxe5 14. Qxc6
+Qb8 15. Rab1 Qb4 16. Qc5 Qb7 17. Qxe5 Ng4 18. Qe4 Qxe4 19. Nxe4 Nxe3 20. fxe3
+Rfd8 {Szymanski,P (2210)-Czerwonski,A (2379) Warsaw 2007 0-1 (48)}) 6... Bxf3 {
+Black forks: d1, g2+e4} 7. Qxf3 {White has the pair of bishops} Nbd7 (7... Nc6
+8. Qd3 $14) 8. O-O e6 {Secures d5} 9. Bg5 h6 10. Bd2 c6 11. d5 {White
+threatens to win material: d5xe6} (11. Bb3 O-O $16) 11... Ne5 $14 {Black
+threatens to win material: Ne5xf3. Black forks: c4+f3} 12. Qe2 exd5 13. exd5
+O-O 14. dxc6 bxc6 15. Bb3 {Black has a cramped position} Qc7 {White has an
+active position} 16. Rfe1 Rae8 17. Ne4 Nxe4 18. Qxe4 {Black has a cramped
+position} d5 {Black threatens to win material: d5xe4} 19. Qf4 Qd7 $2 (19... Re7
+20. Re3 $11) 20. Bc3 {White threatens to win material: Bc3xe5} (20. Bb4 $142
+$16) 20... g5 $11 {Black threatens to win material: g5xf4} 21. Qg3 Ng6 22. Ba4
+Ne7 $2 (22... Re6 $142 $5 $11 {might be a viable alternative}) 23. Bxg7 $16
+Kxg7 24. c3 (24. Qc3+ $5 d4 25. Qc5 $16) 24... f6 (24... Ng6 25. Rad1 $11) 25.
+Qf3 (25. Qg4 Qxg4 26. hxg4 Kf7 $14) 25... f5 (25... Ng6 26. Qd3 $11) 26. Rad1
+$14 g4 {Black gains space} (26... Nc8 27. Qd3 $14) 27. Qg3 (27. Qe3 $5 $16)
+27... Ng6 $14 28. Bc2 h5 29. Qh2 (29. Rxe8 Rxe8 30. Qd3 Re5 $14) 29... Qf7 (
+29... f4 $142 $11) 30. h4 $4 {hands over the advantage to the opponent} (30.
+Qd6 $142 $14 {would keep White in the game}) 30... f4 $17 31. Bxg6 Kxg6 32. f3
+$4 {the position was bad, and this mistake simply hastens the end} (32. a3 $142
+$17) 32... g3 $19 33. Qh3 Kg7 (33... Rxe1+ $142 {it becomes clear that Black
+will call all the shots} 34. Rxe1 Re8 $19) 34. Kf1 $17 Rxe1+ 35. Rxe1 (35. Kxe1
+$142 Rd8 36. Rd3 $17) 35... Kg8 $4 {gives the opponent new chances} (35... Kf6
+$142 36. Re2 Re8 $19) 36. Qh1 $4 {ruins a very nice position} (36. Qe6 $142 {
+was necessary} Qxe6 37. Rxe6 $11) 36... Qf5 (36... Qg6 $142 {might be the
+shorter path} 37. Qh3 Qd3+ 38. Kg1 Rf5 $19) 37. Qg1 (37. Qh3 Qd3+ 38. Kg1 $19)
+37... Qd3+ 38. Re2 Re8 39. Qf2 gxf2 40. Kxf2 Qxe2+ (40... Qxe2+ 41. Kg1 Qe1+
+42. Kh2 Qxh4+ 43. Kg1 Re1#) (40... Rxe2+ 41. Kg1 Qg6 42. g4 Qb1#) 0-1
+
+[Event "Hokkaido Chess Championship 2024"]
+[Site "?"]
+[Date "2024.03.23"]
+[Round "3.7"]
+[White "Kuramoto, koutarou"]
+[Black "Nakamura, Mitsuru"]
+[Result "1-0"]
+[ECO "D31"]
+[BlackElo "1406"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "57"]
+[EventDate "2024.03.23"]
+
+{D31: Queen's Gambit Declined: Semi-Slav without ...Nf6 (+
+Marshall Gambit and Noteboom) and Exchange Variation lines without ...Nf6} 1.
+d4 d5 2. c4 c6 3. Nc3 Nf6 4. e3 e6 5. cxd5 (5. Bd2 Nbd7 6. Qc2 b6 7. cxd5 exd5
+8. Bd3 Be7 9. Nge2 Bb7 10. Ng3 g6 11. h4 Qc7 12. e4 c5 13. Nxd5 Nxd5 14. exd5
+Bxd5 15. h5 Bf6 16. hxg6 hxg6 17. Rxh8+ Bxh8 18. Bxg6 Bxd4 19. Be4 Bxe4 {
+Volkov,S (2605)-Dreev,A (2645) St Petersburg 1998 0-1 (67)}) 5... cxd5 $146 (
+5... exd5 6. Bd3 (6. Qc2 c5 7. Nf3 cxd4 8. exd4 a6 9. Bg5 Be7 10. Rc1 O-O 11.
+Be2 Nc6 12. Ne5 h6 13. Nxc6 bxc6 14. Bf4 Bd6 15. Bxd6 Qxd6 16. Rd1 c5 17. dxc5
+Qxc5 18. Qd2 Be6 19. Qd4 Rfc8 20. Na4 Qxd4 {Brodsky,M (2566)-Drozdovskij,Y 
+(2561) Poltava 2006 1/2-1/2 (39)}) 6... Be7 (6... Bd6 7. Nge2 O-O 8. f3 Re8 9.
+O-O a6 10. Qe1 c5 11. Qh4 h6 12. Bd2 Nc6 13. Rac1 b6 14. Kh1 Ra7 15. g4 Be7 16.
+Qf2 Rc7 17. Ng3 Bf8 18. Kg2 g6 19. h4 Bg7 20. Nce2 Qd6 21. Rh1 {Rakhmanov,A 
+(2489)-Rasmussen,A (2519) Athens 2008 1/2-1/2 (41)}) 7. Nge2 a5 8. O-O O-O 9.
+a3 Re8 10. b4 Nbd7 11. Rb1 axb4 12. axb4 Nf8 13. f3 Ng6 {1/2-1/2 (13) Fier,A 
+(2589)-Rozentalis,E (2600) Koge 2014}) 6. Bd3 a6 {Prevents intrusion on b5} 7.
+Nf3 Nbd7 (7... Bd6 8. Bd2 $11) 8. O-O Bd6 (8... b5 9. Bd2 $14) 9. e4 (9. Bd2
+O-O $14) 9... dxe4 $14 10. Nxe4 Nxe4 11. Bxe4 Nf6 {Black threatens to win
+material: Nf6xe4} 12. Bg5 h6 13. Bxf6 {White forks: g7+d8} Qxf6 {Black has the
+pair of bishops} 14. Qb3 Rb8 15. Qb6 {White threatens to win material: Qb6xd6}
+(15. Ne5 O-O $14) 15... Qe7 {Black has a cramped position} (15... Qd8 16. Qxd8+
+Kxd8 17. Ne5 $11) 16. Rfe1 O-O 17. Ne5 Bc7 {Black threatens to win material:
+Bc7xb6} 18. Qb3 Bxe5 19. dxe5 b5 20. Rac1 Bb7 21. Qe3 Bxe4 22. Qxe4 b4 23. Rc6
+Ra8 24. Rec1 a5 25. Qc4 (25. Rc7 Qg5 $14) 25... Rfd8 26. Qc5 {White threatens
+to win material: Qc5xe7} (26. g3 $5 $11) 26... Qg5 $15 27. Rd6 Rac8 (27... Rxd6
+28. exd6 Qd2 29. g3 $15) 28. Rxd8+ (28. Qxc8 $142 $5 {should be considered}
+Rxc8 29. Rxc8+ Kh7 30. Rc5 $11) 28... Qxd8 $4 {a weak move, ruining a winning
+position} (28... Rxd8 $142 {was much better} 29. g3 Rd2 30. Qxa5 Qf5 $15) 29.
+Qxc8 $18 (29. Qxc8 Qxc8 30. Rxc8+ Kh7 31. Ra8 $18) 1-0
+
+[Event "Hokkaido Chess Championship 2024"]
+[Site "?"]
+[Date "2024.03.23"]
+[Round "3.8"]
+[White "Shishido, Kenta"]
+[Black "Furuse, Mizuki"]
+[Result "0-1"]
+[ECO "B08"]
+[BlackElo "1157"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "96"]
+[EventDate "2024.03.23"]
+
+{[%mdl 8256] B08: Pirc Defence: Classical System} 1. e4 d6 2. d4 Nf6 3. Nc3 g6
+4. Nf3 Bg7 5. Bc4 O-O {Black has a cramped position} 6. Ng5 $146 (6. e5 dxe5 7.
+Nxe5 c6 (7... Nfd7 8. Qe2 (8. Nf3 Nb6 9. Bb3 Nc6 10. Be3 Bg4 11. Ne2 Bxf3 12.
+gxf3 e5 13. d5 Nd4 14. Nxd4 exd4 15. Bxd4 Re8+ 16. Kf1 Qh4 17. Bxg7 Kxg7 18. h3
+Re5 19. Qd3 Rae8 20. Rd1 Qf6 21. Rg1 Nd7 22. Qc3 h5 {Trajkoski,S (2316)
+-Vladimirov,V (2162) Struga 2011 1-0}) 8... Nb6 9. Bb3 Nc6 10. Nxc6 bxc6 11.
+Be3 a5 12. a4 Ba6 13. Qg4 Bc4 {1/2-1/2 (13) Ljubojevic,L (2565)-Planinec,A 
+(2525) Madrid 1973}) 8. Be3 Nd5 9. Bxd5 cxd5 10. f4 e6 11. O-O Nc6 12. Nxc6
+bxc6 13. Na4 Rb8 14. c3 Re8 15. b4 Ba6 16. Rf2 Bc4 17. Nb2 Ba6 18. a4 Qc7 19.
+Qd2 f6 20. Rc1 Qd6 {Estrada Degrandi,W (2350)-Riego Prieto,V (2250) Tucuman
+1971 1/2-1/2 (42)}) (6. Bg5 c6 7. Bb3 h6 8. Be3 Nbd7 9. e5 dxe5 10. dxe5 Ng4
+11. e6 Nxe3 12. exf7+ Kh7 13. fxe3 Qb6 14. Qe2 Nc5 15. O-O Nxb3 16. axb3 Be6
+17. Rf2 Rxf7 18. Raf1 Raf8 19. Qd3 Bf5 20. Qe2 Qb4 {Stevic,Z (2200)-Planinec,A
+(2485) Majdanpek 1976 1-0 (36)}) (6. Bb3 Nc6 $11) 6... a6 {Covers b5} (6... h6
+$142 7. Nf3 Nxe4 8. Nxe4 d5 $11) 7. Nxf7 (7. O-O $142 {and White hangs on} Nc6
+8. Bb3 $11) 7... Rxf7 $17 8. Bxf7+ Kxf7 9. O-O b6 (9... Nc6 10. d5 Na5 11. Qd3
+$17) 10. Re1 (10. Qe2 Kg8 $15) 10... Nc6 $17 11. Be3 Bb7 12. Qf3 e5 13. dxe5 (
+13. d5 Na5 $17) 13... Nxe5 14. Qf4 (14. Qe2 Qe7 $17) 14... Kg8 $19 15. Rad1 $4
+{White crumbles in face of a dire situation} (15. Qh4 Qd7 $19) 15... Qe7 (15...
+Nh5 $142 {secures the point} 16. Qg5 Bf6 17. Qxf6 Qxf6 $19) 16. Nd5 Nxd5 17.
+exd5 Rf8 18. Qg3 (18. Qe4 Bc8 $19) 18... Bf6 (18... Qf7 19. f4 Nc4 20. Bd4 Nxb2
+21. Bxg7 Qxg7 22. Rd2 $19) 19. Bf4 (19. Bh6 Re8 $17) 19... Qf7 (19... Bh4 20.
+Qe3 Qf7 21. Bg3 Bxg3 22. fxg3 Bxd5 23. Rf1 $19) 20. Qb3 (20. Bh6 Re8 $17) 20...
+h5 (20... b5 21. Re4 $19) 21. c4 Bh4 22. g3 Bg5 $1 {Decoy: g5} 23. Rd4 (23.
+Bxg5 Qf5 {Decoy Double attack}) 23... Bf6 (23... Bxf4 $6 24. Rxf4 Qe8 25. Rxf8+
+Kxf8 26. h4 $15) 24. Bh6 (24. Rde4 c6 25. Rd1 b5 26. cxb5 cxd5 $17 (26... axb5
+$6 27. Bh6 $15)) 24... Re8 (24... Nf3+ $142 $1 25. Qxf3 Bxd4 26. Qxf7+ Rxf7 27.
+Re8+ Kh7 $19) 25. Rde4 $17 Re7 (25... b5 $142 26. f4 bxc4 $19) 26. h3 $2 (26.
+Qe3 $5 $17) 26... g5 (26... b5 {keeps an even firmer grip} 27. Rd1 bxc4 28.
+Qxb7 $19) 27. f4 (27. Bxg5 $142 Bxg5 28. f4 $19) 27... gxf4 28. Bxf4 Bc8 29.
+Bxe5 (29. Kg2 $19) 29... dxe5 (29... Bxe5 {keeps an even firmer grip} 30. Rf1
+Qg6 31. Qf3 $19) 30. g4 $2 (30. Kg2 $142 $17) 30... Qg6 $19 31. Qb4 (31. Qg3
+$19) 31... hxg4 32. hxg4 (32. h4 {desperation} Bxh4 33. Qc3 Bxe1 34. Rxe1 $19)
+32... Bxg4 33. Kf2 (33. c5 Bf3+ 34. Rg4 Bxg4 35. Qe4 $19) 33... Bh4+ 34. Ke3
+Qg5+ (34... Rf7 $142 {and Black can celebrate victory} 35. Qc3 Rf3+ 36. Kd2
+Rxc3 37. bxc3 Bxe1+ 38. Rxe1 Qf5 $19) 35. Kd3 Bxe1 36. Qxe1 Bf5 37. a4 (37. Kc3
+{is not much help} Bxe4 38. Qxe4 Rf7 $19) 37... Bxe4+ (37... Rh7 38. d6 Rh3+
+39. Kc2 Qg2+ 40. Kb1 Bxe4+ 41. Qxe4 Qxe4+ 42. Kc1 Rh2 43. dxc7 Qc2#) 38. Qxe4
+Kg7 39. b4 (39. Qe1 Rf7 40. Kc2 Qg6+ 41. Kb3 Qd3+ 42. Qc3 Rf3 $19) 39... Qg6 (
+39... Rf7 $142 {and Black has prevailed} 40. Qe3 Rf4 41. c5 Qf5+ 42. Kc3 $19)
+40. c5 (40. Qxg6+ {is not the saving move} Kxg6 41. Ke4 Kf6 $19) 40... Qxe4+ (
+40... bxc5 $142 {ends the debate} 41. bxc5 Kf6 42. Qxg6+ Kxg6 43. Ke4 $19) 41.
+Kxe4 Kf6 (41... bxc5 $142 $5 {makes it even easier for Black} 42. bxc5 Kf6 43.
+Ke3 $19) 42. d6 cxd6 43. cxd6 (43. cxb6 {doesn't change anything anymore} Ke6
+$19) 43... Rd7 44. Kd5 e4 (44... Kf5 $142 $19 {seems even better}) 45. Kc6 Ke6
+46. b5 Rxd6+ 47. Kb7 (47. Kc7 {does not help much} axb5 48. Kb7 bxa4 49. Ka6 a3
+50. Kb7 a2 51. Ka6 a1=Q+ 52. Kb5 Qa3 53. Kc4 Qd3+ 54. Kb4 Rd4#) 47... axb5 48.
+axb5 (48. Ka6 {a fruitless try to alter the course of the game} bxa4 49. Kb5 a3
+50. Ka6 a2 51. Ka7 a1=Q+ 52. Kb7 Ke7 53. Kb8 Rd7 54. Kc8 Qh8#) 48... e3 (48...
+e3 49. Kc7 e2 50. Kb7 Rd7+ 51. Kxb6 e1=Q 52. Kc5 Qc3+ 53. Kb6 Qa3 54. Kc6 Qd6#)
+0-1
+
+[Event "Hokkaido Chess Championship 2024"]
+[Site "?"]
+[Date "2024.03.24"]
+[Round "4.1"]
+[White "Sugimoto, Koichi"]
+[Black "Yamaguchi, Tosei"]
+[Result "0-1"]
+[ECO "A45"]
+[WhiteElo "1864"]
+[BlackElo "1940"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "80"]
+[EventDate "2024.03.23"]
+
+{A45: Trompowsky Attack} 1. d4 Nf6 2. Bf4 g6 3. Nc3 d5 4. e3 (4.
+Nb5 Na6 5. e3 Bg7 6. Nf3 (6. c4 c6 7. Nc3 Qb6 8. Qb3 Nh5 9. Be5 Qxb3 10. axb3
+Bxe5 11. dxe5 dxc4 12. Bxc4 Nc7 13. Nf3 Ng7 14. Ne4 Bf5 15. Nc5 b6 16. Na6 Nxa6
+17. Bxa6 Rb8 18. Nd4 Bd7 19. Rc1 c5 20. Nb5 O-O {Barva,A (2389)-Korpa,B (2417)
+Hungary 2015 0-1 (50)}) 6... O-O 7. c4 c6 8. Nc3 Nc7 9. h3 Ne6 10. Be5 a6 11.
+Rc1 dxc4 12. Bxc4 b5 13. Bb3 Qd7 14. O-O Bb7 15. Bxf6 Bxf6 16. Ne4 Bg7 17. Bxe6
+Qxe6 18. Nc5 Qc8 {Matlakov,M (2695)-Kovalev,V (2539) Wroclaw 2014 1-0 (31)})
+4... Bg7 5. Be2 O-O 6. h4 h5 $146 (6... c5 7. Nf3 Nc6 8. h5 Nxh5 9. Bh2 Bg4 10.
+Qd2 Nf6 11. Be5 Ne4 12. Nxe4 dxe4 13. Bxg7 Kxg7 14. Ng5 Bxe2 15. Rxh7+ Kg8 16.
+Kxe2 e5 17. Rah1 Qxg5 18. d5 Rad8 19. c4 Qxg2 20. Qc3 Nd4+ 21. exd4 {Fridman,D
+(2616)-Schmidt,W (2360) Poznan 2014 1-0}) 7. f3 {Covers e4+g4} (7. Nf3 $5 $11)
+7... c5 8. g4 (8. dxc5 $5 {is an interesting idea} Qa5 9. Qd3 $15) 8... cxd4 9.
+exd4 Nc6 10. Qd2 hxg4 11. O-O-O Nh5 (11... g3 12. Bxg3 Bf5 13. Bd3 $15) 12.
+fxg4 Nxf4 13. Qxf4 e5 (13... Bxd4 14. Rxd4 e5 $11) 14. dxe5 $15 Bxe5 15. Qd2 (
+15. Qh6 $142 {and White has air to breath} Bg7 16. Qf4 $15) 15... d4 $19 16.
+Ne4 Qd5 17. Nf2 (17. Bd3 Qxa2 18. Qg5 $17) 17... Qxa2 18. Qg5 Qa1+ (18... Re8
+$142 {keeps an even firmer grip} 19. Nd3 Bd6 20. Kd2 $19) 19. Kd2 Qxb2 20. Ke1
+Qc3+ (20... Nb4 {and Black can already relax} 21. Nd3 Nxd3+ 22. Rxd3 $19) 21.
+Kf1 Qe3 (21... Qxc2 $6 22. Nf3 Re8 23. Bd3 $17) 22. Nf3 (22. Rh3 Qxg5 23. hxg5
+a5 $19) 22... Qxg5 (22... Bf4 $142 {and Black has prevailed} 23. Qf6 Bg3 $19)
+23. Nxg5 f6 24. Bc4+ Kg7 25. Nf3 Na5 (25... a5 26. h5 $19) 26. Bd5 (26. Be2 Rh8
+$19) 26... Rd8 27. Be4 Nc4 28. Ke2 Ne3 29. Rdg1 Be6 (29... Nd5 30. h5 Nc3+ 31.
+Kd3 $19) 30. h5 $17 g5 31. h6+ Kf7 (31... Kh8 $142 $5 $17) 32. Nxe5+ $15 fxe5
+33. Rh5 {White threatens to win material: Rh5xg5} Kf6 34. Rg3 (34. Bf3 $5 Rac8
+35. Ne4+ Ke7 36. c3 $17) 34... Nd5 $17 35. Nh3 (35. Rf3+ $5 Nf4+ 36. Kd2 $17)
+35... Nf4+ $19 36. Nxf4 exf4 (36... gxf4 37. g5+ Kf7 38. Rg1 f3+ 39. Kxf3 $18)
+37. Rg1 Bf7 38. Rh2 Re8 39. Kf3 $2 (39. Kd3 Rac8 40. Bf5 $17) 39... Bg6 (39...
+Rac8 {might be the shorter path} 40. h7 Bg6 41. Rh6 Rxe4 42. h8=Q+ Rxh8 43.
+Rxh8 Re3+ 44. Kf2 $19) 40. Bxg6 (40. Bxb7 Re3+ 41. Kf2 Rb8 $19) 40... Kxg6 (
+40... Kxg6 41. Rd2 Rac8 $19) 0-1
+
+[Event "Hokkaido Chess Championship 2024"]
+[Site "2"]
+[Date "2024.03.24"]
+[Round "4.2"]
+[White "Shinoda, Taro"]
+[Black "Nishimori, Toshiyuki"]
+[Result "1-0"]
+[ECO "E01"]
+[WhiteElo "1911"]
+[BlackElo "1570"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "51"]
+[EventDate "2024.03.23"]
+
+{E01: Catalan: Early deviations} 1. d4 Nf6 2. c4 e6 3. g3 d5 4. Bg2
+Nc6 5. Nf3 (5. cxd5 exd5 6. Nc3 Bb4 7. Bg5 h6 8. Bxf6 Qxf6 9. e3 Qd6 10. Nge2
+Ne7 11. a3 Bxc3+ 12. Nxc3 O-O 13. O-O c6 14. b4 Bf5 15. b5 Rfc8 16. Qb3 Bd3 17.
+bxc6 Bc4 18. Qb4 Qxb4 19. axb4 Rxc6 {Eljanov,P (2761)-Khenkin,I (2614) Sibenik
+2010 1/2-1/2 (50)}) 5... Rb8 6. Nbd2 $146 (6. cxd5 exd5 7. O-O h6 8. Nc3 Bb4 9.
+Ne5 O-O 10. a3 Bxc3 11. bxc3 Re8 12. Bf4 g5 13. Be3 Ng4 14. Nxg4 Bxg4 15. c4
+dxc4 16. d5 Na5 17. h3 Bh5 18. Ra2 Qd6 19. a4 a6 20. Qd4 Qe5 {Tsatsalashvili,K
+(2262)-Khurtsilava,I (2163) Konya 2015 0-1 (38)}) 6... b6 (6... Bd6 7. O-O $11)
+7. O-O Bb7 8. b3 Bb4 9. Bb2 O-O 10. a3 Bxd2 11. Qxd2 {White has the pair of
+bishops} Ne4 12. Qc2 Ne7 13. Ne5 f6 {Black threatens to win material: f6xe5}
+14. Nd3 Qe8 (14... Nf5 15. Rac1 Rf7 16. Nf4 $14) 15. cxd5 Bxd5 (15... exd5 $142
+$5 {is worth looking at} 16. Qxc7 Nd2 $14) 16. Nf4 $18 (16. Qxc7 $6 Nd2 17.
+Rfd1 Nxb3 $14) 16... f5 17. f3 (17. Qxc7 $6 Nd2 18. Rfd1 Nxb3 19. Nxe6 Bxe6 $14
+) 17... Nf6 $2 (17... Nd6 $142 $5 $16) 18. e4 $18 fxe4 19. fxe4 Bc6 $4 {
+simply worsens the situation} (19... g5 20. Nxd5 exd5 $18) 20. Nxe6 Rf7 21. d5
+Bb5 22. Rfc1 (22. Rf3 $5 {seems even better} Rc8 23. Qc3 Qd7 $18) 22... c5 23.
+a4 (23. d6 {makes it even easier for White} Ng6 24. Nc7 Rxc7 25. dxc7 Rc8 $18)
+23... Ba6 (23... Bd7 {is not much help} 24. Ng5 Rf8 25. e5 $18) 24. Ng5 Rf8 25.
+e5 Nd7 (25... Ng6 {there is nothing better in the position} 26. Ne6 Ng4 27.
+Nxf8 Qxf8 $18) 26. Qxh7# 1-0
+
+[Event "Hokkaido Chess Championship 2024"]
+[Site "3"]
+[Date "2024.03.24"]
+[Round "4.3"]
+[White "Yoshii, Yukihiko"]
+[Black "Takeuchi, Hiroshi"]
+[Result "0-1"]
+[ECO "E92"]
+[WhiteElo "1644"]
+[BlackElo "1388"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "44"]
+[EventDate "2024.03.23"]
+
+{[%mdl 8256] E92: King's Indian: Classical: 6 Be2 e5: 7 dxe5, 7 Be3 and
+Petrosian System without 7...Nbd7} 1. c4 Nf6 2. Nc3 d6 3. d4 g6 4. e4 Bg7 5.
+Nf3 O-O 6. Be2 e5 7. h3 Nc6 (7... Na6 8. O-O exd4 9. Nxd4 Re8 10. Bf3 c6 11.
+Bf4 Qe7 12. Nb3 Rd8 13. Re1 Be6 14. Nd5 Qf8 15. Ne3 Nc5 16. Qc2 Nfd7 17. Nf5
+Nxb3 18. axb3 gxf5 19. exf5 Ne5 20. Bxe5 Bxe5 21. fxe6 fxe6 22. Bg4 {Gamboa,N 
+(2405)-Ravi,L (2370) Manila 1992 1/2-1/2 (50)}) (7... exd4 8. Nxd4 Re8 9. Bg5
+h6 10. Bxf6 Qxf6 11. Nf3 Na6 12. O-O c6 13. Re1 Nc5 14. Bf1 a5 15. Rc1 Bd7 16.
+Rc2 Rad8 17. Rd2 Bc8 18. g3 Qe7 19. Rde2 Be6 20. Rd2 Qc7 21. Nd4 Bc8 22. Bg2 {
+Anarkulov,A (2234)-Kasyan,A (2283) Tashkent 2010 0-1 (40)}) 8. Be3 $146 (8. d5
+Ne7 9. g4 Ne8 10. Bg5 h6 11. Be3 f5 12. Ng1 Nf6 13. f3 c6 14. Qd2 cxd5 15. cxd5
+Kh7 16. Bd3 Qa5 17. Nb5 Qd8 18. Qb4 a6 19. Nc3 b5 20. a4 a5 21. Qb3 b4 22. Nb5
+Bb7 {Konovalova,O (2190)-Dolzhikova,O (2213) Kharkov 1999 0-1 (34)}) (8. d5 Nd4
+$14) 8... a6 {White has a very active position} (8... exd4 9. Nxd4 Re8 10. Nxc6
+bxc6 11. Qc2 $15) 9. O-O (9. dxe5 dxe5 10. O-O Be6 $14) 9... Bd7 (9... exd4 10.
+Nxd4 Qe7 11. Bd3 $11) 10. a3 {Consolidates b4} (10. d5 $5 Ne7 11. Qb3 $14)
+10... exd4 $11 {Black forks: c3+e3} 11. Nxd4 {White has a very active position}
+Re8 12. f3 {Prevents intrusion on g4} Nh5 13. Nxc6 bxc6 14. Qe1 (14. Qd2 a5 $11
+) 14... f5 (14... Rb8 15. Ra2 $15) 15. Bd3 (15. g4 $5 {should be considered} f4
+16. Bf2 $15) 15... f4 $17 16. Bf2 Qg5 17. Kh2 (17. h4 Qe5 18. Rd1 Bf6 $15)
+17... Ng3 {Black threatens to win material: Ng3xf1} (17... Rab8 18. Qd2 $17)
+18. Rg1 $2 (18. Bxg3 fxg3+ 19. Qxg3 Qd2 $15) 18... Qh4 (18... Rab8 $142 $5 19.
+Rb1 a5 $17) 19. Rb1 (19. Bxg3 $4 {if White takes the knight he will lose} fxg3+
+20. Qxg3 Be5 21. Qxe5 Rxe5 $19) 19... g5 (19... Qh6 $142 $15) 20. Bxg3 $4 {
+a weak move, ruining a winning position} (20. Ne2 $142 $16) 20... fxg3+ $19 21.
+Kh1 (21. Qxg3 {is the last straw} Be5 22. Qxe5 Rxe5 23. Ne2 $19) 21... Bxh3 $1
+{Deflection: h3} 22. Rf1 (22. gxh3 Qxh3# {Mate attack Deflection}) (22. Z0 $140
+Be6# {Mate threat}) 22... Bxg2+ $1 {Clearance: h3} (22... Bxg2+ 23. Kxg2 Qh2#)
+0-1
+
+[Event "Hokkaido Chess Championship 2024"]
+[Site "4"]
+[Date "2024.03.24"]
+[Round "4.4"]
+[White "Aoki, Yasuhiro"]
+[Black "Hasegawa, Emi"]
+[Result "1/2-1/2"]
+[ECO "A39"]
+[WhiteElo "1598"]
+[BlackElo "1417"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "73"]
+[EventDate "2024.03.23"]
+
+{A39: Symmetrical English vs ...g6: 4 Bg2 Bg7 5 Nf3 Nf6 6 0-0 0-0 7 d4} 1. c4
+c5 2. Nf3 Nf6 3. g3 g6 4. Bg2 Bg7 5. O-O O-O 6. Nc3 Nc6 7. d4 cxd4 8. Nxd4 Nxd4
+9. Qxd4 d6 10. Qd3 Rb8 11. e4 a6 12. Be3 $146 (12. Rd1 Bg4 (12... Be6 13. Qe2
+Qc8 14. Nd5 Bxd5 15. exd5 Qc7 16. Be3 Nd7 17. Rac1 a5 18. b3 Nc5 19. Re1 Rfe8
+20. Bd2 Qb6 21. Bh3 Na6 22. Bd7 Red8 23. Bb5 Bf6 24. Bc3 Bxc3 25. Rxc3 Nc7 26.
+Ba4 Qb4 27. Re3 {Fries Nielsen,N (2315)-Barry,C (2250) Berlin West 1980 1-0 
+(74)}) (12... Nd7 13. Be3 b5 14. cxb5 axb5 15. Nxb5 Ne5 16. Qf1 Bg4 17. Re1 Bd7
+18. a4 Ng4 19. Ba7 Ra8 20. h3 Ne5 21. Be3 Qb8 22. b3 Nd3 23. e5 Nxe1 24. Bxa8
+Nc2 25. Ba7 Qxa8 26. Rc1 Bxb5 27. Qxb5 {Ulziibayar,B (2219)-Enkhnar,E (2278)
+Govi Altai 2014 0-1 (34)}) 13. f3 Be6 14. Qe2 Rc8 15. Nd5 b5 16. cxb5 Bxd5 17.
+exd5 Qb6+ 18. Be3 {1/2-1/2 (18) Schneider,L (2328)-Tallinger,T (2200) Sweden
+2007}) (12. b3 b5 13. Bb2 Nd7 14. cxb5 axb5 15. Qd2 Bb7 16. Nxb5 Bxb2 17. Qxb2
+Ba6 18. a4 Nc5 19. Qc3 Qb6 20. e5 dxe5 21. Rac1 Ne6 22. Qxe5 Bxb5 23. Qxb5 Qxb5
+24. axb5 Rxb5 25. Rfe1 Rxb3 26. Bd5 Rb6 {Visakh,N (2375)-Deepan Chakkravarthy,
+J (2497) Delhi 2015 1/2-1/2 (34)}) 12... Nd7 13. Bd4 {Black has a cramped
+position. Black's piece can't move: c8} (13. Rac1 Ne5 14. Qe2 Bd7 $14) 13...
+Ne5 $11 14. Qe2 (14. Qd1 $5 $11) 14... Bg4 $15 {Black threatens to win
+material: Bg4xe2} 15. Qc2 Nf3+ (15... Nxc4 $142 $5 {and Black could well hope
+to play on} 16. Bxg7 Kxg7 $15) 16. Bxf3 $14 Bxf3 17. Bxg7 Kxg7 {Black king
+safety dropped} 18. Nd5 Bg4 19. Qc3+ f6 20. Qe3 h5 21. f3 {White threatens to
+win material: f3xg4} Bd7 22. Rac1 {[%cal Yc4c5] White prepares the advance c5}
+Rh8 23. h4 b5 (23... Bc6 $142 $5 $14 {is worthy of consideration}) 24. c5 $16
+dxc5 25. Qxc5 Kf7 26. Qc7 $4 {releasing the pressure on the opponent} (26. e5
+$142 $18 {White has the better game}) 26... Be6 $11 27. Qxd8 {White has a mate
+threat} Rhxd8 28. Rfd1 (28. Rc5 Bxd5 29. exd5 Rd6 $11) 28... b4 (28... Rbc8 $5
+$15 {is worth consideration}) 29. Rc7 $11 Bxd5 30. exd5 {A double rook endgame
+occured} Rd6 31. Re1 Re8 32. Re4 a5 (32... b3 33. axb3 Rxd5 34. Kf2 $11) 33.
+Rc5 Ra8 34. Rc7 {White threatens to win material: Rc7xe7} Re8 35. Rc5 Ra8 36.
+Rc7 {Twofold repetition} (36. Kf2 f5 37. Re5 Ra7 $14) 36... Re8 $11 37. Rc5
+1/2-1/2
+
+[Event "Hokkaido Chess Championship 2024"]
+[Site "5"]
+[Date "2024.03.24"]
+[Round "4.5"]
+[White "Ito, Katsuhide"]
+[Black "Kawamura, Takuto"]
+[Result "0-1"]
+[ECO "B47"]
+[WhiteElo "1199"]
+[BlackElo "1601"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "62"]
+[EventDate "2024.03.23"]
+
+{B47: Sicilian: Taimanov: 5 Nc3 Qc7 6 f4, 6 g3 and 6 Be2} 1. e4 c5
+2. Nf3 e6 3. d4 cxd4 4. Nxd4 Nc6 5. Nc3 Qc7 6. Be2 Nf6 7. O-O Be7 {White has
+an active position} 8. f4 $4 $146 {there were better ways to keep up the
+pressure} (8. Be3 O-O 9. a4 (9. Kh1 d5 10. exd5 exd5 11. Bf3 Be6 12. Re1 Rad8
+13. Qe2 h6 14. Rad1 Rfe8 15. Nxe6 fxe6 16. Bxh6 gxh6 17. Qxe6+ Kg7 18. Nxd5
+Nxd5 19. Bxd5 Bg5 20. Qxe8 Rxe8 21. Rxe8 Ne7 22. Bb3 Qe5 23. c3 h5 {Burg,T 
+(2301)-Epishin,V (2587) Tilburg 2007 0-1}) 9... Rd8 10. f4 d5 11. e5 Ne4 12.
+Nxc6 bxc6 13. Nxe4 dxe4 14. Qe1 a5 15. Bc4 c5 16. Bd2 Bb7 17. Bc3 Rd4 18. b3 g6
+19. Rd1 Qd7 20. h3 Bd8 21. Bxd4 cxd4 22. Qf2 Bb6 {Hamdouchi,H (2576)-Granda
+Zuniga,J (2592) Navalmoral 2007 1/2-1/2}) (8. Ndb5 Qb8 9. f4 d6 10. Be3 O-O 11.
+a4 Rd8 12. Kh1 a6 13. Nd4 e5 14. Nb3 Be6 15. f5 Bxb3 16. cxb3 Nb4 17. Bf3 d5
+18. exd5 Qd6 19. Qe2 Re8 20. Ne4 Nxe4 21. Bxe4 Rac8 22. Rac1 h6 {Svidler,P 
+(2738)-Grachev,B (2640) Moscow 2008 1-0 (33)}) (8. Nb3 O-O 9. f4 d6 10. g4 a6
+11. g5 Nd7 12. Bd3 Re8 13. Qh5 g6 14. Qh4 b5 15. Rf3 Bf8 16. Rh3 h6 17. Be3 b4
+18. Ne2 d5 19. Ng3 Qd8 20. e5 Bg7 21. Rf1 Kh7 22. Nh5 Rh8 {Tomczak,J (2544)
+-Swiercz,D (2631) Warsaw 2014 1-0 (79)}) (8. a4 O-O 9. Nb3 b6 10. f4 d6 11. Be3
+Bb7 12. a5 Nxa5 13. Nxa5 bxa5 14. Bf3 Rfd8 15. Qe2 Bc6 16. Rfd1 Rab8 17. b3 d5
+18. exd5 Nxd5 19. Bxd5 exd5 20. Bd4 Rb4 21. Be5 Qb6+ 22. Kh1 f6 {Chelushkina,I
+(2357)-Pavlovic,M (2457) Belgrade 2008 0-1}) (8. Ndb5 Qb8 $14) 8... d6 (8...
+Nxd4 $142 {secures victory} 9. Be3 Nxe2+ 10. Qxe2 Qc6 $19) 9. f5 {White gains
+space} (9. Be3 O-O $14) 9... Nxd4 (9... Qb6 $5 {should not be overlooked} 10.
+Be3 e5 $11) 10. Qxd4 $14 d5 11. Be3 (11. exd5 $4 {the pawn contains a lethal
+dose of poison} Bc5 12. Be3 Bxd4 13. Bxd4 O-O $19) 11... dxe4 12. Qa4+ (12.
+fxe6 $142 $5 {and White can hope to survive} Bxe6 13. Nxe4 $14) 12... Bd7 $15
+13. Bb5 (13. Nb5 Qe5 14. fxe6 fxe6 $17) 13... a6 {Black threatens to win
+material: a6xb5} (13... Ng4 $5 14. Bxd7+ Qxd7 15. Qxe4 exf5 $15) 14. Rad1 Rd8 (
+14... Bc6 $142 $5 $15 {must definitely be considered}) 15. Bxd7+ $14 Rxd7 16.
+Nxe4 Nxe4 17. fxe6 fxe6 18. Qxe4 Rxd1 19. Rxd1 {White has a king attack} Qc6 {
+Black threatens to win material: Qc6xe4} 20. Qe5 {White threatens to win
+material: Qe5xg7} (20. Qxc6+ $142 bxc6 21. Rd3 $14) 20... Kf7 $4 {Black is
+ruining his position} (20... O-O 21. b3 $11) 21. Kh1 $4 {forfeits the advantage
+} (21. Qh5+ $142 {White clearly has the better chances} g6 22. Rf1+ Ke8 23. Qe5
+$16) 21... Bf6 {Black threatens to win material: Bf6xe5} (21... Qxc2 $4 {
+Black will not be able to digest the pawn} 22. Rf1+ Bf6 23. Bg5 $18) 22. Rf1 (
+22. Qh5+ $142 g6 23. Qh6 Qxc2 24. Rf1 $11) 22... Qxc2 $4 {not a good decision,
+because now the opponent is right back in the game.} (22... Rd8 $142 {this is
+the best bet to save the position} 23. Qh5+ Kg8 $11) 23. Bg5 $18 Qg6 (23... Rf8
+{desperation} 24. Bxf6 Qc4 $18) 24. Qc7+ Kg8 25. Bxf6 (25. Qc8+ {makes it even
+easier for White} Kf7 26. Qxb7+ Kf8 27. Bxf6 gxf6 $18) 25... gxf6 (25... h5 {
+is not the saving move} 26. Bc3 h4 $18) 26. Qxb7 (26. Rd1 $142 {secures the win
+} Qe8 27. Rd7 Qxd7 28. Qxd7 $18) 26... Qf7 $16 27. Qxa6 Kg7 28. Rd1 (28. b4 e5
+$16) 28... e5 (28... Rb8 29. Qe2 $16) 29. Rd3 (29. Qa4 $5 Re8 30. Rd7 $16)
+29... Re8 30. Qc6 (30. Rg3+ $5 Kh8 31. a4 $16) 30... Qxa2 $11 {Black has a
+mate threat.} 31. Rd7+ Kg6 (31... Kg6 32. h3 Qb1+ (32... Qxb2 {leads to a
+pleasing mate} 33. Qe4+ f5 34. Qc6+ Re6 35. Qxe6+ Kg5 36. h4+ Kg4 37. Qh6 Qc1+
+38. Qxc1 f4 39. Rg7+ Kf5 40. Qc6 f3 41. Rg5+ Kf4 42. Qxf3#) 33. Kh2 Qf5 $11 (
+33... Qxb2 {allows the opponent a nice mating combination} 34. Qe4+ f5 35. Qc6+
+Re6 36. Qxe6+ Kg5 37. Qg8+ Kf4 38. Qg3+ Ke4 39. Qf3#)) 0-1
+
+[Event "Hokkaido Chess Championship 2024"]
+[Site "6"]
+[Date "2024.03.24"]
+[Round "4.6"]
+[White "Ono, Yukiko"]
+[Black "Miyatani, Ryohei"]
+[Result "0-1"]
+[ECO "C50"]
+[BlackElo "1313"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "38"]
+[EventDate "2024.03.23"]
+
+{[%mdl 8256] C50: Hungarian Defence and Giuoco Pianissimo} 1. e4 e5 2. Nc3 Nc6
+3. Bc4 Bc5 4. d3 Nf6 5. Nf3 d6 6. Bg5 Be6 7. Bb5 (7. Nd5 Nd4 (7... Bxd5 8. Bxd5
+h6 9. Bxc6+ bxc6 10. Be3 Bb6 11. O-O O-O 12. h3 Re8 13. Re1 Re6 14. a4 Rb8 15.
+b3 Bxe3 16. Rxe3 c5 17. Nh2 Nh7 18. Rg3 Nf8 19. Ng4 Rg6 20. Ne3 Ne6 21. Kh2 Nd4
+22. Qd2 {Apel,S (2337)-Liwak,P (2296) Germany 2003 0-1 (41)}) 8. Nxf6+ gxf6 9.
+Bxe6 fxe6 10. Bh4 Nc6 11. c3 Qe7 12. b4 Bb6 13. Nd2 Rg8 14. Nc4 Qf7 15. a4 d5
+16. a5 Bd4 17. cxd4 dxc4 18. dxe5 Nxe5 19. dxc4 Rg4 20. Bg3 Rxe4+ 21. Kf1 Rd8 {
+Ivanovic,B (2530)-Rodriguez Vargas,O (2445) Terrassa 1989 0-1}) 7... O-O $146 (
+7... h6 8. Bh4 Bb4 (8... a6 9. Bxc6+ bxc6 10. d4 exd4 11. Nxd4 Bd7 12. O-O Rb8
+13. Nb3 Bb6 14. Qd3 g5 15. Bg3 Nh5 16. Rae1 Nxg3 17. hxg3 Qf6 18. e5 dxe5 19.
+Ne4 Qg6 20. Qc3 f6 21. Nbc5 Bf5 22. Nxa6 O-O 23. Nxb8 {Schmidt,W (2160)-Laske,
+M (2245) Germany 1999 1/2-1/2 (41)}) 9. d4 Bd7 10. O-O Bxc3 11. bxc3 g5 12. Bg3
+Nxe4 13. Bxc6 Bxc6 14. dxe5 dxe5 15. Bxe5 Qxd1 16. Raxd1 f6 17. Bd4 Kf7 18. Nd2
+Rhe8 19. f3 Nxd2 20. Rxd2 Rad8 21. g4 Bb5 22. Rb1 {Nimzowitsch,A-Capablanca,J
+Riga 1913 0-1 (64)}) 8. O-O Nd4 9. Nh4 $2 (9. Nxd4 $5 Bxd4 10. Qf3 $11) 9...
+Nxb5 (9... h6 $5 10. Be3 c6 $17) 10. Nxb5 {Black has the pair of bishops} c6 {
+Black threatens to win material: c6xb5} 11. a4 $4 {another step towards the
+grave} (11. d4 $142 cxb5 12. dxc5 $17) 11... cxb5 $19 12. axb5 h6 13. Bd2 (13.
+Bxf6 {does not save the day} Qxf6 (13... gxf6 $6 14. Qh5 $19) 14. Nf3 Bd7 $19)
+13... Nxe4 $1 {Discovered attack: f6, Qd8xh4} 14. Ba5 (14. dxe4 Qxh4 {
+Discovered attack}) 14... Qxh4 (14... Nxf2 {and Black can already relax} 15.
+Bxd8 Nxd1+ 16. Kh1 Nf2+ 17. Rxf2 Bxf2 18. Rf1 $19) 15. Qf3 (15. dxe4 {does not
+win a prize} Qxe4 16. Re1 Qg6 $19) 15... Nxf2 (15... Nf6 $142 $19 {might be
+the shorter path}) 16. Qxb7 (16. Rxf2 {praying for a miracle} Bg4 17. Qg3 Qxg3
+18. hxg3 $19) 16... Ng4+ 17. Rf2 Qxf2+ 18. Kh1 Qg1+ $1 {Mate attack} 19. Rxg1 (
+19. Rxg1 Nf2# {Mate attack}) 19... Nf2# 0-1
+
+[Event "Hokkaido Chess Championship 2024"]
+[Site "7"]
+[Date "2024.03.24"]
+[Round "4.7"]
+[White "Furuse, Mizuki"]
+[Black "Shimomura, Kensei"]
+[Result "1-0"]
+[ECO "A07"]
+[WhiteElo "1157"]
+[BlackElo "1199"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "115"]
+[EventDate "2024.03.23"]
+
+{[%mdl 8256] A07: R騁i Opening: New York and Capablanca Systems} 1. Nf3 Nc6 2.
+g3 e5 3. d3 d5 4. Bg2 Nf6 5. O-O Be7 6. Nbd2 Bf5 $146 (6... O-O 7. e4 (7. c4 e4
+8. Ne1 exd3 9. Nxd3 dxc4 10. Nxc4 Be6 11. b3 Bd5 12. Bb2 Bxg2 13. Kxg2 Qd5+ 14.
+Kg1 Rad8 15. Ne3 Qh5 16. Qc2 Ng4 17. Nxg4 Qxg4 18. Rad1 Bd6 19. f3 Qg6 20. e4
+h5 21. Kh1 Rfe8 {Damjanovic,M (2490)-Karaklajic,N (2490) Cienfuegos 1972 1/2-1/
+2 (32)}) 7... dxe4 (7... Re8 8. exd5 Nxd5 9. Re1 Bf8 10. Nc4 f6 11. a4 Ndb4 12.
+Ne3 Be6 13. Bf1 Nd4 14. Nd2 Ndc6 15. Ndc4 Qd7 16. c3 Nd5 17. a5 b5 18. Nxd5
+Qxd5 19. Bg2 Qd7 20. Ne3 Rad8 21. Qh5 Ne7 22. Be4 {Brito Garcia,A (2375)
+-Martin Gonzalez,A (2430) Madrid 1992 1/2-1/2 (50)}) (7... d4 8. Qe2 Nd7 9. c4
+a5 10. Ne1 Nc5 11. f4 f6 12. f5 a4 13. Ndf3 Bd7 14. g4 Qb8 15. h4 b5 16. cxb5
+Qxb5 17. Nh2 a3 18. b3 Nb4 19. Rf3 Bc6 20. Rg3 Kf7 21. Nf1 Qa6 22. Bd2 {
+Planinec,A (2520)-Janosevic,D (2430) Umag 1972 0-1 (37)}) 8. dxe4 Be6 9. Re1
+Nd7 10. b3 a5 11. a3 Bc5 12. Bb2 Qe7 13. c3 f6 14. b4 Bd6 15. Nf1 Nb6 16. N3d2
+Rfd8 17. Qc2 Qf7 18. Ne3 Rd7 {1/2-1/2 (18) Rukavina,J (2480)-Masic,L (2390)
+Umag 1972}) (6... O-O 7. e4 $15) 7. b3 O-O {White has a cramped position} 8.
+Bb2 e4 {Black threatens to win material: e4xf3} 9. Nh4 {White threatens to win
+material: Nh4xf5} Be6 (9... Bd7 $5 {should be investigated more closely} 10.
+dxe4 dxe4 $11) 10. dxe4 $16 dxe4 11. Bh1 $4 {hands over the advantage to the
+opponent} (11. Nxe4 Nxe4 12. Qxd8 Raxd8 13. Bxe4 f5 14. Bxc6 bxc6 $16) 11...
+Bc5 $4 {gives the opponent new chances} (11... e3 $142 12. fxe3 Ng4 $17) 12.
+Nxe4 $16 Nxe4 13. Bxe4 Bd4 (13... f5 14. Bg2 $16) 14. c3 (14. Bxd4 Qxd4 15.
+Bxc6 Qxd1 16. Raxd1 bxc6 $16) 14... Bf6 15. Nf3 {Black has an active position}
+(15. Ng2 Be5 $16) 15... Qe7 16. Qc2 g6 17. Nd4 Nxd4 18. cxd4 c6 19. Bg2 Rfe8
+20. e4 Bg7 21. Rfe1 Qg5 22. Rad1 Rad8 23. f4 (23. d5 cxd5 24. h4 Qh6 25. exd5
+Bg4 $18) 23... Qb5 24. h3 f5 (24... a5 25. Bc3 $16) 25. d5 $1 {the knock-out
+blow} cxd5 (25... Bxb2 26. Qxb2 (26. dxe6 $143 Rxd1 27. Rxd1 Ba3 $16) 26... Bf7
+27. exf5 Rxe1+ 28. Rxe1 $16) 26. exd5 Bf7 (26... Rc8 27. Qf2 Bxb2 28. Qxb2 $18
+(28. Rxe6 $6 Ba3 29. Rxe8+ Rxe8 $16)) 27. Rxe8+ $18 Qxe8 28. Bxg7 Kxg7 29. Qc3+
+Kg8 30. Qe5 Qxe5 $2 (30... Qd7 $142 $18) 31. fxe5 Kf8 32. Kf2 (32. d6 {keeps
+an even firmer grip} b6 $18) 32... Ke7 $2 (32... Rc8 33. d6 b6 $18) 33. Ke3 Kd7
+(33... Rc8 {doesn't improve anything} 34. d6+ Kd7 35. Bxb7 Rc3+ 36. Rd3 $18)
+34. e6+ Ke7 (34... Kd6 {hardly improves anything} 35. exf7 Rf8 36. Kf4 Rxf7 37.
+Re1 $18) 35. exf7 Kxf7 (35... Kd6 {cannot undo what has already been done} 36.
+Re1 Rf8 37. Kf4 Rxf7 38. Re6+ Kd7 39. Bf3 $18) 36. d6 Rd7 (36... Ke8 {doesn't
+do any good} 37. Bxb7 Kd7 38. Ba6 $18) 37. Bd5+ Kf6 38. Bxb7 $1 {the death
+sentence} Ke5 (38... Rxb7 39. d7 {Passed pawn}) 39. Bc8 Rxd6 (39... Rd8 {
+doesn't change the outcome of the game} 40. d7 $18) 40. Rxd6 Kxd6 41. Kf4 h6
+42. Bxf5 $1 {final destruction} gxf5 (42... Kd5 $18 {the only chance to get
+some counterplay}) 43. Kxf5 Kc5 44. a3 Kd4 45. Kg6 Kc3 46. Kxh6 Kxb3 47. Kg6 a5
+48. h4 Kxa3 49. h5 Ka2 50. h6 Kb1 51. h7 a4 52. h8=Q a3 53. Qc3 a2 54. Qb3+ Ka1
+(54... Kc1 {doesn't get the cat off the tree} 55. Qxa2 Kd1 56. Qf2 Kc1 57. g4
+Kd1 58. g5 Kc1 59. Kf6 Kb1 60. g6 Kc1 61. g7 Kd1 62. g8=Q Kc1 63. Qgg1#) 55.
+Qxa2+ $1 {White should return some of the goodies he has collected.} Kxa2 56.
+Kf6 Kb3 (56... Kb1 {doesn't change anything anymore} 57. g4 Ka1 58. g5 Ka2 59.
+Kf5 Kb2 60. g6 Kb3 61. g7 Kc3 62. g8=Q Kd3 63. Qf7 Kc3 64. Ke5 Kc2 65. Qc4+ Kd1
+66. Qa2 Ke1 67. Ke4 Kd1 68. Kd3 Ke1 69. Qe2#) 57. g4 Kc4 (57... Kb2 {is no
+salvation} 58. Ke5 Kc3 59. g5 Kb2 60. g6 Ka2 61. g7 Kb3 62. g8=Q+ Kc3 63. Qd8
+Kb3 64. Qd5+ Kb2 65. Qd3 Ka2 66. Qb5 Ka3 67. Kd4 Ka2 68. Kc3 Ka3 69. Qb3#) 58.
+g5 (58. g5 Kd5 59. g6 Kc5 60. g7 Kc4 61. g8=Q+ Kd4 62. Qa8 Kc4 63. Qf8 Kd3 64.
+Ke5 Kc3 65. Qc8+ Kd2 66. Ke4 Ke1 67. Qc2 Kf1 68. Kf3 Ke1 69. Qe2#) 1-0
+
+[Event "Hokkaido Chess Championship 2024"]
+[Site "8"]
+[Date "2024.03.24"]
+[Round "4.8"]
+[White "Shishido, Kenta"]
+[Black "Kuramoto, koutarou"]
+[Result "0-1"]
+[ECO "C50"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "64"]
+[EventDate "2024.03.23"]
+
+{[%mdl 8256] C50: Hungarian Defence and Giuoco Pianissimo} 1. e4 e5 2. Nf3 Nc6
+3. Bc4 Bc5 4. d3 Nf6 5. Bg5 d6 6. O-O h6 7. Bxf6 (7. Bh4 g5 8. Bg3 h5 (8... Bg4
+9. h3 Bxf3 10. Qxf3 h5 11. h4 Nd4 12. Qd1 Ng4 13. c3 gxh4 14. cxd4 hxg3 15.
+Bxf7+ Kxf7 16. fxg3+ Kg7 17. dxc5 Qg5 18. Qd2 Qe3+ 19. Qxe3 Nxe3 20. Rc1 Raf8
+21. Nd2 Kh6 22. Nc4 Nxc4 23. Rxc4 {Casado Dominguez,J (2180)-Romon Poves,R 
+(2251) Aragon 2009 0-1 (51)}) 9. h4 Bg4 10. c3 Qd7 11. d4 exd4 12. e5 dxe5 13.
+Bxe5 Nxe5 14. Nxe5 Qf5 15. Qa4+ Kf8 16. Nxf7 dxc3 17. Nxc3 Rh7 18. hxg5 Nd7 19.
+Nh6 Qxg5 20. Nf7 Rxf7 21. Ne4 Qg7 {Moun,M (2554)-Nay,O (2495) Yangon 1999 0-1})
+7... Qxf6 {Black has the pair of bishops} 8. Nbd2 $146 (8. Nc3 Ne7 9. d4 exd4
+10. Nb5 Bb6 11. Nbxd4 Bg4 12. c3 Ng6 13. Qa4+ Kf8 14. h3 h5 15. Nh2 Nf4 16. Kh1
+Re8 17. f3 Bc8 18. Ne2 Rh6 19. Nxf4 Qxf4 20. Qc2 Rg6 21. Rad1 Re5 22. Rd5 Rxd5
+{Ferreira,O (2275)-Sieiro Gonzalez,L (2390) Mexico 1991 0-1}) (8. Nc3 Bb6 $11)
+8... O-O $15 9. Re1 Bg4 10. h3 {White threatens to win material: h3xg4} Be6 (
+10... Bd7 11. c3 $15) 11. c3 {Secures b4} Rad8 (11... Nd8 12. Qb3 $11) 12. a3 {
+Controls b4} (12. Bxe6 Qxe6 13. b4 Bb6 $14) 12... d5 {Black threatens to win
+material: d5xc4} (12... Bd7 $142 $11) 13. b4 $4 {White has let it slip away} (
+13. exd5 Bxd5 14. Ne4 Bxe4 15. Rxe4 $16) 13... Bb6 $4 {overlooking an easy win}
+(13... dxc4 $142 {ends the debate} 14. bxc5 Rxd3 $19 (14... cxd3 $6 15. Rb1 $19
+)) 14. Bb5 $4 {White lets it slip away} (14. exd5 $142 $5 Bxd5 15. Bxd5 Rxd5
+16. c4 Rxd3 17. c5 Bxc5 18. bxc5 $16) 14... a6 (14... Qg6 $5 {might be a
+viable alternative} 15. Kf1 f6 $15) 15. Bxc6 $11 bxc6 16. c4 (16. exd5 $142 $5
+{is noteworthy} cxd5 17. Rxe5 $11) 16... dxc4 $17 17. dxc4 Bxc4 $1 {Deflection:
+d2.} 18. Rc1 (18. Nxc4 Rxd1 {Deflection Pinning}) 18... Bd3 19. Qa4 Bb5 20. Qc2
+a5 21. a4 {White threatens to win material: a4xb5} Ba6 22. Qxc6 $2 (22. Nb3 $5
+axb4 23. a5 $15) 22... Rd6 (22... Rxd2 23. Qxf6 Bxf2+ 24. Kh2 gxf6 25. Nxd2
+Bxe1 26. Rxe1 axb4 27. Nb3 $19) 23. Qc3 (23. Qc2 $142 axb4 24. Nc4 Bxc4 25.
+Qxc4 $17) 23... Rfd8 $4 {weakening the position} (23... Rd3 24. Qb2 Rfd8 25.
+Red1 $19) 24. Red1 $4 (24. bxa5 Bxf2+ 25. Kxf2 Rxd2+ 26. Kg1 Rxg2+ 27. Kxg2 $17
+) 24... Be2 $19 25. Qxe5 $4 {an oversight. But White was lost anyway.} (25.
+bxa5 Bxf3 26. axb6 Bxd1 27. bxc7 Rxd2 28. cxd8=Q+ Rxd8 29. a5 $19) 25... Qxe5
+26. Nxe5 Bxd1 27. Nec4 (27. Ndc4 {does not help much} Re6 28. bxa5 Ba7 $19)
+27... Rc6 (27... Rxd2 $142 {finishes off the opponent} 28. Nxd2 Rxd2 29. bxa5
+Bxf2+ 30. Kh2 $19) 28. b5 (28. Rb1 {doesn't get the bull off the ice} axb4 29.
+a5 Ba7 30. Rxb4 Be2 $19) 28... Rc5 29. Kf1 (29. Ra1 $19 {otherwise it's
+curtains at once}) 29... Rxd2 $1 {Deflection: c4} 30. Ke1 (30. Nxd2 Rc2 {
+Decoy Double attack} (30... Rxc1 {Deflection Pinning})) 30... Rd4 31. Nxb6 Rxc1
+32. Nd5 Bf3# (32... Bg4#) 0-1
+
+[Event "Hokkaido Chess Championship 2024"]
+[Site "?"]
+[Date "2024.03.24"]
+[Round "5.1"]
+[White "Yamaguchi, Tosei"]
+[Black "Hasegawa, Emi"]
+[Result "1-0"]
+[ECO "D35"]
+[WhiteElo "1940"]
+[BlackElo "1417"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "65"]
+[EventDate "2024.03.23"]
+
+{D35: Queen's Gambit Declined: Exchange Variation} 1. d4 Nf6 2. c4
+e6 3. Nf3 d5 4. cxd5 exd5 5. Nc3 Be7 6. Bf4 c6 7. Qc2 Nbd7 8. h3 O-O 9. e3 Re8
+10. Bd3 a6 (10... c5 11. dxc5 Nxc5 12. O-O Nxd3 13. Qxd3 a6 14. Rac1 Be6 15.
+Ne2 Qa5 16. Rc7 Qxa2 17. Rxb7 Qc4 18. Rd1 Ne4 19. Rc7 Qxd3 20. Rxd3 Rac8 21.
+Nfd4 Rxc7 22. Bxc7 Rc8 23. Be5 Nd6 24. Rb3 Nc4 25. Rb7 {Gagunashvili,M (2596)
+-De Ramos,J (2368) Manila 2010 1-0 (69)}) 11. O-O Nf8 12. Rab1 $146 (12. Ne5
+Bd6 13. Bh2 Ng6 14. f4 c5 15. Kh1 c4 16. Bf5 b5 17. a3 Qb6 18. Bxc8 Raxc8 19.
+Qf5 a5 20. Nxd5 Qd8 21. Nxf6+ Qxf6 22. Qd7 b4 23. axb4 Red8 24. Qb5 Bxb4 25.
+Nxc4 Qe6 26. b3 Qe4 {Gvanceladze,A (2183)-Kharmunova,N (2196) Moscow 2013 1-0 
+(31)}) 12... Ng6 13. Bh2 Bd7 14. b4 b6 15. Ne5 (15. a4 $142 $16) 15... c5 $2 (
+15... Bd6 $142 {would keep Black alive} 16. Nxd7 Bxh2+ 17. Kxh2 Qxd7 $14) 16.
+Nxd7 $18 (16. Bxg6 $6 hxg6 17. Nxd7 Qxd7 $16) 16... Qxd7 17. Na4 Qc6 $2 (17...
+Bd6 18. Bxd6 Qxd6 19. bxc5 bxc5 $18) 18. bxc5 b5 19. Nb6 Ra7 20. a4 bxa4 21.
+Qxa4 Qxa4 22. Nxa4 Ne4 (22... a5 {does not improve anything} 23. Rfc1 $18) 23.
+Rb2 (23. Bxe4 {might be the shorter path} dxe4 24. c6 Bd8 $18) 23... Bf6 (23...
+a5 {does not solve anything} 24. Nb6 $18) 24. Rfb1 (24. c6 {seems even better}
+Ne7 25. c7 Nc8 $18) 24... Raa8 (24... Ne7 $18 {a last effort to resist the
+inevitable}) 25. Rc2 (25. Nb6 {seems even better} Nxc5 26. Nxa8 Nxd3 $18) 25...
+Bd8 26. c6 Ba5 27. Bxe4 Rxe4 (27... dxe4 {cannot change destiny} 28. c7 $18)
+28. Rc5 Bd8 29. c7 Bxc7 30. Rxc7 h5 (30... Re6 {a fruitless try to alter the
+course of the game} 31. Rbb7 Rae8 32. Nc3 $18) 31. Rbb7 Rf8 (31... Rae8 {
+the last chance for counterplay} 32. Nc3 R4e7 $18) 32. Nc5 Ree8 33. Bd6 1-0
+
+[Event "Hokkaido Chess Championship 2024"]
+[Site "?"]
+[Date "2024.03.24"]
+[Round "5.2"]
+[White "Takeuchi, Hiroshi"]
+[Black "Shinoda, Taro"]
+[Result "0-1"]
+[ECO "A47"]
+[WhiteElo "1388"]
+[BlackElo "1911"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "68"]
+[EventDate "2024.03.23"]
+
+{A47: 1 d4 Nf6 2 Nf3 b6: Torre, London and Colle Systems} 1. d4 Nf6
+2. Bf4 e6 3. Nf3 c5 4. c3 b6 5. e3 Bb7 6. Nbd2 d6 (6... cxd4 7. exd4 (7. cxd4
+Be7 8. h3 O-O 9. Bd3 d6 10. O-O Nc6 11. Bh2 Rc8 12. a3 Re8 13. Rc1 Bf8 14. e4
+e5 15. d5 Nb8 16. Qe2 g6 17. Qe3 Qd7 18. Nb1 Ba6 19. Bxa6 Nxa6 20. b4 Nc7 21.
+Nbd2 Qa4 {Ozkan,E (2227)-Kinsiz,O (2166) Konya 2012 0-1 (70)}) 7... d6 8. h3 a6
+9. Bd3 Be7 10. O-O O-O 11. Re1 Nbd7 12. a4 Re8 13. Qb3 Qc7 14. Re2 Bf8 15. Rae1
+Qc6 16. Ne4 Nxe4 17. Bxe4 Qc7 18. Bxb7 Qxb7 19. c4 Nf6 20. Bg5 Be7 21. Qd3 {
+Bagirov,R (2484)-Kovalyov,A (2557) ICC INT 2009 1-0 (81)}) 7. Bd3 cxd4 8. cxd4
+Be7 $146 (8... Nbd7 9. Qe2 Nd5 10. Bg5 Be7 11. Bxe7 Qxe7 12. Ba6 Bxa6 13. Qxa6
+O-O 14. O-O Rfc8 15. Rfc1 Qd8 16. Ne4 N7f6 17. Rxc8 Qxc8 18. Qxc8+ Rxc8 19.
+Nxd6 Rc2 20. Ne5 a6 21. Ndxf7 Kf8 {1/2-1/2 (21) Prie,E (2491)-David,V (2399)
+Pornic 2009}) 9. Rc1 Nbd7 (9... Nc6 10. O-O $11) 10. h3 {Covers g4} h6 {
+Controls g5} (10... Rc8 11. Rxc8 Qxc8 12. O-O $11) 11. O-O O-O 12. Qb3 (12. Bg3
+Rc8 $14) 12... Rc8 (12... e5 13. dxe5 dxe5 14. Nxe5 $11) 13. Bh2 Rxc1 14. Rxc1
+Qa8 15. Qb4 Rd8 16. Rc7 $4 {allows the opponent back into the game} (16. Qa3
+$142 $14 {was a good chance to save the game}) 16... Nd5 $19 17. Qa3 (17. Qc4
+Nxc7 18. Qxc7 $19) 17... Nxc7 18. Bxd6 Bxd6 19. Qxd6 Ne8 20. Qe7 Nef6 21. b3
+Re8 22. Qd6 Qb8 23. Qb4 Nd5 24. Qb5 (24. Qa3 {does not save the day} Rc8 $19)
+24... N7f6 (24... Rc8 {keeps an even firmer grip} 25. Bf1 Rc1 26. e4 $19) 25.
+Ne5 (25. Qa4 {cannot undo what has already been done} a6 $1 $19 {the knockout
+punch}) 25... a6 (25... Rc8 {and Black can already relax} 26. Qa4 Rc1+ 27. Nf1
+$19) 26. Qa4 b5 27. Qa3 Qc7 28. Ndf3 (28. Ne4 {cannot change what is in store
+for White} Nxe4 29. Bxe4 Rc8 $19) 28... Rc8 29. Kh2 Nb6 (29... Nd7 $142 {
+keeps an even firmer grip} 30. Kg1 Qc1+ 31. Qxc1 Rxc1+ 32. Kh2 Nxe5 33. Nxe5
+$19) 30. Qb4 (30. Bf1 {doesn't do any good} Ne4 31. Kg1 Nd5 $19) 30... Nbd7 (
+30... Bxf3 $142 {makes it even easier for Black} 31. gxf3 Nfd5 $19) 31. g3 (31.
+Kg1 $19 {no good, but what else?}) 31... Nxe5 32. Nxe5 Qc1 33. g4 Qh1+ 34. Kg3
+Qg2+ (34... Qg2+ 35. Kh4 Qxf2#) 0-1
+
+[Event "Hokkaido Chess Championship 2024"]
+[Site "?"]
+[Date "2024.03.24"]
+[Round "5.3"]
+[White "Nishimori, Toshiyuki"]
+[Black "Sugimoto, Koichi"]
+[Result "0-1"]
+[ECO "B72"]
+[WhiteElo "1570"]
+[BlackElo "1864"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "62"]
+[EventDate "2024.03.23"]
+
+{[%mdl 8256] B72: Sicilian Dragon: 6 Be3, lines with h3+Bc4 and sidelines} 1.
+e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. h3 Bg7 7. Be3 O-O 8. Qd2
+Nc6 (8... a6 9. g4 b5 10. Bg2 Bb7 11. O-O Nbd7 12. e5 dxe5 13. Ne6 fxe6 14.
+Bxb7 Rb8 15. Bg2 e4 16. Rad1 Ne5 17. Qxd8 Rbxd8 18. Nxe4 {1/2-1/2 (18) Mokry,K
+(2485)-Georgiev,K (2590) Warsaw 1987}) (8... d5 9. e5 Ne4 10. Nxe4 dxe4 11. Bf4
+Nc6 12. Nxc6 bxc6 13. Qc3 Be6 14. Be2 Qb6 15. O-O Rad8 16. Rad1 Rd5 17. b3 Rfd8
+18. Qa1 Qa5 19. c4 Rxd1 20. Bxd1 h6 21. h4 Bf5 22. Qb2 e3 23. fxe3 {Musaev,R 
+(2281)-Emiroglu,C (2356) Olomouc 2014 1/2-1/2 (34)}) 9. Be2 $146 (9. O-O-O Nxd4
+(9... d5 10. exd5 Nxd5 11. Nxc6 bxc6 12. Bd4 e5 13. Bc5 Be6 14. Bc4 Nxc3 15.
+Qxc3 Qg5+ 16. Be3 Qxg2 17. Bxe6 fxe6 18. Qc4 Kh8 19. h4 Rad8 20. Qxe6 Qe4 21.
+Qe7 Rde8 22. Qc5 Rd8 23. Qe7 Rde8 24. Qd6 {Thomas,I (2325)-Palkovi,J (2320)
+Oakham 1986 1-0 (46)}) 10. Bxd4 Be6 11. g4 Qa5 12. a3 Rfc8 13. g5 Ne8 14. Bxg7
+Nxg7 15. Nd5 Qxd2+ 16. Rxd2 Bxd5 17. exd5 Rc5 18. Be2 Rac8 19. Kb1 b5 20. b4
+Rc3 21. Bxb5 Rxa3 22. Rd3 Rxd3 23. Bxd3 Rb8 {Vela,N (2215)-Braga,C (2390)
+Mexico City 1977 1-0 (52)}) (9. Nf3 Bd7 10. g4 b5 11. Bxb5 Qb8 12. a4 a6 13.
+Bd3 Be6 14. Rb1 Rc8 15. O-O d5 16. Bf4 Qb7 17. e5 Nd7 18. Rfe1 Qb4 19. Bf1 Nc5
+20. Bg2 Nxa4 21. Nxa4 Qxa4 22. b3 Qb5 23. c3 a5 {Arakhamia Grant,K (2443)
+-Socko,M (2479) Amsterdam 2011 0-1 (50)}) 9... Bd7 10. g4 Rc8 (10... Nxd4 11.
+Bxd4 Bc6 12. f3 $11) 11. g5 Nh5 12. Bxh5 gxh5 13. f4 {Black has a cramped
+position} Na5 14. b3 {Secures a4+c4} b5 (14... Nc6 15. O-O-O Qa5 16. Kb2 $11)
+15. f5 (15. O-O-O Nc6 16. Ncxb5 Nxd4 17. Nxd4 a5 $16) 15... b4 (15... Nb7 $5
+$16) 16. Nd5 e6 (16... Nc6 17. O-O-O Bxd4 18. Bxd4 Nxd4 19. Qxd4 $18) 17. Nf6+
+$1 $18 {a devastating blow} (17. Nxb4 $6 exf5 18. exf5 Bxd4 19. Bxd4 Re8+ 20.
+Kf2 Nc6 21. Nxc6 Bxc6 $16) 17... Bxf6 18. gxf6 Qxf6 19. Bg5 Qe5 20. Rg1 Kh8 (
+20... Qxe4+ $4 {Black will choke on that pawn} 21. Kd1 Qh1 22. Rxh1 $18) 21.
+Qe3 $4 {gives the opponent counterplay} (21. O-O-O $142 Nc6 22. Bh4 Nxd4 23.
+Qxd4 $18) 21... exf5 $15 22. Kd2 $4 (22. O-O-O f6 (22... fxe4 23. Bh4 f6 24.
+Qh6 $18) 23. Bf4 Qxe4 $11) 22... f6 $4 {throwing away the advantage} (22...
+fxe4 $142 {and Black can already relax} 23. Raf1 f6 $19) 23. Bh6 $17 Rg8 (23...
+Rf7 24. exf5 Nc6 25. Qxe5 fxe5 26. Nxc6 Rxc6 27. Rg5 Bxf5 28. Rf1 $17) 24.
+Rxg8+ (24. exf5 $5 {must be considered} Nb7 25. Rxg8+ Rxg8 26. Rg1 Qxe3+ 27.
+Bxe3 $15) 24... Rxg8 $17 25. Rg1 Qh2+ (25... fxe4 $2 {doesn't work} 26. Rxg8+
+Kxg8 27. Qg1+ Bg4 28. hxg4 $18) 26. Ne2 Rxg1 27. exf5 $4 {shortens the misery
+for White.} (27. Bf4 $142 Qh1 $1 {Mate threat} 28. Qxg1 Qxg1 29. Nxg1 $17)
+27... Bb5 (27... Rg2 $142 {seems even better} 28. Qe7 Rxe2+ 29. Qxe2 Qxe2+ 30.
+Kxe2 Bxf5 $19) 28. c4 (28. Qxg1 {is one last hope} Qxe2+ 29. Kc1 Qf1+ 30. Qxf1
+Bxf1 31. h4 $19) 28... bxc3+ 29. Kxc3 Bxe2 (29... Rg2 $5 {might be the shorter
+path} 30. Qe7 Qe5+ 31. Qxe5 dxe5 32. b4 $19) 30. Qe8+ Rg8 31. Qe6 (31. Bg7+ {
+there is nothing else anyway} Kxg7 32. Qe7+ Kh6 33. Qxf6+ Rg6 34. fxg6 Qg3+ 35.
+Kd2 Qd3+ 36. Kc1 Qe3+ 37. Kb2 Qe5+ 38. Qxe5 dxe5 39. gxh7 Kxh7 40. h4 $19)
+31... Qe5+ (31... Qe5+ 32. Qxe5 dxe5 $19) 0-1
+
+[Event "Hokkaido Chess Championship 2024"]
+[Site "?"]
+[Date "2024.03.24"]
+[Round "5.4"]
+[White "Kawamura, Takuto"]
+[Black "Aoki, Yasuhiro"]
+[Result "1/2-1/2"]
+[ECO "E67"]
+[WhiteElo "1601"]
+[BlackElo "1598"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "70"]
+[EventDate "2024.03.23"]
+
+{E67: King's Indian: Fianchetto: 6...Nbd7} 1. d4 Nf6 2. Nf3 g6 3. g3 Bg7 4. Bg2
+O-O 5. O-O d6 6. c4 c6 7. Nc3 Nbd7 8. e4 Qc7 {Black has a cramped position.
+Black's piece can't move: c8} (8... Qa5 9. Rb1 Qa6 10. e5 Ne8 11. exd6 exd6 12.
+b3 Ndf6 13. Re1 Qa5 14. b4 Qh5 15. Ne2 Bg4 16. Rb3 Qf5 17. Nf4 g5 18. Ne2 h6
+19. Nd2 Qd7 20. Nf1 d5 21. c5 a5 22. bxa5 Rxa5 23. a3 {Greenfeld,A (2570)
+-Godes,D (2312) Tel Aviv 2001 1-0 (45)}) 9. Qe2 $146 (9. Be3 a6 10. a4 c5 11.
+Rc1 Rb8 12. h3 cxd4 13. Nxd4 Nc5 14. b4 Ne6 15. Nd5 Qd8 16. Re1 Nxd5 17. exd5
+Nxd4 18. Bxd4 Bxd4 19. Qxd4 b6 20. c5 bxc5 21. bxc5 Qa5 22. Rxe7 Rb4 23. Qe3
+dxc5 {Jankovec,I (2320)-Radojevic,Z (2205) Decin 1973 1-0 (37)}) (9. b3 e5 10.
+Bb2 Re8 11. Re1 (11. d5 a6 12. Rc1 Nc5 13. Qc2 a5 14. Ne1 Bh6 15. Rd1 Bd7 16.
+Nd3 cxd5 17. Nxc5 dxc5 18. cxd5 b5 19. a4 b4 20. Nb1 Rac8 21. Nd2 Bxd2 22. Qxd2
+c4 23. bxc4 Qxc4 24. f4 Nxe4 25. Qe3 Nc3 {Kaspret,G (2315)-Weiss,L (2190)
+Austria 1994 0-1 (38)}) 11... Nf8 12. h3 a5 13. Qd2 Ne6 14. Rad1 Nd7 15. d5 Nd4
+16. dxc6 bxc6 17. Nxd4 exd4 18. Na4 c5 19. e5 Ra6 20. exd6 Rxe1+ 21. Rxe1 Rxd6
+22. Qg5 d3 23. Re8+ Bf8 {Korpa,B (2417)-Kanyadi,Z (2158) Hungary 2015 1-0}) (9.
+d5 Nb6 10. c5 dxc5 11. Bf4 Qd8 12. dxc6 bxc6 13. Qc2 Be6 14. Rfd1 Qc8 15. a4 h6
+16. a5 Nbd7 17. Na4 Qb7 18. Ra3 Qb4 19. Nc3 g5 20. Bd2 Qb7 21. a6 Qc8 22. e5
+Nh7 23. Re1 g4 {Vombek,D (2270)-Stucl,B (2285) Austria 1994 1-0 (44)}) 9... e5
+10. d5 cxd5 11. cxd5 a6 {Consolidates b5} (11... b6 12. Bg5 $11) 12. Bd2 b5 13.
+b4 (13. b3 $5 $14 {deserves consideration}) 13... Nb6 $11 14. Rac1 Qb7 15. h3 {
+White has an active position} (15. Nb1 Bg4 $11) 15... Nc4 $15 {Praise the
+knight!} 16. Bg5 h6 17. Bxf6 Bxf6 {Black has the pair of bishops} 18. Rc2 Bd7
+19. Rfc1 Rac8 (19... a5 20. bxa5 Na3 21. Rb2 $17) 20. Nd1 $15 Kh7 21. Ne3 Nxe3
+22. Qxe3 Rxc2 23. Rxc2 Rc8 {Black threatens to win material: Rc8xc2} 24. Qd3
+Rxc2 25. Qxc2 Qc8 26. Qxc8 {White forks: a6+d7} Bxc8 {A minor pieces endgame
+occured} 27. Nd2 Bg5 {Black threatens to win material: Bg5xd2} 28. Nb3 Bd8 29.
+Kf1 f5 {Playing against the pawn chain} 30. f3 Kg7 31. Ke2 Kf6 32. Ke3 Bb6+ 33.
+Ke2 f4 {This push gains space} 34. g4 Kg5 35. Na1 (35. Na5 Bd7 $15) 35... Bd7
+1/2-1/2
+
+[Event "Hokkaido Chess Championship 2024"]
+[Site "?"]
+[Date "2024.03.24"]
+[Round "5.5"]
+[White "Miyatani, Ryohei"]
+[Black "Yoshii, Yukihiko"]
+[Result "1-0"]
+[ECO "B12"]
+[WhiteElo "1313"]
+[BlackElo "1644"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "51"]
+[EventDate "2024.03.23"]
+
+{[%mdl 8256] B12: Caro-Kann: Advance Variation} 1. e4 c6 2. d4 d5 3. e5 Bf5 4.
+c4 e6 5. Nf3 $146 (5. a3 dxc4 (5... Ne7 6. Nc3 Nd7 7. Be3 (7. Nf3 Bg4 8. Be3
+Nf5 9. cxd5 cxd5 10. h3 Bh5 11. Bd3 Bg6 12. Bf4 a6 13. h4 Ne7 14. h5 Bxd3 15.
+Qxd3 h6 16. O-O Rc8 17. Rfc1 Nb6 18. b3 Nc6 19. Bd2 Be7 20. Ne2 Kd7 21. Ne1 Qg8
+{Zhigalko,A (2572)-Rodshtein,M (2660) Jerusalem 2015 0-1 (56)}) 7... Bg6 8. Nf3
+dxc4 9. Bxc4 Nb6 10. Bb3 Nf5 11. O-O Be7 12. h3 O-O 13. Qe2 Nd5 14. Nxd5 cxd5
+15. Rac1 Qb6 16. Rc3 Rfc8 17. Rfc1 Qd8 18. Qb5 Rxc3 19. Rxc3 Nxe3 20. fxe3 {
+Najer,E (2663)-Riazantsev,A (2671) Sochi 2015 1/2-1/2 (71)}) (5... Nd7 6. cxd5
+cxd5 7. Nf3 Ne7 8. Nc3 Nc6 9. Bg5 Be7 10. Bxe7 Qxe7 11. Bb5 Bg4 12. Qa4 Bxf3
+13. gxf3 O-O 14. Bxc6 bxc6 15. Qxc6 Rab8 16. Na4 Rfc8 17. Qd6 Qg5 18. Qxd7 Rc2
+19. Rd1 Qg2 20. Rd2 {Lematschko,T (2285)-Brunner,L (2495) Switzerland 1994 0-1}
+) 6. Bxc4 Ne7 7. Nc3 Nd5 8. Nge2 Be7 9. Ng3 Nxc3 10. bxc3 Bg6 11. O-O Nd7 12.
+f4 Nb6 13. Bb3 Qd7 14. Qf3 O-O 15. a4 Rad8 16. Bd2 Nd5 17. c4 Nc7 18. Be3 f5
+19. exf6 Bxf6 {Smerdon,D (2472)-Retera,J (2281) Netherlands 2006 1-0 (56)})
+5... h6 {Prevents intrusion on g5} 6. Nc3 Bb4 7. h3 {Prevents intrusion on g4}
+(7. Qb3 a5 $16) 7... dxc4 8. Bxc4 {White has a new backward pawn: d4. Black is
+behind in developement} Ne7 9. O-O O-O {Black has a cramped position} 10. g4 {
+White threatens to win material: g4xf5} Bh7 11. Bd3 (11. Qb3 a5 $14) 11... Bxd3
+$11 12. Qxd3 {Black has a cramped position} Ng6 13. g5 hxg5 14. Bxg5 (14. Nxg5
+c5 15. Qf3 cxd4 $16) 14... Be7 {Black threatens to win material: Be7xg5} (14...
+Nxe5 15. Nxe5 Qxg5+ 16. Qg3 $17) 15. Ne4 (15. h4 Nd7 (15... Nxh4 $143 16. Bxh4
+Bxh4 17. Kg2 $16) 16. Qe4 Re8 $14) 15... Nd7 (15... Nxe5 $5 16. Nxe5 Bxg5 $15)
+16. Bxe7 Qxe7 17. Neg5 (17. Nfg5 f5 18. exf6 Nxf6 $11) 17... f5 (17... c5 $5
+$15 {is interesting}) 18. Qb3 $11 {White threatens to win material: Qb3xe6.
+White forks: e6+b7} Nf4 19. Kh2 (19. Qxb7 $5 {looks like a viable alternative}
+Rfc8 20. Qa6 $14) 19... Nb6 $15 20. Rg1 g6 $4 {gives away a clear win} (20...
+Nbd5 $142 $15 {would hold out}) 21. Nxe6 $1 $18 {Decoy: e6} Nxe6 (21... Qxe6
+22. Rxg6+ Nxg6 (22... Kf7 23. Rxe6 {Combination}) (22... Kh7 23. Rxe6 {
+Combination}) (22... Kh8 23. Rxe6 {Combination}) 23. Qxe6+ {Overloading Decoy
+Deflection Double attack}) (21... Nxe6 22. Rxg6+ {Decoy Double attack}) 22.
+Rxg6+ Kh7 23. Rxe6 Qg7 24. Rg1 Qc7 25. Ng5+ Kg7 26. Nf7+ $1 {Decoy: f7} (26.
+Nf7+ Kxf7 27. Rf6+ Ke8 28. Qe6+ Qe7 29. Rxf8+ Kxf8 30. Rg8#) 1-0
+
+[Event "Hokkaido Chess Championship 2024"]
+[Site "?"]
+[Date "2024.03.24"]
+[Round "5.6"]
+[White "Kuramoto, koutarou"]
+[Black "Furuse, Mizuki"]
+[Result "1/2-1/2"]
+[ECO "A57"]
+[BlackElo "1157"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "85"]
+[EventDate "2024.03.23"]
+
+{A57: Benko/Volga Gambit} 1. d4 Nf6 2. c4 c5 3. d5 b5 4. cxb5 a6 5.
+Nc3 g6 6. e4 d6 7. Nf3 Bg7 8. Be2 O-O 9. O-O Nbd7 (9... Qb6 10. a4 axb5 11.
+Bxb5 Ba6 12. Nd2 Ne8 13. Nc4 Qb7 14. Bxa6 Rxa6 15. Bg5 h6 16. Bd2 Nc7 17. a5
+Nd7 18. Qa4 Qc8 19. Nb5 Kh7 20. Bc3 f5 21. Bxg7 Kxg7 22. Nxc7 Qxc7 23. exf5
+Rxf5 24. Qb5 {Lokander,M (2306)-Milchev,N (2422) Vaxjo 2014 1-0 (40)}) 10. Qc2
+$146 (10. a4 axb5 11. Bxb5 Ba6 12. Bg5 Qb6 13. Qe2 Rfb8 14. Nd2 Nf8 15. Nc4 Qc7
+16. f4 Bb7 17. Rad1 Rd8 18. Qf3 Kh8 19. e5 Ng8 20. exd6 Rxd6 21. Nxd6 exd6 22.
+f5 f6 23. Bf4 gxf5 24. Bc6 Bxc6 {Orlov,G (2500)-Pupols,V (2210) Seattle 1992
+1-0 (31)}) 10... Ng4 11. h3 Nge5 12. Nxe5 Nxe5 13. f4 Nd7 14. Be3 (14. a4 axb5
+15. Nxb5 f5 $16) 14... axb5 15. f5 {White has a very active position} (15. Nxb5
+f5 16. e5 Ba6 $16) 15... Ne5 {The knight likes it on e5} (15... b4 $5 {is an
+interesting alternative} 16. Nb5 Ne5 $11) 16. fxg6 hxg6 17. Qd2 {Black has a
+cramped position} (17. Bxb5 $142 {would allow White to play on} Qc7 18. a4 $14)
+17... b4 $15 {Black threatens to win material: b4xc3} 18. Nd1 (18. Nb5 Bd7 19.
+a4 bxa3 20. Rxa3 Rxa3 21. Nxa3 Qb6 $17) 18... Ba6 $17 19. Bxa6 Rxa6 20. Bh6 Qc7
+21. Bxg7 Kxg7 22. Ne3 Rfa8 23. Nf5+ $4 {leads to further unpleasantness} (23.
+b3 f6 $17) 23... Kf8 {Loses material} (23... gxf5 $142 {and Black has triumphed
+} 24. Rxf5 c4 $19 (24... Rxa2 25. Rxa2 Rxa2 26. Rh5 $18)) 24. Qh6+ $15 Ke8 25.
+Ng7+ Kd7 26. a3 $2 (26. Rxf7 $142 $1 {and White hangs on} c4 27. Kh2 $15) 26...
+Qb6 27. Kh2 bxa3 (27... c4 $5 28. Rab1 $19) 28. bxa3 Rc8 $4 {with this move
+Black loses his initiative} (28... Qa7 29. Qh4 Rb6 30. a4 $19) 29. Rfb1 $4 {
+White loses the upper hand} (29. Rab1 $142 {and White is still in the game} Qa7
+30. Rxf7 Nxf7 31. Qxg6 $11) 29... Qc7 $17 30. Rb3 (30. Qg5 c4 $19) 30... Raa8 (
+30... c4 $5 31. Rb2 c3 32. Rc2 $19) 31. Rab1 $17 Rab8 32. Rxb8 Rxb8 33. Rxb8
+Qxb8 34. Qd2 (34. Qe3 e6 35. dxe6+ fxe6 $19) 34... Qb5 (34... e6 35. dxe6+ fxe6
+36. Qh6 $19) 35. Qc2 $2 (35. Qh6 $142 $17) 35... Qc4 $4 {a transit from better
+to worse} (35... Qa5 $142 $19 {and Black gets the upper hand}) 36. Qb2 $11 Qa6
+37. Qb8 Qc8 38. Qa7+ Kd8 39. Qa5+ Qc7 {Black threatens to win material: Qc7xa5}
+40. Qb5 {White has a mate threat} (40. Qa8+ Qc8 41. Qa5+ Qc7 42. Qa8+ Qc8 43.
+Qa5+ $11) 40... Nd7 (40... Kc8 41. Ne8 Qd8 42. Kg1 $15) 41. Qf1 {White
+threatens to win material: Qf1xf7} Ne5 42. Qb5 {Twofold repetition} Nd7 43. Qf1
+1/2-1/2
+
+[Event "Hokkaido Chess Championship 2024"]
+[Site "?"]
+[Date "2024.03.24"]
+[Round "5.7"]
+[White "Nakamura, Mitsuru"]
+[Black "Ono, Yukiko"]
+[Result "1-0"]
+[ECO "D20"]
+[WhiteElo "1406"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "65"]
+[EventDate "2024.03.23"]
+
+{D20: Queen's Gambit Accepted: 3 e3 and 3 e4} 1. d4 d5 2. c4 dxc4
+3. e3 Nf6 4. Nc3 Be6 5. Qa4+ $146 (5. Nf3 h6 6. Ne5 (6. e4 c6 7. a4 Nbd7 (7...
+g6 8. Ne5 Bg7 9. Bxc4 Bxc4 10. Nxc4 O-O 11. O-O Na6 12. Be3 Qd7 13. Ne5 Qd6 14.
+Qb3 Qb4 15. Qa2 e6 16. f4 c5 17. Rad1 Rad8 18. d5 exd5 19. exd5 Nd7 20. Nxd7
+Rxd7 21. f5 Re8 22. Rf4 {Volkmann,F (2410)-Pitl,G (2377) Austria 2012 1/2-1/2 
+(32)}) 8. d5 Bg4 9. Bxc4 Ne5 10. Be2 Nxf3+ 11. Bxf3 Bxf3 12. Qxf3 cxd5 13. exd5
+g6 14. O-O Bg7 15. Bf4 O-O 16. d6 exd6 17. Qxb7 Qb8 18. Qxb8 Rfxb8 19. Rab1 Ne8
+20. Nd5 g5 {Hracek,Z (2624)-Zubov,A (2581) Warsaw 2009 1/2-1/2 (49)}) 6... c5
+7. Qa4+ Nbd7 8. d5 Nxd5 9. Bxc4 Nxc3 10. Bxe6 fxe6 11. bxc3 g5 12. Rb1 Bg7 13.
+Nxd7 Qxd7 14. Qxd7+ Kxd7 15. Rxb7+ Kc6 16. Rxe7 Bxc3+ 17. Ke2 Rhe8 18. Rh7 Rh8
+19. Re7 Rhe8 {Georgiev,K (2623)-Godena,M (2502) Jerusalem 2015 0-1 (45)}) (5.
+Nf3 c6 $11) 5... Nc6 (5... Qd7 $5 $15) 6. Bxc4 $11 Bg4 (6... Bxc4 7. Qxc4 e6 8.
+a3 $11) 7. h3 (7. d5 $142 a6 8. h3 $16) 7... Bf5 $4 (7... Bd7 $142 $14) 8. b4 (
+8. d5 $142 {and White wins} a6 9. dxc6 $18) 8... e5 $15 9. dxe5 (9. Nf3 $142
+Bxb4 10. Bd2 $15) 9... Be7 $4 {letting the wind out of his own sails} (9...
+Bxb4 $142 10. Bd2 Nd7 $17) 10. exf6 $18 Bxf6 (10... Bxb4 11. Bb2 Qxf6 12. Nge2
+$18) 11. Nge2 O-O 12. O-O Ne5 13. Bb2 (13. Rd1 $142 {and White has it in the
+bag} Qe8 14. Qb3 Nxc4 15. Qxc4 $18) 13... Nxc4 $17 14. Qb3 (14. Bc1 $142 $17)
+14... Nxb2 (14... Nd2 $142 {would have made live much easier for Black} 15. Qa3
+Nxf1 16. Rxf1 c6 $19) 15. Qxb2 $15 Bd3 (15... Be6 $5 $15 {has some apparent
+merit}) 16. Rad1 $14 Bxe2 $2 (16... a5 17. bxa5 c5 $14 (17... Rxa5 $2 18. Nf4
+Bxf1 19. Rxd8 Rxd8 20. Qb4 $18 (20. Kxf1 $6 Rc5 $14))) 17. Rxd8 $18 (17. Qxe2
+$6 Qe8 18. Nd5 Bd8 $14) 17... Raxd8 (17... Rfxd8 18. Qxe2 Bxc3 $18) 18. Re1 (
+18. Qxe2 $142 {a shame that White overlooked this excellent chance} Bxc3 19.
+Qb5 $18) 18... Bd3 19. Qb3 c6 20. a4 b6 (20... Rfe8 21. Rd1 $16) 21. e4 (21. b5
+Bxc3 22. Qxc3 c5 $16) 21... Bd4 (21... Rfe8 22. b5 cxb5 23. Nd5 Bxe4 24. Nxf6+
+gxf6 25. axb5 $16) 22. e5 (22. Nd5 cxd5 23. Qxd3 dxe4 24. Qxe4 Bc3 $16) 22...
+Rfe8 23. e6 fxe6 24. Rxe6 Kf8 $2 (24... Kh8 $142 25. Rxe8+ Rxe8 $16) 25. Rxe8+
+$18 (25. Rxc6 $6 {is much weaker} Re1+ 26. Kh2 Bxf2 $14) 25... Rxe8 26. Nd1 (
+26. Qd1 $142 {would have given White a clear advantage} Rd8 27. Qf3+ (27. Qxd3
+$4 {White should leave the bishop alone} Bxf2+ 28. Kxf2 Rxd3 $19) 27... Bf6 28.
+Ne4 Bxe4 29. Qxe4 Rd1+ 30. Kh2 $18) 26... Re1+ $16 27. Kh2 Be5+ 28. g3 (28. f4
+$142 $5 Bxf4+ 29. g3 Re2+ 30. Kg1 $16) 28... Be4 $11 29. f3 Re2+ 30. Kg1 Bd4+ (
+30... Bf5 $5 {should be examined more closely} 31. Nf2 Rb2 $14) 31. Kf1 $14 {
+White threatens to win material: Kf1xe2} Rh2 $4 (31... Bc2 $142 {is just about
+the only chance} 32. Qc4 Rd2 $16) 32. fxe4 $18 Rh1+ (32... Rxh3 {cannot change
+destiny} 33. Qf3+ Ke7 34. Ne3 Bxe3 35. Qxe3 $18) 33. Ke2 (33. Ke2 Rxh3 34. Qe6
+$18) 1-0
+
+[Event "Hokkaido Chess Championship 2024"]
+[Site "?"]
+[Date "2024.03.24"]
+[Round "5.8"]
+[White "Shimomura, Kensei"]
+[Black "Ito, Katsuhide"]
+[Result "1-0"]
+[ECO "B45"]
+[WhiteElo "1199"]
+[BlackElo "1199"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "75"]
+[EventDate "2024.03.23"]
+
+{B45: Sicilian Four Knights} 1. e4 c5 2. Nf3 Nc6 3. Nc3 e6 4. d4
+cxd4 5. Nxd4 Nf6 6. Nxc6 bxc6 (6... dxc6 7. Qxd8+ Kxd8 8. Be3 Bb4 9. f3 e5 10.
+O-O-O+ Ke7 11. a3 Bd6 12. Bc4 Be6 13. Bxe6 Kxe6 {1/2-1/2 (13) Bilek,I (2460)
+-Plachetka,J (2445) Naleczow 1979}) 7. Bg5 $146 {Black is behind in
+developement} (7. Qf3 Be7 8. e5 Nd5 9. Qg3 O-O 10. Bh6 g6 11. Bxf8 Bxf8 12. Ne4
+Rb8 13. Bd3 Qa5+ 14. Ke2 Rxb2 15. Rhb1 Qb6 16. Rxb2 Qxb2 17. Rd1 Bg7 18. Qg5
+Qxe5 19. Qd8+ Bf8 20. Kf1 Ba6 21. Bxa6 Qxe4 {Yuzhakov,O (2362)-Kopylov,A (2446)
+Tiumen 2011 0-1}) (7. Be3 d5 8. exd5 exd5 9. Qd2 Be7 10. Be2 Be6 11. O-O O-O {
+1/2-1/2 (11) Bojkov,D (2280)-Petrov,M (2405) Shumen 1997}) (7. a3 Qc7 8. Be2
+Bd6 9. Be3 Rb8 10. Rb1 Be5 11. Bd4 O-O 12. Bxe5 Qxe5 13. Qd3 d5 14. exd5 exd5
+15. Qg3 Re8 16. Qxe5 Rxe5 17. Kf1 d4 18. Nd1 Bf5 19. Bd3 Rbe8 {0-1 (19) Halasz,
+F (2155)-Fusthy,Z (2243) Hungary 2002}) 7... Bb4 8. e5 (8. Qf3 $11) 8... h6 (
+8... Qa5 $5 9. exf6 Qxg5 10. fxg7 Qxg7 $15) 9. exf6 (9. Bd2 $5 {must
+definitely be considered} Nd5 10. Qg4 $14) 9... hxg5 $11 10. fxg7 Rg8 {Black
+threatens to win material: Rg8xg7} 11. Qh5 {White has a king attack} (11. Qf3
+$11) 11... Ke7 (11... Qf6 $142 {is the best option Black has} 12. O-O-O d5 $15)
+12. Qxg5+ $16 f6 13. Qg3 d5 14. O-O-O Kf7 15. Qe3 Bxc3 $2 (15... Bd6 $142 $16)
+16. Qxc3 $18 (16. bxc3 $6 e5 $14) 16... Qb6 17. f4 (17. h4 $142 $5 e5 18. h5
+Kxg7 19. Rd2 $18) 17... Rxg7 $16 18. g3 Bb7 19. Be2 c5 20. Rhg1 d4 21. Qc4 (21.
+Qa3 Bd5 22. Bf3 Bxf3 23. Qxf3 Rb8 $16) 21... a5 (21... Bd5 22. Qd3 $14) 22. f5
+$16 Bd5 23. Qa4 (23. fxe6+ Bxe6 24. Qa4 $16) 23... Bc6 $2 (23... Qb4 24. Qb5
+$14) 24. Qc4 (24. fxe6+ Kxe6 25. Qc4+ Bd5 $16) 24... Bd5 25. Qa4 {Twofold
+repetition} Kg8 (25... Bc6 26. fxe6+ Kxe6 27. Qc4+ Bd5 28. Qd3 $16) 26. Bc4 (
+26. fxe6 $5 Qxe6 27. Bb5 $16) 26... Qb4 $11 27. Qxb4 axb4 28. Bxd5 {White
+forks: e6+a8} exd5 {A double rook endgame occured.} 29. Kb1 Rga7 30. c3 $4 (30.
+a3 $11) 30... b3 $4 {Black threatens to win material: b3xa2. makes life more
+difficult} (30... bxc3 $142 {and Black can celebrate victory} 31. a3 Rb7 $19)
+31. axb3 $14 {White has new doubled pawns: b2+b3.} (31. cxd4 $4 {the pawn is
+safe and cannot be captured without dire consequences} Rxa2 32. Kc1 c4 $19)
+31... Ra1+ $2 (31... c4 $142 {is a viable option} 32. Kc2 cxb3+ 33. Kd3 dxc3
+34. Kxc3 Rc8+ 35. Kd3 Rac7 $16) 32. Kc2 $18 Rxd1 $2 (32... R1a5 $18) 33. Rxd1
+Re8 (33... Kf7 {is no salvation} 34. cxd4 cxd4 35. Rxd4 $18) 34. cxd4 Re2+ (
+34... cxd4 {is still a small chance} 35. Rxd4 Re5 $18) 35. Rd2 Re4 (35... Re7 {
+does not improve anything} 36. dxc5 Rd7 37. Kd3 $18) 36. dxc5 d4 37. c6 Re5 38.
+Rxd4 (38. Rxd4 Re7 39. Rb4 Re2+ 40. Kd3 Re1 41. c7 Kg7 42. c8=Q Rd1+ 43. Ke2
+Re1+ 44. Kxe1 Kh7 45. Rg4 Kh6 46. Qh8#) 1-0
+

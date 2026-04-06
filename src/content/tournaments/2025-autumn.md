@@ -1,12 +1,11 @@
 ---
 title:
-  ja: "札幌オータムチェス大会 2025"
-  en: "Sapporo Autumn Tournament 2025"
-date: "2025-11-09"
+  ja: "札幌オータムチェス大会2025（第18回）"
+  en: "2025 Sapporo Autumn Chess Tournament (18th)"
+date: "2025-10-12"
 status: "results"
-detailsPdf: "/competition/autumn_2025_ann.pdf"
-resultsPdf: "/competition/autumn_2025_result.pdf"
-gamesPgn: "/competition/autumn_2025.pgn"
+resultsPdf: "/competition/SapporoAutumn2025_V1.0.pdf"
+gamesPgn: "/competition/SapporoAutumn2025NoAnalysis.pgn"
 year: 2025
-sortOrder: 2
+sortOrder: 3
 ---

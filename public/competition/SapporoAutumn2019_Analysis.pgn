@@ -1,0 +1,1352 @@
+﻿[Event "Sapporo Autumn Chess Tornament 2019"]
+[Site "?"]
+[Date "2019.10.13"]
+[Round "1.1"]
+[White "Kojima, Shinya"]
+[Black "Kojima, Natsumi"]
+[Result "1/2-1/2"]
+[ECO "C55"]
+[WhiteElo "2497"]
+[BlackElo "1772"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "35"]
+[EventDate "2019.10.13"]
+
+{C55: Two Knights: 4 d3, 4 d4 exd4 5 e5 and Max Lange Attack} 1. e4 e5 2. Nf3
+Nc6 3. Bc4 Nf6 4. d3 Be7 5. O-O O-O 6. Re1 d6 7. a4 Kh8 8. c3 Ng8 9. d4 Bg4 (
+9... f5 10. dxe5 fxe4 11. Rxe4 Rxf3 12. gxf3 Nxe5 13. Rxe5 dxe5 14. Qxd8 Bxd8
+15. Nd2 Nf6 16. Ne4 Nxe4 17. fxe4 Bg4 18. Kg2 Bh4 19. f3 Bh5 20. Be3 Rd8 21. b4
+h6 {1/2-1/2 (21) Fedorchuk,S (2635)-Giri,A (2722) Germany 2012}) 10. d5 Nb8 11.
+Be2 $146 (11. h3 Bc8 (11... Bxf3 12. Qxf3 Bg5 13. a5 a6 14. Nd2 Ne7 15. Qh5 f6
+16. Bd3 Nd7 17. b4 g6 18. Qe2 f5 19. Bb2 Nf6 20. Nf3 fxe4 21. Bxe4 Nxe4 22.
+Qxe4 Bf6 23. c4 Qd7 24. Qg4 Qf5 25. Re2 h5 26. Qe4 {Fedorov,A (2604)
+-Blagojevic,D (2548) Jahorina 2003 1-0 (52)}) 12. Nbd2 f5 13. exf5 Bxf5 14. Qb3
+Qc8 15. a5 a6 16. Bf1 Nd7 17. c4 Ngf6 18. Qc3 Nc5 19. b4 Nce4 20. Nxe4 Nxe4 21.
+Qb3 h6 22. Ra2 Nf6 23. Rd2 Bh7 24. Bb2 Qf5 25. c5 Ne4 {Zhang,Z (2649)-Friedel,
+J (2498) Beijing 2008 1-0 (78)}) (11. Bd3 Bxf3 12. Qxf3 Bg5 13. a5 c5 14. dxc6
+bxc6 15. Bxg5 Qxg5 16. Na3 Nd7 17. Nc4 Qe7 18. Rad1 Nc5 19. Bc2 Rad8 20. b4 Ne6
+21. Rd2 Nf6 22. Red1 Ne8 23. Ne3 g6 24. Nc4 f6 25. g3 Ng5 {Djingarova,E (2292)
+-Krivec,J (2284) Nova Gorica 2005 1/2-1/2}) (11. h3 Bh5 $16) 11... a5 (11...
+Nf6 12. Nbd2 $14) 12. Be3 (12. h3 Bh5 $16) 12... Bxf3 13. Bxf3 {White has the
+pair of bishops} (13. gxf3 $6 Bg5 $11) 13... Bg5 14. Nd2 f5 (14... Bxe3 15.
+Rxe3 Nd7 16. Qc2 $14) 15. exf5 $16 Rxf5 (15... Bxe3 16. Rxe3 Rxf5 17. Qc2 $16)
+16. Bg4 (16. Be4 Rf8 $16) 16... Rf8 17. Ne4 Bxe3 18. Rxe3 1/2-1/2
+
+[Event "Sapporo Autumn Chess Tornament 2019"]
+[Site "?"]
+[Date "2019.10.13"]
+[Round "1.2"]
+[White "Watanabe, Katsumi"]
+[Black "Sugimoto, Koichi"]
+[Result "0-1"]
+[ECO "A28"]
+[WhiteElo "1723"]
+[BlackElo "1987"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "56"]
+[EventDate "2019.10.13"]
+
+{A28: English Opening: Four Knights Variation} 1. c4 e5 2. Nc3 Nf6 3. e4 Bc5 4.
+Be2 Nc6 5. Nf3 d6 6. O-O O-O 7. d3 h6 8. a3 $146 {Consolidates b4} (8. Be3 a6
+9. d4 exd4 10. Nxd4 Ne5 11. f3 Re8 12. Qd2 Qe7 13. Rae1 c6 14. Kh1 Bd7 15. Nc2
+Bxe3 16. Nxe3 Rad8 17. b4 Ng6 18. Nf5 Bxf5 19. exf5 Nf8 20. Bd3 Qc7 21. Ne4
+N8d7 22. Bc2 Nxe4 {Larin,V (2157)-Petrov,A (2195) Tambov 2008 1-0 (40)}) 8...
+a5 9. Qc2 Bg4 10. Be3 Nd4 11. Bxd4 exd4 12. Nd5 Be6 13. b4 Ba7 14. b5 {White
+gains space} (14. g3 Bg4 $11) 14... c6 (14... Bc5 15. Nf4 $11) 15. bxc6 (15. b6
+Bxb6 16. Nxb6 Qxb6 $11) 15... bxc6 16. Nf4 (16. Nxf6+ Qxf6 17. Qa4 Rfc8 $11)
+16... Bd7 $15 17. e5 Ne8 18. exd6 Nxd6 19. c5 (19. Ne5 Be8 20. Nf3 Bc5 $11)
+19... Nf5 (19... Nb7 20. Rfe1 $17 (20. Nxd4 $2 {doesn't solve anything} Qf6 $19
+)) 20. Ne5 Be8 (20... Re8 21. Nxd7 Qxd7 22. Bg4 $15) 21. Bf3 {White threatens
+to win material: Bf3xc6} (21. Qc4 Kh8 22. Rae1 $11) 21... Rc8 (21... Nh4 $142 {
+and Black can hope to survive} 22. Rae1 Qg5 $15) 22. Qc4 $16 Bb8 23. Rfe1 Qf6
+24. Nfg6 Bxe5 (24... Rd8 $5 $14) 25. Nxe5 $16 Rd8 26. Bg4 (26. Qa6 $142 $16)
+26... Rd5 $11 27. Bxf5 Qxf5 28. Re4 $4 (28. Nf3 $142 {was much better} Rxc5 29.
+Qxd4 $11) 28... Rxe5 $19 0-1
+
+[Event "Sapporo Autumn Chess Tornament 2019"]
+[Site "?"]
+[Date "2019.10.13"]
+[Round "1.3"]
+[White "Drakakis, Athanasios"]
+[Black "Kikuchi, Akira"]
+[Result "1-0"]
+[ECO "D05"]
+[WhiteElo "1876"]
+[BlackElo "1718"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "85"]
+[EventDate "2019.10.13"]
+
+{D05: Colle System with ...e6} 1. d4 d5 2. Nf3 c5 3. e3 Nf6 4. c3 Nc6 5. Bd3 e6
+6. O-O b6 (6... Qc7 7. Nbd2 Be7 8. dxc5 Bxc5 9. Qe2 Ne5 10. Nxe5 Qxe5 11. e4
+Qh5 12. Bb5+ Kf8 13. Qxh5 Nxh5 14. Nb3 Bd6 15. Rd1 Nf6 16. exd5 exd5 17. Bg5
+Ne4 18. Be3 Be6 19. f3 Nf6 20. Nd4 a6 21. Ba4 {Gausel,E (2540)-Wedberg,T (2475)
+Munkebo 1998 1/2-1/2 (87)}) 7. Qe2 Be7 8. Nbd2 Bb7 9. b3 $146 (9. Rd1 O-O 10.
+a3 Rc8 11. b4 cxb4 12. cxb4 a5 13. b5 Nb8 14. Bb2 Ne4 15. Rac1 Qd6 16. Bb1 Nd7
+17. Nxe4 dxe4 18. Nd2 f5 19. Nc4 Qb8 20. Rc3 Bd5 21. Rdc1 Rcd8 22. f3 exf3 23.
+gxf3 Bf6 {Buchnicek,P (2322)-Repkova,E (2391) Slovakia 2008 1-0 (42)}) 9... O-O
+10. Bb2 cxd4 11. exd4 Rc8 12. Rae1 Qc7 13. Ne5 h6 (13... Nxe5 14. dxe5 (14.
+Qxe5 $143 Bd6 15. Qe2 Bxh2+ 16. Kh1 Bd6 $17) 14... Nd7 15. b4 $11) 14. f4 $14
+Bd6 15. Rf3 Nd7 16. Ref1 Ne7 ({Weaker is} 16... Ndxe5 17. fxe5 (17. dxe5 $6
+Bc5+ 18. Kh1 Kh8 $14) 17... Be7 18. Rg3 $18) 17. Rh3 f5 {Black has a new
+backward pawn: e6} 18. Ndf3 (18. Bb5 Nf6 $14) 18... Nf6 $11 19. Nh4 {White has
+an active position} Ne4 {Black threatens to win material: Ne4xc3} 20. Bb1 Rf6
+21. Kh1 Nxc3 $4 {there were better ways to keep up the pressure.} (21... Rff8
+$142 $11 {the rescuing straw}) 22. Rxc3 $18 Qd8 23. Rxc8 Qxc8 24. Rc1 Qe8 25.
+Bd3 Qd8 26. Nhf3 Qe8 (26... Ng6 {cannot change what is in store for White} 27.
+g3 $18) 27. Bb5 Qh5 28. Ng1 (28. Nd7 $142 {finishes off the opponent} Rg6 29.
+Nfe5 Qxe2 30. Bxe2 Rf6 $18) 28... Qxe2 29. Nxe2 g5 (29... Rf8 {is no salvation}
+30. Bd7 Rf6 31. Kg1 $18) 30. g3 (30. Bd7 {keeps an even firmer grip} Ba6 31.
+Ng3 Kh7 $18) 30... Kg7 31. a4 (31. h4 {and White can already relax} gxh4 32.
+gxh4 Rf8 $18) 31... g4 (31... Rf8 {doesn't get the cat off the tree} 32. Kg2
+$18) 32. Ra1 (32. Bd7 {might be the shorter path} a6 $18) 32... h5 (32... Rf8 {
+is not the saving move} 33. a5 $18) 33. Ba3 Nc8 (33... Bxa3 {desperation} 34.
+Rxa3 a6 $18) 34. Bxd6 Nxd6 35. Rc1 Kh6 (35... Kg8 {does not save the day} 36.
+Rc7 Rh6 37. Rd7 Nxb5 38. Rxb7 $18) 36. Rc7 h4 (36... Bc8 {a fruitless try to
+alter the course of the game} 37. Rxa7 Rf8 38. Rc7 $18) 37. Rd7 Nxb5 38. Rxb7 (
+38. axb5 $142 {makes sure everything is clear} Bc8 39. Rd8 a6 40. Rxc8 axb5 41.
+gxh4 Kg7 $18) 38... Nd6 39. Rxa7 Ne4 (39... h3 {does not help much} 40. Rc7 $18
+) 40. Rb7 hxg3 (40... Rf8 {does not improve anything} 41. Rxb6 Rc8 42. Nc6 $18)
+41. Nxg3 Rf8 (41... Nf2+ {doesn't change anything anymore} 42. Kg2 Nh3 43. Ne2
+$18) 42. Rxb6 Rh8 (42... Kg7 {praying for a miracle} 43. a5 Rc8 44. Nxe4 Rc1+
+45. Kg2 dxe4 $18) 43. Nf7+ (43. Nf7+ Kh7 44. Nxh8 $18) (43. Nxf5+ Kh7 44. Rb7+
+Kg8 45. Rg7+ Kf8 46. Rf7+ Ke8 47. Ng7+ Kd8 48. Nc6+ Kc8 49. Nxe6 Ng3+ 50. Kg2
+Rxh2+ 51. Kxh2 Nf1+ 52. Kg1 Ne3 53. Rc7#) 1-0
+
+[Event "Sapporo Autumn Chess Tornament 2019"]
+[Site "?"]
+[Date "2019.10.13"]
+[Round "1.4"]
+[White "Sato, Yasuji"]
+[Black "Yoshii, Yukihiko"]
+[Result "1-0"]
+[ECO "B50"]
+[WhiteElo "1453"]
+[BlackElo "1851"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "61"]
+[EventDate "2019.10.13"]
+
+{B50: Sicilian: 2...d6, Miscellaneous} 1. e4 c5 2. Nf3 d6 3. c3 Nf6 4. Bc4 Bg4
+(4... Nxe4 5. Qa4+ Nc6 6. Bxf7+ Kxf7 7. Qxe4 Qd7 8. d4 cxd4 9. cxd4 Qf5 10. Qe2
+e6 11. Nc3 Be7 12. g4 Qg6 13. h4 e5 14. Qc4+ d5 15. Qxd5+ Be6 16. Qxc6 bxc6 17.
+Nxe5+ Kg8 18. Nxg6 hxg6 19. g5 {Fish,G (2529)-Bromberger,S (2505) Germany 2006
+1-0 (56)}) (4... Qc7 5. Qe2 Bg4 6. h3 Bxf3 7. Qxf3 Nc6 8. Bb3 g6 9. d3 Bg7 10.
+Be3 O-O 11. Nd2 Nd7 12. g4 b5 13. h4 Nce5 14. Qe2 Rac8 15. Bd1 c4 16. dxc4 bxc4
+17. Bc2 Qb7 18. Rb1 Nf6 19. g5 {Manakova,I (2244)-Gaponenko,I (2451) Sochi
+2007 0-1}) 5. Qb3 e6 $146 {Prevents intrusion on d5} (5... Qb6 6. Bxf7+ Kd7 7.
+e5 Qxb3 8. Bxb3 Bxf3 9. exf6 Be4 10. fxg7 Bxg7 11. Ke2 Nc6 12. d3 Bg6 13. Be3
+b5 14. Nd2 Ne5 15. d4 Bd3+ 16. Kd1 Ng4 17. Bc2 Bxc2+ 18. Kxc2 cxd4 19. cxd4 e5
+20. Nf3 {Koroljova,V (2165)-Qveliashvili,T (2210) Tallinn 1997 1/2-1/2 (59)})
+6. Qxb7 Nbd7 7. d4 (7. O-O Rb8 8. Qxa7 Nxe4 $14) 7... h6 {Covers g5} (7... Rb8
+$5 {must definitely be considered} 8. Qxa7 Nxe4 $14) 8. Nbd2 $16 Be7 9. h3 {
+White threatens to win material: h3xg4} (9. e5 Rb8 10. Qc6 dxe5 11. dxe5 Nd5
+$16) 9... Bh5 10. e5 Nh7 $2 (10... Rb8 11. Qxa7 dxe5 12. Nxe5 $16) 11. d5 $4 {
+White is ruining his position} (11. Bb5 {makes it even easier for White} Rc8
+12. exd6 Bxd6 $18) 11... Nhf8 $2 (11... Rb8 $142 12. Qxa7 exd5 13. Bxd5 O-O $16
+) 12. exd6 Bxd6 13. O-O Qb8 (13... Qc8 14. Qb5 Rb8 15. Qa4 Bxf3 16. Nxf3 exd5
+17. Re1+ Ne6 18. Bxd5 $18) 14. Qc6 Bxf3 15. Nxf3 (15. gxf3 $6 Ke7 $18) 15... e5
+(15... Ke7 {cannot change destiny} 16. Re1 Qc7 17. Qxa8 $18) 16. Re1 (16. Nh4 {
+seems even better} g6 17. f4 Kd8 $18) 16... f6 (16... Kd8 {is not much help}
+17. Ba6 Ng6 18. Bb7 $18) 17. Bf4 (17. Ba6 $142 {secures the win} Kf7 18. Nh4
+$18) 17... Ng6 18. Bb5 (18. Be3 {might be the shorter path} Ne7 19. Qa4 Qc7 $18
+) 18... Nxf4 (18... O-O 19. Be3 Rd8 20. Qa6 $18) 19. Qxd7+ Kf8 20. Re4 (20. Bc6
+{makes it even easier for White} Qd8 21. g3 Qxd7 22. Bxd7 Ng6 $18) 20... a6 (
+20... Qd8 21. g3 Nxd5 22. Qf5 $18) 21. Bc6 Ra7 22. Qf5 Re7 $2 (22... Rf7 23.
+Nh4 g5 24. Rxf4 exf4 25. Ng6+ Kg7 26. Nxh8 Kxh8 27. Ba4 $18) 23. g3 (23. Rae1
+$142 {seems even better} Qc7 24. g3 $18) 23... Nd3 $4 {Black crumbles in face
+of a dire situation} (23... Kf7 $142 24. Rae1 Nd3 $18) 24. Nh4 Qxb2 (24... Kf7
+{is still a small chance} 25. b3 c4 26. Rxc4 e4 $18) 25. Ng6+ Kf7 26. Nxh8+ Kg8
+27. Qc8+ Kh7 28. Rf1 Qxa2 (28... Qb8 {the only chance to get some counterplay}
+29. Qxb8 Bxb8 $18) 29. Bd7 Qxd5 30. Bf5+ g6 31. Nxg6 (31. Nxg6 Re8 32. Qxe8 Kg7
+33. Qh8+ Kf7 34. Qh7+ Ke8 35. Qd7#) 1-0
+
+[Event "Sapporo Autumn Chess Tornament 2019"]
+[Site "?"]
+[Date "2019.10.13"]
+[Round "1.5"]
+[White "Nishimori, Toshiyuki"]
+[Black "Takeuchi, Hiroshi"]
+[Result "1-0"]
+[ECO "B08"]
+[WhiteElo "1776"]
+[BlackElo "1350"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "127"]
+[EventDate "2019.10.13"]
+
+{B08: Pirc Defence: Classical System} 1. e4 d6 2. d4 Nf6 3. Nc3 g6 4. Be2 Bg7
+5. h3 (5. e5 Nfd7 6. exd6 cxd6 7. Nf3 O-O 8. O-O Nf6 9. h3 d5 10. Bd3 Nc6 11.
+a3 Bf5 12. Re1 Bxd3 13. Qxd3 e6 14. Bg5 Qb6 15. Rad1 Rac8 16. b4 Qc7 17. Nb5
+Qb6 18. Ne5 Nb8 19. Re3 a6 {Murey,J (2420)-Keene,R (2480) Beersheba 1978 1-0 
+(41)}) 5... O-O $146 {Black has a cramped position} (5... a6 6. a4 b6 7. Bf3 c6
+8. Nge2 Bb7 9. Nf4 Nbd7 10. Nd3 e5 11. dxe5 Nxe5 12. Nxe5 dxe5 13. Qe2 O-O 14.
+O-O Qc7 15. Be3 a5 16. Rfd1 Ba6 17. Qe1 Rfd8 18. Be2 Bxe2 19. Qxe2 Rd7 20. Qc4
+{Reichenbach,W (2319)-Gebigke,M (2154) Berlin 2008 1-0 (71)}) 6. Be3 (6. Nf3 d5
+7. e5 Ne4 $11) 6... e5 (6... d5 7. exd5 Na6 8. a3 $11) 7. Nf3 (7. dxe5 dxe5 8.
+Qxd8 Rxd8 $11) 7... Nc6 (7... exd4 8. Nxd4 Re8 9. Bf3 $11) 8. d5 $14 {White
+threatens to win material: d5xc6} Ne7 9. Qd2 a5 10. Bh6 {Black has a cramped
+position} (10. O-O Bd7 $14) 10... Bd7 $11 11. Bxg7 {White forks: f6+f8} Kxg7 {
+Black king safety dropped} 12. Nh2 {White has an active position} Neg8 {
+Black has a cramped position} 13. Qg5 {Black king safety dropped} (13. a4 c6
+$14) 13... Ne8 (13... b5 14. Qe3 b4 15. Nb1 $15) 14. Qxd8 {White forks: a8+d7}
+Rxd8 {Black king safety improved} 15. g4 {Black has a cramped position} Kh8 (
+15... c6 16. Nf1 $11) 16. h4 Ng7 17. Nb5 (17. Rd1 Ne7 $11) 17... Bxb5 $15 18.
+Bxb5 f5 {Black threatens to win material: f5xe4} 19. Bd3 $2 (19. exf5 $142 $5 {
+is worthy of consideration} gxf5 20. g5 $11) 19... fxe4 $17 20. Bxe4 Rf4 21. f3
+Nf6 22. Bd3 (22. O-O $142 $17) 22... e4 $4 {weakening the position} (22... Nxd5
+$142 {and Black can look forward to a comfortable game} 23. O-O-O Nf6 $19) 23.
+fxe4 $11 Nxe4 24. Rf1 Rxf1+ 25. Nxf1 Re8 26. O-O-O (26. Ne3 $142 $5 $11 {
+is worth consideration}) 26... Nf2 $17 27. c3 $4 {cause more grief} (27. Bb5
+$142 c6 28. dxc6 Nxd1 29. Kxd1 $17) 27... Nxd1 28. Kxd1 Rf8 29. Kd2 (29. Be2 h5
+30. Ng3 hxg4 31. Bxg4 Rf4 $19) 29... Rf2+ 30. Be2 Ne8 (30... h5 $142 $5 {
+keeps an even firmer grip} 31. Ke3 Rg2 32. gxh5 Nf5+ 33. Kd3 gxh5 34. Bxh5 Rxb2
+35. a4 $19) 31. Ke3 Rh2 $4 {throws away a nice position} (31... Rf8 32. g5 $19)
+32. h5 (32. Nxh2 $142 {seems even better} Nf6 33. Kd4 Kg7 $18) 32... gxh5 $4 {
+forfeits the clear win} (32... Rh3+ {and Black can already relax} 33. Kf2 gxh5
+34. gxh5 $19) 33. gxh5 (33. Nxh2 {might be the shorter path} hxg4 34. Nxg4 Kg7
+$18) 33... Nf6 $4 {what a pity, victory was in sight} (33... Rg2 $142 $19 {
+and Black wins}) 34. Nxh2 $18 Nxd5+ 35. Kd2 Kg7 36. Ng4 (36. Bf3 $5 {makes it
+even easier for White} Nb6 37. Bxb7 Kh6 $18) 36... Nf4 37. h6+ (37. Bf3 $5 {
+and White can already relax} c6 $18) 37... Kg6 38. Bf3 b6 $4 {Black falls apart
+} (38... Kg5 $18) 39. Ke3 (39. Be4+ $5 {keeps an even firmer grip} Kg5 40. Bxh7
+Ne6 $18) 39... Ne6 (39... Kg5 {is not much help} 40. Nf6 $1 {Deflection: f4}
+Ne6 41. Nxh7+ Kxh6 42. Nf6 $18) 40. Be4+ Kg5 41. Kf3 Nf8 42. Ne3 Kxh6 (42... b5
+{doesn't change the outcome of the game} 43. Nd5 c5 44. Ne3 $18) 43. Nd5 c5 (
+43... c6 {does not save the day} 44. Nxb6 d5 45. Bd3 $18) 44. Nxb6 Ne6 45. Kg4
+Nf8 (45... Nc7 {doesn't change the outcome of the game} 46. Kf5 Kg7 47. Bf3 $18
+) 46. Bf5 Kg7 (46... Ng6 {doesn't improve anything} 47. Nc4 $18) 47. Nc4 d5 (
+47... Kf6 {doesn't do any good} 48. Nxd6 Ke5 49. Nb7 $18) 48. Nxa5 Ng6 (48...
+Kf6 49. a4 d4 50. cxd4 cxd4 51. Nb3 h5+ 52. Kf4 $18) 49. Bxg6 Kxg6 50. Nb7 h5+
+(50... Kf6 {cannot undo what has already been done} 51. a4 Ke6 52. a5 $18) 51.
+Kh4 d4 (51... Kf6 $18 {there is nothing better in the position}) 52. cxd4 cxd4
+53. Nc5 Kf5 54. a4 Ke5 (54... Kf4 {doesn't get the bull off the ice} 55. a5 Ke3
+56. b4 Kd2 57. a6 Kc3 58. a7 Kxb4 59. a8=Q Kxc5 60. Kxh5 d3 61. Kh6 Kd4 62.
+Qa1+ Kd5 63. Qf6 d2 64. Qg5+ Kd6 65. Qxd2+ Kc5 66. Kg7 Kb5 67. Kf6 Ka4 68. Qd1+
+Kb4 69. Qd4+ Ka3 70. Qc3+ Ka4 71. Qc4+ Ka5 72. Ke6 Kb6 73. Qb4+ Kc7 74. Qb5 Kc8
+75. Kd6 Kd8 76. Qd7#) 55. b4 Kd5 (55... Kf4 {hardly improves anything} 56. a5
+Ke3 57. a6 Kd2 58. Kxh5 Kc3 59. a7 Kxb4 60. Kg5 Kc4 61. a8=Q Kxc5 62. Qa5+ Kc4
+63. Kg6 Kd3 64. Qb5+ Ke4 65. Qb4 Ke5 66. Qe7+ Kd5 67. Kf5 d3 68. Qd8+ Kc4 69.
+Qc7+ Kb3 70. Qf4 Kc3 71. Ke4 d2 72. Qe3+ Kc2 73. Qd3+ Kd1 74. Ke3 Kc1 75. Qxd2+
+Kb1 76. Kd4 Ka1 77. Kc3 Kb1 78. Qb2#) 56. a5 (56. Kxh5 Kc4 57. a5 Kxb4 58. a6
+Kxc5 59. a7 Kb4 60. a8=Q Kc5 61. Kg5 Kc4 62. Qh1 d3 63. Kf4 d2 64. Qc6+ Kb3 65.
+Qd5+ Kc2 66. Qa2+ Kd3 67. Qb1+ Kd4 68. Qb6+ Kc3 69. Qa5+ Kc2 70. Qa4+ Kd3 71.
+Qb3+ Kd4 72. Qb4+ Kd3 73. Qa4 d1=Q 74. Qxd1+ Kc4 75. Qc2+ Kb4 76. Ke5 Kb5 77.
+Qd3+ Kc6 78. Qd5+ Kb6 79. Kd6 Ka7 80. Qb5 Ka8 81. Kc6 Ka7 82. Qb7#) 56... Kc6
+$18 57. Kxh5 Kb5 58. Nd3 Kc4 59. a6 Kxd3 60. a7 Kc2 (60... Kc4 {does not win a
+prize} 61. a8=Q Kxb4 62. Kg5 d3 63. Qb7+ Kc4 64. Qh7 Kd4 65. Kf4 Kc3 66. Qc7+
+Kb2 67. Ke3 d2 68. Kxd2 Kb3 69. Kd3 Kb2 70. Qb8+ Ka3 71. Kc3 Ka4 72. Qb4#) 61.
+a8=Q d3 62. Qe4 Kc3 63. Qxd3+ Kxd3 64. b5 (64. b5 Kc3 65. b6 Kb4 66. Kh4 Kc3
+67. Kg5 Kb2 68. b7 Ka1 69. b8=Q Ka2 70. Qb4 Ka1 71. Qd4+ Ka2 72. Qc4+ Kb2 73.
+Kf5 Kb1 74. Qb3+ Ka1 75. Qb6 Ka2 76. Ke4 Ka3 77. Kd4 Ka4 78. Kc4 Ka3 79. Qb3#)
+1-0
+
+[Event "Sapporo Autumn Chess Tornament 2019"]
+[Site "?"]
+[Date "2019.10.13"]
+[Round "2.1"]
+[White "Sugimoto, Koichi"]
+[Black "Nishimori, Toshiyuki"]
+[Result "1-0"]
+[ECO "B21"]
+[WhiteElo "1987"]
+[BlackElo "1776"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "39"]
+[EventDate "2019.10.13"]
+
+{B21: Sicilian: 2 f4 and Morra Gambit} 1. e4 c5 2. d4 cxd4 3. c3 dxc3 4. Nxc3
+Nc6 5. Nf3 d6 6. Bc4 e6 7. O-O Bd7 8. Qe2 a6 (8... Nge7 9. Bg5 Qb8 10. Rad1 Ng6
+11. Nd4 a6 12. Kh1 Be7 13. Bxe7 Ngxe7 14. f4 b5 15. Bb3 b4 16. Nxc6 Bxc6 17. f5
+bxc3 18. fxe6 f6 19. Rf3 Qb5 20. Qxb5 axb5 21. Rxc3 O-O-O 22. Bd5 Kb7 23. Rb3 {
+Zelic,M (2280)-Fauland,A (2451) Zadar 2010 0-1 (32)}) 9. Rd1 Qc7 $146 {White
+has a very active position} (9... Qb8 10. Bf4 Ne5 11. Bxe5 dxe5 12. Rxd7 Kxd7
+13. Bb5+ Ke7 14. Rd1 axb5 15. Qxb5 Kf6 16. Rd7 Nh6 17. Rxb7 Qd6 18. Rb6 Qc5 19.
+Nd5+ Kg6 20. Nxe5+ Kg5 21. g3 Nf5 22. Nxf7+ Kg6 23. Nxh8+ Kh6 24. Nf7+ {
+Katona,F (2250)-Ezsol,M (2340) Hungary 1993 1-0 (34)}) (9... Be7 10. Bf4 e5 11.
+Be3 $11) 10. Bf4 $14 O-O-O {Black should quickly conclude development.} (10...
+Nf6 $5 $14 {is worth consideration}) 11. Rac1 $16 Kb8 12. a3 Ka8 (12... Nf6 13.
+b4 $16) 13. b4 Na7 $4 {terrible, but what else could Black do to save the game?
+} (13... Nf6 $142 $5 $16) 14. Bd3 (14. Bxe6 {keeps an even firmer grip} Bxe6
+15. Nd5 Qxc1 16. Nb6+ Kb8 17. Rxc1 Nf6 $18) 14... Qb8 (14... Nf6 15. e5 dxe5
+16. Bxe5 $18) 15. b5 Nxb5 (15... axb5 {is still a small chance} 16. Bxb5 Nf6
+$18) 16. Bxb5 Bxb5 (16... axb5 {desperation} 17. Nxb5 Rc8 18. Rxc8 Qxc8 $18)
+17. Nxb5 axb5 (17... Rc8 {there is nothing else anyway} 18. Rxc8 Qxc8 $18) 18.
+Qxb5 Nf6 (18... Qa7 {doesn't get the cat off the tree} 19. Rd4 Kb8 20. Rb4 Be7
+21. Be3 b6 22. Bxb6 Ka8 23. Bxa7 Kxa7 24. Ra4#) 19. Qa5+ Qa7 20. Qxd8+ (20.
+Qxd8+ Qb8 21. Qa5+ Qa7 22. Rc8#) 1-0
+
+[Event "Sapporo Autumn Chess Tornament 2019"]
+[Site "?"]
+[Date "2019.10.13"]
+[Round "2.2"]
+[White "Sato, Yasuji"]
+[Black "Drakakis, Athanasios"]
+[Result "0-1"]
+[ECO "B11"]
+[WhiteElo "1453"]
+[BlackElo "1876"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "96"]
+[EventDate "2019.10.13"]
+
+{B11: Caro-Kann: Two Knights Variation} 1. e4 c6 2. Nc3 Qc7 $146 (2... d6 3. d4
+Nd7 (3... Qc7 4. f4 e5 5. Nf3 Bg4 6. Be3 Nd7 7. h3 Bxf3 8. Qxf3 Ngf6 9. a4 Be7
+10. Bc4 O-O 11. O-O Rfe8 12. Ba2 Bf8 13. Rad1 a6 14. Kh1 b5 15. fxe5 dxe5 16.
+d5 b4 17. dxc6 Qxc6 18. Bd5 {Strikovic,A (2467)-Freile Martin,J (2215) Dos
+Hermanas 2003 1-0 (38)}) 4. Nf3 e5 5. Be3 Be7 6. Be2 h6 7. O-O g5 8. dxe5 dxe5
+9. Nd2 Qc7 10. a4 Ngf6 11. Nb3 Nf8 12. Bc4 Be6 13. Qe2 Bxc4 14. Qxc4 Ne6 15.
+Rad1 O-O 16. Ne2 {1/2-1/2 (16) Kormanyos,Z (2285)-Titkos,J (2270) Budapest 1981
+}) (2... e5 3. Nf3 d6 4. d4 Qc7 5. h3 Be7 6. a4 Nd7 7. Bc4 Nf8 8. O-O Be6 9.
+Qe2 Nf6 10. dxe5 dxe5 11. Ng5 Bxc4 12. Qxc4 Bd8 13. f4 Nh5 14. f5 h6 15. Nf3 g6
+16. Be3 gxf5 17. exf5 {Dzhumaev,M (2365)-Burmakin,V (2555) Moscow 1996 1/2-1/2
+(66)}) (2... g6 3. Bc4 (3. h4 h5 4. Nh3 d5 5. Ng5 e5 6. exd5 cxd5 7. Qf3 f6 8.
+Nh3 Be6 9. Bd3 Bf7 10. O-O Nc6 11. Re1 Qd7 12. Bb5 O-O-O 13. d4 e4 14. Qd1 Nge7
+15. Bxc6 Qxc6 16. a4 Nf5 17. Nb5 Qb6 {Ruzicka,P (2310)-Knazovcik,L (2260)
+Prague 1992 1/2-1/2 (67)}) 3... Bg7 4. Bb3 Na6 5. d4 Nc7 6. Nge2 d5 7. e5 f6 8.
+f4 Nh6 9. Be3 Be6 10. Qd2 Nf5 11. Bf2 h5 12. Nd1 h4 13. Ne3 h3 14. g3 Nxe3 15.
+Bxe3 Bf5 16. c3 Qd7 17. Bc2 {Nilsson,N (2230)-Welling,G (2330) Lyngby 1991 0-1
+(60)}) (2... d5 3. exd5 cxd5 4. Nf3 $14) 3. Nf3 d6 4. Bc4 e6 5. d4 Be7 6. O-O
+b5 (6... Nd7 7. a4 $16) 7. Bb3 (7. Bd3 $5 $16) 7... b4 $14 {Black threatens to
+win material: b4xc3} 8. Na4 Nd7 9. c3 a5 (9... Ngf6 10. Re1 bxc3 11. Nxc3 $14)
+10. Re1 c5 (10... Ngf6 11. Bg5 h6 12. Bh4 $16) 11. dxc5 (11. e5 c4 12. Bc2 Bb7
+$16) 11... dxc5 12. c4 (12. e5 $5 $16) 12... Bb7 13. Bc2 e5 14. b3 Ngf6 15. Nb2
+{Black has an active position} (15. Bb2 $5 $11) 15... O-O $15 {Black castles
+and improves king safety} 16. Qe2 h6 {Black has an active position} 17. Nd1 Nh5
+(17... Rfe8 $5 $11 {must be considered}) 18. g3 $14 {Black has a very active
+position} Ra6 (18... a4 19. bxa4 Bf6 20. Qf1 $14) 19. Bb2 Rg6 20. Nxe5 $4 {
+White loses the upper hand} (20. Kh1 a4 $16) 20... Nxe5 $4 {hands over the
+advantage to the opponent} (20... Nf4 $142 $1 21. Qe3 Nh3+ (21... Nxe5 $143 22.
+Qxf4 Bd6 23. Qe3 $11) 22. Kg2 Nxe5 23. Kxh3 a4 $15) 21. Qxh5 $16 Rg5 (21... Ng4
+$5 $16) 22. Qe2 Bc8 $4 {sad, but how else could Black save the game?} (22...
+Rd8 $5 23. Ne3 Rd2 24. Bxe5 Qd8 $18) 23. Bxe5 (23. f4 $142 {and the rest is a
+matter of technique} Bg4 24. Bxe5 Qxe5 25. fxe5 Bxe2 26. Rxe2 $18) 23... Qxe5
+24. Ne3 Rg6 25. Nf5 (25. Rad1 Re8 $18) 25... Bf6 (25... Bg5 26. Rad1 Bxf5 27.
+exf5 Qxe2 28. Rxe2 Ra6 $18) 26. Rad1 $18 Bb7 27. Qd2 (27. Kf1 Bd8 $18) 27...
+Rd8 (27... Bg5 $5 28. Qd3 Bc6 $16) 28. Qe3 $18 Rxd1 29. Bxd1 (29. Rxd1 Bc8 $18)
+29... Bd8 $2 (29... Bg5 30. Qe2 $16) 30. Bh5 (30. Qd3 $142 {with excellent
+chances for White} Bc7 31. f4 $18) 30... Re6 $16 31. Bf3 Bg5 {Black threatens
+to win material: Bg5xe3} 32. Qd3 (32. Qe2 Qc3 $14) 32... Re8 (32... g6 33. Ne3
+Bxe4 34. Qxe4 Qxe4 35. Bxe4 Rxe4 36. Kf1 $11) 33. Qc2 (33. Qe2 g6 34. Ne3 Bxe3
+35. Qxe3 Kg7 $14) 33... Rd8 (33... g6 $142 34. Ne3 Bxe4 35. Qxe4 Qxe4 36. Bxe4
+Rxe4 $11) 34. Bg2 $4 {forfeits the advantage} (34. Rd1 $142 $14 {would keep
+White in the game}) 34... Rd2 $17 35. f4 $4 {strolling merrily down the path
+to disaster} (35. Qb1 $142 g6 36. h4 gxf5 37. hxg5 $19) 35... Rxc2 (35... Bxf4
+$142 $5 {might be the shorter path} 36. Qb1 Bg5 37. h4 $19) 36. fxe5 Rxa2 37.
+h4 (37. Bf3 a4 38. bxa4 b3 $19) 37... Bd2 38. Rf1 Bc3 39. Nd6 (39. e6 fxe6 40.
+Nd6 Bd4+ 41. Kh1 Bc6 $19) 39... Ba8 40. Nxf7 Bd4+ 41. Kh1 Rf2 42. e6 Rxf1+ 43.
+Bxf1 Bxe4+ 44. Kh2 (44. Bg2 Bc2 45. Bc6 $19) 44... Kf8 45. Nd6 Bc2 46. Nb7 (46.
+Nc8 {there is nothing better in the position} Bf6 47. Nb6 Bxb3 48. Nd7+ Ke7 49.
+Nxc5 $19) 46... a4 47. bxa4 Bxa4 (47... b3 $142 {finishes off the opponent} 48.
+e7+ Kxe7 49. Be2 b2 50. g4 b1=Q 51. Bd1 Be4 52. Nxc5 Qb2+ 53. Bc2 Qxc2+ 54. Kg3
+Be5+ 55. Kh3 Qg2#) 48. Kh3 (48. Bd3 {no good, but what else?} b3 49. Nd6 $19)
+48... Ke7 (48... Ke7 49. Bd3 Kxe6 $19) 0-1
+
+[Event "Sapporo Autumn Chess Tornament 2019"]
+[Site "?"]
+[Date "2019.10.13"]
+[Round "2.3"]
+[White "Nakamura, Mitsuru"]
+[Black "Kojima, Shinya"]
+[Result "0-1"]
+[ECO "D15"]
+[WhiteElo "1314"]
+[BlackElo "2497"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "50"]
+[EventDate "2019.10.13"]
+
+{D15: Slav Defence: 4 Nc3 a6 and gambit lines after 4 Nc3 dxc4} 1. d4 d5 2. c4
+c6 3. Nf3 Nf6 4. e3 Bf5 5. Nc3 a6 6. Bd3 Bxd3 7. Qxd3 e6 8. O-O Bb4 9. Bd2 (9.
+a3 Be7 10. e4 dxe4 11. Nxe4 Nxe4 12. Qxe4 Nd7 13. Bf4 O-O 14. Rad1 Re8 15. Rd3
+Nf8 16. Rb3 Qc8 17. Rc1 Ng6 18. Bg3 Qd7 19. h4 h5 20. Ne5 Nxe5 21. Bxe5 f6 22.
+Bg3 Bf8 23. Rd3 Qf7 {Karjakin,S (2778)-Anand,V (2780) Sao Paulo/Bilbao 2012 1/
+2-1/2 (31)}) (9. Ne2 Bd6 10. b3 O-O 11. Bb2 Ne4 12. Nd2 Nxd2 13. Qxd2 Nd7 {
+1/2-1/2 (13) Camarena Gimenez,R (2378)-Neuman,P (2464) Olomouc 2015}) 9... O-O
+10. a3 Be7 11. c5 $146 {White gets more space} (11. e4 b5 12. b3 Nbd7 13. e5
+dxc4 14. bxc4 bxc4 15. Qxc4 Nd5 16. Ne4 Qc7 17. Bg5 f6 18. exf6 gxf6 19. Bh6
+Rfc8 20. Rfe1 Nf8 21. Nc5 Bxc5 22. Qxc5 Qd7 23. Nd2 Ng6 24. Ne4 f5 25. Qd6 Qxd6
+{Mikhalchishin,A (2542)-Zaja,I (2433) Bled 2002 1-0 (67)}) 11... Nbd7 12. b4
+Re8 13. Rfe1 Qc7 14. e4 dxe4 15. Nxe4 {White has a new backward pawn: d4.
+White has an active position} Rad8 16. Qc2 Nxe4 17. Rxe4 {Black has a cramped
+position} Nf6 {Black threatens to win material: Nf6xe4} 18. Bf4 {White
+threatens to win material: Bf4xc7} Qc8 19. Re2 Rd5 20. Bg3 Bf8 21. Rae1 Red8
+22. Bh4 Be7 23. Re5 Qd7 24. Rd1 {Black has a cramped position} Qe8 25. g4 $4 {
+allows the opponent back into the game} (25. h3 $142 $11 {would keep White
+alive}) 25... Nxg4 $17 (25... Nxg4 26. Rxd5 Rxd5 (26... exd5 $143 27. Re1 f6
+28. Qe2 $17) 27. Bxe7 Qxe7 $17) 0-1
+
+[Event "Sapporo Autumn Chess Tornament 2019"]
+[Site "?"]
+[Date "2019.10.13"]
+[Round "2.4"]
+[White "Kojima, Natsumi"]
+[Black "Yoshii, Yukihiko"]
+[Result "0-1"]
+[ECO "C55"]
+[WhiteElo "1772"]
+[BlackElo "1851"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "78"]
+[EventDate "2019.10.13"]
+
+{C55: Two Knights: 4 d3, 4 d4 exd4 5 e5 and Max Lange Attack} 1. e4 e5 2. Nf3
+Nc6 3. Bc4 Nf6 4. d3 Be7 5. O-O O-O 6. Re1 d6 7. a4 h6 8. h3 a6 (8... Be6 9.
+Nc3 Re8 (9... Nxe4 10. Nxe4 d5 11. Bb5 dxe4 12. Bxc6 bxc6 13. Nxe5 Bd6 14. Rxe4
+Bd5 15. Re1 Re8 16. Ng4 Rxe1+ 17. Qxe1 Qd7 18. Bd2 Re8 19. Qd1 Qf5 20. c4 Be6
+21. Bc3 h5 22. Ne3 Qf4 23. Nf1 Bxh3 24. Qxh5 {Gurevich,V (2484)-Wemmers,X 
+(2354) Belgium 2014 1/2-1/2 (35)}) 10. a5 a6 11. Nd5 Bf8 12. c3 Bxd5 13. exd5
+Ne7 14. Qb3 Qd7 15. d4 exd4 16. Nxd4 Nf5 17. Bd2 Nxd4 18. cxd4 Ne4 19. Be3 Rab8
+20. Qc2 Nf6 21. Ra3 c6 22. dxc6 Qxc6 23. Rc3 {Yudin,S (2519)-Lastin,A (2604)
+Moscow 2008 0-1 (42)}) 9. Nc3 $146 (9. Nbd2 Nd7 10. c3 Kh8 11. Nf1 Nb6 12. Bb3
+f5 13. a5 fxe4 14. dxe4 Nd7 15. Ng3 Bf6 16. Nf5 Nc5 17. Bd5 Ne7 18. b4 Nxd5 19.
+Qxd5 Be6 20. Qd1 Nb3 21. Rb1 Nxc1 22. Rxc1 Bxf5 23. exf5 Bg5 {Stanic,Z (2225)
+-Loncar,R (2430) Porec 1994 0-1 (47)}) 9... b6 10. Nd5 Nxd5 11. Bxd5 Bb7 12. d4
+Bf6 13. c3 Rb8 14. Nh2 (14. dxe5 $5 {is interesting} Nxe5 15. Bxb7 Rxb7 16. Nd4
+$14) 14... exd4 $11 15. Ng4 (15. Bxc6 $5 {is an interesting alternative} Bxc6
+16. cxd4 $11) 15... dxc3 $17 16. Nxh6+ $2 (16. Nxf6+ $142 Qxf6 17. bxc3 $17)
+16... gxh6 $19 17. Qg4+ (17. Bxh6 Ne5 (17... cxb2 18. Ra3 Bg7 19. Rg3 $18) 18.
+bxc3 Bg7 19. Bxg7 Kxg7 20. Bxb7 Rxb7 $19) 17... Bg7 18. Bxh6 Qf6 19. Bg5 Qg6
+20. f4 (20. bxc3 {does not help much} Bxc3 21. Ra3 Bxe1 $19) 20... Kh8 (20...
+cxb2 $142 {makes sure everything is clear} 21. Rad1 Bc3 $19) 21. f5 Qh7 22. f6
+(22. bxc3 {does not save the day} Ne5 (22... Bxc3 $6 23. Bxc6 Bxc6 24. Rac1
+Bd4+ 25. Kh1 $19) 23. Qh4 Qxh4 24. Bxh4 Kh7 $19) 22... Bh6 23. bxc3 (23. Bxh6 {
+what else?} Qxh6 24. Qe2 cxb2 25. Rab1 Qxf6 26. Rxb2 $19) 23... Ne5 24. Qg3
+Bxd5 (24... Bxg5 {seems even better} 25. Bxb7 Rg8 26. Bxa6 $19) 25. exd5 (25.
+Bxh6 {doesn't improve anything} Qxh6 26. Qg7+ Qxg7 27. fxg7+ Kxg7 28. exd5 f5
+$19) 25... Bxg5 26. Qxg5 (26. Rxe5 {doesn't change the outcome of the game}
+dxe5 27. Qxg5 $19) 26... Qg6 (26... Nf3+ $142 $1 {secures the point} 27. gxf3
+Rg8 $19) 27. Qh4+ Qh7 {Black threatens to win material: Qh7xh4} 28. Qd4 $4 {
+there were better ways to keep up the pressure} (28. Qg5 $142 {this is the
+best way to fight back} Nf3+ {Decoy: f3} 29. gxf3 $19) 28... Rg8 $19 29. Kh2 (
+29. Re3 {doesn't change anything anymore} Rg6 30. Qe4 Rbg8 $19) 29... Rg6 (
+29... Nf3+ $1 30. Kh1 Rxg2 31. Kxg2 Nxd4 32. Re3 Rg8+ 33. Kf1 Qf5+ 34. Ke1 Rg1+
+35. Kd2 Qc2#) 30. Rf1 (30. Re2 $19 {a last effort to resist the inevitable})
+30... Rbg8 (30... Rxg2+ $142 $1 {ends the debate} 31. Kxg2 Rg8+ 32. Kh2 Ng4+
+33. Kg3 Ne3+ 34. Kf3 $19) 31. Ra2 Rh6 32. Re2 (32. Kh1 {doesn't get the bull
+off the ice} Ng4 33. Qf4 Qd3 $19) 32... Rh4 33. Rf4 (33. Qd2 {is not the
+saving move} Rxa4 34. Kh1 a5 $19) 33... Rxf4 34. Qxf4 Rg4 35. Qf1 Rxa4 36. Kg1
+Qg6 (36... Qh4 {makes it even easier for Black} 37. Rf2 $19) 37. Rf2 Ra3 38.
+Rf5 (38. Qc1 {is no salvation} Rb3 39. Kh2 Kg8 $19) 38... Rxc3 39. Qf4 (39. Kh1
+$19 {praying for a miracle}) 39... Rg3 (39... Rg3 40. Kh1 Nf3 41. Qxf3 Rxf3 42.
+Rxf3 Qe4 $19) 0-1
+
+[Event "Sapporo Autumn Chess Tornament 2019"]
+[Site "?"]
+[Date "2019.10.13"]
+[Round "2.5"]
+[White "Kikuchi, Akira"]
+[Black "Watanabe, Katsumi"]
+[Result "1-0"]
+[ECO "B14"]
+[WhiteElo "1718"]
+[BlackElo "1723"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "89"]
+[EventDate "2019.10.13"]
+
+{B14: Caro-Kann: Panov-Botvinnik Attack with 5...e6 and 5...g6} 1. e4 c5 2. c3
+d6 3. d4 cxd4 4. cxd4 e6 5. Nf3 Be7 6. Nc3 Nf6 7. Bc4 O-O 8. O-O d5 9. exd5
+exd5 10. Bd3 Nc6 11. h3 Qb6 {[%cal Rb6d4,Rc6d4,Gf3d4] The isolani on d4
+becomes a target} (11... h6 12. Bf4 Be6 13. Re1 Re8 14. Rc1 Rc8 15. Bb1 Bf8 16.
+Ne5 Qb6 17. Nxc6 {1/2-1/2 (18) Suba,M (2470)-Knezevic,M (2490) Yerevan 1980}) (
+11... a6 12. a3 b5 13. b4 Qc7 14. Qb3 Be6 15. Be3 Rac8 16. Rac1 Qd7 17. Ng5 {
+1/2-1/2 (16) Fodre,S (2181)-Muhari,I (2247) Hungary 2012}) 12. Re1 $146 (12. a3
+a6 13. Bf4 Be6 14. b4 Qd8 15. Rc1 Nh5 16. Bh2 g6 17. Bb1 Ng7 18. Ne5 Nxe5 19.
+dxe5 a5 20. Qd4 axb4 21. axb4 Rc8 22. Nb5 Rc4 23. Rxc4 dxc4 24. Nd6 Qd7 25. Qb6
+Qc6 26. Qxc6 bxc6 {Biro,A (2324)-Sarosi,Z (2333) Hungary 2004 0-1 (51)}) 12...
+Be6 13. Rb1 (13. a3 h6 $14 (13... Nxd4 {once again taking the pawn is naive}
+14. Nxd4 Rfe8 15. Be3 $18)) 13... Nb4 $11 (13... Nxd4 $4 {it may look tempting
+but Black must resist capturing the pawn} 14. Nxd4 Rfe8 15. Bb5 $18) 14. Bg5
+Rfe8 15. a3 Nxd3 {Black forks: b2+e1} 16. Qxd3 {Black has the pair of bishops}
+h6 {Black threatens to win material: h6xg5} 17. Bh4 Qc7 (17... Qa6 18. Qe3 $11)
+18. Rbc1 Nh5 $4 (18... Qc4 $142 {this is the best bet to save the position} 19.
+Qd2 Qa6 $11) 19. Nxd5 $1 $18 {Decoy: d5} Qd6 (19... Bxd5 20. Qf5 {Decoy Double
+attack} (20. Rxc7 {Discovered attack})) 20. Nxe7+ (20. Bxe7 $6 Qxd5 21. Re5 Qd7
+22. Rxh5 Rxe7 $16) 20... Rxe7 21. Bxe7 Qxe7 22. Qb5 Nf4 (22... Nf6 {is not
+much help} 23. d5 $1 {Deflection: e6} Qd7 24. Qxd7 Bxd7 25. Rc7 $18) 23. d5 $1
+{Deflection: e6} a6 (23... Bxd5 24. Re5 {Decoy Double attack} (24. Rxe7 {
+Deflection Pinning})) (23... Nxd5 24. Qxd5 Bxd5 25. Re5 {Decoy Double attack} (
+25. Rxe7 {Remove defender Deflection Pinning})) 24. Qa5 Nd3 (24... b6 {cannot
+change destiny} 25. Qd2 Nxd5 26. Qxd5 $18) 25. dxe6 (25. Rc7 $142 {secures
+victory} Qxc7 26. Qxc7 Nxe1 27. dxe6 Nxf3+ 28. gxf3 fxe6 29. Qxb7 Re8 30. Qxa6
+Rb8 $18) 25... Nxe1 26. exf7+ Qxf7 27. Rxe1 Rc8 28. Qb4 Qc7 (28... Qc4 {
+does not solve anything} 29. Qxb7 Qc6 30. Re7 Qxb7 31. Rxb7 $18) 29. Qe7 (29.
+Re7 {seems even better} Qc1+ 30. Kh2 Rf8 31. Rxb7 Qf4+ 32. Qxf4 Rxf4 $18) 29...
+Qc2 (29... Qxe7 {doesn't do any good} 30. Rxe7 b5 31. Ra7 $18) 30. Qxb7 Kh8 (
+30... Qc6 {does not win a prize} 31. Re7 Qxb7 32. Rxb7 Rc1+ 33. Kh2 $18) 31.
+Qxa6 Rd8 (31... Rc6 {cannot change what is in store for White} 32. Qb5 Kh7 33.
+b4 $18) 32. Qe2 (32. b4 {and White can already relax} Kh7 $18) 32... Qb3 (32...
+Qxe2 {a fruitless try to alter the course of the game} 33. Rxe2 Rd1+ 34. Re1
+$18) 33. Ne5 Rd5 (33... Kg8 $18 {is the last straw}) 34. Nf7+ Kg8 35. Qe8+ Kh7
+36. Qe4+ Kg8 (36... Rf5 {cannot undo what has already been done} 37. Qxf5+ g6
+38. Ng5+ hxg5 39. Re7+ Kh6 40. Qf8+ Kh5 41. Rh7#) 37. Nxh6+ $1 {Clearance: e4}
+Kh8 (37... gxh6 38. Qg6+ {Mate attack Clearance}) 38. Ng4 (38. Qe8+ Kh7 39.
+Qg8+ Kg6 40. Re6+ Kh5 41. Qf7+ g6 42. Qxg6+ Kh4 43. Re4#) 38... Rd1 39. Rxd1 (
+39. Qe8+ Kh7 40. Qh5+ Kg8 41. Nf6+ gxf6 42. Rxd1 Qxd1+ 43. Qxd1 Kf7 44. Qd7+
+Kg6 45. Qe8+ Kg7 46. g4 Kh7 47. Qf7+ Kh8 48. f4 f5 49. Qf8+ Kh7 50. g5 Kg6 51.
+Qe7 Kh5 52. Qh7#) 39... Qxd1+ 40. Kh2 Qb3 41. a4 Qxb2 42. a5 Qb5 43. Qa8+ Kh7
+44. a6 Qb6 (44... Qf5 {does not improve anything} 45. a7 g5 46. Qb7+ Kg6 47.
+a8=Q Qf4+ 48. g3 Qxf2+ 49. Nxf2 g4 50. Qh8 gxh3 51. Qe5 Kh6 52. Qbg7#) 45. Qb7
+(45. Qb7 Qd4 46. a7 Qd6+ 47. g3 Qa3 48. a8=Q Qd6 49. Qb3 Qe7 50. Qag8+ Kg6 51.
+Qd3+ Qe4 52. Qxe4+ Kh5 53. Ne5 Kg5 54. Qg6#) 1-0
+
+[Event "Sapporo Autumn Chess Tornament 2019"]
+[Site "?"]
+[Date "2019.10.13"]
+[Round "3.1"]
+[White "Drakakis, Athanasios"]
+[Black "Sugimoto, Koichi"]
+[Result "1-0"]
+[ECO "D02"]
+[WhiteElo "1876"]
+[BlackElo "1987"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "81"]
+
+{D02: 1 d4 d5 2 Nf3 sidelines, including 2...Nf6 3 g3 and 2...Nf6 3 Bf4} 1. d4
+d5 2. Nf3 Nf6 3. Bf4 c5 4. e3 Nc6 5. c3 Qb6 6. Qc1 Bf5 7. Nbd2 e6 8. Nh4 Bg4 9.
+h3 Bh5 10. g4 Bg6 11. Nxg6 hxg6 12. Bg2 cxd4 $146 (12... Rc8 13. Nb3 (13. Qb1
+Qa6 14. dxc5 b6 15. cxb6 axb6 16. Qd1 Be7 17. Qe2 Qa7 18. O-O O-O 19. Rfc1 Rfd8
+20. Bf1 e5 21. Bg3 Qc7 22. Bg2 Qd7 23. Qb5 Qe6 24. Rd1 g5 25. Nb3 Na7 26. Qa6
+Rd7 27. e4 Nxe4 {Kaminski,V (2212)-Hungaski,R (2407) Pawtucket 2008 1-0 (43)})
+13... cxd4 14. exd4 a5 15. Qb1 a4 16. Nd2 Na5 17. O-O Bd6 18. Bxd6 Qxd6 19. f4
+a3 20. b4 Nc4 21. Qd3 Nxd2 22. Qxd2 Ne4 23. Qe1 Nxc3 24. f5 gxf5 25. gxf5 Ne4
+26. fxe6 Qxe6 27. Rc1 {Petrovic,M (2227)-Vasic,M (2213) Budva 2004 1/2-1/2 (53)
+}) 13. exd4 Rc8 14. Qb1 Qa6 {White king safety dropped} 15. Bf1 {White
+threatens to win material: Bf1xa6} Qb6 {White king safety improved} 16. Bg2 Na5
+17. O-O Bd6 18. Bxd6 Qxd6 19. f4 Nc4 20. Nxc4 Rxc4 21. Qd3 a6 22. Rae1 O-O 23.
+Kh1 (23. f5 gxf5 24. gxf5 Re8 $11) 23... b5 24. a3 Rfc8 25. f5 gxf5 26. gxf5
+Nh5 $4 {Black is ruining his position} (26... Re8 $142 $11 {and Black can hope
+to live}) 27. Re5 R4c7 $4 {the pressure is too much, Black crumbles} (27...
+exf5 $142 28. Bxd5 g6 29. Bxc4 bxc4 $16) 28. fxe6 $18 Nf6 (28... g6 {cannot
+change destiny} 29. exf7+ Rxf7 30. Rxf7 Kxf7 31. Rxh5 gxh5 32. Qf5+ Ke7 33.
+Qxc8 Qf4 $18) 29. exf7+ (29. Rxf6 $142 {secures the win} gxf6 30. exf7+ (30.
+Rxd5 $6 {is a weaker possibility} Qxe6 31. Qg3+ Kf8 $16) 30... Rxf7 31. Qg6+ (
+31. Rxd5 $6 {is impossible} Qe7 $14) 31... Rg7 32. Re8+ (32. Rxd5 $6 {is
+easily refuted} Qe6 33. Qf5 Re8 34. Qxe6+ Rxe6 $11) 32... Rxe8 33. Qxe8+ Kh7
+34. Qh5+ Kg8 35. Bxd5+ (35. Qxd5+ $143 Qxd5 36. Bxd5+ Kf8 $15) 35... Kf8 36.
+Qh8+ Ke7 37. Qxg7+ Kd8 38. Qg8+ Kc7 39. Qf7+ Kc8 40. Qe8+ Kc7 41. Qc6+ Qxc6 42.
+Bxc6 Kxc6 43. h4 $18) 29... Rxf7 30. Qg6 Rcf8 (30... Qd7 31. Rff5 Rcf8 32. Rxd5
+$18) 31. Rfe1 (31. Rh5 $142 {and White can celebrate victory} Rd8 32. Bxd5
+Qxd5+ 33. Rxd5 Rxd5 34. Kg2 $18) 31... Qd7 32. R1e3 (32. Rf5 Rb8 $18) 32... a5
+33. Rg3 (33. Qf5 Qxf5 34. Rxf5 Rd7 $16) 33... b4 $16 34. axb4 (34. Kg1 bxc3 35.
+bxc3 Re8 $16) 34... axb4 35. Kh2 (35. cxb4 Qc7 $16) 35... bxc3 $14 36. bxc3 Qb5
+$2 (36... Rb8 37. h4 Qd8 38. Rf3 $18) 37. Rf5 (37. h4 $5 {keeps an even firmer
+grip} Qb8 38. h5 Kh8 39. Bxd5 Nxd5 $18) 37... Qd7 38. Re5 {Twofold repetition}
+Qb5 39. h4 Qb2 40. Kh3 (40. h5 $5 Ne4 41. Rxe4 dxe4 $18) 40... Qf2 $4 {but
+even a better move would not have saved the game} (40... Qc1 $142 $18) 41. Rf5
+(41. Rf5 Qc2 42. Rxf6 Qxg6 43. Rfxg6 $18 (43. Rgxg6 $6 Rxf6 44. Bxd5+ Kh7 $14))
+1-0
+
+[Event "Sapporo Autumn Chess Tornament 2019"]
+[Site "?"]
+[Date "2019.10.13"]
+[Round "3.2"]
+[White "Kojima, Shinya"]
+[Black "Kikuchi, Akira"]
+[Result "1-0"]
+[ECO "B85"]
+[WhiteElo "2497"]
+[BlackElo "1718"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "45"]
+
+{B85: Sicilian Scheveningen: 6 Be2 a6, lines with early Be3} 1. Nf3 c5 2. e4 d6
+3. d4 cxd4 4. Nxd4 e6 5. Nc3 Nf6 6. Be2 Be7 7. Be3 a6 8. f4 Nbd7 (8... O-O 9.
+Qd2 b5 10. Bf3 b4 11. Nce2 d5 12. e5 Ne4 13. Qd1 a5 14. Ng3 Bh4 15. Bxe4 dxe4
+16. Qh5 g6 17. Qh6 Bb7 18. O-O-O Nd7 19. f5 Nxe5 20. Nxe6 Qf6 21. Nxf8 Rxf8 22.
+fxg6 hxg6 23. Rhf1 {Svidler,P (2550)-Rytshagov,M (2460) Moscow 1994 1/2-1/2 
+(36)}) 9. O-O $146 (9. Bf3 Qc7 10. a4 (10. Qe2 Nb6 11. O-O O-O 12. Kh1 Nc4 13.
+Bc1 Re8 14. Qf2 e5 15. Nf5 Bxf5 16. exf5 exf4 17. Bxf4 Nxb2 18. Nd5 Nxd5 19.
+Bxd5 Bf6 20. Rab1 Rab8 21. Qg3 Nc4 22. Rbe1 b5 23. Bg5 Bxg5 24. Qxg5 h6 {
+Rohit,G (2401)-Al Modiahki,M (2568) Hyderabad 2005 0-1 (40)}) 10... O-O 11. g4
+d5 12. e5 Ne8 13. O-O Nb6 14. g5 Nc4 15. Bc1 Bd7 16. Nce2 Rc8 17. Kh1 Na5 18.
+Rg1 Nc6 19. Nb3 Na5 20. Nbd4 Nc6 21. Be3 g6 22. Qf1 Ng7 23. Bg4 Rfe8 {Sai,K 
+(2349)-Abedi,A (2159) Dubai 2011 1-0 (34)}) (9. g4 Nc5 10. Bf3 Qc7 11. Qe2 Rb8
+12. g5 Ng8 13. a4 b6 14. f5 Bd7 15. fxe6 fxe6 16. O-O h6 17. b4 Nb7 18. Nf5
+hxg5 19. Nxg7+ Kd8 20. Bd4 Bf6 21. Qe3 Bxd4 22. Qxd4 Rh7 23. Bg4 d5 {Smirin,I 
+(2646)-Iskandarov,M (2203) Baku 2010 1-0}) 9... O-O 10. Kh1 Qc7 11. Bf3 {
+Black has a cramped position. Black's piece can't move: c8} Rd8 12. g4 e5 $2 (
+12... Nb6 $142 $11 {and Black hangs on}) 13. Nf5 $18 Nf8 $4 {Black has lost
+his nerve... understandable when you consider his position} (13... Bf8 $142 14.
+g5 d5 15. exd5 Ne8 $18) 14. g5 Ne8 (14... Bxf5 {otherwise it's curtains at once
+} 15. gxf6 Bxf6 16. exf5 Qc8 $18) 15. Nd5 Qb8 (15... Qd7 {cannot undo what has
+already been done} 16. Nfxe7+ Kh8 17. Bb6 $18) 16. Nfxe7+ Kh8 17. fxe5 (17. f5
+$142 {and White can already relax} Nc7 18. Nb6 $18) 17... Ng6 (17... dxe5 {
+hoping against hope} 18. Bb6 Qd6 $18) 18. Nxg6+ hxg6 19. Bg4 (19. Bh5 $142 {
+makes it even easier for White} dxe5 20. Rxf7 $18) 19... Bxg4 (19... dxe5 {
+is one last hope} 20. Rxf7 Kh7 $18) 20. Qxg4 Kg8 (20... Qc7 {is not much help}
+21. e6 Rd7 22. exd7 Nf6 23. gxf6 Kg8 24. Qh3 Qxd7 25. Qxd7 gxf6 26. Nxf6+ Kg7
+27. Ne8+ Kh8 28. Bd4+ Kh7 29. Qh3+ Kg8 30. Qh8#) 21. Rxf7 $1 {Mate attack.}
+Kxf7 (21... Kxf7 22. e6+ {Mate attack}) (21... -- $140 22. Qe6 {Mate threat})
+22. Rf1+ (22. e6+ Kg8 23. Ne7+ Kf8 24. Nxg6+ Kg8 25. Qh5 Nf6 26. Qh8#) 22...
+Kg8 (22... Nf6 {does not win a prize} 23. e6+ Kg8 24. gxf6 Qc7 25. Nxc7 a5 26.
+Qxg6 Rd7 27. exd7 Re8 28. dxe8=Q#) 23. Ne7+ (23. Ne7+ Kh8 24. Qh3#) 1-0
+
+[Event "Sapporo Autumn Chess Tornament 2019"]
+[Site "?"]
+[Date "2019.10.13"]
+[Round "3.3"]
+[White "Nishimori, Toshiyuki"]
+[Black "Sato, Yasuji"]
+[Result "1-0"]
+[ECO "C78"]
+[WhiteElo "1776"]
+[BlackElo "1453"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "97"]
+
+{C78: Ruy Lopez: Archangelsk and Mler Defences} 1. e4 e5 2. Nf3 Nc6 3. Bb5 a6
+4. Ba4 Bc5 5. O-O Nf6 6. d3 h6 $146 {Controls g5} (6... Qe7 7. Nc3 (7. c3 Ba7
+8. Nbd2 d6 9. Re1 Ng4 10. Bxc6+ bxc6 11. d4 exd4 12. cxd4 O-O 13. Nf1 Nf6 14.
+Ng3 Bg4 15. h3 Bxf3 16. Qxf3 Bxd4 17. Nf5 Qe5 18. Bf4 Qc5 19. Rac1 Qb4 20. a3
+Qxb2 21. Re2 Qb6 {Cabrilo,G (2505)-Trifunovic,M (2275) Vrnjacka Banja 1988 1-0
+(80)}) 7... Nd4 8. Nxd4 Bxd4 9. Ne2 Ba7 10. Ng3 g6 11. Bh6 b5 12. Bb3 d6 13. h3
+Be6 14. Qf3 Nd7 15. Nf5 gxf5 16. exf5 d5 17. fxe6 fxe6 18. Be3 Rf8 19. Qh5+ Qf7
+20. Qxf7+ Rxf7 21. c3 {Lasker,E-Alekhine,A New York 1924 1/2-1/2 (58)}) (6...
+b5 7. Bb3 O-O 8. a4 Rb8 (8... Bb7 9. Bg5 h6 10. axb5 axb5 11. Rxa8 Bxa8 12. Bh4
+Be7 13. Nc3 b4 14. Bxf6 Bxf6 15. Nd5 Na5 16. Ba2 Bxd5 17. Bxd5 c6 18. Ba2 d5
+19. Qe2 Qd6 20. Re1 Ra8 21. exd5 cxd5 22. h3 Nc6 23. Bb3 {Garcia Luque,A (2360)
+-Fernandez Garcia,J (2445) Cordoba 1995 0-1 (73)}) 9. axb5 axb5 10. Nc3 (10.
+Be3 d6 11. h3 Bb6 12. Nc3 Nd4 13. Bxd4 Bxd4 14. Nxd4 exd4 15. Nd5 c5 16. Qf3
+Nxd5 17. Bxd5 Be6 18. Ra7 Bxd5 19. exd5 Ra8 20. Rfa1 Rxa7 21. Rxa7 Qg5 22. Rd7
+Qc1+ 23. Kh2 Qxc2 24. Rxd6 c4 {Di Giannantonio,N (2314)-Saldano Dayer,H (2446)
+Buenos Aires 2015 0-1 (37)}) 10... h6 11. Be3 Bxe3 12. fxe3 d6 13. Qe1 b4 14.
+Nd5 Nxd5 15. exd5 Ne7 16. Ra4 c5 17. dxc6 Nxc6 18. d4 e4 19. Nh4 d5 20. Nf5
+Bxf5 21. Rxf5 {Demchenko,A (2610)-Fedoseev,V (2498) St Petersburg 2012 1/2-1/2
+(43)}) (6... d6 7. Be3 b5 8. Bb3 $11) 7. Nc3 (7. Bxc6 dxc6 8. Nxe5 Qe7 $16)
+7... O-O (7... d6 8. d4 exd4 9. Nxd4 $11) 8. h3 (8. Bxc6 $142 $5 bxc6 9. Nxe5
+$16) 8... d6 $11 9. a3 {Consolidates b4} Ne7 10. Bb3 Ng6 11. Be3 Bxe3 12. fxe3
+{White has new doubled pawns: e3+e4} Nh5 (12... Qe7 13. Qe2 $11) 13. Ne2 (13.
+Nxe5 $142 $5 dxe5 14. Qxh5 $16) 13... Kh8 14. Qe1 f5 $2 (14... Nf6 15. Nh4 $11)
+15. Ng3 (15. exf5 $142 {a pity that White didn't try this} Rxf5 16. g4 Rxf3 17.
+Rxf3 $18) 15... fxe4 $11 16. Nxe4 Nf6 (16... d5 17. Ng3 Nf6 18. e4 $11) 17.
+Nxf6 Rxf6 18. Qg3 Qe7 19. Nd2 Bf5 $2 (19... Kh7 $142 $14 {would allow Black to
+play on}) 20. Rxf5 $1 $18 {Deflection: g6} Rxf5 21. Qxg6 Raf8 22. Rf1 (22. Ne4
+$5 Qe8 23. Qe6 Qb5 $18) 22... Rxf1+ 23. Nxf1 Qh4 (23... Qf6 24. Qxf6 Rxf6 25.
+g4 $18) 24. Bf7 (24. Ng3 Qf6 25. Qe4 c6 $18) 24... Qe7 (24... c6 25. Qe6 $16)
+25. Bd5 $18 c6 $2 (25... Rf6 26. Qg3 c6 27. Bf3 $18) 26. Bf3 (26. Be4 $142 {
+and White has reached his goal} Kg8 27. Qh7+ Kf7 28. Bg6+ Ke6 29. Ng3 $18)
+26... Rf6 27. Qg4 Qf8 (27... d5 28. c4 e4 29. dxe4 dxc4 30. e5 $16) 28. Ng3 d5
+29. Qh5 g5 (29... Qb8 30. e4 d4 31. h4 $18) 30. Qg4 b5 (30... Qe7 31. c4 dxc4
+32. Qxc4 $18) 31. Nh5 Rf7 (31... Rd6 32. Qb4 $18) 32. Qg3 (32. Qe6 $142 $18 {
+nails it down}) 32... Rf5 (32... Qe7 33. c3 $18) 33. e4 dxe4 34. dxe4 Qc5+ 35.
+Qf2 (35. Kh2 $5 {keeps an even firmer grip} Rf8 $18) 35... Qxf2+ 36. Kxf2 Rf7
+37. Ke3 Rd7 (37... Kh7 $142 $18) 38. Nf6 Re7 39. Ng4 (39. Bg4 $142 $5 {makes
+it even easier for White} a5 $18) 39... Kg7 40. Nf2 c5 (40... Kf6 41. Nh1 $18)
+41. Nd3 c4 42. Nb4 Re6 43. Bg4 Rd6 44. Nd5 Kf7 (44... Kg6 45. Kd2 h5 46. Bf5+
+Kf7 47. Kc3 $18) 45. Kd2 Kg6 (45... a5 $18) 46. Ke3 (46. Kc3 $5 {might be the
+shorter path} a5 $18) 46... Kf7 47. Bh5+ Kg7 48. Kf3 a5 (48... Rd8 49. Ke2 $18)
+49. Ke3 1-0
+
+[Event "Sapporo Autumn Chess Tornament 2019"]
+[Site "?"]
+[Date "2019.10.13"]
+[Round "3.4"]
+[White "Yoshii, Yukihiko"]
+[Black "Nakamura, Mitsuru"]
+[Result "1-0"]
+[ECO "E97"]
+[WhiteElo "1851"]
+[BlackElo "1314"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "71"]
+
+{E97: King's Indian: Classical Main Line (6...e5 7 0-0 Nc6): 8 Be3 and 8 d5
+Ne7, not 9 Ne1} 1. c4 Nf6 2. Nc3 g6 3. Nf3 Bg7 4. d4 d6 5. e4 O-O 6. Be2 e5 7.
+O-O Nc6 8. Bg5 {White has an active position} (8. Re1 Bg4 9. d5 Bxf3 10. Bxf3
+Nd4 11. Be3 Nxf3+ 12. Qxf3 Nd7 13. Qe2 Kh8 14. Qd2 f5 15. exf5 gxf5 16. Bh6 Rg8
+17. Bxg7+ Rxg7 18. Qh6 Rg6 19. Qh3 Qf6 20. g3 Rag8 21. f3 e4 22. f4 Nc5 {
+Kudriashova,I (2192)-Cherenkova,K (2256) Moscow 2008 0-1}) 8... Ne7 $4 $146 {
+Black lets it slip away} (8... Nxd4 9. Nxd4 exd4 10. Qxd4 Nxe4 11. Bxd8 Bxd4
+12. Bxc7 Bxc3 13. bxc3 Be6 14. Bd3 Rac8 15. Ba5 Nd2 16. Rfd1 Nxc4 17. Bxc4 Rxc4
+18. Rxd6 b6 19. Bb4 a5 20. Ba3 Ra4 21. Bb2 Rxa2 22. Rxa2 Bxa2 23. Rxb6 {
+Lys,J (2209)-Orzechowski,J (2235) Czechia 2006 1/2-1/2 (58)}) (8... Qe8 9. Bxf6
+Bxf6 10. c5 Nb4 11. Nb5 Qe7 12. a3 Nc6 13. d5 Nd4 14. Nfxd4 exd4 15. cxd6 cxd6
+16. Qd3 Bd7 17. Nxd4 Rfe8 18. Bf3 Rac8 19. Rab1 Be5 20. b3 Qh4 21. g3 Qf6 22.
+Ne2 Bb5 23. Qe3 {Pelletier,Y (2483)-Schmidt,P (2412) Germany 1999 1/2-1/2 (42)}
+) (8... exd4 9. Nd5 h6 10. Nxf6+ Bxf6 11. Bxh6 Re8 12. Nd2 Kh7 13. Bf4 Be5 14.
+Bg3 Kg7 15. f4 Bf6 16. a3 d3 17. Bxd3 Bxb2 18. Ra2 Bd4+ 19. Kh1 Bf6 20. Nf3 Bg4
+21. h3 Rh8 22. Qb1 Rb8 23. e5 {Kebis,M (2210)-Majzlan,I (2225) Bratislava 1994
+0-1 (40)}) (8... exd4 $142 $5 {must definitely be considered} 9. Nxd4 Nxd4 10.
+Qxd4 Nxe4 11. Bxd8 Bxd4 12. Bxc7 Bxc3 13. bxc3 Be6 $15 (13... Nxc3 $143 14. Bf3
+$11)) 9. h3 (9. dxe5 dxe5 10. Nxe5 Qe8 $18) 9... Bd7 $2 (9... h6 $142 $5 {
+and Black can hope to survive} 10. Be3 exd4 11. Nxd4 Nc6 $14) 10. dxe5 $18 dxe5
+11. Nxe5 Bc6 (11... Nxe4 12. Nxd7 (12. Qxd7 $143 Nxg5 13. Rad1 Bxe5 $15) (12.
+Nxe4 $6 Bxe5 13. Bf6 Bc6 $16) 12... Nxg5 13. Nxf8 Qxf8 14. Qb3 $18) 12. Nxc6 (
+12. f4 $142 $5 Nd7 13. Nxc6 bxc6 $18) 12... Nxc6 $16 13. Qb3 {White threatens
+to win material: Qb3xb7} (13. Qc1 Re8 $16) 13... Rb8 $2 (13... Nd4 $142 $5 14.
+Qxb7 Qd6 15. Bxf6 Bxf6 $14) 14. Rad1 $18 Qe8 15. Rfe1 Qe5 16. Bxf6 (16. Be3
+$142 $5 Nxe4 17. f4 $18) 16... Qxf6 $16 17. Rd2 (17. Qa3 Rfd8 $14) 17... Nd4
+$14 {Black threatens to win material: Nd4xb3} 18. Qd1 c5 (18... c6 $5 $14 {
+is an interesting idea}) 19. Nd5 $16 Qh4 20. Bf1 Rfe8 21. g3 Qg5 22. Bg2 a6 23.
+b4 b6 24. h4 Qh6 25. f4 f5 $2 (25... a5 $142 $18) 26. e5 Ne6 27. a3 (27. Nf6+
+Bxf6 28. exf6 Nd4 29. Rxe8+ Rxe8 30. Rxd4 cxd4 31. Qxd4 Rf8 $18) 27... Kh8 28.
+Bf3 (28. Qa4 {seems even better} a5 29. bxa5 bxa5 $18) 28... Bf8 (28... a5 29.
+bxc5 bxc5 30. Bg2 $18) 29. Nf6 Rec8 (29... cxb4 30. Nxe8 Bc5+ 31. Kg2 Rxe8 32.
+Bc6 $18) 30. Rd7 Bg7 31. Qd6 Rd8 (31... Nd4 {the only chance to get some
+counterplay} 32. Bd5 Nc2 $18) 32. Qxe6 Rxd7 (32... Rf8 {cannot change what is
+in store for White} 33. Re7 a5 34. b5 $18) 33. Qxd7 Bxf6 34. exf6 Qf8 35. Qe7 (
+35. Re7 Qg8 36. Bd5 h5 37. Bxg8 Rb7 38. Qxb7 cxb4 39. Re8 bxa3 40. Qg7#) 35...
+Kg8 36. Bd5+ (36. Bd5+ Kh8 37. Qa7 Rd8 38. Re7 Rxd5 39. cxd5 g5 40. Re8 Kg8 41.
+Qg7#) 1-0
+
+[Event "Sapporo Autumn Chess Tornament 2019"]
+[Site "?"]
+[Date "2019.10.13"]
+[Round "3.5"]
+[White "Takeuchi, Hiroshi"]
+[Black "Kojima, Natsumi"]
+[Result "0-1"]
+[ECO "D05"]
+[WhiteElo "1350"]
+[BlackElo "1772"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "60"]
+[EventDate "2019.10.13"]
+
+{D05: Colle System with ...e6} 1. d4 Nf6 2. Nf3 e6 3. e3 b6 4. Bd3 Be7 5. Nbd2
+O-O 6. b3 Bb7 7. Bb2 d5 8. O-O c5 9. Ne5 Nc6 $146 (9... Nbd7 10. f4 Ne4 11. c4
+Nxe5 12. fxe5 Bg5 13. Qe2 Nxd2 14. Qxd2 dxc4 15. Bxc4 cxd4 16. Bxd4 Be4 17. Qe2
+Qe7 18. Bd3 Bxd3 19. Qxd3 Qb7 20. Rac1 Rac8 21. h3 h6 22. a4 Qd5 23. b4 Rfd8
+24. Qa6 {Khotenashvili,B (2513)-Kosteniuk,A (2527) Khanty-Mansiysk 2014 0-1 
+(36)}) 10. Qe2 (10. Nxc6 Bxc6 11. Nf3 Bb7 $11) 10... Nb4 11. f4 (11. dxc5 bxc5
+12. Bb5 Qc7 $11 (12... Nxc2 $2 {doesn't work because of} 13. Rac1 $18)) 11...
+Nxd3 12. Qxd3 {Black has the pair of bishops} Nd7 13. f5 (13. Nxd7 Qxd7 14.
+dxc5 bxc5 $11) 13... Nxe5 $15 14. dxe5 exf5 15. Qxf5 Bc8 {Black threatens to
+win material: Bc8xf5} 16. Qd3 Be6 {The black bishop is safe in front of e5} 17.
+Qe2 Qc7 18. Nf3 Rad8 19. Rad1 Rd7 20. h3 {Secures g4} Rfd8 21. Nh2 d4 (21...
+Qc6 22. Nf3 $17) 22. exd4 $15 cxd4 23. Kh1 (23. Nf3 Bc5 24. Kh1 Bd5 $11) 23...
+Bc5 (23... Rc8 24. Nf3 Qxc2 25. Rd2 $15) 24. Nf3 $15 {[%cal Rb2d4,Rd1d4,Rf3d4,
+Gc5d4,Gd7d4] The pressure on the isolated pawn grows} h6 {Prevents intrusion
+on g5} 25. b4 $4 (25. Rd2 $142 $11 {had to be tried to avoid defeat}) 25...
+Bxb4 $19 26. Nxd4 $2 (26. Rg1 Bc4 27. Qe4 $19) 26... Bc4 27. Qg4 (27. Qe4 {
+hardly improves anything} Bxf1 28. Rxf1 Qc4 $19) 27... Bxf1 28. e6 (28. Rxf1 {
+does not solve anything} Qxe5 29. c3 Bd6 $19) 28... Bxg2+ $1 {it's all over}
+29. Qxg2 (29. Qxg2 fxe6 {Passed pawn}) (29. Kxg2 fxe6 {Passed pawn}) 29... fxe6
+30. c3 (30. Rd3 {the last chance for counterplay} Qe5 31. Nc6 Qe1+ 32. Kh2 $19)
+30... Bxc3 0-1
+
+[Event "Sapporo Autumn Chess Tornament 2019"]
+[Site "?"]
+[Date "2019.10.14"]
+[Round "4.1"]
+[White "Kojima, Shinya"]
+[Black "Drakakis, Athanasios"]
+[Result "1-0"]
+[ECO "D55"]
+[WhiteElo "2497"]
+[BlackElo "1876"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "53"]
+
+{D55: Queen's Gambit Declined: 4 Bg5 Be7: Lines without ...h6 and 6...h6 7 Bxf6
+} 1. Nf3 d5 2. d4 Nf6 3. c4 e6 4. Nc3 b6 5. Bg5 Be7 6. e3 O-O 7. Rc1 Bb7 8.
+Bxf6 Bxf6 9. cxd5 exd5 10. Be2 (10. b4 c5 11. bxc5 bxc5 12. Bb5 Na6 13. Qa4
+cxd4 14. Nxd4 Nc5 15. Qd1 Bxd4 16. exd4 Ne6 17. Qa4 a6 18. Be2 Qf6 19. Qd7 Rab8
+20. O-O Rfd8 21. Qa4 Qxd4 22. Qxd4 Nxd4 23. Rfd1 Ne6 24. Bg4 Rbc8 {Skembris,S 
+(2545)-Mikhalevski,A (2440) Beersheba 1993 0-1 (66)}) 10... c6 $146 {Prevents
+intrusion on b5} (10... Qe7 11. O-O Rd8 12. Qc2 Nd7 13. Rfd1 g6 14. Qb1 c6 15.
+b4 a5 16. a3 (16. b5 c5 17. dxc5 Nxc5 18. Nd4 Bxd4 19. Rxd4 Ne6 20. Rd3 d4 21.
+exd4 Nxd4 22. Rcd1 Qf6 23. Qb2 Rd6 24. Bf1 Rad8 25. h3 Ba8 26. Rxd4 Rxd4 27.
+Ne2 Rxd1 28. Qxf6 Rxf1+ 29. Kh2 Rd2 30. Qxb6 Rxe2 {Surov,S (2250)-Manukovsky,V
+(2223) Borisoglebsk 2014 1/2-1/2 (40)}) 16... b5 17. Qb3 Nb6 18. Ra1 Ra7 19.
+Ra2 Rda8 20. Rda1 Bc8 21. Bd3 Bg4 22. Nd2 Bg7 23. h3 Be6 24. Qc2 axb4 25. axb4
+{Benko,P-Petrosian,T Los Angeles 1963 0-1 (55)}) (10... a6 11. b4 (11. Qb3 Qd6
+12. O-O Nd7 13. Rfd1 Rfe8 14. Ne1 Bd8 15. Bf3 Nf6 16. Nd3 c6 17. Ne5 c5 18.
+Nxf7 Kxf7 19. dxc5 Qe6 20. Nxd5 Bxd5 21. Rxd5 Kf8 22. Rd3 Qxb3 23. axb3 Rb8 24.
+c6 Bc7 25. b4 Red8 {Gollain,M (2195)-Iordanov,N (2216) France 2010 0-1 (71)})
+11... Nd7 12. Qb3 Be7 13. O-O Nf6 14. Rfd1 Bd6 15. Ne1 Ne4 16. Nd3 Re8 17. Nxe4
+dxe4 18. Ne5 Rf8 19. Bc4 Qe8 20. Bd5 Bxd5 21. Qxd5 Rd8 22. g3 Kh8 23. Nc6 Ra8
+24. Qf5 f6 25. a4 {Hansen,E (2460)-Laceste,L (2297) Victoria 2012 1-0 (44)})
+11. O-O Re8 12. b4 (12. Bd3 Na6 $11) 12... a6 {Covers b5} 13. Qb3 Nd7 14. Rfd1
+Re6 (14... Nf8 15. Bd3 $11) 15. Bd3 Bg5 (15... g6 16. e4 dxe4 17. Nxe4 $14) 16.
+Bf5 $14 Rd6 17. Na4 Bh6 18. Ne5 {White threatens to win material: Ne5xd7} Nf8 (
+18... b5 19. Nc5 (19. Nxd7 $2 {catches the eye, but} bxa4 20. Qxa4 Rxd7 $19)
+19... Nxc5 20. bxc5 $14) 19. Nc5 $16 bxc5 20. bxc5 Rf6 21. Qxb7 Rxf5 $4 (21...
+Rb8 $142 {would hold out} 22. Nxc6 Rxb7 23. Nxd8 Rb8 24. Nxf7 Kxf7 $16) 22.
+Nxc6 $18 Qe8 (22... Rb8 {does not save the day} 23. Nxd8 Rxb7 24. Nxb7 $18) 23.
+Ne7+ Kh8 24. Nxf5 Rb8 (24... Rd8 {doesn't improve anything} 25. c6 Rb8 26. Qxa6
+$18) 25. Qxd5 Rb2 (25... Qe6 {doesn't change anything anymore} 26. Qxe6 fxe6
+27. Nd6 $18) 26. Nxh6 (26. c6 $142 {and White wins} Rb5 27. Qf3 Bf4 28. Qxf4
+Ne6 $18) 26... gxh6 27. c6 (27. c6 Rb5 28. Qc4 $18) 1-0
+
+[Event "Sapporo Autumn Chess Tornament 2019"]
+[Site "?"]
+[Date "2019.10.14"]
+[Round "4.2"]
+[White "Yoshii, Yukihiko"]
+[Black "Nishimori, Toshiyuki"]
+[Result "1-0"]
+[ECO "A57"]
+[WhiteElo "1851"]
+[BlackElo "1776"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "71"]
+
+{A57: Benko/Volga Gambit} 1. c4 Nf6 2. d4 c5 3. d5 b5 4. b3 g6 $146 (4... b4 5.
+Bb2 g6 6. Qc2 Bg7 7. Nd2 d6 8. Ngf3 O-O 9. e4 e5 10. a4 Nh5 11. O-O-O f5 12.
+Bd3 Nf4 13. Rhg1 fxe4 14. Nxe4 Bf5 15. Rde1 Bh6 16. Kb1 Nd7 17. Nfd2 Nxd3 18.
+Qxd3 Bxd2 19. Qxd2 {Vasquez Ramirez,C (2180)-Celis Sanchez,C (2283) Ibarra
+2003 1/2-1/2 (48)}) (4... e6 5. dxe6 (5. g3 Bb7 6. Bb2 exd5 7. Bg2 bxc4 8. bxc4
+Qb6 9. Qb3 Be7 10. Nh3 Na6 11. O-O Rb8 12. cxd5 Bxd5 13. Bxd5 Nxd5 14. Bxg7 Rg8
+15. Be5 Qxb3 16. axb3 Rb6 17. Rd1 Ndb4 18. Nf4 Rg5 19. Bc3 Bf6 {Rodrigues,E 
+(2208)-Baeta,M (2228) Sindilegis 2009 1-0 (44)}) 5... fxe6 6. Nf3 Be7 7. Nc3
+bxc4 8. bxc4 O-O 9. e3 Nc6 10. Be2 d5 11. cxd5 exd5 12. O-O Rb8 13. Rb1 Rxb1
+14. Nxb1 Qa5 15. a3 Bf5 16. Bb2 Rd8 17. Nbd2 c4 18. Qc1 Kf8 19. Rd1 {
+Istratescu,A (2667)-Shoker,S (2453) Metz 2014 1/2-1/2 (60)}) (4... Bb7 5. Qd3
+e6 6. e4 Nxe4 7. Qxe4 Qf6 8. Ne2 Qxa1 9. Nec3 b4 10. Qc2 bxc3 11. Nxc3 Na6 12.
+a3 Nb4 13. axb4 cxb4 14. Nb5 Qe5+ 15. Be2 a6 16. Bb2 Qb8 17. Nd4 Bc5 18. Qe4
+Be7 19. g4 {Marinkovic,M (2198)-Jelic,G (2203) Belgrade 2008 0-1}) 5. Bb2 Bg7
+6. Qc2 (6. Nf3 $5 $11) 6... bxc4 $17 7. bxc4 d6 8. e4 O-O {White has an active
+position} 9. Nc3 Nbd7 10. Nf3 Nb6 (10... Rb8 11. Bd3 $17) 11. Bd3 {Black has a
+cramped position} Ba6 {Black threatens to win material: Ba6xc4} (11... Nh5 $15)
+12. Nb5 (12. Ne2 e5 13. dxe6 fxe6 $11) 12... Qd7 (12... Nxc4 $142 13. Bxc4 Bxb5
+14. Bxb5 Qa5+ 15. Nd2 Qxb5 $17) 13. a4 $14 Rab8 (13... Bxb5 14. axb5 (14. cxb5
+$143 Qg4 15. O-O c4 16. Bxc4 Rfc8 $15) 14... Nh5 15. Bxg7 Kxg7 16. g3 $14) 14.
+O-O $16 {White has a very active position} Bc8 {Black has a cramped position}
+15. a5 {White threatens to win material: a5xb6} Na8 16. Bc3 {Black has a
+cramped position} a6 {Black threatens to win material: a6xb5} 17. Na3 {Black
+has a cramped position} Nc7 {White has a very active position} 18. Rfb1 {
+White threatens to win material: Rb1xb8} Bb7 (18... Rxb1+ 19. Rxb1 e5 20. Qd1
+$14) 19. Rb2 (19. Rb6 Ba8 $18) 19... e5 $2 (19... Nce8 $142 $5 $16) 20. Rab1
+$18 Na8 21. h3 (21. Rb3 Rfe8 $18) 21... Nh5 22. Qd1 Nf4 (22... Qc8 23. Bc2 $18)
+23. Bc2 Rfe8 $4 {terrible, but the game is lost in any case} (23... f5 $18) 24.
+Ba4 Nxh3+ (24... Qe7 {a fruitless try to alter the course of the game} 25. Bxe8
+Qxe8 26. Rxb7 Rxb7 27. Rxb7 $18) 25. gxh3 Qxh3 26. Bxe8 Rxe8 27. Rxb7 Bh6 (
+27... Qc8 {doesn't get the cat off the tree} 28. Nh2 Nc7 29. Qa4 $18) 28. Bd2
+Qg4+ (28... Bxd2 {doesn't do any good} 29. Nxd2 Qxa3 30. Qf3 Qxf3 31. Nxf3 $18)
+29. Kh1 (29. Kf1 {makes it even easier for White} Bf4 30. Bxf4 Qxf4 $18) 29...
+Qh3+ (29... Bxd2 {does not help much} 30. Nxd2 Qh3+ 31. Kg1 Qxa3 $18) 30. Kg1 {
+Twofold repetition} Qg4+ 31. Kf1 Qh3+ (31... Bxd2 32. Nxd2 Qh3+ 33. Ke1 Qxa3
+34. Qg4 Qxa5 35. Qd7 $18) 32. Ke2 f5 (32... Bxd2 {is the last straw} 33. Qxd2
+Qg4 $18) 33. Bxh6 (33. Qa4 Nc7 34. Qd7 Rf8 35. Rxc7 Qxf3+ 36. Kxf3 fxe4+ 37.
+Kxe4 Rf4+ 38. Bxf4 exf4 39. Qxh7+ Kf8 40. Rb8#) 33... fxe4 34. Rg7+ Kh8 35.
+Rxh7+ $1 {the punch.} Kxh7 36. Ng5+ (36. Ng5+ Kh8 37. Nxh3 Rc8 38. Qg1 Re8 39.
+Qxg6 Rg8 40. Rb8 Rxb8 41. Qg7#) 1-0
+
+[Event "Sapporo Autumn Chess Tornament 2019"]
+[Site "?"]
+[Date "2019.10.14"]
+[Round "4.3"]
+[White "Sugimoto, Koichi"]
+[Black "Kobayashi, Katsuhiko"]
+[Result "1-0"]
+[ECO "C50"]
+[WhiteElo "1987"]
+[BlackElo "1515"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "89"]
+
+{C50: Hungarian Defence and Giuoco Pianissimo} 1. e4 e5 2. Nf3 Nc6 3. d4 d6 4.
+Bc4 Be7 5. d5 Nb8 6. O-O {Black has a cramped position} (6. Bb5+ c6 7. dxc6
+bxc6 8. Bc4 Nf6 9. Nc3 O-O 10. O-O Nbd7 11. Qe2 a5 12. Rd1 Qc7 13. Bg5 Nb6 14.
+Bd3 h6 15. Bh4 Nh5 16. Bxe7 Qxe7 17. Qe3 Rb8 18. Ne2 Na4 19. b3 Nc5 20. Bc4 Kh7
+{Filipowicz,A (2430)-Ciocaltea,V (2470) Halle 1974 0-1 (57)}) (6. Nc3 Nf6 7. h3
+O-O 8. g4 a6 9. a4 a5 10. Be3 Nbd7 11. Qe2 b6 12. Nd2 Nc5 13. b3 Ne8 14. Nf3
+Bd7 15. O-O-O Kh8 16. Rdg1 c6 17. dxc6 Bxc6 18. Bxc5 bxc5 19. h4 Nc7 20. Rd1
+Qc8 {Sveshnikov,V (2434)-Vepkhvishvili,V (2256) Tallinn 2013 1-0 (66)}) 6...
+Bg4 $146 (6... Nf6 7. Bd3 (7. Re1 O-O 8. Nbd2 Nbd7 9. Nf1 Nc5 10. Ng3 a5 11. a4
+h6 12. b3 Nh7 13. Ba3 b6 14. Bb5 Ng5 15. Bxc5 bxc5 16. Nxg5 Bxg5 17. Qf3 Bh4
+18. Nf5 Bxf5 19. Qxf5 Qf6 20. Qxf6 Bxf6 21. g3 g6 {Dykun,O (2168)-Katsman,M 
+(2281) Kiev 2004 1/2-1/2}) 7... Bg4 8. h3 Bh5 9. c4 Nbd7 10. Nc3 g5 11. Bxg5
+Nxd5 12. exd5 Bxg5 13. Bf5 Be7 14. Ne4 Bg6 15. Ng3 O-O 16. Nd2 Bg5 17. Nde4 Bf4
+18. Bxd7 Bxg3 19. fxg3 Bxe4 20. Bf5 Bxf5 21. Rxf5 {Nikitin,A (2290)-Tarasov,M 
+(2355) St Petersburg 1995 1-0 (45)}) 7. h3 Bxf3 (7... Bh5 8. Nc3 $16) 8. Qxf3 (
+8. gxf3 $6 Bg5 $11) 8... Nf6 9. Nc3 Nbd7 10. a4 O-O 11. Be3 Nb6 12. Be2 Re8 $2
+(12... a5 $142 $16) 13. a5 $18 Nbd7 14. b4 (14. a6 $142 {might be the shorter
+path} bxa6 15. Bxa6 $18) 14... c6 $16 15. dxc6 bxc6 16. Na2 (16. Rab1 $142 $16)
+16... d5 $15 17. exd5 Nxd5 18. Bd2 {White has an active position} (18. Rad1
+$142 Qc7 19. Bd2 $15) 18... Bf6 (18... e4 $142 $5 19. Qg3 Bh4 $17) 19. Rad1 $14
+e4 20. Qg3 (20. Qb3 $5 {should be examined more closely} Qe7 21. c4 $14) 20...
+Bh4 {Black threatens to win material: Bh4xg3} 21. Qb3 Qf6 (21... Bxf2+ $142 $5
+{is the best option Black has} 22. Rxf2 e3 23. Bxe3 Rxe3 $11) 22. c4 {White
+threatens to win material: c4xd5} Nc7 (22... Ne7 23. Nc3 Nf5 24. Be3 $14) 23.
+Be3 $16 Ne5 24. Nc3 Qg6 25. Qc2 (25. Nxe4 $142 Qxe4 26. Rd4 Bxf2+ 27. Rxf2 $16
+(27. Kxf2 $143 Qg6 $14)) 25... Nf3+ $2 (25... f5 $142 $5 $11 {and Black could
+well hope to play on}) 26. Bxf3 (26. Kh1 $142 $5 Ne5 27. Nxe4 Nxc4 28. Bxc4 (
+28. Qxc4 $6 Rxe4 29. Qc2 Rxb4 $16) 28... Qxe4 29. Bd3 $18) 26... exf3 $16 27.
+Qxg6 hxg6 (27... fxg6 28. gxf3 Be7 29. Rb1 $16) 28. gxf3 Ne6 29. b5 cxb5 30.
+cxb5 Ng5 (30... f5 31. Nd5 $16) 31. Kg2 (31. Rd7 $142 a6 32. Bxg5 Bxg5 33. b6
+$18) 31... Rac8 $4 {shortens the misery for Black} (31... Ne6 $142 $18) 32. Nd5
+Rc2 (32... Rxe3 {does not help much} 33. Nxe3 (33. fxe3 $6 Rc2+ 34. Kh1 Nxh3
+$18) 33... Ne6 34. Nd5 $18) 33. Rd4 Bxf2 (33... Rc5 {what else?} 34. Rfd1 Rxb5
+35. Rxh4 Ne6 $18) 34. Rxf2 Rxf2+ 35. Bxf2 Re2 (35... Ne6 {doesn't change
+anything anymore} 36. Ra4 g5 37. a6 $18) 36. Nf4 (36. b6 $142 {and White has
+it in the bag} axb6 37. axb6 Ne6 $18) 36... Rb2 37. b6 $1 {an unpleasant
+surprise} axb6 38. axb6 Kh7 (38... Rb3 {does not improve anything} 39. Rd3 Rb2
+40. h4 $18) 39. h4 (39. Nd3 {and White can already relax} Rxb6 40. Rh4+ Kg8 41.
+Bxb6 f6 $18) 39... Ne6 (39... Nxf3 {the last chance for counterplay} 40. Kxf3
+Rxb6 $18) 40. Nxe6 fxe6 41. Re4 Rc2 (41... g5 $18 {there is nothing better in
+the position}) 42. Rb4 Rc8 43. b7 Rb8 44. Bg3 Rxb7 (44... Re8 {is no salvation}
+45. Ra4 Re7 46. b8=Q g5 47. hxg5 e5 48. Rh4+ Kg6 49. Qd6+ Kf7 50. g6+ Kg8 51.
+Qxe7 e4 52. Qf7#) 45. Rxb7 (45. Rxb7 Kg8 46. Bd6 e5 47. Bxe5 Kf8 48. Rxg7 Ke8
+49. Rxg6 Ke7 50. h5 Kf7 51. Rf6+ Kg7 52. h6+ Kg8 53. Rd6 Kf7 54. h7 Ke7 55.
+h8=Q Kf7 56. Bg7 Ke7 57. Qf8#) 1-0
+
+[Event "Sapporo Autumn Chess Tornament 2019"]
+[Site "?"]
+[Date "2019.10.14"]
+[Round "4.4"]
+[White "Kojima, Natsumi"]
+[Black "Sato, Yasuji"]
+[Result "1-0"]
+[ECO "C50"]
+[WhiteElo "1772"]
+[BlackElo "1453"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "83"]
+
+{C50: Hungarian Defence and Giuoco Pianissimo} 1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6
+4. d3 h6 5. O-O Bc5 $146 (5... g6 6. d4 exd4 7. Re1 (7. Nxd4 Bg7 (7... Bc5 8.
+Nxc6 dxc6 9. Qxd8+ Kxd8 10. Be3 Bxe3 11. fxe3 Ke7 12. Bxf7 Kxf7 13. e5 Re8 14.
+Rxf6+ Kg7 15. Rf3 Rxe5 16. Nc3 b5 17. Raf1 Be6 18. Nd1 Rd8 19. Nf2 Rc5 20. c3
+Rcd5 21. Ne4 Re5 22. Ng3 {Lazic,M (2380)-Djuric,S (2435) Novi Sad 1986 0-1 (42)
+}) 8. Nxc6 bxc6 9. Nc3 O-O 10. Bf4 d6 11. Qd2 g5 12. Bg3 Nh5 13. Rad1 {1/2-1/2
+(13) Spasov,V (2605)-Nikolaidis,I (2490) Poros 1998}) (7. e5 d5 8. Bb5 Ne4 9.
+Nxd4 Bd7 10. Bxc6 bxc6 11. f3 Ng5 12. f4 Ne6 13. Be3 c5 14. Nxe6 Bxe6 15. c3
+Qd7 16. Nd2 h5 17. Nb3 c4 18. Nc5 Bxc5 19. Bxc5 a5 20. Qd4 Rg8 21. Rae1 Qb5 {
+Kosanovic,G (2330)-Modzelan,A (2205) Gorzow Wielkopolski 1987 0-1 (40)}) 7...
+Bg7 8. e5 Nh7 (8... Ng8 9. c3 Nge7 10. cxd4 d5 11. exd6 cxd6 12. d5 Ne5 13.
+Nxe5 dxe5 14. f4 e4 15. Nc3 O-O 16. Rxe4 Nf5 17. Bb3 b5 18. Bd2 {1/2-1/2 (18)
+Vorobiov,E (2542)-Skatchkov,P (2485) Krasnodar 2002}) 9. Bf4 Ng5 10. c3 Nxf3+
+11. Qxf3 O-O 12. Qe4 Kh7 13. cxd4 d6 {1/2-1/2 (13) Tischbierek,R (2450)-Vogt,L
+(2485) Eilenburg 1984}) 6. Nbd2 Na5 (6... O-O $142 $11 {and Black is still in
+the game}) 7. Nxe5 $16 O-O $2 (7... Nxc4 8. Nexc4 d5 9. exd5 $16) 8. c3 $4 {
+throwing away the advantage} (8. Nxf7 {and White can already relax} Rxf7 9.
+Bxf7+ Kxf7 $18) 8... d6 $4 {further deteriorates the position} (8... Nxc4 9.
+Ndxc4 c6 10. Re1 $16) 9. Nef3 $4 {a transit from better to worse} (9. Nxf7 $142
+{and White has triumphed} Rxf7 10. Bxf7+ Kxf7 11. b4 $18) 9... Nxc4 $16 10.
+Nxc4 ({Worse is} 10. dxc4 a5 $11) 10... b5 11. Ne3 Re8 12. b4 Bb6 13. a4 bxa4
+14. Rxa4 Bd7 15. Ra1 c6 16. Nc4 Bc7 17. Be3 {White threatens to win material:
+Be3xa7} Qb8 18. Qc2 (18. Bd4 d5 19. exd5 Nxd5 $16) 18... Ng4 (18... d5 $142 $5
+{is noteworthy} 19. Ncd2 Ng4 $11) 19. Bf4 $16 g5 (19... d5 $5 20. Bxc7 Qxc7 $16
+) 20. Bg3 $18 Nf6 21. Nd4 Nh5 (21... d5 $142 22. Nd2 a5 23. bxa5 Bxg3 24. fxg3
+Ng4 $18) 22. Qd1 Nxg3 (22... Ng7 23. Qf3 $18) 23. fxg3 (23. hxg3 $6 d5 24. Ne3
+dxe4 $16) 23... d5 (23... Re7 {is still a small chance} 24. Qh5 Qf8 $18) 24.
+Qh5 Re7 25. Ne3 (25. exd5 $142 {makes it even easier for White} cxd5 26. Ne3
+Bb6 27. Nxd5 Qd6 28. Nxe7+ Qxe7 29. Qxh6 Qe5 $18) 25... Qf8 26. Nef5 (26. Rf6
+$5 {makes it even easier for White} Bb6 27. Rxh6 Qg7 $18) 26... Bxf5 27. Nxf5 (
+27. exf5 $6 Bb6 $16) (27. Rxf5 $6 dxe4 28. h4 Bb6 29. dxe4 Qg7 $16) 27... Bb6+
+(27... Re6 28. e5 $1 $18 {Deflection: h6}) 28. Kh1 (28. d4 $142 $5 {seems even
+better} Re6 29. exd5 cxd5 $18) 28... Re6 29. exd5 cxd5 30. Qf3 Rae8 $2 (30...
+Rd8 31. d4 $18) 31. Rad1 (31. Qxd5 $5 {keeps an even firmer grip} Rc8 32. Qb3
+Qd8 $18) 31... Re5 (31... Rc8 32. Rde1 Rxe1 33. Rxe1 $18) 32. g4 (32. c4 {
+and White can already relax} Kh7 $18) 32... Kh7 $2 (32... a5 33. b5 $18) 33.
+Ng3 (33. d4 {might be the shorter path} Re4 34. Ng3 Kg8 $18) 33... R8e6 $6 {
+not the greatest defence} (33... Kg8 34. d4 Re3 35. Qxd5 Rxc3 36. Ne4 Rxe4 37.
+Qxe4 $18) 34. d4 Re3 35. Qxd5 Qe8 36. Qf5+ Kg8 37. Nh5 Qe7 (37... Bd8 {doesn't
+change the outcome of the game} 38. d5 R6e4 39. Qc8 $18) 38. Nf6+ (38. d5 $142
+{seems even better} Rg6 39. d6 $18) 38... Kf8 (38... Rxf6 {there is nothing
+else anyway} 39. Qxf6 Qxf6 40. Rxf6 Rxc3 $18) 39. Nd5 Qb7 40. Nxe3 (40. Qh7 Ke8
+41. Qg8+ Kd7 42. Rxf7+ Kc6 43. Nxe3 Qxf7 44. Qxf7 Rxe3 45. b5+ Kd6 46. c4 Bxd4
+47. Rxd4+ Kc5 48. Qxa7+ Kb4 49. c5+ Kc3 50. Qa1+ Kc2 51. Qa2+ Kc1 52. Qd2+ Kb1
+53. Rb4+ Rb3 54. Rxb3+ Ka1 55. Qa5#) 40... Rxe3 41. Rde1 (41. Qh7 Qd5 42. Rde1
+Rxe1 43. Rxe1 Qe6 44. Rxe6 fxe6 45. Qxh6+ Ke8 46. Qxg5 Kd7 47. Qg7+ Kd6 48. g5
+Kd5 49. Qe5+ Kc4 50. g6 a5 51. Qxe6+ Kd3 52. g7 Ba7 53. g8=Q Bxd4 54. Qc4+ Kd2
+55. Qxd4+ Kc2 56. Qa2+ Kc1 57. Qdd2#) 41... Qe7 (41... Rxe1 {praying for a
+miracle} 42. Rxe1 Qc6 $18) 42. Rxe3 (42. Rxe3 a5 43. Rxe7 Kxe7 44. Qxf7+ Kd8
+45. Qd5+ Kc8 46. Rf7 Bc7 47. Qa8+ Bb8 48. Qb7+ Kd8 49. Qxb8#) 1-0
+
+[Event "Sapporo Autumn Chess Tornament 2019"]
+[Site "?"]
+[Date "2019.10.14"]
+[Round "4.5"]
+[White "Kikuchi, Akira"]
+[Black "Takeuchi, Hiroshi"]
+[Result "1-0"]
+[ECO "B07"]
+[WhiteElo "1718"]
+[BlackElo "1350"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "53"]
+
+{B07: Pirc Defence: Miscellaneous Systems} 1. e4 d6 2. d4 Nf6 3. Nc3 g6 4. Be3
+Bg7 5. f3 O-O 6. Qd2 c6 7. O-O-O b5 8. Bd3 $146 (8. Bh6 b4 9. Nce2 Qa5 10. Kb1
+Nbd7 11. Bxg7 Kxg7 12. c3 Rb8 13. cxb4 Qxb4 14. Qxb4 Rxb4 15. Nc3 c5 16. dxc5
+Nxc5 17. Nge2 Bd7 18. Nc1 Rfb8 19. Rd2 Be6 20. Nd3 Nxd3 21. Bxd3 a5 22. Rc1 Nd7
+{Ballester Sanz,J (2250)-Shamkovich,L (2425) Palma de Mallorca 1989 0-1}) (8.
+g4 Qa5 9. Kb1 Be6 (9... Re8 10. h4 h5 11. e5 dxe5 12. dxe5 b4 13. Nce2 Be6 14.
+Nc1 Qxe5 15. Bd4 Qd5 16. Bg2 Nbd7 17. f4 Ne4 18. Qd3 Qxd4 19. Qxd4 Bxd4 20.
+Bxe4 Bxg1 21. Rhxg1 Bxg4 22. Rxg4 Nf6 23. Bxc6 Nxg4 24. Bxa8 {Ranieri,F (2166)
+-Sarno,S (2358) Saint Vincent 1999 0-1 (40)}) 10. b3 b4 11. Na4 c5 12. g5 Nh5
+13. dxc5 Nc6 14. Bh3 Rad8 15. Bxe6 fxe6 16. Qc1 dxc5 17. Rxd8 Qxd8 18. Nxc5 Qd6
+19. Nd3 Ne5 20. Bc5 Qc7 21. Ne2 a5 22. Bd4 Rxf3 {Yudasin,L (2645)-Anand,V 
+(2635) Munich 1991 0-1 (41)}) (8. Kb1 Qc7 9. g4 e5 10. h4 h5 11. Bh6 Qe7 12.
+gxh5 Nxh5 13. Bg5 Qc7 14. d5 b4 15. Nce2 f6 16. Bh6 f5 17. Bxg7 Kxg7 18. Nh3
+fxe4 19. fxe4 cxd5 20. exd5 Na6 21. Ng5 Nc5 22. Bh3 Bxh3 {Ernst,T (2440)
+-Gurevich,D (2470) New York 1990 1/2-1/2 (78)}) (8. e5 b4 9. exf6 bxc3 10. Qxc3
+Bxf6 $11) 8... b4 9. Nb1 (9. Nce2 Qa5 $11) 9... a5 (9... Qa5 10. Ne2 $15) 10.
+Ne2 Qc7 11. Bh6 Nbd7 (11... c5 12. Bxg7 Kxg7 13. Bb5 $17) 12. Bxg7 $15 Kxg7 13.
+g4 c5 14. dxc5 (14. Bb5 $142 $5 $15 {should be considered}) 14... Nxc5 $17 15.
+Nd4 e5 (15... Be6 16. b3 Rfc8 $17) 16. Nb3 $2 (16. Nb5 $5 Qb6 17. Bc4 $17)
+16... Nxb3+ (16... Nxd3+ 17. Qxd3 Rd8 18. a4 $19) 17. axb3 Be6 18. Bc4 Bxc4 19.
+bxc4 Qxc4 (19... Rfd8 $142 $19) 20. h4 $2 (20. Qxd6 $142 Rac8 21. Rd2 $17)
+20... Rfc8 $19 21. h5 (21. Qd3 Qc5 22. Nd2 a4 $19) 21... a4 {[%cal Yb4b3]
+Black intends b3} 22. hxg6 (22. Qd3 Qc5 23. Nd2 a3 $19) 22... fxg6 (22... a3
+23. Nxa3 bxa3 24. b3 Qxb3 25. Qh6+ Kg8 26. gxh7+ Nxh7 27. Qxh7+ Kf8 28. Qh8+
+Ke7 29. Qh4+ Ke8 30. Qh8+ Kd7 31. Rxd6+ Kxd6 32. Qh6+ Qe6 33. Rd1+ Kc5 34. Qe3+
+Kb4 35. Kb1 Rxc2 36. Qe1+ Ka4 37. Kxc2 Qb3+ 38. Kd2 Qxf3 39. Qe2 Rd8+ 40. Ke1
+Qxe2+ 41. Kxe2 Rxd1 42. Kxd1 $19) 23. Qh6+ $4 {White crumbles in face of a
+dire situation} (23. Qd3 Qc5 24. Nd2 $19) 23... Kf7 (23... Kg8 $142 {might be
+the shorter path} 24. Kd2 a3 25. bxa3 bxa3 $19) 24. Rd2 (24. Kd2 {is no
+salvation} Qxc2+ 25. Ke3 $19) 24... b3 {Black threatens to win material: b3xc2}
+(24... a3 25. b3 Qxb3 $19) 25. Na3 $11 bxc2 $4 {simply marches past the door
+to victory} (25... Qc5 $142 {was a good chance to save the game} 26. g5 Nh5 $11
+) 26. Nxc4 $18 Rxc4 27. Rxc2 (27. Rxc2 Rxc2+ 28. Kxc2 $18) 1-0
+
+[Event "Sapporo Autumn Chess Tornament 2019"]
+[Site "?"]
+[Date "2019.10.14"]
+[Round "4.6"]
+[White "Watanabe, Katsumi"]
+[Black "Nakamura, Mitsuru"]
+[Result "0-1"]
+[ECO "E97"]
+[WhiteElo "1723"]
+[BlackElo "1314"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "90"]
+
+{E97: King's Indian: Classical Main Line (6...e5 7 0-0 Nc6): 8 Be3 and 8 d5
+Ne7, not 9 Ne1} 1. c4 Nf6 2. Nc3 g6 3. Nf3 Bg7 4. e4 d6 5. Be2 O-O 6. O-O Nc6
+7. d4 e5 8. d5 Ne7 9. Bg5 h6 10. Bh4 (10. Bxf6 Bxf6 11. b4 Kh7 12. c5 Ng8 13.
+a4 dxc5 14. bxc5 Be7 15. Nxe5 Bxc5 16. Nc4 c6 17. Bf3 cxd5 18. exd5 Nf6 19. Qb3
+Rb8 20. Rad1 Re8 21. h3 Bd7 22. d6 Re6 23. Nb5 Bxb5 24. axb5 Qd7 {Eingorn,V 
+(2570)-Uhlmann,W (2515) Debrecen 1989 1/2-1/2 (44)}) 10... g5 $146 {Black
+threatens to win material: g5xh4} (10... Nh5 11. Ne1 Nf4 12. Nd3 (12. f3 f5 13.
+Nd3 g5 14. Bf2 Nxd3 15. Qxd3 f4 16. b4 Rf7 17. Rac1 Ng6 18. c5 Bf8 19. Rfd1 h5
+20. cxd6 cxd6 21. a4 Bd7 22. Qc2 g4 23. Bb5 Bc8 24. Be2 Qg5 25. Qd2 Nh4 26. Kh1
+Nxg2 {Nielsen,T (2165)-Nielsen,N (2189) Copenhagen 2001 0-1 (32)}) 12... g5 13.
+Bg3 f5 14. f3 Neg6 15. Rc1 Nxe2+ 16. Qxe2 f4 17. Be1 c5 18. g4 fxg3 {1/2-1/2 
+(18) Cvetkovic,S (2425)-Vucicevic,M (2380) Niksic 1996}) 11. Bg3 Nh7 12. h3 {
+Consolidates g4} f5 {The typical lever} 13. Nd2 {Black has a cramped position}
+f4 {Black threatens to win material: f4xg3} 14. Bh2 Nf6 15. f3 {Covers g4} (15.
+Qb3 c5 $14) 15... Ng6 16. Kh1 Nh5 17. Nb3 Nf6 (17... Bd7 18. Qe1 $11) 18. c5
+$14 {The thematic attack} a6 {Secures b5} 19. Qc2 h5 20. Rad1 (20. Qd1 Qd7 $14)
+20... h4 {This push gains space} (20... g4 $5 {has some apparent merit} 21. c6
+b6 22. hxg4 hxg4 23. fxg4 Nxg4 24. Bxg4 Bxg4 $17) 21. cxd6 (21. Rfe1 $5 $14 {
+deserves consideration}) 21... cxd6 $11 22. Nd2 (22. Rfe1 $142 $5 $11 {might
+be a viable alternative}) 22... Nh5 $17 23. Qb3 Ng3+ 24. Bxg3 (24. Kg1 $5 $17)
+24... fxg3 25. Nc4 b5 (25... Nf4 26. Nb6 Bxh3 27. gxh3 g2+ 28. Kg1 gxf1=Q+ 29.
+Bxf1 $19 (29. Kxf1 g4 30. hxg4 h3 $19)) 26. Ne3 Nf4 27. a4 $2 (27. Rfe1 $5 $17)
+27... Qb6 (27... Bxh3 $142 28. gxh3 Qb6 $19) 28. Ng4 $4 {simply worsens the
+situation} (28. Nf5 $142 Rxf5 29. exf5 Bxf5 30. Ra1 Bxh3 31. gxh3 g2+ 32. Kh2
+gxf1=Q 33. Rxf1 $19) 28... Bxg4 29. fxg4 (29. Rd2 {is not the saving move} Bxh3
+$1 {Mate threat} 30. Bd1 $19) 29... b4 (29... Nxh3 30. Rxf8+ Rxf8 31. Rd4 Nf2+
+32. Kg1 Qxd4 33. Qd1 Nxd1+ 34. Kh1 Qf2 35. Nxd1 Qe1+ 36. Bf1 Qxf1#) 30. Bf3 $17
+Qc5 (30... Rac8 31. Ne2 $17) 31. Na2 (31. Ne2 $142 $5 $15 {is worth looking at}
+) 31... a5 $17 32. Rc1 Qb6 (32... Qd4 $5 33. Rc4 Qd3 34. Qxd3 Nxd3 $19) 33. Rc6
+{Menacing} Qd8 (33... Qd4 34. Nc1 $17) 34. Qe3 (34. Nc1 $5 $11) 34... Rc8 $17
+35. Rfc1 Rb8 (35... Rxc6 36. dxc6 Qc7 37. Rc2 $17) 36. b3 (36. Rf1 Qd7 $15)
+36... Qd7 (36... Rb7 37. Rf1 $15) 37. Rc7 $11 {White threatens to win material:
+Rc7xd7} Qd8 38. Qa7 (38. R7c6 Rf7 $15) 38... Qf6 $15 39. R1c6 $4 (39. Kg1 $5
+$15 {is worthy of consideration}) 39... Rbd8 $4 {Black has let it slip away} (
+39... Nxh3 $142 {seems even better} 40. Rc2 Nf4 $19) 40. Qxa5 $4 {solves
+nothing} (40. Nc1 $142 $17) 40... Nxh3 $1 $19 {Clearance: f4} 41. Qxb4 (41.
+gxh3 Qxf3+ {Mate attack Clearance}) 41... Nf2+ 42. Kg1 h3 43. Qb7 h2+ 44. Kf1
+h1=Q+ 45. Ke2 Qd1+ (45... Qd1+ 46. Ke3 Qf4#) 0-1
+
+[Event "Sapporo Autumn Chess Tornament 2019"]
+[Site "?"]
+[Date "2019.10.14"]
+[Round "5.1"]
+[White "Sugimoto, Koichi"]
+[Black "Kojima, Shinya"]
+[Result "0-1"]
+[ECO "D12"]
+[WhiteElo "1987"]
+[BlackElo "2497"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "96"]
+
+{D12: Slav Defence: 3 Nf3 Nf6 4 e3 Bf5} 1. d4 d5 2. c4 c6 3. Nf3 Nf6 4. e3 Bf5
+5. cxd5 cxd5 6. Qb3 Qc7 7. Bd2 a6 8. Nc3 e6 9. Rc1 Nc6 10. Be2 (10. Ne5 Bd6 11.
+f4 (11. Be2 O-O 12. O-O Bxe5 13. dxe5 Ne4 14. Nxe4 Bxe4 15. f3 Bg6 16. Bb4 Rfc8
+17. Bd6 Qd7 18. Qb6 Ne7 19. Rc7 Rxc7 20. Qxc7 Qxc7 21. Bxc7 Rc8 22. Rc1 Bb1 23.
+a3 Ba2 24. Rc5 Bc4 25. Bd1 Ng6 {Ma,Z (2369)-Ma,Q (2481) Beijing 2012 1/2-1/2 
+(46)}) 11... O-O 12. Be2 Qe7 13. O-O Bxe5 14. dxe5 Ne4 15. Nxe4 Bxe4 16. Bd3
+Rfd8 17. Rc2 Bxd3 18. Qxd3 Rac8 19. Rfc1 Qd7 20. a4 h6 21. b3 Ne7 22. Bb4 Rxc2
+23. Rxc2 Rc8 24. Bc5 Rc7 {Milov,V (2626)-Hector,J (2509) Istanbul 2000 1/2-1/2
+(34)}) 10... Bd6 11. h3 $146 {Consolidates g4} (11. O-O O-O 12. h3 h6 13. Na4
+b5 14. Nc5 Ne4 15. Nxe4 Bxe4 16. Ne5 Bxe5 17. dxe5 Qb6 18. Bb4 Rfc8 19. Bc5 Qd8
+20. f3 Bf5 21. Bd4 Qa5 22. Rc3 Nxd4 23. exd4 Qb6 24. Rd1 b4 25. Kf1 a5 {
+Hebden,M (2515)-Rustemov,A (2604) Dos Hermanas 2003 0-1 (55)}) 11... O-O {
+Black has an active position} 12. Nh4 Be4 13. O-O h6 14. Nxe4 Nxe4 15. Nf3 Rac8
+16. Bc3 Qe7 17. a3 {Controls b4} Rc7 18. Rc2 Rfc8 19. Rfc1 g5 20. Be1 Kg7 21.
+Nd2 Nf6 22. Nf3 Nd7 (22... Ne4 23. Qd3 $11) 23. Qd3 {Black king safety dropped}
+f5 {Black king safety improved} 24. Nd2 Nf6 {[%cal Yg5g4] Black plans g4} 25.
+Nf1 (25. Nb3 Ne4 $14) 25... h5 {[%cal Yg5g4] Black prepares g4} 26. Qd1 g4 {
+Black gains space} 27. h4 f4 28. g3 (28. Bd3 Ne8 $11) 28... fxg3 29. fxg3 (29.
+Nxg3 Kg8 $11) 29... e5 $15 30. dxe5 {White forks: d6+f6} Bxe5 {White has a
+cramped position} 31. Bd3 Qd6 {Black has a very active position} 32. Bf5 {
+White threatens to win material: Bf5xc8} Rf8 (32... Nd7 $11) 33. Qd3 $4 {
+letting the wind out of his own sails} (33. Bb4 $142 $5 Qd8 34. Bxf8+ Qxf8 35.
+Rf2 $16) 33... Re7 (33... Ne8 34. e4 Rcf7 35. Bc3 $17) 34. b4 (34. Rxc6 $142 {
+and White has air to breath} bxc6 35. Bb4 $14) 34... Ng8 $17 35. Bh7 (35. Bf2
+$5 $17) 35... Ref7 36. Rf2 Nge7 (36... Rxf2 $142 37. Bxf2 Qf6 $17) 37. Rcc2 $4
+{an oversight. But White was lost anyway.} (37. Rxf7+ $142 Rxf7 38. Qb1 $17)
+37... d4 {Black has an active position} (37... Qh6 $142 $19 {it becomes clear
+that Black will call all the shots}) 38. Be4 dxe3 (38... Rxf2 $5 {should be
+investigated more closely} 39. Rxf2 Rd8 $11) 39. Rxf7+ $14 Rxf7 40. Qxd6 ({
+Instead of} 40. Qxe3 Bd4 41. Bc3 Nf5 42. Bxf5 Rxf5 $11) 40... Bxd6 41. Nxe3 Nd4
+{Black threatens to win material: Nd4xc2} 42. Rd2 {White threatens to win
+material: Rd2xd4} (42. Nc4 Nxc2 43. Bc3+ Kg8 44. Nxd6 Rf3 45. Bxf3 gxf3 $14)
+42... Be5 (42... Nf3+ $142 $5 {looks like a viable alternative} 43. Bxf3 Rxf3
+44. Rxd6 Rxe3 $11) 43. Nc4 $16 (43. Bxb7 $6 Nf3+ 44. Bxf3 Rxf3 $11) 43... Bf6
+44. Bxb7 (44. Nd6 $142 $5 Rf8 45. Bf2 $16) 44... Nef5 $11 45. Bg2 Rc7 46. Nb2 (
+46. Bd5 Ne7 47. Ne3 Rc3 $11) 46... Rc1 $15 {Black threatens to win material:
+Rc1xe1} 47. Rd1 $4 (47. Nd1 $142 $15 {was necessary}) 47... Rc2 $19 48. Nd3
+Rxg2+ $1 {the end, the rest is history} (48... Rxg2+ 49. Kxg2 Ne3+ 50. Kh1 Nxd1
+$19) 0-1
+
+[Event "Sapporo Autumn Chess Tornament 2019"]
+[Site "?"]
+[Date "2019.10.14"]
+[Round "5.2"]
+[White "Drakakis, Athanasios"]
+[Black "Yoshii, Yukihiko"]
+[Result "1-0"]
+[ECO "D02"]
+[WhiteElo "1876"]
+[BlackElo "1851"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "119"]
+
+{D02: 1 d4 d5 2 Nf3 sidelines, including 2...Nf6 3 g3 and 2...Nf6 3 Bf4} 1. d4
+d5 2. Nf3 Nc6 3. Bf4 Nf6 4. e3 e6 5. c3 a6 $146 {Secures b5} (5... Bd6 6. Nbd2
+(6. Bd3 Qe7 (6... O-O 7. Nbd2 Bd7 8. O-O Qe7 9. Ne5 h6 10. h3 Rfe8 11. b4 a6
+12. a4 Red8 13. Qc2 Rdc8 14. Ndf3 Be8 15. b5 axb5 16. axb5 Na5 17. Rfb1 Nd7 18.
+Nxd7 Qxd7 19. Bh7+ Kh8 20. Bd3 Kg8 21. Ra2 {Domogaev,S (2365)-Tishin,P (2400)
+Tula 2010 1-0 (63)}) 7. Ne5 Bxe5 8. dxe5 Nd7 9. Bb5 O-O 10. Bxc6 bxc6 11. O-O
+Ba6 12. Re1 f6 13. exf6 Qxf6 14. Bg3 Nc5 15. Qd4 Nd3 16. Qxf6 Rxf6 17. Re2 Raf8
+18. Rd2 Nc1 19. f3 Ne2+ 20. Kf2 Nxg3 {Schulz,K (2385)-Gohla,U (2181) Germany
+2010 1/2-1/2 (54)}) 6... Qe7 (6... Nd7 7. Bxd6 cxd6 8. e4 dxe4 9. Nxe4 Nf6 10.
+Bd3 O-O 11. O-O e5 12. dxe5 dxe5 13. Qc2 g6 14. Rfe1 Bg4 15. Nxf6+ Qxf6 16. Be4
+Rfe8 17. Re3 Qd6 18. Rae1 Bxf3 19. Bxf3 Rad8 20. Bxc6 bxc6 21. f4 {Bogdanovski,
+V (2459)-Sipila,V (2463) Warsaw 2013 1/2-1/2 (40)}) 7. Ne5 Bxe5 8. dxe5 Nd7 9.
+Qg4 f5 10. Qg3 Nc5 11. Be2 b6 12. b4 Nd7 13. O-O O-O 14. Nf3 Nd8 15. Bg5 Qf7
+16. Nd4 a6 17. f4 c5 18. Nf3 Nc6 19. Rab1 cxb4 20. cxb4 {Sadewasser,A (2216)
+-Mueller,E (2206) Germany 2008 1/2-1/2 (32)}) 6. Nbd2 Be7 7. Bd3 h6 {Prevents
+intrusion on g5} 8. O-O O-O 9. h3 {Covers g4} Bd7 10. Kh1 Rc8 11. Rg1 Kh8 12.
+g4 Nh7 (12... Ra8 13. a4 $14) 13. Qc2 (13. h4 $5 $16) 13... Ng5 $11 14. Bxg5
+Bxg5 {Black has the pair of bishops} (14... hxg5 15. Kg2 $11) 15. Kg2 Qe7 (
+15... Be7 16. a4 $11) 16. Ne5 (16. Rh1 f5 17. h4 Bxe3 18. fxe3 fxg4 $14) 16...
+Bf6 (16... Nxe5 17. dxe5 c5 18. f4 $11) 17. Nxc6 Bxc6 18. f4 g6 {Controls f5}
+19. Nf3 Bg7 20. Qf2 f5 (20... Bb5 21. Bxb5 axb5 22. a3 $11) 21. g5 {White wins
+space} h5 22. Nh4 Be8 23. b4 b5 (23... Ra8 $5 $11 {should not be overlooked})
+24. a4 $14 c6 25. axb5 cxb5 26. Qb2 (26. Rxa6 Rxc3 27. Qd2 Rb3 $16 (27... Qxb4
+$4 {taking the pawn will bring Black grief} 28. Rb1 Qa3 29. Rxa3 Rxa3 30. Bxb5
+$18)) 26... Qb7 27. Kh2 Kh7 28. Ra3 Ra8 29. Rga1 Bd7 30. Nf3 Rfc8 31. Nd2 Rc6
+32. Nb3 Qc7 $2 (32... Rb6 $142 $5 $14 {would keep Black alive}) 33. Nc5 $18 Bc8
+$2 (33... Rb6 $142 34. Nxa6 Qd6 $18) 34. Bxb5 $1 {Deflection: a6} Rb6 (34...
+axb5 35. Ra5 {Decoy Double attack} (35. Rxa8 {Deflection Pinning})) 35. Bf1 (
+35. Bxa6 {keeps an even firmer grip} Bxa6 36. Nxa6 Qc4 $18) 35... e5 (35... Qc6
+36. b5 $1 $18 {Deflection: a6}) 36. Qf2 (36. fxe5 Bxe5+ 37. dxe5 Qxc5 38. bxc5
+Rxb2+ 39. Kg3 Kg7 40. Bxa6 f4+ 41. exf4 Rxa6 42. Rxa6 Bxa6 43. Rxa6 Rb3 $18)
+36... exd4 37. exd4 Bf8 38. Ra5 (38. Bxa6 $6 Bxc5 39. Bxc8 Rxa3 40. Rxa3 Bd6
+$11) (38. Nxa6 $6 Bxa6 39. Bxa6 Bd6 $14) 38... Bd6 39. Nd3 (39. Kg3 $18) 39...
+Qxc3 $2 (39... Rc6 $142 40. R1a3 Bb7 $16) 40. R5a3 $4 {instead of simply
+winning the game} (40. Rc1 $142 {and White has prevailed} Qb3 41. Qe1 $18)
+40... Qc7 $11 41. Rc1 {White threatens to win material: Rc1xc7} Qb7 42. Rac3
+Bd7 43. Nc5 Bxc5 (43... Qa7 44. Ra1 $11) 44. dxc5 Re6 (44... Rxb4 $2 {is a
+blank shot} 45. c6 Qa7 46. Qxa7 Rxa7 47. cxd7 Rxd7 48. Rc7 Rxc7 49. Rxc7+ Kh8
+50. Ra7 $18) 45. Re3 Rae8 (45... Qxb4 46. Rxe6 Bxe6 47. c6 $11) 46. Rxe6 Rxe6
+47. Re1 (47. Qd2 Bb5 $11) 47... Qxb4 $11 48. Rxe6 Bxe6 49. Bxa6 Bd7 50. Qe3 Qe4
+$2 (50... Kg8 $142 $5 $11 {is a viable option}) 51. Qxe4 $16 fxe4 (51... dxe4
+52. Bb7 Be6 53. c6 $18) 52. Bb7 Be6 $2 (52... e3 $5 53. Kg3 d4 $18) 53. Kg3 $18
+Kg7 $4 {leading to a quick end} (53... e3 54. c6 d4 $18) 54. c6 d4 55. c7 e3 (
+55... d3 {is one last hope} 56. Kf2 Bxh3 $18) 56. c8=Q Bxc8 57. Bxc8 d3 58. Kf3
+e2 59. Kf2 Kf7 60. Ba6 1-0
+
+[Event "Sapporo Autumn Chess Tornament 2019"]
+[Site "?"]
+[Date "2019.10.14"]
+[Round "5.3"]
+[White "Nishimori, Toshiyuki"]
+[Black "Kojima, Natsumi"]
+[Result "1-0"]
+[ECO "C95"]
+[WhiteElo "1776"]
+[BlackElo "1772"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "89"]
+
+{C95: Closed Ruy Lopez: Breyer Variation with 10 d4} 1. e4 e5 2. Nf3 Nc6 3. Bb5
+a6 4. Ba4 Nf6 5. O-O Be7 6. Re1 b5 7. Bb3 d6 8. c3 O-O 9. h3 Nb8 10. d4 Nbd7
+11. Nbd2 Bb7 12. Bc2 Re8 13. Nf1 Bf8 14. Ng3 g6 15. a4 c5 16. dxe5 (16. d5)
+16... dxe5 17. axb5 $146 (17. Nh2 h5 18. Qf3 c4 19. Rd1 Qc7 20. Nhf1 Bg7 21.
+Ne3 h4 22. Ngf5 gxf5 23. Nxf5 Re6 24. axb5 axb5 25. Rxa8+ Bxa8 26. Bg5 Nf8 27.
+Bxh4 Bc6 28. Bg5 Ng6 29. Bxf6 Bxf6 30. Qg4 Kf8 31. Qh5 Ne7 {Fedorov,V (2430)
+-Notkin,M (2520) Moscow 1996 1/2-1/2 (48)}) (17. b3 Qc7 18. Qe2 Bc6 (18... b4
+19. Bb2 bxc3 20. Bxc3 Nb8 21. Bd3 Nc6 22. Rac1 Qb6 23. Bc4 Bh6 24. Bd2 Bf4 25.
+Ng5 Nd4 26. Qd3 Re7 27. Bxf4 exf4 28. e5 fxg3 29. exf6 gxf2+ 30. Kxf2 Qxf6+ 31.
+Nf3 Bxf3 32. gxf3 Qh4+ 33. Kf1 {Houtman,J (2212)-Jens,J (2382) Netherlands
+2011 0-1 (34)}) 19. axb5 axb5 20. Be3 Qb7 21. Bd3 Ra6 22. Nd2 h5 23. Ngf1 Rea8
+24. Rab1 Ra2 25. f3 Be7 26. Qf2 Nh7 27. Bh6 Ndf8 28. c4 b4 29. Ne3 Ne6 30. Nd5
+Nd4 31. Be3 Bg5 {Makoli,P (2242)-Dastan,B (2416) Skopje 2014 0-1 (41)}) (17.
+Qe2 c4 18. Be3 Nc5 19. Nd2 Qc7 20. Rec1 Bg7 21. f3 Nfd7 22. a5 Nf8 23. b3 cxb3
+24. Nxb3 Nfe6 25. Nxc5 Nxc5 26. c4 bxc4 27. Qxc4 Ne6 28. Qxc7 Nxc7 29. Ba4 Nb5
+30. Rab1 Bf8 31. Ne2 Rec8 {Myint,H (2222)-Zaw,O (2274) Yangon 2012 1-0 (54)})
+17... axb5 18. Rxa8 Qxa8 19. Qe2 c4 {Black gains space} 20. b4 cxb3 21. Bxb3
+Nc5 {[%cal Rb7e4,Rc5e4,Rf6e4,Ge2e4,Gg3e4] Will e4 fall?} 22. Bc2 Ba6 23. Qe3
+Nfd7 24. Nd2 (24. Ba3 Qc6 $11) 24... Ne6 (24... Bb7 25. h4 $15) 25. Nb3 (25.
+Nf3 Bb7 $15) 25... Rc8 26. Qd2 (26. Bd2 $142 $5 $15 {might be a viable
+alternative}) 26... Nb6 27. Bd3 Nc4 {Black threatens to win material: Nc4xd2} (
+27... Na4 28. Bf1 $19) 28. Qe2 (28. Qa2 $17) 28... Nc5 (28... Bb7 $142 $5 $17)
+29. Bxc4 bxc4 30. Nxc5 Bxc5 {Black has the pair of bishops} 31. Be3 Qc6 32.
+Bxc5 Qxc5 33. Rd1 Qe7 34. Qg4 Rd8 35. Rxd8+ Qxd8 36. Qf3 Qd3 (36... Bc8 37. Qe3
+Be6 38. f3 $11) 37. Qxd3 (37. Qf6 $142 $5 Qb1+ 38. Kh2 $16) 37... cxd3 $11 {
+A minor pieces endgame occured} 38. Nf1 Kf8 39. f3 Ke7 40. Kf2 Kd6 (40... f5
+41. exf5 gxf5 42. Nd2 $11) 41. Ke3 Kc5 42. Nd2 {The knight blocks d3} (42. Kd2
+h5 $14) 42... g5 (42... f6 43. g3 $14) 43. g3 h5 44. h4 f6 (44... gxh4 45. gxh4
+Bb5 46. Nf1 $14) 45. g4 $16 (45. g4 gxh4 46. gxh5 $16) 1-0
+
+[Event "Sapporo Autumn Chess Tornament 2019"]
+[Site "?"]
+[Date "2019.10.14"]
+[Round "5.4"]
+[White "Nakamura, Mitsuru"]
+[Black "Kikuchi, Akira"]
+[Result "0-1"]
+[ECO "B98"]
+[WhiteElo "1314"]
+[BlackElo "1718"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "70"]
+
+{B98: Sicilian Najdorf: 6 Bg5 e6 7 f4 Be7, sidelines} 1. e4 c5 (1... e5 $5 $11)
+2. Nf3 $14 d6 {Secures e5} 3. d4 cxd4 4. Nxd4 {Black is behind in developement.
+Black's piece can't move: f8} Nf6 {Black threatens to win material: Nf6xe4} 5.
+Nc3 e6 {Consolidates d5+f5} 6. Bg5 {Black is behind in developement} Be7 7. f4
+(7. Bb5+ Bd7 $14) 7... a6 {Controls b5} (7... O-O 8. Qd2 $11) 8. Qf3 $14 Qc7 9.
+g4 {Black has a cramped position} (9. O-O-O h6 10. Bh4 O-O $14) 9... Nc6 {
+Black threatens to win material: Nc6xd4} (9... h6 10. Bxf6 Bxf6 11. O-O-O $11)
+10. O-O-O b5 (10... Bd7 11. Kb1 $11) 11. a3 {Loses material} (11. e5 $142 $5
+Bb7 12. Bg2 $16) 11... Bb7 $11 12. Bxf6 Bxf6 13. Nde2 (13. Bxb5 axb5 14. Ndxb5
+Qb6 15. Nxd6+ Kf8 $11) 13... Rc8 (13... b4 14. axb4 Nxb4 15. Bg2 $15) 14. g5 {
+White threatens to win material: g5xf6} Be7 15. f5 $2 {White gets more space} (
+15. Kb1 O-O $11) 15... Bxg5+ (15... Ne5 16. Qf4 exf5 17. Qxf5 $17) 16. Kb1 Ne5
+{Black threatens to win material: Ne5xf3. The knight feels good on e5} (16...
+Qe7 17. Bh3 Ne5 18. Qg3 exf5 19. Rhg1 $15) 17. Qh5 {White threatens to win
+material: Qh5xg5} (17. Qg3 Bxe4 {Decoy: e4} 18. Qxg5 Bxh1 19. Qxg7 Rf8 $11)
+17... Bf6 (17... Be3 18. fxe6 Bxe4 19. exf7+ Nxf7 20. Bh3 Bxh1 21. Bxc8 Qxc8
+22. Rxh1 $11) 18. fxe6 $15 O-O {White has an active position} 19. Bh3 {White
+has a king attack} Rce8 (19... g6 20. Qh6 Qe7 21. Rhg1 fxe6 22. Nd4 Rxc3 23.
+Bxe6+ Kh8 24. bxc3 Bxe4 25. Bb3 $17) 20. Nd5 (20. Nf4 g6 21. Qe2 Bg5 $11) 20...
+Bxd5 $15 {Black forks: e4+e6} 21. exd5 {Opposite coloured bishops appeared} Kh8
+{Black king safety improved} (21... g6 22. Qh6 $15) 22. Nf4 (22. Nd4 $142 $5
+$14 {would allow White to play on}) 22... g6 $17 {Covers f5} 23. Qh6 Bg7 24.
+Qh4 (24. Qg5 Nc4 25. exf7 Re5 $17) 24... Qe7 {Black threatens to win material:
+Qe7xh4} (24... Nc4 $142 25. exf7 Qxf7 $17) 25. Qf2 $2 (25. Qxe7 $142 {and
+White hangs on} Rxe7 26. Nd3 $11) 25... fxe6 (25... Nc4 $142 26. Nd3 fxe6 $19)
+26. Bxe6 $4 {a blunder in a bad position. .} (26. Qg3 $142 Nc4 27. Nxe6 $19)
+26... g5 $19 27. Ng6+ Nxg6 28. Qb6 (28. Qd2 {cannot undo what has already been
+done} Ne5 29. c3 Nc4 $19) 28... Ra8 (28... Ne5 {seems even better} 29. c3 Nc4
+30. Qg1 $19) 29. Rhe1 (29. h4 {does not win a prize} gxh4 30. Rdf1 Nf4 $19)
+29... Ne5 30. Re4 (30. Bh3 {doesn't get the cat off the tree} g4 31. Bf1 Rab8
+$19) 30... Qd8 (30... Nc4 {and Black can already relax} 31. Qg1 Nxb2 32. Rc1
+$19) 31. Qe3 (31. Qxd8 {desperation} Raxd8 32. Re2 $19) 31... Nc4 32. Qh3 (32.
+Qg3 {hardly improves anything} Nxb2 33. Rc1 Qa5 $19) 32... Nxb2 33. Rg1 (33.
+Rd2 {doesn't do any good} Qf6 34. c3 Na4 $19) 33... Qf6 34. Kc1 Nc4 35. Kd1
+Qa1+ (35... Qa1+ 36. Ke2 Qxg1 37. Bf5 Rxf5 38. Qxf5 Qg2+ 39. Qf2 Qxe4+ 40. Kf1
+Qh1+ 41. Ke2 Re8+ 42. Qe3 Rxe3+ 43. Kf2 Qxh2+ 44. Kf1 Nd2#) 0-1
+
+[Event "Sapporo Autumn Chess Tornament 2019"]
+[Site "?"]
+[Date "2019.10.14"]
+[Round "5.5"]
+[White "Sato Yasuji"]
+[Black "Kobayashi Katsuhiko"]
+[Result "1-0"]
+[ECO "C00"]
+[WhiteElo "1453"]
+[BlackElo "1515"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "53"]
+
+{C00: French: Unusual White 2nd moves} 1. e4 e6 2. c3 (2. a3 d5 (2... c5 3. b4
+Qf6 4. c3 d5 5. bxc5 Bxc5 6. d4 Bb6 7. e5 Qg6 8. Nf3 f6 9. Bd3 Qf7 10. a4 Nc6
+11. O-O Nge7 12. Ba3 Bd7 13. Ra2 Rc8 14. Re2 O-O 15. Rfe1 Na5 16. Qc2 f5 17.
+Qd1 {Zala,G (2175)-Rujzam,G (2190) Hungary 2002 1-0 (40)}) 3. e5 c5 4. b4 cxb4
+5. axb4 Bxb4 6. c3 Be7 7. d4 Bd7 8. Nf3 f5 9. Bd3 Nh6 10. Bxh6 gxh6 11. Qd2 Bf8
+12. Na3 Rg8 13. g3 a6 14. O-O Bc6 15. Nc2 b5 16. Qe2 Nd7 {Hoogendoorn,J (2391)
+-Feygin,M (2471) Netherlands 2001 1-0 (36)}) 2... Be7 $146 (2... d5 3. Bd3 dxe4
+(3... Nf6 4. Qe2 c5 5. exd5 Nxd5 6. Be4 Be7 7. Nf3 Nc6 8. O-O O-O 9. d4 cxd4
+10. cxd4 b6 11. Rd1 Bb7 12. Nc3 Na5 13. Ne5 Nxc3 14. bxc3 Bxe4 15. Qxe4 Qd5 16.
+Qg4 Bf6 17. Bf4 Rac8 18. Qg3 {Pusch,H (2169)-Jellinghaus,L (2214) Bochum 2001
+1-0 (69)}) 4. Bxe4 Nf6 5. Bc2 c5 (5... e5 6. Qe2 Qe7 7. d3 Nc6 8. Nf3 Bg4 9.
+Bg5 h6 10. Bxf6 Qxf6 11. Nbd2 O-O-O 12. O-O-O g5 13. Kb1 Bg7 14. Rhe1 Bh5 15.
+h3 Rd5 16. g4 Bg6 17. Ne4 Qf4 18. Nfd2 h5 19. Nc4 hxg4 20. hxg4 {Deutsch,L 
+(2220)-Poeltl,T (2225) Austria 1991 1-0 (33)}) 6. Nf3 Nc6 7. d4 cxd4 8. cxd4
+Nb4 9. Bb3 Be7 10. O-O O-O 11. Nc3 b6 12. a3 Nbd5 13. Ne5 Bb7 14. Bg5 Rc8 15.
+Ne2 Nd7 16. Bxe7 Qxe7 17. Nxd7 {Cabarkapa,V (2275)-Damjanovic,V (2440)
+Vrnjacka Banja 1996 0-1 (72)}) 3. Nf3 Nc6 4. d4 d5 5. e5 {White wins space} f6
+6. Bf4 (6. Bd3 fxe5 7. dxe5 h5 $16) 6... b6 (6... fxe5 $5 {is an interesting
+alternative} 7. Nxe5 Nf6 $11) 7. Bb5 $16 Bb7 8. O-O Qd7 9. exf6 gxf6 10. Qa4 (
+10. Re1 $142 $5 $16) 10... Bd6 (10... a6 11. Bxc6 Bxc6 12. Qc2 $11) 11. Bxd6
+$14 Qxd6 12. Re1 Nge7 13. Nbd2 O-O 14. Bd3 Rf7 15. Re3 (15. Rad1 Kh8 $14) 15...
+Rg7 (15... e5 $5 $11 {is worth consideration}) 16. Rae1 $14 e5 $2 (16... Bc8
+$142 $14 {and Black could well hope to play on}) 17. dxe5 $18 fxe5 18. Nxe5
+Nxe5 19. Rxe5 Bc8 $4 {Black falls apart} (19... Rf8 $142 $18) 20. Qh4 (20. Qe8#
+) 20... Ng6 (20... Kf8 {doesn't improve anything} 21. Bxh7 Bd7 22. R5e3 $18)
+21. Bxg6 Rxg6 (21... Bd7 {no good, but what else?} 22. Be8 c5 $18) 22. Re8+ Kg7
+(22... Qf8 {a fruitless try to alter the course of the game} 23. Rxf8+ Kg7 24.
+Qe7+ Kh6 25. Rf7 Rxg2+ 26. Kxg2 Kh5 27. Re5+ Bf5 28. Rg7 Re8 29. Qg5#) 23.
+R1e7+ Qxe7 24. Rxe7+ Kf8 25. Qxh7 Rxg2+ (25... Be6 {does not improve anything}
+26. Rxc7 Rc8 27. Rxa7 Rb8 28. Qxg6 Rb7 29. Rxb7 Bd7 30. Rxd7 d4 31. Qf7#) 26.
+Kxg2 Bh3+ 27. Kxh3 (27. Kxh3 Re8 28. Qg7#) 1-0
+
+[Event "Sapporo Autumn Chess Tornament 2019"]
+[Site "?"]
+[Date "2019.10.14"]
+[Round "5.6"]
+[White "Takeuchi, Hiroshi"]
+[Black "Watanabe, Katsumi"]
+[Result "0-1"]
+[ECO "D05"]
+[WhiteElo "1350"]
+[BlackElo "1723"]
+[Annotator "Fritz 11 SE (30s)"]
+[PlyCount "76"]
+
+{D05: Colle System with ...e6} 1. d4 d5 2. Nf3 Nf6 3. e3 e6 4. Bd3 Be7 5. O-O
+O-O 6. b3 Nbd7 (6... b6 7. Bb2 Bb7 8. c4 (8. Nbd2 Nbd7 9. Qe2 Ne4 10. Rfd1 f5
+11. c4 c6 12. Rac1 a5 13. a4 Bb4 14. Nb1 Qe7 15. Ne1 Bd6 16. f4 g5 17. g3 gxf4
+18. exf4 Rf6 19. Nf3 Rh6 20. Bxe4 dxe4 21. Ne5 Nf6 22. Nd2 Bxe5 {Singer,C 
+(2343)-Radnetter,G (2259) Austria 2014 1/2-1/2 (49)}) 8... Na6 9. a3 c5 10. Qe2
+Nc7 11. Rd1 cxd4 12. exd4 a5 13. Nc3 a4 14. cxd5 Ncxd5 15. Nxa4 Nf4 16. Qe3
+N6d5 17. Qd2 Nxd3 18. Qxd3 Nf4 19. Qe3 Bg5 20. Nxg5 Qxg5 21. g3 {Hoffman,A 
+(2285)-Garcia,G (2520) Cuba 1993 0-1 (40)}) 7. Bb2 c5 8. Nbd2 a6 $146 {
+Prevents intrusion on b5} (8... b6 9. Ne5 Bb7 10. f4 Ne4 11. Nxe4 dxe4 12. Nxd7
+Qxd7 13. Be2 Rfd8 14. Qe1 Bf6 15. c3 Rac8 16. Rc1 b5 17. b4 cxb4 {1/2-1/2 (17)
+Lipka,J (2370)-Hlavnicka,J (2230) Lazne Bohdanec 1997}) 9. Ne5 cxd4 10. exd4 b5
+(10... Nxe5 11. dxe5 Nd7 12. c4 $14) 11. Qe2 {Black has a cramped position} (
+11. Nc6 Qe8 $16) 11... Bb7 (11... Nxe5 12. dxe5 Nd7 13. Ne4 $11) 12. f4 $14 Rc8
+13. Rac1 b4 {White has a new backward pawn: c2} 14. Rf3 Qa5 15. a4 (15. Ra1
+$142 $11 {and White is still in the game}) 15... bxa3 $17 16. Nxd7 $4 {the
+position was bad, and this mistake simply hastens the end} (16. Ba1 Rc7 $17)
+16... Nxd7 (16... axb2 {seems even better} 17. Nxf6+ Bxf6 18. Rd1 Bxd4+ 19. Kh1
+$19) 17. Bxh7+ $4 {the final mistake, not that it matters anymore} (17. Ba1
+$142 $19) 17... Kxh7 18. Rh3+ (18. Ra1 {cannot change what is in store for
+White} Kg8 19. c3 Qb5 20. Qxb5 axb5 21. Bxa3 Ra8 $19) 18... Kg8 19. Qh5 (19.
+Ra1 {hoping against hope} Nf6 20. c4 $19) 19... f5 20. Qg6 (20. Qh7+ {does not
+save the day} Kf7 21. Qh5+ g6 22. Qh7+ Ke8 23. Bxa3 Qxa3 $19) 20... Rf6 (20...
+axb2 $142 {secures victory} 21. Qxe6+ Rf7 22. Qe1 bxc1=R 23. Qxc1 $19) 21. Qh7+
+Kf7 22. Qh5+ (22. Bxa3 {cannot change destiny} Qxa3 23. Qh5+ Rg6 $19) 22... Rg6
+23. Rg3 Nf8 (23... Qxd2 $2 {looks very tantalising, but} 24. Qxg6+ Kf8 25. Rh3
+$18) 24. Nf3 (24. Bxa3 {otherwise it's curtains at once} Qxa3 25. Qd1 Rxg3 26.
+hxg3 $19) 24... axb2 25. Rf1 Qa1 26. Ne5+ Ke8 (26... Kg8 $142 {makes it even
+easier for Black} 27. Qd1 Qxd1 28. Rxd1 Rxg3 29. hxg3 Rxc2 $19) 27. Rxg6 Qxf1+
+$1 {Double attack: g6/f1} 28. Kxf1 b1=Q+ 29. Kf2 Rxc2+ 30. Kg3 Qxb3+ (30...
+Rc3+ 31. Nf3 Rxf3+ 32. Kxf3 Qd1+ 33. Kg3 Qxh5 34. Rg4 Qxg4+ 35. Kf2 Qxf4+ 36.
+Ke2 Bg5 37. g4 Bc6 38. gxf5 Bb5+ 39. Kd1 Qd2#) 31. Nf3 Nxg6 32. Qxg6+ Kd7 33.
+h4 Qb2 (33... Qd3 34. Kh3 Qf1 35. Ne5+ Kc8 36. Qxe6+ Kb8 37. Nd7+ Ka7 38. Qb6+
+Ka8 39. Qd8+ Bxd8 40. Nb6+ Bxb6 41. h5 Qxg2+ 42. Kh4 Bd8#) 34. Kh3 Bf6 35. Qf7+
+Kd6 36. Qf8+ Kc6 37. Qe8+ Kb6 38. Qxe6+ (38. Qb8 {is not much help} Qa1 39.
+Qd6+ Kb5 40. Kh2 Qf1 41. Ne1 Qxe1 42. Qa3 Bxd4 43. Qb3+ Ka5 44. Qa3+ Kb6 45.
+Qb3+ Ka7 46. Qf3 Bf2 47. Qd1 Qxd1 48. g4 fxg4 49. h5 Qg1#) 38... Ka7 (38... Ka7
+39. h5 Rxg2 40. Qe3 Rg4 41. Qd2 Qb1 42. Qf2 Bh4 43. Kh2 Bxf2 44. Ne1 Bg1+ 45.
+Kh3 Qxe1 46. h6 Qc3#) 0-1
+
