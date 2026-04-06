@@ -192,7 +192,7 @@ export default function ApplicationForm({ formspreeId, tournamentName, locale }:
           type="text"
           required
           autoComplete="name"
-          placeholder={locale === "ja" ? "山田 太郎" : "Taro Yamada"}
+          placeholder={locale === "ja" ? "山田 太郎" : "Jane Doe"}
         />
       ))}
 
