@@ -3,7 +3,7 @@ import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import ScrollTop from "@/components/ScrollTop.svelte";
 import "@/styles/globals.css";
-import type { Locale } from "@/i18n";
+import { t, type Locale } from "@/i18n";
 
 interface Props {
   title: string;
@@ -12,14 +12,11 @@ interface Props {
 }
 
 const { title, locale, description } = Astro.props;
+const i = t(locale);
 
-const siteName = locale === "ja" ? "札幌チェスクラブ" : "Sapporo Chess Club";
+const siteName = i.site.name;
 const fullTitle = `${siteName} | ${title}`;
-const defaultDescription =
-  locale === "ja"
-    ? "札幌チェスクラブは、北海道のチェス愛好家が集まるコミュニティです。月2回の例会、年3回の公式大会、初心者向けチェス講座を開催。見学無料、初心者歓迎。"
-    : "Sapporo Chess Club is a community for chess enthusiasts in Hokkaido. We hold meetups twice a month, three official tournaments a year, and a beginner chess course. Observation is free, beginners welcome.";
-const metaDescription = description ?? defaultDescription;
+const metaDescription = description ?? i.site.description;
 
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
@@ -100,7 +97,7 @@ const ogImage = new URL(`${base}/images/og.webp`, Astro.site).toString();
       href="#main-content"
       class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-100 focus:px-4 focus:py-2 focus:bg-[#2563eb] focus:text-white focus:rounded focus:text-sm focus:font-medium"
     >
-      {locale === "ja" ? "メインコンテンツへスキップ" : "Skip to main content"}
+      {i.nav.skipToMain}
     </a>
     <Header locale={locale} />
     <main id="main-content" class="max-w-4xl w-full mx-auto flex-1 animate-fade-in">

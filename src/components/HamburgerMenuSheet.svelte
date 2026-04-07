@@ -131,10 +131,10 @@
         <a
           href={otherPath}
           class="text-xs tracking-[2px] text-[#d4d4d4] hover:text-[#fafafa] transition-colors duration-150"
-          aria-label={locale === "ja" ? "Switch to English" : "日本語に切り替え"}
+          aria-label={i.nav.switchLanguage}
           hreflang={otherLocale}
         >
-          {locale === "ja" ? "EN" : "JA"}
+          {i.nav.languageShort}
         </a>
       </div>
     </div>

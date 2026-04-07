@@ -1,7 +1,16 @@
 export default {
+  site: {
+    name: "Sapporo Chess Club",
+    description:
+      "Sapporo Chess Club is a community for chess enthusiasts in Hokkaido. We hold meetups twice a month, three official tournaments a year, and a beginner chess course. Observation is free, beginners welcome.",
+  },
   nav: {
     home: "Home",
     tournaments: "Tournaments",
+    skipToMain: "Skip to main content",
+    openInNewTab: "(opens in new tab)",
+    switchLanguage: "日本語に切り替え",
+    languageShort: "JA",
   },
   sections: {
     home: "HOME",
@@ -28,12 +37,25 @@ export default {
     pageTitle: "Schedule",
     pageSubtitle: "Annual Schedule",
     viewFullSchedule: "View full schedule →",
+    noUpcoming: "No upcoming events.",
+    filterByYear: "Filter by year",
+    allYears: "All years",
+    all: "All",
+    dayOfWeekSuffix: "",
+    roomSuffix: "",
+    yearSuffix: "",
+    opensOnSuffix: "",
   },
   clubInfo: {
     fee: "Entry Fee",
     feeGeneral: "General ¥1,000",
     feeStudent: "Students ¥500",
     venue: "Venue",
+    general: "General",
+    students: "Students",
+    observation: "Observation",
+    free: "Free",
+    viewOnMap: "View on Google Maps →",
   },
   lessons: {
     label: "Chess Lessons",
@@ -51,6 +73,7 @@ export default {
     detailsPdf: "Details PDF",
     resultsPdf: "Results PDF",
     gamesPgn: "Game Records PGN",
+    downloadAria: (label: string) => `${label} download`,
   },
   application: {
     opensOn: "Registration opens",
