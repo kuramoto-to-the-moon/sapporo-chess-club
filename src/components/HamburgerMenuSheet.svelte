@@ -74,9 +74,12 @@
       </span>
       <SheetClose
         aria-label="Close navigation menu"
-        class="text-2xl font-extralight cursor-pointer p-3 -m-3 text-[#fafafa] focus:outline-none focus-visible:ring-0"
+        class="cursor-pointer p-3 -m-3 text-[#fafafa] rounded focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#fafafa]"
       >
-        <span aria-hidden="true">✕</span>
+        <span
+          aria-hidden="true"
+          class="flex items-center justify-center w-6 h-6 text-2xl font-extralight leading-none"
+        >✕</span>
       </SheetClose>
     </div>
 
