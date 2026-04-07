@@ -17,10 +17,12 @@ const { locale, currentPath } = Astro.props;
   aria-label="Open navigation menu"
   aria-haspopup="dialog"
   aria-expanded="false"
-  class="flex flex-col items-center justify-center gap-[5px] h-auto w-auto p-3 -m-3 cursor-pointer focus-visible:outline-none active:opacity-60 transition-opacity"
+  class="inline-flex items-center justify-center w-10 h-10 -mr-2 cursor-pointer focus-visible:outline-none active:opacity-60 transition-opacity"
 >
-  <span class="w-6 h-[2px] bg-[#171717]" aria-hidden="true"></span>
-  <span class="w-6 h-[2px] bg-[#171717]" aria-hidden="true"></span>
+  <span class="flex flex-col items-center justify-center gap-[6px]" aria-hidden="true">
+    <span class="block w-6 h-[2px] bg-[#171717]"></span>
+    <span class="block w-6 h-[2px] bg-[#171717]"></span>
+  </span>
 </button>
 <div data-hamburger-mount></div>
 
