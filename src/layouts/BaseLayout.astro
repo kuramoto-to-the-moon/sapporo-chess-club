@@ -70,6 +70,7 @@ const ogImage = new URL(`${base}/images/og.webp`, Astro.site).toString();
       href={`${base}/${locale === "en" ? "manifest.en.webmanifest" : "manifest.webmanifest"}`}
     />
     <meta name="theme-color" content="#2563eb" />
+    <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-title" content={siteName} />
