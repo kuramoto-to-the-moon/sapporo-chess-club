@@ -57,6 +57,24 @@ export default {
     closed: "Registration closed",
   },
   form: {
+    labels: {
+      name: "Name",
+      email: "Email",
+      jcaNumber: "JCA Number (optional)",
+      notes: "Notes",
+    },
+    placeholders: {
+      name: "Jane Doe",
+      jcaNumber: "J12345",
+    },
+    actions: {
+      submit: "Submit",
+      submitting: "Submitting...",
+      cancel: "Cancel",
+    },
+    success: "Your registration has been received.",
+    submitError: "Submission failed. Please try again.",
+    ariaLabel: (name: string) => `${name} registration form`,
     errors: {
       nameRequired: "Please enter your name",
       nameTooLong: "Name must be 50 characters or fewer",
@@ -72,6 +90,7 @@ export default {
     closed: "Closed",
     upcoming: "Upcoming",
     tournamentTag: "Tournament",
+    meetingTag: "Meeting",
   },
   footer: {
     top: "↑ TOP",

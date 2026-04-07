@@ -1,19 +1,14 @@
 ---
-import { getCollection } from "astro:content";
-import NextEventClient from "./NextEvent.tsx";
+import NextEventClient from "./NextEvent.svelte";
 import type { Locale } from "@/i18n";
-import { parseDate } from "@/lib/date";
+import { getSortedScheduleDates } from "@/lib/schedule-data";
 
 interface Props {
   locale: Locale;
 }
 
 const { locale } = Astro.props;
-
-const scheduleData = await getCollection("schedule");
-const dates = scheduleData
-  .flatMap((s) => s.data.dates)
-  .sort((a, b) => parseDate(a.date).getTime() - parseDate(b.date).getTime());
+const dates = await getSortedScheduleDates();
 ---
 
-<NextEventClient dates={dates} locale={locale} client:only="react" />
+<NextEventClient dates={dates} locale={locale} client:only="svelte" />

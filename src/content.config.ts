@@ -1,7 +1,8 @@
 import { defineCollection, z } from "astro:content";
+import { glob, file } from "astro/loaders";
 
 const schedule = defineCollection({
-  type: "data",
+  loader: glob({ pattern: "**/*.yaml", base: "./src/content/schedule" }),
   schema: z.object({
     dates: z.array(
       z.object({
@@ -23,7 +24,7 @@ const schedule = defineCollection({
 });
 
 const tournaments = defineCollection({
-  type: "content",
+  loader: glob({ pattern: "**/*.md", base: "./src/content/tournaments" }),
   schema: z.object({
     title: z.object({ ja: z.string(), en: z.string() }),
     date: z.string(),
@@ -38,7 +39,7 @@ const tournaments = defineCollection({
 });
 
 const lessons = defineCollection({
-  type: "content",
+  loader: glob({ pattern: "**/*.md", base: "./src/content/lessons" }),
   schema: z.object({
     title: z.object({ ja: z.string(), en: z.string() }),
     description: z.object({ ja: z.string(), en: z.string() }),
@@ -47,21 +48,21 @@ const lessons = defineCollection({
 });
 
 const links = defineCollection({
-  type: "data",
+  loader: glob({ pattern: "**/*.yaml", base: "./src/content/links" }),
   schema: z.object({
     links: z.array(
       z.object({
         title: z.object({ ja: z.string(), en: z.string() }),
-        url: z.string().url(),
+        url: z.url(),
       })
     ),
   }),
 });
 
 const site = defineCollection({
-  type: "data",
+  loader: glob({ pattern: "**/*.yaml", base: "./src/content/site" }),
   schema: z.object({
-    email: z.string().email(),
+    email: z.email(),
     phone: z.string(),
     venue: z.object({
       name: z.object({ ja: z.string(), en: z.string() }),
