@@ -50,7 +50,7 @@ const tournamentsHref = getLocalePath(locale, "/tournaments");
       <LanguageToggle locale={locale} path={currentPath} />
     </nav>
     <div class="md:hidden">
-      <HamburgerMenu locale={locale} currentPath={currentPath} client:load />
+      <HamburgerMenu locale={locale} currentPath={currentPath} client:idle />
     </div>
   </div>
 </header>

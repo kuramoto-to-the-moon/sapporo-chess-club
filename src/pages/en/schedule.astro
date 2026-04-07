@@ -3,13 +3,14 @@ import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import ScheduleTimeline from "@/components/ScheduleTimeline.astro";
 import { t } from "@/i18n";
+import { parseDate } from "@/lib/date";
 
 const locale = "en";
 const i = t(locale);
 
 const scheduleData = await getCollection("schedule");
 const allDates = scheduleData.flatMap((s) => s.data.dates);
-const sorted = allDates.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+const sorted = allDates.sort((a, b) => parseDate(a.date).getTime() - parseDate(b.date).getTime());
 ---
 
 <BaseLayout title={i.schedule.pageTitle} locale={locale}>

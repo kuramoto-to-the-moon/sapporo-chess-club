@@ -1,4 +1,5 @@
 import { t, type Locale } from "@/i18n";
+import { parseDate, startOfTodayJST, getDateParts } from "@/lib/date";
 
 interface ScheduleDate {
   date: string;
@@ -18,17 +19,15 @@ interface Props {
 
 export default function NextEvent({ dates, locale }: Props) {
   const i = t(locale);
-  const now = new Date();
+  const today = startOfTodayJST();
 
   const next = dates
-    .filter((d) => new Date(d.date) >= now)
-    .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())[0];
+    .filter((d) => parseDate(d.date) >= today)
+    .sort((a, b) => parseDate(a.date).getTime() - parseDate(b.date).getTime())[0];
 
   if (!next) return null;
 
-  const d = new Date(next.date);
-  const month = d.getMonth() + 1;
-  const day = d.getDate();
+  const { month, day } = getDateParts(next.date);
   const isTournament = next.type === "tournament";
   const title = isTournament
     ? next.eventName?.[locale] ?? (locale === "ja" ? "大会" : "Tournament")
