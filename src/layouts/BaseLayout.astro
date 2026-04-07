@@ -71,7 +71,7 @@ const ogImage = new URL(`${base}/images/og.png`, Astro.site).toString();
     <meta name="twitter:description" content={metaDescription} />
     <meta name="twitter:image" content={ogImage} />
   </head>
-  <body class="bg-white text-[#171717] font-sans antialiased">
+  <body class="bg-white text-[#171717] font-sans antialiased min-h-screen flex flex-col">
     <a
       href="#main-content"
       class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[100] focus:px-4 focus:py-2 focus:bg-[#2563eb] focus:text-white focus:rounded focus:text-sm focus:font-medium"
@@ -79,7 +79,7 @@ const ogImage = new URL(`${base}/images/og.png`, Astro.site).toString();
       {locale === "ja" ? "メインコンテンツへスキップ" : "Skip to main content"}
     </a>
     <Header locale={locale} />
-    <main id="main-content" class="max-w-4xl mx-auto animate-fade-in">
+    <main id="main-content" class="max-w-4xl w-full mx-auto flex-1 animate-fade-in">
       <slot />
     </main>
     <Footer locale={locale} />
