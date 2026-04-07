@@ -68,18 +68,29 @@
   >
     <SheetTitle class="sr-only">Navigation menu</SheetTitle>
 
-    <div class="w-full max-w-4xl mx-auto flex items-center justify-between px-5 py-4">
+    <div class="w-full max-w-4xl mx-auto flex items-center justify-between px-5 py-2">
       <span class="text-xs tracking-[3px] text-[#737373]" aria-hidden="true">
         SAPPORO CHESS CLUB
       </span>
       <SheetClose
         aria-label="Close navigation menu"
-        class="cursor-pointer p-3 -m-3 text-[#fafafa] rounded focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#fafafa]"
+        class="inline-flex items-center justify-center w-10 h-10 -mr-2 text-[#fafafa] cursor-pointer rounded focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#fafafa]"
       >
-        <span
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
           aria-hidden="true"
-          class="flex items-center justify-center w-6 h-6 text-2xl font-extralight leading-none"
-        >✕</span>
+        >
+          <path d="M18 6 6 18" />
+          <path d="m6 6 12 12" />
+        </svg>
       </SheetClose>
     </div>
 
