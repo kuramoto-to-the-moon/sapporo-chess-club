@@ -149,7 +149,9 @@
     cursor: pointer;
   }
   html {
-    scroll-padding-top: 72px;
+    /* sticky header の実際の高さ (py-4 + border + content ≒ 57px) に合わせる。
+     * sticky header の下端ぴったりにアンカー先を配置する。 */
+    scroll-padding-top: 57px;
     /* Firefox: thumb は控えめなグレー、track は透明 */
     scrollbar-color: #d4d4d4 transparent;
   }

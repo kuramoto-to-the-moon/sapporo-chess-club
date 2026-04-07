@@ -9,6 +9,10 @@ export default defineConfig({
     // 小さい CSS は <style> としてインライン化し render-blocking を回避
     inlineStylesheets: "always",
   },
+  prefetch: {
+    prefetchAll: false,
+    defaultStrategy: "viewport",
+  },
   integrations: [svelte()],
   vite: {
     plugins: [tailwindcss()],

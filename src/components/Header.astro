@@ -34,6 +34,7 @@ const tournamentsHref = getLocalePath(locale, "/tournaments");
     <nav class="hidden md:flex items-center gap-1" aria-label="Main navigation">
       <a
         href={scheduleHref}
+        data-astro-prefetch
         class="text-sm text-[#525252] hover:text-[#2563eb] transition-colors duration-150 px-3 py-2 -my-2 rounded"
         aria-current={currentPath === "/schedule" ? "page" : undefined}
       >
@@ -41,6 +42,7 @@ const tournamentsHref = getLocalePath(locale, "/tournaments");
       </a>
       <a
         href={tournamentsHref}
+        data-astro-prefetch
         class="text-sm text-[#525252] hover:text-[#2563eb] transition-colors duration-150 px-3 py-2 -my-2 rounded"
         aria-current={currentPath === "/tournaments" ? "page" : undefined}
       >
