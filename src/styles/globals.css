@@ -55,6 +55,28 @@
   }
   html {
     scroll-padding-top: 72px;
+    /* Firefox: thumb は控えめなグレー、track は透明 */
+    scrollbar-color: #d4d4d4 transparent;
+  }
+  /* Chrome / Safari / Edge */
+  ::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+    background: transparent;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #d4d4d4;
+    border: 3px solid transparent;
+    border-radius: 9999px;
+    background-clip: padding-box;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #a3a3a3;
+    background-clip: padding-box;
+    border: 3px solid transparent;
   }
   body {
     @apply bg-background text-foreground;
