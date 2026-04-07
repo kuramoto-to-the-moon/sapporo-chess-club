@@ -13,12 +13,12 @@ const sorted = allDates.sort((a, b) => new Date(a.date).getTime() - new Date(b.d
 ---
 
 <BaseLayout title={i.schedule.pageTitle} locale={locale}>
-  <section class="px-5 pt-16 md:pt-20 pb-6 reveal">
-    <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">{i.schedule.pageTitle}</h1>
-    <p class="text-sm text-[#737373] mt-3">{i.schedule.pageSubtitle}</p>
+  <section class="px-5 pt-16 md:pt-20 pb-6">
+    <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight animate-fade-in-up">{i.schedule.pageTitle}</h1>
+    <p class="text-sm text-[#737373] mt-3 animate-fade-in-up stagger-1">{i.schedule.pageSubtitle}</p>
   </section>
 
-  <section class="px-5 pb-10 reveal">
+  <section class="px-5 pb-10 animate-fade-in-up stagger-2">
     <ScheduleTimeline dates={sorted} locale={locale} />
   </section>
 </BaseLayout>
