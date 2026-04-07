@@ -34,6 +34,11 @@ const years = [...new Set(tournaments.map((t) => t.year))].sort((a, b) => b - a)
 ---
 
 <BaseLayout title={i.tournament.pageTitle} locale={locale}>
+  <style is:global>
+    html {
+      scrollbar-gutter: stable;
+    }
+  </style>
   <section class="px-5 pt-16 md:pt-20 pb-6">
     <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight animate-fade-in-up">{i.tournament.pageTitle}</h1>
     <p class="text-sm text-[#737373] mt-3 animate-fade-in-up stagger-1">{i.tournament.pageSubtitle}</p>

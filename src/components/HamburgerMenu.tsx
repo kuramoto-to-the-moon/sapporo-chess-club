@@ -117,10 +117,7 @@ export default function HamburgerMenu({ locale, currentPath }: Props) {
           </div>
         </nav>
 
-        <div
-          className="absolute bottom-0 left-0 right-0 border-t border-[#2a2a2a]"
-          style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
-        >
+        <div className="absolute bottom-0 left-0 right-0 border-t border-[#2a2a2a] [@media(display-mode:standalone)]:pb-[env(safe-area-inset-bottom)]">
           <div className="max-w-4xl mx-auto px-5 py-4 flex items-center justify-between">
             <a
               href="mailto:sapporochessclub@gmail.com"
