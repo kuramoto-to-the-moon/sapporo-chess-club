@@ -84,6 +84,7 @@
       {#each pages as page, idx (page.href)}
         <a
           href={page.href}
+          data-astro-prefetch
           class="group block mb-6 animate-fade-in-up"
           style="animation-delay: {idx * 0.05}s"
           aria-current={page.href === getLocalePath(locale, currentPath) ? "page" : undefined}
