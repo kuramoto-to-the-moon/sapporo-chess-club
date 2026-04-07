@@ -5,6 +5,10 @@ import svelte from "@astrojs/svelte";
 export default defineConfig({
   site: "https://kuramoto-to-the-moon.github.io",
   base: "/sapporo-chess-club",
+  build: {
+    // 小さい CSS は <style> としてインライン化し render-blocking を回避
+    inlineStylesheets: "always",
+  },
   integrations: [svelte()],
   vite: {
     plugins: [tailwindcss()],
