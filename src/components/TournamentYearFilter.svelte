@@ -27,7 +27,7 @@
   });
 </script>
 
-<div class="mb-8">
+<div>
   <div class="sm:hidden">
     <label
       for="year-filter-select"
