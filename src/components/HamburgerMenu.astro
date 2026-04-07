@@ -1,0 +1,74 @@
+---
+import type { Locale } from "@/i18n";
+
+interface Props {
+  locale: Locale;
+  currentPath: string;
+}
+
+const { locale, currentPath } = Astro.props;
+---
+
+<button
+  data-hamburger-trigger
+  data-locale={locale}
+  data-current-path={currentPath}
+  type="button"
+  aria-label="Open navigation menu"
+  aria-haspopup="dialog"
+  aria-expanded="false"
+  class="flex flex-col items-center justify-center gap-[5px] h-auto w-auto p-3 -m-3 cursor-pointer focus-visible:outline-none active:opacity-60 transition-opacity"
+>
+  <span class="w-6 h-[2px] bg-[#171717]" aria-hidden="true"></span>
+  <span class="w-6 h-[2px] bg-[#171717]" aria-hidden="true"></span>
+</button>
+<div data-hamburger-mount></div>
+
+<script>
+  import type { Locale } from "@/i18n";
+
+  const trigger = document.querySelector<HTMLButtonElement>("[data-hamburger-trigger]");
+  const target = document.querySelector<HTMLDivElement>("[data-hamburger-mount]");
+
+  if (trigger && target) {
+    const locale = trigger.dataset.locale as Locale;
+    const currentPath = trigger.dataset.currentPath ?? "/";
+
+    let mounted = false;
+    let loading = false;
+
+    async function openMenu() {
+      if (loading) return;
+      if (mounted) {
+        trigger!.dispatchEvent(new CustomEvent("hamburger-open"));
+        return;
+      }
+      loading = true;
+      trigger!.setAttribute("aria-busy", "true");
+      try {
+        const [{ mount }, { default: HamburgerMenuSheet }] = await Promise.all([
+          import("svelte"),
+          import("./HamburgerMenuSheet.svelte"),
+        ]);
+        mount(HamburgerMenuSheet, {
+          target: target!,
+          props: { locale, currentPath, trigger: trigger! },
+        });
+        mounted = true;
+      } finally {
+        loading = false;
+        trigger!.removeAttribute("aria-busy");
+      }
+    }
+
+    // アイドル時にチャンクをバックグラウンド予熱
+    const prefetch = () => import("./HamburgerMenuSheet.svelte");
+    if ("requestIdleCallback" in window) {
+      requestIdleCallback(prefetch, { timeout: 3000 });
+    } else {
+      setTimeout(prefetch, 1500);
+    }
+
+    trigger.addEventListener("click", openMenu);
+  }
+</script>

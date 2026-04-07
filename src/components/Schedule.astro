@@ -1,8 +1,7 @@
 ---
-import { getCollection } from "astro:content";
-import UpcomingScheduleList from "./UpcomingScheduleList.tsx";
+import UpcomingScheduleList from "./UpcomingScheduleList.svelte";
 import { t, getLocalePath, type Locale } from "@/i18n";
-import { parseDate } from "@/lib/date";
+import { getSortedScheduleDates } from "@/lib/schedule-data";
 
 interface Props {
   locale: Locale;
@@ -11,11 +10,7 @@ interface Props {
 const { locale } = Astro.props;
 const i = t(locale);
 
-const scheduleData = await getCollection("schedule");
-const dates = scheduleData
-  .flatMap((s) => s.data.dates)
-  .sort((a, b) => parseDate(a.date).getTime() - parseDate(b.date).getTime());
-
+const dates = await getSortedScheduleDates();
 const scheduleHref = getLocalePath(locale, "/schedule");
 ---
 
@@ -24,5 +19,5 @@ const scheduleHref = getLocalePath(locale, "/schedule");
     <span class="inline-block w-1 h-3 bg-[#2563eb]"></span>
     {i.schedule.label}
   </h2>
-  <UpcomingScheduleList dates={dates} locale={locale} scheduleHref={scheduleHref} client:only="react" />
+  <UpcomingScheduleList dates={dates} locale={locale} scheduleHref={scheduleHref} client:only="svelte" />
 </section>

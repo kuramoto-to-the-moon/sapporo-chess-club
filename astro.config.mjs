@@ -1,11 +1,17 @@
 import { defineConfig } from "astro/config";
-import react from "@astrojs/react";
-import tailwind from "@astrojs/tailwind";
+import tailwindcss from "@tailwindcss/vite";
+import svelte from "@astrojs/svelte";
 
 export default defineConfig({
   site: "https://kuramoto-to-the-moon.github.io",
   base: "/sapporo-chess-club",
-  integrations: [react(), tailwind()],
+  integrations: [svelte()],
+  vite: {
+    plugins: [tailwindcss()],
+    resolve: {
+      noExternal: ["@lucide/svelte", "bits-ui"],
+    },
+  },
   i18n: {
     locales: ["ja", "en"],
     defaultLocale: "ja",

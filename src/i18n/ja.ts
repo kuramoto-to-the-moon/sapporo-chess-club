@@ -57,6 +57,24 @@ export default {
     closed: "申込締切",
   },
   form: {
+    labels: {
+      name: "お名前",
+      email: "メールアドレス",
+      jcaNumber: "JCA会員番号(任意)",
+      notes: "備考",
+    },
+    placeholders: {
+      name: "山田 太郎",
+      jcaNumber: "J12345",
+    },
+    actions: {
+      submit: "送信する",
+      submitting: "送信中...",
+      cancel: "閉じる",
+    },
+    success: "申請を受け付けました。",
+    submitError: "送信に失敗しました。もう一度お試しください。",
+    ariaLabel: (name: string) => `${name} 参加申込フォーム`,
     errors: {
       nameRequired: "お名前を入力してください",
       nameTooLong: "お名前は50文字以内で入力してください",
@@ -72,6 +90,7 @@ export default {
     closed: "申込締切",
     upcoming: "予定",
     tournamentTag: "大会",
+    meetingTag: "例会",
   },
   footer: {
     top: "↑ TOP",
