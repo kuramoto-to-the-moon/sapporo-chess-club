@@ -1,6 +1,7 @@
 ---
-import UpcomingScheduleList from "./UpcomingScheduleList.svelte";
 import { t, getLocalePath, type Locale } from "@/i18n";
+import { parseDate, getDateParts } from "@/lib/date";
+import { getEventName } from "@/lib/schedule";
 import { getUpcomingScheduleDates } from "@/lib/schedule-data";
 
 interface Props {
@@ -9,10 +10,11 @@ interface Props {
 
 const { locale } = Astro.props;
 const i = t(locale);
-
-// 5 件だけ表示するが、staleness 吸収のため少し余裕を持って渡す
-const dates = await getUpcomingScheduleDates(10);
 const scheduleHref = getLocalePath(locale, "/schedule");
+
+const upcoming = (await getUpcomingScheduleDates(5)).sort(
+  (a, b) => parseDate(a.date).getTime() - parseDate(b.date).getTime()
+);
 ---
 
 <section id="schedule" class="px-5 py-6">
@@ -20,5 +22,51 @@ const scheduleHref = getLocalePath(locale, "/schedule");
     <span class="inline-block w-1 h-3 bg-[#2563eb]"></span>
     {i.schedule.label}
   </h2>
-  <UpcomingScheduleList dates={dates} locale={locale} scheduleHref={scheduleHref} client:idle />
+
+  {upcoming.length === 0 ? (
+    <p class="text-sm text-[#737373]">
+      {i.schedule.noUpcoming}
+    </p>
+  ) : (
+    <>
+      <ul class="flex flex-col">
+        {upcoming.map((date) => {
+          const parts = getDateParts(date.date);
+          const isTournament = date.type === "tournament";
+          return (
+            <li class="flex items-center gap-4 py-3 border-b border-[#f5f5f5] last:border-0">
+              <div class="flex items-baseline gap-1.5 min-w-[80px]">
+                <span class={`text-2xl font-bold leading-none ${isTournament ? "text-[#2563eb]" : "text-[#171717]"}`}>
+                  {parts.month}/{parts.day}
+                </span>
+                <span class="text-xs text-[#737373]">({date.dayOfWeek[locale]})</span>
+              </div>
+              <div class="flex-1">
+                <p class="text-sm font-semibold flex items-center gap-2 flex-wrap">
+                  {isTournament && (
+                    <span class="text-xs px-1.5 py-0.5 rounded bg-[#2563eb] text-white font-semibold">
+                      {i.badge.tournamentTag}
+                    </span>
+                  )}
+                  <span>{getEventName(date, locale)}</span>
+                </p>
+                <p class="text-xs text-[#737373] mt-1">
+                  {date.startTime}–{date.endTime} / {date.room}{i.schedule.roomSuffix}
+                </p>
+                {date.note && (
+                  <p class="text-xs text-[#737373] mt-1">{date.note[locale]}</p>
+                )}
+              </div>
+            </li>
+          );
+        })}
+      </ul>
+      <a
+        href={scheduleHref}
+        class="inline-block mt-4 text-sm text-[#2563eb] hover:text-[#1d4ed8] transition-colors duration-150 font-medium"
+      >
+        {i.schedule.viewFullSchedule}
+      </a>
+    </>
+  )}
 </section>

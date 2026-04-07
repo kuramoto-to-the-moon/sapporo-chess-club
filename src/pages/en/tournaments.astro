@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import TournamentList from "@/components/TournamentList.svelte";
+import TournamentList from "@/components/TournamentList.astro";
 import { t } from "@/i18n";
 
 const locale = "en";
@@ -45,6 +45,6 @@ const years = [...new Set(tournaments.map((t) => t.year))].sort((a, b) => b - a)
   </section>
 
   <section class="px-5 pb-10 animate-fade-in-up stagger-2">
-    <TournamentList tournaments={tournaments} years={years} locale={locale} client:visible />
+    <TournamentList tournaments={tournaments} years={years} locale={locale} />
   </section>
 </BaseLayout>

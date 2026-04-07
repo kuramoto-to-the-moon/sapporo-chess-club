@@ -1,7 +1,16 @@
 export default {
+  site: {
+    name: "札幌チェスクラブ",
+    description:
+      "札幌チェスクラブは、北海道のチェス愛好家が集まるコミュニティです。月2回の例会、年3回の公式大会、初心者向けチェス講座を開催。見学無料、初心者歓迎。",
+  },
   nav: {
     home: "ホーム",
     tournaments: "大会記録",
+    skipToMain: "メインコンテンツへスキップ",
+    openInNewTab: "（新しいタブで開く）",
+    switchLanguage: "Switch to English",
+    languageShort: "EN",
   },
   sections: {
     home: "HOME",
@@ -28,12 +37,25 @@ export default {
     pageTitle: "スケジュール",
     pageSubtitle: "年間スケジュール",
     viewFullSchedule: "年間スケジュールを見る →",
+    noUpcoming: "予定されているイベントはありません。",
+    filterByYear: "年で絞り込み",
+    allYears: "すべての年",
+    all: "すべて",
+    dayOfWeekSuffix: "曜日",
+    roomSuffix: "室",
+    yearSuffix: "年",
+    opensOnSuffix: "から",
   },
   clubInfo: {
     fee: "参加案内",
     feeGeneral: "一般1,000円",
     feeStudent: "学生500円",
     venue: "会場",
+    general: "一般",
+    students: "学生",
+    observation: "見学",
+    free: "無料",
+    viewOnMap: "Google マップで見る →",
   },
   lessons: {
     label: "チェス講座",
@@ -51,6 +73,7 @@ export default {
     detailsPdf: "要項 PDF",
     resultsPdf: "結果 PDF",
     gamesPgn: "棋譜 PGN",
+    downloadAria: (label: string) => `${label}をダウンロード`,
   },
   application: {
     opensOn: "申込開始",

@@ -22,16 +22,16 @@ const site = siteData[0].data;
       </h2>
       <dl class="flex flex-col gap-2 text-sm text-[#525252]">
         <div class="flex gap-3">
-          <dt>{locale === "ja" ? "一般" : "General"}</dt>
+          <dt>{i.clubInfo.general}</dt>
           <dd class="font-medium text-[#171717]">¥{site.fee.general.toLocaleString()}</dd>
         </div>
         <div class="flex gap-3">
-          <dt>{locale === "ja" ? "学生" : "Students"}</dt>
+          <dt>{i.clubInfo.students}</dt>
           <dd class="font-medium text-[#171717]">¥{site.fee.student.toLocaleString()}</dd>
         </div>
         <div class="flex gap-3">
-          <dt>{locale === "ja" ? "見学" : "Observation"}</dt>
-          <dd class="font-medium text-[#2563eb]">{locale === "ja" ? "無料" : "Free"}</dd>
+          <dt>{i.clubInfo.observation}</dt>
+          <dd class="font-medium text-[#2563eb]">{i.clubInfo.free}</dd>
         </div>
       </dl>
     </div>
@@ -50,8 +50,8 @@ const site = siteData[0].data;
           rel="noopener noreferrer"
           class="text-sm text-[#2563eb] hover:text-[#1d4ed8] transition-colors duration-150 font-medium mt-1 w-fit"
         >
-          {locale === "ja" ? "Google マップで見る →" : "View on Google Maps →"}
-          <span class="sr-only">{locale === "ja" ? "（新しいタブで開く）" : "(opens in new tab)"}</span>
+          {i.clubInfo.viewOnMap}
+          <span class="sr-only">{i.nav.openInNewTab}</span>
         </a>
       </div>
     </div>

@@ -1,0 +1,110 @@
+---
+import { t, type Locale } from "@/i18n";
+import TournamentYearFilter from "./TournamentYearFilter.svelte";
+
+interface Tournament {
+  title: string;
+  date: string;
+  status: "upcoming" | "results";
+  detailsPdf?: string;
+  resultsPdf?: string;
+  gamesPgn?: string;
+  year: number;
+}
+
+interface Props {
+  tournaments: Tournament[];
+  years: number[];
+  locale: Locale;
+}
+
+const { tournaments, years, locale } = Astro.props;
+const i = t(locale);
+---
+
+<TournamentYearFilter years={years} locale={locale} client:idle />
+
+<div class="flex flex-col gap-4">
+  {tournaments.map((tournament, idx) => {
+    const fileLinks = [
+      tournament.detailsPdf && { label: i.tournament.detailsPdf, href: tournament.detailsPdf, isPgn: false },
+      tournament.resultsPdf && { label: i.tournament.resultsPdf, href: tournament.resultsPdf, isPgn: false },
+      tournament.gamesPgn && { label: i.tournament.gamesPgn, href: tournament.gamesPgn, isPgn: true },
+    ].filter(Boolean) as { label: string; href: string; isPgn: boolean }[];
+
+    return (
+      <div
+        data-card-year={String(tournament.year)}
+        class="border border-[#f5f5f5] rounded-md p-4 animate-fade-in"
+      >
+        <p class="text-base font-semibold">{tournament.title}</p>
+        <p class="text-sm text-[#737373] mt-1">{tournament.date}</p>
+
+        {fileLinks.length > 0 && (
+          <div class="mt-3.5">
+            {fileLinks.map((link, linkIdx) => {
+              const rowClass = `flex items-center gap-1.5 py-3 px-2 -mx-2 rounded hover:bg-[#fafafa] transition-colors duration-150 ${linkIdx < fileLinks.length - 1 ? "border-b border-[#f5f5f5]" : ""}`;
+              if (link.isPgn) {
+                return (
+                  <a
+                    href={link.href}
+                    data-pgn-download
+                    aria-label={i.tournament.downloadAria(link.label)}
+                    class={rowClass}
+                  >
+                    <span class="text-sm">{link.label}</span>
+                    <span class="text-[#737373]" aria-hidden="true">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                        <polyline points="7 10 12 15 17 10" />
+                        <line x1="12" y1="15" x2="12" y2="3" />
+                      </svg>
+                    </span>
+                  </a>
+                );
+              }
+              return (
+                <a
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class={rowClass}
+                >
+                  <span class="text-sm">{link.label}</span>
+                  <span class="text-[#737373]" aria-hidden="true">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                      <polyline points="15 3 21 3 21 9" />
+                      <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                  </span>
+                </a>
+              );
+            })}
+          </div>
+        )}
+      </div>
+    );
+  })}
+</div>
+
+<script>
+  // PGN ダウンロードハンドラ: Content-Disposition を期待できないので fetch + Blob で download 属性を強制
+  document.querySelectorAll<HTMLAnchorElement>("[data-pgn-download]").forEach((a) => {
+    a.addEventListener("click", async (e) => {
+      e.preventDefault();
+      const filename = a.href.split("/").pop() || "game.pgn";
+      const res = await fetch(a.href);
+      const text = await res.text();
+      const blob = new Blob([text], { type: "application/octet-stream" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = filename;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+    });
+  });
+</script>
