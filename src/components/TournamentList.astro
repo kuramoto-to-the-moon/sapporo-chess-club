@@ -22,7 +22,7 @@ const { tournaments, years, locale } = Astro.props;
 const i = t(locale);
 ---
 
-<TournamentYearFilter years={years} locale={locale} client:idle />
+<TournamentYearFilter years={years} locale={locale} client:only="svelte" />
 
 <div class="flex flex-col gap-4">
   {tournaments.map((tournament, idx) => {

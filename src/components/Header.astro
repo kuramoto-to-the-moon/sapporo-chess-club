@@ -26,7 +26,7 @@ const tournamentsHref = getLocalePath(locale, "/tournaments");
   <div class="max-w-4xl mx-auto flex items-center justify-between px-5 pt-3 pb-2">
     <a
       href={homeHref}
-      class="text-xs tracking-[3px] text-[#737373] hover:text-[#171717] transition-colors duration-150"
+      class="text-xs tracking-[3px] text-[#737373] hover:text-[#2563eb] transition-colors duration-150"
       aria-label="Sapporo Chess Club — Home"
     >
       SAPPORO CHESS CLUB
@@ -52,7 +52,7 @@ const tournamentsHref = getLocalePath(locale, "/tournaments");
       <LanguageToggle locale={locale} path={currentPath} />
     </nav>
     <div class="md:hidden">
-      <HamburgerMenu locale={locale} currentPath={currentPath} client:load />
+      <HamburgerMenu locale={locale} currentPath={currentPath} client:only="svelte" />
     </div>
   </div>
 </header>
@@ -60,11 +60,11 @@ const tournamentsHref = getLocalePath(locale, "/tournaments");
 <script>
   import { observeScroll } from "@/lib/scroll-observer";
 
-  function init() {
-    const header = document.getElementById("site-header");
-    if (!header) return;
-
-    const topThreshold = 100;
+  // Astro <script> は type="module" でバンドルされるため DOM 解析後に実行される。
+  // よって getElementById は安全。
+  const header = document.getElementById("site-header");
+  if (header) {
+    const TOP_THRESHOLD = 100;
     let frozenUntil = 0;
 
     // アンカーリンクで in-page scroll する間は headroom を一時凍結する。
@@ -77,24 +77,14 @@ const tournamentsHref = getLocalePath(locale, "/tournaments");
     });
 
     observeScroll(({ y, direction, maxY }) => {
-      if (Date.now() < frozenUntil) {
+      // 凍結中・上端付近・最下端付近では state を変更しない
+      if (Date.now() < frozenUntil || y < TOP_THRESHOLD) {
         header.removeAttribute("data-state");
         return;
       }
-      if (y < topThreshold) {
-        header.removeAttribute("data-state");
-        return;
-      }
-      // 最下部付近では state を変更しない (ラバーバンド対策)
       if (y >= maxY - 4) return;
       if (direction === "down") header.dataset.state = "hidden";
       else if (direction === "up") header.removeAttribute("data-state");
     });
-  }
-
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", init);
-  } else {
-    init();
   }
 </script>
