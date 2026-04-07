@@ -5,6 +5,7 @@ title:
 date: "2017-03-25"
 status: "results"
 gamesPgn: "/competition/2017HokkaidoCh_PGN_NoAnalysis.pgn"
+gamesPgnAnnotated: "/competition/HokkaidoCh2017_Analysis.pgn"
 year: 2017
 sortOrder: 1
 ---

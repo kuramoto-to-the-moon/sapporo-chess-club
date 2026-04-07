@@ -1,5 +1,4 @@
 ---
-import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
 import { t, type Locale } from "@/i18n";
 import jcaLogo from "@/assets/jca-logo.webp";
@@ -11,8 +10,12 @@ interface Props {
 const { locale } = Astro.props;
 const i = t(locale);
 
-const linksData = await getCollection("links");
-const jcaLink = linksData[0]?.data.links?.[0] ?? null;
+// 日本チェス連盟はクラブの所属する固定パートナーで変わることがないため、
+// 外部リンクコレクションとは分離してここに直書きする。
+const jcaLink = {
+  url: "https://japanchess.org/",
+  title: { ja: "日本チェス連盟", en: "Japan Chess Federation" },
+};
 ---
 
 <footer class="border-t border-[#f5f5f5]" aria-label="Site footer">
@@ -31,8 +34,7 @@ const jcaLink = linksData[0]?.data.links?.[0] ?? null;
         <span>@SapporoChess</span>
         <span class="sr-only">{i.nav.openInNewTab}</span>
       </a>
-      {jcaLink && (
-        <a
+      <a
           href={jcaLink.url}
           target="_blank"
           rel="noopener noreferrer"
@@ -42,7 +44,6 @@ const jcaLink = linksData[0]?.data.links?.[0] ?? null;
           <span>{jcaLink.title[locale]}</span>
           <span class="sr-only">{i.nav.openInNewTab}</span>
         </a>
-      )}
     </div>
   </div>
 </footer>

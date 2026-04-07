@@ -6,6 +6,7 @@ date: "2020-03-21"
 status: "results"
 resultsPdf: "/competition/2020HokkaidoSenshuken.pdf"
 gamesPgn: "/competition/HokkaidoCh2020_NoAnalysis.pgn"
+gamesPgnAnnotated: "/competition/HokkaidoCh2020_Analysis.pgn"
 year: 2020
 sortOrder: 1
 ---

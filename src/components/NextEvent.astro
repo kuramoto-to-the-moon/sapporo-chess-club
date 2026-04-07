@@ -1,6 +1,6 @@
 ---
 import { t, type Locale } from "@/i18n";
-import { parseDate, startOfTodayJST, getDateParts } from "@/lib/date";
+import { getDateParts, getDayOfWeek } from "@/lib/date";
 import { getEventName } from "@/lib/schedule";
 import { getUpcomingScheduleDates } from "@/lib/schedule-data";
 
@@ -11,18 +11,14 @@ interface Props {
 const { locale } = Astro.props;
 const i = t(locale);
 
-const dates = await getUpcomingScheduleDates();
-const today = startOfTodayJST();
-const next = dates
-  .filter((d) => parseDate(d.date) >= today)
-  .sort((a, b) => parseDate(a.date).getTime() - parseDate(b.date).getTime())[0];
-
+// getUpcomingScheduleDates は既に JST today 以降 / 昇順ソート済み
+const [next] = await getUpcomingScheduleDates(1);
 const parts = next ? getDateParts(next.date) : null;
 const isTournament = next?.type === "tournament";
 const title = next
   ? isTournament
     ? getEventName(next, locale)
-    : `${next.dayOfWeek[locale]}${i.schedule.dayOfWeekSuffix}`
+    : `${getDayOfWeek(next.date, locale)}${i.schedule.dayOfWeekSuffix}`
   : "";
 ---
 

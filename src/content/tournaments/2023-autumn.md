@@ -6,6 +6,7 @@ date: "2023-10-08"
 status: "results"
 resultsPdf: "/competition/SapporoAutumn2023.pdf"
 gamesPgn: "/competition/SapporoAutumn2023_NoAnalysis.pgn"
+gamesPgnAnnotated: "/competition/SapporoAutumn2023_Analysis.pgn"
 year: 2023
 sortOrder: 3
 ---

@@ -48,8 +48,6 @@ export default {
   },
   clubInfo: {
     fee: "参加案内",
-    feeGeneral: "一般1,000円",
-    feeStudent: "学生500円",
     venue: "会場",
     general: "一般",
     students: "学生",
@@ -60,8 +58,9 @@ export default {
   lessons: {
     label: "チェス講座",
   },
-  links: {
-    label: "リンク",
+  resources: {
+    label: "リンク / 資料",
+    pamphlet: "クラブ案内 (PDF)",
   },
   contact: {
     label: "お問い合わせ",
@@ -73,6 +72,7 @@ export default {
     detailsPdf: "要項 PDF",
     resultsPdf: "結果 PDF",
     gamesPgn: "棋譜 PGN",
+    gamesPgnAnnotated: "棋譜 PGN (解析付)",
     downloadAria: (label: string) => `${label}をダウンロード`,
   },
   application: {
@@ -108,15 +108,8 @@ export default {
     },
   },
   badge: {
-    open: "申込受付中",
-    results: "結果",
-    closed: "申込締切",
-    upcoming: "予定",
     tournamentTag: "大会",
     meetingTag: "例会",
-  },
-  footer: {
-    top: "↑ TOP",
   },
   menu: {
     sectionLabel: "セクション",

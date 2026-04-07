@@ -6,6 +6,7 @@ date: "2022-07-17"
 status: "results"
 resultsPdf: "/competition/SapporoSummer2022.pdf"
 gamesPgn: "/competition/SapporoSummer2022NoAnasysis.pgn"
+gamesPgnAnnotated: "/competition/SapporoSummer2022Anasysis.pgn"
 year: 2022
 sortOrder: 2
 ---

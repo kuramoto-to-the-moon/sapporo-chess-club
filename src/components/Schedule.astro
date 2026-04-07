@@ -1,6 +1,6 @@
 ---
 import { t, getLocalePath, type Locale } from "@/i18n";
-import { parseDate, getDateParts } from "@/lib/date";
+import { getDateParts, getDayOfWeek } from "@/lib/date";
 import { getEventName } from "@/lib/schedule";
 import { getUpcomingScheduleDates } from "@/lib/schedule-data";
 
@@ -12,9 +12,7 @@ const { locale } = Astro.props;
 const i = t(locale);
 const scheduleHref = getLocalePath(locale, "/schedule");
 
-const upcoming = (await getUpcomingScheduleDates(5)).sort(
-  (a, b) => parseDate(a.date).getTime() - parseDate(b.date).getTime()
-);
+const upcoming = await getUpcomingScheduleDates(5);
 ---
 
 <section id="schedule" class="px-5 py-6">
@@ -39,7 +37,7 @@ const upcoming = (await getUpcomingScheduleDates(5)).sort(
                 <span class={`text-2xl font-bold leading-none ${isTournament ? "text-[#2563eb]" : "text-[#171717]"}`}>
                   {parts.month}/{parts.day}
                 </span>
-                <span class="text-xs text-[#737373]">({date.dayOfWeek[locale]})</span>
+                <span class="text-xs text-[#737373]">({getDayOfWeek(date.date, locale)})</span>
               </div>
               <div class="flex-1">
                 <p class="text-sm font-semibold flex items-center gap-2 flex-wrap">

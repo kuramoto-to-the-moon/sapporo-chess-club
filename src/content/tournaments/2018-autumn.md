@@ -5,6 +5,7 @@ title:
 date: "2018-10-07"
 status: "results"
 gamesPgn: "/competition/SapporoAutumn2018_pgn_NOAnalysis.pgn"
+gamesPgnAnnotated: "/competition/SapporoAutumn2018_pgn_Analysis.pgn"
 year: 2018
 sortOrder: 3
 ---

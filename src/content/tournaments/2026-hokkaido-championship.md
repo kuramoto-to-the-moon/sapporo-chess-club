@@ -6,6 +6,7 @@ date: "2026-03-21"
 status: "results"
 resultsPdf: "/competition/HokkaidoChessCh2026_V1.0.pdf"
 gamesPgn: "/competition/HokkaidoChessCh2026_NoAnalysis.pgn"
+gamesPgnAnnotated: "/competition/HokkaidoChessCh2026_Analysis.pgn"
 year: 2026
 sortOrder: 1
 ---

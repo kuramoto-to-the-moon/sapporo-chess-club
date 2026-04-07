@@ -48,8 +48,6 @@ export default {
   },
   clubInfo: {
     fee: "Entry Fee",
-    feeGeneral: "General ¥1,000",
-    feeStudent: "Students ¥500",
     venue: "Venue",
     general: "General",
     students: "Students",
@@ -60,8 +58,9 @@ export default {
   lessons: {
     label: "Chess Lessons",
   },
-  links: {
-    label: "Links",
+  resources: {
+    label: "Links & Resources",
+    pamphlet: "Club Pamphlet (PDF)",
   },
   contact: {
     label: "Contact",
@@ -73,6 +72,7 @@ export default {
     detailsPdf: "Details PDF",
     resultsPdf: "Results PDF",
     gamesPgn: "Game Records PGN",
+    gamesPgnAnnotated: "Game Records PGN (Annotated)",
     downloadAria: (label: string) => `${label} download`,
   },
   application: {
@@ -108,15 +108,8 @@ export default {
     },
   },
   badge: {
-    open: "Open",
-    results: "Results",
-    closed: "Closed",
-    upcoming: "Upcoming",
     tournamentTag: "Tournament",
     meetingTag: "Meeting",
-  },
-  footer: {
-    top: "↑ TOP",
   },
   menu: {
     sectionLabel: "Sections",
