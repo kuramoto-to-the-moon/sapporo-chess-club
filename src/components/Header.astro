@@ -1,5 +1,5 @@
 ---
-import HamburgerMenu from "./HamburgerMenu.astro";
+import HamburgerMenu from "./HamburgerMenu.svelte";
 import LanguageToggle from "./LanguageToggle.astro";
 import { t, getLocalePath, type Locale } from "@/i18n";
 
@@ -23,7 +23,7 @@ const tournamentsHref = getLocalePath(locale, "/tournaments");
   class="sticky top-0 z-30 border-b border-[#f5f5f5] bg-white/95 backdrop-blur-sm transition-transform duration-500 ease-in-out data-[state=hidden]:-translate-y-full"
   aria-label="Site header"
 >
-  <div class="max-w-4xl mx-auto flex items-center justify-between px-5 py-2">
+  <div class="max-w-4xl mx-auto flex items-center justify-between px-5 pt-3 pb-2">
     <a
       href={homeHref}
       class="text-xs tracking-[3px] text-[#737373] hover:text-[#171717] transition-colors duration-150"
@@ -52,7 +52,7 @@ const tournamentsHref = getLocalePath(locale, "/tournaments");
       <LanguageToggle locale={locale} path={currentPath} />
     </nav>
     <div class="md:hidden">
-      <HamburgerMenu locale={locale} currentPath={currentPath} />
+      <HamburgerMenu locale={locale} currentPath={currentPath} client:load />
     </div>
   </div>
 </header>
@@ -60,10 +60,27 @@ const tournamentsHref = getLocalePath(locale, "/tournaments");
 <script>
   import { observeScroll } from "@/lib/scroll-observer";
 
-  const header = document.getElementById("site-header");
-  if (header) {
+  function init() {
+    const header = document.getElementById("site-header");
+    if (!header) return;
+
     const topThreshold = 100;
+    let frozenUntil = 0;
+
+    // アンカーリンクで in-page scroll する間は headroom を一時凍結する。
+    // (下スクロールでヘッダーが消えると scroll-padding-top の補正が無駄になり、
+    //  セクション位置が浮いて見えるため)
+    window.addEventListener("headroom:freeze", (e) => {
+      const ms = (e as CustomEvent<{ ms?: number }>).detail?.ms ?? 700;
+      frozenUntil = Date.now() + ms;
+      header.removeAttribute("data-state");
+    });
+
     observeScroll(({ y, direction, maxY }) => {
+      if (Date.now() < frozenUntil) {
+        header.removeAttribute("data-state");
+        return;
+      }
       if (y < topThreshold) {
         header.removeAttribute("data-state");
         return;
@@ -73,5 +90,11 @@ const tournamentsHref = getLocalePath(locale, "/tournaments");
       if (direction === "down") header.dataset.state = "hidden";
       else if (direction === "up") header.removeAttribute("data-state");
     });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
   }
 </script>
