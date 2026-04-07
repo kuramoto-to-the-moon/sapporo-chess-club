@@ -65,20 +65,40 @@ const tournamentsHref = getLocalePath(locale, "/tournaments");
   const header = document.getElementById("site-header");
   if (header) {
     const TOP_THRESHOLD = 100;
-    let frozenUntil = 0;
+    // STABLE_FRAMES 連続でスクロール位置が変化しなかったら「移動完了」と判定
+    const STABLE_FRAMES = 5;
 
     // アンカーリンクで in-page scroll する間は headroom を一時凍結する。
     // (下スクロールでヘッダーが消えると scroll-padding-top の補正が無駄になり、
     //  セクション位置が浮いて見えるため)
-    window.addEventListener("headroom:freeze", (e) => {
-      const ms = (e as CustomEvent<{ ms?: number }>).detail?.ms ?? 700;
-      frozenUntil = Date.now() + ms;
+    let frozen = false;
+    window.addEventListener("headroom:freeze", () => {
+      if (frozen) return;
+      frozen = true;
       header.removeAttribute("data-state");
+      // requestAnimationFrame でスクロール位置が安定するまで待ち、
+      // 安定したら凍結解除 (時間ベースではなく実際の移動完了を待つ)
+      let lastY = window.scrollY;
+      let stable = 0;
+      const tick = () => {
+        const y = window.scrollY;
+        if (y === lastY) {
+          if (++stable >= STABLE_FRAMES) {
+            frozen = false;
+            return;
+          }
+        } else {
+          stable = 0;
+          lastY = y;
+        }
+        requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
     });
 
     observeScroll(({ y, direction, maxY }) => {
-      // 凍結中・上端付近・最下端付近では state を変更しない
-      if (Date.now() < frozenUntil || y < TOP_THRESHOLD) {
+      // 凍結中・上端付近では state を変更しない
+      if (frozen || y < TOP_THRESHOLD) {
         header.removeAttribute("data-state");
         return;
       }

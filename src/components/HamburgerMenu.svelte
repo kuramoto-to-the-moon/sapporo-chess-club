@@ -42,8 +42,9 @@
     if (!href.startsWith("#")) return;
     isOpen = false;
     // ヘッダー headroom を一時凍結 → アンカー先まで下スクロール中も
-    // ヘッダーが消えず、scroll-padding-top の補正が無駄にならない
-    window.dispatchEvent(new CustomEvent("headroom:freeze", { detail: { ms: 700 } }));
+    // ヘッダーが消えず、scroll-padding-top の補正が無駄にならない。
+    // 凍結はヘッダー側がスクロール位置の安定を検知した瞬間に自動解除される。
+    window.dispatchEvent(new CustomEvent("headroom:freeze"));
   }
 </script>
 
