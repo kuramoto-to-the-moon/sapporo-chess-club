@@ -82,9 +82,9 @@ export default function HamburgerMenu({ locale, currentPath }: Props) {
               style={{ animationDelay: `${idx * 0.05}s` }}
               aria-current={page.href === getLocalePath(locale, currentPath) ? "page" : undefined}
             >
-              <span className="text-4xl font-light group-hover:text-white transition-colors duration-150 inline-flex items-center gap-3">
+              <span className="text-4xl font-light [@media(hover:hover)]:group-hover:text-white transition-colors duration-150 inline-flex items-center gap-3">
                 {page.label}
-                <span className="text-2xl text-[#d4d4d4] group-hover:text-white group-hover:translate-x-2 transition-all duration-150" aria-hidden="true">→</span>
+                <span className="text-2xl text-[#d4d4d4] [@media(hover:hover)]:group-hover:text-white [@media(hover:hover)]:group-hover:translate-x-2 transition-all duration-150" aria-hidden="true">→</span>
               </span>
               <span className="block text-xs tracking-[1px] text-[#d4d4d4] mt-1">
                 {page.sub}
@@ -107,11 +107,11 @@ export default function HamburgerMenu({ locale, currentPath }: Props) {
                   // ページ遷移するアンカーは閉じない (アンマウントされる + 閉じアニメで遷移先がチラつくため)
                   if (anchor.href.startsWith("#")) setIsOpen(false);
                 }}
-                className="group flex items-center gap-2 text-sm text-[#d4d4d4] hover:text-[#fafafa] transition-colors duration-150 animate-fade-in-up"
+                className="group flex items-center gap-2 text-sm text-[#d4d4d4] [@media(hover:hover)]:hover:text-[#fafafa] transition-colors duration-150 animate-fade-in-up"
                 style={{ animationDelay: `${(pages.length + idx) * 0.05}s` }}
               >
                 {anchor.label}
-                <span className="opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-150" aria-hidden="true">→</span>
+                <span className="opacity-0 [@media(hover:hover)]:group-hover:opacity-100 [@media(hover:hover)]:group-hover:translate-x-1 transition-all duration-150" aria-hidden="true">→</span>
               </a>
             ))}
           </div>
