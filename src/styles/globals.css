@@ -203,15 +203,16 @@
 .stagger-2 { animation-delay: 0.1s; }
 .stagger-3 { animation-delay: 0.15s; }
 
-/* Global focus-visible styles for keyboard navigation */
-:focus-visible {
-  outline: 2px solid #2563eb;
-  outline-offset: 2px;
-}
-
-/* Suppress focus ring for mouse users, show for keyboard */
-:focus:not(:focus-visible) {
-  outline: none;
+@layer base {
+  /* キーボードフォーカスのみリングを表示。Tailwind utilities が
+   * 上書きできるよう @layer base に置く。 */
+  :focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+  }
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
