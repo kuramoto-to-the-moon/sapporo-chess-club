@@ -1,4 +1,5 @@
 import { t, type Locale } from "@/i18n";
+import { parseDate, startOfTodayJST, getDateParts } from "@/lib/date";
 
 interface ScheduleDate {
   date: string;
@@ -20,11 +21,11 @@ interface Props {
 
 export default function UpcomingScheduleList({ dates, locale, scheduleHref }: Props) {
   const i = t(locale);
-  const now = new Date();
+  const today = startOfTodayJST();
 
   const upcoming = dates
-    .filter((d) => new Date(d.date) >= now)
-    .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
+    .filter((d) => parseDate(d.date) >= today)
+    .sort((a, b) => parseDate(a.date).getTime() - parseDate(b.date).getTime())
     .slice(0, 5);
 
   if (upcoming.length === 0) {
@@ -39,9 +40,7 @@ export default function UpcomingScheduleList({ dates, locale, scheduleHref }: Pr
     <>
       <ul className="flex flex-col">
         {upcoming.map((date, idx) => {
-          const d = new Date(date.date);
-          const month = d.getMonth() + 1;
-          const day = d.getDate();
+          const { month, day } = getDateParts(date.date);
           const isTournament = date.type === "tournament";
           return (
             <li

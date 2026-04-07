@@ -83,6 +83,6 @@ const ogImage = new URL(`${base}/images/og.png`, Astro.site).toString();
       <slot />
     </main>
     <Footer locale={locale} />
-    {!isHome && <ScrollTop client:load />}
+    {!isHome && <ScrollTop client:idle />}
   </body>
 </html>

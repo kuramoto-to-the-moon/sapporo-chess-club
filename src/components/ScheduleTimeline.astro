@@ -1,6 +1,7 @@
 ---
 import { t, type Locale } from "@/i18n";
 import ApplicationForm from "@/components/ApplicationForm.tsx";
+import { parseDate, getDateParts } from "@/lib/date";
 
 interface ScheduleDate {
   date: string;
@@ -35,27 +36,30 @@ type ApplicationState =
 function getApplicationState(date: ScheduleDate): ApplicationState {
   if (!date.formspreeId) return { kind: "none" };
   if (date.applicationOpenFrom) {
-    const opensOn = new Date(date.applicationOpenFrom);
+    const opensOn = parseDate(date.applicationOpenFrom);
     if (now < opensOn) return { kind: "before", opensOn };
   }
   if (date.applicationCloseAt) {
-    // closeAt is inclusive of the entire day
-    const closeAt = new Date(date.applicationCloseAt);
-    closeAt.setHours(23, 59, 59, 999);
+    // closeAt is inclusive of the entire day (JST 23:59:59)
+    const closeAt = parseDate(date.applicationCloseAt);
+    closeAt.setTime(closeAt.getTime() + 24 * 60 * 60 * 1000 - 1);
     if (now > closeAt) return { kind: "closed" };
   }
   return { kind: "open" };
 }
 
 function formatMonthDay(d: Date): string {
-  const m = d.getMonth() + 1;
-  const day = d.getDate();
-  return locale === "ja" ? `${m}月${day}日` : d.toLocaleDateString("en", { month: "short", day: "numeric" });
+  const fmt = new Intl.DateTimeFormat(locale === "ja" ? "ja-JP" : "en-US", {
+    timeZone: "Asia/Tokyo",
+    month: locale === "ja" ? "numeric" : "short",
+    day: "numeric",
+  });
+  return fmt.format(d);
 }
 
 function getMonthKey(dateStr: string): string {
-  const d = new Date(dateStr);
-  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}`;
+  const { year, month } = getDateParts(dateStr);
+  return `${year}-${String(month).padStart(2, "0")}`;
 }
 
 const monthMap = new Map<string, ScheduleDate[]>();
@@ -71,8 +75,12 @@ function formatMonthHeading(monthKey: string): string {
   if (locale === "ja") {
     return `${year}年 ${parseInt(month)}月`;
   }
-  const d = new Date(`${monthKey}-01`);
-  return d.toLocaleDateString("en", { year: "numeric", month: "long" });
+  const d = parseDate(`${monthKey}-01`);
+  return new Intl.DateTimeFormat("en-US", {
+    timeZone: "Asia/Tokyo",
+    year: "numeric",
+    month: "long",
+  }).format(d);
 }
 ---
 
@@ -84,8 +92,7 @@ function formatMonthHeading(monthKey: string): string {
       </h3>
       <ul class="flex flex-col">
         {monthDates.map((date) => {
-          const d = new Date(date.date);
-          const day = d.getDate();
+          const { day } = getDateParts(date.date);
           const isTournament = date.type === "tournament";
           return (
             <li class="flex items-start gap-4 py-3 border-b border-[#f5f5f5] last:border-0">

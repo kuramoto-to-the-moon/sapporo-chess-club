@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import NextEventClient from "./NextEvent.tsx";
 import type { Locale } from "@/i18n";
+import { parseDate } from "@/lib/date";
 
 interface Props {
   locale: Locale;
@@ -12,7 +13,7 @@ const { locale } = Astro.props;
 const scheduleData = await getCollection("schedule");
 const dates = scheduleData
   .flatMap((s) => s.data.dates)
-  .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+  .sort((a, b) => parseDate(a.date).getTime() - parseDate(b.date).getTime());
 ---
 
 <NextEventClient dates={dates} locale={locale} client:only="react" />
