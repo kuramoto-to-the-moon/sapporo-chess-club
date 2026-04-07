@@ -1,14 +1,15 @@
 ---
 import NextEventClient from "./NextEvent.svelte";
 import type { Locale } from "@/i18n";
-import { getSortedScheduleDates } from "@/lib/schedule-data";
+import { getUpcomingScheduleDates } from "@/lib/schedule-data";
 
 interface Props {
   locale: Locale;
 }
 
 const { locale } = Astro.props;
-const dates = await getSortedScheduleDates();
+// 次の 1 件だけ表示するが、再 build 間の staleness 吸収のため少し余裕を持って渡す
+const dates = await getUpcomingScheduleDates(5);
 ---
 
 <NextEventClient dates={dates} locale={locale} client:idle />
