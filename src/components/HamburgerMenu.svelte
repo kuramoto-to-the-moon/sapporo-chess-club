@@ -15,19 +15,20 @@
   let { locale, currentPath }: Props = $props();
   let isOpen = $state(false);
 
+  const i = t(locale);
   const otherLocale: Locale = locale === "ja" ? "en" : "ja";
   const otherPath = getLocalePath(otherLocale, currentPath);
-  const i = t(locale);
+
+  const homeHref = getLocalePath(locale, "/");
+  const currentHref = getLocalePath(locale, currentPath);
+  const isHome = currentPath === "/" || currentPath === "";
+  const anchorHref = (id: string) => (isHome ? `#${id}` : `${homeHref}#${id}`);
 
   const pages = [
-    { label: i.nav.home, sub: i.sections.home, href: getLocalePath(locale, "/") },
+    { label: i.nav.home, sub: i.sections.home, href: homeHref },
     { label: i.schedule.label, sub: "SCHEDULE", href: getLocalePath(locale, "/schedule") },
     { label: i.nav.tournaments, sub: i.sections.tournaments, href: getLocalePath(locale, "/tournaments") },
   ];
-
-  const homeHref = getLocalePath(locale, "/");
-  const isHome = currentPath === "/" || currentPath === "";
-  const anchorHref = (id: string) => (isHome ? `#${id}` : `${homeHref}#${id}`);
 
   const anchors = [
     { label: i.menu.schedule, href: anchorHref("schedule") },
@@ -42,9 +43,7 @@
     isOpen = false;
     // ヘッダー headroom を一時凍結 → アンカー先まで下スクロール中も
     // ヘッダーが消えず、scroll-padding-top の補正が無駄にならない
-    window.dispatchEvent(
-      new CustomEvent("headroom:freeze", { detail: { ms: 700 } })
-    );
+    window.dispatchEvent(new CustomEvent("headroom:freeze", { detail: { ms: 700 } }));
   }
 </script>
 
@@ -57,8 +56,8 @@
   class="relative inline-flex items-center justify-center w-10 h-10 -mr-2 cursor-pointer focus-visible:outline-none active:opacity-60 transition-opacity before:content-[''] before:absolute before:-inset-2"
 >
   <span class="flex flex-col items-center justify-center gap-[6px]" aria-hidden="true">
-    <span class="block w-6 h-[2px] bg-[#171717]"></span>
-    <span class="block w-6 h-[2px] bg-[#171717]"></span>
+    <span class="w-6 h-[2px] bg-[#171717]"></span>
+    <span class="w-6 h-[2px] bg-[#171717]"></span>
   </span>
 </button>
 
@@ -72,9 +71,13 @@
     <SheetTitle class="sr-only">Navigation menu</SheetTitle>
 
     <div class="w-full max-w-4xl mx-auto flex items-center justify-between px-5 pt-3 pb-2">
-      <span class="text-xs tracking-[3px] text-[#737373]" aria-hidden="true">
+      <a
+        href={homeHref}
+        class="text-xs tracking-[3px] text-[#737373] hover:text-[#fafafa] transition-colors duration-150"
+        aria-label="Sapporo Chess Club — Home"
+      >
         SAPPORO CHESS CLUB
-      </span>
+      </a>
       <SheetClose
         aria-label="Close navigation menu"
         class="relative inline-flex items-center justify-center w-10 h-10 -mr-2 text-[#fafafa] cursor-pointer rounded focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#fafafa] before:content-[''] before:absolute before:-inset-2"
@@ -104,7 +107,7 @@
           data-astro-prefetch
           class="group block mb-6 animate-fade-in-up"
           style="animation-delay: {idx * 0.05}s"
-          aria-current={page.href === getLocalePath(locale, currentPath) ? "page" : undefined}
+          aria-current={page.href === currentHref ? "page" : undefined}
         >
           <span class="text-4xl font-light [@media(hover:hover)]:group-hover:text-white transition-colors duration-150 inline-flex items-center gap-3">
             {page.label}
@@ -116,7 +119,7 @@
         </a>
       {/each}
 
-      <div class="border-t border-[#2a2a2a] my-5" role="separator"></div>
+      <hr class="border-0 border-t border-[#2a2a2a] my-5" />
 
       <p class="text-xs uppercase tracking-wider text-[#737373] mb-3">
         {i.menu.sectionLabel}
