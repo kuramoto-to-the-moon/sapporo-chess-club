@@ -67,7 +67,7 @@
     side="full"
     showCloseButton={false}
     onCloseAutoFocus={(e) => e.preventDefault()}
-    class="bg-[#171717] text-[#fafafa] border-0 p-0 [@media(display-mode:standalone)]:pb-[env(safe-area-inset-bottom)]"
+    class="bg-[#171717] text-[#fafafa] border-0 p-0 gap-0 flex flex-col"
   >
     <SheetTitle class="sr-only">Navigation menu</SheetTitle>
 
@@ -101,7 +101,7 @@
       </SheetClose>
     </div>
 
-    <nav class="w-full max-w-4xl mx-auto px-5 pt-8" aria-label="Main navigation">
+    <nav class="flex-1 w-full max-w-4xl mx-auto px-5 pt-8 overflow-y-auto" aria-label="Main navigation">
       {#each pages as page, idx (page.href)}
         <a
           href={page.href}
@@ -140,7 +140,7 @@
       </div>
     </nav>
 
-    <div class="absolute bottom-0 left-0 right-0 border-t border-[#2a2a2a] [@media(display-mode:standalone)]:pb-[env(safe-area-inset-bottom)]">
+    <div class="border-t border-[#2a2a2a] [@media(display-mode:standalone)]:pb-[env(safe-area-inset-bottom)]">
       <div class="max-w-4xl mx-auto px-5 py-4 flex items-center justify-between">
         <a
           href="mailto:sapporochessclub@gmail.com"
