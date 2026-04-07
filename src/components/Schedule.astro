@@ -19,5 +19,5 @@ const scheduleHref = getLocalePath(locale, "/schedule");
     <span class="inline-block w-1 h-3 bg-[#2563eb]"></span>
     {i.schedule.label}
   </h2>
-  <UpcomingScheduleList dates={dates} locale={locale} scheduleHref={scheduleHref} client:only="svelte" />
+  <UpcomingScheduleList dates={dates} locale={locale} scheduleHref={scheduleHref} client:idle />
 </section>

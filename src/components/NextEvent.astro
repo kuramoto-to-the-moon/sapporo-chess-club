@@ -11,4 +11,4 @@ const { locale } = Astro.props;
 const dates = await getSortedScheduleDates();
 ---
 
-<NextEventClient dates={dates} locale={locale} client:only="svelte" />
+<NextEventClient dates={dates} locale={locale} client:idle />
