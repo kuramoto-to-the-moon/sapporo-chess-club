@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { onMount } from "svelte";
   import { t, getLocalePath, type Locale } from "@/i18n";
   import {
     Sheet,
@@ -11,27 +10,10 @@
   interface Props {
     locale: Locale;
     currentPath: string;
-    /** 外部のトリガーボタン。aria-expanded 同期 + open イベントの購読に使う */
-    trigger?: HTMLElement;
   }
 
-  let { locale, currentPath, trigger }: Props = $props();
-
-  // 動的 mount された直後に自動で開く
-  let isOpen = $state(true);
-
-  // 外部トリガーから「開け」と言われたら開く
-  onMount(() => {
-    if (!trigger) return;
-    const handler = () => (isOpen = true);
-    trigger.addEventListener("hamburger-open", handler);
-    return () => trigger.removeEventListener("hamburger-open", handler);
-  });
-
-  // open 状態をトリガーの aria-expanded に反映
-  $effect(() => {
-    if (trigger) trigger.setAttribute("aria-expanded", String(isOpen));
-  });
+  let { locale, currentPath }: Props = $props();
+  let isOpen = $state(false);
 
   const otherLocale: Locale = locale === "ja" ? "en" : "ja";
   const otherPath = getLocalePath(otherLocale, currentPath);
@@ -54,27 +36,48 @@
     { label: i.menu.lessons, href: anchorHref("lessons") },
     { label: i.menu.contact, href: anchorHref("contact") },
   ];
+
+  function handleAnchorClick(href: string) {
+    if (!href.startsWith("#")) return;
+    isOpen = false;
+    // ヘッダー headroom を一時凍結 → アンカー先まで下スクロール中も
+    // ヘッダーが消えず、scroll-padding-top の補正が無駄にならない
+    window.dispatchEvent(
+      new CustomEvent("headroom:freeze", { detail: { ms: 700 } })
+    );
+  }
 </script>
+
+<button
+  type="button"
+  onclick={() => (isOpen = true)}
+  aria-label="Open navigation menu"
+  aria-haspopup="dialog"
+  aria-expanded={isOpen}
+  class="relative inline-flex items-center justify-center w-10 h-10 -mr-2 cursor-pointer focus-visible:outline-none active:opacity-60 transition-opacity before:content-[''] before:absolute before:-inset-2"
+>
+  <span class="flex flex-col items-center justify-center gap-[6px]" aria-hidden="true">
+    <span class="block w-6 h-[2px] bg-[#171717]"></span>
+    <span class="block w-6 h-[2px] bg-[#171717]"></span>
+  </span>
+</button>
 
 <Sheet bind:open={isOpen} preventScroll={false}>
   <SheetContent
     side="full"
     showCloseButton={false}
-    onCloseAutoFocus={(e) => {
-      e.preventDefault();
-      trigger?.focus({ preventScroll: true });
-    }}
+    onCloseAutoFocus={(e) => e.preventDefault()}
     class="bg-[#171717] text-[#fafafa] border-0 p-0 [@media(display-mode:standalone)]:pb-[env(safe-area-inset-bottom)]"
   >
     <SheetTitle class="sr-only">Navigation menu</SheetTitle>
 
-    <div class="w-full max-w-4xl mx-auto flex items-center justify-between px-5 py-2">
+    <div class="w-full max-w-4xl mx-auto flex items-center justify-between px-5 pt-3 pb-2">
       <span class="text-xs tracking-[3px] text-[#737373]" aria-hidden="true">
         SAPPORO CHESS CLUB
       </span>
       <SheetClose
         aria-label="Close navigation menu"
-        class="inline-flex items-center justify-center w-10 h-10 -mr-2 text-[#fafafa] cursor-pointer rounded focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#fafafa]"
+        class="relative inline-flex items-center justify-center w-10 h-10 -mr-2 text-[#fafafa] cursor-pointer rounded focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#fafafa] before:content-[''] before:absolute before:-inset-2"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -122,9 +125,7 @@
         {#each anchors as anchor, idx (anchor.href)}
           <a
             href={anchor.href}
-            onclick={() => {
-              if (anchor.href.startsWith("#")) isOpen = false;
-            }}
+            onclick={() => handleAnchorClick(anchor.href)}
             class="group flex items-center gap-2 text-sm text-[#d4d4d4] [@media(hover:hover)]:hover:text-[#fafafa] transition-colors duration-150 animate-fade-in-up"
             style="animation-delay: {(pages.length + idx) * 0.05}s"
           >
