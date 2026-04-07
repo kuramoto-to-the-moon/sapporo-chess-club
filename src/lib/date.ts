@@ -36,6 +36,20 @@ export function startOfTodayJST(): Date {
  * Date オブジェクトを介さないのでタイムゾーンの影響を受けない。
  * 完全な ISO の場合は parseDate 経由で JST 換算した日付を返す。
  */
+/**
+ * "2026-04-15" のような date 文字列から曜日を返す。
+ * JST のカレンダー日として解釈し、locale に応じた短縮表記を返す。
+ * 例: ja → "日" / "月" / "火" ..., en → "Sun" / "Mon" / "Tue" ...
+ */
+export function getDayOfWeek(s: string, locale: "ja" | "en"): string {
+  const fmt = new Intl.DateTimeFormat(locale === "ja" ? "ja-JP" : "en-US", {
+    timeZone: "Asia/Tokyo",
+    weekday: "short",
+  });
+  // "月曜日" → "月" のため ja は 1 文字に切り詰める (Intl の ja-JP short は "月" を返すので実質そのまま)
+  return fmt.format(parseDate(s));
+}
+
 export function getDateParts(s: string): { year: number; month: number; day: number } {
   const dateOnly = /^\d{4}-\d{2}-\d{2}$/.test(s);
   if (dateOnly) {

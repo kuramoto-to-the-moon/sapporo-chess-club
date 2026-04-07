@@ -2,7 +2,6 @@ import { t, type Locale } from "@/i18n";
 
 export interface ScheduleDate {
   date: string;
-  dayOfWeek: { ja: string; en: string };
   startTime: string;
   endTime: string;
   room: string;

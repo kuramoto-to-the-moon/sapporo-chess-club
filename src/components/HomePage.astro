@@ -1,0 +1,30 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Hero from "@/components/Hero.astro";
+import NextEvent from "@/components/NextEvent.astro";
+import Activities from "@/components/Activities.astro";
+import Schedule from "@/components/Schedule.astro";
+import ClubInfo from "@/components/ClubInfo.astro";
+import ChessLessons from "@/components/ChessLessons.astro";
+import Resources from "@/components/Resources.astro";
+import Contact from "@/components/Contact.astro";
+import { t, type Locale } from "@/i18n";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const i = t(locale);
+---
+
+<BaseLayout title={i.nav.home} locale={locale}>
+  <Hero locale={locale} />
+  <NextEvent locale={locale} />
+  <Activities locale={locale} />
+  <Schedule locale={locale} />
+  <ClubInfo locale={locale} />
+  <ChessLessons locale={locale} />
+  <Resources locale={locale} />
+  <Contact locale={locale} />
+</BaseLayout>

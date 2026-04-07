@@ -35,6 +35,7 @@
     { label: i.menu.activities, href: anchorHref("activities") },
     { label: i.menu.info, href: anchorHref("info") },
     { label: i.menu.lessons, href: anchorHref("lessons") },
+    { label: i.menu.links, href: anchorHref("links") },
     { label: i.menu.contact, href: anchorHref("contact") },
   ];
 
@@ -101,31 +102,31 @@
       </SheetClose>
     </div>
 
-    <nav class="flex-1 w-full max-w-4xl mx-auto px-5 pt-8 overflow-y-auto" aria-label="Main navigation">
+    <nav class="flex-1 w-full max-w-4xl mx-auto px-5 pt-5 overflow-y-auto" aria-label="Main navigation">
       {#each pages as page, idx (page.href)}
         <a
           href={page.href}
           data-astro-prefetch
-          class="group block mb-6 animate-fade-in-up"
+          class="group block mb-4 animate-fade-in-up"
           style="animation-delay: {idx * 0.05}s"
           aria-current={page.href === currentHref ? "page" : undefined}
         >
-          <span class="text-4xl font-light [@media(hover:hover)]:group-hover:text-white transition-colors duration-150 inline-flex items-center gap-3">
+          <span class="text-3xl font-light [@media(hover:hover)]:group-hover:text-white transition-colors duration-150 inline-flex items-center gap-3">
             {page.label}
-            <span class="text-2xl text-[#d4d4d4] [@media(hover:hover)]:group-hover:text-white [@media(hover:hover)]:group-hover:translate-x-2 transition-all duration-150" aria-hidden="true">→</span>
+            <span class="text-xl text-[#d4d4d4] [@media(hover:hover)]:group-hover:text-white [@media(hover:hover)]:group-hover:translate-x-2 transition-all duration-150" aria-hidden="true">→</span>
           </span>
-          <span class="block text-xs tracking-[1px] text-[#d4d4d4] mt-1">
+          <span class="block text-[11px] tracking-[1px] text-[#d4d4d4] mt-0.5">
             {page.sub}
           </span>
         </a>
       {/each}
 
-      <hr class="border-0 border-t border-[#2a2a2a] my-5" />
+      <hr class="border-0 border-t border-[#2a2a2a] my-4" />
 
-      <p class="text-xs uppercase tracking-wider text-[#737373] mb-3">
+      <p class="text-xs uppercase tracking-wider text-[#737373] mb-2">
         {i.menu.sectionLabel}
       </p>
-      <div class="flex flex-col gap-3">
+      <div class="flex flex-col gap-2">
         {#each anchors as anchor, idx (anchor.href)}
           <a
             href={anchor.href}

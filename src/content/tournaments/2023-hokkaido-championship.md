@@ -6,6 +6,7 @@ date: "2023-03-25"
 status: "results"
 resultsPdf: "/competition/2023HokkaidoSenshuken_V1.0.pdf"
 gamesPgn: "/competition/HokkaidoChessCh2023_NoAnalysis.pgn"
+gamesPgnAnnotated: "/competition/HokkaidoChessCh2023_Analysis.pgn"
 year: 2023
 sortOrder: 1
 ---

@@ -14,16 +14,10 @@ export type ScrollState = {
   maxY: number;
 };
 
-export type ObserveScrollOptions = {
-  /** 方向判定に必要な最小ピクセル変化量 (default: 8) */
-  delta?: number;
-};
+// 方向判定に必要な最小ピクセル変化量
+const DELTA = 8;
 
-export function observeScroll(
-  callback: (state: ScrollState) => void,
-  options: ObserveScrollOptions = {}
-): () => void {
-  const delta = options.delta ?? 8;
+export function observeScroll(callback: (state: ScrollState) => void): () => void {
   const vv = typeof window !== "undefined" ? window.visualViewport : null;
 
   let lastY = window.scrollY;
@@ -40,7 +34,7 @@ export function observeScroll(
       return;
     }
     const y = Math.max(0, window.scrollY);
-    const moved = Math.abs(y - lastY) >= delta;
+    const moved = Math.abs(y - lastY) >= DELTA;
     const direction: ScrollState["direction"] = !moved
       ? "idle"
       : y > lastY

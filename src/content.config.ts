@@ -7,7 +7,6 @@ const schedule = defineCollection({
     dates: z.array(
       z.object({
         date: z.string(),
-        dayOfWeek: z.object({ ja: z.string(), en: z.string() }),
         startTime: z.string(),
         endTime: z.string(),
         room: z.string(),
@@ -33,6 +32,7 @@ const tournaments = defineCollection({
     detailsPdf: z.string().optional(),
     resultsPdf: z.string().optional(),
     gamesPgn: z.string().optional(),
+    gamesPgnAnnotated: z.string().optional(),
     year: z.number(),
     sortOrder: z.number().optional(),
   }),

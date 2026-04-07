@@ -1,38 +1,102 @@
-media: public/competition
+media:
+  - name: competition
+    label: 大会ファイル (PDF / PGN)
+    input: public/competition
+    output: /competition
+  - name: documents
+    label: 資料 (PDF)
+    input: public/documents
+    output: /documents
+  - name: images
+    label: 画像
+    input: public/images
+    output: /images
 
 content:
   - name: schedule
-    label: スケジュール
+    label: スケジュール（例会・大会日程）
+    description: "毎月の例会日・大会日をここで管理します。過去分も削除せず残してください（今後のイベントのみ自動表示されます）。"
     type: file
     path: src/content/schedule/current.yaml
     format: yaml
     fields:
       - name: dates
-        label: 日程
+        label: 日程リスト
         type: object
         list: true
         fields:
-          - { name: date, label: 日付, type: date, required: true }
-          - name: dayOfWeek
-            label: 曜日
-            type: object
-            fields:
-              - { name: ja, label: 日本語, type: string, required: true }
-              - { name: en, label: English, type: string, required: true }
-          - { name: startTime, label: 開始時間, type: string, required: true }
-          - { name: endTime, label: 終了時間, type: string, required: true }
+          - name: date
+            label: 日付
+            type: date
+            required: true
+            description: "YYYY-MM-DD 形式。曜日は日付から自動計算されるので入力不要です。"
+          - name: startTime
+            label: 開始時間
+            type: string
+            required: true
+            description: "例: 10:00"
+          - name: endTime
+            label: 終了時間
+            type: string
+            required: true
+            description: "例: 15:00"
+          - name: room
+            label: 部屋番号
+            type: string
+            required: true
+            description: "例: 810A / 740"
           - name: venue
             label: 会場
             type: object
             fields:
               - { name: ja, label: 日本語, type: string, required: true }
               - { name: en, label: English, type: string, required: true }
+          - name: type
+            label: 種別
+            type: select
+            options: [meeting, tournament]
+            default: meeting
+            description: "例会なら meeting、大会なら tournament を選択"
+          - name: eventName
+            label: 大会名（大会の場合のみ）
+            type: object
+            description: "type=tournament の場合のみ入力。例会では空欄でOK。"
+            fields:
+              - { name: ja, label: 日本語, type: string }
+              - { name: en, label: English, type: string }
+          - name: formspreeId
+            label: Formspree ID（申込を受ける場合のみ）
+            type: string
+            description: "Formspree のエンドポイント ID。申込フォームを出したい大会だけに設定。"
+          - name: applicationOpenFrom
+            label: 申込開始日（任意）
+            type: date
+            description: "YYYY-MM-DD。空欄なら即時受付開始扱い。"
+          - name: applicationCloseAt
+            label: 申込締切日（任意）
+            type: date
+            description: "YYYY-MM-DD。この日を含む23:59まで受付。"
+          - name: note
+            label: 備考（任意）
+            type: object
+            description: "「注意：810Aではなく740」など、その日だけの特記事項。"
+            fields:
+              - { name: ja, label: 日本語, type: string }
+              - { name: en, label: English, type: string }
 
   - name: tournaments
-    label: 大会
+    label: 大会記録
+    description: "過去の大会の記録（要項 PDF / 結果 PDF / 棋譜 PGN）を管理します。"
     type: collection
     path: src/content/tournaments
     format: yaml-frontmatter
+    view:
+      fields: [title.ja, date, year]
+      primary: title.ja
+      sort: [date]
+      default:
+        sort: date
+        order: desc
     fields:
       - name: title
         label: 大会名
@@ -40,9 +104,12 @@ content:
         fields:
           - { name: ja, label: 日本語, type: string, required: true }
           - { name: en, label: English, type: string, required: true }
-      - { name: date, label: 日付, type: date, required: true }
+      - name: date
+        label: 開催日
+        type: date
+        required: true
       - name: venue
-        label: 会場
+        label: 会場（任意）
         type: object
         fields:
           - { name: ja, label: 日本語, type: string }
@@ -50,14 +117,42 @@ content:
       - name: status
         label: ステータス
         type: select
-        options: [open, closed, upcoming, results]
+        options: [upcoming, results]
+        default: results
         required: true
-      - { name: detailsPdf, label: 要項 PDF, type: file }
-      - { name: resultsPdf, label: 結果 PDF, type: file }
-      - { name: gamesPgn, label: 棋譜 PGN, type: file }
-      - { name: formspreeId, label: Formspree ID, type: string }
-      - { name: year, label: 年, type: number, required: true }
-      - { name: sortOrder, label: 並び順, type: number }
+        description: "これから → upcoming、終了済み → results"
+      - name: detailsPdf
+        label: 要項 PDF
+        type: file
+        options:
+          media: competition
+        description: "開催前の要項。competition フォルダにアップロードしてください。"
+      - name: resultsPdf
+        label: 結果 PDF
+        type: file
+        options:
+          media: competition
+      - name: gamesPgn
+        label: 棋譜 PGN
+        type: file
+        options:
+          media: competition
+        description: "解析なしの棋譜ファイル (*NoAnalysis.pgn)"
+      - name: gamesPgnAnnotated
+        label: 棋譜 PGN (解析付)
+        type: file
+        options:
+          media: competition
+        description: "評価値コメント付きの棋譜 (*Analysis.pgn)。あれば追加。"
+      - name: year
+        label: 年
+        type: number
+        required: true
+        description: "大会アーカイブページのフィルタ用。date の年と一致させる。"
+      - name: sortOrder
+        label: 並び順（任意）
+        type: number
+        description: "同年内で 1=春、2=夏、3=秋 のように並べたい時に使用。"
 
   - name: lessons
     label: チェス講座
@@ -72,26 +167,27 @@ content:
           - { name: ja, label: 日本語, type: string, required: true }
           - { name: en, label: English, type: string, required: true }
       - name: description
-        label: 説明
+        label: 説明文
         type: object
         fields:
-          - { name: ja, label: 日本語, type: string, required: true }
-          - { name: en, label: English, type: string, required: true }
+          - { name: ja, label: 日本語, type: text, required: true }
+          - { name: en, label: English, type: text, required: true }
       - name: period
-        label: 期間
+        label: 開催期間
         type: object
         fields:
           - { name: ja, label: 日本語, type: string, required: true }
           - { name: en, label: English, type: string, required: true }
 
   - name: links
-    label: リンク集
+    label: 外部リンク
+    description: "トップページの「リンク / 資料」セクションに表示される外部リンクです。ここに追加したものが全て表示されます。"
     type: file
     path: src/content/links/links.yaml
     format: yaml
     fields:
       - name: links
-        label: リンク
+        label: リンク一覧
         type: object
         list: true
         fields:
@@ -101,39 +197,55 @@ content:
             fields:
               - { name: ja, label: 日本語, type: string, required: true }
               - { name: en, label: English, type: string, required: true }
-          - { name: url, label: URL, type: string, required: true }
+          - name: url
+            label: URL
+            type: string
+            required: true
+            pattern: "^https?://.+"
 
   - name: site
-    label: サイト情報
+    label: サイト基本情報
+    description: "連絡先・会場・参加費。変更が少ない項目です。"
     type: file
     path: src/content/site/info.yaml
     format: yaml
     fields:
-      - { name: email, label: メール, type: string, required: true }
-      - { name: phone, label: 電話番号, type: string, required: true }
+      - name: email
+        label: メールアドレス
+        type: string
+        required: true
+      - name: phone
+        label: 電話番号
+        type: string
+        required: true
       - name: venue
-        label: 会場
+        label: 会場情報
         type: object
         fields:
           - name: name
+            label: 施設名
             type: object
             fields:
-              - { name: ja, type: string, required: true }
-              - { name: en, type: string, required: true }
-          - { name: floor, type: string }
+              - { name: ja, label: 日本語, type: string, required: true }
+              - { name: en, label: English, type: string, required: true }
+          - name: floor
+            label: フロア・部屋
+            type: string
           - name: address
+            label: 住所
             type: object
             fields:
-              - { name: ja, type: string, required: true }
-              - { name: en, type: string, required: true }
+              - { name: ja, label: 日本語, type: string, required: true }
+              - { name: en, label: English, type: string, required: true }
           - name: access
+            label: アクセス
             type: object
             fields:
-              - { name: ja, type: string, required: true }
-              - { name: en, type: string, required: true }
+              - { name: ja, label: 日本語, type: string, required: true }
+              - { name: en, label: English, type: string, required: true }
       - name: fee
         label: 参加費
         type: object
         fields:
-          - { name: general, label: 一般, type: number, required: true }
-          - { name: student, label: 学生, type: number, required: true }
+          - { name: general, label: 一般 (円), type: number, required: true }
+          - { name: student, label: 学生 (円), type: number, required: true }

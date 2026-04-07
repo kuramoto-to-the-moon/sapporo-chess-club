@@ -5,6 +5,7 @@ title:
 date: "2019-07-27"
 status: "results"
 gamesPgn: "/competition/SapporoSummer2019NoAnalysis.pgn"
+gamesPgnAnnotated: "/competition/SapporoSummer2019Analysis.pgn"
 year: 2019
 sortOrder: 2
 ---

@@ -5,10 +5,10 @@ import TournamentYearFilter from "./TournamentYearFilter.svelte";
 interface Tournament {
   title: string;
   date: string;
-  status: "upcoming" | "results";
   detailsPdf?: string;
   resultsPdf?: string;
   gamesPgn?: string;
+  gamesPgnAnnotated?: string;
   year: number;
 }
 
@@ -27,11 +27,12 @@ const i = t(locale);
 </div>
 
 <div class="flex flex-col gap-4">
-  {tournaments.map((tournament, idx) => {
+  {tournaments.map((tournament) => {
     const fileLinks = [
       tournament.detailsPdf && { label: i.tournament.detailsPdf, href: tournament.detailsPdf, isPgn: false },
       tournament.resultsPdf && { label: i.tournament.resultsPdf, href: tournament.resultsPdf, isPgn: false },
       tournament.gamesPgn && { label: i.tournament.gamesPgn, href: tournament.gamesPgn, isPgn: true },
+      tournament.gamesPgnAnnotated && { label: i.tournament.gamesPgnAnnotated, href: tournament.gamesPgnAnnotated, isPgn: true },
     ].filter(Boolean) as { label: string; href: string; isPgn: boolean }[];
 
     return (

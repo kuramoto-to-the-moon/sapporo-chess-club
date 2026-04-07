@@ -1,0 +1,48 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import TournamentList from "@/components/TournamentList.astro";
+import { t, type Locale } from "@/i18n";
+import { withBase } from "@/lib/utils";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const i = t(locale);
+
+const tournamentsData = await getCollection("tournaments");
+const sorted = tournamentsData.sort((a, b) => {
+  if (a.data.year !== b.data.year) return b.data.year - a.data.year;
+  return (a.data.sortOrder ?? 99) - (b.data.sortOrder ?? 99);
+});
+
+const tournaments = sorted.map((t) => ({
+  title: t.data.title[locale],
+  date: t.data.date,
+  detailsPdf: withBase(t.data.detailsPdf),
+  resultsPdf: withBase(t.data.resultsPdf),
+  gamesPgn: withBase(t.data.gamesPgn),
+  gamesPgnAnnotated: withBase(t.data.gamesPgnAnnotated),
+  year: t.data.year,
+}));
+
+const years = [...new Set(tournaments.map((t) => t.year))].sort((a, b) => b - a);
+---
+
+<BaseLayout title={i.tournament.pageTitle} locale={locale}>
+  <style is:global>
+    html {
+      scrollbar-gutter: stable;
+    }
+  </style>
+  <section class="px-5 pt-16 md:pt-20 pb-6">
+    <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight animate-fade-in-up">{i.tournament.pageTitle}</h1>
+    <p class="text-sm text-[#737373] mt-3 animate-fade-in-up stagger-1">{i.tournament.pageSubtitle}</p>
+  </section>
+
+  <section class="px-5 pb-10 animate-fade-in-up stagger-2">
+    <TournamentList tournaments={tournaments} years={years} locale={locale} />
+  </section>
+</BaseLayout>
