@@ -61,23 +61,24 @@ const tournamentsHref = getLocalePath(locale, "/tournaments");
   import { observeScroll } from "@/lib/scroll-observer";
 
   // Astro <script> は type="module" でバンドルされるため DOM 解析後に実行される。
-  // よって getElementById は安全。
   const header = document.getElementById("site-header");
-  if (header) {
+  if (!header) {
+    // nothing to do
+  } else {
+    // Headroom ロジック設定
     const TOP_THRESHOLD = 100;
-    // STABLE_FRAMES 連続でスクロール位置が変化しなかったら「移動完了」と判定
+    // scrollY が STABLE_FRAMES 連続で変化しなかったら「移動完了」
     const STABLE_FRAMES = 5;
 
-    // アンカーリンクで in-page scroll する間は headroom を一時凍結する。
-    // (下スクロールでヘッダーが消えると scroll-padding-top の補正が無駄になり、
-    //  セクション位置が浮いて見えるため)
     let frozen = false;
-    window.addEventListener("headroom:freeze", () => {
+
+    // headroom を一時凍結 → scrollY が安定するまで待って自動解除。
+    // 時間ベースではなく実際の移動完了を検出する。
+    function freezeUntilSettled() {
       if (frozen) return;
       frozen = true;
       header.removeAttribute("data-state");
-      // requestAnimationFrame でスクロール位置が安定するまで待ち、
-      // 安定したら凍結解除 (時間ベースではなく実際の移動完了を待つ)
+
       let lastY = window.scrollY;
       let stable = 0;
       const tick = () => {
@@ -94,14 +95,21 @@ const tournamentsHref = getLocalePath(locale, "/tournaments");
         requestAnimationFrame(tick);
       };
       requestAnimationFrame(tick);
-    });
+    }
+
+    // 凍結トリガー:
+    //   (a) 同一ページ内のアンカー click → HamburgerMenu 側から CustomEvent
+    //   (b) クロスページのアンカー遷移 → 新ページが hash 付きでロードされた直後
+    //       (ブラウザが自動的に target へスクロールする間を凍結)
+    window.addEventListener("headroom:freeze", freezeUntilSettled);
+    if (window.location.hash) freezeUntilSettled();
 
     observeScroll(({ y, direction, maxY }) => {
-      // 凍結中・上端付近では state を変更しない
       if (frozen || y < TOP_THRESHOLD) {
         header.removeAttribute("data-state");
         return;
       }
+      // 最下部付近ではラバーバンド対策として state を触らない
       if (y >= maxY - 4) return;
       if (direction === "down") header.dataset.state = "hidden";
       else if (direction === "up") header.removeAttribute("data-state");
