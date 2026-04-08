@@ -13,15 +13,15 @@ media:
     output: /images
 
 content:
-  - name: schedule
-    label: スケジュール（例会・大会日程）
-    description: "毎月の例会日・大会日をここで管理します。過去分も削除せず残してください（今後のイベントのみ自動表示されます）。"
+  - name: meetings
+    label: 例会
+    description: "月2回の定期例会の日程をここで管理します。過去分も削除せず残してください（今後のイベントのみ自動表示されます）。"
     type: file
-    path: src/content/schedule/current.yaml
+    path: src/content/schedule/meetings.yaml
     format: yaml
     fields:
       - name: dates
-        label: 日程リスト
+        label: 例会日程
         type: object
         list: true
         fields:
@@ -34,7 +34,7 @@ content:
             label: 開始時間
             type: string
             required: true
-            description: "例: 10:00"
+            description: "例: 09:00"
           - name: endTime
             label: 終了時間
             type: string
@@ -51,23 +51,68 @@ content:
             fields:
               - { name: ja, label: 日本語, type: string, required: true }
               - { name: en, label: English, type: string, required: true }
+          - name: note
+            label: 備考（任意）
+            type: object
+            description: "「注意：810Aではなく740」など、その日だけの特記事項。"
+            fields:
+              - { name: ja, label: 日本語, type: string }
+              - { name: en, label: English, type: string }
+
+  - name: tournaments-upcoming
+    label: 大会予定
+    description: "今後開催する大会の日程をここで管理します。終了した大会は別途「大会記録」コレクションに追加してください。"
+    type: file
+    path: src/content/schedule/tournaments-upcoming.yaml
+    format: yaml
+    fields:
+      - name: dates
+        label: 大会日程
+        type: object
+        list: true
+        fields:
+          - name: date
+            label: 開催日
+            type: date
+            required: true
+            description: "YYYY-MM-DD 形式。複数日大会は 1 日 1 エントリ作成。"
+          - name: startTime
+            label: 開始時間
+            type: string
+            required: true
+            description: "例: 10:00"
+          - name: endTime
+            label: 終了時間
+            type: string
+            required: true
+            description: "例: 18:00"
+          - name: room
+            label: 部屋番号
+            type: string
+            required: true
+          - name: venue
+            label: 会場
+            type: object
+            fields:
+              - { name: ja, label: 日本語, type: string, required: true }
+              - { name: en, label: English, type: string, required: true }
           - name: type
             label: 種別
             type: select
-            options: [meeting, tournament]
-            default: meeting
-            description: "例会なら meeting、大会なら tournament を選択"
+            options: [tournament]
+            default: tournament
+            description: "大会日程ファイルなので必ず tournament。"
           - name: eventName
-            label: 大会名（大会の場合のみ）
+            label: 大会名
             type: object
-            description: "type=tournament の場合のみ入力。例会では空欄でOK。"
+            description: "「札幌サマーチェス大会」など、表示用の大会名。"
             fields:
               - { name: ja, label: 日本語, type: string }
               - { name: en, label: English, type: string }
           - name: formspreeId
             label: Formspree ID（申込を受ける場合のみ）
             type: string
-            description: "Formspree のエンドポイント ID。申込フォームを出したい大会だけに設定。"
+            description: "Formspree のエンドポイント ID。申込フォームを出したい大会だけに設定。複数日大会の場合は初日のみに設定してください。"
           - name: applicationOpenFrom
             label: 申込開始日（任意）
             type: date
@@ -75,11 +120,10 @@ content:
           - name: applicationCloseAt
             label: 申込締切日（任意）
             type: date
-            description: "YYYY-MM-DD。この日を含む23:59まで受付。未指定なら大会開始日の前々日23:59が自動で締切になります。多日大会の場合は formspreeId を初日のみに設定してください。"
+            description: "YYYY-MM-DD。この日を含む23:59まで受付。未指定なら大会開始日の前々日23:59が自動で締切になります。"
           - name: note
             label: 備考（任意）
             type: object
-            description: "「注意：810Aではなく740」など、その日だけの特記事項。"
             fields:
               - { name: ja, label: 日本語, type: string }
               - { name: en, label: English, type: string }
