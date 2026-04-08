@@ -53,7 +53,7 @@ export default {
     students: "学生",
     observation: "見学・初回参加",
     free: "無料",
-    viewOnMap: "Google マップで見る →",
+    viewOnMap: "Google マップで見る",
   },
   lessons: {
     label: "チェス講座",
