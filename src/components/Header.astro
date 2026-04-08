@@ -15,6 +15,7 @@ const currentPath = Astro.url.pathname
   .replace(/^\/(en\/)?/, "/");
 const homeHref = getLocalePath(locale, "/");
 const scheduleHref = getLocalePath(locale, "/schedule");
+const announcementsHref = getLocalePath(locale, "/announcements");
 const tournamentsHref = getLocalePath(locale, "/tournaments");
 ---
 
@@ -39,6 +40,14 @@ const tournamentsHref = getLocalePath(locale, "/tournaments");
         aria-current={currentPath === "/schedule" ? "page" : undefined}
       >
         {i.schedule.label}
+      </a>
+      <a
+        href={announcementsHref}
+        data-astro-prefetch
+        class="text-sm text-[#525252] hover:text-[#2563eb] transition-colors duration-150 px-3 py-2 -my-2 rounded"
+        aria-current={currentPath === "/announcements" ? "page" : undefined}
+      >
+        {i.nav.announcements}
       </a>
       <a
         href={tournamentsHref}
