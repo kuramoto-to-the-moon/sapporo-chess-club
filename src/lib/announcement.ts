@@ -44,11 +44,21 @@ export async function getArchivedAnnouncements(): Promise<Announcement[]> {
  */
 export async function getArchivedYears(): Promise<number[]> {
   const archived = await getArchivedAnnouncements();
-  const years = new Set<number>();
-  for (const entry of archived) {
-    years.add(getDateParts(entry.data.date).year);
+  return Array.from(groupByYear(archived).keys()).sort((a, b) => b - a);
+}
+
+/**
+ * エントリを公開年でグルーピングする。各年の配列内は入力順を維持するため、
+ * 呼び出し側で事前にソート (date desc など) しておくと年内も降順になる。
+ */
+export function groupByYear(entries: Announcement[]): Map<number, Announcement[]> {
+  const map = new Map<number, Announcement[]>();
+  for (const entry of entries) {
+    const { year } = getDateParts(entry.data.date);
+    if (!map.has(year)) map.set(year, []);
+    map.get(year)!.push(entry);
   }
-  return Array.from(years).sort((a, b) => b - a);
+  return map;
 }
 
 export function pickTitle(entry: Announcement, locale: Locale): string {

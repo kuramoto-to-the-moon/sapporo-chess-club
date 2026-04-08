@@ -3,13 +3,12 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import AnnouncementRow from "@/components/AnnouncementRow.astro";
 import RssIcon from "@/components/RssIcon.astro";
 import { t, getLocalePath, type Locale } from "@/i18n";
-import { getDateParts } from "@/lib/date";
 import { withBase } from "@/lib/utils";
 import {
   getActiveAnnouncements,
   getArchivedAnnouncements,
+  groupByYear,
   hasJaOnlyContent,
-  type Announcement,
 } from "@/lib/announcement";
 
 interface Props {
@@ -24,13 +23,7 @@ const archivedCount = (await getArchivedAnnouncements()).length;
 
 const showEnNotice = locale === "en" && entries.some(hasJaOnlyContent);
 
-const yearMap = new Map<number, Announcement[]>();
-for (const entry of entries) {
-  const { year } = getDateParts(entry.data.date);
-  if (!yearMap.has(year)) yearMap.set(year, []);
-  yearMap.get(year)!.push(entry);
-}
-const grouped = Array.from(yearMap.entries()).sort((a, b) => b[0] - a[0]);
+const grouped = Array.from(groupByYear(entries).entries()).sort((a, b) => b[0] - a[0]);
 
 const archiveHref = getLocalePath(locale, "/announcements/archive");
 const rssHref = withBase("/rss.xml")!;
