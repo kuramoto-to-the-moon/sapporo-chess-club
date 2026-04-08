@@ -47,6 +47,7 @@ export default {
     roomSuffix: "室",
     yearSuffix: "年",
     opensOnSuffix: "から",
+    showPast: "過去のイベントを表示",
   },
   clubInfo: {
     fee: "参加案内",
