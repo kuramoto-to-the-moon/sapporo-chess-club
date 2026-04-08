@@ -147,7 +147,7 @@ const anchors = [
 </style>
 
 <script>
-  import { ensureDialogSupport, replayAnimations } from "@/lib/dialog";
+  import { ensureDialogSupport, lockBodyScroll, replayAnimations } from "@/lib/dialog";
 
   const openBtn = document.getElementById("hamburger-open") as HTMLButtonElement | null;
   const dialog = document.getElementById("hamburger-dialog") as HTMLDialogElement | null;
@@ -155,13 +155,18 @@ const anchors = [
 
   await ensureDialogSupport(dialog);
 
+  let unlockScroll: (() => void) | null = null;
+
   openBtn.addEventListener("click", () => {
     replayAnimations(dialog, ".animate-fade-in-up");
+    unlockScroll = lockBodyScroll();
     dialog.showModal();
     openBtn.setAttribute("aria-expanded", "true");
   });
 
   dialog.addEventListener("close", () => {
+    unlockScroll?.();
+    unlockScroll = null;
     openBtn.setAttribute("aria-expanded", "false");
   });
 
