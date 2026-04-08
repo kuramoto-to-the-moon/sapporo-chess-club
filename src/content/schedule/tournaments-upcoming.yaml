@@ -1,4 +1,18 @@
 dates:
+  - date: "2026-03-21"
+    startTime: "10:00"
+    endTime: "18:00"
+    room: "1010"
+    venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
+    type: tournament
+    series: hokkaido-championship
+  - date: "2026-03-22"
+    startTime: "10:00"
+    endTime: "18:00"
+    room: "1010"
+    venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
+    type: tournament
+    series: hokkaido-championship
   - date: "2026-07-19"
     startTime: "10:00"
     endTime: "18:00"
