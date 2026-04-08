@@ -18,21 +18,39 @@ export async function ensureDialogSupport(dialog: HTMLDialogElement): Promise<vo
  * body スクロールを「見た目はそのまま、絶対に動けない」状態にロックする。
  * iOS Safari で <dialog> を開いた上でも背景がスクロールしてしまう問題の対策。
  * overflow:hidden だけでは不十分なので position:fixed で物理的に固定する。
- * 戻り値は解除関数。
+ *
+ * 多重呼び出しに対応するためロック数を参照カウントで管理する。
+ * 同じページで複数のモーダル (将来の追加含む) を同時に開いても、
+ * 全部閉じ終わるまで lock が外れない。
+ * 戻り値は解除関数 (1 回だけ有効)。
  */
+let lockCount = 0;
+let savedScrollY = 0;
+
 export function lockBodyScroll(): () => void {
-  const savedScrollY = window.scrollY;
-  const body = document.body;
-  body.style.position = "fixed";
-  body.style.top = `-${savedScrollY}px`;
-  body.style.left = "0";
-  body.style.right = "0";
+  if (lockCount === 0) {
+    savedScrollY = window.scrollY;
+    const body = document.body;
+    body.style.position = "fixed";
+    body.style.top = `-${savedScrollY}px`;
+    body.style.left = "0";
+    body.style.right = "0";
+  }
+  lockCount++;
+
+  let released = false;
   return () => {
-    body.style.position = "";
-    body.style.top = "";
-    body.style.left = "";
-    body.style.right = "";
-    window.scrollTo(0, savedScrollY);
+    if (released) return;
+    released = true;
+    lockCount--;
+    if (lockCount === 0) {
+      const body = document.body;
+      body.style.position = "";
+      body.style.top = "";
+      body.style.left = "";
+      body.style.right = "";
+      window.scrollTo(0, savedScrollY);
+    }
   };
 }
 

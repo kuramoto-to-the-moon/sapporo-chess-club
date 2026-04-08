@@ -43,7 +43,7 @@ const anchors = [
 </button>
 
 <dialog id="hamburger-dialog" class="hamburger-dialog" aria-label="Navigation menu">
-  <div class="flex flex-col w-screen h-screen h-[100dvh] bg-[#171717] text-[#fafafa]">
+  <div class="flex flex-col w-full h-full bg-[#171717] text-[#fafafa]">
     <div class="w-full max-w-4xl mx-auto flex items-center justify-between px-5 pt-3 pb-2">
       <a
         href={homeHref}
@@ -55,7 +55,6 @@ const anchors = [
       <button
         type="button"
         data-hamburger-close
-        autofocus
         aria-label="Close navigation menu"
         class="relative inline-flex items-center justify-center w-10 h-10 -mr-2 text-[#fafafa] cursor-pointer rounded focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#fafafa] before:content-[''] before:absolute before:-inset-2"
       >
@@ -66,7 +65,7 @@ const anchors = [
       </button>
     </div>
 
-    <nav class="flex-1 w-full max-w-4xl mx-auto px-5 pt-5 overflow-y-auto" aria-label="Main navigation">
+    <nav class="flex-1 min-h-0 w-full max-w-4xl mx-auto px-5 pt-5 overflow-y-auto" aria-label="Main navigation">
       {pages.map((page, idx) => (
         <a
           href={page.href}
@@ -155,12 +154,18 @@ const anchors = [
 
   await ensureDialogSupport(dialog);
 
+  // autofocus 属性はブラウザ実装差でたまに無視され、dialog 内の最初のリンク
+  // (SAPPORO CHESS CLUB) にフォーカスが当たってしまう。明示的に close ボタンへ
+  // focus を当てることで確実に制御する。preventScroll で余計なスクロールも防ぐ。
+  const closeBtn = dialog.querySelector<HTMLButtonElement>("[data-hamburger-close]");
+
   let unlockScroll: (() => void) | null = null;
 
   openBtn.addEventListener("click", () => {
     replayAnimations(dialog, ".animate-fade-in-up");
     unlockScroll = lockBodyScroll();
     dialog.showModal();
+    closeBtn?.focus({ preventScroll: true });
     openBtn.setAttribute("aria-expanded", "true");
   });
 
@@ -170,9 +175,7 @@ const anchors = [
     openBtn.setAttribute("aria-expanded", "false");
   });
 
-  dialog.querySelectorAll<HTMLElement>("[data-hamburger-close]").forEach((btn) => {
-    btn.addEventListener("click", () => dialog.close());
-  });
+  closeBtn?.addEventListener("click", () => dialog.close());
 
   // アンカーリンククリック: dialog を閉じ、ヘッダー headroom を一時凍結する
   // (遷移先までのスクロール中にヘッダーが消えないようにするため)
