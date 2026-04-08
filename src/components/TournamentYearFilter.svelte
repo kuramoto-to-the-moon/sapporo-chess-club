@@ -18,6 +18,12 @@
 
   let selectedYear = $state<string>("all");
 
+  // マウント完了で Astro 側のプレースホルダを消す
+  $effect(() => {
+    const placeholder = document.getElementById("year-filter-placeholder");
+    if (placeholder) placeholder.style.display = "none";
+  });
+
   // 年が変わったら DOM 上のカードを直接フィルタする (Astro 静的 HTML カードを操作)
   $effect(() => {
     const cards = document.querySelectorAll<HTMLElement>("[data-card-year]");

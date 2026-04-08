@@ -11,7 +11,9 @@ export default defineConfig({
   },
   prefetch: {
     prefetchAll: false,
-    defaultStrategy: "tap",
+    // viewport: リンクが画面に入った時点で HTML をバックグラウンド取得して
+    // 初回クリックの体感遅延を消す。data-astro-prefetch を付けたリンクに適用。
+    defaultStrategy: "viewport",
   },
   integrations: [svelte()],
   vite: {
