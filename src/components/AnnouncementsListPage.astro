@@ -42,9 +42,9 @@ const showEnNotice = locale === "en" && all.some((e) => !e.data.title.en);
       {i.announcements.pageSubtitle}
     </p>
     {showEnNotice && (
-      <div class="mt-5 p-3.5 rounded-md bg-[#f0f7ff] border border-[#bfdbfe] text-sm text-[#1e40af] animate-fade-in-up stagger-1">
+      <p class="mt-4 text-xs text-[#737373] italic animate-fade-in-up stagger-1">
         {i.announcements.englishNotAvailable}
-      </div>
+      </p>
     )}
   </section>
 
