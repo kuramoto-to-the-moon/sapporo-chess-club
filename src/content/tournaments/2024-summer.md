@@ -1,4 +1,5 @@
 ---
+series: summer
 title:
   ja: "札幌サマーチェス大会2024（第19回）"
   en: "2024 Sapporo Summer Chess Tournament (19th)"

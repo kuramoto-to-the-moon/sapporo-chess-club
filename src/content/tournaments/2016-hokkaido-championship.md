@@ -1,4 +1,5 @@
 ---
+series: hokkaido-championship
 title:
   ja: "2016年北海道選手権"
   en: "2016 Hokkaido Chess Championship"

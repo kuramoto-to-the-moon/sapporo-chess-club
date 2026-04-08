@@ -1,4 +1,5 @@
 ---
+series: hokkaido-championship
 title:
   ja: "2022年北海道チェス選手権（第28回）"
   en: "2022 Hokkaido Chess Championship (28th)"

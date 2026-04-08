@@ -1,4 +1,5 @@
 ---
+series: hokkaido-championship
 title:
   ja: "北海道チェス選手権2024（第30回）"
   en: "2024 Hokkaido Chess Championship (30th)"

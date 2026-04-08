@@ -1,4 +1,5 @@
 ---
+series: autumn
 title:
   ja: "2016年オータムチェス大会"
   en: "2016 Sapporo Autumn Chess Tournament"

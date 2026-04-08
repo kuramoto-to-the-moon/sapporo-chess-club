@@ -5,6 +5,7 @@ import TournamentList from "@/components/TournamentList.astro";
 import { t, type Locale } from "@/i18n";
 import { withBase } from "@/lib/utils";
 import { parseDate, getDateParts } from "@/lib/date";
+import { getTournamentDisplayName } from "@/lib/tournament-series";
 
 interface Props {
   locale: Locale;
@@ -18,15 +19,26 @@ const sorted = tournamentsData.sort(
   (a, b) => parseDate(b.data.date).getTime() - parseDate(a.data.date).getTime()
 );
 
-const tournaments = sorted.map((t) => ({
-  title: t.data.title[locale],
-  date: t.data.date,
-  detailsPdf: withBase(t.data.detailsPdf),
-  resultsPdf: withBase(t.data.resultsPdf),
-  gamesPgn: withBase(t.data.gamesPgn),
-  gamesPgnAnnotated: withBase(t.data.gamesPgnAnnotated),
-  year: getDateParts(t.data.date).year,
-}));
+const tournaments = sorted.map((t) => {
+  const year = getDateParts(t.data.date).year;
+  return {
+    title: getTournamentDisplayName(
+      {
+        series: t.data.series,
+        year,
+        edition: t.data.edition,
+        override: t.data.title,
+      },
+      locale
+    ),
+    date: t.data.date,
+    detailsPdf: withBase(t.data.detailsPdf),
+    resultsPdf: withBase(t.data.resultsPdf),
+    gamesPgn: withBase(t.data.gamesPgn),
+    gamesPgnAnnotated: withBase(t.data.gamesPgnAnnotated),
+    year,
+  };
+});
 
 const years = [...new Set(tournaments.map((t) => t.year))].sort((a, b) => b - a);
 ---

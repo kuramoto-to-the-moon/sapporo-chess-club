@@ -1,4 +1,5 @@
 ---
+series: hokkaido-championship
 title:
   ja: "2019年北海道チェス選手権"
   en: "2019 Hokkaido Chess Championship"

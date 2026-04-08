@@ -1,4 +1,5 @@
 ---
+series: summer
 title:
   ja: "2011年サマーチェス大会"
   en: "2011 Sapporo Summer Chess Tournament"

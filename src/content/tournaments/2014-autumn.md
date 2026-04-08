@@ -1,4 +1,5 @@
 ---
+series: autumn
 title:
   ja: "2014年オータムチェス大会"
   en: "2014 Sapporo Autumn Chess Tournament"

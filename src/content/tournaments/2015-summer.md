@@ -1,4 +1,5 @@
 ---
+series: summer
 title:
   ja: "2015年サマーチェス大会"
   en: "2015 Sapporo Summer Chess Tournament"

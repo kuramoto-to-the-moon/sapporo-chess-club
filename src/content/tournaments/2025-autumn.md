@@ -1,4 +1,5 @@
 ---
+series: autumn
 title:
   ja: "札幌オータムチェス大会2025（第18回）"
   en: "2025 Sapporo Autumn Chess Tournament (18th)"

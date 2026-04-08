@@ -98,10 +98,20 @@ content:
             options: [tournament]
             default: tournament
             description: "大会日程ファイルなので必ず tournament。"
+          - name: series
+            label: 大会シリーズ
+            type: select
+            options: [hokkaido-championship, summer, autumn, other]
+            required: true
+            description: "北海道選手権 / 札幌サマー / 札幌オータム / その他。表示名は自動生成されます。"
+          - name: edition
+            label: 回数（任意）
+            type: number
+            description: "第N回。例: 32 → 「第32回」/「(32nd)」と表示。"
           - name: eventName
-            label: 大会名
+            label: 大会名（その他の場合のみ）
             type: object
-            description: "「札幌サマーチェス大会」など、表示用の大会名。"
+            description: "シリーズが「その他」の場合のみ入力。それ以外は自動生成されるので空欄でOK。"
             fields:
               - { name: ja, label: 日本語, type: string }
               - { name: en, label: English, type: string }
@@ -138,12 +148,23 @@ content:
         sort: date
         order: desc
     fields:
+      - name: series
+        label: 大会シリーズ
+        type: select
+        options: [hokkaido-championship, summer, autumn, other]
+        required: true
+        description: "北海道選手権 / 札幌サマー / 札幌オータム / その他。表示名は自動生成されます。"
+      - name: edition
+        label: 回数（任意）
+        type: number
+        description: "第N回。例: 32 → 「第32回」/「(32nd)」と表示。"
       - name: title
-        label: 大会名
+        label: 大会名（手動オーバーライド・通常は空欄）
         type: object
+        description: "シリーズが「その他」の場合は必須。それ以外は通常空欄 (自動生成されます)。古いエントリには元の表記が残っているのでそのまま保持されます。"
         fields:
-          - { name: ja, label: 日本語, type: string, required: true }
-          - { name: en, label: English, type: string, required: true }
+          - { name: ja, label: 日本語, type: string }
+          - { name: en, label: English, type: string }
       - name: date
         label: 開催日
         type: date
