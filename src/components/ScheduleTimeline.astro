@@ -69,9 +69,15 @@ function formatMonthHeading(monthKey: string): string {
 }
 ---
 
-<div class="flex flex-col gap-8">
+<div id="schedule-root" class="flex flex-col gap-8">
+  <details id="past-toggle" class="group" hidden>
+    <summary class="inline-flex items-center gap-1.5 cursor-pointer text-sm text-[#737373] hover:text-[#2563eb] transition-colors duration-150 list-none [&::-webkit-details-marker]:hidden w-fit">
+      <span class="inline-block transition-transform duration-150 group-open:rotate-90">▸</span>
+      <span>{i.schedule.showPast}<span data-past-count></span></span>
+    </summary>
+  </details>
   {groupedByMonth.map(({ key, dates: monthDates }) => (
-    <div>
+    <div data-schedule-month>
       <h3 class="text-sm font-semibold uppercase tracking-wider text-[#737373] mb-3 pb-2 border-b border-[#e5e5e5]">
         {formatMonthHeading(key)}
       </h3>
@@ -134,9 +140,17 @@ function formatMonthHeading(monthKey: string): string {
   ))}
 </div>
 
+<style>
+  /* 初期状態: 過去のエントリ/月をまったく描画しない。詳細トグルが開くと
+     root に .show-past が付与され、これらが可視化される。 */
+  .js-past { display: none; }
+  .show-past .js-past { display: flex; }
+  .js-past-month { display: none; }
+  .show-past .js-past-month { display: block; }
+</style>
+
 <script>
-  // 過去のエントリに opacity-50 を適用。ビルド時ではなく閲覧時の
-  // JST「今日」で判定するので、何日経ってもページリロードで常に正確。
+  // 閲覧時の JST 今日で過去判定。ビルド時刻に依存しないので常に正確。
   const fmt = new Intl.DateTimeFormat("en-CA", {
     timeZone: "Asia/Tokyo",
     year: "numeric",
@@ -144,9 +158,38 @@ function formatMonthHeading(monthKey: string): string {
     day: "2-digit",
   });
   const todayJst = fmt.format(new Date());
-  for (const el of document.querySelectorAll<HTMLElement>("li[data-date]")) {
-    if (el.dataset.date && el.dataset.date < todayJst) {
-      el.classList.add("opacity-50");
+
+  const root = document.getElementById("schedule-root");
+  const toggle = document.getElementById("past-toggle") as HTMLDetailsElement | null;
+  if (root && toggle) {
+    // 過去の個別エントリをマーク
+    let pastEntryCount = 0;
+    for (const el of document.querySelectorAll<HTMLElement>("li[data-date]")) {
+      if (el.dataset.date && el.dataset.date < todayJst) {
+        el.classList.add("js-past");
+        pastEntryCount++;
+      }
+    }
+    // 全エントリが過去の月ブロックをまとめて非表示
+    let pastMonthCount = 0;
+    for (const block of document.querySelectorAll<HTMLElement>("[data-schedule-month]")) {
+      const items = block.querySelectorAll<HTMLElement>("li[data-date]");
+      const allPast = Array.from(items).every((li) =>
+        li.dataset.date ? li.dataset.date < todayJst : false
+      );
+      if (allPast && items.length > 0) {
+        block.classList.add("js-past-month");
+        pastMonthCount++;
+      }
+    }
+    // トグルを表示 (過去エントリが 1 つでもあれば)
+    if (pastEntryCount > 0) {
+      toggle.hidden = false;
+      const counter = toggle.querySelector<HTMLElement>("[data-past-count]");
+      if (counter) counter.textContent = ` (${pastEntryCount})`;
+      toggle.addEventListener("toggle", () => {
+        root.classList.toggle("show-past", toggle.open);
+      });
     }
   }
 </script>

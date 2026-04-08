@@ -47,6 +47,7 @@ export default {
     roomSuffix: "",
     yearSuffix: "",
     opensOnSuffix: "",
+    showPast: "Show past events",
   },
   clubInfo: {
     fee: "Entry Fee",
