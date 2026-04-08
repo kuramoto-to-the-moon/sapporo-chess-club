@@ -137,7 +137,6 @@ export default {
     activities: "活動内容",
     info: "参加案内・会場",
     lessons: "チェス講座",
-    announcements: "お知らせ",
     links: "リンク",
     contact: "お問い合わせ",
   },

@@ -137,7 +137,6 @@ export default {
     activities: "Activities",
     info: "Entry Fee & Venue",
     lessons: "Chess Lessons",
-    announcements: "News",
     links: "Links",
     contact: "Contact",
   },
