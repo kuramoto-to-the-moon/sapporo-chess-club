@@ -23,7 +23,6 @@
     "@anthropic-ai/sdk": "^0.85.0",
     "@astrojs/svelte": "^8.0.4",
     "@internationalized/date": "^3.12.0",
-    "@lucide/svelte": "^1.7.0",
     "@tailwindcss/vite": "^4.2.2",
     "bits-ui": "^2.17.2",
     "gray-matter": "^4.0.3",
