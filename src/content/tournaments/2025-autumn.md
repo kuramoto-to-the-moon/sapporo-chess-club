@@ -6,6 +6,4 @@ date: "2025-10-12"
 resultsPdf: "/competition/SapporoAutumn2025_V1.0.pdf"
 gamesPgn: "/competition/SapporoAutumn2025NoAnalysis.pgn"
 gamesPgnAnnotated: "/competition/SapporoAutumn2025Analysis.pgn"
-year: 2025
-sortOrder: 3
 ---

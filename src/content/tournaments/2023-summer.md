@@ -6,6 +6,4 @@ date: "2023-07-16"
 resultsPdf: "/competition/SapporoSummer2023.pdf"
 gamesPgn: "/competition/SapporoSummer2023_NoAnalysis.pgn"
 gamesPgnAnnotated: "/competition/SapporoSummer2023_Analysis.pgn"
-year: 2023
-sortOrder: 2
 ---

@@ -5,6 +5,4 @@ title:
 date: "2019-10-13"
 gamesPgn: "/competition/SapporoAutumn2019_NoAnalysis.pgn"
 gamesPgnAnnotated: "/competition/SapporoAutumn2019_Analysis.pgn"
-year: 2019
-sortOrder: 3
 ---

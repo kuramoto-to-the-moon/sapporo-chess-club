@@ -31,8 +31,6 @@ const tournaments = defineCollection({
     resultsPdf: z.string().optional(),
     gamesPgn: z.string().optional(),
     gamesPgnAnnotated: z.string().optional(),
-    year: z.number(),
-    sortOrder: z.number().optional(),
   }),
 });
 

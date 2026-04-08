@@ -4,6 +4,4 @@ title:
   en: "2015 Hokkaido Chess Championship"
 date: "2015-03-28"
 resultsPdf: "/competition/2015HokkaidoSenshuken.pdf"
-year: 2015
-sortOrder: 1
 ---

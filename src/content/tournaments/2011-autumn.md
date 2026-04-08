@@ -4,6 +4,4 @@ title:
   en: "2011 Sapporo Autumn Chess Tournament"
 date: "2011-10-01"
 resultsPdf: "/competition/2011SapporoAutumn.pdf"
-year: 2011
-sortOrder: 3
 ---

@@ -5,6 +5,4 @@ title:
 date: "2022-10-09"
 gamesPgn: "/competition/SapporoAutumn2022_NoAnasysis.pgn"
 gamesPgnAnnotated: "/competition/SapporoAutumn2022_Anasysis.pgn"
-year: 2022
-sortOrder: 3
 ---

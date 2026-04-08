@@ -5,6 +5,4 @@ title:
 date: "2019-03-23"
 gamesPgn: "/competition/HokkaidoCh2019NoAnalysis.pgn"
 gamesPgnAnnotated: "/competition/HokkaidoCh2019Analysis.pgn"
-year: 2019
-sortOrder: 1
 ---
