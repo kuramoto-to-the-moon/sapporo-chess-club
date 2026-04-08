@@ -11,17 +11,15 @@ import {
 export async function GET(context: APIContext) {
   const items = await getSortedAnnouncements();
   return rss({
-    title: "札幌チェスクラブ お知らせ",
-    description: "札幌チェスクラブの新着情報",
+    title: "Sapporo Chess Club — News",
+    description: "Latest updates from Sapporo Chess Club",
     site: new URL(import.meta.env.BASE_URL, context.site!).toString(),
-    // ブラウザで開いた時に人間向けページとして見えるよう XSLT を適用。
-    // RSS リーダーには引き続き生 XML が配信される。
-    stylesheet: withBase("/rss-styles.xsl")!,
+    stylesheet: withBase("/rss-styles-en.xsl")!,
     items: items.map((item) => ({
-      title: pickTitle(item, "ja"),
-      description: pickDescription(item, "ja"),
+      title: pickTitle(item, "en"),
+      description: pickDescription(item, "en"),
       pubDate: parseDate(item.data.date),
-      link: withBase(`/announcements/${item.id}/`)!,
+      link: withBase(`/en/announcements/${item.id}/`)!,
     })),
   });
 }

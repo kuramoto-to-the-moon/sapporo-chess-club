@@ -33,7 +33,11 @@ const ogImage = new URL(`${base}/images/og.webp`, Astro.site).toString();
     <title>{fullTitle}</title>
     <meta name="description" content={metaDescription} />
     <link rel="canonical" href={canonicalUrl} />
-    <link rel="alternate" type="application/rss+xml" title="札幌チェスクラブ お知らせ" href={`${base}/rss.xml`} />
+    {locale === "ja" ? (
+      <link rel="alternate" type="application/rss+xml" title="札幌チェスクラブ お知らせ" href={`${base}/rss.xml`} />
+    ) : (
+      <link rel="alternate" type="application/rss+xml" title="Sapporo Chess Club — News" href={`${base}/en/rss.xml`} />
+    )}
 
     {/* Security: GitHub Pages doesn't support custom HTTP headers, so we use
         meta http-equiv where possible. CSP via meta cannot set frame-ancestors,
