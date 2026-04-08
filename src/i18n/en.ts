@@ -72,6 +72,11 @@ export default {
     empty: "No news yet.",
     englishNotAvailable: "Announcements are not yet available in English. The content below is shown in Japanese.",
     englishNotAvailableShort: "Content shown in Japanese.",
+    archivePageTitle: "News Archive",
+    archivePageSubtitle: "Older than one year",
+    viewArchive: "📦 View older announcements (1+ year old) →",
+    backToActive: "← Back to recent news",
+    archiveEmpty: "Archive is empty.",
   },
   resources: {
     label: "Links & Resources",

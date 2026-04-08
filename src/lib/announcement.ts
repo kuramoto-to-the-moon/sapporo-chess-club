@@ -1,9 +1,11 @@
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 import type { Locale } from "@/i18n";
-import { parseDate, getDateParts } from "@/lib/date";
+import { parseDate, getDateParts, startOfTodayJST } from "@/lib/date";
 
 export type Announcement = CollectionEntry<"announcements">;
+
+const ARCHIVE_AFTER_DAYS = 365;
 
 /**
  * 全 announcement を新しい順 (date desc) で返す。
@@ -14,6 +16,26 @@ export async function getSortedAnnouncements(): Promise<Announcement[]> {
   return all.sort(
     (a, b) => parseDate(b.data.date).getTime() - parseDate(a.data.date).getTime()
   );
+}
+
+/** ビルド時点の JST 今日から ARCHIVE_AFTER_DAYS 日前を境界として返す。 */
+function getArchiveCutoff(): Date {
+  const today = startOfTodayJST();
+  return new Date(today.getTime() - ARCHIVE_AFTER_DAYS * 24 * 60 * 60 * 1000);
+}
+
+/** 直近 365 日以内に公開されたお知らせ (新しい順)。 */
+export async function getActiveAnnouncements(): Promise<Announcement[]> {
+  const all = await getSortedAnnouncements();
+  const cutoff = getArchiveCutoff();
+  return all.filter((e) => parseDate(e.data.date) >= cutoff);
+}
+
+/** 365 日より前に公開されたお知らせ (新しい順)。アーカイブページ用。 */
+export async function getArchivedAnnouncements(): Promise<Announcement[]> {
+  const all = await getSortedAnnouncements();
+  const cutoff = getArchiveCutoff();
+  return all.filter((e) => parseDate(e.data.date) < cutoff);
 }
 
 export function pickTitle(entry: Announcement, locale: Locale): string {
