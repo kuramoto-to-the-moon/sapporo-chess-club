@@ -67,10 +67,34 @@ export function pickTitle(entry: Announcement, locale: Locale): string {
     : (entry.data.title.en ?? entry.data.title.ja);
 }
 
+const DESCRIPTION_MAX_CHARS = 90;
+const SENTENCE_END_RE = /[。．.!?！？]/;
+
+/**
+ * 一覧表示向けに description を短く整形する。
+ * - 先頭から `。` / `.` / `!` / `?` (全角含む) までの 1 文を返す
+ * - ただしそれが DESCRIPTION_MAX_CHARS を超えるなら maxChars で打ち切って「…」
+ * - 句読点が無い短い文字列はそのまま返す
+ */
+function truncateDescription(raw: string): string {
+  const trimmed = raw.trim();
+  if (trimmed.length === 0) return "";
+  // 最初の文末記号を探す
+  const m = trimmed.match(SENTENCE_END_RE);
+  if (m && m.index !== undefined) {
+    const firstSentence = trimmed.slice(0, m.index + 1);
+    if (firstSentence.length <= DESCRIPTION_MAX_CHARS) return firstSentence;
+  }
+  // 句読点が無い or 1 文が長すぎる場合は文字数で打ち切り
+  if (trimmed.length <= DESCRIPTION_MAX_CHARS) return trimmed;
+  return trimmed.slice(0, DESCRIPTION_MAX_CHARS).trimEnd() + "…";
+}
+
 export function pickDescription(entry: Announcement, locale: Locale): string {
-  return locale === "ja"
+  const raw = locale === "ja"
     ? entry.data.description.ja
     : (entry.data.description.en ?? entry.data.description.ja);
+  return truncateDescription(raw);
 }
 
 /** en サイトで未翻訳エントリかどうか判定 (en === undefined) */
