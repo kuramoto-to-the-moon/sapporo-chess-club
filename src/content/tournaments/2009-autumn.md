@@ -1,4 +1,5 @@
 ---
+series: autumn
 title:
   ja: "2009年オータムチェス大会"
   en: "2009 Sapporo Autumn Chess Tournament"

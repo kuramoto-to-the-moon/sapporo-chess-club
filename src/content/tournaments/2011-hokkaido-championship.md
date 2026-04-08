@@ -1,4 +1,5 @@
 ---
+series: hokkaido-championship
 title:
   ja: "2011年北海道選手権大会"
   en: "2011 Hokkaido Chess Championship"

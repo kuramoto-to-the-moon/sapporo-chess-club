@@ -1,4 +1,5 @@
 ---
+series: summer
 title:
   ja: "2016年サマーチェス大会"
   en: "2016 Sapporo Summer Chess Tournament"

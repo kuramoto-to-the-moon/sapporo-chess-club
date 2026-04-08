@@ -1,4 +1,5 @@
 ---
+series: hokkaido-championship
 title:
   ja: "2021年北海道チェス選手権（第27回）"
   en: "2021 Hokkaido Chess Championship (27th)"

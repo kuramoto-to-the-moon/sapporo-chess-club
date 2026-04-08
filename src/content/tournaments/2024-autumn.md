@@ -1,4 +1,5 @@
 ---
+series: autumn
 title:
   ja: "2024年札幌オータムチェス大会（第17回）"
   en: "2024 Sapporo Autumn Chess Tournament (17th)"

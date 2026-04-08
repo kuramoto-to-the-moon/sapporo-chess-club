@@ -1,4 +1,5 @@
 ---
+series: autumn
 title:
   ja: "2012年オータムチェス大会"
   en: "2012 Sapporo Autumn Chess Tournament"

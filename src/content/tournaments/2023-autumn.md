@@ -1,4 +1,5 @@
 ---
+series: autumn
 title:
   ja: "2023年札幌オータムチェス大会（第16回）"
   en: "2023 Sapporo Autumn Chess Tournament (16th)"

@@ -1,4 +1,5 @@
 ---
+series: autumn
 title:
   ja: "2022年札幌オータムチェス大会（第15回）"
   en: "2022 Sapporo Autumn Chess Tournament (15th)"
