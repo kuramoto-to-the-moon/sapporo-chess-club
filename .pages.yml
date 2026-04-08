@@ -3,14 +3,6 @@ media:
     label: 大会ファイル (PDF / PGN)
     input: public/competition
     output: /competition
-  - name: documents
-    label: 資料 (PDF)
-    input: public/documents
-    output: /documents
-  - name: images
-    label: 画像
-    input: public/images
-    output: /images
 
 content:
   - name: meetings
@@ -152,12 +144,6 @@ content:
         label: 開催日
         type: date
         required: true
-      - name: venue
-        label: 会場（任意）
-        type: object
-        fields:
-          - { name: ja, label: 日本語, type: string }
-          - { name: en, label: English, type: string }
       - name: detailsPdf
         label: 要項 PDF
         type: file
