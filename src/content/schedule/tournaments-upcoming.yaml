@@ -1,0 +1,30 @@
+dates:
+  - date: "2026-07-19"
+    startTime: "10:00"
+    endTime: "18:00"
+    room: "1010"
+    venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
+    type: tournament
+    eventName: { ja: "札幌サマーチェス大会", en: "Sapporo Summer Tournament" }
+    formspreeId: "xyzabc12"
+  - date: "2026-07-20"
+    startTime: "10:00"
+    endTime: "18:00"
+    room: "1010"
+    venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
+    type: tournament
+    eventName: { ja: "札幌サマーチェス大会", en: "Sapporo Summer Tournament" }
+  - date: "2026-10-11"
+    startTime: "10:00"
+    endTime: "18:00"
+    room: "940"
+    venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
+    type: tournament
+    eventName: { ja: "札幌オータムチェス大会", en: "Sapporo Autumn Tournament" }
+  - date: "2026-10-12"
+    startTime: "10:00"
+    endTime: "18:00"
+    room: "940"
+    venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
+    type: tournament
+    eventName: { ja: "札幌オータムチェス大会", en: "Sapporo Autumn Tournament" }
