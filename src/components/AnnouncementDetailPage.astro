@@ -32,22 +32,22 @@ const enBodyHtml = entry.data.bodyEn ? marked.parse(entry.data.bodyEn) : null;
 
 <BaseLayout title={title} locale={locale}>
   <article class="px-5 pt-16 md:pt-20 pb-10">
-    <a href={listHref} class="text-sm text-[#737373] hover:text-[#2563eb] transition-colors duration-150">
+    <a href={listHref} class="text-sm text-[#737373] hover:text-[#2563eb] transition-colors duration-150 animate-fade-in-up">
       {i.announcements.back}
     </a>
 
     {isJaFallback && (
-      <p class="mt-4 text-xs text-[#2563eb] italic">
+      <p class="mt-4 text-xs text-[#2563eb] italic animate-fade-in-up stagger-1">
         {i.announcements.englishNotAvailable}
       </p>
     )}
 
-    <p class="text-sm text-[#737373] mt-6 tabular-nums">{formatAnnouncementDate(entry.data.date)}</p>
-    <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mt-2 leading-tight">
+    <p class="text-sm text-[#737373] mt-6 tabular-nums animate-fade-in-up stagger-1">{formatAnnouncementDate(entry.data.date)}</p>
+    <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mt-2 leading-tight animate-fade-in-up stagger-2">
       {title}
     </h1>
 
-    <div class="mt-8 prose prose-sm prose-neutral max-w-none">
+    <div class="mt-8 prose prose-sm prose-neutral max-w-none animate-fade-in-up stagger-3">
       {locale === "ja" || !enBodyHtml ? (
         <Content />
       ) : (
@@ -55,19 +55,21 @@ const enBodyHtml = entry.data.bodyEn ? marked.parse(entry.data.bodyEn) : null;
       )}
     </div>
 
-    <nav class="flex justify-between mt-12 pt-6 border-t border-[#f5f5f5] text-sm" aria-label="Announcement pagination">
-      {prev ? (
-        <a href={getLocalePath(locale, `/announcements/${prev.id}`)} class="text-[#2563eb] hover:text-[#1d4ed8] flex flex-col">
-          <span class="text-xs text-[#737373]">{i.announcements.prev}</span>
-          <span class="font-medium">← {pickTitle(prev, locale)}</span>
-        </a>
-      ) : <span></span>}
-      {next ? (
-        <a href={getLocalePath(locale, `/announcements/${next.id}`)} class="text-[#2563eb] hover:text-[#1d4ed8] flex flex-col items-end text-right">
-          <span class="text-xs text-[#737373]">{i.announcements.next}</span>
-          <span class="font-medium">{pickTitle(next, locale)} →</span>
-        </a>
-      ) : <span></span>}
-    </nav>
+    {(prev || next) && (
+      <nav class="flex justify-between mt-12 pt-6 border-t border-[#f5f5f5] text-sm" aria-label="Announcement pagination">
+        {prev ? (
+          <a href={getLocalePath(locale, `/announcements/${prev.id}`)} class="text-[#2563eb] hover:text-[#1d4ed8] flex flex-col">
+            <span class="text-xs text-[#737373]">{i.announcements.prev}</span>
+            <span class="font-medium">← {pickTitle(prev, locale)}</span>
+          </a>
+        ) : <span></span>}
+        {next ? (
+          <a href={getLocalePath(locale, `/announcements/${next.id}`)} class="text-[#2563eb] hover:text-[#1d4ed8] flex flex-col items-end text-right">
+            <span class="text-xs text-[#737373]">{i.announcements.next}</span>
+            <span class="font-medium">{pickTitle(next, locale)} →</span>
+          </a>
+        ) : <span></span>}
+      </nav>
+    )}
   </article>
 </BaseLayout>
