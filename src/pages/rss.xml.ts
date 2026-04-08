@@ -11,6 +11,9 @@ export async function GET(context: APIContext) {
     title: "札幌チェスクラブ お知らせ",
     description: "札幌チェスクラブの新着情報",
     site: new URL(import.meta.env.BASE_URL, context.site!).toString(),
+    // ブラウザで開いた時に人間向けページとして見えるよう XSLT を適用。
+    // RSS リーダーには引き続き生 XML が配信される。
+    stylesheet: `${import.meta.env.BASE_URL}/rss-styles.xsl`,
     items: items.map((item) => ({
       title: item.data.title.ja,
       description: item.data.description.ja,
