@@ -224,3 +224,17 @@
     scroll-behavior: auto !important;
   }
 }
+
+/* Tailwind v4 の line-clamp-{N} は -webkit-line-clamp だけを出力するので、
+   一部ブラウザで ellipsis が表示されない場合がある。標準プロパティ
+   line-clamp と text-overflow を併記して確実に末尾に "..." が出るようにする。 */
+.line-clamp-1,
+.line-clamp-2,
+.line-clamp-3,
+.line-clamp-4 {
+  text-overflow: ellipsis;
+}
+.line-clamp-1 { line-clamp: 1; }
+.line-clamp-2 { line-clamp: 2; }
+.line-clamp-3 { line-clamp: 3; }
+.line-clamp-4 { line-clamp: 4; }
