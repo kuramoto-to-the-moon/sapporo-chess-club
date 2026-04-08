@@ -1,5 +1,5 @@
 import { defineCollection, z } from "astro:content";
-import { glob, file } from "astro/loaders";
+import { glob } from "astro/loaders";
 
 const schedule = defineCollection({
   loader: glob({ pattern: "**/*.yaml", base: "./src/content/schedule" }),
@@ -27,7 +27,6 @@ const tournaments = defineCollection({
   schema: z.object({
     title: z.object({ ja: z.string(), en: z.string() }),
     date: z.string(),
-    venue: z.object({ ja: z.string(), en: z.string() }).optional(),
     detailsPdf: z.string().optional(),
     resultsPdf: z.string().optional(),
     gamesPgn: z.string().optional(),

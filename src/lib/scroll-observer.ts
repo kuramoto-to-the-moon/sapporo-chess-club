@@ -3,7 +3,7 @@
  * 偽スクロールイベントは visualViewport の高さ変化を検知して無視する。
  */
 
-export type ScrollState = {
+type ScrollState = {
   /** 現在のスクロール位置 (>= 0 にクランプ済) */
   y: number;
   /** 直前との差分が delta 以上の場合の方向。delta 未満なら "idle" */
