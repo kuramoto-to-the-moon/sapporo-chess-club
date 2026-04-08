@@ -6,7 +6,7 @@ media:
 
 content:
   - name: meetings
-    label: 例会
+    label: スケジュール（例会）
     description: "月2回の定期例会の日程をここで管理します。過去分も削除せず残してください（今後のイベントのみ自動表示されます）。"
     type: file
     path: src/content/schedule/meetings.yaml
@@ -54,7 +54,7 @@ content:
               - { name: en, label: English, type: string }
 
   - name: tournaments-upcoming
-    label: 大会予定
+    label: スケジュール（大会）
     description: "今後開催する大会の日程をここで管理します。終了した大会は別途「大会記録」コレクションに追加してください。"
     type: file
     path: src/content/schedule/tournaments-upcoming.yaml
