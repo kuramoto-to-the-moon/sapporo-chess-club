@@ -1,0 +1,163 @@
+---
+import { t, type Locale } from "@/i18n";
+
+interface Props {
+  years: number[];
+  locale: Locale;
+}
+
+const { years, locale } = Astro.props;
+const i = t(locale);
+
+// "all" を先頭に置いた年選択肢のリスト。モバイル select とデスクトップ pill で共有。
+type YearOption = { value: string; label: string };
+const allOption: YearOption = { value: "all", label: i.schedule.allYears };
+const yearOptions: YearOption[] = years.map((y) => ({
+  value: String(y),
+  label: `${y}${i.schedule.yearSuffix}`,
+}));
+const selectOptions: YearOption[] = [allOption, ...yearOptions];
+
+const pillClass =
+  "inline-flex items-center justify-center min-h-[44px] px-3.5 rounded-md text-sm font-medium transition-colors cursor-pointer " +
+  "aria-[pressed=true]:bg-[#2563eb] aria-[pressed=true]:text-white " +
+  "aria-[pressed=false]:bg-[#f5f5f5] aria-[pressed=false]:text-[#525252] aria-[pressed=false]:hover:bg-[#e5e5e5]";
+
+const optionClass =
+  "w-full text-left px-3 py-2.5 text-sm text-[#171717] cursor-pointer flex items-center justify-between hover:bg-[#f5f5f5] aria-[selected=true]:font-semibold";
+
+const checkClass =
+  "w-4 h-4 text-[#2563eb] hidden aria-[selected=true]:inline";
+---
+
+<div>
+  {/* Mobile: custom select (shadcn 風) */}
+  <div class="sm:hidden relative" data-filter-select>
+    <label
+      for="year-filter-trigger"
+      class="block text-xs uppercase tracking-wider text-[#737373] mb-2"
+    >
+      {i.schedule.filterByYear}
+    </label>
+    <button
+      id="year-filter-trigger"
+      type="button"
+      data-filter-trigger
+      aria-haspopup="listbox"
+      aria-expanded="false"
+      class="w-full min-h-[44px] rounded-md border border-[#e5e5e5] bg-white px-3 flex items-center justify-between text-sm text-[#171717] cursor-pointer hover:bg-[#fafafa] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2563eb]/30"
+    >
+      <span data-filter-label>{allOption.label}</span>
+      <svg
+        data-filter-chevron
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="text-[#737373] transition-transform duration-150"
+        aria-hidden="true"
+      >
+        <path d="m6 9 6 6 6-6"/>
+      </svg>
+    </button>
+
+    <ul
+      data-filter-listbox
+      role="listbox"
+      aria-label={i.schedule.filterByYear}
+      hidden
+      class="absolute left-0 right-0 top-full mt-1.5 z-20 bg-white border border-[#e5e5e5] rounded-md shadow-lg overflow-y-auto py-1"
+    >
+      {selectOptions.map((opt) => (
+        <li>
+          <button
+            type="button"
+            role="option"
+            data-filter-option={opt.value}
+            aria-selected={opt.value === "all" ? "true" : "false"}
+            class={optionClass}
+          >
+            <span>{opt.label}</span>
+            <svg class={checkClass} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+        </li>
+      ))}
+    </ul>
+  </div>
+
+  {/* Desktop: pill list */}
+  <div class="hidden sm:flex flex-wrap gap-2" role="group" aria-label={i.schedule.filterByYear}>
+    {selectOptions.map((opt) => (
+      <button
+        type="button"
+        data-filter-pill={opt.value}
+        aria-pressed={opt.value === "all" ? "true" : "false"}
+        class={pillClass}
+      >
+        {opt.value === "all" ? i.schedule.all : opt.value}
+      </button>
+    ))}
+  </div>
+</div>
+
+<script>
+  import { initListbox } from "@/lib/listbox";
+
+  const pills = Array.from(
+    document.querySelectorAll<HTMLButtonElement>("[data-filter-pill]")
+  );
+  const optionEls = Array.from(
+    document.querySelectorAll<HTMLButtonElement>("[data-filter-option]")
+  );
+  const cards = Array.from(
+    document.querySelectorAll<HTMLElement>("[data-card-year]")
+  );
+  const label = document.querySelector<HTMLElement>("[data-filter-label]");
+  // 選択肢 value → ラベル文字列のマップ (モバイルトリガーの表示更新に使う)
+  const labelByValue = new Map(
+    optionEls.map((el) => [
+      el.dataset.filterOption ?? "",
+      el.querySelector("span")?.textContent?.trim() ?? "",
+    ])
+  );
+
+  /** 選択された年を pill / listbox / カード表示に同期する */
+  function applyYear(year: string) {
+    cards.forEach((c) => {
+      c.hidden = year !== "all" && c.dataset.cardYear !== year;
+    });
+    pills.forEach((b) => {
+      b.setAttribute("aria-pressed", b.dataset.filterPill === year ? "true" : "false");
+    });
+    optionEls.forEach((el) => {
+      el.setAttribute("aria-selected", el.dataset.filterOption === year ? "true" : "false");
+    });
+    if (label) label.textContent = labelByValue.get(year) ?? year;
+  }
+
+  // デスクトップ: pill ボタンで直接切替
+  pills.forEach((b) => {
+    b.addEventListener("click", () => applyYear(b.dataset.filterPill ?? "all"));
+  });
+
+  // モバイル: listbox 開閉とキーボード操作は共通ヘルパーに委譲
+  const root = document.querySelector<HTMLElement>("[data-filter-select]");
+  const trigger = document.querySelector<HTMLButtonElement>("[data-filter-trigger]");
+  const listbox = document.querySelector<HTMLUListElement>("[data-filter-listbox]");
+  if (root && trigger && listbox) {
+    initListbox({
+      root,
+      trigger,
+      listbox,
+      chevron: document.querySelector("[data-filter-chevron]"),
+      options: optionEls.map((el) => ({ element: el, value: el.dataset.filterOption ?? "" })),
+      onSelect: applyYear,
+    });
+  }
+</script>

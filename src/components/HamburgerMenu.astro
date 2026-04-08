@@ -1,0 +1,180 @@
+---
+import { t, getLocalePath, type Locale } from "@/i18n";
+import { getNavPages } from "@/lib/nav";
+
+interface Props {
+  locale: Locale;
+  currentPath: string;
+}
+
+const { locale, currentPath } = Astro.props;
+const i = t(locale);
+const otherLocale: Locale = locale === "ja" ? "en" : "ja";
+const otherPath = getLocalePath(otherLocale, currentPath);
+const homeHref = getLocalePath(locale, "/");
+const isHome = currentPath === "/" || currentPath === "";
+const anchorHref = (id: string) => (isHome ? `#${id}` : `${homeHref}#${id}`);
+
+const pages = getNavPages(locale);
+
+const anchors = [
+  { label: i.menu.schedule, href: anchorHref("schedule") },
+  { label: i.menu.activities, href: anchorHref("activities") },
+  { label: i.menu.info, href: anchorHref("info") },
+  { label: i.menu.lessons, href: anchorHref("lessons") },
+  { label: i.menu.links, href: anchorHref("links") },
+  { label: i.menu.contact, href: anchorHref("contact") },
+];
+---
+
+<button
+  type="button"
+  id="hamburger-open"
+  aria-label="Open navigation menu"
+  aria-haspopup="dialog"
+  aria-controls="hamburger-dialog"
+  aria-expanded="false"
+  class="relative inline-flex items-center justify-center w-10 h-10 -mr-2 cursor-pointer focus-visible:outline-none active:opacity-60 transition-opacity before:content-[''] before:absolute before:-inset-2"
+>
+  <span class="flex flex-col items-center justify-center gap-[6px]" aria-hidden="true">
+    <span class="w-6 h-[2px] bg-[#171717]"></span>
+    <span class="w-6 h-[2px] bg-[#171717]"></span>
+  </span>
+</button>
+
+<dialog id="hamburger-dialog" class="hamburger-dialog" aria-label="Navigation menu">
+  <div class="flex flex-col w-screen h-screen h-[100dvh] bg-[#171717] text-[#fafafa]">
+    <div class="w-full max-w-4xl mx-auto flex items-center justify-between px-5 pt-3 pb-2">
+      <a
+        href={homeHref}
+        class="text-xs tracking-[3px] text-[#737373] hover:text-[#fafafa] transition-colors duration-150"
+        aria-label="Sapporo Chess Club — Home"
+      >
+        SAPPORO CHESS CLUB
+      </a>
+      <button
+        type="button"
+        data-hamburger-close
+        aria-label="Close navigation menu"
+        class="relative inline-flex items-center justify-center w-10 h-10 -mr-2 text-[#fafafa] cursor-pointer rounded focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#fafafa] before:content-[''] before:absolute before:-inset-2"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M18 6 6 18" />
+          <path d="m6 6 12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <nav class="flex-1 w-full max-w-4xl mx-auto px-5 pt-5 overflow-y-auto" aria-label="Main navigation">
+      {pages.map((page, idx) => (
+        <a
+          href={page.href}
+          data-astro-prefetch
+          class="group block mb-4 animate-fade-in-up"
+          style={`animation-delay: ${idx * 0.05}s`}
+          aria-current={page.path === currentPath ? "page" : undefined}
+        >
+          <span class="text-3xl font-light [@media(hover:hover)]:group-hover:text-white transition-colors duration-150 inline-flex items-center gap-3">
+            {page.label}
+            <span class="text-xl text-[#d4d4d4] [@media(hover:hover)]:group-hover:text-white [@media(hover:hover)]:group-hover:translate-x-2 transition-all duration-150" aria-hidden="true">→</span>
+          </span>
+          <span class="block text-[11px] tracking-[1px] text-[#d4d4d4] mt-0.5">
+            {page.section}
+          </span>
+        </a>
+      ))}
+
+      <hr class="border-0 border-t border-[#2a2a2a] my-4" />
+
+      <p class="text-xs uppercase tracking-wider text-[#737373] mb-2">
+        {i.menu.sectionLabel}
+      </p>
+      <div class="flex flex-col gap-2">
+        {anchors.map((anchor, idx) => (
+          <a
+            href={anchor.href}
+            data-hamburger-anchor
+            class="group flex items-center gap-2 text-sm text-[#d4d4d4] [@media(hover:hover)]:hover:text-[#fafafa] transition-colors duration-150 animate-fade-in-up"
+            style={`animation-delay: ${(pages.length + idx) * 0.05}s`}
+          >
+            {anchor.label}
+            <span class="opacity-0 [@media(hover:hover)]:group-hover:opacity-100 [@media(hover:hover)]:group-hover:translate-x-1 transition-all duration-150" aria-hidden="true">→</span>
+          </a>
+        ))}
+      </div>
+    </nav>
+
+    <div class="border-t border-[#2a2a2a] [@media(display-mode:standalone)]:pb-[env(safe-area-inset-bottom)]">
+      <div class="max-w-4xl mx-auto px-5 py-4 flex items-center justify-between">
+        <a
+          href="mailto:sapporochessclub@gmail.com"
+          class="text-xs text-[#d4d4d4] hover:text-[#fafafa] transition-colors duration-150"
+        >
+          sapporochessclub@gmail.com
+        </a>
+        <a
+          href={otherPath}
+          class="text-xs tracking-[2px] text-[#d4d4d4] hover:text-[#fafafa] transition-colors duration-150"
+          aria-label={i.nav.switchLanguage}
+          hreflang={otherLocale}
+        >
+          {i.nav.languageShort}
+        </a>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<style>
+  /* <dialog> を全画面シートとして使う。showModal() で top-layer に入り、
+     ESC / focus trap / inert backdrop がブラウザ側で自動的に機能する。 */
+  .hamburger-dialog {
+    padding: 0;
+    border: 0;
+    max-width: none;
+    max-height: none;
+    width: 100vw;
+    height: 100vh; /* fallback */
+    height: 100dvh;
+    background: transparent;
+    color: inherit;
+    overflow: hidden;
+  }
+  .hamburger-dialog::backdrop {
+    background: transparent;
+  }
+</style>
+
+<script>
+  import { ensureDialogSupport, replayAnimations } from "@/lib/dialog";
+
+  const openBtn = document.getElementById("hamburger-open") as HTMLButtonElement | null;
+  const dialog = document.getElementById("hamburger-dialog") as HTMLDialogElement | null;
+  if (!openBtn || !dialog) throw new Error("HamburgerMenu: open button or dialog not found");
+
+  await ensureDialogSupport(dialog);
+
+  openBtn.addEventListener("click", () => {
+    replayAnimations(dialog, ".animate-fade-in-up");
+    dialog.showModal();
+    openBtn.setAttribute("aria-expanded", "true");
+  });
+
+  dialog.addEventListener("close", () => {
+    openBtn.setAttribute("aria-expanded", "false");
+  });
+
+  dialog.querySelectorAll<HTMLElement>("[data-hamburger-close]").forEach((btn) => {
+    btn.addEventListener("click", () => dialog.close());
+  });
+
+  // アンカーリンククリック: dialog を閉じ、ヘッダー headroom を一時凍結する
+  // (遷移先までのスクロール中にヘッダーが消えないようにするため)
+  dialog.querySelectorAll<HTMLAnchorElement>("[data-hamburger-anchor]").forEach((a) => {
+    a.addEventListener("click", () => {
+      if (!a.getAttribute("href")?.startsWith("#")) return;
+      dialog.close();
+      window.dispatchEvent(new CustomEvent("headroom:freeze"));
+    });
+  });
+</script>

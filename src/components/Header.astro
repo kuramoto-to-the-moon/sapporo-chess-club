@@ -1,22 +1,20 @@
 ---
-import HamburgerMenu from "./HamburgerMenu.svelte";
+import HamburgerMenu from "./HamburgerMenu.astro";
 import LanguageToggle from "./LanguageToggle.astro";
-import { t, getLocalePath, type Locale } from "@/i18n";
+import { getLocalePath, type Locale } from "@/i18n";
+import { getTopNavPages } from "@/lib/nav";
 
 interface Props {
   locale: Locale;
 }
 
 const { locale } = Astro.props;
-const i = t(locale);
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 const currentPath = Astro.url.pathname
   .replace(new RegExp(`^${base}`), "")
   .replace(/^\/(en\/)?/, "/");
 const homeHref = getLocalePath(locale, "/");
-const scheduleHref = getLocalePath(locale, "/schedule");
-const announcementsHref = getLocalePath(locale, "/announcements");
-const tournamentsHref = getLocalePath(locale, "/tournaments");
+const topNavPages = getTopNavPages(locale);
 ---
 
 <header
@@ -33,35 +31,21 @@ const tournamentsHref = getLocalePath(locale, "/tournaments");
       SAPPORO CHESS CLUB
     </a>
     <nav class="hidden md:flex items-center gap-1" aria-label="Main navigation">
-      <a
-        href={announcementsHref}
-        data-astro-prefetch
-        class="text-sm text-[#525252] hover:text-[#2563eb] transition-colors duration-150 px-3 py-2 -my-2 rounded"
-        aria-current={currentPath === "/announcements" ? "page" : undefined}
-      >
-        {i.nav.announcements}
-      </a>
-      <a
-        href={scheduleHref}
-        data-astro-prefetch
-        class="text-sm text-[#525252] hover:text-[#2563eb] transition-colors duration-150 px-3 py-2 -my-2 rounded"
-        aria-current={currentPath === "/schedule" ? "page" : undefined}
-      >
-        {i.schedule.label}
-      </a>
-      <a
-        href={tournamentsHref}
-        data-astro-prefetch
-        class="text-sm text-[#525252] hover:text-[#2563eb] transition-colors duration-150 px-3 py-2 -my-2 rounded"
-        aria-current={currentPath === "/tournaments" ? "page" : undefined}
-      >
-        {i.nav.tournaments}
-      </a>
+      {topNavPages.map((page) => (
+        <a
+          href={page.href}
+          data-astro-prefetch
+          class="text-sm text-[#525252] hover:text-[#2563eb] transition-colors duration-150 px-3 py-2 -my-2 rounded"
+          aria-current={currentPath === page.path ? "page" : undefined}
+        >
+          {page.label}
+        </a>
+      ))}
       <span class="w-px h-4 bg-[#e5e5e5] mx-2" aria-hidden="true"></span>
       <LanguageToggle locale={locale} path={currentPath} />
     </nav>
     <div class="md:hidden w-10 h-10">
-      <HamburgerMenu locale={locale} currentPath={currentPath} client:only="svelte" />
+      <HamburgerMenu locale={locale} currentPath={currentPath} />
     </div>
   </div>
 </header>
