@@ -29,16 +29,15 @@
           .topbar-inner {
             max-width: 42rem;
             margin: 0 auto;
-            padding: 0.75rem 1.25rem 0.5rem;
+            padding: 0.875rem 1.25rem;
           }
-          .brand {
-            font-size: 11px;
-            letter-spacing: 3px;
+          .back {
+            font-size: 0.875rem;
             color: #737373;
             text-decoration: none;
             transition: color 0.15s;
           }
-          .brand:hover { color: #2563eb; }
+          .back:hover { color: #2563eb; }
           main {
             max-width: 42rem;
             margin: 0 auto;
@@ -136,7 +135,7 @@
       <body>
         <header class="topbar">
           <div class="topbar-inner">
-            <a href="/sapporo-chess-club/en/announcements/" class="brand">← Back to News</a>
+            <a href="/sapporo-chess-club/en/announcements/" class="back">← All news</a>
           </div>
         </header>
         <main>
