@@ -1,7 +1,7 @@
 ---
 import { t, type Locale } from "@/i18n";
 import ApplicationForm from "@/components/ApplicationForm.svelte";
-import { parseDate, getDateParts, getDayOfWeek, shiftDays } from "@/lib/date";
+import { parseDate, getDateParts, getDayOfWeek, shiftDays, startOfTodayJST } from "@/lib/date";
 import { getEventName, type ScheduleDate } from "@/lib/schedule";
 
 interface Props {
@@ -12,6 +12,7 @@ interface Props {
 const { dates, locale } = Astro.props;
 const i = t(locale);
 const now = new Date();
+const today = startOfTodayJST();
 
 type ApplicationState =
   | { kind: "none" }
@@ -79,8 +80,12 @@ function formatMonthHeading(monthKey: string): string {
         {monthDates.map((date) => {
           const { day } = getDateParts(date.date);
           const isTournament = date.type === "tournament";
+          const isPast = parseDate(date.date) < today;
           return (
-            <li class="flex items-start gap-4 py-3 border-b border-[#f5f5f5] last:border-0">
+            <li class:list={[
+              "flex items-start gap-4 py-3 border-b border-[#f5f5f5] last:border-0",
+              isPast && "opacity-50",
+            ]}>
               <div class="flex flex-col items-center min-w-[44px] pt-0.5">
                 <span class={`text-2xl font-bold leading-none ${isTournament ? "text-[#2563eb]" : "text-[#171717]"}`}>{day}</span>
                 <span class="text-xs text-[#737373] mt-1">{getDayOfWeek(date.date, locale)}</span>
@@ -96,7 +101,7 @@ function formatMonthHeading(monthKey: string): string {
                 {date.note && (
                   <p class="text-xs text-[#737373] mt-1">{date.note[locale]}</p>
                 )}
-                {(() => {
+                {!isPast && (() => {
                   const state = getApplicationState(date);
                   if (state.kind === "none") return null;
                   if (state.kind === "before") {
