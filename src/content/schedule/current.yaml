@@ -1,43 +1,43 @@
 dates:
   - date: "2026-04-05"
-    startTime: "10:00"
+    startTime: "09:00"
     endTime: "15:00"
     room: "810A"
     venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
     type: meeting
   - date: "2026-04-19"
-    startTime: "10:00"
+    startTime: "09:00"
     endTime: "15:00"
     room: "740"
     venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
     type: meeting
     note: { ja: "注意：810Aではなく740", en: "Note: Room 740, not 810A" }
   - date: "2026-05-10"
-    startTime: "10:00"
+    startTime: "09:00"
     endTime: "15:00"
     room: "810A"
     venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
     type: meeting
   - date: "2026-05-24"
-    startTime: "10:00"
+    startTime: "09:00"
     endTime: "15:00"
     room: "810A"
     venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
     type: meeting
   - date: "2026-06-07"
-    startTime: "10:00"
+    startTime: "09:00"
     endTime: "15:00"
     room: "810A"
     venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
     type: meeting
   - date: "2026-06-21"
-    startTime: "10:00"
+    startTime: "09:00"
     endTime: "15:00"
     room: "810A"
     venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
     type: meeting
   - date: "2026-07-05"
-    startTime: "10:00"
+    startTime: "09:00"
     endTime: "15:00"
     room: "810A"
     venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
@@ -58,28 +58,28 @@ dates:
     type: tournament
     eventName: { ja: "札幌サマーチェス大会", en: "Sapporo Summer Tournament" }
   - date: "2026-08-02"
-    startTime: "10:00"
+    startTime: "09:00"
     endTime: "15:00"
     room: "740"
     venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
     type: meeting
     note: { ja: "注意：810Aではなく740", en: "Note: Room 740, not 810A" }
   - date: "2026-08-23"
-    startTime: "10:00"
+    startTime: "09:00"
     endTime: "15:00"
     room: "740"
     venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
     type: meeting
     note: { ja: "注意：810Aではなく740", en: "Note: Room 740, not 810A" }
   - date: "2026-09-06"
-    startTime: "10:00"
+    startTime: "09:00"
     endTime: "15:00"
     room: "740"
     venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
     type: meeting
     note: { ja: "注意：810Aではなく740", en: "Note: Room 740, not 810A" }
   - date: "2026-09-20"
-    startTime: "10:00"
+    startTime: "09:00"
     endTime: "15:00"
     room: "740"
     venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
@@ -100,62 +100,62 @@ dates:
     type: tournament
     eventName: { ja: "札幌オータムチェス大会", en: "Sapporo Autumn Tournament" }
   - date: "2026-10-25"
-    startTime: "10:00"
+    startTime: "09:00"
     endTime: "15:00"
     room: "760"
     venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
     type: meeting
     note: { ja: "注意：810A・740ではなく760", en: "Note: Room 760, not 810A or 740" }
   - date: "2026-11-08"
-    startTime: "10:00"
+    startTime: "09:00"
     endTime: "15:00"
     room: "740"
     venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
     type: meeting
   - date: "2026-11-22"
-    startTime: "10:00"
+    startTime: "09:00"
     endTime: "15:00"
     room: "740"
     venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
     type: meeting
   - date: "2026-12-06"
-    startTime: "10:00"
+    startTime: "09:00"
     endTime: "15:00"
     room: "740"
     venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
     type: meeting
   - date: "2026-12-20"
-    startTime: "10:00"
+    startTime: "09:00"
     endTime: "15:00"
     room: "740"
     venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
     type: meeting
   - date: "2027-01-10"
-    startTime: "10:00"
+    startTime: "09:00"
     endTime: "15:00"
     room: "740"
     venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
     type: meeting
   - date: "2027-01-24"
-    startTime: "10:00"
+    startTime: "09:00"
     endTime: "15:00"
     room: "740"
     venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
     type: meeting
   - date: "2027-02-07"
-    startTime: "10:00"
+    startTime: "09:00"
     endTime: "15:00"
     room: "740"
     venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
     type: meeting
   - date: "2027-02-21"
-    startTime: "10:00"
+    startTime: "09:00"
     endTime: "15:00"
     room: "740"
     venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
     type: meeting
   - date: "2027-03-07"
-    startTime: "10:00"
+    startTime: "09:00"
     endTime: "15:00"
     room: "740"
     venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
