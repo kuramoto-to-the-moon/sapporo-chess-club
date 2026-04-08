@@ -72,6 +72,11 @@ export default {
     empty: "まだお知らせはありません。",
     englishNotAvailable: "",
     englishNotAvailableShort: "",
+    archivePageTitle: "お知らせアーカイブ",
+    archivePageSubtitle: "1 年以上前のお知らせ",
+    viewArchive: "📦 過去のお知らせ (1年以上前) を見る →",
+    backToActive: "← 最近のお知らせに戻る",
+    archiveEmpty: "アーカイブはまだありません。",
   },
   resources: {
     label: "リンク / 資料",
