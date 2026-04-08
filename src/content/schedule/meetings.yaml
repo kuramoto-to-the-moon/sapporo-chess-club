@@ -1,4 +1,9 @@
 dates:
+  - date: "2026-03-08"
+    startTime: "09:00"
+    endTime: "15:00"
+    room: "810A"
+    venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
   - date: "2026-04-05"
     startTime: "09:00"
     endTime: "15:00"
