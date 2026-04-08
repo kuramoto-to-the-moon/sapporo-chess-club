@@ -26,13 +26,11 @@ content:
             label: 開始時間
             type: string
             required: true
-            pattern: "^([01][0-9]|2[0-3]):[0-5][0-9]$"
             description: "HH:MM 形式 (24 時間制)。例: 09:00"
           - name: endTime
             label: 終了時間
             type: string
             required: true
-            pattern: "^([01][0-9]|2[0-3]):[0-5][0-9]$"
             description: "HH:MM 形式 (24 時間制)。例: 15:00"
           - name: room
             label: 部屋番号
@@ -74,13 +72,11 @@ content:
             label: 開始時間
             type: string
             required: true
-            pattern: "^([01][0-9]|2[0-3]):[0-5][0-9]$"
             description: "HH:MM 形式 (24 時間制)。例: 10:00"
           - name: endTime
             label: 終了時間
             type: string
             required: true
-            pattern: "^([01][0-9]|2[0-3]):[0-5][0-9]$"
             description: "HH:MM 形式 (24 時間制)。例: 18:00"
           - name: room
             label: 部屋番号
@@ -214,7 +210,6 @@ content:
       - name: url
         label: 外部講座 URL（任意）
         type: string
-        pattern: "^https?://.+"
         description: "道新文化センターなど、外部講座ページの URL。設定すると講座セクションに「詳細を見る ↗」リンクが表示されます。"
 
   - name: links
@@ -239,7 +234,6 @@ content:
             label: URL
             type: string
             required: true
-            pattern: "^https?://.+"
 
   - name: site
     label: サイト基本情報
