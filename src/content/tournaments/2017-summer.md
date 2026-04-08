@@ -5,6 +5,4 @@ title:
 date: "2017-07-29"
 gamesPgn: "/competition/SapporoSummer2017NoAnalysis.pgn"
 gamesPgnAnnotated: "/competition/SapporoSummer2017Analysis.pgn"
-year: 2017
-sortOrder: 2
 ---

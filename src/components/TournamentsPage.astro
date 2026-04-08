@@ -4,6 +4,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import TournamentList from "@/components/TournamentList.astro";
 import { t, type Locale } from "@/i18n";
 import { withBase } from "@/lib/utils";
+import { parseDate, getDateParts } from "@/lib/date";
 
 interface Props {
   locale: Locale;
@@ -13,10 +14,9 @@ const { locale } = Astro.props;
 const i = t(locale);
 
 const tournamentsData = await getCollection("tournaments");
-const sorted = tournamentsData.sort((a, b) => {
-  if (a.data.year !== b.data.year) return b.data.year - a.data.year;
-  return (a.data.sortOrder ?? 99) - (b.data.sortOrder ?? 99);
-});
+const sorted = tournamentsData.sort(
+  (a, b) => parseDate(b.data.date).getTime() - parseDate(a.data.date).getTime()
+);
 
 const tournaments = sorted.map((t) => ({
   title: t.data.title[locale],
@@ -25,7 +25,7 @@ const tournaments = sorted.map((t) => ({
   resultsPdf: withBase(t.data.resultsPdf),
   gamesPgn: withBase(t.data.gamesPgn),
   gamesPgnAnnotated: withBase(t.data.gamesPgnAnnotated),
-  year: t.data.year,
+  year: getDateParts(t.data.date).year,
 }));
 
 const years = [...new Set(tournaments.map((t) => t.year))].sort((a, b) => b - a);

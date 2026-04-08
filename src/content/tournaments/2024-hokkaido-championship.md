@@ -6,6 +6,4 @@ date: "2024-03-23"
 resultsPdf: "/competition/HokkaidoChessCh2024_V1.0.pdf"
 gamesPgn: "/competition/HokkaidoChessCh2024_NoAnalysis.pgn"
 gamesPgnAnnotated: "/competition/HokkaidoChessCh2024_Analysis.pgn"
-year: 2024
-sortOrder: 1
 ---

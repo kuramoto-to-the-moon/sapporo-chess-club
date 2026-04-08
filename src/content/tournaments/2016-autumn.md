@@ -5,6 +5,4 @@ title:
 date: "2016-10-09"
 resultsPdf: "/competition/2016SapporoAutumn.pdf"
 gamesPgn: "/competition/2016SapporoAutumn.pgn"
-year: 2016
-sortOrder: 3
 ---

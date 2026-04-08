@@ -26,12 +26,14 @@ content:
             label: 開始時間
             type: string
             required: true
-            description: "例: 09:00"
+            pattern: "^([01][0-9]|2[0-3]):[0-5][0-9]$"
+            description: "HH:MM 形式 (24 時間制)。例: 09:00"
           - name: endTime
             label: 終了時間
             type: string
             required: true
-            description: "例: 15:00"
+            pattern: "^([01][0-9]|2[0-3]):[0-5][0-9]$"
+            description: "HH:MM 形式 (24 時間制)。例: 15:00"
           - name: room
             label: 部屋番号
             type: string
@@ -72,12 +74,14 @@ content:
             label: 開始時間
             type: string
             required: true
-            description: "例: 10:00"
+            pattern: "^([01][0-9]|2[0-3]):[0-5][0-9]$"
+            description: "HH:MM 形式 (24 時間制)。例: 10:00"
           - name: endTime
             label: 終了時間
             type: string
             required: true
-            description: "例: 18:00"
+            pattern: "^([01][0-9]|2[0-3]):[0-5][0-9]$"
+            description: "HH:MM 形式 (24 時間制)。例: 18:00"
           - name: room
             label: 部屋番号
             type: string
@@ -167,15 +171,6 @@ content:
         options:
           media: competition
         description: "評価値コメント付きの棋譜 (*Analysis.pgn)。あれば追加。"
-      - name: year
-        label: 年
-        type: number
-        required: true
-        description: "大会アーカイブページのフィルタ用。date の年と一致させる。"
-      - name: sortOrder
-        label: 並び順（任意）
-        type: number
-        description: "同年内で 1=春、2=夏、3=秋 のように並べたい時に使用。"
 
   - name: lessons
     label: チェス講座

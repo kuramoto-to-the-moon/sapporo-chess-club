@@ -43,13 +43,18 @@ public/                 # そのまま配信される静的アセット (favicon
 
 ## コンテンツ更新
 
-`src/content/` 配下の YAML / Markdown を編集するだけ。スキーマは `src/content.config.ts` に定義。
+通常運用は **[Pages CMS](https://app.pagescms.org/kuramoto-to-the-moon/sapporo-chess-club/main)** から行います (要 GitHub アカウント + リポジトリへの write 権限)。日常の編集手順は **[docs/operations.md](./docs/operations.md)** を参照。
 
-- **例会・大会の日程**: `src/content/schedule/current.yaml`
-- **大会記録**: `src/content/tournaments/*.md`
+直接ファイルを編集する場合: `src/content/` 配下の YAML / Markdown を編集。スキーマは `src/content.config.ts` に定義。
+
+- **例会の日程**: `src/content/schedule/meetings.yaml`
+- **大会予定**: `src/content/schedule/tournaments-upcoming.yaml`
+- **大会記録 (過去)**: `src/content/tournaments/*.md`
 - **講座**: `src/content/lessons/*.md`
 - **会場・連絡先**: `src/content/site/info.yaml`
 - **外部リンク**: `src/content/links/links.yaml`
+
+`content.config.ts` を変更したら必ず `.pages.yml` (CMS スキーマ) も同期すること。
 
 ## デプロイ
 

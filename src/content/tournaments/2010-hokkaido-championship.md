@@ -4,6 +4,4 @@ title:
   en: "2010 Hokkaido Chess Championship"
 date: "2010-03-27"
 resultsPdf: "/competition/2010HokkaidoSenshuken.pdf"
-year: 2010
-sortOrder: 1
 ---
