@@ -90,7 +90,7 @@ export function initListbox(config: ListboxConfig): void {
     if (isOpen() && next && !root.contains(next)) close();
   });
 
-  // ESC で閉じる / 矢印キーで項目移動
+  // ESC で閉じる / 矢印キーで項目移動 / Home・End で先頭・末尾へジャンプ
   document.addEventListener("keydown", (e) => {
     if (!isOpen()) return;
     if (e.key === "Escape") {
@@ -99,12 +99,25 @@ export function initListbox(config: ListboxConfig): void {
       trigger.focus();
       return;
     }
-    if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+    const nextIdx = nextFocusIndex(e.key, optionEls);
+    if (nextIdx !== null) {
       e.preventDefault();
-      const idx = optionEls.indexOf(document.activeElement as HTMLButtonElement);
-      const delta = e.key === "ArrowDown" ? 1 : -1;
-      const nextIdx = (idx + delta + optionEls.length) % optionEls.length;
       optionEls[nextIdx]?.focus();
     }
   });
+}
+
+/**
+ * listbox 内キーボード操作で次にフォーカスすべき option のインデックスを返す。
+ * 該当しないキーなら null。
+ */
+function nextFocusIndex(key: string, optionEls: HTMLButtonElement[]): number | null {
+  if (optionEls.length === 0) return null;
+  const last = optionEls.length - 1;
+  if (key === "Home") return 0;
+  if (key === "End") return last;
+  if (key !== "ArrowDown" && key !== "ArrowUp") return null;
+  const idx = optionEls.indexOf(document.activeElement as HTMLButtonElement);
+  const delta = key === "ArrowDown" ? 1 : -1;
+  return (idx + delta + optionEls.length) % optionEls.length;
 }

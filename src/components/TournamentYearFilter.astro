@@ -31,7 +31,6 @@ const checkClass =
 ---
 
 <div>
-  {/* Mobile: custom select (shadcn 風) */}
   <div class="sm:hidden relative" data-filter-select>
     <label
       for="year-filter-trigger"
@@ -47,7 +46,7 @@ const checkClass =
       aria-expanded="false"
       class="w-full min-h-[44px] rounded-md border border-[#e5e5e5] bg-white px-3 flex items-center justify-between text-sm text-[#171717] cursor-pointer hover:bg-[#fafafa] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2563eb]/30"
     >
-      <span data-filter-label>{allOption.label}</span>
+      <span data-filter-trigger-label>{allOption.label}</span>
       <svg
         data-filter-chevron
         width="16"
@@ -78,6 +77,7 @@ const checkClass =
             type="button"
             role="option"
             data-filter-option={opt.value}
+            data-filter-label={opt.label}
             aria-selected={opt.value === "all" ? "true" : "false"}
             class={optionClass}
           >
@@ -91,7 +91,6 @@ const checkClass =
     </ul>
   </div>
 
-  {/* Desktop: pill list */}
   <div class="hidden sm:flex flex-wrap gap-2" role="group" aria-label={i.schedule.filterByYear}>
     {selectOptions.map((opt) => (
       <button
@@ -118,13 +117,11 @@ const checkClass =
   const cards = Array.from(
     document.querySelectorAll<HTMLElement>("[data-card-year]")
   );
-  const label = document.querySelector<HTMLElement>("[data-filter-label]");
-  // 選択肢 value → ラベル文字列のマップ (モバイルトリガーの表示更新に使う)
+  const labelEl = document.querySelector<HTMLElement>("[data-filter-trigger-label]");
+  // value → ラベル文字列のマップ (モバイルトリガーの表示更新に使う)
+  // ラベルは各 option の data-filter-label 属性から読むので DOM 構造変更に強い
   const labelByValue = new Map(
-    optionEls.map((el) => [
-      el.dataset.filterOption ?? "",
-      el.querySelector("span")?.textContent?.trim() ?? "",
-    ])
+    optionEls.map((el) => [el.dataset.filterOption ?? "", el.dataset.filterLabel ?? ""])
   );
 
   /** 選択された年を pill / listbox / カード表示に同期する */
@@ -138,7 +135,7 @@ const checkClass =
     optionEls.forEach((el) => {
       el.setAttribute("aria-selected", el.dataset.filterOption === year ? "true" : "false");
     });
-    if (label) label.textContent = labelByValue.get(year) ?? year;
+    if (labelEl) labelEl.textContent = labelByValue.get(year) ?? year;
   }
 
   // デスクトップ: pill ボタンで直接切替
