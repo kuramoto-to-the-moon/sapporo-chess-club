@@ -29,9 +29,8 @@ function pickTitle(d: { title: { ja: string; en?: string } }) {
 function pickDescription(d: { description: { ja: string; en?: string } }) {
   return locale === "ja" ? d.description.ja : (d.description.en ?? d.description.ja);
 }
-function isJaFallback(d: { title: { ja: string; en?: string } }) {
-  return locale === "en" && !d.title.en;
-}
+
+const showEnNotice = locale === "en" && all.some((e) => !e.data.title.en);
 ---
 
 <BaseLayout title={i.announcements.pageTitle} locale={locale}>
@@ -42,6 +41,11 @@ function isJaFallback(d: { title: { ja: string; en?: string } }) {
     <p class="text-sm text-[#737373] mt-3 animate-fade-in-up stagger-1">
       {i.announcements.pageSubtitle}
     </p>
+    {showEnNotice && (
+      <div class="mt-5 p-3.5 rounded-md bg-[#f0f7ff] border border-[#bfdbfe] text-sm text-[#1e40af] animate-fade-in-up stagger-1">
+        {i.announcements.englishNotAvailable}
+      </div>
+    )}
   </section>
 
   <section class="px-5 pb-10 animate-fade-in-up stagger-2">
@@ -68,9 +72,6 @@ function isJaFallback(d: { title: { ja: string; en?: string } }) {
                       <span class="text-xs text-[#737373] tabular-nums min-w-[60px]">{md}</span>
                       <span class="text-sm font-medium text-[#171717]">
                         {pickTitle(entry.data)}
-                        {isJaFallback(entry.data) && (
-                          <span class="ml-1.5 inline-block text-[10px] font-semibold uppercase tracking-wider text-[#92400e] bg-[#fef3c7] px-1.5 py-0.5 rounded">JA</span>
-                        )}
                       </span>
                     </div>
                     <p class="text-xs text-[#737373] ml-[72px] leading-[1.5]">{pickDescription(entry.data)}</p>

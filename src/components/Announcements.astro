@@ -22,9 +22,8 @@ function pickTitle(d: { title: { ja: string; en?: string } }) {
 function pickDescription(d: { description: { ja: string; en?: string } }) {
   return locale === "ja" ? d.description.ja : (d.description.en ?? d.description.ja);
 }
-function isJaFallback(d: { title: { ja: string; en?: string } }) {
-  return locale === "en" && !d.title.en;
-}
+
+const showEnNotice = locale === "en" && latest.some((e) => !e.data.title.en);
 ---
 
 {latest.length > 0 && (
@@ -38,6 +37,9 @@ function isJaFallback(d: { title: { ja: string; en?: string } }) {
         {i.announcements.viewAll}
       </a>
     </div>
+    {showEnNotice && (
+      <p class="text-xs text-[#737373] italic mb-1">{i.announcements.englishNotAvailableShort}</p>
+    )}
     <ul class="flex flex-col">
       {latest.map((entry) => {
         const parts = getDateParts(entry.data.date);
@@ -53,9 +55,6 @@ function isJaFallback(d: { title: { ja: string; en?: string } }) {
                 <span class="text-xs text-[#737373] tabular-nums min-w-[78px]">{dateStr}</span>
                 <span class="text-sm font-medium text-[#171717]">
                   {pickTitle(entry.data)}
-                  {isJaFallback(entry.data) && (
-                    <span class="ml-1.5 inline-block text-[10px] font-semibold uppercase tracking-wider text-[#92400e] bg-[#fef3c7] px-1.5 py-0.5 rounded">JA</span>
-                  )}
                 </span>
               </div>
               <p class="text-xs text-[#737373] ml-[90px] leading-[1.5]">{pickDescription(entry.data)}</p>
