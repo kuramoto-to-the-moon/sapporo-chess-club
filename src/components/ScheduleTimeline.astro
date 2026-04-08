@@ -73,7 +73,8 @@ function formatMonthHeading(monthKey: string): string {
   <details id="past-toggle" class="group" hidden>
     <summary class="inline-flex items-center gap-1.5 cursor-pointer text-sm text-[#737373] hover:text-[#2563eb] transition-colors duration-150 list-none [&::-webkit-details-marker]:hidden w-fit">
       <span class="inline-block transition-transform duration-150 group-open:rotate-90">▸</span>
-      <span>{i.schedule.showPast}<span data-past-count></span></span>
+      <span class="group-open:hidden">{i.schedule.showPast}<span data-past-count></span></span>
+      <span class="hidden group-open:inline">{i.schedule.hidePast}<span data-past-count></span></span>
     </summary>
   </details>
   {groupedByMonth.map(({ key, dates: monthDates }) => (
@@ -182,8 +183,9 @@ function formatMonthHeading(monthKey: string): string {
     // トグルを表示 (過去エントリが 1 つでもあれば)
     if (pastEntryCount > 0) {
       toggle.hidden = false;
-      const counter = toggle.querySelector<HTMLElement>("[data-past-count]");
-      if (counter) counter.textContent = ` (${pastEntryCount})`;
+      for (const counter of toggle.querySelectorAll<HTMLElement>("[data-past-count]")) {
+        counter.textContent = ` (${pastEntryCount})`;
+      }
       toggle.addEventListener("toggle", () => {
         root.classList.toggle("show-past", toggle.open);
       });
