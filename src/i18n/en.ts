@@ -76,6 +76,7 @@ export default {
     viewArchive: "View older announcements →",
     backToActive: "← Back to recent news",
     archiveEmpty: "Archive is empty.",
+    subscribeRss: "Subscribe via RSS",
   },
   resources: {
     label: "Links & Resources",
