@@ -1,7 +1,7 @@
 ---
 import { t, type Locale } from "@/i18n";
 import ApplicationForm from "@/components/ApplicationForm.svelte";
-import { parseDate, getDateParts, getDayOfWeek, shiftDays, startOfTodayJST } from "@/lib/date";
+import { parseDate, getDateParts, getDayOfWeek, shiftDays } from "@/lib/date";
 import { getEventName, type ScheduleDate } from "@/lib/schedule";
 
 interface Props {
@@ -12,7 +12,6 @@ interface Props {
 const { dates, locale } = Astro.props;
 const i = t(locale);
 const now = new Date();
-const today = startOfTodayJST();
 
 type ApplicationState =
   | { kind: "none" }
@@ -80,12 +79,11 @@ function formatMonthHeading(monthKey: string): string {
         {monthDates.map((date) => {
           const { day } = getDateParts(date.date);
           const isTournament = date.type === "tournament";
-          const isPast = parseDate(date.date) < today;
           return (
-            <li class:list={[
-              "flex items-start gap-4 py-3 border-b border-[#f5f5f5] last:border-0",
-              isPast && "opacity-50",
-            ]}>
+            <li
+              data-date={date.date}
+              class="flex items-start gap-4 py-3 border-b border-[#f5f5f5] last:border-0 transition-opacity duration-150"
+            >
               <div class="flex flex-col items-center min-w-[44px] pt-0.5">
                 <span class={`text-2xl font-bold leading-none ${isTournament ? "text-[#2563eb]" : "text-[#171717]"}`}>{day}</span>
                 <span class="text-xs text-[#737373] mt-1">{getDayOfWeek(date.date, locale)}</span>
@@ -101,7 +99,7 @@ function formatMonthHeading(monthKey: string): string {
                 {date.note && (
                   <p class="text-xs text-[#737373] mt-1">{date.note[locale]}</p>
                 )}
-                {!isPast && (() => {
+                {(() => {
                   const state = getApplicationState(date);
                   if (state.kind === "none") return null;
                   if (state.kind === "before") {
@@ -135,3 +133,20 @@ function formatMonthHeading(monthKey: string): string {
     </div>
   ))}
 </div>
+
+<script>
+  // 過去のエントリに opacity-50 を適用。ビルド時ではなく閲覧時の
+  // JST「今日」で判定するので、何日経ってもページリロードで常に正確。
+  const fmt = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Tokyo",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  });
+  const todayJst = fmt.format(new Date());
+  for (const el of document.querySelectorAll<HTMLElement>("li[data-date]")) {
+    if (el.dataset.date && el.dataset.date < todayJst) {
+      el.classList.add("opacity-50");
+    }
+  }
+</script>
