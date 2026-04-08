@@ -48,6 +48,7 @@ export default {
     yearSuffix: "年",
     opensOnSuffix: "から",
     showPast: "過去のイベントを表示",
+    hidePast: "過去のイベントを非表示",
   },
   clubInfo: {
     fee: "参加案内",
