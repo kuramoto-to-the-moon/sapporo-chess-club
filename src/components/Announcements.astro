@@ -43,9 +43,9 @@ const showEnNotice = locale === "en" && latest.some(hasJaOnlyContent);
           >
             <div class="flex items-baseline gap-3">
               <span class="text-xs text-[#737373] tabular-nums min-w-[78px] shrink-0">{formatAnnouncementDate(entry.data.date)}</span>
-              <span class="text-sm font-medium text-[#171717] line-clamp-2 text-ellipsis flex-1 min-w-0">{pickTitle(entry, locale)}</span>
+              <span class="text-sm font-medium text-[#171717] line-clamp-2 flex-1 min-w-0">{pickTitle(entry, locale)}</span>
             </div>
-            <p class="text-xs text-[#737373] ml-[90px] leading-[1.5] line-clamp-2 text-ellipsis min-w-0">{pickDescription(entry, locale)}</p>
+            <p class="text-xs text-[#737373] ml-[90px] leading-[1.5] line-clamp-2 min-w-0">{pickDescription(entry, locale)}</p>
           </a>
         </li>
       ))}
