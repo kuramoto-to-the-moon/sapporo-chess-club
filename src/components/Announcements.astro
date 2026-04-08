@@ -1,0 +1,68 @@
+---
+import { getCollection } from "astro:content";
+import { t, getLocalePath, type Locale } from "@/i18n";
+import { parseDate, getDateParts } from "@/lib/date";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const i = t(locale);
+const listHref = getLocalePath(locale, "/announcements");
+
+const all = await getCollection("announcements");
+const latest = all
+  .sort((a, b) => parseDate(b.data.date).getTime() - parseDate(a.data.date).getTime())
+  .slice(0, 3);
+
+function pickTitle(d: { title: { ja: string; en?: string } }) {
+  return locale === "ja" ? d.title.ja : (d.title.en ?? d.title.ja);
+}
+function pickDescription(d: { description: { ja: string; en?: string } }) {
+  return locale === "ja" ? d.description.ja : (d.description.en ?? d.description.ja);
+}
+function isJaFallback(d: { title: { ja: string; en?: string } }) {
+  return locale === "en" && !d.title.en;
+}
+---
+
+{latest.length > 0 && (
+  <section id="announcements" class="px-5 py-6 border-t border-[#f5f5f5]">
+    <div class="flex items-baseline justify-between mb-2">
+      <h2 class="text-sm font-semibold uppercase tracking-wider text-[#737373] flex items-center gap-2">
+        <span class="inline-block w-1 h-3 bg-[#2563eb]"></span>
+        {i.announcements.label}
+      </h2>
+      <a href={listHref} class="text-xs text-[#2563eb] hover:text-[#1d4ed8] font-medium">
+        {i.announcements.viewAll}
+      </a>
+    </div>
+    <ul class="flex flex-col">
+      {latest.map((entry) => {
+        const parts = getDateParts(entry.data.date);
+        const dateStr = `${parts.year}.${String(parts.month).padStart(2, "0")}.${String(parts.day).padStart(2, "0")}`;
+        const detailHref = getLocalePath(locale, `/announcements/${entry.id}`);
+        return (
+          <li>
+            <a
+              href={detailHref}
+              class="flex flex-col gap-1 py-3 border-b border-[#f5f5f5] last:border-0 hover:bg-[#fafafa] -mx-2 px-2 rounded transition-colors duration-150"
+            >
+              <div class="flex items-baseline gap-3">
+                <span class="text-xs text-[#737373] tabular-nums min-w-[78px]">{dateStr}</span>
+                <span class="text-sm font-medium text-[#171717]">
+                  {pickTitle(entry.data)}
+                  {isJaFallback(entry.data) && (
+                    <span class="ml-1.5 inline-block text-[10px] font-semibold uppercase tracking-wider text-[#92400e] bg-[#fef3c7] px-1.5 py-0.5 rounded">JA</span>
+                  )}
+                </span>
+              </div>
+              <p class="text-xs text-[#737373] ml-[90px] leading-[1.5]">{pickDescription(entry.data)}</p>
+            </a>
+          </li>
+        );
+      })}
+    </ul>
+  </section>
+)}
