@@ -12,7 +12,7 @@ const { locale } = Astro.props;
 const i = t(locale);
 const scheduleHref = getLocalePath(locale, "/schedule");
 
-const upcoming = await getUpcomingScheduleDates(5);
+const upcoming = await getUpcomingScheduleDates(3);
 ---
 
 <section id="schedule" class="px-5 py-6">
