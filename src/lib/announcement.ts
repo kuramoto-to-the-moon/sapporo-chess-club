@@ -38,6 +38,19 @@ export async function getArchivedAnnouncements(): Promise<Announcement[]> {
   return all.filter((e) => parseDate(e.data.date) < cutoff);
 }
 
+/**
+ * アーカイブに含まれる年の一覧を新しい順で返す。
+ * `/announcements/archive/[year]` の getStaticPaths から使う。
+ */
+export async function getArchivedYears(): Promise<number[]> {
+  const archived = await getArchivedAnnouncements();
+  const years = new Set<number>();
+  for (const entry of archived) {
+    years.add(getDateParts(entry.data.date).year);
+  }
+  return Array.from(years).sort((a, b) => b - a);
+}
+
 export function pickTitle(entry: Announcement, locale: Locale): string {
   return locale === "ja"
     ? entry.data.title.ja

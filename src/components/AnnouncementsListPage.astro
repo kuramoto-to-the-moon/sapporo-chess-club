@@ -13,20 +13,13 @@ import {
 
 interface Props {
   locale: Locale;
-  mode: "active" | "archive";
 }
 
-const { locale, mode } = Astro.props;
+const { locale } = Astro.props;
 const i = t(locale);
 
-const entries = mode === "active"
-  ? await getActiveAnnouncements()
-  : await getArchivedAnnouncements();
-
-// アクティブモード時にアーカイブが空でなければリンクを出すための判定
-const archivedCount = mode === "active"
-  ? (await getArchivedAnnouncements()).length
-  : 0;
+const entries = await getActiveAnnouncements();
+const archivedCount = (await getArchivedAnnouncements()).length;
 
 const showEnNotice = locale === "en" && entries.some(hasJaOnlyContent);
 
@@ -38,26 +31,16 @@ for (const entry of entries) {
 }
 const grouped = Array.from(yearMap.entries()).sort((a, b) => b[0] - a[0]);
 
-const pageTitle = mode === "active" ? i.announcements.pageTitle : i.announcements.archivePageTitle;
-const pageSubtitle = mode === "active" ? i.announcements.pageSubtitle : i.announcements.archivePageSubtitle;
-const emptyMessage = mode === "active" ? i.announcements.empty : i.announcements.archiveEmpty;
-
 const archiveHref = getLocalePath(locale, "/announcements/archive");
-const activeHref = getLocalePath(locale, "/announcements");
 ---
 
-<BaseLayout title={pageTitle} locale={locale}>
+<BaseLayout title={i.announcements.pageTitle} locale={locale}>
   <section class="px-5 pt-16 md:pt-20 pb-6">
-    {mode === "archive" && (
-      <a href={activeHref} class="inline-block text-sm text-[#737373] hover:text-[#2563eb] transition-colors duration-150 mb-4 animate-fade-in-up">
-        {i.announcements.backToActive}
-      </a>
-    )}
     <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight animate-fade-in-up">
-      {pageTitle}
+      {i.announcements.pageTitle}
     </h1>
     <p class="text-sm text-[#737373] mt-3 animate-fade-in-up stagger-1">
-      {pageSubtitle}
+      {i.announcements.pageSubtitle}
     </p>
     {showEnNotice && (
       <p class="mt-4 text-xs text-[#2563eb] italic animate-fade-in-up stagger-1">
@@ -68,7 +51,7 @@ const activeHref = getLocalePath(locale, "/announcements");
 
   <section class="px-5 pb-10 animate-fade-in-up stagger-2">
     {entries.length === 0 ? (
-      <p class="text-sm text-[#737373]">{emptyMessage}</p>
+      <p class="text-sm text-[#737373]">{i.announcements.empty}</p>
     ) : (
       grouped.map(([year, items]) => (
         <div class="mb-8">
@@ -99,9 +82,9 @@ const activeHref = getLocalePath(locale, "/announcements");
       ))
     )}
 
-    {mode === "active" && archivedCount > 0 && (
+    {archivedCount > 0 && (
       <div class="mt-10 pt-6 border-t border-[#f5f5f5] text-center">
-        <a href={archiveHref} class="text-sm text-[#2563eb] hover:text-[#1d4ed8] font-medium">
+        <a href={archiveHref} class="text-sm text-[#2563eb] hover:text-[#1d4ed8] font-medium" data-astro-prefetch>
           {i.announcements.viewArchive}
         </a>
       </div>
