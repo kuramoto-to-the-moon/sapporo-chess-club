@@ -1,12 +1,9 @@
 name: Translate announcements
 
+# 手動トリガーのみ。自動翻訳の正式運用が決まったら push トリガーを復活させる。
+# 詳細は GitHub issue を参照。
 on:
-  push:
-    branches:
-      - main
-      - feature/announcements
-    paths:
-      - "src/content/announcements/**"
+  workflow_dispatch:
 
 permissions:
   contents: write
