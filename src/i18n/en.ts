@@ -51,12 +51,13 @@ export default {
     venue: "Venue",
     general: "General",
     students: "Students",
-    observation: "Observation",
+    observation: "Observation & First Visit",
     free: "Free",
     viewOnMap: "View on Google Maps →",
   },
   lessons: {
     label: "Chess Lessons",
+    viewDetails: "View details",
   },
   resources: {
     label: "Links & Resources",

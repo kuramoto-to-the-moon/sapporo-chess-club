@@ -75,7 +75,7 @@ content:
           - name: applicationCloseAt
             label: 申込締切日（任意）
             type: date
-            description: "YYYY-MM-DD。この日を含む23:59まで受付。"
+            description: "YYYY-MM-DD。この日を含む23:59まで受付。未指定なら大会開始日の前々日23:59が自動で締切になります。多日大会の場合は formspreeId を初日のみに設定してください。"
           - name: note
             label: 備考（任意）
             type: object
@@ -114,13 +114,6 @@ content:
         fields:
           - { name: ja, label: 日本語, type: string }
           - { name: en, label: English, type: string }
-      - name: status
-        label: ステータス
-        type: select
-        options: [upcoming, results]
-        default: results
-        required: true
-        description: "これから → upcoming、終了済み → results"
       - name: detailsPdf
         label: 要項 PDF
         type: file
@@ -172,12 +165,11 @@ content:
         fields:
           - { name: ja, label: 日本語, type: text, required: true }
           - { name: en, label: English, type: text, required: true }
-      - name: period
-        label: 開催期間
-        type: object
-        fields:
-          - { name: ja, label: 日本語, type: string, required: true }
-          - { name: en, label: English, type: string, required: true }
+      - name: url
+        label: 外部講座 URL（任意）
+        type: string
+        pattern: "^https?://.+"
+        description: "道新文化センターなど、外部講座ページの URL。設定すると講座セクションに「詳細を見る ↗」リンクが表示されます。"
 
   - name: links
     label: 外部リンク

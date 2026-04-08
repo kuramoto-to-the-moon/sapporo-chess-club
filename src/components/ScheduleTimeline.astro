@@ -1,7 +1,7 @@
 ---
 import { t, type Locale } from "@/i18n";
 import ApplicationForm from "@/components/ApplicationForm.svelte";
-import { parseDate, getDateParts, getDayOfWeek } from "@/lib/date";
+import { parseDate, getDateParts, getDayOfWeek, shiftDays } from "@/lib/date";
 import { getEventName, type ScheduleDate } from "@/lib/schedule";
 
 interface Props {
@@ -25,12 +25,11 @@ function getApplicationState(date: ScheduleDate): ApplicationState {
     const opensOn = parseDate(date.applicationOpenFrom);
     if (now < opensOn) return { kind: "before", opensOn };
   }
-  if (date.applicationCloseAt) {
-    // closeAt is inclusive of the entire day (JST 23:59:59)
-    const closeAt = parseDate(date.applicationCloseAt);
-    closeAt.setTime(closeAt.getTime() + 24 * 60 * 60 * 1000 - 1);
-    if (now > closeAt) return { kind: "closed" };
-  }
+  // 締切既定: 大会開始日の 2 日前 23:59:59 JST。手動 override 可。
+  const closeBaseStr = date.applicationCloseAt ?? shiftDays(date.date, -2);
+  const closeAt = parseDate(closeBaseStr);
+  closeAt.setTime(closeAt.getTime() + 24 * 60 * 60 * 1000 - 1);
+  if (now > closeAt) return { kind: "closed" };
   return { kind: "open" };
 }
 

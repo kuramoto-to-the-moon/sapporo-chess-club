@@ -21,5 +21,17 @@ const lesson = lessonsData[0]?.data;
     </h2>
     <p class="text-base font-semibold mb-1">{lesson.title[locale]}</p>
     <p class="text-sm text-[#737373] leading-[1.7]">{lesson.description[locale]}</p>
+    {lesson.url && (
+      <a
+        href={lesson.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-1.5 mt-2 text-sm text-[#2563eb] hover:text-[#1d4ed8] transition-colors duration-150 font-medium"
+      >
+        {i.lessons.viewDetails}
+        <span aria-hidden="true">↗</span>
+        <span class="sr-only">{i.nav.openInNewTab}</span>
+      </a>
+    )}
   </section>
 )}

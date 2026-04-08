@@ -1,11 +1,9 @@
 ---
 title:
-  ja: "初心者向けチェス講座"
-  en: "Beginner Chess Course"
+  ja: "たのしいチェス"
+  en: "Tanoshii Chess"
 description:
-  ja: "10月〜3月開催の6週間プログラム。駒の動かし方から学べます。"
-  en: "6-week program from October to March. Learn from the basics."
-period:
-  ja: "10月〜3月"
-  en: "October – March"
+  ja: "道新文化センターで開講中の入門講座です。"
+  en: "Beginner-friendly course at Doshin Culture Center."
+url: "https://doshin-cc.com/lect/detail/66675"
 ---

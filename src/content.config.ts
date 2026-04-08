@@ -28,7 +28,6 @@ const tournaments = defineCollection({
     title: z.object({ ja: z.string(), en: z.string() }),
     date: z.string(),
     venue: z.object({ ja: z.string(), en: z.string() }).optional(),
-    status: z.enum(["upcoming", "results"]),
     detailsPdf: z.string().optional(),
     resultsPdf: z.string().optional(),
     gamesPgn: z.string().optional(),
@@ -43,7 +42,7 @@ const lessons = defineCollection({
   schema: z.object({
     title: z.object({ ja: z.string(), en: z.string() }),
     description: z.object({ ja: z.string(), en: z.string() }),
-    period: z.object({ ja: z.string(), en: z.string() }),
+    url: z.url().optional(),
   }),
 });
 
