@@ -1,0 +1,53 @@
+name: Translate announcements
+
+on:
+  push:
+    branches:
+      - main
+      - feature/announcements
+    paths:
+      - "src/content/announcements/**"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: translate-announcements-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Run translator
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
+        run: pnpm tsx scripts/translate-announcements.ts
+
+      - name: Commit translations if any
+        run: |
+          if [[ -n "$(git status --porcelain src/content/announcements)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add src/content/announcements
+            git commit -m "chore(announcements): auto-translate ja → en [skip ci]"
+            git push
+          else
+            echo "No translation changes."
+          fi

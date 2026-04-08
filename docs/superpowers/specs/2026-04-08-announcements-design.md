@@ -350,3 +350,14 @@ export async function GET(context) {
 | BBS との二重管理 | お知らせ本文は新サイトのみ、X はリンクを貼るだけのルールを運営と合意 |
 | 編集者が markdown に不慣れ | Pages CMS の `text` 型はプレーンテキスト編集、見出しや箇条書きが必要なら admin がサポート |
 | ピン留め / hero 画像が後で必要になる | スキーマは optional フィールド追加で拡張可能、既存エントリへの影響なし |
+
+## Operational Note: GitHub Secrets
+
+For the translation Action to work, an admin needs to configure at least one of:
+
+- `ANTHROPIC_API_KEY` — Anthropic Claude API key (recommended, better contextual translation)
+- `DEEPL_API_KEY` — DeepL API key (free tier: 500k chars/month)
+
+Add via: GitHub → Repository settings → Secrets and variables → Actions → New repository secret.
+
+Without either secret, the Action will fail and editors will see ja content on en pages until secrets are configured. The Action will not break the deploy workflow — it runs independently.
