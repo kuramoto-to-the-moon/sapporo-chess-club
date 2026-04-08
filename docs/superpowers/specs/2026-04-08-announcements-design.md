@@ -11,7 +11,7 @@
 
 これらを補完するために、新サイト内に **「お知らせ」セクション** を追加する。BBS は当面残し、新規告知は新サイトのお知らせに書き、X (@SapporoChess) で URL を貼って拡散する流れに移行していく。最終的には BBS 利用者の自然減を待って撤退できる状態を目指す。
 
-**重要前提**: この機能は確定ではないため、`feature/announcements` ブランチで隔離開発し、main にはマージしない。レビューを経て採用判断する。
+**重要前提**: この機能は確定ではないため、`feature/announcements` ブランチで隔離開発し、main にはマージしない。preview 環境は作らず、レビューはローカルで `pnpm dev` / `pnpm preview` を使って行う。採用判断後に main へマージ。
 
 ## Goals
 
@@ -315,11 +315,11 @@ export async function GET(context) {
 
 ## ブランチ戦略
 
-- 新規ブランチ `feature/announcements` を `main` から切る
-- 全変更をこのブランチでコミット
-- main にはマージせず、push のみ
-- レビュー後に main へマージするかを別途決定
-- GitHub Action は当面 `feature/announcements` でも動くようトリガー条件を `branches: [feature/announcements]` にする (確定後 main に変更)
+- 新規ブランチ `feature/announcements` を `main` から切る (済)
+- 全変更をこのブランチでコミット、push して GitHub に保管
+- **preview 環境は作らない** — レビューはローカルで `pnpm dev` / `pnpm preview` を使う (GitHub Pages はリポジトリ単位で 1 サイトしか出せず、preview を作るには Cloudflare Pages 等の外部サービスが必要なため、そこまでのインフラ投資はしない)
+- 採用判断が出た時点で main にマージ → 自動デプロイ
+- 翻訳 GitHub Action は当面 `feature/announcements` でも動くようトリガー条件に含める (確定後 main に変更)
 
 ## 検証
 
