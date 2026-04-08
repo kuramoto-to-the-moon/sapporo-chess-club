@@ -1,0 +1,30 @@
+dates:
+  - date: "2026-07-19"
+    startTime: "10:00"
+    endTime: "18:00"
+    room: "1010"
+    venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
+    type: tournament
+    series: summer
+    formspreeId: "xyzabc12"
+  - date: "2026-07-20"
+    startTime: "10:00"
+    endTime: "18:00"
+    room: "1010"
+    venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
+    type: tournament
+    series: summer
+  - date: "2026-10-11"
+    startTime: "10:00"
+    endTime: "18:00"
+    room: "940"
+    venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
+    type: tournament
+    series: autumn
+  - date: "2026-10-12"
+    startTime: "10:00"
+    endTime: "18:00"
+    room: "940"
+    venue: { ja: "かでる2.7", en: "Kaderu 2.7" }
+    type: tournament
+    series: autumn
