@@ -47,14 +47,21 @@ const rssHref = withBase("/rss.xml")!;
           {i.announcements.pageSubtitle}
         </p>
       </div>
-      <a
-        href={rssHref}
-        class="shrink-0 inline-flex items-center justify-center w-10 h-10 rounded-md text-[#737373] hover:text-[#f26522] hover:bg-[#fafafa] transition-colors duration-150 animate-fade-in-up"
-        aria-label={i.announcements.subscribeRss}
-        title={i.announcements.subscribeRss}
-      >
-        <RssIcon />
-      </a>
+      <div class="shrink-0 relative group animate-fade-in-up">
+        <a
+          href={rssHref}
+          class="inline-flex items-center justify-center w-10 h-10 rounded-md text-[#737373] [@media(hover:hover)]:group-hover:text-[#f26522] [@media(hover:hover)]:group-hover:bg-[#fafafa] transition-colors duration-150"
+          aria-label={i.announcements.subscribeRss}
+        >
+          <RssIcon />
+        </a>
+        <span
+          role="tooltip"
+          class="pointer-events-none absolute right-0 top-full mt-1 whitespace-nowrap rounded bg-[#171717] text-[#fafafa] text-xs font-medium px-2 py-1 opacity-0 [@media(hover:hover)]:group-hover:opacity-100 transition-opacity duration-150"
+        >
+          {i.announcements.subscribeRss}
+        </span>
+      </div>
     </div>
     {showEnNotice && (
       <p class="mt-4 text-xs text-[#2563eb] italic animate-fade-in-up stagger-1">
