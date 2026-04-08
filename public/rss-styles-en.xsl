@@ -19,6 +19,14 @@
             background: #fff;
             line-height: 1.6;
           }
+          .back-link {
+            display: inline-block;
+            font-size: 0.85rem;
+            color: #737373;
+            text-decoration: none;
+            margin-bottom: 1.5rem;
+          }
+          .back-link:hover { color: #2563eb; }
           .tag {
             display: inline-block;
             font-size: 11px;
@@ -109,6 +117,7 @@
         </style>
       </head>
       <body>
+        <a href="/sapporo-chess-club/en/announcements/" class="back-link">← Back to News</a>
         <div class="tag">RSS FEED</div>
         <h1><xsl:value-of select="/rss/channel/title"/></h1>
         <p class="description"><xsl:value-of select="/rss/channel/description"/></p>
