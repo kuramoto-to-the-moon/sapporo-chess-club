@@ -1,11 +1,10 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import AnnouncementRow from "@/components/AnnouncementRow.astro";
 import { t, getLocalePath, type Locale } from "@/i18n";
 import { getDateParts } from "@/lib/date";
 import {
   getArchivedAnnouncements,
-  pickTitle,
-  pickDescription,
   hasJaOnlyContent,
   type Announcement,
 } from "@/lib/announcement";
@@ -37,7 +36,6 @@ const entries = selectedYear ? (yearMap.get(selectedYear) ?? []) : [];
 const showEnNotice = locale === "en" && entries.some(hasJaOnlyContent);
 
 const activeHref = getLocalePath(locale, "/announcements");
-const archiveBaseHref = getLocalePath(locale, "/announcements/archive");
 const yearHref = (y: number) => getLocalePath(locale, `/announcements/archive/${y}`);
 
 const pageTitle = selectedYear
@@ -89,24 +87,7 @@ const pageTitle = selectedYear
       <p class="text-sm text-[#737373]">{i.announcements.archiveEmpty}</p>
     ) : (
       <ul class="flex flex-col">
-        {entries.map((entry) => {
-          const parts = getDateParts(entry.data.date);
-          const md = `${String(parts.month).padStart(2, "0")}.${String(parts.day).padStart(2, "0")}`;
-          return (
-            <li>
-              <a
-                href={getLocalePath(locale, `/announcements/${entry.id}`)}
-                class="flex flex-col gap-1 py-3 border-b border-[#f5f5f5] last:border-0 hover:bg-[#fafafa] -mx-2 px-2 rounded transition-colors duration-150"
-              >
-                <div class="flex items-baseline gap-3">
-                  <span class="text-xs text-[#737373] tabular-nums min-w-[60px]">{md}</span>
-                  <span class="text-sm font-medium text-[#171717]">{pickTitle(entry, locale)}</span>
-                </div>
-                <p class="text-xs text-[#737373] ml-[72px] leading-[1.5]">{pickDescription(entry, locale)}</p>
-              </a>
-            </li>
-          );
-        })}
+        {entries.map((entry) => <AnnouncementRow entry={entry} locale={locale} />)}
       </ul>
     )}
   </section>
