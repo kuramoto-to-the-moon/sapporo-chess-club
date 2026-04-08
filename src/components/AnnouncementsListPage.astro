@@ -32,6 +32,7 @@ for (const entry of entries) {
 const grouped = Array.from(yearMap.entries()).sort((a, b) => b[0] - a[0]);
 
 const archiveHref = getLocalePath(locale, "/announcements/archive");
+const rssHref = `${import.meta.env.BASE_URL.replace(/\/$/, "")}/rss.xml`;
 ---
 
 <BaseLayout title={i.announcements.pageTitle} locale={locale}>
@@ -82,12 +83,15 @@ const archiveHref = getLocalePath(locale, "/announcements/archive");
       ))
     )}
 
-    {archivedCount > 0 && (
-      <div class="mt-10 pt-6 border-t border-[#f5f5f5] text-center">
+    <div class="mt-10 pt-6 border-t border-[#f5f5f5] flex flex-col items-center gap-3">
+      {archivedCount > 0 && (
         <a href={archiveHref} class="text-sm text-[#2563eb] hover:text-[#1d4ed8] font-medium" data-astro-prefetch>
           {i.announcements.viewArchive}
         </a>
-      </div>
-    )}
+      )}
+      <a href={rssHref} class="text-xs text-[#737373] hover:text-[#2563eb] transition-colors duration-150">
+        {i.announcements.subscribeRss} (RSS)
+      </a>
+    </div>
   </section>
 </BaseLayout>
