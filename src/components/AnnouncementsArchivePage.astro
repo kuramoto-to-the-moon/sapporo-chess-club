@@ -1,0 +1,113 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { t, getLocalePath, type Locale } from "@/i18n";
+import { getDateParts } from "@/lib/date";
+import {
+  getArchivedAnnouncements,
+  pickTitle,
+  pickDescription,
+  hasJaOnlyContent,
+  type Announcement,
+} from "@/lib/announcement";
+
+interface Props {
+  locale: Locale;
+  /** 表示する年。未指定ならアーカイブの最新年が使われる。 */
+  year?: number;
+}
+
+const { locale, year: yearProp } = Astro.props;
+const i = t(locale);
+
+const all = await getArchivedAnnouncements();
+
+// 年でグルーピング (Map<year, entries[]>)
+const yearMap = new Map<number, Announcement[]>();
+for (const entry of all) {
+  const { year } = getDateParts(entry.data.date);
+  if (!yearMap.has(year)) yearMap.set(year, []);
+  yearMap.get(year)!.push(entry);
+}
+const archivedYears = Array.from(yearMap.keys()).sort((a, b) => b - a);
+
+// 表示対象年: prop 指定があればそれ、なければアーカイブの最新年
+const selectedYear = yearProp ?? archivedYears[0] ?? null;
+const entries = selectedYear ? (yearMap.get(selectedYear) ?? []) : [];
+
+const showEnNotice = locale === "en" && entries.some(hasJaOnlyContent);
+
+const activeHref = getLocalePath(locale, "/announcements");
+const archiveBaseHref = getLocalePath(locale, "/announcements/archive");
+const yearHref = (y: number) => getLocalePath(locale, `/announcements/archive/${y}`);
+
+const pageTitle = selectedYear
+  ? `${selectedYear}${i.schedule.yearSuffix}${i.announcements.archivePageTitle}`
+  : i.announcements.archivePageTitle;
+---
+
+<BaseLayout title={pageTitle} locale={locale}>
+  <section class="px-5 pt-16 md:pt-20 pb-6">
+    <a href={activeHref} class="inline-block text-sm text-[#737373] hover:text-[#2563eb] transition-colors duration-150 mb-4 animate-fade-in-up">
+      {i.announcements.backToActive}
+    </a>
+    <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight animate-fade-in-up">
+      {i.announcements.archivePageTitle}
+    </h1>
+
+    {archivedYears.length > 0 && (
+      <nav class="mt-6 flex flex-wrap gap-2 animate-fade-in-up stagger-1" aria-label={i.announcements.archivePageTitle}>
+        {archivedYears.map((y) => {
+          const isActive = y === selectedYear;
+          return (
+            <a
+              href={yearHref(y)}
+              data-astro-prefetch
+              class:list={[
+                "inline-flex items-center justify-center min-h-[36px] px-3.5 rounded-md text-sm font-medium transition-colors duration-150",
+                isActive
+                  ? "bg-[#2563eb] text-white"
+                  : "bg-[#f5f5f5] text-[#525252] hover:bg-[#e5e5e5]",
+              ]}
+              aria-current={isActive ? "page" : undefined}
+            >
+              {y}{i.schedule.yearSuffix}
+            </a>
+          );
+        })}
+      </nav>
+    )}
+
+    {showEnNotice && (
+      <p class="mt-4 text-xs text-[#2563eb] italic animate-fade-in-up stagger-2">
+        {i.announcements.englishNotAvailable}
+      </p>
+    )}
+  </section>
+
+  <section class="px-5 pb-10 animate-fade-in-up stagger-3">
+    {entries.length === 0 ? (
+      <p class="text-sm text-[#737373]">{i.announcements.archiveEmpty}</p>
+    ) : (
+      <ul class="flex flex-col">
+        {entries.map((entry) => {
+          const parts = getDateParts(entry.data.date);
+          const md = `${String(parts.month).padStart(2, "0")}.${String(parts.day).padStart(2, "0")}`;
+          return (
+            <li>
+              <a
+                href={getLocalePath(locale, `/announcements/${entry.id}`)}
+                class="flex flex-col gap-1 py-3 border-b border-[#f5f5f5] last:border-0 hover:bg-[#fafafa] -mx-2 px-2 rounded transition-colors duration-150"
+              >
+                <div class="flex items-baseline gap-3">
+                  <span class="text-xs text-[#737373] tabular-nums min-w-[60px]">{md}</span>
+                  <span class="text-sm font-medium text-[#171717]">{pickTitle(entry, locale)}</span>
+                </div>
+                <p class="text-xs text-[#737373] ml-[72px] leading-[1.5]">{pickDescription(entry, locale)}</p>
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+    )}
+  </section>
+</BaseLayout>

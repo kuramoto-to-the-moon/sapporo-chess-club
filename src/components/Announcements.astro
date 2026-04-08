@@ -1,0 +1,54 @@
+---
+import { t, getLocalePath, type Locale } from "@/i18n";
+import {
+  getSortedAnnouncements,
+  pickTitle,
+  pickDescription,
+  hasJaOnlyContent,
+  formatAnnouncementDate,
+} from "@/lib/announcement";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const i = t(locale);
+const listHref = getLocalePath(locale, "/announcements");
+
+const latest = (await getSortedAnnouncements()).slice(0, 3);
+const showEnNotice = locale === "en" && latest.some(hasJaOnlyContent);
+---
+
+{latest.length > 0 && (
+  <section id="announcements" class="px-5 py-6 border-t border-[#f5f5f5]">
+    <div class="flex items-baseline justify-between mb-2">
+      <h2 class="text-sm font-semibold uppercase tracking-wider text-[#737373] flex items-center gap-2">
+        <span class="inline-block w-1 h-3 bg-[#2563eb]"></span>
+        {i.announcements.label}
+      </h2>
+      <a href={listHref} class="text-xs text-[#2563eb] hover:text-[#1d4ed8] font-medium">
+        {i.announcements.viewAll}
+      </a>
+    </div>
+    {showEnNotice && (
+      <p class="text-xs text-[#2563eb] italic mb-1">{i.announcements.englishNotAvailableShort}</p>
+    )}
+    <ul class="flex flex-col">
+      {latest.map((entry) => (
+        <li>
+          <a
+            href={getLocalePath(locale, `/announcements/${entry.id}`)}
+            class="flex flex-col gap-1 py-3 border-b border-[#f5f5f5] last:border-0 hover:bg-[#fafafa] -mx-2 px-2 rounded transition-colors duration-150"
+          >
+            <div class="flex items-baseline gap-3">
+              <span class="text-xs text-[#737373] tabular-nums min-w-[78px]">{formatAnnouncementDate(entry.data.date)}</span>
+              <span class="text-sm font-medium text-[#171717]">{pickTitle(entry, locale)}</span>
+            </div>
+            <p class="text-xs text-[#737373] ml-[90px] leading-[1.5]">{pickDescription(entry, locale)}</p>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+)}

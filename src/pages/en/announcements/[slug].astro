@@ -1,0 +1,10 @@
+---
+import AnnouncementDetailPage from "@/components/AnnouncementDetailPage.astro";
+import { getAnnouncementStaticPaths } from "@/lib/announcement";
+
+export const getStaticPaths = getAnnouncementStaticPaths;
+
+const { entry, prev, next } = Astro.props;
+---
+
+<AnnouncementDetailPage locale="en" entry={entry} prev={prev} next={next} />

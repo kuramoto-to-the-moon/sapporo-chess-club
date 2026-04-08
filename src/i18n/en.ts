@@ -7,6 +7,7 @@ export default {
   nav: {
     home: "Home",
     tournaments: "Tournaments",
+    announcements: "News",
     skipToMain: "Skip to main content",
     openInNewTab: "(opens in new tab)",
     switchLanguage: "日本語に切り替え",
@@ -15,6 +16,7 @@ export default {
   sections: {
     home: "HOME",
     tournaments: "TOURNAMENTS",
+    announcements: "NEWS",
   },
   hero: {
     subtitle: "A community for chess enthusiasts in Hokkaido. Beginners welcome.",
@@ -58,6 +60,22 @@ export default {
   lessons: {
     label: "Chess Lessons",
     viewDetails: "View details",
+  },
+  announcements: {
+    label: "News",
+    pageTitle: "News",
+    pageSubtitle: "Latest updates from the club",
+    viewAll: "View all →",
+    back: "← All news",
+    prev: "Previous",
+    next: "Next",
+    empty: "No news yet.",
+    englishNotAvailable: "Announcements are not yet available in English. The content below is shown in Japanese.",
+    englishNotAvailableShort: "Content shown in Japanese.",
+    archivePageTitle: "News Archive",
+    viewArchive: "View older announcements →",
+    backToActive: "← Back to recent news",
+    archiveEmpty: "Archive is empty.",
   },
   resources: {
     label: "Links & Resources",
@@ -118,6 +136,7 @@ export default {
     activities: "Activities",
     info: "Entry Fee & Venue",
     lessons: "Chess Lessons",
+    announcements: "News",
     links: "Links",
     contact: "Contact",
   },

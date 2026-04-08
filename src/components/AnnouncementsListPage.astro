@@ -1,0 +1,93 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { t, getLocalePath, type Locale } from "@/i18n";
+import { getDateParts } from "@/lib/date";
+import {
+  getActiveAnnouncements,
+  getArchivedAnnouncements,
+  pickTitle,
+  pickDescription,
+  hasJaOnlyContent,
+  type Announcement,
+} from "@/lib/announcement";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const i = t(locale);
+
+const entries = await getActiveAnnouncements();
+const archivedCount = (await getArchivedAnnouncements()).length;
+
+const showEnNotice = locale === "en" && entries.some(hasJaOnlyContent);
+
+const yearMap = new Map<number, Announcement[]>();
+for (const entry of entries) {
+  const { year } = getDateParts(entry.data.date);
+  if (!yearMap.has(year)) yearMap.set(year, []);
+  yearMap.get(year)!.push(entry);
+}
+const grouped = Array.from(yearMap.entries()).sort((a, b) => b[0] - a[0]);
+
+const archiveHref = getLocalePath(locale, "/announcements/archive");
+---
+
+<BaseLayout title={i.announcements.pageTitle} locale={locale}>
+  <section class="px-5 pt-16 md:pt-20 pb-6">
+    <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight animate-fade-in-up">
+      {i.announcements.pageTitle}
+    </h1>
+    <p class="text-sm text-[#737373] mt-3 animate-fade-in-up stagger-1">
+      {i.announcements.pageSubtitle}
+    </p>
+    {showEnNotice && (
+      <p class="mt-4 text-xs text-[#2563eb] italic animate-fade-in-up stagger-1">
+        {i.announcements.englishNotAvailable}
+      </p>
+    )}
+  </section>
+
+  <section class="px-5 pb-10 animate-fade-in-up stagger-2">
+    {entries.length === 0 ? (
+      <p class="text-sm text-[#737373]">{i.announcements.empty}</p>
+    ) : (
+      grouped.map(([year, items]) => (
+        <div class="mb-8">
+          <h2 class="text-sm font-semibold uppercase tracking-wider text-[#2563eb] mb-3 pb-2 border-b border-[#e5e5e5]">
+            {year}{i.schedule.yearSuffix}
+          </h2>
+          <ul class="flex flex-col">
+            {items.map((entry) => {
+              const parts = getDateParts(entry.data.date);
+              const md = `${String(parts.month).padStart(2, "0")}.${String(parts.day).padStart(2, "0")}`;
+              return (
+                <li>
+                  <a
+                    href={getLocalePath(locale, `/announcements/${entry.id}`)}
+                    class="flex flex-col gap-1 py-3 border-b border-[#f5f5f5] last:border-0 hover:bg-[#fafafa] -mx-2 px-2 rounded transition-colors duration-150"
+                  >
+                    <div class="flex items-baseline gap-3">
+                      <span class="text-xs text-[#737373] tabular-nums min-w-[60px]">{md}</span>
+                      <span class="text-sm font-medium text-[#171717]">{pickTitle(entry, locale)}</span>
+                    </div>
+                    <p class="text-xs text-[#737373] ml-[72px] leading-[1.5]">{pickDescription(entry, locale)}</p>
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      ))
+    )}
+
+    {archivedCount > 0 && (
+      <div class="mt-10 pt-6 border-t border-[#f5f5f5] text-center">
+        <a href={archiveHref} class="text-sm text-[#2563eb] hover:text-[#1d4ed8] font-medium" data-astro-prefetch>
+          {i.announcements.viewArchive}
+        </a>
+      </div>
+    )}
+  </section>
+</BaseLayout>

@@ -7,6 +7,7 @@ export default {
   nav: {
     home: "ホーム",
     tournaments: "大会記録",
+    announcements: "お知らせ",
     skipToMain: "メインコンテンツへスキップ",
     openInNewTab: "（新しいタブで開く）",
     switchLanguage: "Switch to English",
@@ -15,6 +16,7 @@ export default {
   sections: {
     home: "HOME",
     tournaments: "TOURNAMENTS",
+    announcements: "NEWS",
   },
   hero: {
     subtitle: "北海道のチェス愛好家が集うコミュニティです。初心者歓迎。",
@@ -58,6 +60,22 @@ export default {
   lessons: {
     label: "チェス講座",
     viewDetails: "詳細を見る",
+  },
+  announcements: {
+    label: "お知らせ",
+    pageTitle: "お知らせ",
+    pageSubtitle: "新着情報・お知らせ一覧",
+    viewAll: "すべて見る →",
+    back: "← お知らせ一覧",
+    prev: "前のお知らせ",
+    next: "次のお知らせ",
+    empty: "まだお知らせはありません。",
+    englishNotAvailable: "",
+    englishNotAvailableShort: "",
+    archivePageTitle: "お知らせアーカイブ",
+    viewArchive: "過去のお知らせを見る →",
+    backToActive: "← 最近のお知らせに戻る",
+    archiveEmpty: "アーカイブはまだありません。",
   },
   resources: {
     label: "リンク / 資料",
@@ -118,6 +136,7 @@ export default {
     activities: "活動内容",
     info: "参加案内・会場",
     lessons: "チェス講座",
+    announcements: "お知らせ",
     links: "リンク",
     contact: "お問い合わせ",
   },

@@ -2,6 +2,7 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Hero from "@/components/Hero.astro";
 import NextEvent from "@/components/NextEvent.astro";
+import Announcements from "@/components/Announcements.astro";
 import Activities from "@/components/Activities.astro";
 import Schedule from "@/components/Schedule.astro";
 import ClubInfo from "@/components/ClubInfo.astro";
@@ -21,6 +22,7 @@ const i = t(locale);
 <BaseLayout title={i.nav.home} locale={locale}>
   <Hero locale={locale} />
   <NextEvent locale={locale} />
+  <Announcements locale={locale} />
   <Activities locale={locale} />
   <Schedule locale={locale} />
   <ClubInfo locale={locale} />
