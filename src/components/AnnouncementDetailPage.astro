@@ -1,38 +1,33 @@
 ---
-import type { CollectionEntry } from "astro:content";
 import { render } from "astro:content";
 import { marked } from "marked";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { t, getLocalePath, type Locale } from "@/i18n";
-import { getDateParts } from "@/lib/date";
+import {
+  pickTitle,
+  hasJaOnlyContent,
+  formatAnnouncementDate,
+  type Announcement,
+} from "@/lib/announcement";
 
 interface Props {
   locale: Locale;
-  entry: CollectionEntry<"announcements">;
-  prev: CollectionEntry<"announcements"> | null;
-  next: CollectionEntry<"announcements"> | null;
+  entry: Announcement;
+  prev: Announcement | null;
+  next: Announcement | null;
 }
 
 const { locale, entry, prev, next } = Astro.props;
 const i = t(locale);
 const listHref = getLocalePath(locale, "/announcements");
 
-const parts = getDateParts(entry.data.date);
-const dateStr = `${parts.year}.${String(parts.month).padStart(2, "0")}.${String(parts.day).padStart(2, "0")}`;
+const title = pickTitle(entry, locale);
+const isJaFallback = locale === "en" && hasJaOnlyContent(entry);
 
-const title = locale === "ja" ? entry.data.title.ja : (entry.data.title.en ?? entry.data.title.ja);
-const isJaFallback = locale === "en" && !entry.data.title.en;
-
-// Render the body. ja uses Astro's <Content />; en uses marked on bodyEn (or ja body fallback).
+// ja は Astro の <Content /> で markdown body をレンダー、
+// en は frontmatter の bodyEn 文字列を marked で HTML 化する。
 const { Content } = await render(entry);
 const enBodyHtml = entry.data.bodyEn ? marked.parse(entry.data.bodyEn) : null;
-
-function hrefFor(e: CollectionEntry<"announcements"> | null) {
-  return e ? getLocalePath(locale, `/announcements/${e.id}`) : null;
-}
-function titleFor(e: CollectionEntry<"announcements">) {
-  return locale === "ja" ? e.data.title.ja : (e.data.title.en ?? e.data.title.ja);
-}
 ---
 
 <BaseLayout title={title} locale={locale}>
@@ -47,7 +42,7 @@ function titleFor(e: CollectionEntry<"announcements">) {
       </p>
     )}
 
-    <p class="text-sm text-[#737373] mt-6 tabular-nums">{dateStr}</p>
+    <p class="text-sm text-[#737373] mt-6 tabular-nums">{formatAnnouncementDate(entry.data.date)}</p>
     <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mt-2 leading-tight">
       {title}
     </h1>
@@ -62,15 +57,15 @@ function titleFor(e: CollectionEntry<"announcements">) {
 
     <nav class="flex justify-between mt-12 pt-6 border-t border-[#f5f5f5] text-sm" aria-label="Announcement pagination">
       {prev ? (
-        <a href={hrefFor(prev)} class="text-[#2563eb] hover:text-[#1d4ed8] flex flex-col">
+        <a href={getLocalePath(locale, `/announcements/${prev.id}`)} class="text-[#2563eb] hover:text-[#1d4ed8] flex flex-col">
           <span class="text-xs text-[#737373]">{i.announcements.prev}</span>
-          <span class="font-medium">← {titleFor(prev)}</span>
+          <span class="font-medium">← {pickTitle(prev, locale)}</span>
         </a>
       ) : <span></span>}
       {next ? (
-        <a href={hrefFor(next)} class="text-[#2563eb] hover:text-[#1d4ed8] flex flex-col items-end text-right">
+        <a href={getLocalePath(locale, `/announcements/${next.id}`)} class="text-[#2563eb] hover:text-[#1d4ed8] flex flex-col items-end text-right">
           <span class="text-xs text-[#737373]">{i.announcements.next}</span>
-          <span class="font-medium">{titleFor(next)} →</span>
+          <span class="font-medium">{pickTitle(next, locale)} →</span>
         </a>
       ) : <span></span>}
     </nav>

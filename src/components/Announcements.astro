@@ -1,7 +1,12 @@
 ---
-import { getCollection } from "astro:content";
 import { t, getLocalePath, type Locale } from "@/i18n";
-import { parseDate, getDateParts } from "@/lib/date";
+import {
+  getSortedAnnouncements,
+  pickTitle,
+  pickDescription,
+  hasJaOnlyContent,
+  formatAnnouncementDate,
+} from "@/lib/announcement";
 
 interface Props {
   locale: Locale;
@@ -11,19 +16,8 @@ const { locale } = Astro.props;
 const i = t(locale);
 const listHref = getLocalePath(locale, "/announcements");
 
-const all = await getCollection("announcements");
-const latest = all
-  .sort((a, b) => parseDate(b.data.date).getTime() - parseDate(a.data.date).getTime())
-  .slice(0, 3);
-
-function pickTitle(d: { title: { ja: string; en?: string } }) {
-  return locale === "ja" ? d.title.ja : (d.title.en ?? d.title.ja);
-}
-function pickDescription(d: { description: { ja: string; en?: string } }) {
-  return locale === "ja" ? d.description.ja : (d.description.en ?? d.description.ja);
-}
-
-const showEnNotice = locale === "en" && latest.some((e) => !e.data.title.en);
+const latest = (await getSortedAnnouncements()).slice(0, 3);
+const showEnNotice = locale === "en" && latest.some(hasJaOnlyContent);
 ---
 
 {latest.length > 0 && (
@@ -38,30 +32,23 @@ const showEnNotice = locale === "en" && latest.some((e) => !e.data.title.en);
       </a>
     </div>
     {showEnNotice && (
-      <p class="text-xs text-[#737373] italic mb-1">{i.announcements.englishNotAvailableShort}</p>
+      <p class="text-xs text-[#2563eb] italic mb-1">{i.announcements.englishNotAvailableShort}</p>
     )}
     <ul class="flex flex-col">
-      {latest.map((entry) => {
-        const parts = getDateParts(entry.data.date);
-        const dateStr = `${parts.year}.${String(parts.month).padStart(2, "0")}.${String(parts.day).padStart(2, "0")}`;
-        const detailHref = getLocalePath(locale, `/announcements/${entry.id}`);
-        return (
-          <li>
-            <a
-              href={detailHref}
-              class="flex flex-col gap-1 py-3 border-b border-[#f5f5f5] last:border-0 hover:bg-[#fafafa] -mx-2 px-2 rounded transition-colors duration-150"
-            >
-              <div class="flex items-baseline gap-3">
-                <span class="text-xs text-[#737373] tabular-nums min-w-[78px]">{dateStr}</span>
-                <span class="text-sm font-medium text-[#171717]">
-                  {pickTitle(entry.data)}
-                </span>
-              </div>
-              <p class="text-xs text-[#737373] ml-[90px] leading-[1.5]">{pickDescription(entry.data)}</p>
-            </a>
-          </li>
-        );
-      })}
+      {latest.map((entry) => (
+        <li>
+          <a
+            href={getLocalePath(locale, `/announcements/${entry.id}`)}
+            class="flex flex-col gap-1 py-3 border-b border-[#f5f5f5] last:border-0 hover:bg-[#fafafa] -mx-2 px-2 rounded transition-colors duration-150"
+          >
+            <div class="flex items-baseline gap-3">
+              <span class="text-xs text-[#737373] tabular-nums min-w-[78px]">{formatAnnouncementDate(entry.data.date)}</span>
+              <span class="text-sm font-medium text-[#171717]">{pickTitle(entry, locale)}</span>
+            </div>
+            <p class="text-xs text-[#737373] ml-[90px] leading-[1.5]">{pickDescription(entry, locale)}</p>
+          </a>
+        </li>
+      ))}
     </ul>
   </section>
 )}
