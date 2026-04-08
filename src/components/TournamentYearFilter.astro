@@ -9,6 +9,13 @@ interface Props {
 const { years, locale } = Astro.props;
 const i = t(locale);
 
+// aria-live 領域に書き込むテンプレート。フィルタ変更時にスクリーンリーダーへ
+// 「選択中の年 + 表示件数」を告知する。{label} と {count} をスクリプトで置換。
+const announceFormat =
+  locale === "ja"
+    ? "{label}: {count}件表示中"
+    : "Showing {count} tournaments — {label}";
+
 // "all" を先頭に置いた年選択肢のリスト。モバイル select とデスクトップ pill で共有。
 type YearOption = { value: string; label: string };
 const allOption: YearOption = { value: "all", label: i.schedule.allYears };
@@ -103,6 +110,15 @@ const checkClass =
       </button>
     ))}
   </div>
+
+  {/* スクリーンリーダー向けのライブリージョン。フィルタ変更を音声で告知する。 */}
+  <p
+    data-filter-live
+    data-announce-format={announceFormat}
+    aria-live="polite"
+    aria-atomic="true"
+    class="sr-only"
+  ></p>
 </div>
 
 <script>
@@ -118,16 +134,21 @@ const checkClass =
     document.querySelectorAll<HTMLElement>("[data-card-year]")
   );
   const labelEl = document.querySelector<HTMLElement>("[data-filter-trigger-label]");
-  // value → ラベル文字列のマップ (モバイルトリガーの表示更新に使う)
+  const liveEl = document.querySelector<HTMLElement>("[data-filter-live]");
+  const announceFormat = liveEl?.dataset.announceFormat ?? "";
+  // value → ラベル文字列のマップ (モバイルトリガーと live 領域の表示更新に使う)
   // ラベルは各 option の data-filter-label 属性から読むので DOM 構造変更に強い
   const labelByValue = new Map(
     optionEls.map((el) => [el.dataset.filterOption ?? "", el.dataset.filterLabel ?? ""])
   );
 
-  /** 選択された年を pill / listbox / カード表示に同期する */
+  /** 選択された年を pill / listbox / カード表示 / SR 告知に同期する */
   function applyYear(year: string) {
+    let visible = 0;
     cards.forEach((c) => {
-      c.hidden = year !== "all" && c.dataset.cardYear !== year;
+      const hidden = year !== "all" && c.dataset.cardYear !== year;
+      c.hidden = hidden;
+      if (!hidden) visible++;
     });
     pills.forEach((b) => {
       b.setAttribute("aria-pressed", b.dataset.filterPill === year ? "true" : "false");
@@ -135,7 +156,13 @@ const checkClass =
     optionEls.forEach((el) => {
       el.setAttribute("aria-selected", el.dataset.filterOption === year ? "true" : "false");
     });
-    if (labelEl) labelEl.textContent = labelByValue.get(year) ?? year;
+    const label = labelByValue.get(year) ?? year;
+    if (labelEl) labelEl.textContent = label;
+    if (liveEl) {
+      liveEl.textContent = announceFormat
+        .replace("{label}", label)
+        .replace("{count}", String(visible));
+    }
   }
 
   // デスクトップ: pill ボタンで直接切替
