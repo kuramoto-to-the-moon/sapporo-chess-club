@@ -19,7 +19,7 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
     resolve: {
-      noExternal: ["@lucide/svelte", "bits-ui"],
+      noExternal: ["bits-ui"],
     },
   },
   i18n: {
