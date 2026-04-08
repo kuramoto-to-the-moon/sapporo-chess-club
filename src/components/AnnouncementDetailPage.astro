@@ -1,0 +1,75 @@
+---
+import { render } from "astro:content";
+import { marked } from "marked";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { t, getLocalePath, type Locale } from "@/i18n";
+import {
+  pickTitle,
+  hasJaOnlyContent,
+  formatAnnouncementDate,
+  type Announcement,
+} from "@/lib/announcement";
+
+interface Props {
+  locale: Locale;
+  entry: Announcement;
+  prev: Announcement | null;
+  next: Announcement | null;
+}
+
+const { locale, entry, prev, next } = Astro.props;
+const i = t(locale);
+const listHref = getLocalePath(locale, "/announcements");
+
+const title = pickTitle(entry, locale);
+const isJaFallback = locale === "en" && hasJaOnlyContent(entry);
+
+// ja は Astro の <Content /> で markdown body をレンダー、
+// en は frontmatter の bodyEn 文字列を marked で HTML 化する。
+const { Content } = await render(entry);
+const enBodyHtml = entry.data.bodyEn ? marked.parse(entry.data.bodyEn) : null;
+---
+
+<BaseLayout title={title} locale={locale}>
+  <article class="px-5 pt-16 md:pt-20 pb-10">
+    <a href={listHref} class="text-sm text-[#737373] hover:text-[#2563eb] transition-colors duration-150 animate-fade-in-up">
+      {i.announcements.back}
+    </a>
+
+    {isJaFallback && (
+      <p class="mt-4 text-xs text-[#2563eb] italic animate-fade-in-up stagger-1">
+        {i.announcements.englishNotAvailable}
+      </p>
+    )}
+
+    <p class="text-sm text-[#737373] mt-6 tabular-nums animate-fade-in-up stagger-1">{formatAnnouncementDate(entry.data.date)}</p>
+    <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mt-2 leading-tight animate-fade-in-up stagger-2">
+      {title}
+    </h1>
+
+    <div class="mt-8 prose prose-sm prose-neutral max-w-none animate-fade-in-up stagger-3">
+      {locale === "ja" || !enBodyHtml ? (
+        <Content />
+      ) : (
+        <Fragment set:html={enBodyHtml} />
+      )}
+    </div>
+
+    {(prev || next) && (
+      <nav class="flex justify-between mt-12 pt-6 border-t border-[#f5f5f5] text-sm" aria-label="Announcement pagination">
+        {prev ? (
+          <a href={getLocalePath(locale, `/announcements/${prev.id}`)} class="text-[#2563eb] hover:text-[#1d4ed8] flex flex-col">
+            <span class="text-xs text-[#737373]">{i.announcements.prev}</span>
+            <span class="font-medium">← {pickTitle(prev, locale)}</span>
+          </a>
+        ) : <span></span>}
+        {next ? (
+          <a href={getLocalePath(locale, `/announcements/${next.id}`)} class="text-[#2563eb] hover:text-[#1d4ed8] flex flex-col items-end text-right">
+            <span class="text-xs text-[#737373]">{i.announcements.next}</span>
+            <span class="font-medium">{pickTitle(next, locale)} →</span>
+          </a>
+        ) : <span></span>}
+      </nav>
+    )}
+  </article>
+</BaseLayout>

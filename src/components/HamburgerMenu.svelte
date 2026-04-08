@@ -26,6 +26,7 @@
 
   const pages = [
     { label: i.nav.home, sub: i.sections.home, href: homeHref },
+    { label: i.announcements.label, sub: i.sections.announcements, href: getLocalePath(locale, "/announcements") },
     { label: i.schedule.label, sub: "SCHEDULE", href: getLocalePath(locale, "/schedule") },
     { label: i.nav.tournaments, sub: i.sections.tournaments, href: getLocalePath(locale, "/tournaments") },
   ];

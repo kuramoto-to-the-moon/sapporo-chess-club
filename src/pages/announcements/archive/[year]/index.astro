@@ -1,0 +1,16 @@
+---
+import AnnouncementsArchivePage from "@/components/AnnouncementsArchivePage.astro";
+import { getArchivedYears } from "@/lib/announcement";
+
+export async function getStaticPaths() {
+  const years = await getArchivedYears();
+  return years.map((year) => ({
+    params: { year: String(year) },
+    props: { year },
+  }));
+}
+
+const { year } = Astro.props;
+---
+
+<AnnouncementsArchivePage locale="ja" year={year} />

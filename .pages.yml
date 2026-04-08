@@ -189,6 +189,42 @@ content:
           media: competition
         description: "評価値コメント付きの棋譜 (*Analysis.pgn)。あれば追加。"
 
+  - name: announcements
+    label: お知らせ
+    description: "新着情報・お知らせ。日本語で書けば英語は GitHub Action が自動翻訳します。"
+    type: collection
+    path: src/content/announcements
+    format: yaml-frontmatter
+    view:
+      fields: [date, title.ja]
+      primary: title.ja
+      sort: [date]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: date
+        label: 公開日
+        type: date
+        required: true
+        description: "YYYY-MM-DD 形式。新しい順に並びます。"
+      - name: title
+        label: タイトル
+        type: object
+        fields:
+          - { name: ja, label: 日本語, type: string, required: true }
+          - { name: en, label: English (自動翻訳), type: string }
+      - name: description
+        label: 概要 (一覧の 1 行抜粋)
+        type: object
+        fields:
+          - { name: ja, label: 日本語, type: text, required: true }
+          - { name: en, label: English (自動翻訳), type: text }
+      - name: bodyEn
+        label: 本文 English (自動翻訳・編集可)
+        type: text
+        description: "GitHub Action が自動生成。修正したい場合のみ手動で書き換え。"
+
   - name: lessons
     label: チェス講座
     type: collection
