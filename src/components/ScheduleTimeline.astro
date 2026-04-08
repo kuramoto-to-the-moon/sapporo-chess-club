@@ -171,16 +171,13 @@ function formatMonthHeading(monthKey: string): string {
       }
     }
     // 全エントリが過去の月ブロックをまとめて非表示
-    let pastMonthCount = 0;
     for (const block of document.querySelectorAll<HTMLElement>("[data-schedule-month]")) {
       const items = block.querySelectorAll<HTMLElement>("li[data-date]");
-      const allPast = Array.from(items).every((li) =>
-        li.dataset.date ? li.dataset.date < todayJst : false
+      if (items.length === 0) continue;
+      const allPast = Array.from(items).every(
+        (li) => !!li.dataset.date && li.dataset.date < todayJst
       );
-      if (allPast && items.length > 0) {
-        block.classList.add("js-past-month");
-        pastMonthCount++;
-      }
+      if (allPast) block.classList.add("js-past-month");
     }
     // トグルを表示 (過去エントリが 1 つでもあれば)
     if (pastEntryCount > 0) {
