@@ -1,6 +1,6 @@
 ---
 import { t, type Locale } from "@/i18n";
-import TournamentYearFilter from "./TournamentYearFilter.svelte";
+import TournamentYearFilter from "./TournamentYearFilter.astro";
 import ExternalLinkIcon from "@/components/ExternalLinkIcon.astro";
 
 interface Tournament {
@@ -23,37 +23,8 @@ const { tournaments, years, locale } = Astro.props;
 const i = t(locale);
 ---
 
-<div class="mb-8 min-h-[88px] sm:min-h-[60px] relative">
-  {/*
-    Placeholder: Svelte + Bits UI の Select は client:only でないと portal
-    の SSR hydration で壊れるため、JS が読み込まれるまでの間これを見せる。
-    見た目を Svelte 版と揃えておき、hydrate 完了時に Svelte 側が
-    #year-filter-placeholder を display:none にする。
-  */}
-  <div id="year-filter-placeholder" aria-hidden="true" class="absolute inset-0 z-10 bg-white">
-    <div class="sm:hidden">
-      <div class="block text-xs uppercase tracking-wider text-[#737373] mb-2">
-        {i.schedule.filterByYear}
-      </div>
-      <div class="w-full min-h-[44px] rounded-md border border-[#e5e5e5] bg-white px-3 flex items-center justify-between text-sm text-[#171717]">
-        <span>{i.schedule.allYears}</span>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[#737373]">
-          <path d="m6 9 6 6 6-6"/>
-        </svg>
-      </div>
-    </div>
-    <div class="hidden sm:flex flex-wrap gap-2">
-      <span class="inline-flex items-center justify-center min-h-[44px] px-3.5 rounded-md text-sm font-medium bg-[#2563eb] text-white">
-        {i.schedule.all}
-      </span>
-      {years.map((y) => (
-        <span class="inline-flex items-center justify-center min-h-[44px] px-3.5 rounded-md text-sm font-medium bg-[#f5f5f5] text-[#525252]">
-          {y}
-        </span>
-      ))}
-    </div>
-  </div>
-  <TournamentYearFilter years={years} locale={locale} client:only="svelte" />
+<div class="mb-8 min-h-[88px] sm:min-h-[60px]">
+  <TournamentYearFilter years={years} locale={locale} />
 </div>
 
 <div class="flex flex-col gap-4">
