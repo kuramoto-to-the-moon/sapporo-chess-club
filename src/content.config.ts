@@ -76,4 +76,20 @@ const site = defineCollection({
   }),
 });
 
-export const collections = { schedule, tournaments, lessons, links, site };
+const announcements = defineCollection({
+  loader: glob({ pattern: "**/*.md", base: "./src/content/announcements" }),
+  schema: z.object({
+    title: z.object({
+      ja: z.string(),
+      en: z.string().optional(),
+    }),
+    description: z.object({
+      ja: z.string(),
+      en: z.string().optional(),
+    }),
+    date: z.string(),
+    bodyEn: z.string().optional(),
+  }),
+});
+
+export const collections = { schedule, tournaments, lessons, links, site, announcements };
