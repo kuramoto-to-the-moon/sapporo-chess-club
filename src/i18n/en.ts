@@ -53,7 +53,7 @@ export default {
     students: "Students",
     observation: "Observation & First Visit",
     free: "Free",
-    viewOnMap: "View on Google Maps →",
+    viewOnMap: "View on Google Maps",
   },
   lessons: {
     label: "Chess Lessons",

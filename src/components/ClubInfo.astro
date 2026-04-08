@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import { t, type Locale } from "@/i18n";
+import ExternalLinkIcon from "@/components/ExternalLinkIcon.astro";
 
 interface Props {
   locale: Locale;
@@ -48,9 +49,10 @@ const site = siteData[0].data;
           href="https://www.google.com/maps/search/?api=1&query=%E3%81%8B%E3%81%A7%E3%82%8B2.7"
           target="_blank"
           rel="noopener noreferrer"
-          class="text-sm text-[#2563eb] hover:text-[#1d4ed8] transition-colors duration-150 font-medium mt-1 w-fit"
+          class="inline-flex items-center gap-1.5 text-sm text-[#2563eb] hover:text-[#1d4ed8] transition-colors duration-150 font-medium mt-1 w-fit"
         >
           {i.clubInfo.viewOnMap}
+          <ExternalLinkIcon />
           <span class="sr-only">{i.nav.openInNewTab}</span>
         </a>
       </div>
