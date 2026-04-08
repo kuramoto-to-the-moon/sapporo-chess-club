@@ -21,8 +21,8 @@ const href = getLocalePath(locale, `/announcements/${entry.id}`);
   >
     <div class="flex items-baseline gap-3">
       <span class="text-xs text-[#737373] tabular-nums min-w-[60px] shrink-0">{md}</span>
-      <span class="text-sm font-medium text-[#171717] line-clamp-2 flex-1 min-w-0">{pickTitle(entry, locale)}</span>
+      <span class="text-sm font-medium text-[#171717] line-clamp-2 text-ellipsis flex-1 min-w-0">{pickTitle(entry, locale)}</span>
     </div>
-    <p class="text-xs text-[#737373] ml-[72px] leading-[1.5] line-clamp-2 min-w-0">{pickDescription(entry, locale)}</p>
+    <p class="text-xs text-[#737373] ml-[72px] leading-[1.5] line-clamp-2 text-ellipsis min-w-0">{pickDescription(entry, locale)}</p>
   </a>
 </li>
