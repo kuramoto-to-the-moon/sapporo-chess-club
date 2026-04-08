@@ -70,6 +70,8 @@ export default {
     prev: "Previous",
     next: "Next",
     empty: "No news yet.",
+    englishNotAvailable: "Announcements are not yet available in English. The content below is shown in Japanese.",
+    englishNotAvailableShort: "Content shown in Japanese.",
   },
   resources: {
     label: "Links & Resources",

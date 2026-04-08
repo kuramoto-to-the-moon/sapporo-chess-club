@@ -70,6 +70,8 @@ export default {
     prev: "前のお知らせ",
     next: "次のお知らせ",
     empty: "まだお知らせはありません。",
+    englishNotAvailable: "",
+    englishNotAvailableShort: "",
   },
   resources: {
     label: "リンク / 資料",

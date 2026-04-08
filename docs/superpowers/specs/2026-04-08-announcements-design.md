@@ -270,7 +270,13 @@ pnpm add -D @anthropic-ai/sdk      # 翻訳 Action 用 (devDep、CI でのみ使
 - 両方とも `<div class="prose prose-sm prose-neutral max-w-none">` でラップして同じスタイル
 - editor が CMS で見るのは「本文 (markdown body)」フィールド 1 つだけ。`bodyEn` は「自動翻訳・編集可」ラベル付きの別フィールドとして表示
 
-### RSS
+### RSS (WIP — 不確定事項あり)
+
+`/rss.xml` エンドポイントは実装されているが、現時点では **意図的に発見手段を提供していない**:
+- BaseLayout の `<head>` に `<link rel="alternate" type="application/rss+xml">` を入れていない
+- フッターやお知らせページに RSS アイコン / リンクを置いていない
+
+理由: クラブの読者層に RSS リーダー利用者がどれだけいるか不明。BBS の `chess.rdf` から情報取り込みする案も含めて運用方針が未定。エンドポイント自体は将来の選択肢として残すが、UI 露出と告知は確定後に追加する。
 
 `src/pages/rss.xml.ts`:
 

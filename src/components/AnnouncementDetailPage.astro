@@ -41,12 +41,15 @@ function titleFor(e: CollectionEntry<"announcements">) {
       {i.announcements.back}
     </a>
 
+    {isJaFallback && (
+      <div class="mt-5 p-3.5 rounded-md bg-[#f0f7ff] border border-[#bfdbfe] text-sm text-[#1e40af]">
+        {i.announcements.englishNotAvailable}
+      </div>
+    )}
+
     <p class="text-sm text-[#737373] mt-6 tabular-nums">{dateStr}</p>
     <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mt-2 leading-tight">
       {title}
-      {isJaFallback && (
-        <span class="ml-2 inline-block align-middle text-xs font-semibold uppercase tracking-wider text-[#92400e] bg-[#fef3c7] px-2 py-1 rounded">JA</span>
-      )}
     </h1>
 
     <div class="mt-8 prose prose-sm prose-neutral max-w-none">
