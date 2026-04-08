@@ -31,7 +31,7 @@ export function initListbox(config: ListboxConfig): void {
   const optionEls = options.map((o) => o.element);
   const isOpen = () => !listbox.hidden;
 
-  function open() {
+  function open(opts: { focusSelected: boolean } = { focusSelected: false }) {
     // ドロップダウンが画面下を突き抜けないよう max-height を動的計算
     const rect = trigger.getBoundingClientRect();
     const available = window.innerHeight - rect.bottom - bottomMarginRem * rem;
@@ -41,9 +41,13 @@ export function initListbox(config: ListboxConfig): void {
     if (chevron instanceof HTMLElement || chevron instanceof SVGElement) {
       chevron.style.transform = "rotate(180deg)";
     }
-    // 選択中の項目 (なければ先頭) にフォーカス
-    const selected = optionEls.find((el) => el.getAttribute("aria-selected") === "true");
-    (selected ?? optionEls[0])?.focus();
+    // キーボードで開いた時だけ選択中の項目にフォーカスを移す。
+    // ポインタ操作の場合はタップで直接選ぶのでフォーカスを動かさない
+    // (フォーカスリングが一瞬光るノイズを避けるため)。
+    if (opts.focusSelected) {
+      const selected = optionEls.find((el) => el.getAttribute("aria-selected") === "true");
+      (selected ?? optionEls[0])?.focus();
+    }
   }
 
   function close() {
@@ -54,7 +58,15 @@ export function initListbox(config: ListboxConfig): void {
     }
   }
 
-  trigger.addEventListener("click", () => (isOpen() ? close() : open()));
+  trigger.addEventListener("click", (e) => {
+    if (isOpen()) {
+      close();
+      return;
+    }
+    // MouseEvent.detail === 0 はキーボード (Enter/Space) による click。
+    // その場合だけ項目にフォーカスを移して矢印キー操作に繋げる。
+    open({ focusSelected: e.detail === 0 });
+  });
 
   options.forEach(({ element, value }) => {
     element.addEventListener("click", () => {
