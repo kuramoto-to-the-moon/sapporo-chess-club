@@ -26,7 +26,7 @@ const showEnNotice = locale === "en" && entries.some(hasJaOnlyContent);
 const grouped = Array.from(groupByYear(entries).entries()).sort((a, b) => b[0] - a[0]);
 
 const archiveHref = getLocalePath(locale, "/announcements/archive");
-const rssHref = withBase("/rss.xml")!;
+const rssHref = withBase(locale === "ja" ? "/rss.xml" : "/en/rss.xml")!;
 ---
 
 <BaseLayout title={i.announcements.pageTitle} locale={locale}>
