@@ -1,8 +1,14 @@
 ---
-import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { t, getLocalePath, type Locale } from "@/i18n";
-import { parseDate, getDateParts } from "@/lib/date";
+import { getDateParts } from "@/lib/date";
+import {
+  getSortedAnnouncements,
+  pickTitle,
+  pickDescription,
+  hasJaOnlyContent,
+  type Announcement,
+} from "@/lib/announcement";
 
 interface Props {
   locale: Locale;
@@ -11,26 +17,16 @@ interface Props {
 const { locale } = Astro.props;
 const i = t(locale);
 
-const all = (await getCollection("announcements")).sort(
-  (a, b) => parseDate(b.data.date).getTime() - parseDate(a.data.date).getTime()
-);
+const all = await getSortedAnnouncements();
+const showEnNotice = locale === "en" && all.some(hasJaOnlyContent);
 
-const yearMap = new Map<number, typeof all>();
+const yearMap = new Map<number, Announcement[]>();
 for (const entry of all) {
   const { year } = getDateParts(entry.data.date);
   if (!yearMap.has(year)) yearMap.set(year, []);
   yearMap.get(year)!.push(entry);
 }
 const grouped = Array.from(yearMap.entries()).sort((a, b) => b[0] - a[0]);
-
-function pickTitle(d: { title: { ja: string; en?: string } }) {
-  return locale === "ja" ? d.title.ja : (d.title.en ?? d.title.ja);
-}
-function pickDescription(d: { description: { ja: string; en?: string } }) {
-  return locale === "ja" ? d.description.ja : (d.description.en ?? d.description.ja);
-}
-
-const showEnNotice = locale === "en" && all.some((e) => !e.data.title.en);
 ---
 
 <BaseLayout title={i.announcements.pageTitle} locale={locale}>
@@ -61,20 +57,17 @@ const showEnNotice = locale === "en" && all.some((e) => !e.data.title.en);
             {entries.map((entry) => {
               const parts = getDateParts(entry.data.date);
               const md = `${String(parts.month).padStart(2, "0")}.${String(parts.day).padStart(2, "0")}`;
-              const detailHref = getLocalePath(locale, `/announcements/${entry.id}`);
               return (
                 <li>
                   <a
-                    href={detailHref}
+                    href={getLocalePath(locale, `/announcements/${entry.id}`)}
                     class="flex flex-col gap-1 py-3 border-b border-[#f5f5f5] last:border-0 hover:bg-[#fafafa] -mx-2 px-2 rounded transition-colors duration-150"
                   >
                     <div class="flex items-baseline gap-3">
                       <span class="text-xs text-[#737373] tabular-nums min-w-[60px]">{md}</span>
-                      <span class="text-sm font-medium text-[#171717]">
-                        {pickTitle(entry.data)}
-                      </span>
+                      <span class="text-sm font-medium text-[#171717]">{pickTitle(entry, locale)}</span>
                     </div>
-                    <p class="text-xs text-[#737373] ml-[72px] leading-[1.5]">{pickDescription(entry.data)}</p>
+                    <p class="text-xs text-[#737373] ml-[72px] leading-[1.5]">{pickDescription(entry, locale)}</p>
                   </a>
                 </li>
               );
