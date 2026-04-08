@@ -1,0 +1,23 @@
+---
+import { getCollection } from "astro:content";
+import AnnouncementDetailPage from "@/components/AnnouncementDetailPage.astro";
+import { parseDate } from "@/lib/date";
+
+export async function getStaticPaths() {
+  const all = (await getCollection("announcements")).sort(
+    (a, b) => parseDate(b.data.date).getTime() - parseDate(a.data.date).getTime()
+  );
+  return all.map((entry, idx) => ({
+    params: { slug: entry.id },
+    props: {
+      entry,
+      prev: all[idx + 1] ?? null,
+      next: all[idx - 1] ?? null,
+    },
+  }));
+}
+
+const { entry, prev, next } = Astro.props;
+---
+
+<AnnouncementDetailPage locale="ja" entry={entry} prev={prev} next={next} />
