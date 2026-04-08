@@ -12,21 +12,38 @@
           * { box-sizing: border-box; }
           body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
-            max-width: 42rem;
-            margin: 0 auto;
-            padding: 2.5rem 1.25rem 4rem;
+            margin: 0;
             color: #171717;
             background: #fff;
             line-height: 1.6;
           }
-          .back-link {
-            display: inline-block;
-            font-size: 0.85rem;
+          .topbar {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border-bottom: 1px solid #f5f5f5;
+          }
+          .topbar-inner {
+            max-width: 42rem;
+            margin: 0 auto;
+            padding: 0.75rem 1.25rem 0.5rem;
+          }
+          .brand {
+            font-size: 11px;
+            letter-spacing: 3px;
             color: #737373;
             text-decoration: none;
-            margin-bottom: 1.5rem;
+            transition: color 0.15s;
           }
-          .back-link:hover { color: #2563eb; }
+          .brand:hover { color: #2563eb; }
+          main {
+            max-width: 42rem;
+            margin: 0 auto;
+            padding: 2.5rem 1.25rem 4rem;
+          }
           .tag {
             display: inline-block;
             font-size: 11px;
@@ -117,7 +134,12 @@
         </style>
       </head>
       <body>
-        <a href="/sapporo-chess-club/announcements/" class="back-link">← お知らせ一覧に戻る</a>
+        <header class="topbar">
+          <div class="topbar-inner">
+            <a href="/sapporo-chess-club/announcements/" class="brand">← お知らせ一覧に戻る</a>
+          </div>
+        </header>
+        <main>
         <div class="tag">RSS FEED</div>
         <h1><xsl:value-of select="/rss/channel/title"/></h1>
         <p class="description"><xsl:value-of select="/rss/channel/description"/></p>
@@ -143,6 +165,7 @@
           </div>
         </xsl:for-each>
 
+        </main>
         <script>
           // XSLT では現在の URL を取れないので JS で挿入
           document.getElementById('feed-url').textContent = window.location.href;
