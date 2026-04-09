@@ -151,6 +151,10 @@ const anchors = [
   const dialog = document.getElementById("hamburger-dialog") as HTMLDialogElement | null;
   // 要素が無ければ silently no-op (throw すると同バンドルの他コードを巻き添えにし得る)
   if (openBtn && dialog) {
+    await initHamburgerMenu(openBtn, dialog);
+  }
+
+  async function initHamburgerMenu(openBtn: HTMLButtonElement, dialog: HTMLDialogElement) {
     await ensureDialogSupport(dialog);
 
     // 開いた直後のフォーカス先。autofocus 属性はブラウザ実装差で信頼できないため
@@ -159,15 +163,15 @@ const anchors = [
 
     /** メニューを開く。*/
     function openMenu() {
-      replayAnimations(dialog!, ".animate-fade-in-up");
-      dialog!.showModal();
+      replayAnimations(dialog, ".animate-fade-in-up");
+      dialog.showModal();
       closeBtn?.focus({ preventScroll: true });
-      openBtn!.setAttribute("aria-expanded", "true");
+      openBtn.setAttribute("aria-expanded", "true");
     }
 
     /** メニューを閉じる。*/
     function closeMenu() {
-      dialog!.close();
+      dialog.close();
     }
 
     /**
