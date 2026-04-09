@@ -62,9 +62,9 @@ export function initListbox(config: ListboxConfig): void {
       close();
       return;
     }
-    // MouseEvent.detail === 0 はキーボード (Enter/Space) による click。
-    // その場合だけ項目にフォーカスを移して矢印キー操作に繋げる。
-    open({ focusSelected: e.detail === 0 });
+    // キーボードで開いた時だけ項目にフォーカスを当てる (ポインタ操作ではフォーカス
+    // リングを光らせたくないため)。
+    open({ focusSelected: isKeyboardClick(e) });
   });
 
   options.forEach((element) => {
@@ -104,6 +104,15 @@ export function initListbox(config: ListboxConfig): void {
       options[nextIdx]?.focus();
     }
   });
+}
+
+/**
+ * Enter / Space キーで button を活性化すると、ブラウザは `detail: 0` の
+ * 合成 click イベントを発火する。ポインタ由来の click は `detail` が 1 以上に
+ * なるので、この数値で両者を区別できる。
+ */
+function isKeyboardClick(e: MouseEvent): boolean {
+  return e.detail === 0;
 }
 
 /**
