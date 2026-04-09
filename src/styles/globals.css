@@ -179,6 +179,13 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  /* ハンバーガーメニュー (<dialog>) を開いている間は背景のスクロールを禁止する。
+     dialog の open 属性と :has() で連動しているので JS で状態を持つ必要がなく、
+     bfcache 復元時にも dialog の open 状態から自動的に再評価される。 */
+  html:has(#hamburger-dialog[open]) {
+    overflow: hidden;
+  }
 }
 
 /* Animation utilities */
