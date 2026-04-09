@@ -155,6 +155,11 @@
     scroll-padding-top: 57px;
     /* Firefox: thumb は控えめなグレー、track は透明 */
     scrollbar-color: #d4d4d4 transparent;
+    /* スクロールバー分の幅を常に予約しておく。
+     * これで scrollbar あり/なしの切替でコンテンツ幅がシフトしなくなる
+     * (ハンバーガー open 時の overflow:hidden 切替でもレイアウト不変)。
+     * classic scrollbar のみ影響し、macOS/iOS の overlay scrollbar には無害。 */
+    scrollbar-gutter: stable;
   }
   /* Chrome / Safari / Edge */
   ::-webkit-scrollbar {
