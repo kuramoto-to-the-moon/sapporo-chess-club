@@ -65,7 +65,7 @@ const anchors = [
       </button>
     </div>
 
-    <nav class="flex-1 min-h-0 w-full max-w-4xl mx-auto px-5 pt-5 overflow-y-auto" aria-label="Main navigation">
+    <nav class="flex-1 min-h-0 w-full max-w-4xl mx-auto px-5 pt-5 overflow-y-auto overscroll-contain" aria-label="Main navigation">
       {pages.map((page, idx) => (
         <a
           href={page.href}
@@ -145,7 +145,7 @@ const anchors = [
 </style>
 
 <script>
-  import { ensureDialogSupport, lockBodyScroll, replayAnimations } from "@/lib/dialog";
+  import { ensureDialogSupport, replayAnimations } from "@/lib/dialog";
 
   const openBtn = document.getElementById("hamburger-open") as HTMLButtonElement | null;
   const dialog = document.getElementById("hamburger-dialog") as HTMLDialogElement | null;
@@ -156,20 +156,16 @@ const anchors = [
     // 開いた直後のフォーカス先。autofocus 属性はブラウザ実装差で信頼できないため
     // 明示的に JS で制御する。
     const closeBtn = dialog.querySelector<HTMLButtonElement>("[data-hamburger-close]");
-    let unlockScroll: (() => void) | null = null;
 
     openBtn.addEventListener("click", () => {
       replayAnimations(dialog, ".animate-fade-in-up");
-      unlockScroll = lockBodyScroll();
       dialog.showModal();
       closeBtn?.focus({ preventScroll: true });
       openBtn.setAttribute("aria-expanded", "true");
     });
 
-    // close: scroll lock 解除 + トリガーへフォーカス復帰 (ESC の a11y)
+    // close: トリガーへフォーカス復帰 (ESC の a11y)
     dialog.addEventListener("close", () => {
-      unlockScroll?.();
-      unlockScroll = null;
       openBtn.setAttribute("aria-expanded", "false");
       openBtn.focus({ preventScroll: true });
     });
@@ -177,9 +173,9 @@ const anchors = [
     // dialog 内クリックをデリゲート:
     //   - close ボタン                → dialog.close()
     //   - 同一ページ内 anchor (#xxx)  → dialog.close() + headroom 凍結
-    //   - cross-page リンク           → scroll lock だけ解除し、dialog は
-    //                                   top-layer に残して新ページ描画まで
-    //                                   古いページを覆い隠す (ちらつき防止)
+    //   - cross-page リンク           → dialog を閉じずに top-layer に残す。
+    //                                   新ページが描画されるまで古いページを
+    //                                   覆い隠してちらつきを防ぐ。
     dialog.addEventListener("click", (e) => {
       const target = e.target as Element;
       if (target.closest("[data-hamburger-close]")) {
@@ -187,13 +183,9 @@ const anchors = [
         return;
       }
       const link = target.closest("a[href]") as HTMLAnchorElement | null;
-      if (!link) return;
-      if (link.getAttribute("href")?.startsWith("#")) {
+      if (link?.getAttribute("href")?.startsWith("#")) {
         dialog.close();
         window.dispatchEvent(new CustomEvent("headroom:freeze"));
-      } else {
-        unlockScroll?.();
-        unlockScroll = null;
       }
     });
   }
