@@ -177,18 +177,23 @@ const anchors = [
 
     closeBtn?.addEventListener("click", () => dialog.close());
 
-    // dialog 内の全リンクで dialog.close() を呼ぶ。これにより
-    //   - ページ遷移リンク: 遷移前にロック解除 → bfcache に locked 状態が残らない
-    //   - アンカーリンク: 同ページ内スクロールでもロック解除
-    // anchor 用の追加処理 (ヘッダー headroom 凍結) は同 hash アンカーの時だけ実行
+    // dialog 内のリンクタップ時の挙動:
+    //   - cross-page 遷移: dialog を閉じずに scroll lock だけ解除する。
+    //     dialog は top-layer に残るので、新ページが描画されるまで古いページが
+    //     見えない (ちらつき防止)。lock を外すのは bfcache に locked 状態が
+    //     残らないようにするため。
+    //   - 同一ページ内 anchor: 遷移先を見せる必要があるので dialog.close() を
+    //     呼び、ヘッダー headroom も凍結してスクロール中の UI を安定させる。
     dialog.querySelectorAll<HTMLAnchorElement>("a[href]").forEach((a) => {
       a.addEventListener("click", () => {
         const href = a.getAttribute("href") ?? "";
-        dialog.close();
-        // 同一ページ内アンカーは scroll が走るのでヘッダー headroom を凍結
         if (href.startsWith("#")) {
+          dialog.close();
           window.dispatchEvent(new CustomEvent("headroom:freeze"));
+          return;
         }
+        unlockScroll?.();
+        unlockScroll = null;
       });
     });
   }
