@@ -15,62 +15,6 @@ export async function ensureDialogSupport(dialog: HTMLDialogElement): Promise<vo
 }
 
 /**
- * body スクロールを「見た目はそのまま、絶対に動けない」状態にロックする。
- * iOS Safari で <dialog> を開いた上でも背景がスクロールしてしまう問題の対策。
- * overflow:hidden だけでは不十分なので position:fixed で物理的に固定する。
- *
- * 多重呼び出しに対応するためロック数を参照カウントで管理する。
- * 同じページで複数のモーダル (将来の追加含む) を同時に開いても、
- * 全部閉じ終わるまで lock が外れない。
- * 戻り値は解除関数 (1 回だけ有効)。
- */
-let lockCount = 0;
-let savedScrollY = 0;
-
-function resetBodyLock() {
-  const body = document.body;
-  body.style.position = "";
-  body.style.top = "";
-  body.style.left = "";
-  body.style.right = "";
-  lockCount = 0;
-}
-
-export function lockBodyScroll(): () => void {
-  if (lockCount === 0) {
-    savedScrollY = window.scrollY;
-    const body = document.body;
-    body.style.position = "fixed";
-    body.style.top = `-${savedScrollY}px`;
-    body.style.left = "0";
-    body.style.right = "0";
-  }
-  lockCount++;
-
-  let released = false;
-  return () => {
-    if (released) return;
-    released = true;
-    lockCount--;
-    if (lockCount === 0) {
-      resetBodyLock();
-      window.scrollTo(0, savedScrollY);
-    }
-  };
-}
-
-// iOS PWA / bfcache 対策: ロック中にナビゲーションした場合、戻ってきた時に
-// body が position:fixed のまま復元されてホワイトアウトすることがある。
-// pageshow イベントは bfcache からの復元時にも fire するので、ここで強制リセット。
-if (typeof window !== "undefined") {
-  window.addEventListener("pageshow", () => {
-    if (document.body.style.position === "fixed") {
-      resetBodyLock();
-    }
-  });
-}
-
-/**
  * 指定セレクタに一致する子要素の CSS アニメーションを再生し直す。
  * CSS アニメーションは一度終了した状態 (100%) から自動で再生されないので、
  * animation を一旦剥がし、レイアウトを強制計算させてから元に戻すことでリセットする。
