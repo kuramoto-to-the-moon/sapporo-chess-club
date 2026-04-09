@@ -27,6 +27,15 @@ export async function ensureDialogSupport(dialog: HTMLDialogElement): Promise<vo
 let lockCount = 0;
 let savedScrollY = 0;
 
+function resetBodyLock() {
+  const body = document.body;
+  body.style.position = "";
+  body.style.top = "";
+  body.style.left = "";
+  body.style.right = "";
+  lockCount = 0;
+}
+
 export function lockBodyScroll(): () => void {
   if (lockCount === 0) {
     savedScrollY = window.scrollY;
@@ -44,14 +53,21 @@ export function lockBodyScroll(): () => void {
     released = true;
     lockCount--;
     if (lockCount === 0) {
-      const body = document.body;
-      body.style.position = "";
-      body.style.top = "";
-      body.style.left = "";
-      body.style.right = "";
+      resetBodyLock();
       window.scrollTo(0, savedScrollY);
     }
   };
+}
+
+// iOS PWA / bfcache 対策: ロック中にナビゲーションした場合、戻ってきた時に
+// body が position:fixed のまま復元されてホワイトアウトすることがある。
+// pageshow イベントは bfcache からの復元時にも fire するので、ここで強制リセット。
+if (typeof window !== "undefined") {
+  window.addEventListener("pageshow", () => {
+    if (document.body.style.position === "fixed") {
+      resetBodyLock();
+    }
+  });
 }
 
 /**
