@@ -157,12 +157,29 @@ const anchors = [
     // 明示的に JS で制御する。
     const closeBtn = dialog.querySelector<HTMLButtonElement>("[data-hamburger-close]");
 
-    openBtn.addEventListener("click", () => {
-      replayAnimations(dialog, ".animate-fade-in-up");
-      dialog.showModal();
+    /** メニューを開く。*/
+    function openMenu() {
+      replayAnimations(dialog!, ".animate-fade-in-up");
+      dialog!.showModal();
       closeBtn?.focus({ preventScroll: true });
-      openBtn.setAttribute("aria-expanded", "true");
-    });
+      openBtn!.setAttribute("aria-expanded", "true");
+    }
+
+    /** メニューを閉じる。*/
+    function closeMenu() {
+      dialog!.close();
+    }
+
+    /**
+     * 同一ページ内アンカー用: メニューを閉じ、ヘッダー headroom を一時凍結する。
+     * 凍結により、スクロール先まで移動する間にヘッダーが消えなくなる。
+     */
+    function closeMenuAndFreezeHeader() {
+      closeMenu();
+      window.dispatchEvent(new CustomEvent("headroom:freeze"));
+    }
+
+    openBtn.addEventListener("click", openMenu);
 
     // close: トリガーへフォーカス復帰 (ESC の a11y)
     dialog.addEventListener("close", () => {
@@ -170,23 +187,22 @@ const anchors = [
       openBtn.focus({ preventScroll: true });
     });
 
-    // dialog 内クリックをデリゲート:
-    //   - close ボタン                → dialog.close()
-    //   - 同一ページ内 anchor (#xxx)  → dialog.close() + headroom 凍結
-    //   - cross-page リンク           → dialog を閉じずに top-layer に残す。
-    //                                   新ページが描画されるまで古いページを
-    //                                   覆い隠してちらつきを防ぐ。
+    // dialog 内クリックのデリゲート処理
     dialog.addEventListener("click", (e) => {
       const target = e.target as Element;
       if (target.closest("[data-hamburger-close]")) {
-        dialog.close();
+        closeMenu();
         return;
       }
       const link = target.closest("a[href]") as HTMLAnchorElement | null;
       if (link?.getAttribute("href")?.startsWith("#")) {
-        dialog.close();
-        window.dispatchEvent(new CustomEvent("headroom:freeze"));
+        closeMenuAndFreezeHeader();
+        return;
       }
+      // その他のリンク (ページ遷移) では意図的に何もしない。
+      // dialog を top-layer に残すことで、新ページが描画されるまで古いページを
+      // 覆い隠せて、リンクタップ時のちらつきを防げる。ここで close() すると
+      // 一瞬古いページが露出するので NG。
     });
   }
 </script>
