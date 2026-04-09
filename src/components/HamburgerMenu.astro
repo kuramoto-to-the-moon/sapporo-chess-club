@@ -153,9 +153,8 @@ const anchors = [
   if (openBtn && dialog) {
     await ensureDialogSupport(dialog);
 
-    // autofocus 属性はブラウザ実装差でたまに無視され、dialog 内の最初のリンク
-    // (SAPPORO CHESS CLUB) にフォーカスが当たる。明示的に close ボタンへ focus を
-    // 当てることで確実に制御する。preventScroll で余計なスクロールも防ぐ。
+    // 開いた直後のフォーカス先。autofocus 属性はブラウザ実装差で信頼できないため
+    // 明示的に JS で制御する。
     const closeBtn = dialog.querySelector<HTMLButtonElement>("[data-hamburger-close]");
     let unlockScroll: (() => void) | null = null;
 
@@ -167,7 +166,7 @@ const anchors = [
       openBtn.setAttribute("aria-expanded", "true");
     });
 
-    // close 時に scroll lock 解除 + トリガーへフォーカス復帰 (ESC のアクセシビリティ)
+    // close: scroll lock 解除 + トリガーへフォーカス復帰 (ESC の a11y)
     dialog.addEventListener("close", () => {
       unlockScroll?.();
       unlockScroll = null;
@@ -175,26 +174,27 @@ const anchors = [
       openBtn.focus({ preventScroll: true });
     });
 
-    closeBtn?.addEventListener("click", () => dialog.close());
-
-    // dialog 内のリンクタップ時の挙動:
-    //   - cross-page 遷移: dialog を閉じずに scroll lock だけ解除する。
-    //     dialog は top-layer に残るので、新ページが描画されるまで古いページが
-    //     見えない (ちらつき防止)。lock を外すのは bfcache に locked 状態が
-    //     残らないようにするため。
-    //   - 同一ページ内 anchor: 遷移先を見せる必要があるので dialog.close() を
-    //     呼び、ヘッダー headroom も凍結してスクロール中の UI を安定させる。
-    dialog.querySelectorAll<HTMLAnchorElement>("a[href]").forEach((a) => {
-      a.addEventListener("click", () => {
-        const href = a.getAttribute("href") ?? "";
-        if (href.startsWith("#")) {
-          dialog.close();
-          window.dispatchEvent(new CustomEvent("headroom:freeze"));
-          return;
-        }
+    // dialog 内クリックをデリゲート:
+    //   - close ボタン                → dialog.close()
+    //   - 同一ページ内 anchor (#xxx)  → dialog.close() + headroom 凍結
+    //   - cross-page リンク           → scroll lock だけ解除し、dialog は
+    //                                   top-layer に残して新ページ描画まで
+    //                                   古いページを覆い隠す (ちらつき防止)
+    dialog.addEventListener("click", (e) => {
+      const target = e.target as Element;
+      if (target.closest("[data-hamburger-close]")) {
+        dialog.close();
+        return;
+      }
+      const link = target.closest("a[href]") as HTMLAnchorElement | null;
+      if (!link) return;
+      if (link.getAttribute("href")?.startsWith("#")) {
+        dialog.close();
+        window.dispatchEvent(new CustomEvent("headroom:freeze"));
+      } else {
         unlockScroll?.();
         unlockScroll = null;
-      });
+      }
     });
   }
 </script>
