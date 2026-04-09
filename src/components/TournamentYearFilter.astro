@@ -180,8 +180,8 @@ const checkClass =
       trigger,
       listbox,
       chevron: document.querySelector("[data-filter-chevron]"),
-      options: optionEls.map((el) => ({ element: el, value: el.dataset.filterOption ?? "" })),
-      onSelect: applyYear,
+      options: optionEls,
+      onSelect: (el) => applyYear(el.dataset.filterOption ?? "all"),
     });
   }
 </script>

@@ -3,19 +3,19 @@
  *
  * - `<button>` トリガー + `<ul role="listbox">` + 各項目 `role="option"` の DOM 構造を前提とする
  * - 開閉・外側クリック・スクロール・ESC・Tab 外し・矢印キー移動・位置計算をまとめて扱う
- * - 項目選択時は onSelect(value) を呼ぶだけ。実際の state 同期は呼び出し側に委譲する
+ * - 項目選択時は onSelect(element) を呼ぶだけ。値の解釈と state 同期は呼び出し側に委譲する
  */
 export interface ListboxConfig {
   /** トリガー + listbox をまとめたルート要素 (外側クリック判定に使う) */
   root: HTMLElement;
   trigger: HTMLButtonElement;
   listbox: HTMLElement;
-  /** 各選択肢の DOM と value のペア */
-  options: { element: HTMLButtonElement; value: string }[];
+  /** 選択肢の DOM 要素 (role="option" のボタン) */
+  options: HTMLButtonElement[];
   /** 開閉時に回転させる chevron アイコン (任意) */
   chevron?: Element | null;
-  /** 項目が選択されたときに呼ばれる。呼び出し側で aria-selected などを更新する */
-  onSelect: (value: string) => void;
+  /** 項目が選択されたときに呼ばれる。value の読み取り方は呼び出し側が決める */
+  onSelect: (option: HTMLButtonElement) => void;
   /** ドロップダウンの最大高さ (rem)。デフォルト 20 */
   maxHeightRem?: number;
   /** 画面下端から空けるマージン (rem)。デフォルト 1 */
@@ -28,7 +28,6 @@ export function initListbox(config: ListboxConfig): void {
   const bottomMarginRem = config.bottomMarginRem ?? 1;
 
   const rem = parseFloat(getComputedStyle(document.documentElement).fontSize);
-  const optionEls = options.map((o) => o.element);
   const isOpen = () => !listbox.hidden;
 
   function open(opts: { focusSelected: boolean } = { focusSelected: false }) {
@@ -45,8 +44,8 @@ export function initListbox(config: ListboxConfig): void {
     // ポインタ操作の場合はタップで直接選ぶのでフォーカスを動かさない
     // (フォーカスリングが一瞬光るノイズを避けるため)。
     if (opts.focusSelected) {
-      const selected = optionEls.find((el) => el.getAttribute("aria-selected") === "true");
-      (selected ?? optionEls[0])?.focus();
+      const selected = options.find((el) => el.getAttribute("aria-selected") === "true");
+      (selected ?? options[0])?.focus();
     }
   }
 
@@ -68,9 +67,9 @@ export function initListbox(config: ListboxConfig): void {
     open({ focusSelected: e.detail === 0 });
   });
 
-  options.forEach(({ element, value }) => {
+  options.forEach((element) => {
     element.addEventListener("click", () => {
-      onSelect(value);
+      onSelect(element);
       close();
       trigger.focus();
     });
@@ -99,10 +98,10 @@ export function initListbox(config: ListboxConfig): void {
       trigger.focus();
       return;
     }
-    const nextIdx = nextFocusIndex(e.key, optionEls);
+    const nextIdx = nextFocusIndex(e.key, options);
     if (nextIdx !== null) {
       e.preventDefault();
-      optionEls[nextIdx]?.focus();
+      options[nextIdx]?.focus();
     }
   });
 }
@@ -111,13 +110,13 @@ export function initListbox(config: ListboxConfig): void {
  * listbox 内キーボード操作で次にフォーカスすべき option のインデックスを返す。
  * 該当しないキーなら null。
  */
-function nextFocusIndex(key: string, optionEls: HTMLButtonElement[]): number | null {
-  if (optionEls.length === 0) return null;
-  const last = optionEls.length - 1;
+function nextFocusIndex(key: string, options: HTMLButtonElement[]): number | null {
+  if (options.length === 0) return null;
+  const last = options.length - 1;
   if (key === "Home") return 0;
   if (key === "End") return last;
   if (key !== "ArrowDown" && key !== "ArrowUp") return null;
-  const idx = optionEls.indexOf(document.activeElement as HTMLButtonElement);
+  const idx = options.indexOf(document.activeElement as HTMLButtonElement);
   const delta = key === "ArrowDown" ? 1 : -1;
-  return (idx + delta + optionEls.length) % optionEls.length;
+  return (idx + delta + options.length) % options.length;
 }
