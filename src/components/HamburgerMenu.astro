@@ -93,7 +93,6 @@ const anchors = [
         {anchors.map((anchor, idx) => (
           <a
             href={anchor.href}
-            data-hamburger-anchor
             class="group flex items-center gap-2 text-sm text-[#d4d4d4] [@media(hover:hover)]:hover:text-[#fafafa] transition-colors duration-150 animate-fade-in-up"
             style={`animation-delay: ${(pages.length + idx) * 0.05}s`}
           >
@@ -150,40 +149,47 @@ const anchors = [
 
   const openBtn = document.getElementById("hamburger-open") as HTMLButtonElement | null;
   const dialog = document.getElementById("hamburger-dialog") as HTMLDialogElement | null;
-  if (!openBtn || !dialog) throw new Error("HamburgerMenu: open button or dialog not found");
+  // 要素が無ければ silently no-op (throw すると同バンドルの他コードを巻き添えにし得る)
+  if (openBtn && dialog) {
+    await ensureDialogSupport(dialog);
 
-  await ensureDialogSupport(dialog);
+    // autofocus 属性はブラウザ実装差でたまに無視され、dialog 内の最初のリンク
+    // (SAPPORO CHESS CLUB) にフォーカスが当たる。明示的に close ボタンへ focus を
+    // 当てることで確実に制御する。preventScroll で余計なスクロールも防ぐ。
+    const closeBtn = dialog.querySelector<HTMLButtonElement>("[data-hamburger-close]");
+    let unlockScroll: (() => void) | null = null;
 
-  // autofocus 属性はブラウザ実装差でたまに無視され、dialog 内の最初のリンク
-  // (SAPPORO CHESS CLUB) にフォーカスが当たってしまう。明示的に close ボタンへ
-  // focus を当てることで確実に制御する。preventScroll で余計なスクロールも防ぐ。
-  const closeBtn = dialog.querySelector<HTMLButtonElement>("[data-hamburger-close]");
-
-  let unlockScroll: (() => void) | null = null;
-
-  openBtn.addEventListener("click", () => {
-    replayAnimations(dialog, ".animate-fade-in-up");
-    unlockScroll = lockBodyScroll();
-    dialog.showModal();
-    closeBtn?.focus({ preventScroll: true });
-    openBtn.setAttribute("aria-expanded", "true");
-  });
-
-  dialog.addEventListener("close", () => {
-    unlockScroll?.();
-    unlockScroll = null;
-    openBtn.setAttribute("aria-expanded", "false");
-  });
-
-  closeBtn?.addEventListener("click", () => dialog.close());
-
-  // アンカーリンククリック: dialog を閉じ、ヘッダー headroom を一時凍結する
-  // (遷移先までのスクロール中にヘッダーが消えないようにするため)
-  dialog.querySelectorAll<HTMLAnchorElement>("[data-hamburger-anchor]").forEach((a) => {
-    a.addEventListener("click", () => {
-      if (!a.getAttribute("href")?.startsWith("#")) return;
-      dialog.close();
-      window.dispatchEvent(new CustomEvent("headroom:freeze"));
+    openBtn.addEventListener("click", () => {
+      replayAnimations(dialog, ".animate-fade-in-up");
+      unlockScroll = lockBodyScroll();
+      dialog.showModal();
+      closeBtn?.focus({ preventScroll: true });
+      openBtn.setAttribute("aria-expanded", "true");
     });
-  });
+
+    // close 時に scroll lock 解除 + トリガーへフォーカス復帰 (ESC のアクセシビリティ)
+    dialog.addEventListener("close", () => {
+      unlockScroll?.();
+      unlockScroll = null;
+      openBtn.setAttribute("aria-expanded", "false");
+      openBtn.focus({ preventScroll: true });
+    });
+
+    closeBtn?.addEventListener("click", () => dialog.close());
+
+    // dialog 内の全リンクで dialog.close() を呼ぶ。これにより
+    //   - ページ遷移リンク: 遷移前にロック解除 → bfcache に locked 状態が残らない
+    //   - アンカーリンク: 同ページ内スクロールでもロック解除
+    // anchor 用の追加処理 (ヘッダー headroom 凍結) は同 hash アンカーの時だけ実行
+    dialog.querySelectorAll<HTMLAnchorElement>("a[href]").forEach((a) => {
+      a.addEventListener("click", () => {
+        const href = a.getAttribute("href") ?? "";
+        dialog.close();
+        // 同一ページ内アンカーは scroll が走るのでヘッダー headroom を凍結
+        if (href.startsWith("#")) {
+          window.dispatchEvent(new CustomEvent("headroom:freeze"));
+        }
+      });
+    });
+  }
 </script>
