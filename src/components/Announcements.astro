@@ -27,7 +27,7 @@ const showEnNotice = locale === "en" && latest.some(hasJaOnlyContent);
         <span class="inline-block w-1 h-3 bg-[#2563eb]"></span>
         {i.announcements.label}
       </h2>
-      <a href={listHref} class="text-xs text-[#2563eb] hover:text-[#1d4ed8] font-medium">
+      <a href={listHref} data-astro-prefetch class="text-xs text-[#2563eb] hover:text-[#1d4ed8] font-medium">
         {i.announcements.viewAll}
       </a>
     </div>
