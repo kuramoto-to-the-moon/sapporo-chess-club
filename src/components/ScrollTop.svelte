@@ -52,7 +52,7 @@
   class="fixed z-40 inline-flex items-center gap-2.5 px-5 py-3.5 rounded-md bg-white border shadow-sm text-sm font-medium cursor-pointer {colorClass} {visibilityClass}"
   style="
     transition: opacity 300ms cubic-bezier(0.16, 1, 0.3, 1),
-                transform 300ms cubic-bezier(0.16, 1, 0.3, 1),
+                translate 300ms cubic-bezier(0.16, 1, 0.3, 1),
                 color 150ms ease,
                 border-color 150ms ease;
     right: max(1.5rem, calc((100vw - 56rem) / 2 - 1rem));
