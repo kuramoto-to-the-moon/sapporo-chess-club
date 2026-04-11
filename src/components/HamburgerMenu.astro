@@ -208,5 +208,16 @@ const anchors = [
       // 覆い隠せて、リンクタップ時のちらつきを防げる。ここで close() すると
       // 一瞬古いページが露出するので NG。
     });
+
+    // bfcache 対策: ページ遷移時に dialog を開いたまま残す設計だが、
+    // そのままの状態で bfcache に凍結されると、復元時に dialog が画面を覆い続ける。
+    // pagehide (凍結直前) で閉じておくことで bfcache には正常状態が保存される。
+    // pageshow は復元時の safety net: pagehide で閉じ損ねたケースをカバー。
+    window.addEventListener("pagehide", () => {
+      if (dialog.open) dialog.close();
+    });
+    window.addEventListener("pageshow", (e: PageTransitionEvent) => {
+      if (e.persisted && dialog.open) dialog.close();
+    });
   }
 </script>
