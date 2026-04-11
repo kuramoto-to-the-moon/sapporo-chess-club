@@ -32,7 +32,7 @@ const enBodyHtml = entry.data.bodyEn ? marked.parse(entry.data.bodyEn) : null;
 
 <BaseLayout title={title} locale={locale}>
   <article class="px-5 pt-16 md:pt-20 pb-10">
-    <a href={listHref} class="text-sm text-[#737373] hover:text-[#2563eb] transition-colors duration-150 animate-fade-in-up">
+    <a href={listHref} data-astro-prefetch class="text-sm text-[#737373] hover:text-[#2563eb] transition-colors duration-150 animate-fade-in-up">
       {i.announcements.back}
     </a>
 
@@ -58,13 +58,13 @@ const enBodyHtml = entry.data.bodyEn ? marked.parse(entry.data.bodyEn) : null;
     {(prev || next) && (
       <nav class="flex justify-between mt-12 pt-6 border-t border-[#f5f5f5] text-sm" aria-label="Announcement pagination">
         {prev ? (
-          <a href={getLocalePath(locale, `/announcements/${prev.id}`)} class="text-[#2563eb] hover:text-[#1d4ed8] flex flex-col">
+          <a href={getLocalePath(locale, `/announcements/${prev.id}`)} data-astro-prefetch class="text-[#2563eb] hover:text-[#1d4ed8] flex flex-col">
             <span class="text-xs text-[#737373]">{i.announcements.prev}</span>
             <span class="font-medium">← {pickTitle(prev, locale)}</span>
           </a>
         ) : <span></span>}
         {next ? (
-          <a href={getLocalePath(locale, `/announcements/${next.id}`)} class="text-[#2563eb] hover:text-[#1d4ed8] flex flex-col items-end text-right">
+          <a href={getLocalePath(locale, `/announcements/${next.id}`)} data-astro-prefetch class="text-[#2563eb] hover:text-[#1d4ed8] flex flex-col items-end text-right">
             <span class="text-xs text-[#737373]">{i.announcements.next}</span>
             <span class="font-medium">{pickTitle(next, locale)} →</span>
           </a>

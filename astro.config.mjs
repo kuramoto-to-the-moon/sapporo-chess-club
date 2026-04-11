@@ -10,10 +10,10 @@ export default defineConfig({
     inlineStylesheets: "always",
   },
   prefetch: {
-    // 同一オリジンの全リンクを viewport に入った時点でバックグラウンド取得する。
-    // 静的 HTML のみの軽量サイトなので全リンク prefetch でも帯域負荷は軽微。
-    // 外部リンク (別オリジン / mailto: 等) は Astro が自動で除外する。
-    prefetchAll: true,
+    // 全リンク prefetch は iOS PWA で rapid navigation した際にリクエストが
+    // 積み上がり WebView の接続プール/メモリを圧迫する恐れがある。
+    // ナビゲーション上重要なリンクだけ data-astro-prefetch を付けて選択的に行う。
+    prefetchAll: false,
     defaultStrategy: "viewport",
   },
   integrations: [svelte()],

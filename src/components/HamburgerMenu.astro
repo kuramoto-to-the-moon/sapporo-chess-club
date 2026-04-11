@@ -70,6 +70,7 @@ const anchors = [
         <a
           href={page.href}
 
+          data-astro-prefetch
           class="group block mb-4 animate-fade-in-up"
           style={`animation-delay: ${idx * 0.05}s`}
           aria-current={page.path === currentPath ? "page" : undefined}
