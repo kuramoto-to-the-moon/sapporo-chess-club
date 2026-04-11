@@ -58,13 +58,13 @@ const enBodyHtml = entry.data.bodyEn ? marked.parse(entry.data.bodyEn) : null;
     {(prev || next) && (
       <nav class="flex justify-between mt-12 pt-6 border-t border-[#f5f5f5] text-sm" aria-label="Announcement pagination">
         {prev ? (
-          <a href={getLocalePath(locale, `/announcements/${prev.id}`)} data-astro-prefetch class="text-[#2563eb] hover:text-[#1d4ed8] flex flex-col">
+          <a href={getLocalePath(locale, `/announcements/${prev.id}`)} class="text-[#2563eb] hover:text-[#1d4ed8] flex flex-col">
             <span class="text-xs text-[#737373]">{i.announcements.prev}</span>
             <span class="font-medium">← {pickTitle(prev, locale)}</span>
           </a>
         ) : <span></span>}
         {next ? (
-          <a href={getLocalePath(locale, `/announcements/${next.id}`)} data-astro-prefetch class="text-[#2563eb] hover:text-[#1d4ed8] flex flex-col items-end text-right">
+          <a href={getLocalePath(locale, `/announcements/${next.id}`)} class="text-[#2563eb] hover:text-[#1d4ed8] flex flex-col items-end text-right">
             <span class="text-xs text-[#737373]">{i.announcements.next}</span>
             <span class="font-medium">{pickTitle(next, locale)} →</span>
           </a>
