@@ -5,15 +5,11 @@
   let visible = $state(false);
   let pressed = $state(false);
 
-  // 表示閾値とコンテンツ最下部のマージン
   const SHOW_AFTER_PX = 400;
-  const NEAR_BOTTOM_PX = 120;
 
   onMount(() =>
-    observeScroll(({ y, direction, viewportHeight }) => {
-      const scrolled = y > SHOW_AFTER_PX;
-      const nearBottom = viewportHeight + y >= document.body.offsetHeight - NEAR_BOTTOM_PX;
-      if (!scrolled || nearBottom) {
+    observeScroll(({ y, direction }) => {
+      if (y <= SHOW_AFTER_PX) {
         visible = false;
       } else if (direction !== "idle") {
         visible = direction === "up";
