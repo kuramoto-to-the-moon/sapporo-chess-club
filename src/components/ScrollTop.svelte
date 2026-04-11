@@ -41,7 +41,7 @@
   const visibilityClass = $derived(
     visible
       ? "opacity-100 translate-y-0 pointer-events-auto"
-      : "opacity-0 translate-y-2 pointer-events-none"
+      : "opacity-0 translate-y-3 pointer-events-none"
   );
 </script>
 
@@ -49,8 +49,12 @@
   type="button"
   onclick={scrollToTop}
   aria-label="Scroll to top"
-  class="fixed z-40 inline-flex items-center gap-2.5 px-5 py-3.5 rounded-md bg-white border shadow-sm text-sm font-medium transition-all duration-150 cursor-pointer {colorClass} {visibilityClass}"
+  class="fixed z-40 inline-flex items-center gap-2.5 px-5 py-3.5 rounded-md bg-white border shadow-sm text-sm font-medium cursor-pointer {colorClass} {visibilityClass}"
   style="
+    transition: opacity 300ms cubic-bezier(0.16, 1, 0.3, 1),
+                transform 300ms cubic-bezier(0.16, 1, 0.3, 1),
+                color 150ms ease,
+                border-color 150ms ease;
     right: max(1.5rem, calc((100vw - 56rem) / 2 - 1rem));
     bottom: calc(3rem + env(safe-area-inset-bottom));
   "
