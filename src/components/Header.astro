@@ -34,7 +34,7 @@ const topNavPages = getTopNavPages(locale);
       {topNavPages.map((page) => (
         <a
           href={page.href}
-          data-astro-prefetch
+
           class="text-sm text-[#525252] hover:text-[#2563eb] transition-colors duration-150 px-3 py-2 -my-2 rounded"
           aria-current={currentPath === page.path ? "page" : undefined}
         >

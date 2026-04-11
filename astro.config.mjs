@@ -10,9 +10,10 @@ export default defineConfig({
     inlineStylesheets: "always",
   },
   prefetch: {
-    prefetchAll: false,
-    // viewport: リンクが画面に入った時点で HTML をバックグラウンド取得して
-    // 初回クリックの体感遅延を消す。data-astro-prefetch を付けたリンクに適用。
+    // 同一オリジンの全リンクを viewport に入った時点でバックグラウンド取得する。
+    // 静的 HTML のみの軽量サイトなので全リンク prefetch でも帯域負荷は軽微。
+    // 外部リンク (別オリジン / mailto: 等) は Astro が自動で除外する。
+    prefetchAll: true,
     defaultStrategy: "viewport",
   },
   integrations: [svelte()],
