@@ -94,7 +94,7 @@ const announcements = defineCollection({
     description: z.object({
       ja: z.string(),
       en: z.string().optional(),
-    }),
+    }).optional(),
     date: z.string(),
     bodyEn: z.string().optional(),
   }),

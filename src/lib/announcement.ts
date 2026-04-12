@@ -67,10 +67,40 @@ export function pickTitle(entry: Announcement, locale: Locale): string {
     : (entry.data.title.en ?? entry.data.title.ja);
 }
 
-export function pickDescription(entry: Announcement, locale: Locale): string {
-  return locale === "ja"
-    ? entry.data.description.ja
-    : (entry.data.description.en ?? entry.data.description.ja);
+/**
+ * 本文 (markdown body) から概要テキストを自動生成する。
+ * CMS で概要を手書きさせるのは二度手間なので、本文の先頭を切り出して使う。
+ * UI 側は CSS line-clamp でクリップ、RSS は maxLen で切る。
+ */
+export function pickDescription(entry: Announcement, locale: Locale, maxLen = 200): string {
+  // 既存の手書き description があればそちらを優先 (後方互換)
+  if (locale === "ja" && entry.data.description?.ja) return entry.data.description.ja;
+  if (locale === "en" && entry.data.description?.en) return entry.data.description.en;
+  if (locale === "en" && entry.data.description?.ja) return entry.data.description.ja;
+
+  // 本文から自動抽出
+  const raw = locale === "en" && entry.data.bodyEn
+    ? entry.data.bodyEn
+    : (entry.body ?? "");
+  const plain = stripMarkdown(raw);
+  return plain.length > maxLen ? plain.slice(0, maxLen) + "..." : plain;
+}
+
+/** Markdown 記法を除去してプレーンテキストにする */
+function stripMarkdown(md: string): string {
+  return md
+    .replace(/^#{1,6}\s+/gm, "")
+    .replace(/!\[.*?\]\(.*?\)/g, "")
+    .replace(/\[([^\]]*)\]\(.*?\)/g, "$1")
+    .replace(/(\*{1,3}|_{1,3})(.*?)\1/g, "$2")
+    .replace(/^\s*[-*+]\s+/gm, "")
+    .replace(/^\s*\d+\.\s+/gm, "")
+    .replace(/^\|.*$/gm, "")
+    .replace(/^---+$/gm, "")
+    .replace(/`{1,3}[^`]*`{1,3}/g, "")
+    .replace(/\n{2,}/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 /** en サイトで未翻訳エントリかどうか判定 (en === undefined) */

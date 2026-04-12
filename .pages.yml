@@ -215,12 +215,6 @@ content:
         fields:
           - { name: ja, label: 日本語, type: string, required: true }
           - { name: en, label: English (任意), type: string }
-      - name: description
-        label: 概要 (一覧の 1 行抜粋)
-        type: object
-        fields:
-          - { name: ja, label: 日本語, type: text, required: true }
-          - { name: en, label: English (任意), type: text }
       - name: body
         label: 本文 (日本語)
         type: rich-text
