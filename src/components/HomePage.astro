@@ -1,4 +1,5 @@
 ---
+import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Hero from "@/components/Hero.astro";
 import NextEvent from "@/components/NextEvent.astro";
@@ -17,9 +18,39 @@ interface Props {
 
 const { locale } = Astro.props;
 const i = t(locale);
+
+const siteData = await getCollection("site");
+const site = siteData[0].data;
+
+const clubJsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "SportsClub",
+  name: i.site.name,
+  description: i.site.description,
+  url: "https://sapporochessclub.com",
+  sport: "Chess",
+  email: site.email,
+  telephone: site.phone,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: site.venue.address[locale],
+    addressLocality: "Sapporo",
+    addressRegion: "Hokkaido",
+    addressCountry: "JP",
+  },
+  location: {
+    "@type": "Place",
+    name: site.venue.name[locale],
+    address: site.venue.address[locale],
+  },
+  sameAs: [
+    "https://sapporochessclub.com/en/",
+  ],
+});
 ---
 
 <BaseLayout title={i.nav.home} locale={locale}>
+  <script type="application/ld+json" set:html={clubJsonLd} />
   <Hero locale={locale} />
   <NextEvent locale={locale} />
   <Announcements locale={locale} />

@@ -1,8 +1,10 @@
 ---
+import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import ScheduleTimeline from "@/components/ScheduleTimeline.astro";
 import { t, type Locale } from "@/i18n";
-import { getSortedScheduleDates } from "@/lib/schedule-data";
+import { getSortedScheduleDates, getUpcomingScheduleDates } from "@/lib/schedule-data";
+import { getEventName } from "@/lib/schedule";
 
 interface Props {
   locale: Locale;
@@ -12,9 +14,43 @@ const { locale } = Astro.props;
 const i = t(locale);
 
 const sorted = await getSortedScheduleDates();
+
+// JSON-LD: 今後の大会を Event としてマークアップ
+const siteData = await getCollection("site");
+const site = siteData[0].data;
+const upcoming = await getUpcomingScheduleDates();
+const tournaments = upcoming.filter((d) => d.type === "tournament");
+
+const eventsJsonLd = tournaments.length > 0
+  ? JSON.stringify(tournaments.map((t) => ({
+      "@context": "https://schema.org",
+      "@type": "Event",
+      name: getEventName(t, locale),
+      startDate: t.date,
+      location: {
+        "@type": "Place",
+        name: site.venue.name[locale],
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: site.venue.address[locale],
+          addressLocality: "Sapporo",
+          addressRegion: "Hokkaido",
+          addressCountry: "JP",
+        },
+      },
+      organizer: {
+        "@type": "SportsClub",
+        name: i.site.name,
+        url: "https://sapporochessclub.com",
+      },
+      eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+      eventStatus: "https://schema.org/EventScheduled",
+    })))
+  : null;
 ---
 
 <BaseLayout title={i.schedule.pageTitle} locale={locale}>
+  {eventsJsonLd && <script type="application/ld+json" set:html={eventsJsonLd} />}
   <section class="px-5 pt-16 md:pt-20 pb-6">
     <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight animate-fade-in-up">{i.schedule.pageTitle}</h1>
     <p class="text-sm text-[#737373] mt-3 animate-fade-in-up stagger-1">{i.schedule.pageSubtitle}</p>
