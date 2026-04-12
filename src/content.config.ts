@@ -1,12 +1,22 @@
 import { defineCollection, z } from "astro:content";
 import { glob } from "astro/loaders";
 
+/**
+ * CMS の type: date フィールドは YAML に引用符なしの日付 (例: 2026-03-16) を
+ * 書き出す。YAML パーサーはこれを Date オブジェクトに変換するが、アプリ内では
+ * "YYYY-MM-DD" 文字列として扱いたい。この zod スキーマで両方を受け入れて
+ * 文字列に正規化する。
+ */
+const dateString = z.union([z.string(), z.date()]).transform((v) =>
+  v instanceof Date ? v.toISOString().split("T")[0] : v
+);
+
 const schedule = defineCollection({
   loader: glob({ pattern: "**/*.yaml", base: "./src/content/schedule" }),
   schema: z.object({
     dates: z.array(
       z.object({
-        date: z.string(),
+        date: dateString,
         startTime: z.string(),
         endTime: z.string(),
         room: z.string(),
@@ -17,8 +27,8 @@ const schedule = defineCollection({
         /** 表示名の手動オーバーライド。series=other の場合は必須。 */
         eventName: z.object({ ja: z.string(), en: z.string() }).optional(),
         formspreeId: z.string().optional(),
-        applicationOpenFrom: z.string().optional(),
-        applicationCloseAt: z.string().optional(),
+        applicationOpenFrom: dateString.optional(),
+        applicationCloseAt: dateString.optional(),
         note: z.object({ ja: z.string(), en: z.string() }).optional(),
       })
     ),
@@ -37,7 +47,7 @@ const tournaments = defineCollection({
      * edition から自動生成される。series=other の場合は必須。
      */
     title: z.object({ ja: z.string(), en: z.string() }).optional(),
-    date: z.string(),
+    date: dateString,
     detailsPdf: z.string().optional(),
     resultsPdf: z.string().optional(),
     gamesPgn: z.string().optional(),
@@ -95,7 +105,7 @@ const announcements = defineCollection({
       ja: z.string(),
       en: z.string().optional(),
     }).optional(),
-    date: z.string(),
+    date: dateString,
     bodyEn: z.string().optional(),
   }),
 });
