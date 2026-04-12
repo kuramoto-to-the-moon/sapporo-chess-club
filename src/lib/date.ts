@@ -32,10 +32,6 @@ export function startOfTodayJST(): Date {
 }
 
 /**
- * "2026-04-15" のような date-only 文字列から年/月/日 を取り出す。
- * Date オブジェクトを介さないのでタイムゾーンの影響を受けない。
- * 完全な ISO の場合は parseDate 経由で JST 換算した日付を返す。
- */
 /**
  * "2026-04-15" のような date 文字列から曜日を返す。
  * JST のカレンダー日として解釈し、locale に応じた短縮表記を返す。
@@ -66,6 +62,11 @@ export function shiftDays(s: string, days: number): string {
   return fmt.format(d);
 }
 
+/**
+ * "2026-04-15" のような date-only 文字列から年/月/日 を取り出す。
+ * Date オブジェクトを介さないのでタイムゾーンの影響を受けない。
+ * 完全な ISO の場合は parseDate 経由で JST 換算した日付を返す。
+ */
 export function getDateParts(s: string): { year: number; month: number; day: number } {
   const dateOnly = /^\d{4}-\d{2}-\d{2}$/.test(s);
   if (dateOnly) {

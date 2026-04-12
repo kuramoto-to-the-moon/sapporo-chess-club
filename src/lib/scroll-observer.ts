@@ -8,8 +8,6 @@ type ScrollState = {
   y: number;
   /** 直前との差分が delta 以上の場合の方向。delta 未満なら "idle" */
   direction: "up" | "down" | "idle";
-  /** ビューポート高 (visualViewport 優先) */
-  viewportHeight: number;
   /** スクロール可能な最大 Y */
   maxY: number;
 };
@@ -41,7 +39,7 @@ export function observeScroll(callback: (state: ScrollState) => void): () => voi
         ? "down"
         : "up";
     const maxY = document.documentElement.scrollHeight - vh;
-    callback({ y, direction, viewportHeight: vh, maxY });
+    callback({ y, direction, maxY });
     if (moved) lastY = y;
   }
 

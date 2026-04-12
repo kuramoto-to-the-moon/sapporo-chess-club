@@ -2,16 +2,14 @@
 import HamburgerMenu from "./HamburgerMenu.astro";
 import LanguageToggle from "./LanguageToggle.astro";
 import { getLocalePath, type Locale } from "@/i18n";
-import { getTopNavPages } from "@/lib/nav";
+import { getTopNavPages, normalizePath } from "@/lib/nav";
 
 interface Props {
   locale: Locale;
 }
 
 const { locale } = Astro.props;
-const base = import.meta.env.BASE_URL.replace(/\/$/, "");
-const currentPath = Astro.url.pathname
-  .replace(new RegExp(`^${base}`), "")
+const currentPath = normalizePath(Astro.url.pathname)
   .replace(/^\/(en\/)?/, "/");
 const homeHref = getLocalePath(locale, "/");
 const topNavPages = getTopNavPages(locale);

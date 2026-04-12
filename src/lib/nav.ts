@@ -1,4 +1,23 @@
 /**
+ * Astro の base path を剥がしてロケール非依存のパスを返す。
+ * 例: "/sapporo-chess-club/en/announcements/" → "/en/announcements"
+ * 例: "/announcements/" → "/announcements"
+ */
+export function normalizePath(pathname: string): string {
+  const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+  return pathname.replace(new RegExp(`^${base}`), "").replace(/\/$/, "") || "/";
+}
+
+/**
+ * ロケールプレフィックスを除いた純粋なページパスを返す。
+ * 例: "/en/announcements" → "/announcements"
+ * 例: "/announcements" → "/announcements"
+ */
+export function stripLocalePrefix(path: string): string {
+  return path.replace(/^\/en/, "") || "/";
+}
+
+/**
  * サイト全体で共有するナビゲーションページの定義。
  *
  * Header (デスクトップ top nav) と HamburgerMenu (モバイル全画面メニュー) の

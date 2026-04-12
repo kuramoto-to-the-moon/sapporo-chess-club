@@ -4,6 +4,7 @@ import Footer from "@/components/Footer.astro";
 import ScrollTop from "@/components/ScrollTop.svelte";
 import "@/styles/globals.css";
 import { t, getLocalePath, type Locale } from "@/i18n";
+import { normalizePath, stripLocalePrefix } from "@/lib/nav";
 
 interface Props {
   title: string;
@@ -19,18 +20,14 @@ const fullTitle = `${siteName} | ${title}`;
 const metaDescription = description ?? i.site.description;
 
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
-const base = import.meta.env.BASE_URL.replace(/\/$/, "");
-const normalizedPath = Astro.url.pathname.replace(new RegExp(`^${base}`), "").replace(/\/$/, "");
-const isHome = normalizedPath === "" || normalizedPath === "/en";
-const ogImage = new URL(`${base}/images/og.webp`, Astro.site).toString();
+const normalizedPath = normalizePath(Astro.url.pathname);
+const isHome = normalizedPath === "/" || normalizedPath === "/en";
+const ogImage = new URL("/images/og.webp", Astro.site).toString();
 
-// hreflang: 検索エンジンに ja/en の対応関係を伝え、ユーザーの言語に合った
-// ページを検索結果に出す。正規化済みパスから両言語の URL を生成する。
-const pathForHreflang = locale === "en"
-  ? normalizedPath.replace(/^\/en/, "") || "/"
-  : normalizedPath || "/";
-const jaUrl = new URL(pathForHreflang, Astro.site).toString();
-const enUrl = new URL(`/en${pathForHreflang}`, Astro.site).toString();
+// hreflang: 検索エンジンに ja/en の対応関係を伝える
+const pagePath = stripLocalePrefix(normalizedPath);
+const jaUrl = new URL(pagePath, Astro.site).toString();
+const enUrl = new URL(`/en${pagePath}`, Astro.site).toString();
 ---
 
 <!doctype html>
@@ -45,9 +42,9 @@ const enUrl = new URL(`/en${pathForHreflang}`, Astro.site).toString();
     <link rel="alternate" hreflang="en" href={enUrl} />
     <link rel="alternate" hreflang="x-default" href={jaUrl} />
     {locale === "ja" ? (
-      <link rel="alternate" type="application/rss+xml" title="札幌チェスクラブ お知らせ" href={`${base}/rss.xml`} />
+      <link rel="alternate" type="application/rss+xml" title="札幌チェスクラブ お知らせ" href={`/rss.xml`} />
     ) : (
-      <link rel="alternate" type="application/rss+xml" title="Sapporo Chess Club — News" href={`${base}/en/rss.xml`} />
+      <link rel="alternate" type="application/rss+xml" title="Sapporo Chess Club — News" href={`/en/rss.xml`} />
     )}
 
     {/* Security: GitHub Pages doesn't support custom HTTP headers, so we use
@@ -73,14 +70,14 @@ const enUrl = new URL(`/en${pathForHreflang}`, Astro.site).toString();
     <meta name="referrer" content="strict-origin-when-cross-origin" />
 
     {/* Favicon */}
-    <link rel="icon" type="image/svg+xml" href={`${base}/favicon.svg`} />
-    <link rel="icon" type="image/png" sizes="32x32" href={`${base}/favicon-32x32.png`} />
-    <link rel="apple-touch-icon" sizes="180x180" href={`${base}/apple-touch-icon.png`} />
+    <link rel="icon" type="image/svg+xml" href={`/favicon.svg`} />
+    <link rel="icon" type="image/png" sizes="32x32" href={`/favicon-32x32.png`} />
+    <link rel="apple-touch-icon" sizes="180x180" href={`/apple-touch-icon.png`} />
 
     {/* PWA */}
     <link
       rel="manifest"
-      href={`${base}/${locale === "en" ? "manifest.en.webmanifest" : "manifest.webmanifest"}`}
+      href={`/${locale === "en" ? "manifest.en.webmanifest" : "manifest.webmanifest"}`}
     />
     <meta name="theme-color" content="#2563eb" />
     <meta name="mobile-web-app-capable" content="yes" />
@@ -140,7 +137,7 @@ const enUrl = new URL(`/en${pathForHreflang}`, Astro.site).toString();
           <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
         </svg>
         <a
-          href={getLocalePath("en", normalizedPath || "/")}
+          href={getLocalePath("en", normalizedPath)}
           class="text-white text-[15px] font-semibold no-underline"
           data-lang-pill-link
         >
