@@ -23,6 +23,14 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 const normalizedPath = Astro.url.pathname.replace(new RegExp(`^${base}`), "").replace(/\/$/, "");
 const isHome = normalizedPath === "" || normalizedPath === "/en";
 const ogImage = new URL(`${base}/images/og.webp`, Astro.site).toString();
+
+// hreflang: 検索エンジンに ja/en の対応関係を伝え、ユーザーの言語に合った
+// ページを検索結果に出す。正規化済みパスから両言語の URL を生成する。
+const pathForHreflang = locale === "en"
+  ? normalizedPath.replace(/^\/en/, "") || "/"
+  : normalizedPath || "/";
+const jaUrl = new URL(pathForHreflang, Astro.site).toString();
+const enUrl = new URL(`/en${pathForHreflang}`, Astro.site).toString();
 ---
 
 <!doctype html>
@@ -33,6 +41,9 @@ const ogImage = new URL(`${base}/images/og.webp`, Astro.site).toString();
     <title>{fullTitle}</title>
     <meta name="description" content={metaDescription} />
     <link rel="canonical" href={canonicalUrl} />
+    <link rel="alternate" hreflang="ja" href={jaUrl} />
+    <link rel="alternate" hreflang="en" href={enUrl} />
+    <link rel="alternate" hreflang="x-default" href={jaUrl} />
     {locale === "ja" ? (
       <link rel="alternate" type="application/rss+xml" title="札幌チェスクラブ お知らせ" href={`${base}/rss.xml`} />
     ) : (
@@ -86,6 +97,7 @@ const ogImage = new URL(`${base}/images/og.webp`, Astro.site).toString();
     <meta property="og:description" content={metaDescription} />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:locale" content={locale === "ja" ? "ja_JP" : "en_US"} />
+    <meta property="og:locale:alternate" content={locale === "ja" ? "en_US" : "ja_JP"} />
     <meta property="og:image" content={ogImage} />
     <meta property="og:image:type" content="image/webp" />
     <meta property="og:image:width" content="1200" />
