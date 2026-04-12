@@ -3,7 +3,7 @@ import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import ScrollTop from "@/components/ScrollTop.svelte";
 import "@/styles/globals.css";
-import { t, type Locale } from "@/i18n";
+import { t, getLocalePath, type Locale } from "@/i18n";
 
 interface Props {
   title: string;
@@ -110,5 +110,63 @@ const ogImage = new URL(`${base}/images/og.webp`, Astro.site).toString();
     </main>
     <Footer locale={locale} />
     {!isHome && <ScrollTop client:idle />}
+
+    {/* 非日本語ブラウザへの言語案内 pill (ja ページのみ) */}
+    {locale === "ja" && (
+      <div
+        id="lang-pill"
+        hidden
+        class="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 bg-[#fafafa] border border-[#e5e5e5] rounded-full px-4 py-2.5 shadow-md flex items-center gap-2.5 text-sm text-[#525252] opacity-0 translate-y-3 transition-all duration-300 [@media(display-mode:standalone)]:bottom-[calc(1.5rem+env(safe-area-inset-bottom))]"
+        style="transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="shrink-0">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M2 12h20"/>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+        <a
+          href={getLocalePath("en", normalizedPath || "/")}
+          class="text-[#2563eb] font-medium no-underline"
+          data-lang-pill-link
+        >
+          View in English
+        </a>
+        <button
+          type="button"
+          data-lang-pill-close
+          aria-label="Close"
+          class="text-[#d4d4d4] hover:text-[#737373] text-base leading-none cursor-pointer p-0 bg-transparent border-0"
+        >
+          ×
+        </button>
+      </div>
+    )}
+
+    <script>
+      const pill = document.getElementById("lang-pill");
+      if (pill) {
+        const dismissed = localStorage.getItem("lang-pill-dismissed");
+        const isJaBrowser = (navigator.language || "").startsWith("ja");
+        if (!dismissed && !isJaBrowser) {
+          pill.hidden = false;
+          // 次フレームで opacity/translate をトランジション
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+              pill.classList.remove("opacity-0", "translate-y-3");
+              pill.classList.add("opacity-100", "translate-y-0");
+            });
+          });
+          pill.querySelector("[data-lang-pill-close]")?.addEventListener("click", () => {
+            localStorage.setItem("lang-pill-dismissed", "1");
+            pill.classList.add("opacity-0", "translate-y-3");
+            pill.classList.remove("opacity-100", "translate-y-0");
+            setTimeout(() => { pill.hidden = true; }, 300);
+          });
+          pill.querySelector("[data-lang-pill-link]")?.addEventListener("click", () => {
+            localStorage.setItem("lang-pill-dismissed", "1");
+          });
+        }
+      }
+    </script>
   </body>
 </html>
