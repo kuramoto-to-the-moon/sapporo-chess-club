@@ -1,7 +1,6 @@
 ---
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
-import ScrollTop from "@/components/ScrollTop.svelte";
 import "@/styles/globals.css";
 import { t, getLocalePath, type Locale } from "@/i18n";
 import { normalizePath, stripLocalePrefix } from "@/lib/nav";
@@ -125,7 +124,6 @@ const enUrl = new URL(`/en${pagePath}`, Astro.site).toString();
       <slot />
     </main>
     <Footer locale={locale} />
-    {!isHome && <ScrollTop client:idle />}
 
     {/* 非日本語ブラウザへの言語案内 pill (ja ページ + モバイル幅のみ)。
          デスクトップではヘッダーの LanguageToggle が常時見えるので不要。
