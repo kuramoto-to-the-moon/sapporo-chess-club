@@ -138,7 +138,7 @@ const ogImage = new URL(`${base}/images/og.webp`, Astro.site).toString();
           type="button"
           data-lang-pill-close
           aria-label="Close"
-          class="text-white/50 hover:text-white/80 text-lg leading-none cursor-pointer p-0 bg-transparent border-0"
+          class="flex items-center justify-center w-7 h-7 rounded-full text-white/50 hover:text-white hover:bg-white/15 text-lg leading-none cursor-pointer bg-transparent border-0 transition-colors duration-150"
         >
           ×
         </button>
@@ -148,8 +148,9 @@ const ogImage = new URL(`${base}/images/og.webp`, Astro.site).toString();
     <script>
       const pill = document.getElementById("lang-pill");
       if (pill) {
-        const dismissed = localStorage.getItem("lang-pill-dismissed");
-        const isJaBrowser = (navigator.language || "").startsWith("ja");
+        const forceShow = new URLSearchParams(location.search).has("force-lang-pill");
+        const dismissed = !forceShow && localStorage.getItem("lang-pill-dismissed");
+        const isJaBrowser = !forceShow && (navigator.language || "").startsWith("ja");
         if (!dismissed && !isJaBrowser) {
           pill.hidden = false;
           requestAnimationFrame(() => {
