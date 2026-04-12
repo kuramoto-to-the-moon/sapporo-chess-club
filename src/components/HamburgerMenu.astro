@@ -18,7 +18,6 @@ const anchorHref = (id: string) => (isHome ? `#${id}` : `${homeHref}#${id}`);
 const pages = getNavPages(locale);
 
 const anchors = [
-  { label: i.menu.schedule, href: anchorHref("schedule") },
   { label: i.menu.activities, href: anchorHref("activities") },
   { label: i.menu.info, href: anchorHref("info") },
   { label: i.menu.lessons, href: anchorHref("lessons") },
