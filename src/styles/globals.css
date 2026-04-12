@@ -1,19 +1,6 @@
 @import 'tailwindcss';
 @plugin "@tailwindcss/typography";
 
-@custom-variant dark (&:is(.dark *));
-
-@utility container {
-  margin-inline: auto;
-  padding-inline: 2rem;
-  @media (width >= --theme(--breakpoint-sm)) {
-    max-width: none;
-  }
-  @media (width >= 1400px) {
-    max-width: 1400px;
-  }
-}
-
 @theme {
   --text-xs: 0.875rem;
   --text-xs--line-height: 1.25rem;
@@ -21,124 +8,17 @@
   --text-sm--line-height: 1.5rem;
   --text-base: 1.125rem;
   --text-base--line-height: 1.75rem;
-
-  --color-border: hsl(var(--border));
-  --color-input: hsl(var(--input));
-  --color-ring: hsl(var(--ring));
-  --color-background: hsl(var(--background));
-  --color-foreground: hsl(var(--foreground));
-
-  --color-primary: hsl(var(--primary));
-  --color-primary-foreground: hsl(var(--primary-foreground));
-
-  --color-secondary: hsl(var(--secondary));
-  --color-secondary-foreground: hsl(var(--secondary-foreground));
-
-  --color-destructive: hsl(var(--destructive));
-  --color-destructive-foreground: hsl(var(--destructive-foreground));
-
-  --color-muted: hsl(var(--muted));
-  --color-muted-foreground: hsl(var(--muted-foreground));
-
-  --color-accent: hsl(var(--accent));
-  --color-accent-foreground: hsl(var(--accent-foreground));
-
-  --color-popover: hsl(var(--popover));
-  --color-popover-foreground: hsl(var(--popover-foreground));
-
-  --color-card: hsl(var(--card));
-  --color-card-foreground: hsl(var(--card-foreground));
-
-  --radius-lg: var(--radius);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-sm: calc(var(--radius) - 4px);
-
-}
-
-/*
-  The default border color has changed to `currentcolor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
-
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
-*/
-@layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentcolor);
-  }
 }
 
 @layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    --primary: 221 83% 53%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 9%;
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
-    --accent: 0 0% 96%;
-    --accent-foreground: 0 0% 9%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 221 83% 53%;
-    --radius: 0.5rem;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
   /* Tailwind v4 はデフォルトの button カーソルが default に変わったので復元 */
   button:not(:disabled),
   [role="button"]:not(:disabled) {
     cursor: pointer;
   }
   html {
-    /* sticky header の実際の高さ (py-4 + border + content ≒ 57px) に合わせる。
-     * sticky header の下端ぴったりにアンカー先を配置する。 */
     scroll-padding-top: 57px;
-    /* Firefox: thumb は控えめなグレー、track は透明 */
     scrollbar-color: #d4d4d4 transparent;
-    /* スクロールバー分の幅を常に予約しておく。
-     * これで scrollbar あり/なしの切替でコンテンツ幅がシフトしなくなる
-     * (ハンバーガー open 時の overflow:hidden 切替でもレイアウト不変)。
-     * classic scrollbar のみ影響し、macOS/iOS の overlay scrollbar には無害。 */
     scrollbar-gutter: stable;
   }
   /* Chrome / Safari / Edge */
@@ -161,21 +41,14 @@
     background-clip: padding-box;
     border: 3px solid transparent;
   }
-  body {
-    @apply bg-background text-foreground;
-  }
 
-  /* ハンバーガーメニュー (<dialog>) を開いている間は背景のスクロールを禁止する。
-     dialog の open 属性と :has() で連動しているので JS で状態を持つ必要がなく、
-     bfcache 復元時にも dialog の open 状態から自動的に再評価される。
-     overflow:hidden だけでは overlay scrollbar の fade 中や一部 webkit で
-     thumb が残って見えるので、scrollbar 自体も明示的に非表示にする。 */
+  /* ハンバーガーメニュー (<dialog>) を開いている間は背景のスクロールを禁止 */
   html:has(#hamburger-dialog[open]) {
     overflow: hidden;
-    scrollbar-width: none; /* Firefox */
+    scrollbar-width: none;
   }
   html:has(#hamburger-dialog[open])::-webkit-scrollbar {
-    display: none; /* Chrome / Safari / Edge */
+    display: none;
   }
 }
 
@@ -203,8 +76,6 @@
 .stagger-3 { animation-delay: 0.15s; }
 
 @layer base {
-  /* キーボードフォーカスのみリングを表示。Tailwind utilities が
-   * 上書きできるよう @layer base に置く。 */
   :focus-visible {
     outline: 2px solid #2563eb;
     outline-offset: 2px;
