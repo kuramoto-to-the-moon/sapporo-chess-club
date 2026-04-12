@@ -17,7 +17,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
   </div>
 
   <script>
-    const isEn = location.pathname.startsWith("/en/")
+    const isEn = /^\/en(\/|$)/.test(location.pathname)
       || !(navigator.language || "").startsWith("ja");
     if (isEn) {
       const msg = document.getElementById("not-found-msg");
