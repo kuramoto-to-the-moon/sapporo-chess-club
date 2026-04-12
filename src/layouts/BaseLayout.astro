@@ -51,9 +51,9 @@ const enUrl = new URL(`/en${pagePath}`, Astro.site).toString();
     <link rel="alternate" hreflang="en" href={enUrl} />
     <link rel="alternate" hreflang="x-default" href={jaUrl} />
     {locale === "ja" ? (
-      <link rel="alternate" type="application/rss+xml" title="札幌チェスクラブ お知らせ" href={`/rss.xml`} />
+      <link rel="alternate" type="application/rss+xml" title="札幌チェスクラブ お知らせ" href="/rss.xml" />
     ) : (
-      <link rel="alternate" type="application/rss+xml" title="Sapporo Chess Club — News" href={`/en/rss.xml`} />
+      <link rel="alternate" type="application/rss+xml" title="Sapporo Chess Club — News" href="/en/rss.xml" />
     )}
 
     {/* Security: GitHub Pages doesn't support custom HTTP headers, so we use
@@ -79,9 +79,9 @@ const enUrl = new URL(`/en${pagePath}`, Astro.site).toString();
     <meta name="referrer" content="strict-origin-when-cross-origin" />
 
     {/* Favicon */}
-    <link rel="icon" type="image/svg+xml" href={`/favicon.svg`} />
-    <link rel="icon" type="image/png" sizes="32x32" href={`/favicon-32x32.png`} />
-    <link rel="apple-touch-icon" sizes="180x180" href={`/apple-touch-icon.png`} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
     {/* PWA */}
     <link
@@ -94,9 +94,7 @@ const enUrl = new URL(`/en${pagePath}`, Astro.site).toString();
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-title" content={siteName} />
 
-    {/* Twitter card type: large image since we have an OG image */}
-
-    {/* Open Graph */}
+    {/* Open Graph / Twitter */}
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={siteName} />
     <meta property="og:title" content={fullTitle} />
@@ -109,7 +107,6 @@ const enUrl = new URL(`/en${pagePath}`, Astro.site).toString();
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
 
-    {/* Twitter */}
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={fullTitle} />
     <meta name="twitter:description" content={metaDescription} />
@@ -164,30 +161,31 @@ const enUrl = new URL(`/en${pagePath}`, Astro.site).toString();
     )}
 
     <script>
-      const pill = document.getElementById("lang-pill");
-      if (pill) {
+      initLangPill();
+      function initLangPill() {
+        const pill = document.getElementById("lang-pill");
+        if (!pill) return;
         const forceShow = new URLSearchParams(location.search).has("force-lang-pill");
         const dismissed = !forceShow && localStorage.getItem("lang-pill-dismissed");
         const isJaBrowser = !forceShow && (navigator.language || "").startsWith("ja");
-        if (!dismissed && !isJaBrowser) {
-          pill.hidden = false;
+        if (dismissed || isJaBrowser) return;
+
+        pill.hidden = false;
+        requestAnimationFrame(() => {
           requestAnimationFrame(() => {
-            requestAnimationFrame(() => {
-              pill.classList.replace("opacity-0", "opacity-100");
-              pill.classList.replace("translate-y-3", "translate-y-0");
-            });
+            pill.classList.replace("opacity-0", "opacity-100");
+            pill.classList.replace("translate-y-3", "translate-y-0");
           });
-          function dismissPill() {
-            localStorage.setItem("lang-pill-dismissed", "1");
-            pill!.classList.replace("opacity-100", "opacity-0");
-            pill!.classList.replace("translate-y-0", "translate-y-3");
-            setTimeout(() => { pill!.hidden = true; }, 300);
-          }
-          pill.querySelector("[data-lang-pill-close]")?.addEventListener("click", dismissPill);
-          pill.querySelector("[data-lang-pill-link]")?.addEventListener("click", () => {
-            localStorage.setItem("lang-pill-dismissed", "1");
-          });
-        }
+        });
+        pill.querySelector("[data-lang-pill-close]")?.addEventListener("click", () => {
+          localStorage.setItem("lang-pill-dismissed", "1");
+          pill.classList.replace("opacity-100", "opacity-0");
+          pill.classList.replace("translate-y-0", "translate-y-3");
+          setTimeout(() => { pill.hidden = true; }, 300);
+        });
+        pill.querySelector("[data-lang-pill-link]")?.addEventListener("click", () => {
+          localStorage.setItem("lang-pill-dismissed", "1");
+        });
       }
     </script>
   </body>
