@@ -98,6 +98,7 @@ export default {
   application: {
     opensOn: "申込開始",
     closed: "申込締切",
+    contactToApply: "参加希望はお問い合わせからお願いします",
   },
   form: {
     labels: {

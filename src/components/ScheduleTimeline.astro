@@ -96,32 +96,11 @@ function formatMonthHeading(monthKey: string): string {
                 {date.note && (
                   <p class="text-xs text-[#737373] mt-1">{date.note[locale]}</p>
                 )}
-                {(() => {
-                  const state = getApplicationState(date);
-                  if (state.kind === "none") return null;
-                  if (state.kind === "before") {
-                    return (
-                      <p class="mt-3 text-xs text-[#737373]">
-                        {i.application.opensOn}: {formatMonthDay(state.opensOn)}{i.schedule.opensOnSuffix}
-                      </p>
-                    );
-                  }
-                  if (state.kind === "closed") {
-                    return (
-                      <p class="mt-3 text-xs text-[#737373]">{i.application.closed}</p>
-                    );
-                  }
-                  return (
-                    <div class="mt-3">
-                      <ApplicationForm
-                        formspreeId={date.formspreeId!}
-                        tournamentName={getEventName(date, locale)}
-                        locale={locale}
-                        client:visible
-                      />
-                    </div>
-                  );
-                })()}
+                {/* 申込フォームは要件整理中のため一時無効化。
+                     formspreeId が設定されている大会には案内テキストを表示。 */}
+                {date.formspreeId && (
+                  <p class="mt-3 text-xs text-[#737373]">{i.application.contactToApply}</p>
+                )}
               </div>
             </li>
           );

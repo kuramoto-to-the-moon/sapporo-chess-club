@@ -98,6 +98,7 @@ export default {
   application: {
     opensOn: "Registration opens",
     closed: "Registration closed",
+    contactToApply: "To apply, please contact us directly",
   },
   form: {
     labels: {
