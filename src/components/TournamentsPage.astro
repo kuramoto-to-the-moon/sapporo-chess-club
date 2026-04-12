@@ -21,16 +21,14 @@ const sorted = tournamentsData.sort(
 
 const tournaments = sorted.map((t) => {
   const year = getDateParts(t.data.date).year;
+  // title を最優先。なければ series + edition から旧ロジックで自動生成
+  const title = t.data.title?.[locale] || t.data.title?.ja
+    || (t.data.series ? getTournamentDisplayName(
+        { series: t.data.series, year, edition: t.data.edition },
+        locale
+      ) : `${year}`);
   return {
-    title: getTournamentDisplayName(
-      {
-        series: t.data.series,
-        year,
-        edition: t.data.edition,
-        override: t.data.title,
-      },
-      locale
-    ),
+    title,
     date: t.data.date,
     detailsPdf: withBase(t.data.detailsPdf),
     resultsPdf: withBase(t.data.resultsPdf),

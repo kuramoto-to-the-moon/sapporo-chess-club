@@ -62,6 +62,14 @@ content:
             type: date
             required: true
             description: "YYYY-MM-DD 形式。複数日大会は 1 日 1 エントリ作成。"
+          - name: eventName
+            label: 大会名
+            type: object
+            required: true
+            description: "例: 「2026年 札幌サマーチェス大会」。そのまま表示されます。"
+            fields:
+              - { name: ja, label: 日本語, type: string, required: true }
+              - { name: en, label: English, type: string }
           - name: startTime
             label: 開始時間
             type: string
@@ -76,30 +84,6 @@ content:
             label: 部屋番号
             type: string
             required: true
-          - name: type
-            label: 種別（変更不要）
-            type: select
-            options: [tournament]
-            default: tournament
-            required: true
-            description: "大会日程ファイルなので必ず tournament のまま。変更しないでください。"
-          - name: series
-            label: 大会シリーズ
-            type: select
-            options: [hokkaido-championship, summer, autumn, other]
-            required: true
-            description: "北海道選手権 / 札幌サマー / 札幌オータム / その他。表示名は自動生成されます。"
-          - name: edition
-            label: 回数（任意）
-            type: number
-            description: "第N回。例: 32 → 「第32回」/「(32nd)」と表示。"
-          - name: eventName
-            label: 大会名（その他の場合のみ）
-            type: object
-            description: "シリーズが「その他」の場合のみ入力。それ以外は自動生成されるので空欄でOK。"
-            fields:
-              - { name: ja, label: 日本語, type: string }
-              - { name: en, label: English, type: string }
           - name: formspreeId
             label: Formspree ID（現在フォーム無効中）
             type: string
@@ -133,22 +117,13 @@ content:
         sort: date
         order: desc
     fields:
-      - name: series
-        label: 大会シリーズ
-        type: select
-        options: [hokkaido-championship, summer, autumn, other]
-        required: true
-        description: "北海道選手権 / 札幌サマー / 札幌オータム / その他。表示名は自動生成されます。"
-      - name: edition
-        label: 回数（任意）
-        type: number
-        description: "第N回。例: 32 → 「第32回」/「(32nd)」と表示。"
       - name: title
-        label: 大会名（手動オーバーライド・通常は空欄）
+        label: 大会名
         type: object
-        description: "シリーズが「その他」の場合は必須。それ以外は通常空欄 (自動生成されます)。古いエントリには元の表記が残っているのでそのまま保持されます。"
+        required: true
+        description: "例: 「2026年 北海道チェス選手権（第32回）」。そのまま表示されます。"
         fields:
-          - { name: ja, label: 日本語, type: string }
+          - { name: ja, label: 日本語, type: string, required: true }
           - { name: en, label: English, type: string }
       - name: date
         label: 開催日

@@ -24,14 +24,18 @@ export interface ScheduleDate {
 
 /**
  * イベントの表示名を取得する。
- * - tournament で series がある → series + year + edition から自動生成
- * - tournament で series=other or eventName 設定 → eventName を使用
- * - tournament で何も無い → "大会" / "Tournament"
- * - meeting → "例会" / "Meeting"
+ * 1. eventName があればそのまま使う (CMS から直接入力された名前)
+ * 2. series + edition がある → 旧データ用の自動生成
+ * 3. どちらも無い → "大会" / "Tournament" フォールバック
+ * 4. meeting → "例会" / "Meeting"
  */
 export function getEventName(date: ScheduleDate, locale: Locale): string {
   const i = t(locale);
   if (date.type !== "tournament") return i.badge.meetingTag;
+  // 直接入力された大会名を最優先
+  if (date.eventName?.[locale]) return date.eventName[locale];
+  if (date.eventName?.ja) return date.eventName.ja;
+  // 旧データ: series + edition から自動生成
   if (date.series && date.series !== "other") {
     return getTournamentDisplayName(
       {
@@ -42,5 +46,5 @@ export function getEventName(date: ScheduleDate, locale: Locale): string {
       locale
     );
   }
-  return date.eventName?.[locale] ?? i.badge.tournamentTag;
+  return i.badge.tournamentTag;
 }
