@@ -5,13 +5,24 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 <BaseLayout title="404" locale="ja">
   <div class="px-5 py-20 text-center">
     <p class="text-6xl font-extralight text-[#2563eb]">404</p>
-    <p class="text-base text-[#525252] mt-4">ページが見つかりませんでした</p>
-    <p class="text-sm text-[#737373] mt-1">Page not found</p>
+    <p id="not-found-msg" class="text-base text-[#525252] mt-4">ページが見つかりませんでした</p>
     <a
+      id="not-found-link"
       href="/"
       class="inline-block mt-8 text-sm text-[#2563eb] hover:text-[#1d4ed8] font-medium transition-colors duration-150"
     >
-      ← ホームに戻る / Back to home
+      ← ホームに戻る
     </a>
   </div>
+
+  <script>
+    const isEn = location.pathname.startsWith("/en/")
+      || !(navigator.language || "").startsWith("ja");
+    if (isEn) {
+      const msg = document.getElementById("not-found-msg");
+      const link = document.getElementById("not-found-link") as HTMLAnchorElement | null;
+      if (msg) msg.textContent = "Page not found";
+      if (link) { link.textContent = "← Back to home"; link.href = "/en/"; }
+    }
+  </script>
 </BaseLayout>
