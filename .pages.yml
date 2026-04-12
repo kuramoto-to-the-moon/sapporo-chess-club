@@ -10,7 +10,7 @@ content:
     description: "月2回の定期例会。1日程 = 1ファイル。過去分も削除せず残してください。"
     type: collection
     path: src/content/schedule-meetings
-    format: yaml
+    format: yaml-frontmatter
     view:
       fields: [date, room]
       primary: date
@@ -50,7 +50,7 @@ content:
     description: "今後開催する大会。1日程 = 1ファイル。複数日大会は日ごとに作成。終了した大会は別途「大会記録」に追加。"
     type: collection
     path: src/content/schedule-tournaments
-    format: yaml
+    format: yaml-frontmatter
     view:
       fields: [date, eventName.ja]
       primary: eventName.ja

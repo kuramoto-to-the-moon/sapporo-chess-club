@@ -58,7 +58,7 @@ const optionalI18n = z.object({ ja: i18nString, en: i18nString })
 
 /** 例会の個別ファイル (1 日程 = 1 YAML) */
 const scheduleMeetings = defineCollection({
-  loader: glob({ pattern: "**/*.yaml", base: "./src/content/schedule-meetings" }),
+  loader: glob({ pattern: "**/*.md", base: "./src/content/schedule-meetings" }),
   schema: z.object({
     date: requiredDate,
     startTime: yamlString,
@@ -70,7 +70,7 @@ const scheduleMeetings = defineCollection({
 
 /** 大会の個別ファイル (1 日程 = 1 YAML) */
 const scheduleTournaments = defineCollection({
-  loader: glob({ pattern: "**/*.yaml", base: "./src/content/schedule-tournaments" }),
+  loader: glob({ pattern: "**/*.md", base: "./src/content/schedule-tournaments" }),
   schema: z.object({
     date: requiredDate,
     eventName: optionalI18n,
