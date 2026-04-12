@@ -111,22 +111,25 @@ const ogImage = new URL(`${base}/images/og.webp`, Astro.site).toString();
     <Footer locale={locale} />
     {!isHome && <ScrollTop client:idle />}
 
-    {/* 非日本語ブラウザへの言語案内 pill (ja ページのみ) */}
+    {/* 非日本語ブラウザへの言語案内 pill (ja ページ + モバイル幅のみ)。
+         デスクトップではヘッダーの LanguageToggle が常時見えるので不要。
+         hidden 属性は JS が条件を満たした時だけ外す。md:hidden で
+         デスクトップ幅では CSS で非表示にする。 */}
     {locale === "ja" && (
       <div
         id="lang-pill"
         hidden
-        class="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 bg-[#fafafa] border border-[#e5e5e5] rounded-full px-4 py-2.5 shadow-md flex items-center gap-2.5 text-sm text-[#525252] opacity-0 translate-y-3 transition-all duration-300 [@media(display-mode:standalone)]:bottom-[calc(1.5rem+env(safe-area-inset-bottom))]"
-        style="transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);"
+        class="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 md:hidden bg-[#2563eb] rounded-full pl-4 pr-3 py-2.5 shadow-lg flex items-center gap-3 opacity-0 translate-y-3 [@media(display-mode:standalone)]:bottom-[calc(1.5rem+env(safe-area-inset-bottom))]"
+        style="transition: opacity 300ms cubic-bezier(0.16, 1, 0.3, 1), translate 300ms cubic-bezier(0.16, 1, 0.3, 1);"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="shrink-0">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="shrink-0">
           <circle cx="12" cy="12" r="10"/>
           <path d="M2 12h20"/>
           <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
         </svg>
         <a
           href={getLocalePath("en", normalizedPath || "/")}
-          class="text-[#2563eb] font-medium no-underline"
+          class="text-white text-[15px] font-semibold no-underline"
           data-lang-pill-link
         >
           View in English
@@ -135,7 +138,7 @@ const ogImage = new URL(`${base}/images/og.webp`, Astro.site).toString();
           type="button"
           data-lang-pill-close
           aria-label="Close"
-          class="text-[#d4d4d4] hover:text-[#737373] text-base leading-none cursor-pointer p-0 bg-transparent border-0"
+          class="text-white/50 hover:text-white/80 text-lg leading-none cursor-pointer p-0 bg-transparent border-0"
         >
           ×
         </button>
@@ -149,19 +152,19 @@ const ogImage = new URL(`${base}/images/og.webp`, Astro.site).toString();
         const isJaBrowser = (navigator.language || "").startsWith("ja");
         if (!dismissed && !isJaBrowser) {
           pill.hidden = false;
-          // 次フレームで opacity/translate をトランジション
           requestAnimationFrame(() => {
             requestAnimationFrame(() => {
-              pill.classList.remove("opacity-0", "translate-y-3");
-              pill.classList.add("opacity-100", "translate-y-0");
+              pill.classList.replace("opacity-0", "opacity-100");
+              pill.classList.replace("translate-y-3", "translate-y-0");
             });
           });
-          pill.querySelector("[data-lang-pill-close]")?.addEventListener("click", () => {
+          function dismissPill() {
             localStorage.setItem("lang-pill-dismissed", "1");
-            pill.classList.add("opacity-0", "translate-y-3");
-            pill.classList.remove("opacity-100", "translate-y-0");
-            setTimeout(() => { pill.hidden = true; }, 300);
-          });
+            pill!.classList.replace("opacity-100", "opacity-0");
+            pill!.classList.replace("translate-y-0", "translate-y-3");
+            setTimeout(() => { pill!.hidden = true; }, 300);
+          }
+          pill.querySelector("[data-lang-pill-close]")?.addEventListener("click", dismissPill);
           pill.querySelector("[data-lang-pill-link]")?.addEventListener("click", () => {
             localStorage.setItem("lang-pill-dismissed", "1");
           });
