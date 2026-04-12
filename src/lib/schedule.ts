@@ -7,7 +7,6 @@ export interface ScheduleDate {
   room: string;
   type?: "meeting" | "tournament";
   eventName?: { ja: string; en: string };
-  formspreeId?: string;
   note?: { ja: string; en: string };
 }
 
