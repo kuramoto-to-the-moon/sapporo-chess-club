@@ -17,8 +17,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
   </div>
 
   <script>
-    const isEn = /^\/en(\/|$)/.test(location.pathname)
-      || !(navigator.language || "").startsWith("ja");
+    const isEn = /^\/en(\/|$)/.test(location.pathname);
     if (isEn) {
       const msg = document.getElementById("not-found-msg");
       const link = document.getElementById("not-found-link") as HTMLAnchorElement | null;
