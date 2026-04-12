@@ -15,6 +15,7 @@ export default {
   },
   sections: {
     home: "HOME",
+    schedule: "SCHEDULE",
     tournaments: "TOURNAMENTS",
     announcements: "NEWS",
   },

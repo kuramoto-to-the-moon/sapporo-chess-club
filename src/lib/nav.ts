@@ -41,7 +41,7 @@ export function getNavPages(locale: Locale): NavPage[] {
   return [
     { label: i.nav.home, section: i.sections.home, href: getLocalePath(locale, "/"), path: "/" },
     { label: i.announcements.label, section: i.sections.announcements, href: getLocalePath(locale, "/announcements"), path: "/announcements" },
-    { label: i.schedule.label, section: "SCHEDULE", href: getLocalePath(locale, "/schedule"), path: "/schedule" },
+    { label: i.schedule.label, section: i.sections.schedule, href: getLocalePath(locale, "/schedule"), path: "/schedule" },
     { label: i.nav.tournaments, section: i.sections.tournaments, href: getLocalePath(locale, "/tournaments"), path: "/tournaments" },
   ];
 }
