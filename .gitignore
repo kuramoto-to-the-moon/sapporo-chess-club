@@ -10,6 +10,9 @@ dist/
 # superpowers
 .superpowers/
 
+# claude code
+.claude/
+
 # environment variables
 .env
 .env.production
