@@ -191,7 +191,7 @@ content:
 
   - name: announcements
     label: お知らせ
-    description: "新着情報・お知らせ。日本語で書けば英語は GitHub Action が自動翻訳します。"
+    description: "新着情報・お知らせ。英語版は任意（現在自動翻訳は無効）。"
     type: collection
     path: src/content/announcements
     format: yaml-frontmatter
@@ -213,17 +213,22 @@ content:
         type: object
         fields:
           - { name: ja, label: 日本語, type: string, required: true }
-          - { name: en, label: English (自動翻訳), type: string }
+          - { name: en, label: English (任意), type: string }
       - name: description
         label: 概要 (一覧の 1 行抜粋)
         type: object
         fields:
           - { name: ja, label: 日本語, type: text, required: true }
-          - { name: en, label: English (自動翻訳), type: text }
+          - { name: en, label: English (任意), type: text }
+      - name: body
+        label: 本文 (日本語)
+        type: rich-text
+        required: true
+        description: "お知らせの本文。見出し・太字・リンク・箇条書き・表が使えます。"
       - name: bodyEn
-        label: 本文 English (自動翻訳・編集可)
-        type: text
-        description: "GitHub Action が自動生成。修正したい場合のみ手動で書き換え。"
+        label: 本文 English (任意)
+        type: rich-text
+        description: "英語版の本文。空欄なら英語ページでは日本語本文が表示されます。現在自動翻訳は無効です。"
 
   - name: lessons
     label: チェス講座
