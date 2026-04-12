@@ -18,6 +18,22 @@ const dateString = z.union([z.string(), z.date()]).transform((v) =>
  */
 const yamlString = z.union([z.string(), z.number(), z.boolean()]).transform(String);
 
+/**
+ * 空文字列を undefined に変換する。CMS が空フィールドを "" で保存すると
+ * optional フォールバックが効かなくなるのを防ぐ。
+ */
+const emptyToUndefined = z.string().transform((v) => v === "" ? undefined : v);
+const optionalString = emptyToUndefined.optional();
+
+/** ja/en のオブジェクトで、空文字列を含む場合はフィールドごと undefined にする */
+const optionalI18n = z.object({ ja: z.string(), en: z.string() })
+  .optional()
+  .transform((v) => {
+    if (!v) return undefined;
+    if (!v.ja && !v.en) return undefined;
+    return v;
+  });
+
 const schedule = defineCollection({
   loader: glob({ pattern: "**/*.yaml", base: "./src/content/schedule" }),
   schema: z.object({
@@ -31,12 +47,11 @@ const schedule = defineCollection({
         type: z.enum(["meeting", "tournament"]).default("meeting"),
         series: z.enum(["hokkaido-championship", "summer", "autumn", "other"]).optional(),
         edition: z.number().optional(),
-        /** 表示名の手動オーバーライド。series=other の場合は必須。 */
-        eventName: z.object({ ja: z.string(), en: z.string() }).optional(),
-        formspreeId: z.string().optional(),
+        eventName: optionalI18n,
+        formspreeId: optionalString,
         applicationOpenFrom: dateString.optional(),
         applicationCloseAt: dateString.optional(),
-        note: z.object({ ja: z.string(), en: z.string() }).optional(),
+        note: optionalI18n,
       })
     ),
   }),
@@ -48,17 +63,14 @@ const tournaments = defineCollection({
     series: z.enum(["hokkaido-championship", "summer", "autumn", "other"]),
     edition: z.number().optional(),
     /**
-     * 表示名の手動オーバーライド。設定されていればこれを優先表示。
-     * 古いエントリは元のタイトルが残っているのでこちらが使われる。
-     * 新しく CMS で追加するエントリは未設定のままにすれば series + year +
-     * edition から自動生成される。series=other の場合は必須。
+     * 表示名の手動オーバーライド。空文字列の場合は自動生成にフォールバック。
      */
-    title: z.object({ ja: z.string(), en: z.string() }).optional(),
+    title: optionalI18n,
     date: dateString,
-    detailsPdf: z.string().optional(),
-    resultsPdf: z.string().optional(),
-    gamesPgn: z.string().optional(),
-    gamesPgnAnnotated: z.string().optional(),
+    detailsPdf: optionalString,
+    resultsPdf: optionalString,
+    gamesPgn: optionalString,
+    gamesPgnAnnotated: optionalString,
   }),
 });
 
@@ -67,7 +79,9 @@ const lessons = defineCollection({
   schema: z.object({
     title: z.object({ ja: z.string(), en: z.string() }),
     description: z.object({ ja: z.string(), en: z.string() }),
-    url: z.url().optional(),
+    // CMS は type:string なので不正 URL が入る可能性がある。
+    // z.url() だとビルド失敗するので string で受けて表示側で検証する。
+    url: optionalString,
   }),
 });
 
@@ -77,7 +91,7 @@ const links = defineCollection({
     links: z.array(
       z.object({
         title: z.object({ ja: z.string(), en: z.string() }),
-        url: z.url(),
+        url: z.string(),
       })
     ),
   }),
@@ -106,14 +120,14 @@ const announcements = defineCollection({
   schema: z.object({
     title: z.object({
       ja: z.string(),
-      en: z.string().optional(),
+      en: emptyToUndefined.optional(),
     }),
     description: z.object({
       ja: z.string(),
-      en: z.string().optional(),
+      en: emptyToUndefined.optional(),
     }).optional(),
     date: dateString,
-    bodyEn: z.string().optional(),
+    bodyEn: emptyToUndefined.optional(),
   }),
 });
 
