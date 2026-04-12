@@ -47,22 +47,6 @@ export function getDayOfWeek(s: string, locale: "ja" | "en"): string {
 }
 
 /**
- * "2026-03-21" + (-2) -> "2026-03-19" のように JST のカレンダー上で日数を加減した
- * date-only 文字列を返す。タイムゾーン跨ぎでも JST の日付計算として安定。
- */
-export function shiftDays(s: string, days: number): string {
-  const d = parseDate(s);
-  d.setUTCDate(d.getUTCDate() + days);
-  const fmt = new Intl.DateTimeFormat("en-CA", {
-    timeZone: "Asia/Tokyo",
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-  });
-  return fmt.format(d);
-}
-
-/**
  * "2026-04-15" のような date-only 文字列から年/月/日 を取り出す。
  * Date オブジェクトを介さないのでタイムゾーンの影響を受けない。
  * 完全な ISO の場合は parseDate 経由で JST 換算した日付を返す。

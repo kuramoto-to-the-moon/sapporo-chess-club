@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import { t, type Locale } from "@/i18n";
-import { parseDate, getDateParts, getDayOfWeek, shiftDays } from "@/lib/date";
+import { getDateParts, getDayOfWeek } from "@/lib/date";
 import { getEventName, type ScheduleDate } from "@/lib/schedule";
 
 interface Props {
@@ -11,38 +11,8 @@ interface Props {
 
 const { dates, locale } = Astro.props;
 const i = t(locale);
-const now = new Date();
 const siteData = await getCollection("site");
 const contactEmail = siteData[0].data.email;
-
-type ApplicationState =
-  | { kind: "none" }
-  | { kind: "before"; opensOn: Date }
-  | { kind: "open" }
-  | { kind: "closed" };
-
-function getApplicationState(date: ScheduleDate): ApplicationState {
-  if (!date.formspreeId) return { kind: "none" };
-  if (date.applicationOpenFrom) {
-    const opensOn = parseDate(date.applicationOpenFrom);
-    if (now < opensOn) return { kind: "before", opensOn };
-  }
-  // 締切既定: 大会開始日の 2 日前 23:59:59 JST。手動 override 可。
-  const closeBaseStr = date.applicationCloseAt ?? shiftDays(date.date, -2);
-  const closeAt = parseDate(closeBaseStr);
-  closeAt.setTime(closeAt.getTime() + 24 * 60 * 60 * 1000 - 1);
-  if (now > closeAt) return { kind: "closed" };
-  return { kind: "open" };
-}
-
-function formatMonthDay(d: Date): string {
-  const fmt = new Intl.DateTimeFormat(locale === "ja" ? "ja-JP" : "en-US", {
-    timeZone: "Asia/Tokyo",
-    month: locale === "ja" ? "numeric" : "short",
-    day: "numeric",
-  });
-  return fmt.format(d);
-}
 
 function getMonthKey(dateStr: string): string {
   const { year, month } = getDateParts(dateStr);
@@ -62,7 +32,7 @@ function formatMonthHeading(monthKey: string): string {
   if (locale === "ja") {
     return `${year}年 ${parseInt(month)}月`;
   }
-  const d = parseDate(`${monthKey}-01`);
+  const d = new Date(`${monthKey}-01T00:00:00+09:00`);
   return new Intl.DateTimeFormat("en-US", {
     timeZone: "Asia/Tokyo",
     year: "numeric",
@@ -116,4 +86,3 @@ function formatMonthHeading(monthKey: string): string {
     </div>
   ))}
 </div>
-

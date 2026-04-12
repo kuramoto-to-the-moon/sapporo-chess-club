@@ -84,18 +84,6 @@ content:
             label: 部屋番号
             type: string
             required: true
-          - name: formspreeId
-            label: Formspree ID（現在フォーム無効中）
-            type: string
-            description: "申込フォームは現在一時無効化されています。設定しても「参加希望はお問い合わせから」のテキストが表示されます。フォーム復帰後に有効になります。複数日大会の場合は初日のみに設定してください。"
-          - name: applicationOpenFrom
-            label: 申込開始日（任意）
-            type: date
-            description: "YYYY-MM-DD。空欄なら即時受付開始扱い。"
-          - name: applicationCloseAt
-            label: 申込締切日（任意）
-            type: date
-            description: "YYYY-MM-DD。この日を含む23:59まで受付。未指定なら大会開始日の前々日23:59が自動で締切になります。"
           - name: note
             label: 備考（任意）
             type: object

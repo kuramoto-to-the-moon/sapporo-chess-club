@@ -46,7 +46,6 @@ export default {
     dayOfWeekSuffix: "曜日",
     roomSuffix: "室",
     yearSuffix: "年",
-    opensOnSuffix: "から",
   },
   clubInfo: {
     fee: "参加案内",
@@ -88,7 +87,6 @@ export default {
   tournament: {
     pageTitle: "大会記録",
     pageSubtitle: "2000年〜現在までの全大会アーカイブ",
-    register: "申し込む",
     detailsPdf: "要項 PDF",
     resultsPdf: "結果 PDF",
     gamesPgn: "棋譜 PGN",
@@ -96,37 +94,7 @@ export default {
     downloadAria: (label: string) => `${label}をダウンロード`,
   },
   application: {
-    opensOn: "申込開始",
-    closed: "申込締切",
     contactToApply: "参加希望はお問い合わせからお願いします",
-  },
-  form: {
-    labels: {
-      name: "お名前",
-      email: "メールアドレス",
-      jcaNumber: "JCA会員番号(任意)",
-      notes: "備考",
-    },
-    placeholders: {
-      name: "山田 太郎",
-      jcaNumber: "J12345",
-    },
-    actions: {
-      submit: "送信する",
-      submitting: "送信中...",
-      cancel: "閉じる",
-    },
-    success: "申請を受け付けました。",
-    submitError: "送信に失敗しました。もう一度お試しください。",
-    ariaLabel: (name: string) => `${name} 参加申込フォーム`,
-    errors: {
-      nameRequired: "お名前を入力してください",
-      nameTooLong: "お名前は50文字以内で入力してください",
-      emailRequired: "メールアドレスを入力してください",
-      emailInvalid: "メールアドレスの形式が正しくありません",
-      jcaInvalid: "JCA会員番号は半角英数とハイフンで入力してください",
-      notesTooLong: "備考は500文字以内で入力してください",
-    },
   },
   badge: {
     tournamentTag: "大会",

@@ -46,7 +46,6 @@ export default {
     dayOfWeekSuffix: "",
     roomSuffix: "",
     yearSuffix: "",
-    opensOnSuffix: "",
   },
   clubInfo: {
     fee: "Entry Fee",
@@ -88,7 +87,6 @@ export default {
   tournament: {
     pageTitle: "Tournaments",
     pageSubtitle: "Full archive from 2000 to present",
-    register: "Register",
     detailsPdf: "Details PDF",
     resultsPdf: "Results PDF",
     gamesPgn: "Game Records PGN",
@@ -96,37 +94,7 @@ export default {
     downloadAria: (label: string) => `${label} download`,
   },
   application: {
-    opensOn: "Registration opens",
-    closed: "Registration closed",
     contactToApply: "To apply, please contact us directly",
-  },
-  form: {
-    labels: {
-      name: "Name",
-      email: "Email",
-      jcaNumber: "JCA Number (optional)",
-      notes: "Notes",
-    },
-    placeholders: {
-      name: "Jane Doe",
-      jcaNumber: "J12345",
-    },
-    actions: {
-      submit: "Submit",
-      submitting: "Submitting...",
-      cancel: "Cancel",
-    },
-    success: "Your registration has been received.",
-    submitError: "Submission failed. Please try again.",
-    ariaLabel: (name: string) => `${name} registration form`,
-    errors: {
-      nameRequired: "Please enter your name",
-      nameTooLong: "Name must be 50 characters or fewer",
-      emailRequired: "Please enter your email",
-      emailInvalid: "Please enter a valid email address",
-      jcaInvalid: "JCA number must be alphanumeric with hyphens",
-      notesTooLong: "Notes must be 500 characters or fewer",
-    },
   },
   badge: {
     tournamentTag: "Tournament",
