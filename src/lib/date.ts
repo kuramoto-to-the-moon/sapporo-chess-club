@@ -32,7 +32,6 @@ export function startOfTodayJST(): Date {
 }
 
 /**
-/**
  * "2026-04-15" のような date 文字列から曜日を返す。
  * JST のカレンダー日として解釈し、locale に応じた短縮表記を返す。
  * 例: ja → "日" / "月" / "火" ..., en → "Sun" / "Mon" / "Tue" ...
