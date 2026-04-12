@@ -15,7 +15,8 @@ const { title, locale, description } = Astro.props;
 const i = t(locale);
 
 const siteName = i.site.name;
-const fullTitle = `${siteName} | ${title}`;
+const isHomePage = title === i.nav.home;
+const fullTitle = isHomePage ? siteName : `${siteName} | ${title}`;
 const metaDescription = description ?? i.site.description;
 
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
