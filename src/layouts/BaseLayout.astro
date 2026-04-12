@@ -20,7 +20,6 @@ const metaDescription = description ?? i.site.description;
 
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
 const normalizedPath = normalizePath(Astro.url.pathname);
-const isHome = normalizedPath === "/" || normalizedPath === "/en";
 const ogImage = new URL("/images/og.webp", Astro.site).toString();
 
 // hreflang: 検索エンジンに ja/en の対応関係を伝える

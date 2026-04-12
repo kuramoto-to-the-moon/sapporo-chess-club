@@ -1,18 +1,7 @@
 /**
  * <dialog> 要素まわりのヘルパー。
- * 主に HamburgerMenu (モバイル全画面シート) で使っているが、将来
- * 他のモーダル UI を足すときも流用できるよう汎用にしてある。
+ * 主に HamburgerMenu (モバイル全画面シート) で使用。
  */
-
-/**
- * Safari 15.3 以下など <dialog> 非対応環境だけ polyfill を動的にロードする。
- * モダンブラウザでは import() が実行されないので bundle には乗らない。
- */
-export async function ensureDialogSupport(dialog: HTMLDialogElement): Promise<void> {
-  if (typeof HTMLDialogElement !== "undefined" && HTMLDialogElement.prototype.showModal) return;
-  const { default: dialogPolyfill } = await import("dialog-polyfill");
-  dialogPolyfill.registerDialog(dialog);
-}
 
 /**
  * 指定セレクタに一致する子要素の CSS アニメーションを再生し直す。

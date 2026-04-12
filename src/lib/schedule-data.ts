@@ -15,7 +15,7 @@ export async function getSortedScheduleDates(): Promise<ScheduleDate[]> {
 
 /**
  * build 時の JST「今日」以降のイベントだけを返す。
- * client:idle で渡す props を最小化するために使う。
+ * 先頭 N 件だけ必要な場合に使う。
  */
 export async function getUpcomingScheduleDates(limit?: number): Promise<ScheduleDate[]> {
   const all = await getSortedScheduleDates();

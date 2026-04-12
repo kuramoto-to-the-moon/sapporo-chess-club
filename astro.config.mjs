@@ -1,6 +1,5 @@
 import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
-import svelte from "@astrojs/svelte";
 import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
@@ -17,12 +16,9 @@ export default defineConfig({
     prefetchAll: false,
     defaultStrategy: "viewport",
   },
-  integrations: [svelte(), sitemap({ i18n: { defaultLocale: "ja", locales: { ja: "ja-JP", en: "en-US" } } })],
+  integrations: [sitemap({ i18n: { defaultLocale: "ja", locales: { ja: "ja-JP", en: "en-US" } } })],
   vite: {
     plugins: [tailwindcss()],
-    resolve: {
-      noExternal: ["bits-ui"],
-    },
   },
   i18n: {
     locales: ["ja", "en"],

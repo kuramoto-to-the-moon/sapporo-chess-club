@@ -144,18 +144,15 @@ const anchors = [
 </style>
 
 <script>
-  import { ensureDialogSupport, replayAnimations } from "@/lib/dialog";
+  import { replayAnimations } from "@/lib/dialog";
 
   const openBtn = document.getElementById("hamburger-open") as HTMLButtonElement | null;
   const dialog = document.getElementById("hamburger-dialog") as HTMLDialogElement | null;
-  // 要素が無ければ silently no-op (throw すると同バンドルの他コードを巻き添えにし得る)
   if (openBtn && dialog) {
-    await initHamburgerMenu(openBtn, dialog);
+    initHamburgerMenu(openBtn, dialog);
   }
 
-  async function initHamburgerMenu(openBtn: HTMLButtonElement, dialog: HTMLDialogElement) {
-    await ensureDialogSupport(dialog);
-
+  function initHamburgerMenu(openBtn: HTMLButtonElement, dialog: HTMLDialogElement) {
     // 開いた直後のフォーカス先。autofocus 属性はブラウザ実装差で信頼できないため
     // 明示的に JS で制御する。
     const closeBtn = dialog.querySelector<HTMLButtonElement>("[data-hamburger-close]");
