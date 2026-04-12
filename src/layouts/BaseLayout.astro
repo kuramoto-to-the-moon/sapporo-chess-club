@@ -35,6 +35,15 @@ const enUrl = new URL(`/en${pagePath}`, Astro.site).toString();
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+    {/* Google Analytics 4 */}
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5CX3KE8FFP" is:inline></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-5CX3KE8FFP');
+    </script>
     <title>{fullTitle}</title>
     <meta name="description" content={metaDescription} />
     <link rel="canonical" href={canonicalUrl} />
@@ -56,11 +65,11 @@ const enUrl = new URL(`/en${pagePath}`, Astro.site).toString();
       http-equiv="Content-Security-Policy"
       content={[
         "default-src 'self'",
-        "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
+        "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com",
         "style-src 'self' 'unsafe-inline'",
-        "img-src 'self' data:",
+        "img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com",
         "font-src 'self'",
-        "connect-src 'self' https://formspree.io",
+        "connect-src 'self' https://formspree.io https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com",
         "form-action https://formspree.io",
         "base-uri 'self'",
         "object-src 'none'",
