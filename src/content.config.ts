@@ -10,7 +10,7 @@ const schedule = defineCollection({
         startTime: z.string(),
         endTime: z.string(),
         room: z.string(),
-        venue: z.object({ ja: z.string(), en: z.string() }),
+        venue: z.object({ ja: z.string(), en: z.string() }).optional(),
         type: z.enum(["meeting", "tournament"]).default("meeting"),
         series: z.enum(["hokkaido-championship", "summer", "autumn", "other"]).optional(),
         edition: z.number().optional(),

@@ -1,4 +1,5 @@
 ---
+import { getCollection } from "astro:content";
 import { t, type Locale } from "@/i18n";
 import { getDateParts, getDayOfWeek } from "@/lib/date";
 import { getEventName } from "@/lib/schedule";
@@ -10,6 +11,8 @@ interface Props {
 
 const { locale } = Astro.props;
 const i = t(locale);
+const siteData = await getCollection("site");
+const venueName = siteData[0].data.venue.name;
 
 // getUpcomingScheduleDates は既に JST today 以降 / 昇順ソート済み
 const [next] = await getUpcomingScheduleDates(1);
@@ -43,7 +46,7 @@ const title = next
         <p class="text-base font-semibold">{title}</p>
         <p class="text-sm text-[#737373] mt-0.5 flex flex-wrap gap-x-3">
           <span>{next.startTime}–{next.endTime}</span>
-          <span>{next.venue[locale]}</span>
+          <span>{venueName[locale]}</span>
           <span>{next.room}{i.schedule.roomSuffix}</span>
         </p>
       </div>

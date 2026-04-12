@@ -37,12 +37,6 @@ content:
             type: string
             required: true
             description: "例: 810A / 740"
-          - name: venue
-            label: 会場
-            type: object
-            fields:
-              - { name: ja, label: 日本語, type: string, required: true }
-              - { name: en, label: English, type: string, required: true }
           - name: note
             label: 備考（任意）
             type: object
@@ -82,12 +76,6 @@ content:
             label: 部屋番号
             type: string
             required: true
-          - name: venue
-            label: 会場
-            type: object
-            fields:
-              - { name: ja, label: 日本語, type: string, required: true }
-              - { name: en, label: English, type: string, required: true }
           - name: type
             label: 種別
             type: select
