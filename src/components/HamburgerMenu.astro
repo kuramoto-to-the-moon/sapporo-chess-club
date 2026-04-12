@@ -198,7 +198,9 @@ const anchors = [
         return;
       }
       const link = target.closest("a[href]") as HTMLAnchorElement | null;
-      if (link?.getAttribute("href")?.startsWith("#")) {
+      const href = link?.getAttribute("href");
+      if (href?.includes("#")) {
+        // 同一ページ内 (#id) でも cross-page (/path#id) でもアンカーなら閉じる
         closeMenuAndFreezeHeader();
         return;
       }
