@@ -11,15 +11,22 @@ const dateString = z.union([z.string(), z.date()]).transform((v) =>
   v instanceof Date ? v.toISOString().split("T")[0] : v
 );
 
+/**
+ * YAML は引用符なしの数値 (740) や真偽値 (yes/no) を自動変換する。
+ * CMS が string フィールドを保存する際に引用符が外れると z.string() が壊れる。
+ * string / number / boolean どれが来ても文字列に正規化する。
+ */
+const yamlString = z.union([z.string(), z.number(), z.boolean()]).transform(String);
+
 const schedule = defineCollection({
   loader: glob({ pattern: "**/*.yaml", base: "./src/content/schedule" }),
   schema: z.object({
     dates: z.array(
       z.object({
         date: dateString,
-        startTime: z.string(),
-        endTime: z.string(),
-        room: z.string(),
+        startTime: yamlString,
+        endTime: yamlString,
+        room: yamlString,
         venue: z.object({ ja: z.string(), en: z.string() }).optional(),
         type: z.enum(["meeting", "tournament"]).default("meeting"),
         series: z.enum(["hokkaido-championship", "summer", "autumn", "other"]).optional(),
@@ -80,10 +87,10 @@ const site = defineCollection({
   loader: glob({ pattern: "**/*.yaml", base: "./src/content/site" }),
   schema: z.object({
     email: z.email(),
-    phone: z.string(),
+    phone: yamlString,
     venue: z.object({
       name: z.object({ ja: z.string(), en: z.string() }),
-      floor: z.string(),
+      floor: yamlString,
       address: z.object({ ja: z.string(), en: z.string() }),
       access: z.object({ ja: z.string(), en: z.string() }),
     }),
