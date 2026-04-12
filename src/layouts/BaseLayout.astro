@@ -94,7 +94,8 @@ const enUrl = new URL(`/en${pagePath}`, Astro.site).toString();
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-title" content={siteName} />
 
-    {/* Open Graph / Twitter */}
+    {/* Open Graph / X (旧 Twitter) カード。meta name="twitter:*" は
+         X が現在もこの名前で読んでいるため変更不可。 */}
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={siteName} />
     <meta property="og:title" content={fullTitle} />
