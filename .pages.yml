@@ -21,22 +21,21 @@ content:
             label: 日付
             type: date
             required: true
-            description: "YYYY-MM-DD 形式。曜日は日付から自動計算されるので入力不要です。"
+            description: "曜日は日付から自動計算されるので入力不要です。"
           - name: startTime
             label: 開始時間
             type: string
             required: true
-            description: "HH:MM 形式 (24 時間制)。例: 09:00"
+            description: "24 時間制"
           - name: endTime
             label: 終了時間
             type: string
             required: true
-            description: "HH:MM 形式 (24 時間制)。例: 15:00"
+            description: "24 時間制"
           - name: room
             label: 部屋番号
             type: string
             required: true
-            description: "例: 810A / 740"
           - name: note
             label: 備考（任意）
             type: object
@@ -61,12 +60,12 @@ content:
             label: 開催日
             type: date
             required: true
-            description: "YYYY-MM-DD 形式。複数日大会は 1 日 1 エントリ作成。"
+            description: "複数日大会は 1 日 1 エントリ作成。"
           - name: eventName
             label: 大会名
             type: object
             required: true
-            description: "例: 「2026年 札幌サマーチェス大会」。そのまま表示されます。"
+            description: "そのまま表示されます。"
             fields:
               - { name: ja, label: 日本語, type: string, required: true }
               - { name: en, label: English, type: string }
@@ -74,12 +73,12 @@ content:
             label: 開始時間
             type: string
             required: true
-            description: "HH:MM 形式 (24 時間制)。例: 10:00"
+            description: "24 時間制"
           - name: endTime
             label: 終了時間
             type: string
             required: true
-            description: "HH:MM 形式 (24 時間制)。例: 18:00"
+            description: "24 時間制"
           - name: room
             label: 部屋番号
             type: string
@@ -109,7 +108,7 @@ content:
         label: 大会名
         type: object
         required: true
-        description: "例: 「2026年 北海道チェス選手権（第32回）」。そのまま表示されます。"
+        description: "そのまま表示されます。"
         fields:
           - { name: ja, label: 日本語, type: string, required: true }
           - { name: en, label: English, type: string }
@@ -159,7 +158,7 @@ content:
         label: 公開日
         type: date
         required: true
-        description: "YYYY-MM-DD 形式。新しい順に並びます。"
+        description: "新しい順に並びます。"
       - name: title
         label: タイトル
         type: object
