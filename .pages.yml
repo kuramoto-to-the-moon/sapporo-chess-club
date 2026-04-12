@@ -25,12 +25,12 @@ content:
             label: 開始時間
             type: string
             required: true
-            description: "24 時間制"
+            description: "HH:MM（例: 09:00）"
           - name: endTime
             label: 終了時間
             type: string
             required: true
-            description: "24 時間制"
+            description: "HH:MM（例: 09:00）"
           - name: room
             label: 部屋番号
             type: string
@@ -71,12 +71,12 @@ content:
             label: 開始時間
             type: string
             required: true
-            description: "24 時間制"
+            description: "HH:MM（例: 09:00）"
           - name: endTime
             label: 終了時間
             type: string
             required: true
-            description: "24 時間制"
+            description: "HH:MM（例: 09:00）"
           - name: room
             label: 部屋番号
             type: string
