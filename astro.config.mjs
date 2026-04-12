@@ -1,6 +1,7 @@
 import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 import svelte from "@astrojs/svelte";
+import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
   site: "https://sapporochessclub.com",
@@ -16,7 +17,7 @@ export default defineConfig({
     prefetchAll: false,
     defaultStrategy: "viewport",
   },
-  integrations: [svelte()],
+  integrations: [svelte(), sitemap({ i18n: { defaultLocale: "ja", locales: { ja: "ja-JP", en: "en-US" } } })],
   vite: {
     plugins: [tailwindcss()],
     resolve: {
