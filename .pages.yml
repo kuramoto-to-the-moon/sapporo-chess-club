@@ -21,7 +21,6 @@ content:
             label: 日付
             type: date
             required: true
-            description: "曜日は日付から自動計算されるので入力不要です。"
           - name: startTime
             label: 開始時間
             type: string
