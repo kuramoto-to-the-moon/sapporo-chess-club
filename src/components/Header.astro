@@ -10,7 +10,7 @@ interface Props {
 
 const { locale } = Astro.props;
 const currentPath = normalizePath(Astro.url.pathname)
-  .replace(/^\/(en\/)?/, "/");
+  .replace(/^\/en(\/|$)/, "/");
 const homeHref = getLocalePath(locale, "/");
 const topNavPages = getTopNavPages(locale);
 ---
