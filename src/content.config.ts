@@ -76,8 +76,6 @@ const schedule = defineCollection({
         endTime: yamlString,
         room: yamlString,
         venue: z.object({ ja: z.string(), en: z.string() }).nullable().optional(),
-        type: z.enum(["meeting", "tournament"]).nullable().optional()
-          .transform((v) => v ?? "meeting"),
         eventName: optionalI18n,
         formspreeId: nullableString,
         applicationOpenFrom: optionalDate,

@@ -6,7 +6,6 @@ dates:
     startTime: 09:00
     endTime: 18:00
     room: "1010"
-    type: tournament
   - date: 2026-03-22
     eventName:
       ja: 2026年 北海道チェス選手権（第32回）
@@ -14,7 +13,6 @@ dates:
     startTime: 09:00
     endTime: 18:00
     room: "1010"
-    type: tournament
   - date: 2026-07-19
     eventName:
       ja: 2026年 札幌サマーチェス大会
@@ -22,7 +20,6 @@ dates:
     startTime: 09:00
     endTime: 18:00
     room: "1010"
-    type: tournament
   - date: 2026-07-20
     eventName:
       ja: 2026年 札幌サマーチェス大会
@@ -30,7 +27,6 @@ dates:
     startTime: 09:00
     endTime: 18:00
     room: "1010"
-    type: tournament
   - date: 2026-10-11
     eventName:
       ja: 2026年 札幌オータムチェス大会
@@ -38,7 +34,6 @@ dates:
     startTime: 10:00
     endTime: 18:00
     room: "940"
-    type: tournament
   - date: 2026-10-12
     eventName:
       ja: 2026年 札幌オータムチェス大会
@@ -46,4 +41,3 @@ dates:
     startTime: 10:00
     endTime: 18:00
     room: "940"
-    type: tournament

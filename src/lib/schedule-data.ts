@@ -9,7 +9,11 @@ import type { ScheduleDate } from "@/lib/schedule";
 export async function getSortedScheduleDates(): Promise<ScheduleDate[]> {
   const data = await getCollection("schedule");
   return data
-    .flatMap((s) => s.data.dates)
+    .flatMap((s) => {
+      // ファイル名から type を判定。YAML に type フィールドを持たせる必要がない。
+      const type = s.id.includes("tournament") ? "tournament" as const : "meeting" as const;
+      return s.data.dates.map((d) => ({ ...d, type }));
+    })
     .sort((a, b) => parseDate(a.date).getTime() - parseDate(b.date).getTime());
 }
 

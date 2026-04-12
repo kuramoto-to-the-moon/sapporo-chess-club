@@ -81,12 +81,6 @@ content:
             label: 部屋番号
             type: string
             required: true
-          - name: type
-            label: 種別
-            type: select
-            options: [tournament]
-            default: tournament
-            required: true
           - name: note
             label: 備考（任意）
             type: object
