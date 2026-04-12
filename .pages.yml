@@ -65,7 +65,6 @@ content:
             label: 大会名
             type: object
             required: true
-            description: "そのまま表示されます。"
             fields:
               - { name: ja, label: 日本語, type: string, required: true }
               - { name: en, label: English, type: string }
@@ -108,7 +107,6 @@ content:
         label: 大会名
         type: object
         required: true
-        description: "そのまま表示されます。"
         fields:
           - { name: ja, label: 日本語, type: string, required: true }
           - { name: en, label: English, type: string }
