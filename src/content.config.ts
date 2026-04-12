@@ -1,38 +1,73 @@
 import { defineCollection, z } from "astro:content";
 import { glob } from "astro/loaders";
 
-/**
- * CMS の type: date フィールドは YAML に引用符なしの日付 (例: 2026-03-16) を
- * 書き出す。YAML パーサーはこれを Date オブジェクトに変換するが、アプリ内では
- * "YYYY-MM-DD" 文字列として扱いたい。この zod スキーマで両方を受け入れて
- * 文字列に正規化する。
- */
-const dateString = z.union([z.string(), z.date()]).transform((v) =>
-  v instanceof Date ? v.toISOString().split("T")[0] : v
-);
+// =============================================================================
+// YAML + CMS 互換ヘルパー
+//
+// Pages CMS + YAML パーサーは以下の変換を行うため、Zod スキーマ側で
+// 全パターンを吸収する必要がある:
+//
+//   YAML 入力        → JS の型        → 対策
+//   field:           → null           → .nullable() で受けて undefined/デフォルト化
+//   field: ""        → ""             → transform で undefined 化
+//   field: null      → null           → .nullable() で受けて undefined 化
+//   field: 2026-03-16→ Date object    → dateString で string 化
+//   field: 740       → number         → yamlString で String() 化
+//   field: yes       → boolean true   → yamlString で String() 化
+// =============================================================================
 
 /**
- * YAML は引用符なしの数値 (740) や真偽値 (yes/no) を自動変換する。
- * CMS が string フィールドを保存する際に引用符が外れると z.string() が壊れる。
- * string / number / boolean どれが来ても文字列に正規化する。
+ * CMS の date フィールド。string / Date / null 全て受け入れて YYYY-MM-DD に正規化。
+ * null や空文字列は undefined になる (optional 用)。
  */
-const yamlString = z.union([z.string(), z.number(), z.boolean()]).transform(String);
+const dateString = z.string().or(z.date()).nullable().optional()
+  .transform((v) => {
+    if (v === null || v === undefined || v === "") return undefined;
+    if (v instanceof Date) return v.toISOString().split("T")[0];
+    return v;
+  });
 
 /**
- * 空文字列を undefined に変換する。CMS が空フィールドを "" で保存すると
- * optional フォールバックが効かなくなるのを防ぐ。
+ * YAML の型自動変換に対応する文字列フィールド。
+ * 数値 (740) / 真偽値 (yes) / null を全て文字列に変換。
  */
-const emptyToUndefined = z.string().transform((v) => v === "" ? undefined : v);
-const optionalString = emptyToUndefined.optional();
+const yamlString = z.string().or(z.number()).or(z.boolean()).nullable()
+  .transform((v) => (v === null || v === undefined) ? "" : String(v));
 
-/** ja/en のオブジェクトで、空文字列を含む場合はフィールドごと undefined にする */
-const optionalI18n = z.object({ ja: z.string(), en: z.string() })
+/**
+ * nullable + 空文字列 → undefined にする文字列。optional フォールバックを確実に効かせる。
+ */
+const nullableString = z.string().nullable().optional()
+  .transform((v) => (v === null || v === undefined || v === "") ? undefined : v);
+
+/**
+ * ja/en の i18n オブジェクト。null / 空文字列 / 空オブジェクトを全て undefined に。
+ * CMS が { ja: null, en: null } や { ja: "", en: "" } で保存するケースに対応。
+ */
+const i18nString = z.string().nullable().transform((v) => v ?? "");
+const optionalI18n = z.object({ ja: i18nString, en: i18nString })
+  .nullable()
   .optional()
   .transform((v) => {
     if (!v) return undefined;
     if (!v.ja && !v.en) return undefined;
     return v;
   });
+
+/**
+ * 数値フィールド。string / number / null どれが来ても数値に変換。
+ * 変換不能なら undefined。
+ */
+const optionalNumber = z.number().or(z.string()).nullable().optional()
+  .transform((v) => {
+    if (v === null || v === undefined || v === "") return undefined;
+    const n = Number(v);
+    return Number.isNaN(n) ? undefined : n;
+  });
+
+// =============================================================================
+// コレクション定義
+// =============================================================================
 
 const schedule = defineCollection({
   loader: glob({ pattern: "**/*.yaml", base: "./src/content/schedule" }),
@@ -43,14 +78,15 @@ const schedule = defineCollection({
         startTime: yamlString,
         endTime: yamlString,
         room: yamlString,
-        venue: z.object({ ja: z.string(), en: z.string() }).optional(),
-        type: z.enum(["meeting", "tournament"]).default("meeting"),
-        series: z.enum(["hokkaido-championship", "summer", "autumn", "other"]).optional(),
-        edition: z.number().optional(),
+        venue: z.object({ ja: z.string(), en: z.string() }).nullable().optional(),
+        type: z.enum(["meeting", "tournament"]).nullable().optional()
+          .transform((v) => v ?? "meeting"),
+        series: z.enum(["hokkaido-championship", "summer", "autumn", "other"]).nullable().optional(),
+        edition: optionalNumber,
         eventName: optionalI18n,
-        formspreeId: optionalString,
-        applicationOpenFrom: dateString.optional(),
-        applicationCloseAt: dateString.optional(),
+        formspreeId: nullableString,
+        applicationOpenFrom: dateString,
+        applicationCloseAt: dateString,
         note: optionalI18n,
       })
     ),
@@ -61,16 +97,13 @@ const tournaments = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/tournaments" }),
   schema: z.object({
     series: z.enum(["hokkaido-championship", "summer", "autumn", "other"]),
-    edition: z.number().optional(),
-    /**
-     * 表示名の手動オーバーライド。空文字列の場合は自動生成にフォールバック。
-     */
+    edition: optionalNumber,
     title: optionalI18n,
     date: dateString,
-    detailsPdf: optionalString,
-    resultsPdf: optionalString,
-    gamesPgn: optionalString,
-    gamesPgnAnnotated: optionalString,
+    detailsPdf: nullableString,
+    resultsPdf: nullableString,
+    gamesPgn: nullableString,
+    gamesPgnAnnotated: nullableString,
   }),
 });
 
@@ -79,9 +112,7 @@ const lessons = defineCollection({
   schema: z.object({
     title: z.object({ ja: z.string(), en: z.string() }),
     description: z.object({ ja: z.string(), en: z.string() }),
-    // CMS は type:string なので不正 URL が入る可能性がある。
-    // z.url() だとビルド失敗するので string で受けて表示側で検証する。
-    url: optionalString,
+    url: nullableString,
   }),
 });
 
@@ -100,7 +131,7 @@ const links = defineCollection({
 const site = defineCollection({
   loader: glob({ pattern: "**/*.yaml", base: "./src/content/site" }),
   schema: z.object({
-    email: z.email(),
+    email: z.string(),
     phone: yamlString,
     venue: z.object({
       name: z.object({ ja: z.string(), en: z.string() }),
@@ -109,8 +140,8 @@ const site = defineCollection({
       access: z.object({ ja: z.string(), en: z.string() }),
     }),
     fee: z.object({
-      general: z.number(),
-      student: z.number(),
+      general: z.coerce.number(),
+      student: z.coerce.number(),
     }),
   }),
 });
@@ -120,14 +151,14 @@ const announcements = defineCollection({
   schema: z.object({
     title: z.object({
       ja: z.string(),
-      en: emptyToUndefined.optional(),
+      en: z.string().nullable().optional().transform((v) => (v === null || v === "") ? undefined : v),
     }),
     description: z.object({
-      ja: z.string(),
-      en: emptyToUndefined.optional(),
-    }).optional(),
+      ja: z.string().nullable().transform((v) => v ?? ""),
+      en: z.string().nullable().optional().transform((v) => (v === null || v === "") ? undefined : v),
+    }).nullable().optional(),
     date: dateString,
-    bodyEn: emptyToUndefined.optional(),
+    bodyEn: z.string().nullable().optional().transform((v) => (v === null || v === "") ? undefined : v),
   }),
 });
 
