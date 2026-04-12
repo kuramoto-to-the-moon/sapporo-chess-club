@@ -5,7 +5,6 @@ import TournamentList from "@/components/TournamentList.astro";
 import { t, type Locale } from "@/i18n";
 import { withBase } from "@/lib/utils";
 import { parseDate, getDateParts } from "@/lib/date";
-import { getTournamentDisplayName } from "@/lib/tournament-series";
 
 interface Props {
   locale: Locale;
@@ -21,12 +20,7 @@ const sorted = tournamentsData.sort(
 
 const tournaments = sorted.map((t) => {
   const year = getDateParts(t.data.date).year;
-  // title を最優先。なければ series + edition から旧ロジックで自動生成
-  const title = t.data.title?.[locale] || t.data.title?.ja
-    || (t.data.series ? getTournamentDisplayName(
-        { series: t.data.series, year, edition: t.data.edition },
-        locale
-      ) : `${year}`);
+  const title = (locale === "en" && t.data.title.en) ? t.data.title.en : t.data.title.ja;
   return {
     title,
     date: t.data.date,

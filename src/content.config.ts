@@ -60,16 +60,7 @@ const optionalI18n = z.object({ ja: i18nString, en: i18nString })
     return v;
   });
 
-/**
- * 数値フィールド。string / number / null どれが来ても数値に変換。
- * 変換不能なら undefined。
- */
-const optionalNumber = z.number().or(z.string()).nullable().optional()
-  .transform((v) => {
-    if (v === null || v === undefined || v === "") return undefined;
-    const n = Number(v);
-    return Number.isNaN(n) ? undefined : n;
-  });
+
 
 // =============================================================================
 // コレクション定義
@@ -87,8 +78,6 @@ const schedule = defineCollection({
         venue: z.object({ ja: z.string(), en: z.string() }).nullable().optional(),
         type: z.enum(["meeting", "tournament"]).nullable().optional()
           .transform((v) => v ?? "meeting"),
-        series: z.enum(["hokkaido-championship", "summer", "autumn", "other"]).nullable().optional(),
-        edition: optionalNumber,
         eventName: optionalI18n,
         formspreeId: nullableString,
         applicationOpenFrom: optionalDate,
@@ -102,9 +91,10 @@ const schedule = defineCollection({
 const tournaments = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/tournaments" }),
   schema: z.object({
-    series: z.enum(["hokkaido-championship", "summer", "autumn", "other"]),
-    edition: optionalNumber,
-    title: optionalI18n,
+    title: z.object({
+      ja: z.string(),
+      en: z.string().nullable().optional().transform((v) => v ?? undefined),
+    }),
     date: requiredDate,
     detailsPdf: nullableString,
     resultsPdf: nullableString,

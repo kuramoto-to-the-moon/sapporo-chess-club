@@ -1,5 +1,4 @@
 ---
-series: hokkaido-championship
 title:
   ja: "2020年北海道チェス選手権（第26回）"
   en: "2020 Hokkaido Chess Championship (26th)"

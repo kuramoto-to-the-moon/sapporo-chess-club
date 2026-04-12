@@ -1,5 +1,4 @@
 ---
-series: autumn
 title:
   ja: "2018年オータムチェス大会"
   en: "2018 Sapporo Autumn Chess Tournament"

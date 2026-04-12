@@ -1,5 +1,4 @@
 ---
-series: summer
 title:
   ja: "2022年札幌サマーチェス大会（第17回）"
   en: "2022 Sapporo Summer Chess Tournament (17th)"

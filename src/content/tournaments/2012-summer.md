@@ -1,5 +1,4 @@
 ---
-series: summer
 title:
   ja: "2012年サマーチェス大会"
   en: "2012 Sapporo Summer Chess Tournament"

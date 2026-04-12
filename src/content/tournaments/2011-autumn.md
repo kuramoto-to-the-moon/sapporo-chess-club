@@ -1,5 +1,4 @@
 ---
-series: autumn
 title:
   ja: "2011年オータムチェス大会"
   en: "2011 Sapporo Autumn Chess Tournament"

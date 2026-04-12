@@ -1,5 +1,4 @@
 ---
-series: hokkaido-championship
 title:
   ja: "2023年北海道チェス選手権（第29回）"
   en: "2023 Hokkaido Chess Championship (29th)"

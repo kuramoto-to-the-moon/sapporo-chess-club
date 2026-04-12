@@ -1,5 +1,4 @@
 ---
-series: hokkaido-championship
 title:
   ja: "北海道チェス選手権2025（第31回）"
   en: "2025 Hokkaido Chess Championship (31st)"

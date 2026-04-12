@@ -1,5 +1,4 @@
 ---
-series: summer
 title:
   ja: "2023年札幌サマーチェス大会（第18回）"
   en: "2023 Sapporo Summer Chess Tournament (18th)"

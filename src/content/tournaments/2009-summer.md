@@ -1,5 +1,4 @@
 ---
-series: summer
 title:
   ja: "2009年サマーチェス大会"
   en: "2009 Sapporo Summer Chess Tournament"

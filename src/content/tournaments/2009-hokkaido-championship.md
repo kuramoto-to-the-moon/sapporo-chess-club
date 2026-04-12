@@ -1,5 +1,4 @@
 ---
-series: hokkaido-championship
 title:
   ja: "2009年北海道選手権大会"
   en: "2009 Hokkaido Chess Championship"
