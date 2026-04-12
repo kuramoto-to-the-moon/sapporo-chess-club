@@ -1,6 +1,6 @@
 # 札幌チェスクラブ
 
-[札幌チェスクラブ](https://kuramoto-to-the-moon.github.io/sapporo-chess-club/) 公式サイトのソースコード。
+[札幌チェスクラブ](https://sapporochessclub.com/) 公式サイトのソースコード。
 
 ## 技術スタック
 
@@ -8,14 +8,14 @@
 - **Svelte 5** + **shadcn-svelte** (Bits UI) — インタラクティブ部分
 - **Tailwind CSS v4** — スタイリング
 - **TypeScript 6**
-- **GitHub Pages** — ホスティング (`/sapporo-chess-club/` 配下)
+- **GitHub Pages** — ホスティング (カスタムドメイン `sapporochessclub.com`)
 - **Formspree** — お申込フォームの送信先
 
 ## セットアップ
 
 ```bash
 pnpm install
-pnpm dev      # http://localhost:4321/sapporo-chess-club/
+pnpm dev      # http://localhost:4321/
 pnpm build    # dist/ に静的ファイル生成
 pnpm preview  # 本番ビルドをローカルプレビュー
 ```
@@ -31,7 +31,7 @@ src/
 ├── components/
 │   ├── *.astro         # 静的レンダリング (大半はこれ)
 │   ├── *.svelte        # クライアント側で hydrate するインタラクティブ要素
-│   └── ui/             # shadcn-svelte primitives (button, sheet, select, ...)
+│   └── ui/             # shadcn-svelte primitives (button, input, label, textarea)
 ├── content/            # CMS データ (schedule, tournaments, lessons, links, site)
 ├── content.config.ts   # Content Collections schema (Zod)
 ├── lib/                # 共通ヘルパー (date, schedule, scroll-observer, utils)

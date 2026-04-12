@@ -135,7 +135,7 @@
       <body>
         <header class="topbar">
           <div class="topbar-inner">
-            <a href="/sapporo-chess-club/en/announcements/" class="back">← All news</a>
+            <a href="/en/announcements/" class="back">← All news</a>
           </div>
         </header>
         <main>

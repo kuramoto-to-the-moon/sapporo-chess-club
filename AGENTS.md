@@ -4,7 +4,7 @@
 
 ## プロジェクト概要
 
-札幌チェスクラブ公式サイト。Astro 6 + Svelte 5 + Tailwind v4 の静的サイト、GitHub Pages で `/sapporo-chess-club/` 配下に公開。日本語/英語の 2 言語対応。
+札幌チェスクラブ公式サイト。Astro 6 + Svelte 5 + Tailwind v4 の静的サイト、GitHub Pages + カスタムドメイン (`sapporochessclub.com`) で公開。日本語/英語の 2 言語対応。
 
 ## アーキテクチャの基本方針
 
@@ -21,7 +21,7 @@
 - **`client:only`**: SSR できない事情がある場合のみ。原則使わない
 - **`client:load`**: 使わない (上記で代替)
 
-HamburgerMenu のように **重い島** は、トリガーだけ静的 HTML + 動的 `import()` でメイン部分を遅延ロードする (`HamburgerMenu.astro` + `HamburgerMenuSheet.svelte` のパターン参照)。
+HamburgerMenu と TournamentYearFilter は vanilla Astro コンポーネント + `<dialog>` / inline `<script>` で実装済み。Svelte 島は ApplicationForm (フォーム UX) と ScrollTop のみ。
 
 ## i18n
 

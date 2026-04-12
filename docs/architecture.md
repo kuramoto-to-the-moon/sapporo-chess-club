@@ -54,7 +54,7 @@
 │  │  GitHub Pages (CDN)                                          │   │
 │  │                                                              │   │
 │  │  静的 HTML / CSS / JS / 画像 / PDF / PGN を配信               │   │
-│  │  URL: kuramoto-to-the-moon.github.io/sapporo-chess-club      │   │
+│  │  URL: sapporochessclub.com                                   │   │
 │  │  (カスタムドメイン設定可能・HTTPS 自動)                         │   │
 │  └──────────────────────────────────────────────────────────────┘   │
 └─────────────────────────────────────────────────────────────────────┘

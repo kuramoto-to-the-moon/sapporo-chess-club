@@ -6,7 +6,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 /**
- * `/competition/foo.pdf` のような public アセットのパスに Astro の base (`/sapporo-chess-club`) を付ける。
+ * `/competition/foo.pdf` のような public アセットのパスに Astro の base を付ける。
  * 既に http(s) で始まる外部 URL はそのまま返す。
  */
 const BASE = import.meta.env.BASE_URL.replace(/\/$/, "");
