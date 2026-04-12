@@ -29,8 +29,8 @@ const clubJsonLd = JSON.stringify({
   description: i.site.description,
   url: "https://sapporochessclub.com",
   sport: "Chess",
-  email: site.email,
-  telephone: site.phone,
+  ...(site.email && { email: site.email }),
+  ...(site.phone && { telephone: site.phone }),
   address: {
     "@type": "PostalAddress",
     streetAddress: site.venue.address[locale],

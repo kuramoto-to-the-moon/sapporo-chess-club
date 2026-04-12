@@ -42,7 +42,7 @@ const site = siteData[0].data;
         {i.clubInfo.venue}
       </h2>
       <div class="flex flex-col gap-1 text-sm text-[#525252]">
-        <p class="text-[#171717] font-medium">{site.venue.name[locale]} {site.venue.floor}</p>
+        <p class="text-[#171717] font-medium">{site.venue.name[locale]}{site.venue.floor ? ` ${site.venue.floor}` : ""}</p>
         <p>{site.venue.address[locale]}</p>
         <p class="text-[#737373] text-xs mt-1">{site.venue.access[locale]}</p>
         <a

@@ -17,10 +17,16 @@ import { glob } from "astro/loaders";
 // =============================================================================
 
 /**
- * CMS の date フィールド。string / Date / null 全て受け入れて YYYY-MM-DD に正規化。
- * null や空文字列は undefined になる (optional 用)。
+ * 必須の date フィールド。string / Date を YYYY-MM-DD に正規化。
+ * null が来たら Zod バリデーションエラーになる (= ビルド失敗で気づける)。
  */
-const dateString = z.string().or(z.date()).nullable().optional()
+const requiredDate = z.string().or(z.date())
+  .transform((v) => v instanceof Date ? v.toISOString().split("T")[0] : v);
+
+/**
+ * 任意の date フィールド。null / 空文字列は undefined に。
+ */
+const optionalDate = z.string().or(z.date()).nullable().optional()
   .transform((v) => {
     if (v === null || v === undefined || v === "") return undefined;
     if (v instanceof Date) return v.toISOString().split("T")[0];
@@ -74,7 +80,7 @@ const schedule = defineCollection({
   schema: z.object({
     dates: z.array(
       z.object({
-        date: dateString,
+        date: requiredDate,
         startTime: yamlString,
         endTime: yamlString,
         room: yamlString,
@@ -85,8 +91,8 @@ const schedule = defineCollection({
         edition: optionalNumber,
         eventName: optionalI18n,
         formspreeId: nullableString,
-        applicationOpenFrom: dateString,
-        applicationCloseAt: dateString,
+        applicationOpenFrom: optionalDate,
+        applicationCloseAt: optionalDate,
         note: optionalI18n,
       })
     ),
@@ -99,7 +105,7 @@ const tournaments = defineCollection({
     series: z.enum(["hokkaido-championship", "summer", "autumn", "other"]),
     edition: optionalNumber,
     title: optionalI18n,
-    date: dateString,
+    date: requiredDate,
     detailsPdf: nullableString,
     resultsPdf: nullableString,
     gamesPgn: nullableString,
@@ -157,7 +163,7 @@ const announcements = defineCollection({
       ja: z.string().nullable().transform((v) => v ?? ""),
       en: z.string().nullable().optional().transform((v) => (v === null || v === "") ? undefined : v),
     }).nullable().optional(),
-    date: dateString,
+    date: requiredDate,
     bodyEn: z.string().nullable().optional().transform((v) => (v === null || v === "") ? undefined : v),
   }),
 });
