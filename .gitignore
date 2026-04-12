@@ -13,6 +13,9 @@ dist/
 # claude code
 .claude/
 
+# internal docs
+docs/
+
 # environment variables
 .env
 .env.production
