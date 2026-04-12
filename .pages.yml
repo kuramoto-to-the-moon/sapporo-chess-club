@@ -7,7 +7,7 @@ media:
 content:
   - name: meetings
     label: スケジュール（例会）
-    description: "月2回の定期例会の日程をここで管理します。過去分も削除せず残してください（今後のイベントのみ自動表示されます）。"
+    description: "月2回の定期例会の日程をここで管理します。過去分も削除せず残してください。"
     type: file
     path: src/content/schedule/meetings.yaml
     format: yaml
@@ -94,6 +94,7 @@ content:
             options: [tournament]
             default: tournament
             description: "大会日程ファイルなので必ず tournament。"
+            hidden: true
           - name: series
             label: 大会シリーズ
             type: select
@@ -112,9 +113,9 @@ content:
               - { name: ja, label: 日本語, type: string }
               - { name: en, label: English, type: string }
           - name: formspreeId
-            label: Formspree ID（申込を受ける場合のみ）
+            label: Formspree ID（現在フォーム無効中）
             type: string
-            description: "Formspree のエンドポイント ID。申込フォームを出したい大会だけに設定。複数日大会の場合は初日のみに設定してください。"
+            description: "申込フォームは現在一時無効化されています。設定しても「参加希望はお問い合わせから」のテキストが表示されます。フォーム復帰後に有効になります。複数日大会の場合は初日のみに設定してください。"
           - name: applicationOpenFrom
             label: 申込開始日（任意）
             type: date
@@ -137,8 +138,8 @@ content:
     path: src/content/tournaments
     format: yaml-frontmatter
     view:
-      fields: [title.ja, date, year]
-      primary: title.ja
+      fields: [series, date]
+      primary: series
       sort: [date]
       default:
         sort: date
