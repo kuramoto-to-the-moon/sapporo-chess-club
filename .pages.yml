@@ -77,12 +77,12 @@ content:
             type: string
             required: true
           - name: type
-            label: 種別
+            label: 種別（変更不要）
             type: select
             options: [tournament]
             default: tournament
-            description: "大会日程ファイルなので必ず tournament。"
-            hidden: true
+            required: true
+            description: "大会日程ファイルなので必ず tournament のまま。変更しないでください。"
           - name: series
             label: 大会シリーズ
             type: select
