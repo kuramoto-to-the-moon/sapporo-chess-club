@@ -93,9 +93,6 @@ export default {
     gamesPgnAnnotated: "Game Records PGN (Annotated)",
     downloadAria: (label: string) => `${label} download`,
   },
-  application: {
-    contactToApply: "To apply, please contact us directly",
-  },
   badge: {
     tournamentTag: "Tournament",
     meetingTag: "Meeting",

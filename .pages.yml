@@ -5,88 +5,92 @@ media:
     output: /competition
 
 content:
-  - name: meetings
+  - name: scheduleMeetings
     label: スケジュール（例会）
-    description: "月2回の定期例会の日程をここで管理します。過去分も削除せず残してください。"
-    type: file
-    path: src/content/schedule/meetings.yaml
+    description: "月2回の定期例会。1日程 = 1ファイル。過去分も削除せず残してください。"
+    type: collection
+    path: src/content/schedule-meetings
     format: yaml
+    view:
+      fields: [date, room]
+      primary: date
+      sort: [date]
+      default:
+        sort: date
+        order: asc
     fields:
-      - name: dates
-        label: 例会日程
+      - name: date
+        label: 日付
+        type: date
+        required: true
+      - name: startTime
+        label: 開始時間
+        type: string
+        required: true
+        description: "HH:MM（例: 09:00）"
+      - name: endTime
+        label: 終了時間
+        type: string
+        required: true
+        description: "HH:MM（例: 09:00）"
+      - name: room
+        label: 部屋番号
+        type: string
+        required: true
+      - name: note
+        label: 備考（任意）
         type: object
-        list: true
+        description: "「注意：810Aではなく740」など、その日だけの特記事項。"
         fields:
-          - name: date
-            label: 日付
-            type: date
-            required: true
-          - name: startTime
-            label: 開始時間
-            type: string
-            required: true
-            description: "HH:MM（例: 09:00）"
-          - name: endTime
-            label: 終了時間
-            type: string
-            required: true
-            description: "HH:MM（例: 09:00）"
-          - name: room
-            label: 部屋番号
-            type: string
-            required: true
-          - name: note
-            label: 備考（任意）
-            type: object
-            description: "「注意：810Aではなく740」など、その日だけの特記事項。"
-            fields:
-              - { name: ja, label: 日本語, type: string }
-              - { name: en, label: English, type: string }
+          - { name: ja, label: 日本語, type: string }
+          - { name: en, label: English, type: string }
 
-  - name: tournaments-upcoming
+  - name: scheduleTournaments
     label: スケジュール（大会）
-    description: "今後開催する大会の日程をここで管理します。終了した大会は別途「大会記録」コレクションに追加してください。"
-    type: file
-    path: src/content/schedule/tournaments-upcoming.yaml
+    description: "今後開催する大会。1日程 = 1ファイル。複数日大会は日ごとに作成。終了した大会は別途「大会記録」に追加。"
+    type: collection
+    path: src/content/schedule-tournaments
     format: yaml
+    view:
+      fields: [date, eventName.ja]
+      primary: eventName.ja
+      sort: [date]
+      default:
+        sort: date
+        order: asc
     fields:
-      - name: dates
-        label: 大会日程
+      - name: date
+        label: 開催日
+        type: date
+        required: true
+        description: "複数日大会は 1 日 1 ファイル作成。"
+      - name: eventName
+        label: 大会名
         type: object
-        list: true
+        required: true
         fields:
-          - name: date
-            label: 開催日
-            type: date
-            required: true
-            description: "複数日大会は 1 日 1 エントリ作成。"
-          - name: eventName
-            label: 大会名
-            type: object
-            required: true
-            fields:
-              - { name: ja, label: 日本語, type: string, required: true }
-              - { name: en, label: English, type: string }
-          - name: startTime
-            label: 開始時間
-            type: string
-            required: true
-            description: "HH:MM（例: 09:00）"
-          - name: endTime
-            label: 終了時間
-            type: string
-            required: true
-            description: "HH:MM（例: 09:00）"
-          - name: room
-            label: 部屋番号
-            type: string
-            required: true
-          - name: note
-            label: 備考（任意）
-            type: object
-            fields:
-              - { name: ja, label: 日本語, type: string }
-              - { name: en, label: English, type: string }
+          - { name: ja, label: 日本語, type: string, required: true }
+          - { name: en, label: English, type: string }
+      - name: startTime
+        label: 開始時間
+        type: string
+        required: true
+        description: "HH:MM（例: 09:00）"
+      - name: endTime
+        label: 終了時間
+        type: string
+        required: true
+        description: "HH:MM（例: 09:00）"
+      - name: room
+        label: 部屋番号
+        type: string
+        required: true
+      - name: note
+        label: 備考（任意）
+        type: object
+        fields:
+          - { name: ja, label: 日本語, type: string }
+          - { name: en, label: English, type: string }
 
   - name: tournaments
     label: 大会記録

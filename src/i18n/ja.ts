@@ -93,9 +93,6 @@ export default {
     gamesPgnAnnotated: "棋譜 PGN (解析付)",
     downloadAria: (label: string) => `${label}をダウンロード`,
   },
-  application: {
-    contactToApply: "参加希望はお問い合わせからお願いします",
-  },
   badge: {
     tournamentTag: "大会",
     meetingTag: "例会",

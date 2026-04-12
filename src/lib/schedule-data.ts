@@ -3,17 +3,26 @@ import { parseDate, startOfTodayJST } from "@/lib/date";
 import type { ScheduleDate } from "@/lib/schedule";
 
 /**
- * 全 schedule コレクションから日付を取り出し、JST 基準で昇順ソートして返す。
- * Astro frontmatter (server-only) 専用。
+ * 例会 + 大会を統合し、JST 基準で昇順ソートして返す。
+ * コレクションが分かれているので type は collection 名から決定する。
  */
 export async function getSortedScheduleDates(): Promise<ScheduleDate[]> {
-  const data = await getCollection("schedule");
-  return data
-    .flatMap((s) => {
-      // ファイル名から type を判定。YAML に type フィールドを持たせる必要がない。
-      const type = s.id.includes("tournament") ? "tournament" as const : "meeting" as const;
-      return s.data.dates.map((d) => ({ ...d, type }));
-    })
+  const [meetings, tournaments] = await Promise.all([
+    getCollection("scheduleMeetings"),
+    getCollection("scheduleTournaments"),
+  ]);
+
+  const meetingDates: ScheduleDate[] = meetings.map((m) => ({
+    ...m.data,
+    type: "meeting" as const,
+  }));
+
+  const tournamentDates: ScheduleDate[] = tournaments.map((t) => ({
+    ...t.data,
+    type: "tournament" as const,
+  }));
+
+  return [...meetingDates, ...tournamentDates]
     .sort((a, b) => parseDate(a.date).getTime() - parseDate(b.date).getTime());
 }
 

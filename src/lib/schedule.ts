@@ -5,12 +5,9 @@ export interface ScheduleDate {
   startTime: string;
   endTime: string;
   room: string;
-  venue?: { ja: string; en: string };
   type?: "meeting" | "tournament";
   eventName?: { ja: string; en: string };
   formspreeId?: string;
-  applicationOpenFrom?: string;
-  applicationCloseAt?: string;
   note?: { ja: string; en: string };
 }
 

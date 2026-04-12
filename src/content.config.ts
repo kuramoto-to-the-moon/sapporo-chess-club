@@ -24,16 +24,6 @@ const requiredDate = z.string().or(z.date())
   .transform((v) => v instanceof Date ? v.toISOString().split("T")[0] : v);
 
 /**
- * 任意の date フィールド。null / 空文字列は undefined に。
- */
-const optionalDate = z.string().or(z.date()).nullable().optional()
-  .transform((v) => {
-    if (v === null || v === undefined || v === "") return undefined;
-    if (v instanceof Date) return v.toISOString().split("T")[0];
-    return v;
-  });
-
-/**
  * YAML の型自動変換に対応する文字列フィールド。
  * 数値 (740) / 真偽値 (yes) / null を全て文字列に変換。
  */
@@ -66,23 +56,28 @@ const optionalI18n = z.object({ ja: i18nString, en: i18nString })
 // コレクション定義
 // =============================================================================
 
-const schedule = defineCollection({
-  loader: glob({ pattern: "**/*.yaml", base: "./src/content/schedule" }),
+/** 例会の個別ファイル (1 日程 = 1 YAML) */
+const scheduleMeetings = defineCollection({
+  loader: glob({ pattern: "**/*.yaml", base: "./src/content/schedule-meetings" }),
   schema: z.object({
-    dates: z.array(
-      z.object({
-        date: requiredDate,
-        startTime: yamlString,
-        endTime: yamlString,
-        room: yamlString,
-        venue: z.object({ ja: z.string(), en: z.string() }).nullable().optional(),
-        eventName: optionalI18n,
-        formspreeId: nullableString,
-        applicationOpenFrom: optionalDate,
-        applicationCloseAt: optionalDate,
-        note: optionalI18n,
-      })
-    ),
+    date: requiredDate,
+    startTime: yamlString,
+    endTime: yamlString,
+    room: yamlString,
+    note: optionalI18n,
+  }),
+});
+
+/** 大会の個別ファイル (1 日程 = 1 YAML) */
+const scheduleTournaments = defineCollection({
+  loader: glob({ pattern: "**/*.yaml", base: "./src/content/schedule-tournaments" }),
+  schema: z.object({
+    date: requiredDate,
+    eventName: optionalI18n,
+    startTime: yamlString,
+    endTime: yamlString,
+    room: yamlString,
+    note: optionalI18n,
   }),
 });
 
@@ -156,4 +151,4 @@ const announcements = defineCollection({
   }),
 });
 
-export const collections = { schedule, tournaments, lessons, links, site, announcements };
+export const collections = { scheduleMeetings, scheduleTournaments, tournaments, lessons, links, site, announcements };
