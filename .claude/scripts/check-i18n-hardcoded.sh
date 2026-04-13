@@ -6,12 +6,11 @@ TARGET="src/components src/pages src/layouts"
 EXCLUDES="--glob=!*.d.ts --glob=!src/i18n/** --glob=!src/content/**"
 
 # .astro/.ts ファイル内でひらがな・カタカナを含む文字列リテラルを検出
-# コメント行（// や /* や <!-- ）は除外
+# コメント行は除外
 FOUND=$(rg --no-heading -n $EXCLUDES \
   '["'"'"'`][^"'"'"'`]*[\p{Hiragana}\p{Katakana}]' \
   $TARGET 2>/dev/null \
-  | grep -vE '^\s*//' \
-  | grep -vE '//[^"]*[\p{Hiragana}\p{Katakana}]' \
+  | grep -vE '^\S+:\d+:\s*//' \
   | grep -v 'class=' \
   | grep -v 'import ' \
   | grep -v 'font-family' \

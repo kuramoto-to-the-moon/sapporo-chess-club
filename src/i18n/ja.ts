@@ -61,6 +61,10 @@ export default {
     label: "チェス講座",
     viewDetails: "詳細を見る",
   },
+  rss: {
+    title: "札幌チェスクラブ お知らせ",
+    description: "札幌チェスクラブの新着情報",
+  },
   announcements: {
     label: "お知らせ",
     pageTitle: "お知らせ",
@@ -81,6 +85,7 @@ export default {
   resources: {
     label: "リンク / 資料",
     pamphlet: "クラブ案内 (PDF)",
+    jca: "日本チェス連盟",
   },
   contact: {
     label: "お問い合わせ",

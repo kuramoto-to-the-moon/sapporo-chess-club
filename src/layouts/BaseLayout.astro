@@ -50,9 +50,9 @@ const enUrl = new URL(`/en${pagePath}`, Astro.site).toString();
     <link rel="alternate" hreflang="en" href={enUrl} />
     <link rel="alternate" hreflang="x-default" href={jaUrl} />
     {locale === "ja" ? (
-      <link rel="alternate" type="application/rss+xml" title="札幌チェスクラブ お知らせ" href="/rss.xml" />
+      <link rel="alternate" type="application/rss+xml" title={i.rss.title} href="/rss.xml" />
     ) : (
-      <link rel="alternate" type="application/rss+xml" title="Sapporo Chess Club — News" href="/en/rss.xml" />
+      <link rel="alternate" type="application/rss+xml" title={i.rss.title} href="/en/rss.xml" />
     )}
 
     {/* Security: GitHub Pages doesn't support custom HTTP headers, so we use

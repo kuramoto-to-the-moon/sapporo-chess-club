@@ -61,6 +61,10 @@ export default {
     label: "Chess Lessons",
     viewDetails: "View details",
   },
+  rss: {
+    title: "Sapporo Chess Club — News",
+    description: "Latest updates from Sapporo Chess Club",
+  },
   announcements: {
     label: "News",
     pageTitle: "News",
@@ -81,6 +85,7 @@ export default {
   resources: {
     label: "Links & Resources",
     pamphlet: "Club Pamphlet (PDF)",
+    jca: "Japan Chess Federation",
   },
   contact: {
     label: "Contact",
