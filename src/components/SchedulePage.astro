@@ -21,12 +21,17 @@ const site = siteData[0].data;
 const upcoming = await getUpcomingScheduleDates();
 const tournaments = upcoming.filter((d) => d.type === "tournament");
 
+const ogImage = new URL("/images/og.webp", Astro.site).toString();
+
 const eventsJsonLd = tournaments.length > 0
   ? JSON.stringify(tournaments.map((t) => ({
       "@context": "https://schema.org",
       "@type": "Event",
       name: getEventName(t, locale),
-      startDate: t.date,
+      startDate: `${t.date}T${t.startTime}:00+09:00`,
+      endDate: `${t.date}T${t.endTime}:00+09:00`,
+      description: `${getEventName(t, locale)} — ${site.venue.name[locale]}`,
+      image: ogImage,
       location: {
         "@type": "Place",
         name: site.venue.name[locale],
@@ -42,6 +47,13 @@ const eventsJsonLd = tournaments.length > 0
         "@type": "SportsClub",
         name: i.site.name,
         url: "https://sapporochessclub.com",
+      },
+      offers: {
+        "@type": "Offer",
+        price: String(site.fee.general),
+        priceCurrency: "JPY",
+        availability: "https://schema.org/InStock",
+        url: new URL(locale === "en" ? "/en/schedule" : "/schedule", Astro.site).toString(),
       },
       eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
       eventStatus: "https://schema.org/EventScheduled",
