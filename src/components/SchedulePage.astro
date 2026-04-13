@@ -55,6 +55,10 @@ const eventsJsonLd = tournaments.length > 0
         availability: "https://schema.org/InStock",
         url: new URL(locale === "en" ? "/en/schedule" : "/schedule", Astro.site).toString(),
       },
+      performer: {
+        "@type": "SportsTeam",
+        name: i.site.name,
+      },
       eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
       eventStatus: "https://schema.org/EventScheduled",
     })))
