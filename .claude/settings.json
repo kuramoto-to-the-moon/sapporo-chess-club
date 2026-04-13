@@ -13,8 +13,8 @@
           {
             "type": "command",
             "if": "Edit(src/content/)|Write(src/content/)",
-            "command": "pnpm build 2>&1 | tail -5",
-            "statusMessage": "コンテンツ変更を検出 — ビルドチェック中..."
+            "command": "pnpm build 2>&1 | tail -5 && .claude/scripts/check-jsonld.sh",
+            "statusMessage": "コンテンツ変更を検出 — ビルド + JSON-LD チェック中..."
           },
           {
             "type": "command",
