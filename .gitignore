@@ -13,6 +13,7 @@ dist/
 # claude code
 .claude/*
 !.claude/settings.json
+!.claude/scripts/
 
 # internal docs (keep docs/operations.md)
 docs/superpowers/
