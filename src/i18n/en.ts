@@ -11,6 +11,7 @@ export default {
     skipToMain: "Skip to main content",
     openInNewTab: "(opens in new tab)",
     switchLanguage: "日本語に切り替え",
+    close: "閉じる",
     languageShort: "JA",
   },
   sections: {

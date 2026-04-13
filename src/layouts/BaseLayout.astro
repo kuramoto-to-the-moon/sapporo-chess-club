@@ -64,7 +64,7 @@ const enUrl = new URL(`/en${pagePath}`, Astro.site).toString();
       http-equiv="Content-Security-Policy"
       content={[
         "default-src 'self'",
-        "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com",
+        "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com",
         "style-src 'self' 'unsafe-inline'",
         "img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com",
         "font-src 'self'",
@@ -149,12 +149,12 @@ const enUrl = new URL(`/en${pagePath}`, Astro.site).toString();
           class="text-white text-[15px] font-semibold no-underline"
           data-lang-pill-link
         >
-          View in English
+          {i.nav.switchLanguage}
         </a>
         <button
           type="button"
           data-lang-pill-close
-          aria-label="Close"
+          aria-label={i.nav.close}
           class="flex items-center justify-center w-7 h-7 rounded-full text-white/50 hover:text-white hover:bg-white/15 text-lg leading-none cursor-pointer bg-transparent border-0 transition-colors duration-150"
         >
           ×
