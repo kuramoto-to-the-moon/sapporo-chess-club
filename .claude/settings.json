@@ -12,6 +12,12 @@
           },
           {
             "type": "command",
+            "if": "Edit(src/content/)|Write(src/content/)",
+            "command": "pnpm build 2>&1 | tail -5",
+            "statusMessage": "コンテンツ変更を検出 — ビルドチェック中..."
+          },
+          {
+            "type": "command",
             "if": "Edit(src/i18n/ja.ts)|Edit(src/i18n/en.ts)|Write(src/i18n/ja.ts)|Write(src/i18n/en.ts)",
             "command": ".claude/scripts/check-i18n-parity.sh",
             "statusMessage": "i18n キー構造チェック中..."
