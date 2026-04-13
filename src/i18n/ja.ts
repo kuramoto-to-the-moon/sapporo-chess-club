@@ -76,6 +76,7 @@ export default {
     next: "次のお知らせ",
     empty: "まだお知らせはありません。",
     englishNotAvailable: "",
+    englishNotAvailableDetail: "",
     englishNotAvailableShort: "",
     archivePageTitle: "お知らせアーカイブ",
     viewArchive: "過去のお知らせを見る →",
