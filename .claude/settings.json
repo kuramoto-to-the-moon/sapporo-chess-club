@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "if": "Edit(content.config.ts)|Edit(.pages.yml)|Write(content.config.ts)|Write(.pages.yml)",
+            "command": "pnpm build 2>&1 | tail -5",
+            "statusMessage": "スキーマ変更を検出 — ビルドチェック中..."
+          }
+        ]
+      }
+    ]
+  }
+}
