@@ -31,6 +31,18 @@ const yamlString = z.string().or(z.number()).or(z.boolean()).nullable()
   .transform((v) => (v === null || v === undefined) ? "" : String(v));
 
 /**
+ * 時刻フィールド。"9:00" → "09:00" のようにゼロ埋めして HH:MM に正規化。
+ */
+const timeString = z.string().or(z.number()).or(z.boolean()).nullable()
+  .transform((v) => {
+    if (v === null || v === undefined) return "";
+    const s = String(v);
+    const m = s.match(/^(\d{1,2}):(\d{2})$/);
+    if (m) return `${m[1].padStart(2, "0")}:${m[2]}`;
+    return s;
+  });
+
+/**
  * nullable + 空文字列 → undefined にする文字列。optional フォールバックを確実に効かせる。
  */
 const nullableString = z.string().nullable().optional()
@@ -61,8 +73,8 @@ const scheduleMeetings = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/schedule-meetings" }),
   schema: z.object({
     date: requiredDate,
-    startTime: yamlString,
-    endTime: yamlString,
+    startTime: timeString,
+    endTime: timeString,
     room: yamlString,
     note: optionalI18n,
   }),
@@ -74,8 +86,8 @@ const scheduleTournaments = defineCollection({
   schema: z.object({
     date: requiredDate,
     eventName: optionalI18n,
-    startTime: yamlString,
-    endTime: yamlString,
+    startTime: timeString,
+    endTime: timeString,
     room: yamlString,
     note: optionalI18n,
   }),
