@@ -86,12 +86,14 @@ const enUrl = new URL(`/en${withTrailingSlash(pagePath)}`, Astro.site).toString(
     />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
 
-    {/* Favicon — Google 検索は SVG を使わず 48×48 以上の PNG/ICO を要求する。
-         /favicon.ico は Google が <link> タグ無しでも直接取得しに来る標準パス。 */}
+    {/* Favicon — Google は「any valid format supported」だが、複数の異なる
+         `rel="icon"` ファイルが宣言されていると選択が曖昧になり、検索結果に
+         favicon が出ない事例が報告されている。ここでは役割の異なる 3 種類だけ
+         宣言する: (1) .ico = 全ブラウザ共通の標準、(2) .svg = 現代ブラウザ向け、
+         (3) apple-touch-icon = iOS。favicon-32/48 の PNG ファイルはデプロイ済
+         資産として public/ に残すが、link タグからは外して曖昧さを排除する。 */}
     <link rel="icon" href="/favicon.ico" sizes="48x48" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
     {/* PWA */}
