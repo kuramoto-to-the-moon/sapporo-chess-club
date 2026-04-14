@@ -22,6 +22,8 @@ const i = t(locale);
 const siteData = await getCollection("site");
 const site = siteData[0].data;
 
+const clubLogoUrl = new URL("/icon-512.png", Astro.site).toString();
+const clubImageUrl = new URL("/images/og.webp", Astro.site).toString();
 const clubJsonLd = JSON.stringify({
   "@context": "https://schema.org",
   "@type": "SportsClub",
@@ -29,6 +31,8 @@ const clubJsonLd = JSON.stringify({
   alternateName: locale === "ja" ? "Sapporo Chess Club" : "札幌チェスクラブ",
   description: i.site.description,
   url: "https://sapporochessclub.com",
+  logo: clubLogoUrl,
+  image: clubImageUrl,
   sport: "Chess",
   foundingDate: "1990",
   sameAs: ["https://x.com/SapporoChess"],
