@@ -35,7 +35,7 @@ const tournaments = sorted.map((t) => {
 const years = [...new Set(tournaments.map((t) => t.year))].sort((a, b) => b - a);
 ---
 
-<BaseLayout title={i.tournament.pageTitle} locale={locale}>
+<BaseLayout title={i.tournament.pageTitle} locale={locale} description={i.seo.tournaments.description}>
   <style is:global>
     html {
       scrollbar-gutter: stable;

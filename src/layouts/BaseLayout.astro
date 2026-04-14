@@ -9,24 +9,32 @@ interface Props {
   title: string;
   locale: Locale;
   description?: string;
+  /** ホームページで siteName の後ろに付ける補足文（SEOキーワード含む長いtitle用）。非ホームでは無視。 */
+  titleSuffix?: string;
+  /** true で <meta name="robots" content="noindex"> を出力。アーカイブ等に使う。 */
+  noindex?: boolean;
 }
 
-const { title, locale, description } = Astro.props;
+const { title, locale, description, titleSuffix, noindex } = Astro.props;
 const i = t(locale);
 
 const siteName = i.site.name;
 const isHomePage = title === i.nav.home;
-const fullTitle = isHomePage ? siteName : `${siteName} | ${title}`;
+const fullTitle = isHomePage
+  ? (titleSuffix ? `${siteName}｜${titleSuffix}` : siteName)
+  : `${siteName} | ${title}`;
 const metaDescription = description ?? i.site.description;
 
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
 const normalizedPath = normalizePath(Astro.url.pathname);
 const ogImage = new URL("/images/og.webp", Astro.site).toString();
 
-// hreflang: 検索エンジンに ja/en の対応関係を伝える
+// hreflang: 検索エンジンに ja/en の対応関係を伝える。
+// canonical と末尾スラッシュを揃える（Astro の静的出力は全ページ trailing slash 付き）。
 const pagePath = stripLocalePrefix(normalizedPath);
-const jaUrl = new URL(pagePath, Astro.site).toString();
-const enUrl = new URL(`/en${pagePath}`, Astro.site).toString();
+const withTrailingSlash = (p: string) => (p === "/" ? "/" : `${p}/`);
+const jaUrl = new URL(withTrailingSlash(pagePath), Astro.site).toString();
+const enUrl = new URL(`/en${withTrailingSlash(pagePath)}`, Astro.site).toString();
 ---
 
 <!doctype html>
@@ -45,6 +53,7 @@ const enUrl = new URL(`/en${pagePath}`, Astro.site).toString();
     </script>
     <title>{fullTitle}</title>
     <meta name="description" content={metaDescription} />
+    {noindex && <meta name="robots" content="noindex,follow" />}
     <link rel="canonical" href={canonicalUrl} />
     <link rel="alternate" hreflang="ja" href={jaUrl} />
     <link rel="alternate" hreflang="en" href={enUrl} />

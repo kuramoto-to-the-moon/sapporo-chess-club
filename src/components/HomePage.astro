@@ -49,7 +49,12 @@ const clubJsonLd = JSON.stringify({
 });
 ---
 
-<BaseLayout title={i.nav.home} locale={locale}>
+<BaseLayout
+  title={i.nav.home}
+  locale={locale}
+  description={i.seo.home.description}
+  titleSuffix={i.seo.home.titleSuffix}
+>
   <script type="application/ld+json" set:html={clubJsonLd} />
   <Hero locale={locale} />
   <NextEvent locale={locale} />

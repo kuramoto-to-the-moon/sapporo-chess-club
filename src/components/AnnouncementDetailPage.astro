@@ -5,6 +5,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import { t, getLocalePath, type Locale } from "@/i18n";
 import {
   pickTitle,
+  pickDescription,
   hasJaOnlyContent,
   formatAnnouncementDate,
   type Announcement,
@@ -24,13 +25,54 @@ const listHref = getLocalePath(locale, "/announcements");
 const title = pickTitle(entry, locale);
 const isJaFallback = locale === "en" && hasJaOnlyContent(entry);
 
+// meta description: 本文先頭から抽出（160字で切る = Google の description 表示上限に合わせる）
+const description = pickDescription(entry, locale, 155);
+
 // ja は Astro の <Content /> で markdown body をレンダー、
 // en は frontmatter の bodyEn 文字列を marked で HTML 化する。
 const { Content } = await render(entry);
 const enBodyHtml = entry.data.bodyEn ? marked.parse(entry.data.bodyEn) : null;
+
+// NewsArticle JSON-LD: お知らせをニュース記事としてマークアップ。
+// inLanguage と isAccessibleForFree を明示することで多言語サイトとしての
+// 理解を助け、rich result 適格性を上げる。
+const canonicalUrl = new URL(
+  getLocalePath(locale, `/announcements/${entry.id}`),
+  Astro.site,
+).toString();
+const ogImage = new URL("/images/og.webp", Astro.site).toString();
+const datePublishedIso = `${entry.data.date}T00:00:00+09:00`;
+const articleJsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  headline: title,
+  description,
+  datePublished: datePublishedIso,
+  dateModified: datePublishedIso,
+  inLanguage: locale === "ja" ? "ja-JP" : "en-US",
+  isAccessibleForFree: true,
+  image: [ogImage],
+  url: canonicalUrl,
+  mainEntityOfPage: { "@type": "WebPage", "@id": canonicalUrl },
+  author: {
+    "@type": "Organization",
+    name: i.site.name,
+    url: "https://sapporochessclub.com",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: i.site.name,
+    url: "https://sapporochessclub.com",
+    logo: {
+      "@type": "ImageObject",
+      url: new URL("/icon-512.png", Astro.site).toString(),
+    },
+  },
+});
 ---
 
-<BaseLayout title={title} locale={locale}>
+<BaseLayout title={title} locale={locale} description={description}>
+  <script type="application/ld+json" set:html={articleJsonLd} />
   <article class="px-5 pt-16 md:pt-20 pb-10">
     <a href={listHref} data-astro-prefetch class="text-sm text-[#737373] hover:text-[#2563eb] transition-colors duration-150 animate-fade-in-up">
       {i.announcements.back}

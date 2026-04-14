@@ -35,7 +35,7 @@ const pageTitle = selectedYear
   : i.announcements.archivePageTitle;
 ---
 
-<BaseLayout title={pageTitle} locale={locale}>
+<BaseLayout title={pageTitle} locale={locale} description={i.seo.announcementsArchive.description} noindex={true}>
   <section class="px-5 pt-16 md:pt-20 pb-6">
     <a href={activeHref} class="inline-block text-sm text-[#737373] hover:text-[#2563eb] transition-colors duration-150 mb-4 animate-fade-in-up">
       {i.announcements.backToActive}
