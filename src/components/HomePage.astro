@@ -26,9 +26,12 @@ const clubJsonLd = JSON.stringify({
   "@context": "https://schema.org",
   "@type": "SportsClub",
   name: i.site.name,
+  alternateName: locale === "ja" ? "Sapporo Chess Club" : "札幌チェスクラブ",
   description: i.site.description,
   url: "https://sapporochessclub.com",
   sport: "Chess",
+  foundingDate: "1990",
+  sameAs: ["https://x.com/SapporoChess"],
   ...(site.email && { email: site.email }),
   ...(site.phone && { telephone: site.phone }),
   address: {
