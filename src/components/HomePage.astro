@@ -24,6 +24,19 @@ const site = siteData[0].data;
 
 const clubLogoUrl = new URL("/icon-512.png", Astro.site).toString();
 const clubImageUrl = new URL("/images/og.webp", Astro.site).toString();
+
+// WebSite JSON-LD: Google 検索結果の「サイト名」表示に使われる。
+// https://developers.google.com/search/docs/appearance/site-names
+// これがないと検索結果がドメイン名（sapporochessclub.com）のまま表示されがち。
+const websiteJsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: i.site.name,
+  alternateName: locale === "ja" ? "Sapporo Chess Club" : "札幌チェスクラブ",
+  url: "https://sapporochessclub.com",
+  inLanguage: locale === "ja" ? "ja-JP" : "en-US",
+});
+
 const clubJsonLd = JSON.stringify({
   "@context": "https://schema.org",
   "@type": "SportsClub",
@@ -59,6 +72,7 @@ const clubJsonLd = JSON.stringify({
   description={i.seo.home.description}
   titleSuffix={i.seo.home.titleSuffix}
 >
+  <script type="application/ld+json" set:html={websiteJsonLd} />
   <script type="application/ld+json" set:html={clubJsonLd} />
   <Hero locale={locale} />
   <NextEvent locale={locale} />
