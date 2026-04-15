@@ -86,14 +86,11 @@ const enUrl = new URL(`/en${withTrailingSlash(pagePath)}`, Astro.site).toString(
     />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
 
-    {/* Favicon — Google は「any valid format supported」だが、複数の異なる
-         `rel="icon"` ファイルが宣言されていると選択が曖昧になり、検索結果に
-         favicon が出ない事例が報告されている。ここでは役割の異なる 3 種類だけ
-         宣言する: (1) .ico = 全ブラウザ共通の標準、(2) .svg = 現代ブラウザ向け、
-         (3) apple-touch-icon = iOS。favicon-32/48 の PNG ファイルはデプロイ済
-         資産として public/ に残すが、link タグからは外して曖昧さを排除する。 */}
-    <link rel="icon" href="/favicon.ico" sizes="48x48" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    {/* Favicon — `<link rel="icon">` を複数宣言すると Google が選択を誤り、
+         検索結果に favicon が表示されないケースが観測されたため、通常の
+         favicon 宣言は撤廃。ブラウザ・Google はルート直下の /favicon.ico を
+         無宣言でも取得しに来るため、この「独立配置」方式で曖昧さを排除する。
+         apple-touch-icon は iOS ホーム画面向けの別系統なので残す。 */}
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
     {/* PWA */}
