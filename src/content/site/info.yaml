@@ -11,6 +11,9 @@ venue:
   access:
     ja: JR札幌駅 徒歩15分
     en: 15 min walk from JR Sapporo Station
+  geo:
+    latitude: 43.063083
+    longitude: 141.345560
 fee:
   general: 1000
   student: 500

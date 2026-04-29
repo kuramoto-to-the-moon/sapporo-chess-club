@@ -2,9 +2,10 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import ScheduleTimeline from "@/components/ScheduleTimeline.astro";
-import { t, type Locale } from "@/i18n";
+import { t, getLocalePath, type Locale } from "@/i18n";
 import { getSortedScheduleDates } from "@/lib/schedule-data";
 import { getEventName } from "@/lib/schedule";
+import { buildBreadcrumbJsonLd } from "@/lib/breadcrumb";
 
 interface Props {
   locale: Locale;
@@ -89,9 +90,15 @@ const eventsJsonLd = mergedTournaments.length > 0
       eventStatus: "https://schema.org/EventScheduled",
     })))
   : null;
+
+const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+  { name: i.nav.home, url: new URL(getLocalePath(locale, "/"), Astro.site).toString() },
+  { name: i.schedule.pageTitle, url: new URL(getLocalePath(locale, "/schedule/"), Astro.site).toString() },
+]);
 ---
 
 <BaseLayout title={i.schedule.pageTitle} locale={locale} description={i.seo.schedule.description}>
+  <script type="application/ld+json" set:html={breadcrumbJsonLd} />
   {eventsJsonLd && <script type="application/ld+json" set:html={eventsJsonLd} />}
   <section class="px-5 pt-16 md:pt-20 pb-6">
     <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight animate-fade-in-up">{i.schedule.pageTitle}</h1>

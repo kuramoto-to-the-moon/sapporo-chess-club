@@ -10,6 +10,7 @@ import {
   formatAnnouncementDate,
   type Announcement,
 } from "@/lib/announcement";
+import { buildBreadcrumbJsonLd } from "@/lib/breadcrumb";
 
 interface Props {
   locale: Locale;
@@ -69,9 +70,16 @@ const articleJsonLd = JSON.stringify({
     },
   },
 });
+
+const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+  { name: i.nav.home, url: new URL(getLocalePath(locale, "/"), Astro.site).toString() },
+  { name: i.announcements.pageTitle, url: new URL(getLocalePath(locale, "/announcements/"), Astro.site).toString() },
+  { name: title, url: canonicalUrl },
+]);
 ---
 
 <BaseLayout title={title} locale={locale} description={description}>
+  <script type="application/ld+json" set:html={breadcrumbJsonLd} />
   <script type="application/ld+json" set:html={articleJsonLd} />
   <article class="px-5 pt-16 md:pt-20 pb-10">
     <a href={listHref} data-astro-prefetch class="text-sm text-[#737373] hover:text-[#2563eb] transition-colors duration-150 animate-fade-in-up">

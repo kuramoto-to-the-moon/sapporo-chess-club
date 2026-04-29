@@ -58,10 +58,25 @@ const clubJsonLd = JSON.stringify({
     addressRegion: "Hokkaido",
     addressCountry: "JP",
   },
+  // geo / areaServed: 「near me」検索や Knowledge Panel の地図表示精度を上げる。
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: site.venue.geo.latitude,
+    longitude: site.venue.geo.longitude,
+  },
+  areaServed: [
+    { "@type": "City", name: "Sapporo" },
+    { "@type": "AdministrativeArea", name: "Hokkaido" },
+  ],
   location: {
     "@type": "Place",
     name: site.venue.name[locale],
     address: site.venue.address[locale],
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: site.venue.geo.latitude,
+      longitude: site.venue.geo.longitude,
+    },
   },
 });
 ---

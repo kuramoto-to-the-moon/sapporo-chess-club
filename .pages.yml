@@ -262,6 +262,13 @@ content:
             fields:
               - { name: ja, label: 日本語, type: string, required: true }
               - { name: en, label: English, type: string, required: true }
+          - name: geo
+            label: 緯度経度（地図用）
+            type: object
+            description: "Google マップで会場をピン留めする座標。Schema.org 構造化データ（Local SEO）にも使用。"
+            fields:
+              - { name: latitude, label: 緯度, type: number, required: true }
+              - { name: longitude, label: 経度, type: number, required: true }
       - name: fee
         label: 参加費
         type: object

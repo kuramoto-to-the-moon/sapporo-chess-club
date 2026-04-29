@@ -2,13 +2,13 @@ export default {
   site: {
     name: "Sapporo Chess Club",
     description:
-      "Sapporo Chess Club is a community for chess enthusiasts in Hokkaido. We hold meetups twice a month, three official tournaments a year, and a beginner chess course. Observation is free, beginners welcome.",
+      "Sapporo Chess Club is a community for chess enthusiasts in Hokkaido. We hold meetups twice a month, three official tournaments a year, and chess classes for beginners (beginner course). Observation is free, beginners welcome.",
   },
   seo: {
     home: {
-      titleSuffix: "Hokkaido Chess Meetups & Tournaments",
+      titleSuffix: "Chess Classes, Meetups & Tournaments in Hokkaido",
       description:
-        "Official site of Sapporo Chess Club. A community of chess players in Hokkaido, Japan — with twice-monthly meetups, three annual tournaments (Hokkaido Chess Championship and more), and a beginner course. Free observation, all welcome.",
+        "Official site of Sapporo Chess Club. A community of chess players in Hokkaido, Japan — twice-monthly meetups, three annual tournaments (Hokkaido Chess Championship and more), and chess classes / lessons for beginners. Free observation, all welcome.",
     },
     schedule: {
       description:

@@ -10,6 +10,7 @@ import {
   groupByYear,
   hasJaOnlyContent,
 } from "@/lib/announcement";
+import { buildBreadcrumbJsonLd } from "@/lib/breadcrumb";
 
 interface Props {
   locale: Locale;
@@ -27,9 +28,15 @@ const grouped = Array.from(groupByYear(entries).entries()).sort((a, b) => b[0] -
 
 const archiveHref = getLocalePath(locale, "/announcements/archive");
 const rssHref = withBase(locale === "ja" ? "/rss.xml" : "/en/rss.xml")!;
+
+const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+  { name: i.nav.home, url: new URL(getLocalePath(locale, "/"), Astro.site).toString() },
+  { name: i.announcements.pageTitle, url: new URL(getLocalePath(locale, "/announcements/"), Astro.site).toString() },
+]);
 ---
 
 <BaseLayout title={i.announcements.pageTitle} locale={locale} description={i.seo.announcementsList.description}>
+  <script type="application/ld+json" set:html={breadcrumbJsonLd} />
   <section class="px-5 pt-16 md:pt-20 pb-6">
     <div class="flex items-start justify-between gap-4">
       <div class="flex-1 min-w-0">

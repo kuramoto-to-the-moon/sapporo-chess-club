@@ -139,6 +139,10 @@ const site = defineCollection({
       floor: yamlString,
       address: z.object({ ja: z.string(), en: z.string() }),
       access: z.object({ ja: z.string(), en: z.string() }),
+      geo: z.object({
+        latitude: z.coerce.number(),
+        longitude: z.coerce.number(),
+      }),
     }),
     fee: z.object({
       general: z.coerce.number(),
