@@ -24,10 +24,5 @@ const site = siteData[0].data;
         {site.email}
       </a>
     )}
-    {site.phone && (
-      <a href={`tel:${site.phone.replace(/-/g, "")}`} class="text-[#737373] hover:text-[#2563eb] transition-colors duration-150 w-fit">
-        Tel: {site.phone}
-      </a>
-    )}
   </p>
 </section>

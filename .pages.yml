@@ -233,10 +233,6 @@ content:
         label: メールアドレス
         type: string
         required: true
-      - name: phone
-        label: 電話番号
-        type: string
-        required: true
       - name: venue
         label: 会場情報
         type: object

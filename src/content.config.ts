@@ -133,7 +133,6 @@ const site = defineCollection({
   loader: glob({ pattern: "**/*.yaml", base: "./src/content/site" }),
   schema: z.object({
     email: z.string(),
-    phone: yamlString,
     venue: z.object({
       name: z.object({ ja: z.string(), en: z.string() }),
       floor: yamlString,

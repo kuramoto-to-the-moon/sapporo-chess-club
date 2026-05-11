@@ -50,7 +50,6 @@ const clubJsonLd = JSON.stringify({
   foundingDate: "1990",
   sameAs: ["https://x.com/SapporoChess"],
   ...(site.email && { email: site.email }),
-  ...(site.phone && { telephone: site.phone }),
   address: {
     "@type": "PostalAddress",
     streetAddress: site.venue.address[locale],
