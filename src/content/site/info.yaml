@@ -1,5 +1,5 @@
 email: sapporochessclub@gmail.com
-phone: 011-865-0355
+phone: "****"
 venue:
   name:
     ja: かでる2.7
@@ -13,7 +13,7 @@ venue:
     en: 15 min walk from JR Sapporo Station
   geo:
     latitude: 43.063083
-    longitude: 141.345560
+    longitude: 141.34556
 fee:
   general: 1000
   student: 500
