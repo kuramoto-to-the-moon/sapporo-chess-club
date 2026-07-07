@@ -36,8 +36,8 @@ jobs:
         run: |
           for pr in ${{ steps.list.outputs.prs }}; do
             echo "--- PR #$pr をマージ ---"
-            # CI が通っている場合のみマージ
-            gh pr merge "$pr" --merge --auto || {
+            # --auto はチェック待ちがある場合のみ有効。クリーン状態なら直マージ
+            gh pr merge "$pr" --merge --auto 2>/dev/null || gh pr merge "$pr" --merge || {
               echo "PR #$pr のマージに失敗（CI 未通過の可能性）— スキップ"
               continue
             }
