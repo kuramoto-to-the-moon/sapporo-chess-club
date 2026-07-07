@@ -1,26 +1,38 @@
 import { getCollection } from "astro:content";
 import { parseDate, startOfTodayJST } from "@/lib/date";
-import type { ScheduleDate } from "@/lib/schedule";
+import { announcementPathToSlug, type ScheduleDate } from "@/lib/schedule";
 
 /**
  * 例会 + 大会を統合し、JST 基準で昇順ソートして返す。
  * コレクションが分かれているので type は collection 名から決定する。
+ * 大会の announcement (path) は announcements 照合済みの announcementSlug に解決する。
  */
 export async function getSortedScheduleDates(): Promise<ScheduleDate[]> {
-  const [meetings, tournaments] = await Promise.all([
+  const [meetings, tournaments, announcements] = await Promise.all([
     getCollection("scheduleMeetings"),
     getCollection("scheduleTournaments"),
+    getCollection("announcements"),
   ]);
+  const announcementIds = new Set(announcements.map((a) => a.id));
 
   const meetingDates: ScheduleDate[] = meetings.map((m) => ({
     ...m.data,
     type: "meeting" as const,
   }));
 
-  const tournamentDates: ScheduleDate[] = tournaments.map((t) => ({
-    ...t.data,
-    type: "tournament" as const,
-  }));
+  const tournamentDates: ScheduleDate[] = tournaments.map((t) => {
+    const { announcement, ...rest } = t.data;
+    let announcementSlug: string | undefined;
+    if (announcement) {
+      const slug = announcementPathToSlug(announcement);
+      if (announcementIds.has(slug)) {
+        announcementSlug = slug;
+      } else {
+        console.warn(`[schedule] 関連お知らせが見つかりません: ${t.id} → ${announcement}`);
+      }
+    }
+    return { ...rest, announcementSlug, type: "tournament" as const };
+  });
 
   return [...meetingDates, ...tournamentDates]
     .sort((a, b) => parseDate(a.date).getTime() - parseDate(b.date).getTime());

@@ -8,6 +8,7 @@ export interface ScheduleDate {
   type?: "meeting" | "tournament";
   eventName?: { ja: string; en: string };
   note?: { ja: string; en: string };
+  announcementSlug?: string;
 }
 
 /**
@@ -21,4 +22,14 @@ export function getEventName(date: ScheduleDate, locale: Locale): string {
   if (date.eventName?.[locale]) return date.eventName[locale];
   if (date.eventName?.ja) return date.eventName.ja;
   return i.badge.tournamentTag;
+}
+
+/**
+ * Pages CMS reference の保存値 (例: "src/content/announcements/2026-06-29-75.md")
+ * から announcements の slug ("2026-06-29-75") を取り出す。
+ * slug 単体が渡された場合もそのまま返る。
+ */
+export function announcementPathToSlug(path: string): string {
+  const base = path.split("/").pop() ?? path;
+  return base.replace(/\.md$/, "");
 }
