@@ -46,7 +46,17 @@ const upcoming = await getUpcomingScheduleDates(3);
                       {i.badge.tournamentTag}
                     </span>
                   )}
-                  <span>{getEventName(date, locale)}</span>
+                  {date.announcementSlug ? (
+                    <a
+                      href={getLocalePath(locale, `/announcements/${date.announcementSlug}`)}
+                      data-astro-prefetch
+                      class="text-[#2563eb] hover:text-[#1d4ed8] hover:underline transition-colors duration-150"
+                    >
+                      {getEventName(date, locale)}
+                    </a>
+                  ) : (
+                    <span>{getEventName(date, locale)}</span>
+                  )}
                 </p>
                 <p class="text-xs text-[#737373] mt-1">
                   {date.startTime}–{date.endTime} / {date.room}{i.schedule.roomSuffix}

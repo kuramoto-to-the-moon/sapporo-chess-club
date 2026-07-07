@@ -1,5 +1,5 @@
 ---
-import { t, type Locale } from "@/i18n";
+import { t, getLocalePath, type Locale } from "@/i18n";
 import { getDateParts, getDayOfWeek } from "@/lib/date";
 import { getEventName, type ScheduleDate } from "@/lib/schedule";
 
@@ -57,7 +57,17 @@ function formatMonthHeading(monthKey: string): string {
               <div class="flex-1 pt-1">
                 <p class="text-sm font-semibold flex items-center gap-2 flex-wrap">
                   {isTournament && <span class="text-xs px-1.5 py-0.5 rounded bg-[#2563eb] text-white font-semibold">{i.badge.tournamentTag}</span>}
-                  <span>{getEventName(date, locale)}</span>
+                  {date.announcementSlug ? (
+                    <a
+                      href={getLocalePath(locale, `/announcements/${date.announcementSlug}`)}
+                      data-astro-prefetch
+                      class="text-[#2563eb] hover:text-[#1d4ed8] hover:underline transition-colors duration-150"
+                    >
+                      {getEventName(date, locale)}
+                    </a>
+                  ) : (
+                    <span>{getEventName(date, locale)}</span>
+                  )}
                 </p>
                 <p class="text-xs text-[#737373] mt-1">
                   {date.startTime}–{date.endTime} / {date.room}{i.schedule.roomSuffix}

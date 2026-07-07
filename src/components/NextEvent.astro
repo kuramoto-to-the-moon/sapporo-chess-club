@@ -1,6 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import { t, type Locale } from "@/i18n";
+import { t, getLocalePath, type Locale } from "@/i18n";
 import { getDateParts, getDayOfWeek } from "@/lib/date";
 import { getEventName } from "@/lib/schedule";
 import { getUpcomingScheduleDates } from "@/lib/schedule-data";
@@ -43,7 +43,19 @@ const title = next
         {parts.month}/{parts.day}
       </span>
       <div>
-        <p class="text-base font-semibold">{title}</p>
+        {next.announcementSlug ? (
+          <p class="text-base font-semibold">
+            <a
+              href={getLocalePath(locale, `/announcements/${next.announcementSlug}`)}
+              data-astro-prefetch
+              class="text-[#2563eb] hover:text-[#1d4ed8] hover:underline transition-colors duration-150"
+            >
+              {title}
+            </a>
+          </p>
+        ) : (
+          <p class="text-base font-semibold">{title}</p>
+        )}
         <p class="text-sm text-[#737373] mt-0.5 flex flex-wrap gap-x-3">
           <span>{next.startTime}–{next.endTime}</span>
           <span>{venueName[locale]}</span>
