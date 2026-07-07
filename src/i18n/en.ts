@@ -98,7 +98,7 @@ export default {
     prev: "Previous",
     next: "Next",
     empty: "No news yet.",
-    englishNotAvailable: "Most articles are not yet available in English. Content is shown in Japanese.",
+    englishNotAvailable: "Some articles are not yet available in English and are shown in Japanese.",
     englishNotAvailableDetail: "This article is not yet available in English. The content below is shown in Japanese.",
     englishNotAvailableShort: "Shown in Japanese.",
     archivePageTitle: "News Archive",
