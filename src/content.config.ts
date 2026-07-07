@@ -90,6 +90,7 @@ const scheduleTournaments = defineCollection({
     endTime: timeString,
     room: yamlString,
     note: optionalI18n,
+    announcement: nullableString,
   }),
 });
 

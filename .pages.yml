@@ -91,6 +91,15 @@ content:
         fields:
           - { name: ja, label: 日本語, type: string }
           - { name: en, label: English, type: string }
+      - name: announcement
+        label: 関連お知らせ（要項）
+        type: reference
+        options:
+          collection: announcements
+          search: "title.ja"
+          value: "{path}"
+          label: "{primary}"
+        description: "大会の要項・案内のお知らせ記事。設定するとスケジュールの大会名がリンクになる。複数日大会は各日に設定。"
 
   - name: tournaments
     label: 大会記録
