@@ -21,7 +21,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          prs=$(gh pr list --author "app/dependabot" --state open --json number,title --jq '.[].number')
+          prs=$(gh pr list --author "app/dependabot" --state open --json number,title --jq '.[].number' | xargs)
           echo "prs=$prs" >> "$GITHUB_OUTPUT"
           if [ -z "$prs" ]; then
             echo "Dependabot PR なし — スキップ"
