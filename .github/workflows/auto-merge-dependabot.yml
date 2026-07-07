@@ -14,7 +14,7 @@ jobs:
   merge-and-verify:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - name: List open Dependabot PRs
         id: list
@@ -49,7 +49,7 @@ jobs:
 
       - name: Pull latest and verify build
         if: steps.list.outputs.prs != ''
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           ref: main
 
