@@ -98,7 +98,7 @@ export default {
     label: "お知らせ",
     pageTitle: "お知らせ",
     pageSubtitle: "新着情報・お知らせ一覧",
-    viewAll: "すべて見る →",
+    viewAll: "お知らせ一覧を見る →",
     back: "← お知らせ一覧",
     prev: "前のお知らせ",
     next: "次のお知らせ",

@@ -97,7 +97,7 @@ export default {
     label: "News",
     pageTitle: "News",
     pageSubtitle: "Latest updates from the club",
-    viewAll: "View all →",
+    viewAll: "View all news →",
     back: "← All news",
     prev: "Previous",
     next: "Next",
