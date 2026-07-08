@@ -52,6 +52,8 @@ export default {
   nextEvent: {
     meeting: "次回の例会",
     event: "次回のイベント",
+    // 時刻と会場の区切り。前後の空白込み
+    metaSeparator: " ・ ",
   },
   about: {
     label: "クラブについて",
@@ -75,7 +77,6 @@ export default {
     filterByYear: "年で絞り込み",
     allYears: "すべての年",
     all: "すべて",
-    dayOfWeekSuffix: "曜日",
     roomSuffix: "室",
     yearSuffix: "年",
     monthSuffix: "月",

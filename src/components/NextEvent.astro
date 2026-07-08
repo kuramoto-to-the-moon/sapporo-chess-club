@@ -4,6 +4,7 @@ import { t, getLocalePath, type Locale } from "@/i18n";
 import { getDateParts, getDayOfWeek } from "@/lib/date";
 import { getEventName } from "@/lib/schedule";
 import { getUpcomingScheduleDates } from "@/lib/schedule-data";
+import SectionHeader from "@/components/SectionHeader.astro";
 
 interface Props {
   locale: Locale;
@@ -18,50 +19,35 @@ const venueName = siteData[0].data.venue.name;
 const [next] = await getUpcomingScheduleDates(1);
 const parts = next ? getDateParts(next.date) : null;
 const isTournament = next?.type === "tournament";
-const title = next
-  ? isTournament
-    ? getEventName(next, locale)
-    : `${getDayOfWeek(next.date, locale)}${i.schedule.dayOfWeekSuffix}`
-  : "";
 ---
 
 {next && parts && (
   <section class="px-5 py-8 border-t border-hairline animate-fade-in-up">
-    <div class="flex items-center gap-1.5 mb-1.5">
-      <span class="inline-block w-1 h-3 bg-primary"></span>
-      <span class="text-sm font-semibold uppercase tracking-wider text-muted">
-        {isTournament ? i.nextEvent.event : i.nextEvent.meeting}
-      </span>
-      {isTournament && (
-        <span class="bg-primary text-white text-xs px-1.5 py-0.5 rounded font-semibold">
+    <SectionHeader label={isTournament ? i.nextEvent.event : i.nextEvent.meeting} />
+    <p class="flex items-baseline gap-2">
+      <span class="text-5xl font-extralight leading-none text-primary">{parts.month}/{parts.day}</span>
+      <span class="text-lg text-muted">({getDayOfWeek(next.date, locale)})</span>
+    </p>
+    {isTournament && (
+      <p class="text-base font-semibold mt-3 flex items-center gap-2">
+        <span class="text-xs px-1.5 py-0.5 rounded bg-primary text-white font-semibold">
           {i.badge.tournamentTag}
         </span>
-      )}
-    </div>
-    <div class="flex items-center gap-2.5">
-      <span class="text-5xl font-extralight leading-none text-primary">
-        {parts.month}/{parts.day}
-      </span>
-      <div>
         {next.announcementSlug ? (
-          <p class="text-base font-semibold">
-            <a
-              href={getLocalePath(locale, `/announcements/${next.announcementSlug}`)}
-              data-astro-prefetch
-              class="text-primary [@media(hover:hover)]:hover:text-primary-hover transition-colors duration-150"
-            >
-              {title}
-            </a>
-          </p>
+          <a
+            href={getLocalePath(locale, `/announcements/${next.announcementSlug}`)}
+            data-astro-prefetch
+            class="text-primary [@media(hover:hover)]:hover:text-primary-hover transition-colors duration-150"
+          >
+            {getEventName(next, locale)}
+          </a>
         ) : (
-          <p class="text-base font-semibold">{title}</p>
+          <span>{getEventName(next, locale)}</span>
         )}
-        <p class="text-sm text-muted mt-0.5 flex flex-wrap gap-x-3">
-          <span>{next.startTime}–{next.endTime}</span>
-          <span>{venueName[locale]}</span>
-          <span>{next.room}{i.schedule.roomSuffix}</span>
-        </p>
-      </div>
-    </div>
+      </p>
+    )}
+    <p class="text-sm text-muted mt-2">
+      {next.startTime}–{next.endTime}{i.nextEvent.metaSeparator}{venueName[locale]} {next.room}{i.schedule.roomSuffix}
+    </p>
   </section>
 )}
