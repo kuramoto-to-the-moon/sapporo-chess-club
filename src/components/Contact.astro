@@ -18,7 +18,7 @@ const site = siteData[0].data;
   <SectionHeader label={i.contact.label} />
   <p class="text-sm leading-[1.8] text-sub flex flex-col gap-1">
     {site.email && (
-      <a href={`mailto:${site.email}`} class="hover:text-primary transition-colors duration-150 w-fit">
+      <a href={`mailto:${site.email}`} class="[@media(hover:hover)]:hover:text-primary transition-colors duration-150 w-fit">
         {site.email}
       </a>
     )}

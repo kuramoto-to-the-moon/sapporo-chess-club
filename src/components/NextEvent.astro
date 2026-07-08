@@ -48,7 +48,7 @@ const title = next
             <a
               href={getLocalePath(locale, `/announcements/${next.announcementSlug}`)}
               data-astro-prefetch
-              class="text-primary hover:text-primary-hover transition-colors duration-150"
+              class="text-primary [@media(hover:hover)]:hover:text-primary-hover transition-colors duration-150"
             >
               {title}
             </a>

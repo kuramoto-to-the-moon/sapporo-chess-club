@@ -25,7 +25,7 @@ const href = getLocalePath(locale, `/announcements/${entry.id}`);
 <li>
   <a
     href={href}
-    class="flex flex-col gap-1.5 py-4 border-b border-hairline last:border-0 hover:bg-surface -mx-2 px-2 rounded transition-colors duration-150"
+    class="flex flex-col gap-1.5 py-4 border-b border-hairline last:border-0 [@media(hover:hover)]:hover:bg-surface -mx-2 px-2 rounded transition-colors duration-150"
   >
     <div class="flex items-baseline gap-3">
       <span class={`text-xs text-muted tabular-nums ${fullDate ? "min-w-[78px]" : "min-w-[60px]"} shrink-0`}>{dateLabel}</span>

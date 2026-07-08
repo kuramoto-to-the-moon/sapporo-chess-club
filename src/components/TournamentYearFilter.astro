@@ -28,7 +28,7 @@ const pillClass =
   "aria-[pressed=false]:bg-hairline aria-[pressed=false]:text-sub aria-[pressed=false]:hover:bg-edge";
 
 const optionClass =
-  "w-full text-left px-3 py-2.5 text-sm text-ink cursor-pointer flex items-center justify-between hover:bg-hairline aria-[selected=true]:font-semibold";
+  "w-full text-left px-3 py-2.5 text-sm text-ink cursor-pointer flex items-center justify-between [@media(hover:hover)]:hover:bg-hairline aria-[selected=true]:font-semibold";
 
 const checkClass =
   "w-4 h-4 text-primary hidden aria-[selected=true]:inline";
@@ -48,7 +48,7 @@ const checkClass =
       data-filter-trigger
       aria-haspopup="listbox"
       aria-expanded="false"
-      class="w-full min-h-[44px] rounded-md border border-edge bg-white px-3 flex items-center justify-between text-sm text-ink cursor-pointer hover:bg-surface transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/30"
+      class="w-full min-h-[44px] rounded-md border border-edge bg-white px-3 flex items-center justify-between text-sm text-ink cursor-pointer [@media(hover:hover)]:hover:bg-surface transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/30"
     >
       <span data-filter-trigger-label>{allOption.label}</span>
       <svg

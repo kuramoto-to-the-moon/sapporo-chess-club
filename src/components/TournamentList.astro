@@ -47,7 +47,7 @@ const i = t(locale);
         {fileLinks.length > 0 && (
           <div class="mt-3.5">
             {fileLinks.map((link, linkIdx) => {
-              const rowClass = `flex items-center gap-1.5 py-3 px-2 -mx-2 rounded hover:bg-surface transition-colors duration-150 ${linkIdx < fileLinks.length - 1 ? "border-b border-hairline" : ""}`;
+              const rowClass = `flex items-center gap-1.5 py-3 px-2 -mx-2 rounded [@media(hover:hover)]:hover:bg-surface transition-colors duration-150 ${linkIdx < fileLinks.length - 1 ? "border-b border-hairline" : ""}`;
               if (link.isPgn) {
                 return (
                   <a

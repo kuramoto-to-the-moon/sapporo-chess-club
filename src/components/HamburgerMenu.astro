@@ -48,7 +48,7 @@ const anchors = [
     <div class="w-full max-w-4xl mx-auto flex items-center justify-between px-5 pt-3 pb-2">
       <a
         href={homeHref}
-        class="text-xs tracking-[3px] text-dim hover:text-surface transition-colors duration-150"
+        class="text-xs tracking-[3px] text-dim [@media(hover:hover)]:hover:text-surface transition-colors duration-150"
         aria-label="Sapporo Chess Club — Home"
       >
         SAPPORO CHESS CLUB
@@ -108,7 +108,7 @@ const anchors = [
       <div class="max-w-4xl mx-auto px-5 py-4">
         <a
           href={otherPath}
-          class="flex items-center gap-2.5 text-sm text-faint hover:text-surface transition-colors duration-150"
+          class="flex items-center gap-2.5 text-sm text-faint [@media(hover:hover)]:hover:text-surface transition-colors duration-150"
           aria-label={i.nav.switchLanguage}
           hreflang={otherLocale}
         >

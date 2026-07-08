@@ -59,7 +59,7 @@ const breadcrumbJsonLd = buildBreadcrumbJsonLd([
   <script type="application/ld+json" set:html={breadcrumbJsonLd} />
   <script type="application/ld+json" set:html={articleJsonLd} />
   <article class="px-5 pt-16 md:pt-20 pb-10">
-    <a href={listHref} data-astro-prefetch class="text-sm text-muted hover:text-primary transition-colors duration-150 animate-fade-in-up">
+    <a href={listHref} data-astro-prefetch class="text-sm text-muted [@media(hover:hover)]:hover:text-primary transition-colors duration-150 animate-fade-in-up">
       {i.announcements.back}
     </a>
 
@@ -85,13 +85,13 @@ const breadcrumbJsonLd = buildBreadcrumbJsonLd([
     {(prev || next) && (
       <nav class="flex justify-between mt-12 pt-6 border-t border-hairline text-sm" aria-label="Announcement pagination">
         {prev ? (
-          <a href={getLocalePath(locale, `/announcements/${prev.id}`)} data-astro-prefetch class="text-primary hover:text-primary-hover transition-colors duration-150 flex flex-col">
+          <a href={getLocalePath(locale, `/announcements/${prev.id}`)} data-astro-prefetch class="text-primary [@media(hover:hover)]:hover:text-primary-hover transition-colors duration-150 flex flex-col">
             <span class="text-xs text-muted">{i.announcements.prev}</span>
             <span class="font-medium">← {pickTitle(prev, locale)}</span>
           </a>
         ) : <span></span>}
         {next ? (
-          <a href={getLocalePath(locale, `/announcements/${next.id}`)} data-astro-prefetch class="text-primary hover:text-primary-hover transition-colors duration-150 flex flex-col items-end text-right">
+          <a href={getLocalePath(locale, `/announcements/${next.id}`)} data-astro-prefetch class="text-primary [@media(hover:hover)]:hover:text-primary-hover transition-colors duration-150 flex flex-col items-end text-right">
             <span class="text-xs text-muted">{i.announcements.next}</span>
             <span class="font-medium">{pickTitle(next, locale)} →</span>
           </a>
