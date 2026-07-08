@@ -10,29 +10,35 @@ interface Props {
 const { date, locale } = Astro.props;
 const i = t(locale);
 const isTournament = date.type === "tournament";
+const meta = `${date.startTime}–${date.endTime}${i.schedule.metaSeparator}${date.room}${i.schedule.roomSuffix}`;
 ---
 
-<p class="text-sm font-semibold flex items-center gap-2 flex-wrap">
-  {isTournament && (
-    <span class="text-xs px-1.5 py-0.5 rounded bg-primary text-white font-semibold">
-      {i.badge.tournamentTag}
-    </span>
-  )}
-  {date.announcementSlug ? (
-    <a
-      href={getLocalePath(locale, `/announcements/${date.announcementSlug}`)}
-      data-astro-prefetch
-      class="text-primary [@media(hover:hover)]:hover:text-primary-hover transition-colors duration-150"
-    >
-      {getEventName(date, locale)}
-    </a>
-  ) : (
-    <span>{getEventName(date, locale)}</span>
-  )}
-</p>
-<p class="text-xs text-muted mt-1">
-  {date.startTime}–{date.endTime} / {date.room}{i.schedule.roomSuffix}
-</p>
+{isTournament ? (
+  <>
+    <p class="text-sm font-semibold flex items-center gap-2 flex-wrap">
+      <span class="text-xs px-1.5 py-0.5 rounded bg-primary text-white font-semibold">
+        {i.badge.tournamentTag}
+      </span>
+      {date.announcementSlug ? (
+        <a
+          href={getLocalePath(locale, `/announcements/${date.announcementSlug}`)}
+          data-astro-prefetch
+          class="text-primary [@media(hover:hover)]:hover:text-primary-hover transition-colors duration-150"
+        >
+          {getEventName(date, locale)}
+        </a>
+      ) : (
+        <span>{getEventName(date, locale)}</span>
+      )}
+    </p>
+    <p class="text-xs text-muted mt-1">{meta}</p>
+  </>
+) : (
+  <p class="text-sm">
+    <span class="font-semibold">{getEventName(date, locale)}</span>
+    <span class="text-muted ml-2">{meta}</span>
+  </p>
+)}
 {date.note && (
   <p class="text-xs text-muted mt-1">{date.note[locale]}</p>
 )}

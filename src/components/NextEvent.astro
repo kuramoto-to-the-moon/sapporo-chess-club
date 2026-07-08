@@ -47,7 +47,7 @@ const isTournament = next?.type === "tournament";
       </p>
     )}
     <p class="text-sm text-muted mt-2">
-      {next.startTime}–{next.endTime}{i.nextEvent.metaSeparator}{venueName[locale]} {next.room}{i.schedule.roomSuffix}
+      {next.startTime}–{next.endTime}{i.schedule.metaSeparator}{venueName[locale]} {next.room}{i.schedule.roomSuffix}
     </p>
   </section>
 )}

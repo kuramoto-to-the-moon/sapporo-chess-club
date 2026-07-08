@@ -52,8 +52,6 @@ export default {
   nextEvent: {
     meeting: "次回の例会",
     event: "次回のイベント",
-    // 時刻と会場の区切り。前後の空白込み
-    metaSeparator: " ・ ",
   },
   about: {
     label: "クラブについて",
@@ -80,6 +78,8 @@ export default {
     roomSuffix: "室",
     yearSuffix: "年",
     monthSuffix: "月",
+    // 時刻と会場/部屋の区切り。前後の空白込み
+    metaSeparator: " ・ ",
   },
   clubInfo: {
     fee: "参加案内",

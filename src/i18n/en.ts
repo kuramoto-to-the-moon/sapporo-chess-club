@@ -66,8 +66,6 @@ export default {
   nextEvent: {
     meeting: "Next Meeting",
     event: "Next Event",
-    // 時刻と会場の区切り。前後の空白込み
-    metaSeparator: " · ",
   },
   about: {
     label: "About the Club",
@@ -94,6 +92,8 @@ export default {
     roomSuffix: "",
     yearSuffix: "",
     monthSuffix: "",
+    // 時刻と会場/部屋の区切り。前後の空白込み
+    metaSeparator: " · ",
   },
   clubInfo: {
     fee: "Entry Fee",
