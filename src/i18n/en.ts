@@ -2,13 +2,13 @@ export default {
   site: {
     name: "Sapporo Chess Club",
     description:
-      "Sapporo Chess Club is a community for chess enthusiasts in Hokkaido. We hold meetups twice a month, three official tournaments a year, and chess classes for beginners (beginner course). Observation is free, beginners welcome.",
+      "Sapporo Chess Club is a community for chess enthusiasts in Hokkaido. We hold meetups twice a month and three official tournaments a year. Observation is free, beginners welcome.",
   },
   seo: {
     home: {
-      titleSuffix: "Chess Classes, Meetups & Tournaments in Hokkaido",
+      titleSuffix: "Chess Meetups & Tournaments in Hokkaido",
       description:
-        "Official site of Sapporo Chess Club. A community of chess players in Hokkaido, Japan — twice-monthly meetups, three annual tournaments (Hokkaido Chess Championship and more), and chess classes / lessons for beginners. Free observation, all welcome.",
+        "Official site of Sapporo Chess Club. A community of chess players in Hokkaido, Japan — twice-monthly meetups and three annual tournaments (Hokkaido Chess Championship and more). Free observation, visitors welcome.",
     },
     schedule: {
       description:
@@ -50,6 +50,13 @@ export default {
     meeting: "Next Meeting",
     event: "Next Event",
   },
+  about: {
+    label: "About the Club",
+    body1:
+      "Sapporo Chess Club is a chess circle active in Sapporo, Hokkaido since the 1990s. We hold meetups twice a month and three official tournaments a year (Hokkaido Chess Championship and more), and players of all ages can join — from elementary school students to working adults and seniors.",
+    body2:
+      "Meetups are held at Kaderu 2.7 in central Sapporo. Observation and your first visit are free. Beginners can get pointers from club members, and a club member also teaches an introductory chess class (\"Tanoshii Chess\") at Doshin Culture Center. Whether you are new to chess or looking for opponents in Hokkaido, feel free to drop by.",
+  },
   activities: {
     label: "Activities",
     meetup: "Meetups",
@@ -57,7 +64,7 @@ export default {
     tournament: "Tournaments",
     tournamentDesc: "3 per year",
     lesson: "Lessons",
-    lessonDesc: "For beginners",
+    lessonDesc: "By a member, off-site",
   },
   schedule: {
     label: "Schedule",
