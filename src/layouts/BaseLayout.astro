@@ -193,10 +193,7 @@ const enUrl = new URL(`/en${withTrailingSlash(pagePath)}`, Astro.site).toString(
         if (!pill) return;
         const forceShow = new URLSearchParams(location.search).has("force-lang-pill");
         const dismissed = !forceShow && localStorage.getItem("lang-pill-dismissed");
-        // 最優先言語 (navigator.language) だけでなく設定済み言語すべてを見る:
-        // UI が英語でも日本語を第2言語に持つユーザーは日本語が読めるので出さない
-        const readsJa = (navigator.languages || [navigator.language || ""]).some((l) => l.startsWith("ja"));
-        const isJaBrowser = !forceShow && readsJa;
+        const isJaBrowser = !forceShow && (navigator.language || "").startsWith("ja");
         if (dismissed || isJaBrowser) return;
 
         pill.hidden = false;
