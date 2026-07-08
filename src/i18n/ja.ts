@@ -1,6 +1,8 @@
 export default {
   site: {
     name: "札幌チェスクラブ",
+    // JSON-LD の alternateName: 検索エンジンに他言語名を知らせる（表示言語の逆側の名前）
+    alternateName: "Sapporo Chess Club",
     description:
       "札幌チェスクラブは、北海道のチェス愛好家が集まるコミュニティです。月2回の例会と年3回の公式大会を開催。見学無料、初心者歓迎。",
   },
@@ -31,12 +33,12 @@ export default {
   nav: {
     home: "ホーム",
     tournaments: "大会記録",
-    announcements: "お知らせ",
     skipToMain: "メインコンテンツへスキップ",
     openInNewTab: "（新しいタブで開く）",
     switchLanguage: "Switch to English",
     close: "Close",
     languageShort: "EN",
+    languageFull: "English",
   },
   sections: {
     home: "HOME",
@@ -76,6 +78,7 @@ export default {
     dayOfWeekSuffix: "曜日",
     roomSuffix: "室",
     yearSuffix: "年",
+    monthSuffix: "月",
   },
   clubInfo: {
     fee: "参加案内",
@@ -127,6 +130,8 @@ export default {
     gamesPgn: "棋譜 PGN",
     gamesPgnAnnotated: "棋譜 PGN (解析付)",
     downloadAria: (label: string) => `${label}をダウンロード`,
+    // 年フィルタ変更時に aria-live へ書き込むテンプレート。{label} {count} はクライアント側で置換
+    filterAnnounce: "{label}: {count}件表示中",
   },
   badge: {
     tournamentTag: "大会",
@@ -134,7 +139,6 @@ export default {
   },
   menu: {
     sectionLabel: "セクション",
-    schedule: "スケジュール",
     activities: "活動内容",
     info: "参加案内・会場",
     lessons: "チェス講座",

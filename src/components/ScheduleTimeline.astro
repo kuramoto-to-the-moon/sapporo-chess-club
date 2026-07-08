@@ -1,5 +1,5 @@
 ---
-import { type Locale } from "@/i18n";
+import { t, type Locale } from "@/i18n";
 import { getDateParts, getDayOfWeek } from "@/lib/date";
 import { type ScheduleDate } from "@/lib/schedule";
 import ScheduleEventBody from "@/components/ScheduleEventBody.astro";
@@ -10,6 +10,7 @@ interface Props {
 }
 
 const { dates, locale } = Astro.props;
+const i = t(locale);
 
 function getMonthKey(dateStr: string): string {
   const { year, month } = getDateParts(dateStr);
@@ -27,7 +28,7 @@ const groupedByMonth = Array.from(monthMap.entries()).map(([key, dates]) => ({ k
 function formatMonthHeading(monthKey: string): string {
   const [year, month] = monthKey.split("-");
   if (locale === "ja") {
-    return `${year}年 ${parseInt(month)}月`;
+    return `${year}${i.schedule.yearSuffix} ${parseInt(month)}${i.schedule.monthSuffix}`;
   }
   const d = new Date(`${monthKey}-01T00:00:00+09:00`);
   return new Intl.DateTimeFormat("en-US", {

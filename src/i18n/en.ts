@@ -1,6 +1,23 @@
+import type ja from "./ja";
+
+/**
+ * ja.ts と同じキー構造であることをコンパイル時に強制する型。
+ * ja は as const でリテラル型になっているため、値まで一致させず
+ * 文字列は string へ広げて「構造だけ」を比較する。
+ */
+type Shape<T> = {
+  [K in keyof T]: T[K] extends string
+    ? string
+    : T[K] extends (...args: never[]) => unknown
+      ? T[K]
+      : Shape<T[K]>;
+};
+
 export default {
   site: {
     name: "Sapporo Chess Club",
+    // JSON-LD の alternateName: 検索エンジンに他言語名を知らせる（表示言語の逆側の名前）
+    alternateName: "札幌チェスクラブ",
     description:
       "Sapporo Chess Club is a community for chess enthusiasts in Hokkaido. We hold meetups twice a month and three official tournaments a year. Observation is free, beginners welcome.",
   },
@@ -30,12 +47,12 @@ export default {
   nav: {
     home: "Home",
     tournaments: "Tournaments",
-    announcements: "News",
     skipToMain: "Skip to main content",
     openInNewTab: "(opens in new tab)",
     switchLanguage: "日本語に切り替え",
     close: "閉じる",
     languageShort: "JA",
+    languageFull: "日本語",
   },
   sections: {
     home: "HOME",
@@ -75,6 +92,7 @@ export default {
     dayOfWeekSuffix: "",
     roomSuffix: "",
     yearSuffix: "",
+    monthSuffix: "",
   },
   clubInfo: {
     fee: "Entry Fee",
@@ -126,6 +144,8 @@ export default {
     gamesPgn: "Game Records PGN",
     gamesPgnAnnotated: "Game Records PGN (Annotated)",
     downloadAria: (label: string) => `${label} download`,
+    // 年フィルタ変更時に aria-live へ書き込むテンプレート。{label} {count} はクライアント側で置換
+    filterAnnounce: "Showing {count} tournaments — {label}",
   },
   badge: {
     tournamentTag: "Tournament",
@@ -133,11 +153,10 @@ export default {
   },
   menu: {
     sectionLabel: "Sections",
-    schedule: "Schedule",
     activities: "Activities",
     info: "Entry Fee & Venue",
     lessons: "Chess Lessons",
     links: "Links",
     contact: "Contact",
   },
-} as const;
+} as const satisfies Shape<typeof ja>;

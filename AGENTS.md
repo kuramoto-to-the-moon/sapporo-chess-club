@@ -35,7 +35,7 @@
 ## デザイン / スタイル
 
 - **Tailwind v4**: 設定は CSS 内 (`@theme` / `@custom-variant`)、`tailwind.config.*` は無い
-- **カラー**: ブランド青 `#2563eb` / グレー階調 `#171717` `#525252` `#737373` `#d4d4d4` `#e5e5e5` `#f5f5f5` `#fafafa`
+- **カラー**: `globals.css` の `@theme` で定義したセマンティックトークンを使う — `primary`(青) `primary-hover` `ink`(見出し) `sub`(本文) `muted`(弱) `hairline`(区切り) `edge`(枠線) `surface`(hover背景) `faint` `dim` `menu-line`。生 hex の arbitrary 値 (`text-[#...]`) は使わない
 - **外部サービスリンクの hover は例外的にブランドカラー可**: X → 黒、日本チェス連盟 → 赤 `#c8102e`、RSS → 橙 `#f26522`（これらは統一対象外）
 - **角丸**: `rounded-md` 統一
 - **ホバー**: `[@media(hover:hover)]:hover:` で gate (モバイルのタップ残留を防ぐ)
@@ -55,4 +55,5 @@
 
 ```bash
 pnpm build   # 必ず通す
+pnpm check   # astro check (型チェック)。エラー 0 を維持する
 ```

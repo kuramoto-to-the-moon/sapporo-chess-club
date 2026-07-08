@@ -53,10 +53,12 @@ const topNavPages = getTopNavPages(locale);
   import { observeScroll } from "@/lib/scroll-observer";
 
   // Astro <script> は type="module" でバンドルされるため DOM 解析後に実行される。
-  const header = document.getElementById("site-header");
-  if (!header) {
-    // nothing to do
-  } else {
+  const headerEl = document.getElementById("site-header");
+  if (headerEl) {
+    initHeadroom(headerEl);
+  }
+
+  function initHeadroom(header: HTMLElement) {
     // Headroom ロジック設定
     const TOP_THRESHOLD = 100;
     // scrollY が STABLE_FRAMES 連続で変化しなかったら「移動完了」

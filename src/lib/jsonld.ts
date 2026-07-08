@@ -1,5 +1,6 @@
 import type { CollectionEntry } from "astro:content";
 import { t, type Locale } from "@/i18n";
+import { parseDate } from "@/lib/date";
 import { getEventName, type ScheduleDate } from "@/lib/schedule";
 
 type SiteData = CollectionEntry<"site">["data"];
@@ -15,7 +16,7 @@ export function buildWebsiteJsonLd(locale: Locale): string {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: i.site.name,
-    alternateName: locale === "ja" ? "Sapporo Chess Club" : "札幌チェスクラブ",
+    alternateName: i.site.alternateName,
     url: "https://sapporochessclub.com",
     inLanguage: locale === "ja" ? "ja-JP" : "en-US",
   });
@@ -30,7 +31,7 @@ export function buildClubJsonLd(locale: Locale, site: SiteData, astroSite: URL |
     "@context": "https://schema.org",
     "@type": "SportsClub",
     name: i.site.name,
-    alternateName: locale === "ja" ? "Sapporo Chess Club" : "札幌チェスクラブ",
+    alternateName: i.site.alternateName,
     description: i.site.description,
     url: "https://sapporochessclub.com",
     logo: clubLogoUrl,
@@ -137,7 +138,7 @@ export function buildEventsJsonLd(
       url: new URL(locale === "en" ? "/en/schedule" : "/schedule", astroSite).toString(),
       // Google Rich Results は validFrom を要求する。
       // 見学・当日参加 OK のため、開催日の 1 年前から有効とみなす（告知開始の近似）。
-      validFrom: new Date(new Date(t.startDate).getTime() - 365 * 24 * 60 * 60 * 1000)
+      validFrom: new Date(parseDate(t.startDate).getTime() - 365 * 24 * 60 * 60 * 1000)
         .toISOString()
         .slice(0, 10),
     },

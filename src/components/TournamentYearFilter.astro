@@ -11,10 +11,7 @@ const i = t(locale);
 
 // aria-live 領域に書き込むテンプレート。フィルタ変更時にスクリーンリーダーへ
 // 「選択中の年 + 表示件数」を告知する。{label} と {count} をスクリプトで置換。
-const announceFormat =
-  locale === "ja"
-    ? "{label}: {count}件表示中"
-    : "Showing {count} tournaments — {label}";
+const announceFormat = i.tournament.filterAnnounce;
 
 // "all" を先頭に置いた年選択肢のリスト。モバイル select とデスクトップ pill で共有。
 type YearOption = { value: string; label: string };
