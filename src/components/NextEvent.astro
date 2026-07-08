@@ -26,20 +26,20 @@ const title = next
 ---
 
 {next && parts && (
-  <section class="px-5 py-6 border-t border-[#f5f5f5] animate-fade-in-up">
+  <section class="px-5 py-6 border-t border-hairline animate-fade-in-up">
     <div class="flex items-center gap-1.5 mb-1.5">
-      <span class="inline-block w-1 h-3 bg-[#2563eb]"></span>
-      <span class="text-sm font-semibold uppercase tracking-wider text-[#737373]">
+      <span class="inline-block w-1 h-3 bg-primary"></span>
+      <span class="text-sm font-semibold uppercase tracking-wider text-muted">
         {isTournament ? i.nextEvent.event : i.nextEvent.meeting}
       </span>
       {isTournament && (
-        <span class="bg-[#2563eb] text-white text-xs px-1.5 py-0.5 rounded font-semibold">
+        <span class="bg-primary text-white text-xs px-1.5 py-0.5 rounded font-semibold">
           {i.badge.tournamentTag}
         </span>
       )}
     </div>
     <div class="flex items-center gap-2.5">
-      <span class="text-5xl font-extralight leading-none text-[#2563eb]">
+      <span class="text-5xl font-extralight leading-none text-primary">
         {parts.month}/{parts.day}
       </span>
       <div>
@@ -48,7 +48,7 @@ const title = next
             <a
               href={getLocalePath(locale, `/announcements/${next.announcementSlug}`)}
               data-astro-prefetch
-              class="text-[#2563eb] hover:text-[#1d4ed8] transition-colors duration-150"
+              class="text-primary hover:text-primary-hover transition-colors duration-150"
             >
               {title}
             </a>
@@ -56,7 +56,7 @@ const title = next
         ) : (
           <p class="text-base font-semibold">{title}</p>
         )}
-        <p class="text-sm text-[#737373] mt-0.5 flex flex-wrap gap-x-3">
+        <p class="text-sm text-muted mt-0.5 flex flex-wrap gap-x-3">
           <span>{next.startTime}–{next.endTime}</span>
           <span>{venueName[locale]}</span>
           <span>{next.room}{i.schedule.roomSuffix}</span>

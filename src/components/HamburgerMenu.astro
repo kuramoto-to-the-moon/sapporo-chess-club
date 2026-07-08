@@ -37,17 +37,17 @@ const anchors = [
   class="relative inline-flex items-center justify-center w-10 h-10 -mr-2 cursor-pointer active:opacity-60 transition-opacity before:content-[''] before:absolute before:-inset-2"
 >
   <span class="flex flex-col items-center justify-center gap-[6px]" aria-hidden="true">
-    <span class="w-6 h-[2px] bg-[#171717]"></span>
-    <span class="w-6 h-[2px] bg-[#171717]"></span>
+    <span class="w-6 h-[2px] bg-ink"></span>
+    <span class="w-6 h-[2px] bg-ink"></span>
   </span>
 </button>
 
 <dialog id="hamburger-dialog" class="hamburger-dialog" aria-label="Navigation menu">
-  <div class="flex flex-col w-full h-full bg-[#171717] text-[#fafafa]">
+  <div class="flex flex-col w-full h-full bg-ink text-surface">
     <div class="w-full max-w-4xl mx-auto flex items-center justify-between px-5 pt-3 pb-2">
       <a
         href={homeHref}
-        class="text-xs tracking-[3px] text-[#a3a3a3] hover:text-[#fafafa] transition-colors duration-150"
+        class="text-xs tracking-[3px] text-dim hover:text-surface transition-colors duration-150"
         aria-label="Sapporo Chess Club — Home"
       >
         SAPPORO CHESS CLUB
@@ -56,7 +56,7 @@ const anchors = [
         type="button"
         data-hamburger-close
         aria-label="Close navigation menu"
-        class="relative inline-flex items-center justify-center w-10 h-10 -mr-2 text-[#fafafa] cursor-pointer rounded focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#fafafa] before:content-[''] before:absolute before:-inset-2"
+        class="relative inline-flex items-center justify-center w-10 h-10 -mr-2 text-surface cursor-pointer rounded focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-surface before:content-[''] before:absolute before:-inset-2"
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M18 6 6 18" />
@@ -76,24 +76,24 @@ const anchors = [
         >
           <span class="text-3xl font-light [@media(hover:hover)]:group-hover:text-white transition-colors duration-150 inline-flex items-center gap-3">
             {page.label}
-            <span class="text-xl text-[#d4d4d4] [@media(hover:hover)]:group-hover:text-white [@media(hover:hover)]:group-hover:translate-x-2 transition-all duration-150" aria-hidden="true">→</span>
+            <span class="text-xl text-faint [@media(hover:hover)]:group-hover:text-white [@media(hover:hover)]:group-hover:translate-x-2 transition-all duration-150" aria-hidden="true">→</span>
           </span>
-          <span class="block text-[11px] tracking-[1px] text-[#d4d4d4] mt-0.5">
+          <span class="block text-[11px] tracking-[1px] text-faint mt-0.5">
             {page.section}
           </span>
         </a>
       ))}
 
-      <hr class="border-0 border-t border-[#2a2a2a] my-4" />
+      <hr class="border-0 border-t border-menu-line my-4" />
 
-      <p class="text-xs uppercase tracking-wider text-[#a3a3a3] mb-2">
+      <p class="text-xs uppercase tracking-wider text-dim mb-2">
         {i.menu.sectionLabel}
       </p>
       <div class="flex flex-col gap-2">
         {anchors.map((anchor, idx) => (
           <a
             href={anchor.href}
-            class="group flex items-center gap-2 text-sm text-[#d4d4d4] [@media(hover:hover)]:hover:text-[#fafafa] transition-colors duration-150 animate-fade-in-up"
+            class="group flex items-center gap-2 text-sm text-faint [@media(hover:hover)]:hover:text-surface transition-colors duration-150 animate-fade-in-up"
             style={`animation-delay: ${(pages.length + idx) * 0.05}s`}
           >
             {anchor.label}
@@ -103,11 +103,11 @@ const anchors = [
       </div>
     </nav>
 
-    <div class="border-t border-[#2a2a2a] [@media(display-mode:standalone)]:pb-[env(safe-area-inset-bottom)]">
+    <div class="border-t border-menu-line [@media(display-mode:standalone)]:pb-[env(safe-area-inset-bottom)]">
       <div class="max-w-4xl mx-auto px-5 py-4">
         <a
           href={otherPath}
-          class="flex items-center gap-2.5 text-sm text-[#d4d4d4] hover:text-[#fafafa] transition-colors duration-150"
+          class="flex items-center gap-2.5 text-sm text-faint hover:text-surface transition-colors duration-150"
           aria-label={i.nav.switchLanguage}
           hreflang={otherLocale}
         >
@@ -117,7 +117,7 @@ const anchors = [
             <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
           </svg>
           {locale === "ja" ? "English" : "日本語"}
-          <span class="text-[#737373]" aria-hidden="true">→</span>
+          <span class="text-muted" aria-hidden="true">→</span>
         </a>
       </div>
     </div>

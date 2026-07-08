@@ -17,13 +17,13 @@ const topNavPages = getTopNavPages(locale);
 
 <header
   id="site-header"
-  class="sticky top-0 z-30 border-b border-[#f5f5f5] bg-white/95 backdrop-blur-sm transition-transform duration-500 ease-in-out data-[state=hidden]:-translate-y-full"
+  class="sticky top-0 z-30 border-b border-hairline bg-white/95 backdrop-blur-sm transition-transform duration-500 ease-in-out data-[state=hidden]:-translate-y-full"
   aria-label="Site header"
 >
   <div class="max-w-4xl mx-auto flex items-center justify-between px-5 pt-3 pb-2">
     <a
       href={homeHref}
-      class="text-xs tracking-[3px] text-[#737373] hover:text-[#2563eb] transition-colors duration-150"
+      class="text-xs tracking-[3px] text-muted hover:text-primary transition-colors duration-150"
       aria-label="Sapporo Chess Club — Home"
     >
       SAPPORO CHESS CLUB
@@ -34,13 +34,13 @@ const topNavPages = getTopNavPages(locale);
           href={page.href}
 
           data-astro-prefetch
-          class="text-sm text-[#525252] hover:text-[#2563eb] transition-colors duration-150 px-3 py-2 -my-2 rounded"
+          class="text-sm text-sub hover:text-primary transition-colors duration-150 px-3 py-2 -my-2 rounded"
           aria-current={currentPath === page.path ? "page" : undefined}
         >
           {page.label}
         </a>
       ))}
-      <span class="w-px h-4 bg-[#e5e5e5] mx-2" aria-hidden="true"></span>
+      <span class="w-px h-4 bg-edge mx-2" aria-hidden="true"></span>
       <LanguageToggle locale={locale} path={currentPath} />
     </nav>
     <div class="md:hidden w-10 h-10">

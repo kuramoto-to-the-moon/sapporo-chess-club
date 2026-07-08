@@ -82,17 +82,17 @@ const breadcrumbJsonLd = buildBreadcrumbJsonLd([
   <script type="application/ld+json" set:html={breadcrumbJsonLd} />
   <script type="application/ld+json" set:html={articleJsonLd} />
   <article class="px-5 pt-16 md:pt-20 pb-10">
-    <a href={listHref} data-astro-prefetch class="text-sm text-[#737373] hover:text-[#2563eb] transition-colors duration-150 animate-fade-in-up">
+    <a href={listHref} data-astro-prefetch class="text-sm text-muted hover:text-primary transition-colors duration-150 animate-fade-in-up">
       {i.announcements.back}
     </a>
 
     {isJaFallback && (
-      <p class="mt-4 text-xs text-[#2563eb] italic animate-fade-in-up stagger-1">
+      <p class="mt-4 text-xs text-primary italic animate-fade-in-up stagger-1">
         {i.announcements.englishNotAvailableDetail}
       </p>
     )}
 
-    <p class="text-sm text-[#737373] mt-6 tabular-nums animate-fade-in-up stagger-1">{formatAnnouncementDate(entry.data.date)}</p>
+    <p class="text-sm text-muted mt-6 tabular-nums animate-fade-in-up stagger-1">{formatAnnouncementDate(entry.data.date)}</p>
     <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mt-2 leading-tight animate-fade-in-up stagger-2">
       {title}
     </h1>
@@ -106,16 +106,16 @@ const breadcrumbJsonLd = buildBreadcrumbJsonLd([
     </div>
 
     {(prev || next) && (
-      <nav class="flex justify-between mt-12 pt-6 border-t border-[#f5f5f5] text-sm" aria-label="Announcement pagination">
+      <nav class="flex justify-between mt-12 pt-6 border-t border-hairline text-sm" aria-label="Announcement pagination">
         {prev ? (
-          <a href={getLocalePath(locale, `/announcements/${prev.id}`)} data-astro-prefetch class="text-[#2563eb] hover:text-[#1d4ed8] transition-colors duration-150 flex flex-col">
-            <span class="text-xs text-[#737373]">{i.announcements.prev}</span>
+          <a href={getLocalePath(locale, `/announcements/${prev.id}`)} data-astro-prefetch class="text-primary hover:text-primary-hover transition-colors duration-150 flex flex-col">
+            <span class="text-xs text-muted">{i.announcements.prev}</span>
             <span class="font-medium">← {pickTitle(prev, locale)}</span>
           </a>
         ) : <span></span>}
         {next ? (
-          <a href={getLocalePath(locale, `/announcements/${next.id}`)} data-astro-prefetch class="text-[#2563eb] hover:text-[#1d4ed8] transition-colors duration-150 flex flex-col items-end text-right">
-            <span class="text-xs text-[#737373]">{i.announcements.next}</span>
+          <a href={getLocalePath(locale, `/announcements/${next.id}`)} data-astro-prefetch class="text-primary hover:text-primary-hover transition-colors duration-150 flex flex-col items-end text-right">
+            <span class="text-xs text-muted">{i.announcements.next}</span>
             <span class="font-medium">{pickTitle(next, locale)} →</span>
           </a>
         ) : <span></span>}

@@ -39,15 +39,15 @@ const i = t(locale);
     return (
       <div
         data-card-year={String(tournament.year)}
-        class="border border-[#f5f5f5] rounded-md p-4 animate-fade-in"
+        class="border border-hairline rounded-md p-4 animate-fade-in"
       >
         <p class="text-base font-semibold">{tournament.title}</p>
-        <p class="text-sm text-[#737373] mt-1">{tournament.date}</p>
+        <p class="text-sm text-muted mt-1">{tournament.date}</p>
 
         {fileLinks.length > 0 && (
           <div class="mt-3.5">
             {fileLinks.map((link, linkIdx) => {
-              const rowClass = `flex items-center gap-1.5 py-3 px-2 -mx-2 rounded hover:bg-[#fafafa] transition-colors duration-150 ${linkIdx < fileLinks.length - 1 ? "border-b border-[#f5f5f5]" : ""}`;
+              const rowClass = `flex items-center gap-1.5 py-3 px-2 -mx-2 rounded hover:bg-surface transition-colors duration-150 ${linkIdx < fileLinks.length - 1 ? "border-b border-hairline" : ""}`;
               if (link.isPgn) {
                 return (
                   <a
@@ -57,7 +57,7 @@ const i = t(locale);
                     class={rowClass}
                   >
                     <span class="text-sm">{link.label}</span>
-                    <span class="text-[#737373]" aria-hidden="true">
+                    <span class="text-muted" aria-hidden="true">
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
                         <polyline points="7 10 12 15 17 10" />
@@ -75,7 +75,7 @@ const i = t(locale);
                   class={rowClass}
                 >
                   <span class="text-sm">{link.label}</span>
-                  <span class="text-[#737373]"><ExternalLinkIcon /></span>
+                  <span class="text-muted"><ExternalLinkIcon /></span>
                 </a>
               );
             })}

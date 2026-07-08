@@ -5,12 +5,12 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 {/* locale="ja" は SSR のデフォルト。JS が URL やブラウザ言語を見て英語に切り替える */}
 <BaseLayout title="404" locale="ja">
   <div class="px-5 py-20 text-center">
-    <p class="text-6xl font-extralight text-[#2563eb]">404</p>
-    <p id="not-found-msg" class="text-base text-[#525252] mt-4">ページが見つかりませんでした</p>
+    <p class="text-6xl font-extralight text-primary">404</p>
+    <p id="not-found-msg" class="text-base text-sub mt-4">ページが見つかりませんでした</p>
     <a
       id="not-found-link"
       href="/"
-      class="inline-block mt-8 text-sm text-[#2563eb] hover:text-[#1d4ed8] font-medium transition-colors duration-150"
+      class="inline-block mt-8 text-sm text-primary hover:text-primary-hover font-medium transition-colors duration-150"
     >
       ← ホームに戻る
     </a>

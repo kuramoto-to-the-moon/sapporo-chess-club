@@ -27,21 +27,21 @@ const selectOptions: YearOption[] = [allOption, ...yearOptions];
 
 const pillClass =
   "inline-flex items-center justify-center min-h-[44px] px-3.5 rounded-md text-sm font-medium transition-colors cursor-pointer " +
-  "aria-[pressed=true]:bg-[#2563eb] aria-[pressed=true]:text-white " +
-  "aria-[pressed=false]:bg-[#f5f5f5] aria-[pressed=false]:text-[#525252] aria-[pressed=false]:hover:bg-[#e5e5e5]";
+  "aria-[pressed=true]:bg-primary aria-[pressed=true]:text-white " +
+  "aria-[pressed=false]:bg-hairline aria-[pressed=false]:text-sub aria-[pressed=false]:hover:bg-edge";
 
 const optionClass =
-  "w-full text-left px-3 py-2.5 text-sm text-[#171717] cursor-pointer flex items-center justify-between hover:bg-[#f5f5f5] aria-[selected=true]:font-semibold";
+  "w-full text-left px-3 py-2.5 text-sm text-ink cursor-pointer flex items-center justify-between hover:bg-hairline aria-[selected=true]:font-semibold";
 
 const checkClass =
-  "w-4 h-4 text-[#2563eb] hidden aria-[selected=true]:inline";
+  "w-4 h-4 text-primary hidden aria-[selected=true]:inline";
 ---
 
 <div>
   <div class="sm:hidden relative" data-filter-select>
     <label
       for="year-filter-trigger"
-      class="block text-xs uppercase tracking-wider text-[#737373] mb-2"
+      class="block text-xs uppercase tracking-wider text-muted mb-2"
     >
       {i.schedule.filterByYear}
     </label>
@@ -51,7 +51,7 @@ const checkClass =
       data-filter-trigger
       aria-haspopup="listbox"
       aria-expanded="false"
-      class="w-full min-h-[44px] rounded-md border border-[#e5e5e5] bg-white px-3 flex items-center justify-between text-sm text-[#171717] cursor-pointer hover:bg-[#fafafa] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2563eb]/30"
+      class="w-full min-h-[44px] rounded-md border border-edge bg-white px-3 flex items-center justify-between text-sm text-ink cursor-pointer hover:bg-surface transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/30"
     >
       <span data-filter-trigger-label>{allOption.label}</span>
       <svg
@@ -64,7 +64,7 @@ const checkClass =
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        class="text-[#737373] transition-transform duration-150"
+        class="text-muted transition-transform duration-150"
         aria-hidden="true"
       >
         <path d="m6 9 6 6 6-6"/>
@@ -76,7 +76,7 @@ const checkClass =
       role="listbox"
       aria-label={i.schedule.filterByYear}
       hidden
-      class="absolute left-0 right-0 top-full mt-1.5 z-20 bg-white border border-[#e5e5e5] rounded-md shadow-lg overflow-y-auto py-1"
+      class="absolute left-0 right-0 top-full mt-1.5 z-20 bg-white border border-edge rounded-md shadow-lg overflow-y-auto py-1"
     >
       {selectOptions.map((opt) => (
         <li>

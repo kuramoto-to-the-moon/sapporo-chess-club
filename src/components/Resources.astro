@@ -20,9 +20,9 @@ const items = [
 ];
 ---
 
-<section id="links" class="px-5 py-6 border-t border-[#f5f5f5]">
-  <h2 class="text-sm font-semibold uppercase tracking-wider text-[#737373] mb-3 flex items-center gap-2">
-    <span class="inline-block w-1 h-3 bg-[#2563eb]"></span>
+<section id="links" class="px-5 py-6 border-t border-hairline">
+  <h2 class="text-sm font-semibold uppercase tracking-wider text-muted mb-3 flex items-center gap-2">
+    <span class="inline-block w-1 h-3 bg-primary"></span>
     {i.resources.label}
   </h2>
   <ul class="flex flex-col">
@@ -32,10 +32,10 @@ const items = [
           href={item.href}
           target="_blank"
           rel="noopener noreferrer"
-          class="flex items-center gap-1.5 py-2 text-sm text-[#525252] hover:text-[#2563eb] transition-colors duration-150"
+          class="flex items-center gap-1.5 py-2 text-sm text-sub hover:text-primary transition-colors duration-150"
         >
           <span>{item.label}</span>
-          <span class="text-[#737373]"><ExternalLinkIcon /></span>
+          <span class="text-muted"><ExternalLinkIcon /></span>
           <span class="sr-only">{i.nav.openInNewTab}</span>
         </a>
       </li>
