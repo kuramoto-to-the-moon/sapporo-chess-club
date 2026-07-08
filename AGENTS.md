@@ -60,6 +60,7 @@
   - hover は色変化のみ。`hover:underline` は使わない
 - **角丸**: `rounded-md` 統一
 - **ホバー gate** `[@media(hover:hover)]:hover:` はメニュー等の大きい hover 面のみ適用済み。テキストリンクは素の `hover:` が現状（全面適用は差分過大のため保留中）。**新規コードではどちらでも可、周囲に合わせる**
+- **要素間の視覚的間隔は CSS で付ける**（flex `gap` / margin）。ソースの空白・改行に依存しない — Astro 7 の `compressHTML: "jsx"`（デフォルト採用）がインライン要素間の空白を除去するため、空白頼みの間隔は消える
 - **タップ領域**: アイコンボタンは 44px 確保（`before:absolute before:-inset-2` パターン）
 - **focus**: グローバル `:focus-visible`（青 outline）に任せる。`focus-visible:outline-none` で消さない
 
