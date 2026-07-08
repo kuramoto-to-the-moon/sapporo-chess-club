@@ -108,7 +108,6 @@ export default {
     englishNotAvailableShort: "",
     archivePageTitle: "お知らせアーカイブ",
     viewArchive: "過去のお知らせを見る →",
-    backToActive: "← 最近のお知らせに戻る",
     archiveEmpty: "アーカイブはまだありません。",
     subscribeRss: "RSS で購読",
   },

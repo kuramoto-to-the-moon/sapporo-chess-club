@@ -107,7 +107,6 @@ export default {
     englishNotAvailableShort: "Shown in Japanese.",
     archivePageTitle: "News Archive",
     viewArchive: "View older announcements →",
-    backToActive: "← Back to recent news",
     archiveEmpty: "Archive is empty.",
     subscribeRss: "Subscribe via RSS",
   },
