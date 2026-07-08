@@ -15,16 +15,26 @@ jobs:
     if: github.actor == 'dependabot[bot]'
     runs-on: ubuntu-latest
     steps:
+      - name: Fetch update metadata
+        id: metadata
+        uses: dependabot/fetch-metadata@v2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v6
         with:
           node-version: "22"
-      - run: corepack enable && corepack prepare pnpm@latest --activate
+      - run: corepack enable
       - run: pnpm install --frozen-lockfile
       - run: pnpm check
       - run: pnpm build
-      # ここまで全部通った場合のみマージされる（失敗時は PR が open のまま残る）
-      - run: gh pr merge --merge "$PR_URL"
+
+      # ビルドが通っても「挙動不変」の保証はメジャーには無いので、
+      # minor / patch のみ自動マージ。メジャーは PR を残して人間レビュー。
+      - name: Merge (minor / patch only)
+        if: steps.metadata.outputs.update-type != 'version-update:semver-major'
+        run: gh pr merge --merge "$PR_URL"
         env:
           PR_URL: ${{ github.event.pull_request.html_url }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
