@@ -91,7 +91,6 @@ export function buildEventsJsonLd(
     const name = getEventName(t, locale);
     const existing = mergedTournaments.find((e) => e.name === name);
     if (existing) {
-      // 最終日を更新
       if (t.date > existing.endDate) {
         existing.endDate = t.date;
         existing.endTime = t.endTime;
