@@ -52,7 +52,7 @@ const i = t(locale);
                 return (
                   <a
                     href={link.href}
-                    data-pgn-download
+                    download
                     aria-label={i.tournament.downloadAria(link.label)}
                     class={rowClass}
                   >
@@ -85,24 +85,3 @@ const i = t(locale);
     );
   })}
 </div>
-
-<script>
-  // PGN ダウンロードハンドラ: Content-Disposition を期待できないので fetch + Blob で download 属性を強制
-  document.querySelectorAll<HTMLAnchorElement>("[data-pgn-download]").forEach((a) => {
-    a.addEventListener("click", async (e) => {
-      e.preventDefault();
-      const filename = a.href.split("/").pop() || "game.pgn";
-      const res = await fetch(a.href);
-      const text = await res.text();
-      const blob = new Blob([text], { type: "application/octet-stream" });
-      const url = URL.createObjectURL(blob);
-      const link = document.createElement("a");
-      link.href = url;
-      link.download = filename;
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      setTimeout(() => URL.revokeObjectURL(url), 1000);
-    });
-  });
-</script>
