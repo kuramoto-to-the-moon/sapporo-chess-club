@@ -129,3 +129,12 @@ export async function getAnnouncementStaticPaths() {
     },
   }));
 }
+
+/** /announcements/archive/[year] ja/en route から共有して使う getStaticPaths 実装。 */
+export async function getArchiveYearStaticPaths() {
+  const years = await getArchivedYears();
+  return years.map((year) => ({
+    params: { year: String(year) },
+    props: { year },
+  }));
+}

@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import { t, type Locale } from "@/i18n";
 import ExternalLinkIcon from "@/components/ExternalLinkIcon.astro";
+import SectionHeader from "@/components/SectionHeader.astro";
 
 interface Props {
   locale: Locale;
@@ -17,10 +18,7 @@ const site = siteData[0].data;
 <section id="info" class="px-5 py-6 border-t border-hairline">
   <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
     <div class="flex flex-col">
-      <h2 class="text-sm font-semibold uppercase tracking-wider text-muted mb-3 flex items-center gap-2">
-        <span class="inline-block w-1 h-3 bg-primary"></span>
-        {i.clubInfo.fee}
-      </h2>
+      <SectionHeader label={i.clubInfo.fee} />
       <dl class="flex flex-col gap-2 text-sm text-sub">
         <div class="flex gap-3">
           <dt>{i.clubInfo.general}</dt>
@@ -37,10 +35,7 @@ const site = siteData[0].data;
       </dl>
     </div>
     <div class="flex flex-col">
-      <h2 class="text-sm font-semibold uppercase tracking-wider text-muted mb-3 flex items-center gap-2">
-        <span class="inline-block w-1 h-3 bg-primary"></span>
-        {i.clubInfo.venue}
-      </h2>
+      <SectionHeader label={i.clubInfo.venue} />
       <div class="flex flex-col gap-1 text-sm text-sub">
         <p class="text-ink font-medium">{site.venue.name[locale]}{site.venue.floor ? ` ${site.venue.floor}` : ""}</p>
         <p>{site.venue.address[locale]}</p>

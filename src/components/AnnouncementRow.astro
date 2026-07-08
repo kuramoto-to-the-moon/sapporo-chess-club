@@ -1,16 +1,24 @@
 ---
 import { getLocalePath, type Locale } from "@/i18n";
 import { getDateParts } from "@/lib/date";
-import { pickTitle, pickDescription, type Announcement } from "@/lib/announcement";
+import {
+  pickTitle,
+  pickDescription,
+  formatAnnouncementDate,
+  type Announcement,
+} from "@/lib/announcement";
 
 interface Props {
   entry: Announcement;
   locale: Locale;
+  /** true で "2026.04.12" 形式 + 広め幅（TOP 用）、既定は "04.12" 形式（一覧用） */
+  fullDate?: boolean;
 }
 
-const { entry, locale } = Astro.props;
+const { entry, locale, fullDate = false } = Astro.props;
 const parts = getDateParts(entry.data.date);
 const md = `${String(parts.month).padStart(2, "0")}.${String(parts.day).padStart(2, "0")}`;
+const dateLabel = fullDate ? formatAnnouncementDate(entry.data.date) : md;
 const href = getLocalePath(locale, `/announcements/${entry.id}`);
 ---
 
@@ -21,9 +29,9 @@ const href = getLocalePath(locale, `/announcements/${entry.id}`);
     class="flex flex-col gap-1.5 py-4 border-b border-hairline last:border-0 hover:bg-surface -mx-2 px-2 rounded transition-colors duration-150"
   >
     <div class="flex items-baseline gap-3">
-      <span class="text-xs text-muted tabular-nums min-w-[60px] shrink-0">{md}</span>
+      <span class={`text-xs text-muted tabular-nums ${fullDate ? "min-w-[78px]" : "min-w-[60px]"} shrink-0`}>{dateLabel}</span>
       <span class="text-sm font-semibold text-ink line-clamp-2 flex-1 min-w-0">{pickTitle(entry, locale)}</span>
     </div>
-    <p class="text-xs text-muted ml-[72px] leading-[1.5] line-clamp-2 min-w-0">{pickDescription(entry, locale)}</p>
+    <p class={`text-xs text-muted ${fullDate ? "ml-[90px]" : "ml-[72px]"} leading-[1.5] line-clamp-2 min-w-0`}>{pickDescription(entry, locale)}</p>
   </a>
 </li>

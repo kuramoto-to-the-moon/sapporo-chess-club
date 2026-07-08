@@ -1,5 +1,6 @@
 ---
 import { t, type Locale } from "@/i18n";
+import SectionHeader from "@/components/SectionHeader.astro";
 
 interface Props {
   locale: Locale;
@@ -10,9 +11,6 @@ const i = t(locale);
 ---
 
 <section id="about" class="px-5 py-6 border-t border-hairline">
-  <h2 class="text-sm font-semibold uppercase tracking-wider text-muted mb-3 flex items-center gap-2">
-    <span class="inline-block w-1 h-3 bg-primary"></span>
-    {i.about.label}
-  </h2>
+  <SectionHeader label={i.about.label} />
   <p class="text-sm leading-[1.8] text-sub">{i.about.body}</p>
 </section>

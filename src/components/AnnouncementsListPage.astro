@@ -10,7 +10,7 @@ import {
   groupByYear,
   hasJaOnlyContent,
 } from "@/lib/announcement";
-import { buildBreadcrumbJsonLd } from "@/lib/breadcrumb";
+import { buildBreadcrumbJsonLd, homeCrumb } from "@/lib/breadcrumb";
 
 interface Props {
   locale: Locale;
@@ -30,7 +30,7 @@ const archiveHref = getLocalePath(locale, "/announcements/archive");
 const rssHref = withBase(locale === "ja" ? "/rss.xml" : "/en/rss.xml")!;
 
 const breadcrumbJsonLd = buildBreadcrumbJsonLd([
-  { name: i.nav.home, url: new URL(getLocalePath(locale, "/"), Astro.site).toString() },
+  homeCrumb(locale, Astro.site),
   { name: i.announcements.pageTitle, url: new URL(getLocalePath(locale, "/announcements/"), Astro.site).toString() },
 ]);
 ---

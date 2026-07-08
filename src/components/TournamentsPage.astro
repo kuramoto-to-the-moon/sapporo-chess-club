@@ -5,7 +5,7 @@ import TournamentList from "@/components/TournamentList.astro";
 import { t, getLocalePath, type Locale } from "@/i18n";
 import { withBase } from "@/lib/utils";
 import { parseDate, getDateParts } from "@/lib/date";
-import { buildBreadcrumbJsonLd } from "@/lib/breadcrumb";
+import { buildBreadcrumbJsonLd, homeCrumb } from "@/lib/breadcrumb";
 
 interface Props {
   locale: Locale;
@@ -36,7 +36,7 @@ const tournaments = sorted.map((t) => {
 const years = [...new Set(tournaments.map((t) => t.year))].sort((a, b) => b - a);
 
 const breadcrumbJsonLd = buildBreadcrumbJsonLd([
-  { name: i.nav.home, url: new URL(getLocalePath(locale, "/"), Astro.site).toString() },
+  homeCrumb(locale, Astro.site),
   { name: i.tournament.pageTitle, url: new URL(getLocalePath(locale, "/tournaments/"), Astro.site).toString() },
 ]);
 ---

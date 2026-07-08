@@ -10,7 +10,7 @@ import {
   formatAnnouncementDate,
   type Announcement,
 } from "@/lib/announcement";
-import { buildBreadcrumbJsonLd } from "@/lib/breadcrumb";
+import { buildBreadcrumbJsonLd, homeCrumb } from "@/lib/breadcrumb";
 
 interface Props {
   locale: Locale;
@@ -72,7 +72,7 @@ const articleJsonLd = JSON.stringify({
 });
 
 const breadcrumbJsonLd = buildBreadcrumbJsonLd([
-  { name: i.nav.home, url: new URL(getLocalePath(locale, "/"), Astro.site).toString() },
+  homeCrumb(locale, Astro.site),
   { name: i.announcements.pageTitle, url: new URL(getLocalePath(locale, "/announcements/"), Astro.site).toString() },
   { name: title, url: canonicalUrl },
 ]);

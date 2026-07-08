@@ -5,7 +5,7 @@ import ScheduleTimeline from "@/components/ScheduleTimeline.astro";
 import { t, getLocalePath, type Locale } from "@/i18n";
 import { getSortedScheduleDates } from "@/lib/schedule-data";
 import { getEventName } from "@/lib/schedule";
-import { buildBreadcrumbJsonLd } from "@/lib/breadcrumb";
+import { buildBreadcrumbJsonLd, homeCrumb } from "@/lib/breadcrumb";
 
 interface Props {
   locale: Locale;
@@ -92,7 +92,7 @@ const eventsJsonLd = mergedTournaments.length > 0
   : null;
 
 const breadcrumbJsonLd = buildBreadcrumbJsonLd([
-  { name: i.nav.home, url: new URL(getLocalePath(locale, "/"), Astro.site).toString() },
+  homeCrumb(locale, Astro.site),
   { name: i.schedule.pageTitle, url: new URL(getLocalePath(locale, "/schedule/"), Astro.site).toString() },
 ]);
 ---

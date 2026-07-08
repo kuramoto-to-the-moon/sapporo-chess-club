@@ -1,7 +1,8 @@
 ---
-import { t, getLocalePath, type Locale } from "@/i18n";
+import { type Locale } from "@/i18n";
 import { getDateParts, getDayOfWeek } from "@/lib/date";
-import { getEventName, type ScheduleDate } from "@/lib/schedule";
+import { type ScheduleDate } from "@/lib/schedule";
+import ScheduleEventBody from "@/components/ScheduleEventBody.astro";
 
 interface Props {
   dates: ScheduleDate[];
@@ -9,7 +10,6 @@ interface Props {
 }
 
 const { dates, locale } = Astro.props;
-const i = t(locale);
 
 function getMonthKey(dateStr: string): string {
   const { year, month } = getDateParts(dateStr);
@@ -55,26 +55,7 @@ function formatMonthHeading(monthKey: string): string {
                 <span class="text-xs text-muted mt-1">{getDayOfWeek(date.date, locale)}</span>
               </div>
               <div class="flex-1 pt-1">
-                <p class="text-sm font-semibold flex items-center gap-2 flex-wrap">
-                  {isTournament && <span class="text-xs px-1.5 py-0.5 rounded bg-primary text-white font-semibold">{i.badge.tournamentTag}</span>}
-                  {date.announcementSlug ? (
-                    <a
-                      href={getLocalePath(locale, `/announcements/${date.announcementSlug}`)}
-                      data-astro-prefetch
-                      class="text-primary hover:text-primary-hover transition-colors duration-150"
-                    >
-                      {getEventName(date, locale)}
-                    </a>
-                  ) : (
-                    <span>{getEventName(date, locale)}</span>
-                  )}
-                </p>
-                <p class="text-xs text-muted mt-1">
-                  {date.startTime}–{date.endTime} / {date.room}{i.schedule.roomSuffix}
-                </p>
-                {date.note && (
-                  <p class="text-xs text-muted mt-1">{date.note[locale]}</p>
-                )}
+                <ScheduleEventBody date={date} locale={locale} />
               </div>
             </li>
           );

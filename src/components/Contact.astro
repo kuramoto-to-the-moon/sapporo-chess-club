@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import { t, type Locale } from "@/i18n";
+import SectionHeader from "@/components/SectionHeader.astro";
 
 interface Props {
   locale: Locale;
@@ -14,10 +15,7 @@ const site = siteData[0].data;
 ---
 
 <section id="contact" class="px-5 py-6 border-t border-hairline">
-  <h2 class="text-sm font-semibold uppercase tracking-wider text-muted mb-3 flex items-center gap-2">
-    <span class="inline-block w-1 h-3 bg-primary"></span>
-    {i.contact.label}
-  </h2>
+  <SectionHeader label={i.contact.label} />
   <p class="text-sm leading-[1.8] text-sub flex flex-col gap-1">
     {site.email && (
       <a href={`mailto:${site.email}`} class="hover:text-primary transition-colors duration-150 w-fit">

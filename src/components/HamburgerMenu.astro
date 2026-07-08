@@ -1,6 +1,7 @@
 ---
 import { t, getLocalePath, type Locale } from "@/i18n";
 import { getNavPages } from "@/lib/nav";
+import GlobeIcon from "@/components/GlobeIcon.astro";
 
 interface Props {
   locale: Locale;
@@ -111,11 +112,7 @@ const anchors = [
           aria-label={i.nav.switchLanguage}
           hreflang={otherLocale}
         >
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <circle cx="12" cy="12" r="10"/>
-            <path d="M2 12h20"/>
-            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-          </svg>
+          <GlobeIcon size={16} stroke="currentColor" strokeWidth={1.5} />
           {locale === "ja" ? "English" : "日本語"}
           <span class="text-muted" aria-hidden="true">→</span>
         </a>

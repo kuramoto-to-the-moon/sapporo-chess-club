@@ -1,12 +1,8 @@
 ---
 import { t, getLocalePath, type Locale } from "@/i18n";
-import {
-  getSortedAnnouncements,
-  pickTitle,
-  pickDescription,
-  hasJaOnlyContent,
-  formatAnnouncementDate,
-} from "@/lib/announcement";
+import { getSortedAnnouncements, hasJaOnlyContent } from "@/lib/announcement";
+import AnnouncementRow from "@/components/AnnouncementRow.astro";
+import SectionHeader from "@/components/SectionHeader.astro";
 
 interface Props {
   locale: Locale;
@@ -22,29 +18,12 @@ const showEnNotice = locale === "en" && latest.some(hasJaOnlyContent);
 
 {latest.length > 0 && (
   <section id="announcements" class="px-5 py-6 border-t border-hairline">
-    <h2 class="text-sm font-semibold uppercase tracking-wider text-muted mb-3 flex items-center gap-2">
-      <span class="inline-block w-1 h-3 bg-primary"></span>
-      {i.announcements.label}
-    </h2>
+    <SectionHeader label={i.announcements.label} />
     {showEnNotice && (
       <p class="text-xs text-primary italic mb-1">{i.announcements.englishNotAvailableShort}</p>
     )}
     <ul class="flex flex-col">
-      {latest.map((entry) => (
-        <li>
-          <a
-            href={getLocalePath(locale, `/announcements/${entry.id}`)}
-
-            class="flex flex-col gap-1.5 py-4 border-b border-hairline last:border-0 hover:bg-surface -mx-2 px-2 rounded transition-colors duration-150"
-          >
-            <div class="flex items-baseline gap-3">
-              <span class="text-xs text-muted tabular-nums min-w-[78px] shrink-0">{formatAnnouncementDate(entry.data.date)}</span>
-              <span class="text-sm font-semibold text-ink line-clamp-2 flex-1 min-w-0">{pickTitle(entry, locale)}</span>
-            </div>
-            <p class="text-xs text-muted ml-[90px] leading-[1.5] line-clamp-2 min-w-0">{pickDescription(entry, locale)}</p>
-          </a>
-        </li>
-      ))}
+      {latest.map((entry) => <AnnouncementRow entry={entry} locale={locale} fullDate />)}
     </ul>
     <a
       href={listHref}

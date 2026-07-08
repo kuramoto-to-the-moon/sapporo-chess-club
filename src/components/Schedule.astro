@@ -1,8 +1,9 @@
 ---
 import { t, getLocalePath, type Locale } from "@/i18n";
 import { getDateParts, getDayOfWeek } from "@/lib/date";
-import { getEventName } from "@/lib/schedule";
 import { getUpcomingScheduleDates } from "@/lib/schedule-data";
+import ScheduleEventBody from "@/components/ScheduleEventBody.astro";
+import SectionHeader from "@/components/SectionHeader.astro";
 
 interface Props {
   locale: Locale;
@@ -16,10 +17,7 @@ const upcoming = await getUpcomingScheduleDates(3);
 ---
 
 <section id="schedule" class="px-5 py-6 border-t border-hairline">
-  <h2 class="text-sm font-semibold uppercase tracking-wider text-muted mb-3 flex items-center gap-2">
-    <span class="inline-block w-1 h-3 bg-primary"></span>
-    {i.schedule.label}
-  </h2>
+  <SectionHeader label={i.schedule.label} />
 
   {upcoming.length === 0 ? (
     <p class="text-sm text-muted">
@@ -40,30 +38,7 @@ const upcoming = await getUpcomingScheduleDates(3);
                 <span class="text-xs text-muted">({getDayOfWeek(date.date, locale)})</span>
               </div>
               <div class="flex-1">
-                <p class="text-sm font-semibold flex items-center gap-2 flex-wrap">
-                  {isTournament && (
-                    <span class="text-xs px-1.5 py-0.5 rounded bg-primary text-white font-semibold">
-                      {i.badge.tournamentTag}
-                    </span>
-                  )}
-                  {date.announcementSlug ? (
-                    <a
-                      href={getLocalePath(locale, `/announcements/${date.announcementSlug}`)}
-                      data-astro-prefetch
-                      class="text-primary hover:text-primary-hover transition-colors duration-150"
-                    >
-                      {getEventName(date, locale)}
-                    </a>
-                  ) : (
-                    <span>{getEventName(date, locale)}</span>
-                  )}
-                </p>
-                <p class="text-xs text-muted mt-1">
-                  {date.startTime}–{date.endTime} / {date.room}{i.schedule.roomSuffix}
-                </p>
-                {date.note && (
-                  <p class="text-xs text-muted mt-1">{date.note[locale]}</p>
-                )}
+                <ScheduleEventBody date={date} locale={locale} />
               </div>
             </li>
           );
