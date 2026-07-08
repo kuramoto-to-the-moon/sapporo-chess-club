@@ -52,10 +52,7 @@ export default {
   },
   about: {
     label: "About the Club",
-    body1:
-      "Sapporo Chess Club is a chess circle that has been active in Sapporo, Hokkaido since the 1990s. We hold meetups twice a month and three official tournaments a year (Hokkaido Chess Championship and more), and everyone is welcome — from elementary school students to working adults and seniors.",
-    body2:
-      "Meetups take place at Kaderu 2.7 in central Sapporo. Observation and your first visit are free, and members are happy to help newcomers. Whether you want to try chess for the first time or are looking for opponents in Hokkaido, come and join us!",
+    body: "Sapporo Chess Club is a chess circle that has been active in Sapporo, Hokkaido since the 1990s. Everyone is welcome — from elementary school students to working adults and seniors — and members are happy to help newcomers. Whether you want to try chess for the first time or are looking for opponents, feel free to drop by.",
   },
   activities: {
     label: "Activities",
