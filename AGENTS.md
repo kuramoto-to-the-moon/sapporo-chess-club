@@ -11,6 +11,7 @@
 - **すべて Astro の静的 HTML + vanilla JS**。Svelte / React 等のフレームワークは使わない
 - インタラクションは `<script>` ブロック + `src/lib/*.ts` のヘルパーで実装
 - `<dialog>` 要素 (ハンバーガーメニュー)、vanilla listbox (年フィルター) 等のネイティブ API を活用
+- hide-on-scroll ヘッダー (headroom) は意図的に複雑。**触る前に `docs/headroom-design.md` を読む**（部分簡素化禁止、二択の設計判断を記載済み）
 - ページは薄いロケールラッパー: `src/pages/**` (ja) と `src/pages/en/**` は locale prop を渡すだけで、実体はすべて `src/components/*Page.astro`。**ja/en のページを片方だけ変更しない**
 - CSS は全ページ `<style>` インライン化される (Astro の inlineStylesheets)。CSS の 1 変更が全 81 ページに波及する
 
