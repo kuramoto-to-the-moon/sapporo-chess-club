@@ -11,6 +11,7 @@ import {
   type Announcement,
 } from "@/lib/announcement";
 import { buildBreadcrumbJsonLd, homeCrumb } from "@/lib/breadcrumb";
+import { buildNewsArticleJsonLd } from "@/lib/jsonld";
 
 interface Props {
   locale: Locale;
@@ -34,41 +35,17 @@ const description = pickDescription(entry, locale, 155);
 const { Content } = await render(entry);
 const enBodyHtml = entry.data.bodyEn ? marked.parse(entry.data.bodyEn) : null;
 
-// NewsArticle JSON-LD: お知らせをニュース記事としてマークアップ。
-// inLanguage と isAccessibleForFree を明示することで多言語サイトとしての
-// 理解を助け、rich result 適格性を上げる。
 const canonicalUrl = new URL(
   getLocalePath(locale, `/announcements/${entry.id}`),
   Astro.site,
 ).toString();
-const ogImage = new URL("/images/og.webp", Astro.site).toString();
-const datePublishedIso = `${entry.data.date}T00:00:00+09:00`;
-const articleJsonLd = JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "NewsArticle",
-  headline: title,
+const articleJsonLd = buildNewsArticleJsonLd({
+  locale,
+  title,
   description,
-  datePublished: datePublishedIso,
-  dateModified: datePublishedIso,
-  inLanguage: locale === "ja" ? "ja-JP" : "en-US",
-  isAccessibleForFree: true,
-  image: [ogImage],
-  url: canonicalUrl,
-  mainEntityOfPage: { "@type": "WebPage", "@id": canonicalUrl },
-  author: {
-    "@type": "Organization",
-    name: i.site.name,
-    url: "https://sapporochessclub.com",
-  },
-  publisher: {
-    "@type": "Organization",
-    name: i.site.name,
-    url: "https://sapporochessclub.com",
-    logo: {
-      "@type": "ImageObject",
-      url: new URL("/icon-512.png", Astro.site).toString(),
-    },
-  },
+  date: entry.data.date,
+  canonicalUrl,
+  astroSite: Astro.site,
 });
 
 const breadcrumbJsonLd = buildBreadcrumbJsonLd([

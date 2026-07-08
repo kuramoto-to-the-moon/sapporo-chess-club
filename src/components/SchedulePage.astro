@@ -4,8 +4,8 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import ScheduleTimeline from "@/components/ScheduleTimeline.astro";
 import { t, getLocalePath, type Locale } from "@/i18n";
 import { getSortedScheduleDates } from "@/lib/schedule-data";
-import { getEventName } from "@/lib/schedule";
 import { buildBreadcrumbJsonLd, homeCrumb } from "@/lib/breadcrumb";
+import { buildEventsJsonLd } from "@/lib/jsonld";
 
 interface Props {
   locale: Locale;
@@ -21,75 +21,7 @@ const siteData = await getCollection("site");
 const site = siteData[0].data;
 const tournaments = sorted.filter((d) => d.type === "tournament");
 
-const ogImage = new URL("/images/og.webp", Astro.site).toString();
-
-// 同じ大会名の複数日エントリを 1 イベントにまとめる
-// startDate = 初日の開始時刻, endDate = 最終日の終了時刻
-type MergedEvent = { name: string; startDate: string; startTime: string; endDate: string; endTime: string };
-const mergedTournaments: MergedEvent[] = [];
-for (const t of tournaments) {
-  const name = getEventName(t, locale);
-  const existing = mergedTournaments.find((e) => e.name === name);
-  if (existing) {
-    // 最終日を更新
-    if (t.date > existing.endDate) {
-      existing.endDate = t.date;
-      existing.endTime = t.endTime;
-    }
-    if (t.date < existing.startDate) {
-      existing.startDate = t.date;
-      existing.startTime = t.startTime;
-    }
-  } else {
-    mergedTournaments.push({ name, startDate: t.date, startTime: t.startTime, endDate: t.date, endTime: t.endTime });
-  }
-}
-
-const eventsJsonLd = mergedTournaments.length > 0
-  ? JSON.stringify(mergedTournaments.map((t) => ({
-      "@context": "https://schema.org",
-      "@type": "Event",
-      name: t.name,
-      startDate: `${t.startDate}T${t.startTime}:00+09:00`,
-      endDate: `${t.endDate}T${t.endTime}:00+09:00`,
-      description: `${t.name} — ${site.venue.name[locale]}`,
-      image: ogImage,
-      location: {
-        "@type": "Place",
-        name: site.venue.name[locale],
-        address: {
-          "@type": "PostalAddress",
-          streetAddress: site.venue.address[locale],
-          addressLocality: "Sapporo",
-          addressRegion: "Hokkaido",
-          addressCountry: "JP",
-        },
-      },
-      organizer: {
-        "@type": "SportsClub",
-        name: i.site.name,
-        url: "https://sapporochessclub.com",
-      },
-      offers: {
-        "@type": "Offer",
-        price: String(site.fee.general),
-        priceCurrency: "JPY",
-        availability: "https://schema.org/InStock",
-        url: new URL(locale === "en" ? "/en/schedule" : "/schedule", Astro.site).toString(),
-        // Google Rich Results は validFrom を要求する。
-        // 見学・当日参加 OK のため、開催日の 1 年前から有効とみなす（告知開始の近似）。
-        validFrom: new Date(new Date(t.startDate).getTime() - 365 * 24 * 60 * 60 * 1000)
-          .toISOString()
-          .slice(0, 10),
-      },
-      performer: {
-        "@type": "SportsTeam",
-        name: i.site.name,
-      },
-      eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
-      eventStatus: "https://schema.org/EventScheduled",
-    })))
-  : null;
+const eventsJsonLd = buildEventsJsonLd(locale, tournaments, site, Astro.site);
 
 const breadcrumbJsonLd = buildBreadcrumbJsonLd([
   homeCrumb(locale, Astro.site),

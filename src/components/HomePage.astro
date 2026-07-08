@@ -12,6 +12,7 @@ import ChessLessons from "@/components/ChessLessons.astro";
 import Resources from "@/components/Resources.astro";
 import Contact from "@/components/Contact.astro";
 import { t, type Locale } from "@/i18n";
+import { buildWebsiteJsonLd, buildClubJsonLd } from "@/lib/jsonld";
 
 interface Props {
   locale: Locale;
@@ -23,62 +24,8 @@ const i = t(locale);
 const siteData = await getCollection("site");
 const site = siteData[0].data;
 
-const clubLogoUrl = new URL("/icon-512.png", Astro.site).toString();
-const clubImageUrl = new URL("/images/og.webp", Astro.site).toString();
-
-// WebSite JSON-LD: Google 検索結果の「サイト名」表示に使われる。
-// https://developers.google.com/search/docs/appearance/site-names
-// これがないと検索結果がドメイン名（sapporochessclub.com）のまま表示されがち。
-const websiteJsonLd = JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  name: i.site.name,
-  alternateName: locale === "ja" ? "Sapporo Chess Club" : "札幌チェスクラブ",
-  url: "https://sapporochessclub.com",
-  inLanguage: locale === "ja" ? "ja-JP" : "en-US",
-});
-
-const clubJsonLd = JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "SportsClub",
-  name: i.site.name,
-  alternateName: locale === "ja" ? "Sapporo Chess Club" : "札幌チェスクラブ",
-  description: i.site.description,
-  url: "https://sapporochessclub.com",
-  logo: clubLogoUrl,
-  image: clubImageUrl,
-  sport: "Chess",
-  foundingDate: "1990",
-  sameAs: ["https://x.com/SapporoChess"],
-  ...(site.email && { email: site.email }),
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: site.venue.address[locale],
-    addressLocality: "Sapporo",
-    addressRegion: "Hokkaido",
-    addressCountry: "JP",
-  },
-  // geo / areaServed: 「near me」検索や Knowledge Panel の地図表示精度を上げる。
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: site.venue.geo.latitude,
-    longitude: site.venue.geo.longitude,
-  },
-  areaServed: [
-    { "@type": "City", name: "Sapporo" },
-    { "@type": "AdministrativeArea", name: "Hokkaido" },
-  ],
-  location: {
-    "@type": "Place",
-    name: site.venue.name[locale],
-    address: site.venue.address[locale],
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: site.venue.geo.latitude,
-      longitude: site.venue.geo.longitude,
-    },
-  },
-});
+const websiteJsonLd = buildWebsiteJsonLd(locale);
+const clubJsonLd = buildClubJsonLd(locale, site, Astro.site);
 ---
 
 <BaseLayout
