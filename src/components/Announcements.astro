@@ -17,7 +17,7 @@ const showEnNotice = locale === "en" && latest.some(hasJaOnlyContent);
 ---
 
 {latest.length > 0 && (
-  <section id="announcements" class="px-5 py-6 border-t border-hairline">
+  <section id="announcements" class="px-5 py-8 border-t border-hairline">
     <SectionHeader label={i.announcements.label} />
     {showEnNotice && (
       <p class="text-xs text-primary italic mb-1">{i.announcements.englishNotAvailableShort}</p>
