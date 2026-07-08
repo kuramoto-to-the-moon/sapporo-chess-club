@@ -1,0 +1,20 @@
+name: CI
+
+# PR の検証。main への直 push (Pages CMS / 手動運用) を妨げないよう
+# branch protection は使わず、PR にだけチェックを走らせる。
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "22"
+      - run: corepack enable && corepack prepare pnpm@latest --activate
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm check
+      - run: pnpm build
