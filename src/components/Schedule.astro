@@ -28,16 +28,15 @@ const upcoming = await getUpcomingScheduleDates(3);
       <ul class="flex flex-col">
         {upcoming.map((date) => {
           const parts = getDateParts(date.date);
-          const isTournament = date.type === "tournament";
           return (
-            <li class="flex items-center gap-4 py-3 border-b border-hairline last:border-0">
-              <div class="flex items-baseline gap-1.5 min-w-[80px]">
-                <span class={`text-2xl font-bold leading-none ${isTournament ? "text-primary" : "text-ink"}`}>
+            <li class="flex items-baseline gap-4 py-3 border-b border-hairline last:border-0">
+              <div class="flex items-baseline gap-1.5 min-w-[80px] shrink-0">
+                <span class="text-xl font-semibold text-ink tabular-nums">
                   {parts.month}/{parts.day}
                 </span>
                 <span class="text-xs text-muted">({getDayOfWeek(date.date, locale)})</span>
               </div>
-              <div class="flex-1">
+              <div class="flex-1 min-w-0">
                 <ScheduleEventBody date={date} locale={locale} />
               </div>
             </li>
