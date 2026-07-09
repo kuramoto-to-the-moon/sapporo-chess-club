@@ -26,6 +26,16 @@ export function getEventName(date: ScheduleDate, locale: Locale): string {
 }
 
 /**
+ * "09:00–16:00 ・ 740室" のようなメタ行を組み立てる。
+ * room が未入力 (CMS で空欄) の場合は roomSuffix を付けず roomTbd ("未定") にする。
+ */
+export function formatScheduleMeta(date: ScheduleDate, locale: Locale): string {
+  const i = t(locale);
+  const roomLabel = date.room ? `${date.room}${i.schedule.roomSuffix}` : i.schedule.roomTbd;
+  return `${date.startTime}–${date.endTime}${i.schedule.metaSeparator}${roomLabel}`;
+}
+
+/**
  * Pages CMS reference の保存値 (例: "src/content/announcements/2026-06-29-75.md")
  * から announcements の slug ("2026-06-29-75") を取り出す。
  * slug 単体が渡された場合もそのまま返る。

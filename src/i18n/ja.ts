@@ -76,6 +76,7 @@ export default {
     allYears: "すべての年",
     all: "すべて",
     roomSuffix: "室",
+    roomTbd: "未定",
     yearSuffix: "年",
     monthSuffix: "月",
     today: "今日",

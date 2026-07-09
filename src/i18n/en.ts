@@ -90,6 +90,7 @@ export default {
     allYears: "All years",
     all: "All",
     roomSuffix: "",
+    roomTbd: "TBD",
     yearSuffix: "",
     monthSuffix: "",
     today: "Today",

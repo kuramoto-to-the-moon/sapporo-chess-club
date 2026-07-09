@@ -36,7 +36,7 @@ content:
       - name: room
         label: 部屋番号
         type: string
-        required: true
+        description: "空欄にすると「未定」と表示される。「不明」等とは書かない。"
       - name: note
         label: 備考（任意）
         type: object
@@ -88,7 +88,7 @@ content:
       - name: room
         label: 部屋番号
         type: string
-        required: true
+        description: "空欄にすると「未定」と表示される。「不明」等とは書かない。"
       - name: note
         label: 備考（任意）
         type: object

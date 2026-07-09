@@ -1,6 +1,6 @@
 ---
 import { t, getLocalePath, type Locale } from "@/i18n";
-import { getEventName, type ScheduleDate } from "@/lib/schedule";
+import { getEventName, formatScheduleMeta, type ScheduleDate } from "@/lib/schedule";
 
 interface Props {
   date: ScheduleDate;
@@ -13,10 +13,11 @@ const isTournament = date.type === "tournament";
 const cancelled = date.cancelled === true;
 // 中止は例会でも起こり得る → その場合も badge+title 行を出す
 const showTitleRow = isTournament || cancelled;
-const meta = `${date.startTime}–${date.endTime}${i.schedule.metaSeparator}${date.room}${i.schedule.roomSuffix}`;
-// 中止でも文字を薄くしない。取り消し線だけで伝える（理由を読み取りにくくしないため）
+const meta = formatScheduleMeta(date, locale);
+// 中止でも文字を薄くしすぎない。text-sub は本文と同じ通常の濃さ（text-muted のような
+// 弱い階調ではない）。取り消し線と合わせて「濃い黒+線」より落ち着いた見た目にする
 const titleClass = cancelled
-  ? "text-ink line-through"
+  ? "text-sub line-through"
   : "text-primary [@media(hover:hover)]:hover:text-primary-hover transition-colors duration-150";
 ---
 
@@ -29,7 +30,7 @@ const titleClass = cancelled
         </span>
       )}
       {cancelled && (
-        <span class="text-xs px-1.5 py-0.5 rounded bg-muted text-white font-semibold">
+        <span class="text-xs px-1.5 py-0.5 rounded bg-hairline text-sub font-semibold">
           {i.badge.cancelledTag}
         </span>
       )}
