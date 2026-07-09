@@ -91,6 +91,7 @@ export default {
     all: "All",
     roomSuffix: "",
     yearSuffix: "",
+    monthSuffix: "",
     // 時刻と会場/部屋の区切り。前後の空白込み
     metaSeparator: " · ",
   },

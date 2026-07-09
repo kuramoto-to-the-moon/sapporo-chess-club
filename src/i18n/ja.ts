@@ -77,6 +77,7 @@ export default {
     all: "すべて",
     roomSuffix: "室",
     yearSuffix: "年",
+    monthSuffix: "月",
     // 時刻と会場/部屋の区切り。前後の空白込み
     metaSeparator: " ・ ",
   },

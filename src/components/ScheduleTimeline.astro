@@ -1,6 +1,6 @@
 ---
 import { t, type Locale } from "@/i18n";
-import { getDateParts, formatMonthDay, getDayOfWeek } from "@/lib/date";
+import { getDateParts, getDayOfWeek } from "@/lib/date";
 import { type ScheduleDate } from "@/lib/schedule";
 import ScheduleEventBody from "@/components/ScheduleEventBody.astro";
 
@@ -12,36 +12,55 @@ interface Props {
 const { dates, locale } = Astro.props;
 const i = t(locale);
 
-// お知らせ一覧と同じ「年見出し + MM.DD 行」構造。行が月を持つので月見出しは置かない
-const yearMap = new Map<number, ScheduleDate[]>();
-for (const d of dates) {
-  const { year } = getDateParts(d.date);
-  if (!yearMap.has(year)) yearMap.set(year, []);
-  yearMap.get(year)!.push(d);
+function getMonthKey(dateStr: string): string {
+  const { year, month } = getDateParts(dateStr);
+  return `${year}-${String(month).padStart(2, "0")}`;
 }
-const groupedByYear = Array.from(yearMap.entries()).map(([year, dates]) => ({ year, dates }));
+
+const monthMap = new Map<string, ScheduleDate[]>();
+for (const d of dates) {
+  const key = getMonthKey(d.date);
+  if (!monthMap.has(key)) monthMap.set(key, []);
+  monthMap.get(key)!.push(d);
+}
+const groupedByMonth = Array.from(monthMap.entries()).map(([key, dates]) => ({ key, dates }));
+
+function formatMonthHeading(monthKey: string): string {
+  const [year, month] = monthKey.split("-");
+  if (locale === "ja") {
+    return `${year}${i.schedule.yearSuffix} ${parseInt(month)}${i.schedule.monthSuffix}`;
+  }
+  const d = new Date(`${monthKey}-01T00:00:00+09:00`);
+  return new Intl.DateTimeFormat("en-US", {
+    timeZone: "Asia/Tokyo",
+    year: "numeric",
+    month: "long",
+  }).format(d);
+}
 ---
 
 <div class="flex flex-col gap-8">
-  {groupedByYear.map(({ year, dates: yearDates }) => (
+  {groupedByMonth.map(({ key, dates: monthDates }) => (
     <div>
       <h2 class="text-sm font-semibold uppercase tracking-wider text-muted mb-3 pb-2 border-b border-edge">
-        {year}{i.schedule.yearSuffix}
+        {formatMonthHeading(key)}
       </h2>
       <ul class="flex flex-col">
-        {yearDates.map((date) => (
-          <li class="flex items-baseline gap-4 py-3 border-b border-hairline last:border-0">
-            <div class="flex items-baseline gap-1.5 min-w-[80px] shrink-0">
-              <span class="text-xl font-semibold text-ink tabular-nums">
-                {formatMonthDay(date.date)}
-              </span>
-              <span class="text-xs text-muted">({getDayOfWeek(date.date, locale)})</span>
-            </div>
-            <div class="flex-1 min-w-0">
-              <ScheduleEventBody date={date} locale={locale} />
-            </div>
-          </li>
-        ))}
+        {monthDates.map((date) => {
+          const { day } = getDateParts(date.date);
+          const isTournament = date.type === "tournament";
+          return (
+            <li class="flex items-start gap-4 py-3 border-b border-hairline last:border-0">
+              <div class="flex flex-col items-center min-w-[44px] pt-0.5">
+                <span class={`text-2xl font-bold leading-none ${isTournament ? "text-primary" : "text-ink"}`}>{day}</span>
+                <span class="text-xs text-muted mt-1">{getDayOfWeek(date.date, locale)}</span>
+              </div>
+              <div class="flex-1 pt-1">
+                <ScheduleEventBody date={date} locale={locale} />
+              </div>
+            </li>
+          );
+        })}
       </ul>
     </div>
   ))}
