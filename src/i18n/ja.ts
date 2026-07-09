@@ -78,6 +78,7 @@ export default {
     roomSuffix: "室",
     yearSuffix: "年",
     monthSuffix: "月",
+    today: "今日",
     // 時刻と会場/部屋の区切り。前後の空白込み
     metaSeparator: " ・ ",
   },
