@@ -12,41 +12,24 @@ interface Props {
 const { dates, locale } = Astro.props;
 const i = t(locale);
 
-function getMonthKey(dateStr: string): string {
-  const { year, month } = getDateParts(dateStr);
-  return `${year}-${String(month).padStart(2, "0")}`;
-}
-
-const monthMap = new Map<string, ScheduleDate[]>();
+// お知らせ一覧と同じ「年見出し + MM.DD 行」構造。行が月を持つので月見出しは置かない
+const yearMap = new Map<number, ScheduleDate[]>();
 for (const d of dates) {
-  const key = getMonthKey(d.date);
-  if (!monthMap.has(key)) monthMap.set(key, []);
-  monthMap.get(key)!.push(d);
+  const { year } = getDateParts(d.date);
+  if (!yearMap.has(year)) yearMap.set(year, []);
+  yearMap.get(year)!.push(d);
 }
-const groupedByMonth = Array.from(monthMap.entries()).map(([key, dates]) => ({ key, dates }));
-
-function formatMonthHeading(monthKey: string): string {
-  const [year, month] = monthKey.split("-");
-  if (locale === "ja") {
-    return `${year}${i.schedule.yearSuffix} ${parseInt(month)}${i.schedule.monthSuffix}`;
-  }
-  const d = new Date(`${monthKey}-01T00:00:00+09:00`);
-  return new Intl.DateTimeFormat("en-US", {
-    timeZone: "Asia/Tokyo",
-    year: "numeric",
-    month: "long",
-  }).format(d);
-}
+const groupedByYear = Array.from(yearMap.entries()).map(([year, dates]) => ({ year, dates }));
 ---
 
 <div class="flex flex-col gap-8">
-  {groupedByMonth.map(({ key, dates: monthDates }) => (
+  {groupedByYear.map(({ year, dates: yearDates }) => (
     <div>
       <h2 class="text-sm font-semibold uppercase tracking-wider text-muted mb-3 pb-2 border-b border-edge">
-        {formatMonthHeading(key)}
+        {year}{i.schedule.yearSuffix}
       </h2>
       <ul class="flex flex-col">
-        {monthDates.map((date) => (
+        {yearDates.map((date) => (
           <li class="flex items-baseline gap-4 py-3 border-b border-hairline last:border-0">
             <div class="flex items-baseline gap-1.5 min-w-[80px] shrink-0">
               <span class="text-xl font-semibold text-ink tabular-nums">
