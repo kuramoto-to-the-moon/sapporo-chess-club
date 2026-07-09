@@ -1,7 +1,7 @@
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 import type { Locale } from "@/i18n";
-import { parseDate, getDateParts, startOfTodayJST } from "@/lib/date";
+import { parseDate, getDateParts, formatMonthDay, startOfTodayJST } from "@/lib/date";
 
 export type Announcement = CollectionEntry<"announcements">;
 
@@ -110,8 +110,8 @@ export function hasJaOnlyContent(entry: Announcement): boolean {
 
 /** "2026-04-12" -> "2026.04.12" */
 export function formatAnnouncementDate(dateStr: string): string {
-  const { year, month, day } = getDateParts(dateStr);
-  return `${year}.${String(month).padStart(2, "0")}.${String(day).padStart(2, "0")}`;
+  const { year } = getDateParts(dateStr);
+  return `${year}.${formatMonthDay(dateStr)}`;
 }
 
 /**

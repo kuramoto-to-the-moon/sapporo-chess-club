@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import { t, getLocalePath, type Locale } from "@/i18n";
-import { getDateParts, getDayOfWeek } from "@/lib/date";
+import { formatMonthDay, getDayOfWeek } from "@/lib/date";
 import { getEventName } from "@/lib/schedule";
 import { getUpcomingScheduleDates } from "@/lib/schedule-data";
 import SectionHeader from "@/components/SectionHeader.astro";
@@ -17,15 +17,14 @@ const venueName = siteData[0].data.venue.name;
 
 // getUpcomingScheduleDates は既に JST today 以降 / 昇順ソート済み
 const [next] = await getUpcomingScheduleDates(1);
-const parts = next ? getDateParts(next.date) : null;
 const isTournament = next?.type === "tournament";
 ---
 
-{next && parts && (
+{next && (
   <section class="px-5 py-8 border-t border-hairline animate-fade-in-up">
     <SectionHeader label={isTournament ? i.nextEvent.event : i.nextEvent.meeting} />
     <p class="flex items-baseline gap-2">
-      <span class="text-5xl font-extralight leading-none text-primary">{parts.month}/{parts.day}</span>
+      <span class="text-5xl font-extralight leading-none text-primary tabular-nums">{formatMonthDay(next.date)}</span>
       <span class="text-lg text-muted">({getDayOfWeek(next.date, locale)})</span>
     </p>
     {isTournament && (

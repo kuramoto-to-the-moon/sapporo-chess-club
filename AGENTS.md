@@ -41,6 +41,7 @@
 
 - `src/lib/date.ts` の `parseDate` / `startOfTodayJST` / `getDateParts` を必ず通す
 - `new Date("2026-04-15")` を直接使わない (UTC 真夜中扱いで日付がずれる)
+- **表示表記は統一**: 月日 = `07.19`（`formatMonthDay`、0埋め・ドット）、年付き = `2026.07.19`（`formatAnnouncementDate`）。独自フォーマットを組まない
 
 ## CMS データ
 

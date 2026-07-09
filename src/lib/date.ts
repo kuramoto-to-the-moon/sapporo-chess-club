@@ -46,6 +46,15 @@ export function getDayOfWeek(s: string, locale: "ja" | "en"): string {
 }
 
 /**
+ * サイト共通の月日表記: "2026-07-19" -> "07.19"（0埋め・ドット区切り）。
+ * 年付きは lib/announcement.ts の formatAnnouncementDate ("2026.07.19") を使う。
+ */
+export function formatMonthDay(s: string): string {
+  const { month, day } = getDateParts(s);
+  return `${String(month).padStart(2, "0")}.${String(day).padStart(2, "0")}`;
+}
+
+/**
  * "2026-04-15" のような date-only 文字列から年/月/日 を取り出す。
  * Date オブジェクトを介さないのでタイムゾーンの影響を受けない。
  * 完全な ISO の場合は parseDate 経由で JST 換算した日付を返す。
