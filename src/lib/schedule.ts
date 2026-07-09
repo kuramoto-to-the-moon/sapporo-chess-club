@@ -9,6 +9,7 @@ export interface ScheduleDate {
   eventName?: { ja: string; en: string };
   note?: { ja: string; en: string };
   announcementSlug?: string;
+  cancelled?: boolean;
 }
 
 /**

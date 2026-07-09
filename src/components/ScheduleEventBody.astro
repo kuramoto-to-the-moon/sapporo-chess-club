@@ -10,25 +10,39 @@ interface Props {
 const { date, locale } = Astro.props;
 const i = t(locale);
 const isTournament = date.type === "tournament";
+const cancelled = date.cancelled === true;
+// 中止は例会でも起こり得る → その場合も badge+title 行を出す
+const showTitleRow = isTournament || cancelled;
 const meta = `${date.startTime}–${date.endTime}${i.schedule.metaSeparator}${date.room}${i.schedule.roomSuffix}`;
+// 中止でも文字を薄くしない。取り消し線だけで伝える（理由を読み取りにくくしないため）
+const titleClass = cancelled
+  ? "text-ink line-through"
+  : "text-primary [@media(hover:hover)]:hover:text-primary-hover transition-colors duration-150";
 ---
 
-{isTournament ? (
+{showTitleRow ? (
   <>
     <p class="text-sm font-semibold flex items-center gap-2 flex-wrap">
-      <span class="text-xs px-1.5 py-0.5 rounded bg-primary text-white font-semibold">
-        {i.badge.tournamentTag}
-      </span>
+      {isTournament && (
+        <span class="text-xs px-1.5 py-0.5 rounded bg-primary text-white font-semibold">
+          {i.badge.tournamentTag}
+        </span>
+      )}
+      {cancelled && (
+        <span class="text-xs px-1.5 py-0.5 rounded bg-muted text-white font-semibold">
+          {i.badge.cancelledTag}
+        </span>
+      )}
       {date.announcementSlug ? (
         <a
           href={getLocalePath(locale, `/announcements/${date.announcementSlug}`)}
           data-astro-prefetch
-          class="text-primary [@media(hover:hover)]:hover:text-primary-hover transition-colors duration-150"
+          class={titleClass}
         >
           {getEventName(date, locale)}
         </a>
       ) : (
-        <span>{getEventName(date, locale)}</span>
+        <span class={titleClass}>{getEventName(date, locale)}</span>
       )}
     </p>
     <p class="text-xs text-muted mt-1">{meta}</p>

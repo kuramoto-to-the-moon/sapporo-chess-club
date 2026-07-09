@@ -49,6 +49,12 @@ const nullableString = z.string().nullable().optional()
   .transform((v) => (v === null || v === undefined || v === "") ? undefined : v);
 
 /**
+ * YAML の真偽値フィールド。CMS でチェックボックス未設定 (null/undefined) は false 扱い。
+ */
+const yamlBoolean = z.boolean().nullable().optional()
+  .transform((v) => v === true);
+
+/**
  * ja/en の i18n オブジェクト。null / 空文字列 / 空オブジェクトを全て undefined に。
  * CMS が { ja: null, en: null } や { ja: "", en: "" } で保存するケースに対応。
  */
@@ -77,6 +83,7 @@ const scheduleMeetings = defineCollection({
     endTime: timeString,
     room: yamlString,
     note: optionalI18n,
+    cancelled: yamlBoolean,
   }),
 });
 
@@ -91,6 +98,7 @@ const scheduleTournaments = defineCollection({
     room: yamlString,
     note: optionalI18n,
     announcement: nullableString,
+    cancelled: yamlBoolean,
   }),
 });
 

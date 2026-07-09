@@ -138,6 +138,7 @@ export default {
   badge: {
     tournamentTag: "大会",
     meetingTag: "例会",
+    cancelledTag: "中止",
   },
   menu: {
     sectionLabel: "セクション",

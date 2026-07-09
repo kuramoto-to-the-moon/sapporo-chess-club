@@ -85,7 +85,7 @@ export function buildEventsJsonLd(
   const i = t(locale);
   const ogImage = new URL("/images/og.webp", astroSite).toString();
 
-  type MergedEvent = { name: string; startDate: string; startTime: string; endDate: string; endTime: string };
+  type MergedEvent = { name: string; startDate: string; startTime: string; endDate: string; endTime: string; cancelled: boolean };
   const mergedTournaments: MergedEvent[] = [];
   for (const t of tournaments) {
     const name = getEventName(t, locale);
@@ -99,8 +99,17 @@ export function buildEventsJsonLd(
         existing.startDate = t.date;
         existing.startTime = t.startTime;
       }
+      // 全日程が中止の場合のみ Event 全体を中止扱いにする
+      existing.cancelled = existing.cancelled && t.cancelled === true;
     } else {
-      mergedTournaments.push({ name, startDate: t.date, startTime: t.startTime, endDate: t.date, endTime: t.endTime });
+      mergedTournaments.push({
+        name,
+        startDate: t.date,
+        startTime: t.startTime,
+        endDate: t.date,
+        endTime: t.endTime,
+        cancelled: t.cancelled === true,
+      });
     }
   }
 
@@ -146,7 +155,9 @@ export function buildEventsJsonLd(
       name: i.site.name,
     },
     eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
-    eventStatus: "https://schema.org/EventScheduled",
+    eventStatus: t.cancelled
+      ? "https://schema.org/EventCancelled"
+      : "https://schema.org/EventScheduled",
   })));
 }
 

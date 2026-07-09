@@ -152,6 +152,7 @@ export default {
   badge: {
     tournamentTag: "Tournament",
     meetingTag: "Meeting",
+    cancelledTag: "Cancelled",
   },
   menu: {
     sectionLabel: "Sections",

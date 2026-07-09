@@ -44,6 +44,10 @@ content:
         fields:
           - { name: ja, label: 日本語, type: string }
           - { name: en, label: English, type: string }
+      - name: cancelled
+        label: 中止
+        type: boolean
+        description: "チェックすると一覧に「中止」バッジが付く。中止理由は「備考」に書く。"
 
   - name: scheduleTournaments
     label: スケジュール（大会）
@@ -91,6 +95,10 @@ content:
         fields:
           - { name: ja, label: 日本語, type: string }
           - { name: en, label: English, type: string }
+      - name: cancelled
+        label: 中止
+        type: boolean
+        description: "チェックすると「大会」バッジの隣に「中止」バッジが付く。大会名から「（中止）」を書く必要はない。中止理由は「備考」に書く。"
       - name: announcement
         label: 関連お知らせ（要項）
         type: reference
