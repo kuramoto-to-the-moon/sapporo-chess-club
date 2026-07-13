@@ -151,7 +151,7 @@ const enUrl = new URL(`/en${withTrailingSlash(pagePath)}`, Astro.site).toString(
       {i.nav.skipToMain}
     </a>
     <Header locale={locale} />
-    <main id="main-content" class="max-w-4xl w-full mx-auto flex-1 animate-fade-in">
+    <main id="main-content" tabindex="-1" class="max-w-4xl w-full mx-auto flex-1 animate-fade-in focus:outline-none">
       <slot />
     </main>
     <Footer locale={locale} />
@@ -170,6 +170,7 @@ const enUrl = new URL(`/en${withTrailingSlash(pagePath)}`, Astro.site).toString(
         <GlobeIcon size={15} stroke="white" strokeWidth={2} class="shrink-0" />
         <a
           href={getLocalePath("en", normalizedPath)}
+          hreflang="en"
           class="text-white text-[15px] font-semibold no-underline"
           data-lang-pill-link
         >

@@ -36,21 +36,25 @@ const checkClass =
 
 <div>
   <div class="sm:hidden relative" data-filter-select>
-    <label
-      for="year-filter-trigger"
+    {/* label→button の関連付けはブラウザ/SR 実装差で不安定なので、span + aria-labelledby で
+        「年で絞り込み + 現在値」をアクセシブルネームにする */}
+    <span
+      id="year-filter-label"
       class="block text-xs uppercase tracking-wider text-muted mb-2"
     >
       {i.schedule.filterByYear}
-    </label>
+    </span>
     <button
       id="year-filter-trigger"
       type="button"
       data-filter-trigger
       aria-haspopup="listbox"
       aria-expanded="false"
+      aria-labelledby="year-filter-label year-filter-current"
+      aria-controls="year-filter-listbox"
       class="w-full min-h-[44px] rounded-md border border-edge bg-white px-3 flex items-center justify-between text-sm text-ink cursor-pointer [@media(hover:hover)]:hover:bg-surface transition-colors"
     >
-      <span data-filter-trigger-label>{allOption.label}</span>
+      <span id="year-filter-current" data-filter-trigger-label>{allOption.label}</span>
       <svg
         data-filter-chevron
         width="16"
@@ -69,14 +73,17 @@ const checkClass =
     </button>
 
     <ul
+      id="year-filter-listbox"
       data-filter-listbox
       role="listbox"
       aria-label={i.schedule.filterByYear}
       hidden
       class="absolute left-0 right-0 top-full mt-1.5 z-20 bg-white border border-edge rounded-md shadow-lg overflow-y-auto py-1"
     >
+      {/* li に role="presentation": listbox 直下は option でなければならず、
+          li の暗黙 listitem role が挟まると SR が option 数を読めない */}
       {selectOptions.map((opt) => (
-        <li>
+        <li role="presentation">
           <button
             type="button"
             role="option"

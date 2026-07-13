@@ -39,6 +39,9 @@ export default {
     close: "Close",
     languageShort: "EN",
     languageFull: "English",
+    // aria-label 用。ホームリンクは可視テキスト "SAPPORO CHESS CLUB" を含める (label-in-name)
+    homeLink: "SAPPORO CHESS CLUB — ホーム",
+    mainNav: "メインナビゲーション",
   },
   sections: {
     home: "HOME",
@@ -108,6 +111,7 @@ export default {
     back: "← お知らせ一覧",
     prev: "前のお知らせ",
     next: "次のお知らせ",
+    paginationLabel: "前後のお知らせ",
     empty: "まだお知らせはありません。",
     englishNotAvailable: "",
     englishNotAvailableDetail: "",
@@ -143,6 +147,9 @@ export default {
   },
   menu: {
     sectionLabel: "セクション",
+    dialogLabel: "ナビゲーションメニュー",
+    openLabel: "メニューを開く",
+    closeLabel: "メニューを閉じる",
     activities: "活動内容",
     info: "参加案内・会場",
     lessons: "チェス講座",

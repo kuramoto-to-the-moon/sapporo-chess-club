@@ -1,7 +1,7 @@
 ---
 import HamburgerMenu from "./HamburgerMenu.astro";
 import LanguageToggle from "./LanguageToggle.astro";
-import { getLocalePath, type Locale } from "@/i18n";
+import { t, getLocalePath, type Locale } from "@/i18n";
 import { getTopNavPages, normalizePath } from "@/lib/nav";
 
 interface Props {
@@ -9,6 +9,7 @@ interface Props {
 }
 
 const { locale } = Astro.props;
+const i = t(locale);
 const currentPath = normalizePath(Astro.url.pathname)
   .replace(/^\/en(\/|$)/, "/");
 const homeHref = getLocalePath(locale, "/");
@@ -18,17 +19,16 @@ const topNavPages = getTopNavPages(locale);
 <header
   id="site-header"
   class="sticky top-0 z-30 border-b border-hairline bg-white/95 backdrop-blur-sm transition-transform duration-500 ease-in-out data-[state=hidden]:-translate-y-full"
-  aria-label="Site header"
 >
   <div class="max-w-4xl mx-auto flex items-center justify-between px-5 pt-3 pb-2">
     <a
       href={homeHref}
       class="text-xs tracking-[3px] text-muted [@media(hover:hover)]:hover:text-primary transition-colors duration-150"
-      aria-label="Sapporo Chess Club — Home"
+      aria-label={i.nav.homeLink}
     >
       SAPPORO CHESS CLUB
     </a>
-    <nav class="hidden md:flex items-center gap-1" aria-label="Main navigation">
+    <nav class="hidden md:flex items-center gap-1" aria-label={i.nav.mainNav}>
       {topNavPages.map((page) => (
         <a
           href={page.href}

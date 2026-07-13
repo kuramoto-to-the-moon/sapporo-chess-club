@@ -19,6 +19,9 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
   <script>
     const isEn = /^\/en(\/|$)/.test(location.pathname);
     if (isEn) {
+      // 表示言語を英語に切り替えたら lang も追従させる (スクリーンリーダーの音声合成が
+      // 日本語エンジンのまま英文を読んでしまうのを防ぐ)
+      document.documentElement.lang = "en";
       const msg = document.getElementById("not-found-msg");
       const link = document.getElementById("not-found-link") as HTMLAnchorElement | null;
       if (msg) msg.textContent = "Page not found";

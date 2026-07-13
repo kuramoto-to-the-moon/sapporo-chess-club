@@ -53,6 +53,9 @@ export default {
     close: "閉じる",
     languageShort: "JA",
     languageFull: "日本語",
+    // aria-label 用。ホームリンクは可視テキスト "SAPPORO CHESS CLUB" を含める (label-in-name)
+    homeLink: "SAPPORO CHESS CLUB — Home",
+    mainNav: "Main navigation",
   },
   sections: {
     home: "HOME",
@@ -122,6 +125,7 @@ export default {
     back: "← All news",
     prev: "Previous",
     next: "Next",
+    paginationLabel: "Announcement pagination",
     empty: "No news yet.",
     englishNotAvailable: "Some articles are not yet available in English and are shown in Japanese.",
     englishNotAvailableDetail: "This article is not yet available in English. The content below is shown in Japanese.",
@@ -157,6 +161,9 @@ export default {
   },
   menu: {
     sectionLabel: "Sections",
+    dialogLabel: "Navigation menu",
+    openLabel: "Open menu",
+    closeLabel: "Close menu",
     activities: "Activities",
     info: "Entry Fee & Venue",
     lessons: "Chess Lessons",

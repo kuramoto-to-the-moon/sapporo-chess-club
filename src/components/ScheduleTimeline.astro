@@ -61,7 +61,7 @@ function formatMonthHeading(monthKey: string): string {
         {monthEntries.map((e) => (
           <>
             {showTodayMarker && e.idx === firstUpcomingIdx && (
-              <li class="flex items-center gap-2 py-1" aria-label={i.schedule.today}>
+              <li class="flex items-center gap-2 py-1">
                 <span class="text-xs font-semibold tracking-wider text-primary">{i.schedule.today}</span>
                 <span class="flex-1 h-px bg-primary" aria-hidden="true"></span>
               </li>

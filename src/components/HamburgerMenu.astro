@@ -31,7 +31,7 @@ const anchors = [
 <button
   type="button"
   id="hamburger-open"
-  aria-label="Open navigation menu"
+  aria-label={i.menu.openLabel}
   aria-haspopup="dialog"
   aria-controls="hamburger-dialog"
   aria-expanded="false"
@@ -43,20 +43,20 @@ const anchors = [
   </span>
 </button>
 
-<dialog id="hamburger-dialog" class="hamburger-dialog" aria-label="Navigation menu">
+<dialog id="hamburger-dialog" class="hamburger-dialog" aria-label={i.menu.dialogLabel}>
   <div class="flex flex-col w-full h-full bg-ink text-surface">
     <div class="w-full max-w-4xl mx-auto flex items-center justify-between px-5 pt-3 pb-2">
       <a
         href={homeHref}
         class="text-xs tracking-[3px] text-dim [@media(hover:hover)]:hover:text-surface transition-colors duration-150"
-        aria-label="Sapporo Chess Club — Home"
+        aria-label={i.nav.homeLink}
       >
         SAPPORO CHESS CLUB
       </a>
       <button
         type="button"
         data-hamburger-close
-        aria-label="Close navigation menu"
+        aria-label={i.menu.closeLabel}
         class="relative inline-flex items-center justify-center w-10 h-10 -mr-2 text-surface cursor-pointer rounded focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-surface before:content-[''] before:absolute before:-inset-2"
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -66,7 +66,7 @@ const anchors = [
       </button>
     </div>
 
-    <nav class="flex-1 min-h-0 w-full max-w-4xl mx-auto px-5 pt-5 overflow-y-auto overscroll-contain" aria-label="Main navigation">
+    <nav class="flex-1 min-h-0 w-full max-w-4xl mx-auto px-5 pt-5 overflow-y-auto overscroll-contain" aria-label={i.nav.mainNav}>
       {pages.map((page, idx) => (
         <a
           href={page.href}
