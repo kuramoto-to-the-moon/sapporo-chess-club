@@ -11,50 +11,41 @@ const { date, locale } = Astro.props;
 const i = t(locale);
 const isTournament = date.type === "tournament";
 const cancelled = date.cancelled === true;
-// 中止は例会でも起こり得る → その場合も badge+title 行を出す
-const showTitleRow = isTournament || cancelled;
 const meta = formatScheduleMeta(date, locale);
 ---
 
-{showTitleRow ? (
-  <>
-    <p class="text-sm font-semibold flex items-center gap-2 flex-wrap">
-      {isTournament && (
-        <span class="text-xs px-1.5 py-0.5 rounded bg-primary text-white font-semibold">
-          {i.badge.tournamentTag}
-        </span>
-      )}
-      {cancelled && (
-        <span class="text-xs px-1.5 py-0.5 rounded bg-hairline text-sub font-semibold">
-          {i.badge.cancelledTag}
-        </span>
-      )}
-      {/* 中止の状態表現は「中止」バッジ単独 (+ リンク名への sr-only プレフィックス)。
-          タイトルへの装飾 (取り消し線/グレー化/下線) は意味が伝わらず過剰と判断して全廃。
-          リンクは他の全リンクと同じ青の規約に従う */}
-      {date.announcementSlug ? (
-        <a
-          href={getLocalePath(locale, `/announcements/${date.announcementSlug}`)}
-          data-astro-prefetch
-          class="text-primary [@media(hover:hover)]:hover:text-primary-hover transition-colors duration-150"
-        >
-          {/* スクリーンリーダーの「リンク一覧」読み上げは直前のバッジ span を
-              読まないため、リンク名自体にも状態を埋め込む (視覚上は非表示) */}
-          {cancelled && <span class="sr-only">{i.badge.cancelledTag}: </span>}
-          {getEventName(date, locale)}
-        </a>
-      ) : (
-        <span>{getEventName(date, locale)}</span>
-      )}
-    </p>
-    <p class="text-xs text-muted mt-1">{meta}</p>
-  </>
-) : (
-  <p class="text-sm">
-    <span class="font-semibold">{getEventName(date, locale)}</span>
-    <span class="text-muted ml-2">{meta}</span>
-  </p>
-)}
+{/* 例会も大会も同じ解剖: 題名行 (バッジ + 名前) → メタ行 → 注記行。
+    例会のバッジは題名 "例会" と同語で重複するため付けない */}
+<p class="text-sm font-semibold flex items-center gap-2 flex-wrap">
+  {isTournament && (
+    <span class="text-xs px-1.5 py-0.5 rounded bg-primary text-white font-semibold">
+      {i.badge.tournamentTag}
+    </span>
+  )}
+  {cancelled && (
+    <span class="text-xs px-1.5 py-0.5 rounded bg-hairline text-sub font-semibold">
+      {i.badge.cancelledTag}
+    </span>
+  )}
+  {/* 中止の状態表現は「中止」バッジ単独 (+ リンク名への sr-only プレフィックス)。
+      タイトルへの装飾 (取り消し線/グレー化/下線) は意味が伝わらず過剰と判断して全廃。
+      リンクは他の全リンクと同じ青の規約に従う */}
+  {date.announcementSlug ? (
+    <a
+      href={getLocalePath(locale, `/announcements/${date.announcementSlug}`)}
+      data-astro-prefetch
+      class="text-primary [@media(hover:hover)]:hover:text-primary-hover transition-colors duration-150"
+    >
+      {/* スクリーンリーダーの「リンク一覧」読み上げは直前のバッジ span を
+          読まないため、リンク名自体にも状態を埋め込む (視覚上は非表示) */}
+      {cancelled && <span class="sr-only">{i.badge.cancelledTag}: </span>}
+      {getEventName(date, locale)}
+    </a>
+  ) : (
+    <span>{getEventName(date, locale)}</span>
+  )}
+</p>
+<p class="text-xs text-muted mt-1">{meta}</p>
 {date.note && (
   <p class="text-xs text-muted mt-1">{date.note[locale]}</p>
 )}
