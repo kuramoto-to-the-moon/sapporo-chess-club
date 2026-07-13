@@ -66,7 +66,9 @@ function formatMonthHeading(monthKey: string): string {
                 <span class="flex-1 h-px bg-primary" aria-hidden="true"></span>
               </li>
             )}
-            <li class={`flex items-baseline gap-4 py-4 border-b border-hairline last:border-0${e.isPast ? " opacity-45" : ""}`}>
+            {/* 過去行は背景ティントで区別する。opacity での減光は内包する全テキストが
+                WCAG AA を割るため使わない (muted 文字は 45% で 1.8:1 まで落ちる) */}
+            <li class={`flex items-baseline gap-4 py-4 border-b border-hairline last:border-0${e.isPast ? " bg-surface -mx-2 px-2 rounded" : ""}`}>
               <div class="flex items-baseline gap-1.5 min-w-[72px] shrink-0">
                 <span class="text-xl font-semibold text-ink tabular-nums">{getDateParts(e.date.date).day}</span>
                 <span class="text-xs text-muted">({getDayOfWeek(e.date.date, locale)})</span>
