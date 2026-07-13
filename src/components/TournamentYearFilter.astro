@@ -146,7 +146,17 @@ const checkClass =
     optionEls.map((el) => [el.dataset.filterOption ?? "", el.dataset.filterLabel ?? ""])
   );
 
-  /** 選択された年を pill / listbox / カード表示 / SR 告知に同期する */
+  // 選択年を URL (?year=2024) と同期する。共有・ブックマーク・リロードで状態が残る。
+  // フィルタ操作で履歴を積まないよう replaceState を使う ("all" はパラメータなし = 素の URL)
+  const YEAR_PARAM = "year";
+  function syncUrl(year: string) {
+    const url = new URL(location.href);
+    if (year === "all") url.searchParams.delete(YEAR_PARAM);
+    else url.searchParams.set(YEAR_PARAM, year);
+    history.replaceState(null, "", url);
+  }
+
+  /** 選択された年を pill / listbox / カード表示 / URL / SR 告知に同期する */
   function applyYear(year: string) {
     let visible = 0;
     cards.forEach((c) => {
@@ -160,6 +170,7 @@ const checkClass =
     optionEls.forEach((el) => {
       el.setAttribute("aria-selected", el.dataset.filterOption === year ? "true" : "false");
     });
+    syncUrl(year);
     const label = labelByValue.get(year) ?? year;
     if (labelEl) labelEl.textContent = label;
     if (liveEl) {
@@ -173,6 +184,12 @@ const checkClass =
   pills.forEach((b) => {
     b.addEventListener("click", () => applyYear(b.dataset.filterPill ?? "all"));
   });
+
+  // URL に年指定があれば初期状態として復元 (不正値は labelByValue 照合で無視)
+  const initialYear = new URLSearchParams(location.search).get(YEAR_PARAM);
+  if (initialYear && labelByValue.has(initialYear)) {
+    applyYear(initialYear);
+  }
 
   // モバイル: listbox 開閉とキーボード操作は共通ヘルパーに委譲
   const root = document.querySelector<HTMLElement>("[data-filter-select]");
