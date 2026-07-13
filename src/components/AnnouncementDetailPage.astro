@@ -69,7 +69,7 @@ const breadcrumbJsonLd = buildBreadcrumbJsonLd([
       </p>
     )}
 
-    <p class="text-sm text-muted mt-6 tabular-nums animate-fade-in-up stagger-1">{formatAnnouncementDate(entry.data.date)}</p>
+    <p class="text-sm text-muted mt-6 tabular-nums animate-fade-in-up stagger-1"><time datetime={entry.data.date}>{formatAnnouncementDate(entry.data.date)}</time></p>
     <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mt-2 leading-tight animate-fade-in-up stagger-2">
       {title}
     </h1>

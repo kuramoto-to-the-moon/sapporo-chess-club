@@ -32,7 +32,7 @@ const titleClass = cancelled
   <section class="px-5 py-8 border-t border-hairline animate-fade-in-up">
     <SectionHeader label={isTournament ? i.nextEvent.event : i.nextEvent.meeting} />
     <p class="flex items-baseline gap-2">
-      <span class="text-5xl font-extralight leading-none text-primary tabular-nums">{formatMonthDay(next.date)}</span>
+      <time datetime={next.date} class="text-5xl font-extralight leading-none text-primary tabular-nums">{formatMonthDay(next.date)}</time>
       <span class="text-lg text-muted">({getDayOfWeek(next.date, locale)})</span>
     </p>
     {showTitleRow && (

@@ -70,7 +70,7 @@ function formatMonthHeading(monthKey: string): string {
                 WCAG AA を割るため使わない (muted 文字は 45% で 1.8:1 まで落ちる) */}
             <li class={`flex items-baseline gap-4 py-4 border-b border-hairline last:border-0${e.isPast ? " bg-surface -mx-2 px-2 rounded" : ""}`}>
               <div class="flex items-baseline gap-1.5 min-w-[72px] shrink-0">
-                <span class="text-xl font-semibold text-ink tabular-nums">{getDateParts(e.date.date).day}</span>
+                <time datetime={e.date.date} class="text-xl font-semibold text-ink tabular-nums">{getDateParts(e.date.date).day}</time>
                 <span class="text-xs text-muted">({getDayOfWeek(e.date.date, locale)})</span>
               </div>
               <div class="flex-1 min-w-0">
