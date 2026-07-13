@@ -21,9 +21,10 @@ const isTournament = next?.type === "tournament";
 const cancelled = next?.cancelled === true;
 // 中止でも例会でも起こり得る → その場合も badge+title 行を出す
 const showTitleRow = isTournament || cancelled;
-// text-sub は本文と同じ通常の濃さ（弱い階調ではない）。ScheduleEventBody と同じ判断
+// ScheduleEventBody と同じ判断: 取り消し線は使わず (多くのスクリーンリーダーが読み上げない
+// 装飾のため)、リンクの場合だけ下線でクリック可能な見た目を保つ
 const titleClass = cancelled
-  ? "text-sub line-through"
+  ? "text-sub underline decoration-1 underline-offset-2 [@media(hover:hover)]:hover:text-ink transition-colors duration-150"
   : "text-primary [@media(hover:hover)]:hover:text-primary-hover transition-colors duration-150";
 ---
 
@@ -52,6 +53,7 @@ const titleClass = cancelled
             data-astro-prefetch
             class={titleClass}
           >
+            {cancelled && <span class="sr-only">{i.badge.cancelledTag}: </span>}
             {getEventName(next, locale)}
           </a>
         ) : (

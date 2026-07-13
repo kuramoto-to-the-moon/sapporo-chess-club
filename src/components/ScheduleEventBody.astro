@@ -14,10 +14,13 @@ const cancelled = date.cancelled === true;
 // 中止は例会でも起こり得る → その場合も badge+title 行を出す
 const showTitleRow = isTournament || cancelled;
 const meta = formatScheduleMeta(date, locale);
-// 中止でも文字を薄くしすぎない。text-sub は本文と同じ通常の濃さ（text-muted のような
-// 弱い階調ではない）。取り消し線と合わせて「濃い黒+線」より落ち着いた見た目にする
+// 状態は「中止」バッジ (テキスト) だけで伝える。取り消し線は多くのスクリーンリーダーが
+// 読み上げず晴眼者向けの演出にしかならないため使わない。タイトル色は text-sub
+// (本文と同じ濃さ、text-muted のような弱い階調ではない) に留める。
+// リンクの場合だけ下線を足す: 色を primary から外した分、クリックできる見た目の
+// 手がかりが失われるため (サイト全体でリンク=青の規約になっている)。
 const titleClass = cancelled
-  ? "text-sub line-through"
+  ? "text-sub underline decoration-1 underline-offset-2 [@media(hover:hover)]:hover:text-ink transition-colors duration-150"
   : "text-primary [@media(hover:hover)]:hover:text-primary-hover transition-colors duration-150";
 ---
 
@@ -40,6 +43,9 @@ const titleClass = cancelled
           data-astro-prefetch
           class={titleClass}
         >
+          {/* スクリーンリーダーの「リンク一覧」読み上げは直前のバッジ span を
+              読まないため、リンク名自体にも状態を埋め込む (視覚上は非表示) */}
+          {cancelled && <span class="sr-only">{i.badge.cancelledTag}: </span>}
           {getEventName(date, locale)}
         </a>
       ) : (
