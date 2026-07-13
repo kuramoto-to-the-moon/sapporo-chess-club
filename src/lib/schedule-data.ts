@@ -39,12 +39,14 @@ export async function getSortedScheduleDates(): Promise<ScheduleDate[]> {
 }
 
 /**
- * build 時の JST「今日」以降のイベントだけを返す。
+ * build 時の JST「今日」以降・中止を除いたイベントを返す。
+ * TOP (次回のイベント / スケジュール) 向け — 開催予定が確実なものだけを見せる。
+ * 中止の記録は年間スケジュールページ (getSortedScheduleDates) 側にのみ残す。
  * 先頭 N 件だけ必要な場合に使う。
  */
 export async function getUpcomingScheduleDates(limit?: number): Promise<ScheduleDate[]> {
   const all = await getSortedScheduleDates();
   const today = startOfTodayJST();
-  const upcoming = all.filter((d) => parseDate(d.date) >= today);
+  const upcoming = all.filter((d) => parseDate(d.date) >= today && !d.cancelled);
   return limit ? upcoming.slice(0, limit) : upcoming;
 }
