@@ -34,6 +34,13 @@
     scrollbar-color: var(--color-faint) transparent;
     scrollbar-gutter: stable;
   }
+  /* 組版: 見出しは行長バランス、本文は行末孤立語などを防ぐ。未対応ブラウザは無視するだけ */
+  h1, h2, h3 {
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
   /* Chrome / Safari / Edge */
   ::-webkit-scrollbar {
     width: 12px;

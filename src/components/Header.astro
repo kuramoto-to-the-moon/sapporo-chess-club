@@ -59,34 +59,24 @@ const topNavPages = getTopNavPages(locale);
 
   function initHeadroom(header: HTMLElement) {
     const TOP_THRESHOLD = 100;
-    // scrollY が STABLE_FRAMES 連続で変化しなかったら「移動完了」
-    const STABLE_FRAMES = 5;
 
     let frozen = false;
 
-    // headroom を一時凍結 → scrollY が安定するまで待って自動解除。
-    // 時間ベースではなく実際の移動完了を検出する。
+    // headroom を一時凍結 → scrollend (Baseline: Safari 26.2 で全ブラウザ到達) で解除。
+    // スクロールが発生しないケース (アンカーが既に画面内) と scrollend 未対応の
+    // 旧ブラウザのために安全タイマーを併走させる。
     function freezeUntilSettled() {
       if (frozen) return;
       frozen = true;
       header.removeAttribute("data-state");
 
-      let lastY = window.scrollY;
-      let stable = 0;
-      const tick = () => {
-        const y = window.scrollY;
-        if (y === lastY) {
-          if (++stable >= STABLE_FRAMES) {
-            frozen = false;
-            return;
-          }
-        } else {
-          stable = 0;
-          lastY = y;
-        }
-        requestAnimationFrame(tick);
+      const unfreeze = () => {
+        frozen = false;
+        clearTimeout(timer);
+        window.removeEventListener("scrollend", unfreeze);
       };
-      requestAnimationFrame(tick);
+      const timer = setTimeout(unfreeze, 1500);
+      window.addEventListener("scrollend", unfreeze, { once: true });
     }
 
     // 凍結トリガー:
