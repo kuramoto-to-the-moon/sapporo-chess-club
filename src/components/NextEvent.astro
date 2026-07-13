@@ -21,11 +21,7 @@ const isTournament = next?.type === "tournament";
 const cancelled = next?.cancelled === true;
 // 中止でも例会でも起こり得る → その場合も badge+title 行を出す
 const showTitleRow = isTournament || cancelled;
-// ScheduleEventBody と同じ判断: 取り消し線は使わず (多くのスクリーンリーダーが読み上げない
-// 装飾のため)、リンクの場合だけ下線でクリック可能な見た目を保つ
-const titleClass = cancelled
-  ? "text-sub underline decoration-1 underline-offset-2 [@media(hover:hover)]:hover:text-ink transition-colors duration-150"
-  : "text-primary [@media(hover:hover)]:hover:text-primary-hover transition-colors duration-150";
+// ScheduleEventBody と同じ判断: 中止の状態表現はバッジ単独、タイトル装飾なし
 ---
 
 {next && (
@@ -51,13 +47,13 @@ const titleClass = cancelled
           <a
             href={getLocalePath(locale, `/announcements/${next.announcementSlug}`)}
             data-astro-prefetch
-            class={titleClass}
+            class="text-primary [@media(hover:hover)]:hover:text-primary-hover transition-colors duration-150"
           >
             {cancelled && <span class="sr-only">{i.badge.cancelledTag}: </span>}
             {getEventName(next, locale)}
           </a>
         ) : (
-          <span class={titleClass}>{getEventName(next, locale)}</span>
+          <span>{getEventName(next, locale)}</span>
         )}
       </p>
     )}

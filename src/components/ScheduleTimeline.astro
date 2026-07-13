@@ -66,9 +66,9 @@ function formatMonthHeading(monthKey: string): string {
                 <span class="flex-1 h-px bg-primary" aria-hidden="true"></span>
               </li>
             )}
-            {/* 過去行は背景ティントで区別する。opacity での減光は内包する全テキストが
-                WCAG AA を割るため使わない (muted 文字は 45% で 1.8:1 まで落ちる) */}
-            <li class={`flex items-baseline gap-4 py-4 border-b border-hairline last:border-0${e.isPast ? " bg-surface -mx-2 px-2 rounded" : ""}`}>
+            {/* 過去/未来の区別は「今日」ラインだけに任せる。行単位の減光 (opacity は
+                WCAG AA 割れ) や背景ティント (画面が騒がしい) は試して却下済み */}
+            <li class="flex items-baseline gap-4 py-4 border-b border-hairline last:border-0">
               <div class="flex items-baseline gap-1.5 min-w-[72px] shrink-0">
                 <time datetime={e.date.date} class="text-xl font-semibold text-ink tabular-nums">{getDateParts(e.date.date).day}</time>
                 <span class="text-xs text-muted">({getDayOfWeek(e.date.date, locale)})</span>
