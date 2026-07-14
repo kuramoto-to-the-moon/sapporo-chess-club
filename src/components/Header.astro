@@ -33,10 +33,12 @@ const topNavPages = getTopNavPages(locale);
         <a
           href={page.href}
           data-astro-prefetch
-          class="text-sm text-sub [@media(hover:hover)]:hover:text-primary transition-colors duration-150 px-3 py-2 -my-2 rounded aria-[current=page]:text-ink aria-[current=page]:shadow-[inset_0_-2px_0_var(--color-primary)] [@media(hover:hover)]:aria-[current=page]:hover:text-ink"
+          class="inline-grid justify-items-center text-sm text-sub [@media(hover:hover)]:hover:text-primary transition-colors duration-150 px-3 py-2 -my-2 rounded aria-[current=page]:text-ink aria-[current=page]:font-semibold [@media(hover:hover)]:aria-[current=page]:hover:text-ink"
           aria-current={currentPath === page.path ? "page" : undefined}
         >
-          {page.label}
+          <span class="[grid-area:1/1]">{page.label}</span>
+          {/* 不可視の太字コピーで常に太字幅を確保 — 現在ページの太字化でレイアウトが動かない */}
+          <span class="[grid-area:1/1] font-semibold invisible" aria-hidden="true">{page.label}</span>
         </a>
       ))}
       <span class="w-px h-4 bg-edge mx-2" aria-hidden="true"></span>
