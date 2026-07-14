@@ -37,7 +37,7 @@ const site = siteData[0].data;
     <div class="flex flex-col">
       <SectionHeader label={i.clubInfo.venue} />
       <div class="flex flex-col gap-1 text-sm text-sub">
-        <p class="text-ink font-medium">{site.venue.name[locale]}{site.venue.floor ? ` ${site.venue.floor}` : ""}</p>
+        <p class="text-ink font-medium">{site.venue.name[locale]}{site.venue.floor ? ` ${site.venue.floor[locale]}` : ""}</p>
         <p>{site.venue.address[locale]}</p>
         <p class="text-muted text-xs mt-1">{site.venue.access[locale]}</p>
         <a

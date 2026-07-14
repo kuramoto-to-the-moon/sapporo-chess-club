@@ -262,7 +262,10 @@ content:
               - { name: en, label: English, type: string, required: true }
           - name: floor
             label: フロア・部屋
-            type: string
+            type: object
+            fields:
+              - { name: ja, label: 日本語, type: string }
+              - { name: en, label: English, type: string }
           - name: address
             label: 住所
             type: object

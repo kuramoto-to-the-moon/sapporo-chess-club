@@ -144,7 +144,7 @@ const site = defineCollection({
     email: z.string(),
     venue: z.object({
       name: z.object({ ja: z.string(), en: z.string() }),
-      floor: yamlString,
+      floor: optionalI18n,
       address: z.object({ ja: z.string(), en: z.string() }),
       access: z.object({ ja: z.string(), en: z.string() }),
       geo: z.object({
