@@ -12,30 +12,29 @@ interface Props {
 const { dates, locale } = Astro.props;
 const i = t(locale);
 
-// 過去judge はビルド時の JST 今日基準。deploy.yml の日次再ビルドが毎日更新する
+// 過去/今後の判定はビルド時の JST 今日基準。deploy.yml の日次再ビルドが毎日更新する
 // （「今後の予定」フィルタと同じ仕組み）。
 const today = startOfTodayJST();
-const entries = dates.map((date, idx) => ({
-  date,
-  idx,
-  isPast: parseDate(date.date) < today,
-}));
-// 「今日」ラインは最初の未来行の直前に引く。過去行が無ければ出さない
-const firstUpcomingIdx = entries.find((e) => !e.isPast)?.idx ?? -1;
-const showTodayMarker = firstUpcomingIdx > 0;
+const past = dates.filter((d) => parseDate(d.date) < today);
+const upcoming = dates.filter((d) => parseDate(d.date) >= today);
 
 function getMonthKey(dateStr: string): string {
   const { year, month } = getDateParts(dateStr);
   return `${year}-${String(month).padStart(2, "0")}`;
 }
 
-const monthMap = new Map<string, typeof entries>();
-for (const e of entries) {
-  const key = getMonthKey(e.date.date);
-  if (!monthMap.has(key)) monthMap.set(key, []);
-  monthMap.get(key)!.push(e);
+function groupByMonth(list: ScheduleDate[]) {
+  const map = new Map<string, ScheduleDate[]>();
+  for (const d of list) {
+    const key = getMonthKey(d.date);
+    if (!map.has(key)) map.set(key, []);
+    map.get(key)!.push(d);
+  }
+  return Array.from(map.entries()).map(([key, dates]) => ({ key, dates }));
 }
-const groupedByMonth = Array.from(monthMap.entries()).map(([key, entries]) => ({ key, entries }));
+
+const pastMonths = groupByMonth(past);
+const upcomingMonths = groupByMonth(upcoming);
 
 function formatMonthHeading(monthKey: string): string {
   const [year, month] = monthKey.split("-");
@@ -52,32 +51,55 @@ function formatMonthHeading(monthKey: string): string {
 ---
 
 <div class="flex flex-col gap-8">
-  {groupedByMonth.map(({ key, entries: monthEntries }) => (
+  {/* 終了分はネイティブ <details> に畳む。「終了した予定を表示」という文言自体が
+      仕組みの説明になる（独自記号の学習が要らない）。今後の予定が無い時期だけ開いておく */}
+  {past.length > 0 && (
+    <details class="group" open={upcoming.length === 0}>
+      <summary class="flex items-center gap-1.5 py-3 cursor-pointer list-none [&::-webkit-details-marker]:hidden text-sm text-primary [@media(hover:hover)]:hover:underline underline-offset-2">
+        <span class="text-xs transition-transform group-open:rotate-90" aria-hidden="true">▸</span>
+        {i.schedule.showPast(past.length)}
+      </summary>
+      <div class="flex flex-col gap-8 pt-2">
+        {pastMonths.map(({ key, dates: monthDates }) => (
+          <div>
+            <h2 class="text-sm font-semibold uppercase tracking-wider text-muted mb-3 pb-2 border-b border-edge">
+              {formatMonthHeading(key)}
+            </h2>
+            <ul class="flex flex-col">
+              {monthDates.map((date) => (
+                <li class="flex items-baseline gap-4 py-4 border-b border-hairline last:border-0">
+                  <div class="flex items-baseline gap-1.5 min-w-[72px] shrink-0">
+                    <time datetime={date.date} class="text-xl font-semibold text-ink tabular-nums">{getDateParts(date.date).day}</time>
+                    <span class="text-xs text-muted">({getDayOfWeek(date.date, locale)})</span>
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <ScheduleEventBody date={date} locale={locale} />
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </details>
+  )}
+
+  {upcomingMonths.map(({ key, dates: monthDates }) => (
     <div class="[content-visibility:auto] [contain-intrinsic-size:auto_320px]">
       <h2 class="text-sm font-semibold uppercase tracking-wider text-muted mb-3 pb-2 border-b border-edge">
         {formatMonthHeading(key)}
       </h2>
       <ul class="flex flex-col">
-        {monthEntries.map((e) => (
-          <>
-            {showTodayMarker && e.idx === firstUpcomingIdx && (
-              <li class="flex items-center gap-2 py-1">
-                <span class="text-xs font-semibold tracking-wider text-primary">{i.schedule.today}</span>
-                <span class="flex-1 h-px bg-primary" aria-hidden="true"></span>
-              </li>
-            )}
-            {/* 過去/未来の区別は「今日」ラインだけに任せる。行単位の減光 (opacity は
-                WCAG AA 割れ) や背景ティント (画面が騒がしい) は試して却下済み */}
-            <li class="flex items-baseline gap-4 py-4 border-b border-hairline last:border-0">
-              <div class="flex items-baseline gap-1.5 min-w-[72px] shrink-0">
-                <time datetime={e.date.date} class="text-xl font-semibold text-ink tabular-nums">{getDateParts(e.date.date).day}</time>
-                <span class="text-xs text-muted">({getDayOfWeek(e.date.date, locale)})</span>
-              </div>
-              <div class="flex-1 min-w-0">
-                <ScheduleEventBody date={e.date} locale={locale} />
-              </div>
-            </li>
-          </>
+        {monthDates.map((date) => (
+          <li class="flex items-baseline gap-4 py-4 border-b border-hairline last:border-0">
+            <div class="flex items-baseline gap-1.5 min-w-[72px] shrink-0">
+              <time datetime={date.date} class="text-xl font-semibold text-ink tabular-nums">{getDateParts(date.date).day}</time>
+              <span class="text-xs text-muted">({getDayOfWeek(date.date, locale)})</span>
+            </div>
+            <div class="flex-1 min-w-0">
+              <ScheduleEventBody date={date} locale={locale} />
+            </div>
+          </li>
         ))}
       </ul>
     </div>

@@ -83,7 +83,7 @@ export default {
     roomTbd: "未定",
     yearSuffix: "年",
     monthSuffix: "月",
-    today: "今日",
+    showPast: (count: number) => `終了した予定（${count}件）を表示`,
     // 時刻と会場/部屋の区切り。前後の空白込み
     metaSeparator: " ・ ",
   },
