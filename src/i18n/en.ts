@@ -122,7 +122,7 @@ export default {
     pageTitle: "News",
     pageSubtitle: "Latest updates from the club",
     viewAll: "View all news",
-    back: "← All news",
+    back: "All news",
     prev: "Previous",
     next: "Next",
     paginationLabel: "Announcement pagination",

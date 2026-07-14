@@ -4,7 +4,7 @@
 
 ## プロジェクト概要
 
-札幌チェスクラブ公式サイト。Astro 6 + Tailwind v4 の静的サイト、GitHub Pages + カスタムドメイン (`sapporochessclub.com`) で公開。日本語/英語の 2 言語対応。フレームワーク JS は一切なし (vanilla `<script>` のみ)。
+札幌チェスクラブ公式サイト。Astro 7 + Tailwind v4 の静的サイト、GitHub Pages + カスタムドメイン (`sapporochessclub.com`) で公開。日本語/英語の 2 言語対応。フレームワーク JS は一切なし (vanilla `<script>` のみ)。
 
 ## アーキテクチャ
 
@@ -52,19 +52,16 @@
 
 ## デザイン / スタイル
 
-- **Tailwind v4**: 設定は CSS 内 (`@theme` / `@custom-variant`)、`tailwind.config.*` は無い
-- **カラー**: `globals.css` の `@theme` で定義したセマンティックトークンを使う — `primary`(青) `primary-hover` `ink`(見出し) `sub`(本文) `muted`(弱) `hairline`(区切り) `edge`(枠線) `surface`(hover背景) `faint` `dim` `menu-line`。生 hex の arbitrary 値 (`text-[#...]`) は使わない
-  - 例外: 外部サービスリンクの hover はブランドカラー可 — X → 黒、日本チェス連盟 → 赤 `#c8102e`、RSS → 橙 `#f26522`
-- **リンクのトンマナ**:
-  - 前進アクション「〜を見る →」: `text-sm text-primary ... font-medium`、セクションのリスト下に配置。ラベルは行き先名（「すべて見る」等の無情報アンカー禁止）
-  - 戻りナビ「← 〜」: `text-muted` → hover 青。ラベルは行き先名（「〜に戻る」は直接着地ユーザーに不成立なので禁止）
-  - **hover 言語は2種でゾーン分け**: ①青のテキストリンク（見る系/記事/prev-next/戻り/404）= hover **下線のみ** `[@media(hover:hover)]:hover:underline underline-offset-2`、色は静止。②灰色リストゾーン（Resources/Contact/Footer）とナビ UI（Header/ハンバーガー/pill）= hover **色変化のみ**、下線なし。1リンクに両方付けない
-  - 「〜を見る」リンクに装飾矢印（→）は付けない。戻りナビの ← は方向の意味があるので維持
-- **角丸**: `rounded-md` 統一
-- **ホバー**: 必ず `[@media(hover:hover)]:hover:` で gate する（モバイルのタップ残留防止）。素の `hover:` は使わない — 全コンポーネント適用済み
-- **要素間の視覚的間隔は CSS で付ける**（flex `gap` / margin）。ソースの空白・改行に依存しない — Astro 7 の `compressHTML: "jsx"`（デフォルト採用）がインライン要素間の空白を除去するため、空白頼みの間隔は消える
-- **タップ領域**: アイコンボタンは 44px 確保（`before:absolute before:-inset-2` パターン）
-- **focus**: グローバル `:focus-visible`（青 outline）に任せる。`focus-visible:outline-none` で消さない
+新しい UI は既存コンポーネントの形を踏襲する。以下は破ると実害が出るものだけ:
+
+- **Tailwind v4**: 設定は CSS 内 (`@theme`)、`tailwind.config.*` は無い
+- **カラーは `globals.css` の `@theme` トークンのみ**（`text-[#...]` 等の生 hex 禁止）。例外は外部サービスのブランド hover 色（X/JCA/RSS）
+- **hover は必ず `[@media(hover:hover)]:` で gate**（モバイルのタップ残留防止）
+- **リンク**: ラベルは行き先名。テキストリンクは hover で下線（`underline-offset-2`）— 青リンクは色静止、灰色のリストリンク（Resources/Contact/Footer）は色変化も併用。ナビ UI（Header/ハンバーガー/pill）と行 hover は色/背景変化のみ
+- **間隔は CSS（gap / margin）で付ける** — ソースの空白は `compressHTML: "jsx"` が除去するため効かない
+- **角丸は `rounded-md`**
+- **タップ領域 44px**（アイコンボタンは `before:-inset-2` で拡張）
+- **focus はグローバル `:focus-visible` に任せる**（`outline-none` で消さない）
 
 ## セキュリティ
 

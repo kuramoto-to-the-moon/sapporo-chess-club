@@ -108,7 +108,7 @@ export default {
     pageTitle: "お知らせ",
     pageSubtitle: "新着情報・お知らせ一覧",
     viewAll: "お知らせ一覧を見る",
-    back: "← お知らせ一覧",
+    back: "お知らせ一覧",
     prev: "前のお知らせ",
     next: "次のお知らせ",
     paginationLabel: "前後のお知らせ",

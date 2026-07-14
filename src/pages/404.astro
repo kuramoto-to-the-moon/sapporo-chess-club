@@ -12,7 +12,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
       href="/"
       class="inline-block mt-8 text-sm text-primary [@media(hover:hover)]:hover:underline underline-offset-2 font-medium"
     >
-      ← ホームに戻る
+      ホームに戻る
     </a>
   </div>
 
@@ -25,7 +25,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
       const msg = document.getElementById("not-found-msg");
       const link = document.getElementById("not-found-link") as HTMLAnchorElement | null;
       if (msg) msg.textContent = "Page not found";
-      if (link) { link.textContent = "← Back to home"; link.href = "/en/"; }
+      if (link) { link.textContent = "Back to home"; link.href = "/en/"; }
     }
   </script>
 </BaseLayout>
