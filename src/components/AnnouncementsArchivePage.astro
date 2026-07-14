@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import AnnouncementRow from "@/components/AnnouncementRow.astro";
+import Breadcrumbs from "@/components/Breadcrumbs.astro";
 import { t, getLocalePath, type Locale } from "@/i18n";
 import {
   getArchivedAnnouncements,
@@ -37,9 +38,15 @@ const pageTitle = selectedYear
 
 <BaseLayout title={pageTitle} locale={locale} description={i.seo.announcementsArchive.description} noindex={true}>
   <section class="px-5 pt-16 md:pt-20 pb-6">
-    <a href={activeHref} class="inline-block text-sm text-muted [@media(hover:hover)]:hover:underline underline-offset-2 mb-4 animate-fade-in-up">
-      {i.announcements.back}
-    </a>
+    <div class="mb-4">
+      <Breadcrumbs
+        label={i.nav.breadcrumb}
+        items={[
+          { label: i.nav.home, href: getLocalePath(locale, "/") },
+          { label: i.announcements.indexLabel, href: activeHref },
+        ]}
+      />
+    </div>
     <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight animate-fade-in-up">
       {i.announcements.archivePageTitle}
     </h1>

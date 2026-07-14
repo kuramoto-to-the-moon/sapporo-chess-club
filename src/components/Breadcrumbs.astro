@@ -1,0 +1,25 @@
+---
+interface Props {
+  /** nav の aria-label（i18n 済み文字列を渡す） */
+  label: string;
+  /** 上位階層のみ列挙する。現在ページは含めない */
+  items: { label: string; href: string }[];
+}
+
+const { label, items } = Astro.props;
+---
+
+<nav aria-label={label} class="flex items-center gap-2 text-xs text-muted animate-fade-in-up">
+  {items.map((item, idx) => (
+    <>
+      {idx > 0 && <span aria-hidden="true">/</span>}
+      <a
+        href={item.href}
+        data-astro-prefetch
+        class="text-primary [@media(hover:hover)]:hover:underline underline-offset-2"
+      >
+        {item.label}
+      </a>
+    </>
+  ))}
+</nav>

@@ -20,6 +20,7 @@
 | 部品 | 用途 |
 |---|---|
 | `SectionHeader.astro` | セクション h2 + 青ティック。見出しを直書きしない |
+| `Breadcrumbs.astro` | 上位階層への導線（詳細/アーカイブページ上部）。「戻る」リンクは作らない |
 | `AnnouncementRow.astro` | お知らせ行。`fullDate` prop で TOP/一覧を切替 |
 | `ScheduleEventBody.astro` | イベント行本体（バッジ・リンク・時刻・注記） |
 | `ExternalLinkIcon` / `RssIcon` / `GlobeIcon` | 共通 SVG アイコン |
@@ -58,6 +59,7 @@
 - **カラーは `globals.css` の `@theme` トークンのみ**（`text-[#...]` 等の生 hex 禁止）。例外は外部サービスのブランド hover 色（X/JCA/RSS）
 - **hover は必ず `[@media(hover:hover)]:` で gate**（モバイルのタップ残留防止）
 - **リンク**: ラベルは行き先名。テキストリンクは hover で下線（`underline-offset-2`）— 青リンクは色静止、灰色のリストリンク（Resources/Contact/Footer）は色変化も併用。ナビ UI（Header/ハンバーガー/pill）と行 hover は色/背景変化のみ
+- **上位階層への導線は `Breadcrumbs.astro`**（JSON-LD の `buildBreadcrumbJsonLd` と対で使う）
 - **間隔は CSS（gap / margin）で付ける** — ソースの空白は `compressHTML: "jsx"` が除去するため効かない
 - **角丸は `rounded-md`**
 - **タップ領域 44px**（アイコンボタンは `before:-inset-2` で拡張）

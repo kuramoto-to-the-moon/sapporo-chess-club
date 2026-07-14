@@ -42,6 +42,7 @@ export default {
     // aria-label 用。ホームリンクは可視テキスト "SAPPORO CHESS CLUB" を含める (label-in-name)
     homeLink: "SAPPORO CHESS CLUB — ホーム",
     mainNav: "メインナビゲーション",
+    breadcrumb: "パンくずリスト",
   },
   sections: {
     home: "HOME",
@@ -108,7 +109,7 @@ export default {
     pageTitle: "お知らせ",
     pageSubtitle: "新着情報・お知らせ一覧",
     viewAll: "お知らせ一覧を見る",
-    back: "お知らせ一覧",
+    indexLabel: "お知らせ一覧",
     prev: "前のお知らせ",
     next: "次のお知らせ",
     paginationLabel: "前後のお知らせ",

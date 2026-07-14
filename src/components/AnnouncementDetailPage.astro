@@ -12,6 +12,7 @@ import {
 } from "@/lib/announcement";
 import { buildBreadcrumbJsonLd, homeCrumb } from "@/lib/breadcrumb";
 import { buildNewsArticleJsonLd } from "@/lib/jsonld";
+import Breadcrumbs from "@/components/Breadcrumbs.astro";
 
 interface Props {
   locale: Locale;
@@ -59,9 +60,13 @@ const breadcrumbJsonLd = buildBreadcrumbJsonLd([
   <script type="application/ld+json" set:html={breadcrumbJsonLd} />
   <script type="application/ld+json" set:html={articleJsonLd} />
   <article class="px-5 pt-16 md:pt-20 pb-10">
-    <a href={listHref} data-astro-prefetch class="text-sm text-muted [@media(hover:hover)]:hover:underline underline-offset-2 animate-fade-in-up">
-      {i.announcements.back}
-    </a>
+    <Breadcrumbs
+      label={i.nav.breadcrumb}
+      items={[
+        { label: i.nav.home, href: getLocalePath(locale, "/") },
+        { label: i.announcements.indexLabel, href: listHref },
+      ]}
+    />
 
     {isJaFallback && (
       <p class="mt-4 text-xs text-primary italic animate-fade-in-up stagger-1">
