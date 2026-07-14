@@ -72,7 +72,7 @@ const anchors = [
         <a
           href={page.href}
           data-astro-prefetch
-          class="block mb-4 animate-fade-in-up [@media(hover:hover)]:hover:text-white transition-colors duration-150 aria-[current=page]:border-l-2 aria-[current=page]:border-primary aria-[current=page]:pl-3"
+          class="block mb-4 animate-fade-in-up [@media(hover:hover)]:hover:text-white transition-colors duration-150 aria-[current=page]:border-l-2 aria-[current=page]:border-primary aria-[current=page]:pl-3 [@media(hover:hover)]:aria-[current=page]:hover:text-inherit"
           style={`animation-delay: ${idx * 0.05}s`}
           aria-current={page.path === currentPath ? "page" : undefined}
         >
