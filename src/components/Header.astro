@@ -29,8 +29,6 @@ const topNavPages = getTopNavPages(locale);
       SAPPORO CHESS CLUB
     </a>
     <nav class="hidden md:flex items-center gap-1" aria-label={i.nav.mainNav}>
-      {/* 現在ページは色 + 下バー。font-weight を変えると文字幅が変わり
-          ページ遷移で nav が水平シフトするため太字は使わない */}
       {topNavPages.map((page) => (
         <a
           href={page.href}
