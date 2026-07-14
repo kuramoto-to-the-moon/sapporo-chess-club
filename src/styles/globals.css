@@ -72,6 +72,22 @@
   }
 }
 
+/* 記事本文 (prose) 内のリンクをサイト規約に合わせる:
+   typography プラグインのデフォルト (黒・常時下線・太字) を 青 + hover 下線 に上書き */
+@layer components {
+  .prose a {
+    color: var(--color-primary);
+    font-weight: inherit;
+    text-decoration: none;
+  }
+  @media (hover: hover) {
+    .prose a:hover {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+  }
+}
+
 /* Animation utilities */
 @keyframes fade-in-up {
   from { opacity: 0; transform: translateY(12px); }
