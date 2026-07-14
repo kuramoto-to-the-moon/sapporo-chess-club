@@ -97,7 +97,8 @@ export default {
     roomTbd: "TBD",
     yearSuffix: "",
     monthSuffix: "",
-    showPast: (count: number) => `Show past events (${count})`,
+    upcomingHeading: "Upcoming",
+    pastHeading: "Past events",
     // 時刻と会場/部屋の区切り。前後の空白込み
     metaSeparator: " · ",
   },
