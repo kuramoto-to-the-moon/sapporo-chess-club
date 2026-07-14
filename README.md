@@ -4,19 +4,20 @@
 
 ## 技術スタック
 
-- **Astro 6** — 静的サイトジェネレータ
-- **Tailwind CSS v4** — スタイリング
+- **Astro 7** — 静的サイトジェネレータ
+- **Tailwind CSS v4** — スタイリング (カラートークンは `src/styles/globals.css` の `@theme`)
 - **TypeScript**
 - **GitHub Pages** — ホスティング (カスタムドメイン)
 
-フレームワーク JS なし。すべて Astro の静的 HTML + vanilla script。
+フレームワーク JS なし。すべて Astro の静的 HTML + vanilla script。日本語/英語の2言語対応 (`src/pages/en/**` は locale を渡す薄いラッパー)。
 
 ## セットアップ
 
 ```bash
 pnpm install
 pnpm dev      # http://localhost:4321/
-pnpm build    # dist/ に静的ファイル生成
+pnpm build    # dist/ に静的ファイル生成 (81ページ)
+pnpm check    # astro check (型チェック)。エラー 0 を維持
 pnpm preview  # 本番ビルドをローカルプレビュー
 ```
 
@@ -38,9 +39,17 @@ pnpm preview  # 本番ビルドをローカルプレビュー
 
 スキーマは `src/content.config.ts`、CMS 定義は `.pages.yml`。両方を同期すること。
 
-## デプロイ
+## デプロイ / CI
 
-`main` ブランチへの push で GitHub Actions が自動デプロイ。
+- `main` への push で GitHub Actions が自動デプロイ (`deploy.yml`)
+- **毎日 15:00 UTC (0:00 JST) に再ビルド** — 「今後の予定」フィルタと年間スケジュールの「今日」ラインをビルド時の JST で評価しているため、日次再ビルドが日付の鮮度を担保する
+- PR には型チェック + ビルドの CI (`ci.yml`)。Dependabot の minor/patch 更新は検証が通った場合のみ自動マージ (`dependabot-automerge.yml`)。major は人間レビュー
+
+## 開発ドキュメント
+
+- **[AGENTS.md](./AGENTS.md)** — コード規約 (i18n・日付・デザイントークン・共有コンポーネント索引)。AI エージェント向けだが人間にも有効
+- **[docs/operations.md](./docs/operations.md)** — 非エンジニア向けの日常更新手順
+- **[docs/headroom-design.md](./docs/headroom-design.md)** — hide-on-scroll ヘッダーの設計判断 (触る前に必読)
 
 ## ライセンス
 
