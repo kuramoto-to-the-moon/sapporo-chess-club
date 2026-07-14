@@ -73,18 +73,18 @@
 }
 
 /* 記事本文 (prose) 内のリンクをサイト規約に合わせる:
-   typography プラグインのデフォルト (黒・常時下線・太字) を 青 + hover 下線 に上書き */
-@layer components {
-  .prose a {
-    color: var(--color-primary);
-    font-weight: inherit;
-    text-decoration: none;
-  }
-  @media (hover: hover) {
-    .prose a:hover {
-      text-decoration: underline;
-      text-underline-offset: 2px;
-    }
+   typography プラグインのデフォルト (黒・常時下線・太字) を 青 + hover 下線 に上書き。
+   プラグインは @layer utilities に出力するため、layer に入れると負ける
+   (カスケード層は詳細度より優先)。unlayered に置いて全 layer に勝たせる */
+.prose a {
+  color: var(--color-primary);
+  font-weight: inherit;
+  text-decoration: none;
+}
+@media (hover: hover) {
+  .prose a:hover {
+    text-decoration: underline;
+    text-underline-offset: 2px;
   }
 }
 
