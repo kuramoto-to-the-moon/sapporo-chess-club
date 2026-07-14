@@ -19,9 +19,7 @@ const venueName = siteData[0].data.venue.name;
 const [next] = await getUpcomingScheduleDates(1);
 const isTournament = next?.type === "tournament";
 const cancelled = next?.cancelled === true;
-// 中止でも例会でも起こり得る → その場合も badge+title 行を出す
 const showTitleRow = isTournament || cancelled;
-// ScheduleEventBody と同じ判断: 中止の状態表現はバッジ単独、タイトル装飾なし
 ---
 
 {next && (

@@ -146,8 +146,7 @@ const checkClass =
     optionEls.map((el) => [el.dataset.filterOption ?? "", el.dataset.filterLabel ?? ""])
   );
 
-  // 選択年を URL (?year=2024) と同期する。共有・ブックマーク・リロードで状態が残る。
-  // フィルタ操作で履歴を積まないよう replaceState を使う ("all" はパラメータなし = 素の URL)
+  // 選択年を ?year= と同期 (replaceState = 履歴を積まない。"all" はパラメータなし)
   const YEAR_PARAM = "year";
   function syncUrl(year: string) {
     const url = new URL(location.href);

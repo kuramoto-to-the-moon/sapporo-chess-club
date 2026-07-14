@@ -89,8 +89,6 @@ const breadcrumbJsonLd = buildBreadcrumbJsonLd([
 
     {(prev || next) && (
       <nav class="flex justify-between mt-12 pt-6 border-t border-hairline text-sm" aria-label={i.announcements.paginationLabel}>
-        {/* 下線はタイトル側だけに引く: 「前のお知らせ」等の小ラベルは
-            リンク名でなく方向の説明なので、下線が付くと1本のリンクに見えない */}
         {prev ? (
           <a href={getLocalePath(locale, `/announcements/${prev.id}`)} data-astro-prefetch class="group text-primary flex flex-col">
             <span class="text-xs text-muted">{i.announcements.prev}</span>
