@@ -50,14 +50,12 @@ function formatMonthHeading(monthKey: string): string {
 }
 ---
 
-{/* 「今後の予定」「終了した予定」の2セクション分割。過去/未来の区別は
-    見出しの言葉だけで伝え、行への装飾は一切しない。
-    セクション見出しは sticky: 長いリストのスクロール中も「今どちらのセクションに
-    いるか」を見出しの言葉が常時示す。sticky は包含ブロック内でしか効かないため
-    セクションごとに <section> で包む (次のセクションが前の見出しを自然に押し出す)。
-    ヘッダー(z-30)が出ている間はその下に潜る */}
+{/* 「今後の予定」「終了した予定」の2セクション分割 + 終了行はトークン一段退色。
+    退色は opacity でなく色スワップで行う: ink→muted (4.74:1) は WCAG AA を保つが、
+    opacity は muted 文字を 1.8:1 まで落とすため禁止 (実測済み)。
+    sticky 見出しは headroom と干渉して騒がしいため却下済み */}
 <section>
-  <h2 class="sticky top-0 z-10 bg-white py-3 text-lg font-extrabold tracking-tight flex items-center gap-2">
+  <h2 class="text-lg font-extrabold tracking-tight flex items-center gap-2 mb-6">
     <span class="inline-block w-1 h-3.5 bg-primary" aria-hidden="true"></span>
     {i.schedule.upcomingHeading}
   </h2>
@@ -66,7 +64,7 @@ function formatMonthHeading(monthKey: string): string {
     <p class="text-sm text-muted">{i.schedule.noUpcoming}</p>
   )}
 
-  <div class="flex flex-col gap-8 pt-2">
+  <div class="flex flex-col gap-8">
   {upcomingMonths.map(({ key, dates: monthDates }) => (
     <div class="[content-visibility:auto] [contain-intrinsic-size:auto_320px]">
       <h3 class="text-sm font-semibold uppercase tracking-wider text-muted mb-3 pb-2 border-b border-edge">
@@ -92,12 +90,12 @@ function formatMonthHeading(monthKey: string): string {
 
 {pastMonths.length > 0 && (
   <section class="mt-10">
-    <h2 class="sticky top-0 z-10 bg-white py-3 text-lg font-extrabold tracking-tight flex items-center gap-2">
+    <h2 class="text-lg font-extrabold tracking-tight flex items-center gap-2 mb-6 text-muted">
       <span class="inline-block w-1 h-3.5 bg-faint" aria-hidden="true"></span>
       {i.schedule.pastHeading}
     </h2>
 
-    <div class="flex flex-col gap-8 pt-2">
+    <div class="flex flex-col gap-8">
       {pastMonths.map(({ key, dates: monthDates }) => (
         <div class="[content-visibility:auto] [contain-intrinsic-size:auto_320px]">
           <h3 class="text-sm font-semibold uppercase tracking-wider text-muted mb-3 pb-2 border-b border-edge">
@@ -107,11 +105,11 @@ function formatMonthHeading(monthKey: string): string {
             {monthDates.map((date) => (
               <li class="flex items-baseline gap-4 py-4 border-b border-hairline last:border-0">
                 <div class="flex items-baseline gap-1.5 min-w-[72px] shrink-0">
-                  <time datetime={date.date} class="text-xl font-semibold text-ink tabular-nums">{getDateParts(date.date).day}</time>
+                  <time datetime={date.date} class="text-xl font-semibold text-muted tabular-nums">{getDateParts(date.date).day}</time>
                   <span class="text-xs text-muted">({getDayOfWeek(date.date, locale)})</span>
                 </div>
                 <div class="flex-1 min-w-0">
-                  <ScheduleEventBody date={date} locale={locale} />
+                  <ScheduleEventBody date={date} locale={locale} dimmed />
                 </div>
               </li>
             ))}
