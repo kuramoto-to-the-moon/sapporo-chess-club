@@ -83,8 +83,9 @@ export default {
     roomTbd: "未定",
     yearSuffix: "年",
     monthSuffix: "月",
-    upcomingHeading: "今後の予定",
-    pastHeading: "終了した予定",
+    recordsLabel: "終了したイベントの記録",
+    recordsTournaments: "大会記録を見る",
+    recordsAnnouncements: "例会報告を見る（お知らせ）",
     // 時刻と会場/部屋の区切り。前後の空白込み
     metaSeparator: " ・ ",
   },

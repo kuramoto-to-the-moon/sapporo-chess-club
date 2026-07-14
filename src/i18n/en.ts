@@ -97,8 +97,9 @@ export default {
     roomTbd: "TBD",
     yearSuffix: "",
     monthSuffix: "",
-    upcomingHeading: "Upcoming",
-    pastHeading: "Past events",
+    recordsLabel: "Past event records",
+    recordsTournaments: "View the tournament archive",
+    recordsAnnouncements: "View meetup reports (news)",
     // 時刻と会場/部屋の区切り。前後の空白込み
     metaSeparator: " · ",
   },

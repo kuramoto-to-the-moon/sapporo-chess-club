@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import ScheduleTimeline from "@/components/ScheduleTimeline.astro";
 import { t, getLocalePath, type Locale } from "@/i18n";
+import { parseDate, startOfTodayJST } from "@/lib/date";
 import { getSortedScheduleDates } from "@/lib/schedule-data";
 import { buildBreadcrumbJsonLd, homeCrumb } from "@/lib/breadcrumb";
 import { buildEventsJsonLd } from "@/lib/jsonld";
@@ -14,12 +15,18 @@ interface Props {
 const { locale } = Astro.props;
 const i = t(locale);
 
+// このページは「これからの予定」だけを見せる。過去の記録は大会記録・お知らせ（例会報告）が
+// 正規の置き場なので、ページ末尾の導線からそちらへ流す（過去リストの二重管理をしない）。
+// 未来の中止イベントは告知価値があるため表示に含める（getUpcomingScheduleDates は
+// 中止を除くため使わず、ここで日付だけでフィルタする）。
 const sorted = await getSortedScheduleDates();
+const today = startOfTodayJST();
+const upcoming = sorted.filter((d) => parseDate(d.date) >= today);
 
-// JSON-LD: 大会を Event としてマークアップ（過去含む）
+// JSON-LD も表示内容と揃えて今後の大会のみ
 const siteData = await getCollection("site");
 const site = siteData[0].data;
-const tournaments = sorted.filter((d) => d.type === "tournament");
+const tournaments = upcoming.filter((d) => d.type === "tournament");
 
 const eventsJsonLd = buildEventsJsonLd(locale, tournaments, site, Astro.site);
 
@@ -38,6 +45,26 @@ const breadcrumbJsonLd = buildBreadcrumbJsonLd([
   </section>
 
   <section class="px-5 pb-10 animate-fade-in-up stagger-2">
-    <ScheduleTimeline dates={sorted} locale={locale} />
+    <ScheduleTimeline dates={upcoming} locale={locale} />
+  </section>
+
+  {/* 「あの大会/例会いつだった？」の照会は記録の専用ページへ流す */}
+  <section class="px-5 pb-10">
+    <h2 class="text-sm font-semibold uppercase tracking-wider text-muted mb-3 flex items-center gap-2">
+      <span class="inline-block w-1 h-3 bg-primary"></span>
+      {i.schedule.recordsLabel}
+    </h2>
+    <ul class="flex flex-col gap-2">
+      <li>
+        <a href={getLocalePath(locale, "/tournaments")} data-astro-prefetch class="text-sm text-primary [@media(hover:hover)]:hover:underline underline-offset-2 font-medium">
+          {i.schedule.recordsTournaments}
+        </a>
+      </li>
+      <li>
+        <a href={getLocalePath(locale, "/announcements")} data-astro-prefetch class="text-sm text-primary [@media(hover:hover)]:hover:underline underline-offset-2 font-medium">
+          {i.schedule.recordsAnnouncements}
+        </a>
+      </li>
+    </ul>
   </section>
 </BaseLayout>

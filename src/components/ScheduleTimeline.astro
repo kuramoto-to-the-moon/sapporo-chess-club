@@ -1,10 +1,11 @@
 ---
 import { t, type Locale } from "@/i18n";
-import { parseDate, getDateParts, getDayOfWeek, startOfTodayJST } from "@/lib/date";
+import { getDateParts, getDayOfWeek } from "@/lib/date";
 import { type ScheduleDate } from "@/lib/schedule";
 import ScheduleEventBody from "@/components/ScheduleEventBody.astro";
 
 interface Props {
+  /** 表示する日程（呼び出し側でフィルタ済みを渡す） */
   dates: ScheduleDate[];
   locale: Locale;
 }
@@ -12,29 +13,18 @@ interface Props {
 const { dates, locale } = Astro.props;
 const i = t(locale);
 
-// 過去/今後の判定はビルド時の JST 今日基準。deploy.yml の日次再ビルドが毎日更新する
-// （「今後の予定」フィルタと同じ仕組み）。
-const today = startOfTodayJST();
-const past = dates.filter((d) => parseDate(d.date) < today);
-const upcoming = dates.filter((d) => parseDate(d.date) >= today);
-
 function getMonthKey(dateStr: string): string {
   const { year, month } = getDateParts(dateStr);
   return `${year}-${String(month).padStart(2, "0")}`;
 }
 
-function groupByMonth(list: ScheduleDate[]) {
-  const map = new Map<string, ScheduleDate[]>();
-  for (const d of list) {
-    const key = getMonthKey(d.date);
-    if (!map.has(key)) map.set(key, []);
-    map.get(key)!.push(d);
-  }
-  return Array.from(map.entries()).map(([key, dates]) => ({ key, dates }));
+const monthMap = new Map<string, ScheduleDate[]>();
+for (const d of dates) {
+  const key = getMonthKey(d.date);
+  if (!monthMap.has(key)) monthMap.set(key, []);
+  monthMap.get(key)!.push(d);
 }
-
-const pastMonths = groupByMonth(past);
-const upcomingMonths = groupByMonth(upcoming);
+const groupedByMonth = Array.from(monthMap.entries()).map(([key, dates]) => ({ key, dates }));
 
 function formatMonthHeading(monthKey: string): string {
   const [year, month] = monthKey.split("-");
@@ -50,26 +40,16 @@ function formatMonthHeading(monthKey: string): string {
 }
 ---
 
-{/* 「今後の予定」「終了した予定」の2セクション分割 + 終了行はトークン一段退色。
-    退色は opacity でなく色スワップで行う: ink→muted (4.74:1) は WCAG AA を保つが、
-    opacity は muted 文字を 1.8:1 まで落とすため禁止 (実測済み)。
-    sticky 見出しは headroom と干渉して騒がしいため却下済み */}
-<section>
-  <h2 class="text-lg font-extrabold tracking-tight flex items-center gap-2 mb-6">
-    <span class="inline-block w-1 h-3.5 bg-primary" aria-hidden="true"></span>
-    {i.schedule.upcomingHeading}
-  </h2>
+{groupedByMonth.length === 0 && (
+  <p class="text-sm text-muted">{i.schedule.noUpcoming}</p>
+)}
 
-  {upcomingMonths.length === 0 && (
-    <p class="text-sm text-muted">{i.schedule.noUpcoming}</p>
-  )}
-
-  <div class="flex flex-col gap-8">
-  {upcomingMonths.map(({ key, dates: monthDates }) => (
+<div class="flex flex-col gap-8">
+  {groupedByMonth.map(({ key, dates: monthDates }) => (
     <div class="[content-visibility:auto] [contain-intrinsic-size:auto_320px]">
-      <h3 class="text-sm font-semibold uppercase tracking-wider text-muted mb-3 pb-2 border-b border-edge">
+      <h2 class="text-sm font-semibold uppercase tracking-wider text-muted mb-3 pb-2 border-b border-edge">
         {formatMonthHeading(key)}
-      </h3>
+      </h2>
       <ul class="flex flex-col">
         {monthDates.map((date) => (
           <li class="flex items-baseline gap-4 py-4 border-b border-hairline last:border-0">
@@ -85,37 +65,4 @@ function formatMonthHeading(monthKey: string): string {
       </ul>
     </div>
   ))}
-  </div>
-</section>
-
-{pastMonths.length > 0 && (
-  <section class="mt-10">
-    <h2 class="text-lg font-extrabold tracking-tight flex items-center gap-2 mb-6 text-muted">
-      <span class="inline-block w-1 h-3.5 bg-faint" aria-hidden="true"></span>
-      {i.schedule.pastHeading}
-    </h2>
-
-    <div class="flex flex-col gap-8">
-      {pastMonths.map(({ key, dates: monthDates }) => (
-        <div class="[content-visibility:auto] [contain-intrinsic-size:auto_320px]">
-          <h3 class="text-sm font-semibold uppercase tracking-wider text-muted mb-3 pb-2 border-b border-edge">
-            {formatMonthHeading(key)}
-          </h3>
-          <ul class="flex flex-col">
-            {monthDates.map((date) => (
-              <li class="flex items-baseline gap-4 py-4 border-b border-hairline last:border-0">
-                <div class="flex items-baseline gap-1.5 min-w-[72px] shrink-0">
-                  <time datetime={date.date} class="text-xl font-semibold text-muted tabular-nums">{getDateParts(date.date).day}</time>
-                  <span class="text-xs text-muted">({getDayOfWeek(date.date, locale)})</span>
-                </div>
-                <div class="flex-1 min-w-0">
-                  <ScheduleEventBody date={date} locale={locale} dimmed />
-                </div>
-              </li>
-            ))}
-          </ul>
-        </div>
-      ))}
-    </div>
-  </section>
-)}
+</div>

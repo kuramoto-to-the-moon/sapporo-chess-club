@@ -5,15 +5,9 @@ import { getEventName, formatScheduleMeta, type ScheduleDate } from "@/lib/sched
 interface Props {
   date: ScheduleDate;
   locale: Locale;
-  /**
-   * 終了イベント用の一段退色。opacity でなくトークンスワップで表現する:
-   * タイトル ink→muted (4.74:1)、大会バッジ 青塗り→灰塗り (7.17:1) — WCAG AA 維持。
-   * メタ/注記は元から muted (これ以上薄くすると AA 割れ)、リンクは識別性のため primary 据え置き。
-   */
-  dimmed?: boolean;
 }
 
-const { date, locale, dimmed = false } = Astro.props;
+const { date, locale } = Astro.props;
 const i = t(locale);
 const isTournament = date.type === "tournament";
 const cancelled = date.cancelled === true;
@@ -22,9 +16,9 @@ const meta = formatScheduleMeta(date, locale);
 
 {/* 例会も大会も同じ解剖: 題名行 (バッジ + 名前) → メタ行 → 注記行。
     例会のバッジは題名 "例会" と同語で重複するため付けない */}
-<p class={`text-sm font-semibold flex items-center gap-2 flex-wrap${dimmed ? " text-muted" : ""}`}>
+<p class="text-sm font-semibold flex items-center gap-2 flex-wrap">
   {isTournament && (
-    <span class={`text-xs px-1.5 py-0.5 rounded font-semibold ${dimmed ? "bg-hairline text-sub" : "bg-primary text-white"}`}>
+    <span class="text-xs px-1.5 py-0.5 rounded bg-primary text-white font-semibold">
       {i.badge.tournamentTag}
     </span>
   )}
