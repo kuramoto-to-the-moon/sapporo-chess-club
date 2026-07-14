@@ -89,16 +89,18 @@ const breadcrumbJsonLd = buildBreadcrumbJsonLd([
 
     {(prev || next) && (
       <nav class="flex justify-between mt-12 pt-6 border-t border-hairline text-sm" aria-label={i.announcements.paginationLabel}>
+        {/* 下線はタイトル側だけに引く: 「前のお知らせ」等の小ラベルは
+            リンク名でなく方向の説明なので、下線が付くと1本のリンクに見えない */}
         {prev ? (
-          <a href={getLocalePath(locale, `/announcements/${prev.id}`)} data-astro-prefetch class="text-primary [@media(hover:hover)]:hover:underline underline-offset-2 flex flex-col">
+          <a href={getLocalePath(locale, `/announcements/${prev.id}`)} data-astro-prefetch class="group text-primary flex flex-col">
             <span class="text-xs text-muted">{i.announcements.prev}</span>
-            <span class="font-medium">{pickTitle(prev, locale)}</span>
+            <span class="font-medium [@media(hover:hover)]:group-hover:underline underline-offset-2">{pickTitle(prev, locale)}</span>
           </a>
         ) : <span></span>}
         {next ? (
-          <a href={getLocalePath(locale, `/announcements/${next.id}`)} data-astro-prefetch class="text-primary [@media(hover:hover)]:hover:underline underline-offset-2 flex flex-col items-end text-right">
+          <a href={getLocalePath(locale, `/announcements/${next.id}`)} data-astro-prefetch class="group text-primary flex flex-col items-end text-right">
             <span class="text-xs text-muted">{i.announcements.next}</span>
-            <span class="font-medium">{pickTitle(next, locale)}</span>
+            <span class="font-medium [@media(hover:hover)]:group-hover:underline underline-offset-2">{pickTitle(next, locale)}</span>
           </a>
         ) : <span></span>}
       </nav>
