@@ -73,7 +73,7 @@ export default {
   },
   about: {
     label: "About the Club",
-    body: "Sapporo Chess Club is a chess circle that has been active in Sapporo, Hokkaido since the 1990s. Everyone is welcome — from elementary school students to working adults and seniors — and members are happy to help newcomers. Whether you want to try chess for the first time or are looking for opponents, feel free to drop by.",
+    body: "Sapporo Chess Club is a chess circle that has been active in Sapporo since the 1990s. Anyone can join regardless of age or experience — from elementary school students to working adults and seniors. If you're new to the game, members are happy to show you the rules and how to play. Whether you want to try chess for the first time or are looking for opponents, feel free to drop by.",
   },
   activities: {
     label: "Activities",
@@ -99,7 +99,7 @@ export default {
     monthSuffix: "",
     recordsLabel: "Past event records",
     recordsTournaments: "View the tournament archive",
-    recordsAnnouncements: "View meetup reports (news)",
+    recordsAnnouncements: "View meetup reports",
     // 時刻と会場/部屋の区切り。前後の空白込み
     metaSeparator: " · ",
   },
