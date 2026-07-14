@@ -51,17 +51,22 @@ function formatMonthHeading(monthKey: string): string {
 ---
 
 {/* 「今後の予定」「終了した予定」の2セクション分割。過去/未来の区別は
-    見出しの言葉だけで伝え、行への装飾は一切しない */}
-<div class="flex flex-col gap-8">
-  <h2 class="text-lg font-extrabold tracking-tight flex items-center gap-2">
+    見出しの言葉だけで伝え、行への装飾は一切しない。
+    セクション見出しは sticky: 長いリストのスクロール中も「今どちらのセクションに
+    いるか」を見出しの言葉が常時示す。sticky は包含ブロック内でしか効かないため
+    セクションごとに <section> で包む (次のセクションが前の見出しを自然に押し出す)。
+    ヘッダー(z-30)が出ている間はその下に潜る */}
+<section>
+  <h2 class="sticky top-0 z-10 bg-white py-3 text-lg font-extrabold tracking-tight flex items-center gap-2">
     <span class="inline-block w-1 h-3.5 bg-primary" aria-hidden="true"></span>
     {i.schedule.upcomingHeading}
   </h2>
 
   {upcomingMonths.length === 0 && (
-    <p class="text-sm text-muted -mt-4">{i.schedule.noUpcoming}</p>
+    <p class="text-sm text-muted">{i.schedule.noUpcoming}</p>
   )}
 
+  <div class="flex flex-col gap-8 pt-2">
   {upcomingMonths.map(({ key, dates: monthDates }) => (
     <div class="[content-visibility:auto] [contain-intrinsic-size:auto_320px]">
       <h3 class="text-sm font-semibold uppercase tracking-wider text-muted mb-3 pb-2 border-b border-edge">
@@ -82,14 +87,17 @@ function formatMonthHeading(monthKey: string): string {
       </ul>
     </div>
   ))}
+  </div>
+</section>
 
-  {pastMonths.length > 0 && (
-    <>
-      <h2 class="text-lg font-extrabold tracking-tight flex items-center gap-2 mt-8">
-        <span class="inline-block w-1 h-3.5 bg-faint" aria-hidden="true"></span>
-        {i.schedule.pastHeading}
-      </h2>
+{pastMonths.length > 0 && (
+  <section class="mt-10">
+    <h2 class="sticky top-0 z-10 bg-white py-3 text-lg font-extrabold tracking-tight flex items-center gap-2">
+      <span class="inline-block w-1 h-3.5 bg-faint" aria-hidden="true"></span>
+      {i.schedule.pastHeading}
+    </h2>
 
+    <div class="flex flex-col gap-8 pt-2">
       {pastMonths.map(({ key, dates: monthDates }) => (
         <div class="[content-visibility:auto] [contain-intrinsic-size:auto_320px]">
           <h3 class="text-sm font-semibold uppercase tracking-wider text-muted mb-3 pb-2 border-b border-edge">
@@ -110,6 +118,6 @@ function formatMonthHeading(monthKey: string): string {
           </ul>
         </div>
       ))}
-    </>
-  )}
-</div>
+    </div>
+  </section>
+)}
