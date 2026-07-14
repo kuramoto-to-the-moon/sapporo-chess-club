@@ -53,5 +53,9 @@ pnpm preview  # 本番ビルドをローカルプレビュー
 
 ## ライセンス
 
-- **コード**: [MIT License](./LICENSE)
-- **コンテンツ** (`src/content/` 配下): 札幌チェスクラブの所有物。再利用はクラブの許諾を得てください
+- **コード** (`src/` のコンポーネント・スクリプト・設定類): [MIT License](./LICENSE)
+- **コンテンツ・メディア資産**: MIT の対象外。札幌チェスクラブの所有物であり、再利用はクラブの許諾を得てください
+  - `src/content/` 配下の全記事・データ
+  - `public/competition/` の大会要項・結果 PDF、棋譜 PGN（解析注釈含む）
+  - `public/documents/` のパンフレット、`public/images/` の画像
+- **第三者資産**: `src/assets/jca-logo.webp` は日本チェス連盟のロゴであり、同連盟に権利が帰属します
