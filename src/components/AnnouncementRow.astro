@@ -22,14 +22,17 @@ const dateLabel = fullDate
 const href = getLocalePath(locale, `/announcements/${entry.id}`);
 ---
 
+{/* 行全体がタップ領域 (リンク) だが、リンクの見た目はサイト規約どおり
+    「青いタイトル + hover 下線」が担う。行 hover の背景変化はリンク言語として
+    サイト内で浮くためやめた */}
 <li>
   <a
     href={href}
-    class="flex flex-col gap-1.5 py-4 border-b border-hairline last:border-0 [@media(hover:hover)]:hover:bg-surface -mx-2 px-2 rounded transition-colors duration-150"
+    class="group flex flex-col gap-1.5 py-4 border-b border-hairline last:border-0"
   >
     <div class="flex items-baseline gap-3">
       <time datetime={entry.data.date} class={`text-xs text-muted tabular-nums ${fullDate ? "min-w-[78px]" : "min-w-[60px]"} shrink-0`}>{dateLabel}</time>
-      <span class="text-sm font-semibold text-ink line-clamp-2 flex-1 min-w-0">{pickTitle(entry, locale)}</span>
+      <span class="text-sm font-semibold text-primary [@media(hover:hover)]:group-hover:underline underline-offset-2 line-clamp-2 flex-1 min-w-0">{pickTitle(entry, locale)}</span>
     </div>
     <p class={`text-xs text-muted ${fullDate ? "ml-[90px]" : "ml-[72px]"} leading-[1.5] line-clamp-2 min-w-0`}>{pickDescription(entry, locale)}</p>
   </a>

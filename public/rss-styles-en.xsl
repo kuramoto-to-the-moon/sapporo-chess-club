@@ -33,11 +33,10 @@
           }
           .back {
             font-size: 0.875rem;
-            color: #737373;
+            color: #2563eb;
             text-decoration: none;
-            transition: color 0.15s;
           }
-          .back:hover { color: #2563eb; }
+          .back:hover { text-decoration: underline; text-underline-offset: 2px; }
           main {
             max-width: 42rem;
             margin: 0 auto;
@@ -116,10 +115,10 @@
             line-height: 1.45;
           }
           .item h2 a {
-            color: #171717;
+            color: #2563eb;
             text-decoration: none;
           }
-          .item h2 a:hover { color: #2563eb; }
+          .item h2 a:hover { text-decoration: underline; text-underline-offset: 2px; }
           .item .date {
             font-size: 0.75rem;
             color: #737373;
