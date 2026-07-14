@@ -47,7 +47,7 @@ const showTitleRow = isTournament || cancelled;
           <a
             href={getLocalePath(locale, `/announcements/${next.announcementSlug}`)}
             data-astro-prefetch
-            class="text-primary [@media(hover:hover)]:hover:text-primary-hover transition-colors duration-150"
+            class="text-primary [@media(hover:hover)]:hover:text-primary-hover [@media(hover:hover)]:hover:underline underline-offset-2 transition-colors duration-150"
           >
             {cancelled && <span class="sr-only">{i.badge.cancelledTag}: </span>}
             {getEventName(next, locale)}

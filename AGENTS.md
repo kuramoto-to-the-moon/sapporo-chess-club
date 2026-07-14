@@ -56,9 +56,9 @@
 - **カラー**: `globals.css` の `@theme` で定義したセマンティックトークンを使う — `primary`(青) `primary-hover` `ink`(見出し) `sub`(本文) `muted`(弱) `hairline`(区切り) `edge`(枠線) `surface`(hover背景) `faint` `dim` `menu-line`。生 hex の arbitrary 値 (`text-[#...]`) は使わない
   - 例外: 外部サービスリンクの hover はブランドカラー可 — X → 黒、日本チェス連盟 → 赤 `#c8102e`、RSS → 橙 `#f26522`
 - **リンクのトンマナ**:
-  - 前進アクション「〜を見る →」: `text-sm text-primary hover:text-primary-hover transition-colors duration-150 font-medium`、セクションのリスト下に配置。ラベルは行き先名（「すべて見る」等の無情報アンカー禁止）
-  - 戻りナビ「← 〜」: `text-muted hover:text-primary`。ラベルは行き先名（「〜に戻る」は直接着地ユーザーに不成立なので禁止）
-  - hover は色変化のみ。`hover:underline` は使わない
+  - 前進アクション「〜を見る →」: `text-sm text-primary ... font-medium`、セクションのリスト下に配置。ラベルは行き先名（「すべて見る」等の無情報アンカー禁止）
+  - 戻りナビ「← 〜」: `text-muted` → hover 青。ラベルは行き先名（「〜に戻る」は直接着地ユーザーに不成立なので禁止）
+  - **テキストリンクの hover は下線** `[@media(hover:hover)]:hover:underline underline-offset-2`（+ 既存の色変化）。色変化のみは気づきにくいと結論（2026-07-14）。行 hover（背景色）やナビ UI（Header/ハンバーガー/pill）は下線なしのまま
 - **角丸**: `rounded-md` 統一
 - **ホバー**: 必ず `[@media(hover:hover)]:hover:` で gate する（モバイルのタップ残留防止）。素の `hover:` は使わない — 全コンポーネント適用済み
 - **要素間の視覚的間隔は CSS で付ける**（flex `gap` / margin）。ソースの空白・改行に依存しない — Astro 7 の `compressHTML: "jsx"`（デフォルト採用）がインライン要素間の空白を除去するため、空白頼みの間隔は消える
