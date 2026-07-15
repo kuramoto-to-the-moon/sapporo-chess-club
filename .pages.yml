@@ -99,6 +99,10 @@ content:
         label: 中止
         type: boolean
         description: "チェックすると「大会」バッジの隣に「中止」バッジが付く。大会名から「（中止）」を書く必要はない。中止理由は「備考」に書く。"
+      - name: chessResults
+        label: Chess-Results URL
+        type: string
+        description: "chess-results.com の大会ページ URL。入力するとスケジュールと次回イベントにリンクが出る（事前の要項確認・大会中の順位確認用）。"
       - name: announcement
         label: 関連お知らせ（要項）
         type: reference

@@ -99,6 +99,7 @@ const scheduleTournaments = defineCollection({
     note: optionalI18n,
     announcement: nullableString,
     cancelled: yamlBoolean,
+    chessResults: nullableString,
   }),
 });
 

@@ -5,6 +5,7 @@ import { formatMonthDay, getDayOfWeek } from "@/lib/date";
 import { getEventName } from "@/lib/schedule";
 import { getUpcomingScheduleDates } from "@/lib/schedule-data";
 import SectionHeader from "@/components/SectionHeader.astro";
+import ExternalLinkIcon from "@/components/ExternalLinkIcon.astro";
 
 interface Props {
   locale: Locale;
@@ -56,7 +57,19 @@ const showTitleRow = isTournament || cancelled;
       </p>
     )}
     <p class="text-sm text-muted mt-2">
-      {next.startTime}–{next.endTime}{i.schedule.metaSeparator}{venueName[locale]} {next.room ? `${next.room}${i.schedule.roomSuffix}` : i.schedule.roomTbd}
+      {next.startTime}–{next.endTime}{i.schedule.metaSeparator}{venueName[locale]} {next.room ? `${next.room}${i.schedule.roomSuffix}` : i.schedule.roomTbd}{next.chessResults && i.schedule.metaSeparator}
+      {next.chessResults && (
+        <a
+          href={next.chessResults}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-1 text-primary [@media(hover:hover)]:hover:underline underline-offset-2"
+        >
+          {i.tournament.chessResults}
+          <ExternalLinkIcon size={13} />
+          <span class="sr-only">{i.nav.openInNewTab}</span>
+        </a>
+      )}
     </p>
   </section>
 )}
