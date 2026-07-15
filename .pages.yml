@@ -157,6 +157,10 @@ content:
         options:
           media: competition
         description: "評価値コメント付きの棋譜 (*Analysis.pgn)。あれば追加。"
+      - name: chessResults
+        label: Chess-Results URL
+        type: string
+        description: "chess-results.com の大会ページ URL（例: https://s2.chess-results.com/tnr1442864.aspx?lan=1&SNode=S0）"
 
   - name: announcements
     label: お知らせ

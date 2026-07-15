@@ -153,6 +153,7 @@ export default {
     resultsPdf: "Results PDF",
     gamesPgn: "Game Records PGN",
     gamesPgnAnnotated: "Game Records PGN (Annotated)",
+    chessResults: "Chess-Results",
     downloadAria: (label: string) => `${label} download`,
     // 年フィルタ変更時に aria-live へ書き込むテンプレート。{label} {count} はクライアント側で置換
     filterAnnounce: "Showing {count} tournaments — {label}",

@@ -114,6 +114,7 @@ const tournaments = defineCollection({
     resultsPdf: nullableString,
     gamesPgn: nullableString,
     gamesPgnAnnotated: nullableString,
+    chessResults: nullableString,
   }),
 });
 

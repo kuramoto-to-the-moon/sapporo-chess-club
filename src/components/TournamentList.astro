@@ -10,6 +10,7 @@ interface Tournament {
   resultsPdf?: string;
   gamesPgn?: string;
   gamesPgnAnnotated?: string;
+  chessResults?: string;
   year: number;
 }
 
@@ -34,6 +35,7 @@ const i = t(locale);
       tournament.resultsPdf && { label: i.tournament.resultsPdf, href: tournament.resultsPdf, isPgn: false },
       tournament.gamesPgn && { label: i.tournament.gamesPgn, href: tournament.gamesPgn, isPgn: true },
       tournament.gamesPgnAnnotated && { label: i.tournament.gamesPgnAnnotated, href: tournament.gamesPgnAnnotated, isPgn: true },
+      tournament.chessResults && { label: i.tournament.chessResults, href: tournament.chessResults, isPgn: false },
     ].filter(Boolean) as { label: string; href: string; isPgn: boolean }[];
 
     return (

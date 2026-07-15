@@ -139,6 +139,7 @@ export default {
     resultsPdf: "結果 PDF",
     gamesPgn: "棋譜 PGN",
     gamesPgnAnnotated: "棋譜 PGN (解析付)",
+    chessResults: "Chess-Results",
     downloadAria: (label: string) => `${label}をダウンロード`,
     // 年フィルタ変更時に aria-live へ書き込むテンプレート。{label} {count} はクライアント側で置換
     filterAnnounce: "{label}: {count}件表示中",
