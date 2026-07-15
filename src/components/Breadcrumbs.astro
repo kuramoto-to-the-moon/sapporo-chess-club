@@ -9,7 +9,7 @@ interface Props {
 const { label, items } = Astro.props;
 ---
 
-<nav aria-label={label} class="flex items-center gap-2 text-xs text-muted animate-fade-in-up">
+<nav aria-label={label} class="flex items-center gap-2 text-sm text-muted animate-fade-in-up">
   {items.map((item, idx) => (
     <>
       {idx > 0 && <span aria-hidden="true">/</span>}
