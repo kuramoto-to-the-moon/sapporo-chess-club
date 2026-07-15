@@ -39,48 +39,47 @@ const i = t(locale);
     return (
       <div
         data-card-year={String(tournament.year)}
-        class="border border-hairline rounded-md p-4 animate-fade-in [content-visibility:auto] [contain-intrinsic-size:auto_180px]"
+        class="border border-hairline rounded-md p-4 animate-fade-in [content-visibility:auto] [contain-intrinsic-size:auto_120px]"
       >
         <p class="text-base font-semibold">{tournament.title}</p>
         <p class="text-sm text-muted mt-1">{tournament.date}</p>
 
         {fileLinks.length > 0 && (
-          <div class="mt-3.5">
-            {fileLinks.map((link, linkIdx) => {
-              const rowClass = `flex items-center gap-1.5 py-3 px-2 -mx-2 rounded [@media(hover:hover)]:hover:bg-surface transition-colors duration-150 ${linkIdx < fileLinks.length - 1 ? "border-b border-hairline" : ""}`;
-              if (link.isPgn) {
-                return (
+          <p class="mt-2 text-sm leading-8">
+            {fileLinks.map((link, linkIdx) => (
+              <>
+                {linkIdx > 0 && <span class="text-dim mx-2" aria-hidden="true">・</span>}
+                {link.isPgn ? (
                   <a
                     href={link.href}
                     download
                     aria-label={i.tournament.downloadAria(link.label)}
-                    class={rowClass}
+                    class="inline-flex items-center gap-1 py-1 text-primary [@media(hover:hover)]:hover:underline underline-offset-2"
                   >
-                    <span class="text-sm">{link.label}</span>
+                    {link.label}
                     <span class="text-muted" aria-hidden="true">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
                         <polyline points="7 10 12 15 17 10" />
                         <line x1="12" y1="15" x2="12" y2="3" />
                       </svg>
                     </span>
                   </a>
-                );
-              }
-              return (
-                <a
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class={rowClass}
-                >
-                  <span class="text-sm">{link.label}</span>
-                  <span class="text-muted"><ExternalLinkIcon /></span>
-                  <span class="sr-only">{i.nav.openInNewTab}</span>
-                </a>
-              );
-            })}
-          </div>
+                ) : (
+                  <a
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-1 py-1 text-primary [@media(hover:hover)]:hover:underline underline-offset-2"
+                  >
+                    {link.label}
+                    <span class="text-muted"><ExternalLinkIcon /></span>
+                    <span class="sr-only">{i.nav.openInNewTab}</span>
+                  </a>
+                )}
+              </>
+            ))}
+          </p>
         )}
       </div>
     );
