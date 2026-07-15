@@ -90,13 +90,13 @@ const breadcrumbJsonLd = buildBreadcrumbJsonLd([
     {(prev || next) && (
       <nav class="flex justify-between mt-12 pt-6 border-t border-hairline text-sm" aria-label={i.announcements.paginationLabel}>
         {prev ? (
-          <a href={getLocalePath(locale, `/announcements/${prev.id}`)} data-astro-prefetch class="group text-primary flex flex-col">
+          <a href={getLocalePath(locale, `/announcements/${prev.id}`)} data-astro-prefetch class="group text-primary flex flex-col gap-1">
             <span class="text-xs text-muted">{i.announcements.prev}</span>
             <span class="font-medium [@media(hover:hover)]:group-hover:underline underline-offset-2">{pickTitle(prev, locale)}</span>
           </a>
         ) : <span></span>}
         {next ? (
-          <a href={getLocalePath(locale, `/announcements/${next.id}`)} data-astro-prefetch class="group text-primary flex flex-col items-end text-right">
+          <a href={getLocalePath(locale, `/announcements/${next.id}`)} data-astro-prefetch class="group text-primary flex flex-col gap-1 items-end text-right">
             <span class="text-xs text-muted">{i.announcements.next}</span>
             <span class="font-medium [@media(hover:hover)]:group-hover:underline underline-offset-2">{pickTitle(next, locale)}</span>
           </a>
