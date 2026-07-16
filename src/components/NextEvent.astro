@@ -56,19 +56,22 @@ const showTitleRow = isTournament || cancelled;
         )}
       </p>
     )}
-    <p class="text-sm text-muted mt-2">
-      {next.startTime}–{next.endTime}{i.schedule.metaSeparator}{venueName[locale]} {next.room ? `${next.room}${i.schedule.roomSuffix}` : i.schedule.roomTbd}{next.chessResults && i.schedule.metaSeparator}
+    <p class="text-sm text-muted mt-2 flex flex-wrap items-center gap-x-2 gap-y-1">
+      <span>{next.startTime}–{next.endTime}{i.schedule.metaSeparator}{venueName[locale]} {next.room ? `${next.room}${i.schedule.roomSuffix}` : i.schedule.roomTbd}</span>
       {next.chessResults && (
-        <a
-          href={next.chessResults}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex items-center gap-1 text-primary [@media(hover:hover)]:hover:underline underline-offset-2"
-        >
-          {i.tournament.chessResults}
-          <ExternalLinkIcon size={13} />
-          <span class="sr-only">{i.nav.openInNewTab}</span>
-        </a>
+        <span class="inline-flex items-center gap-2">
+          <span class="text-dim" aria-hidden="true">・</span>
+          <a
+            href={next.chessResults}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-1 text-primary [@media(hover:hover)]:hover:underline underline-offset-2"
+          >
+            {i.tournament.chessResults}
+            <ExternalLinkIcon size={13} />
+            <span class="sr-only">{i.nav.openInNewTab}</span>
+          </a>
+        </span>
       )}
     </p>
   </section>
