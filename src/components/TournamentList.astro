@@ -41,45 +41,42 @@ const i = t(locale);
     return (
       <div
         data-card-year={String(tournament.year)}
-        class="border border-hairline rounded-md p-4 animate-fade-in [content-visibility:auto] [contain-intrinsic-size:auto_120px]"
+        class="border border-hairline rounded-md p-4 animate-fade-in"
       >
         <p class="text-base font-semibold">{tournament.title}</p>
         <p class="text-sm text-muted mt-1">{tournament.date}</p>
 
         {fileLinks.length > 0 && (
-          <p class="mt-2 text-sm leading-8">
-            {fileLinks.map((link, linkIdx) => (
-              <>
-                {linkIdx > 0 && <span class="text-dim mx-2" aria-hidden="true">・</span>}
-                {link.isPgn ? (
-                  <a
-                    href={link.href}
-                    download
-                    aria-label={i.tournament.downloadAria(link.label)}
-                    class="inline-flex items-center gap-1 py-1 text-primary [@media(hover:hover)]:hover:underline underline-offset-2"
-                  >
-                    {link.label}
-                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                      <polyline points="7 10 12 15 17 10" />
-                      <line x1="12" y1="15" x2="12" y2="3" />
-                    </svg>
-                  </a>
-                ) : (
-                  <a
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="inline-flex items-center gap-1 py-1 text-primary [@media(hover:hover)]:hover:underline underline-offset-2"
-                  >
-                    {link.label}
-                    <ExternalLinkIcon />
-                    <span class="sr-only">{i.nav.openInNewTab}</span>
-                  </a>
-                )}
-              </>
+          <div class="mt-2 text-sm flex flex-col sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-5">
+            {fileLinks.map((link) => (
+              link.isPgn ? (
+                <a
+                  href={link.href}
+                  download
+                  aria-label={i.tournament.downloadAria(link.label)}
+                  class="flex items-center gap-1 py-2 border-t border-hairline first:border-t-0 text-primary [@media(hover:hover)]:hover:underline underline-offset-2 sm:inline-flex sm:py-1 sm:border-t-0"
+                >
+                  {link.label}
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="7 10 12 15 17 10" />
+                    <line x1="12" y1="15" x2="12" y2="3" />
+                  </svg>
+                </a>
+              ) : (
+                <a
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex items-center gap-1 py-2 border-t border-hairline first:border-t-0 text-primary [@media(hover:hover)]:hover:underline underline-offset-2 sm:inline-flex sm:py-1 sm:border-t-0"
+                >
+                  {link.label}
+                  <ExternalLinkIcon />
+                  <span class="sr-only">{i.nav.openInNewTab}</span>
+                </a>
+              )
             ))}
-          </p>
+          </div>
         )}
       </div>
     );
