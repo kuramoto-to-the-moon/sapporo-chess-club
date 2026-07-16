@@ -16,7 +16,7 @@ const scheduleHref = getLocalePath(locale, "/schedule");
 const upcoming = await getUpcomingScheduleDates(3);
 ---
 
-<section id="schedule" class="px-5 py-8 border-t border-hairline">
+<section id="schedule" class="px-5 py-10 border-t border-edge">
   <SectionHeader label={i.schedule.label} />
 
   {upcoming.length === 0 ? (

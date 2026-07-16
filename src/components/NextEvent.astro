@@ -24,7 +24,7 @@ const showTitleRow = isTournament || cancelled;
 ---
 
 {next && (
-  <section class="px-5 py-8 border-t border-hairline animate-fade-in-up">
+  <section class="px-5 py-10 border-t border-edge animate-fade-in-up">
     <SectionHeader label={isTournament ? i.nextEvent.event : i.nextEvent.meeting} />
     <p class="flex items-baseline gap-2">
       <time datetime={next.date} class="text-5xl font-extralight leading-none text-primary tabular-nums">{formatMonthDay(next.date)}</time>
