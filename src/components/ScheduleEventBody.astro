@@ -43,19 +43,16 @@ const meta = formatScheduleMeta(date, locale);
 <p class="text-xs text-muted mt-1 flex flex-wrap items-center gap-x-2 gap-y-1">
   <span>{meta}</span>
   {date.chessResults && (
-    <span class="inline-flex items-center gap-2">
-      <span class="text-dim" aria-hidden="true">・</span>
-      <a
-        href={date.chessResults}
-        target="_blank"
-        rel="noopener noreferrer"
-        class="inline-flex items-center gap-1 text-primary [@media(hover:hover)]:hover:underline underline-offset-2"
-      >
-        {i.tournament.chessResults}
-        <ExternalLinkIcon size={13} />
-        <span class="sr-only">{i.nav.openInNewTab}</span>
-      </a>
-    </span>
+    <a
+      href={date.chessResults}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-flex items-center gap-1 text-primary [@media(hover:hover)]:hover:underline underline-offset-2"
+    >
+      {i.tournament.chessResults}
+      <ExternalLinkIcon size={13} />
+      <span class="sr-only">{i.nav.openInNewTab}</span>
+    </a>
   )}
 </p>
 {date.note && (
