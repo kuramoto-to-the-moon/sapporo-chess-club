@@ -67,19 +67,20 @@ const anchors = [
     </div>
 
     <nav class="flex-1 min-h-0 w-full max-w-4xl mx-auto px-5 pt-5 overflow-y-auto overscroll-contain" aria-label={i.nav.mainNav}>
-      {/* 現在ページ表示: 暗背景では primary 文字が AA を割るため非テキストの左バーで示す */}
       {pages.map((page, idx) => (
         <a
           href={page.href}
           data-astro-prefetch
-          class="block mb-4 animate-fade-in-up [@media(hover:hover)]:hover:text-white transition-colors duration-150 aria-[current=page]:border-l-2 aria-[current=page]:border-primary aria-[current=page]:pl-3 [@media(hover:hover)]:aria-[current=page]:hover:text-inherit"
+          class="block mb-4 animate-fade-in-up [@media(hover:hover)]:hover:text-white transition-colors duration-150"
           style={`animation-delay: ${idx * 0.05}s`}
           aria-current={page.path === currentPath ? "page" : undefined}
         >
           <span class="text-3xl font-light">{page.label}</span>
-          <span class="block text-[11px] tracking-[1px] text-faint mt-0.5">
-            {page.section}
-          </span>
+          {locale === "ja" && (
+            <span class="block text-[11px] tracking-[1px] text-faint mt-0.5">
+              {page.section}
+            </span>
+          )}
         </a>
       ))}
 
