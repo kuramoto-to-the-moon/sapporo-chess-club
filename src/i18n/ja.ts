@@ -86,8 +86,6 @@ export default {
     recordsLabel: "終了したイベントの記録",
     recordsTournaments: "大会記録を見る",
     recordsAnnouncements: "例会報告を見る",
-    // 時刻と会場/部屋の区切り。前後の空白込み
-    metaSeparator: " ・ ",
   },
   clubInfo: {
     fee: "参加案内",

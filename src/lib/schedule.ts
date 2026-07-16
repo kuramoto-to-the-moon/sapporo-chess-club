@@ -27,13 +27,13 @@ export function getEventName(date: ScheduleDate, locale: Locale): string {
 }
 
 /**
- * "09:00–16:00 ・ 740室" のようなメタ行を組み立てる。
+ * メタ行の各部品を返す。表示側で余白区切りの flex 項目として並べる。
  * room が未入力 (CMS で空欄) の場合は roomSuffix を付けず roomTbd ("未定") にする。
  */
-export function formatScheduleMeta(date: ScheduleDate, locale: Locale): string {
+export function formatScheduleMeta(date: ScheduleDate, locale: Locale): { timeRange: string; roomLabel: string } {
   const i = t(locale);
   const roomLabel = date.room ? `${date.room}${i.schedule.roomSuffix}` : i.schedule.roomTbd;
-  return `${date.startTime}–${date.endTime}${i.schedule.metaSeparator}${roomLabel}`;
+  return { timeRange: `${date.startTime}–${date.endTime}`, roomLabel };
 }
 
 /**
