@@ -20,8 +20,8 @@ const weekday = getDayOfWeek(date.date, locale);
 ---
 
 <p class="flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
-  <time datetime={date.date} class="tabular-nums text-base font-bold text-ink">
-    {dayLabel}<span class="ml-1 text-2xs font-normal text-muted">({weekday})</span>
+  <time datetime={date.date} class="tabular-nums text-xl font-bold text-ink">
+    {dayLabel}<span class="ml-1 text-xs font-normal text-muted">({weekday})</span>
   </time>
   {cancelled && <span class="text-xs font-bold tracking-wide text-muted">{i.badge.cancelledTag}</span>}
 </p>
