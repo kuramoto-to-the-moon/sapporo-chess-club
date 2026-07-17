@@ -16,12 +16,14 @@ const i = t(locale);
 const cancelled = date.cancelled === true;
 const { timeRange, roomLabel } = formatScheduleMeta(date, locale);
 const dayLabel = showMonth ? formatMonthDay(date.date) : String(getDateParts(date.date).day);
-const dateLabel = `${dayLabel}(${getDayOfWeek(date.date, locale)})`;
+const weekday = getDayOfWeek(date.date, locale);
 ---
 
-<p class="flex flex-wrap items-center gap-x-2 gap-y-0.5 text-2xs text-muted">
-  <time datetime={date.date} class="tabular-nums">{dateLabel}</time>
-  {cancelled && <span class="font-bold tracking-wide">{i.badge.cancelledTag}</span>}
+<p class="flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
+  <time datetime={date.date} class="tabular-nums text-base font-bold text-ink">
+    {dayLabel}<span class="ml-1 text-2xs font-normal text-muted">({weekday})</span>
+  </time>
+  {cancelled && <span class="text-xs font-bold tracking-wide text-muted">{i.badge.cancelledTag}</span>}
 </p>
 
 <p class={`text-sm font-semibold mt-0.5 ${cancelled ? "text-muted" : "text-ink"}`}>
