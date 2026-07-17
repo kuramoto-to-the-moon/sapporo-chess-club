@@ -129,12 +129,14 @@ const anchors = [
        @starting-style が開くたびの初期状態、allow-discrete が閉じ時のフェード継続を担う。
        prefers-reduced-motion は globals.css が全体で無効化。 */
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(8px);
+    /* イージングはサイト共通の cubic-bezier(0.16,1,0.3,1)（globals の fade-in-up と同じ）。
+       opacity だけ速くしてページを素早く覆い（透け残り防止）、動きは穏やかに残す。 */
     transition:
-      opacity 0.42s ease,
-      transform 0.42s cubic-bezier(0.16, 1, 0.3, 1),
-      overlay 0.42s ease allow-discrete,
-      display 0.42s ease allow-discrete;
+      opacity 0.18s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.34s cubic-bezier(0.16, 1, 0.3, 1),
+      overlay 0.34s cubic-bezier(0.16, 1, 0.3, 1) allow-discrete,
+      display 0.34s cubic-bezier(0.16, 1, 0.3, 1) allow-discrete;
   }
   .hamburger-dialog[open] {
     opacity: 1;
@@ -143,7 +145,7 @@ const anchors = [
   @starting-style {
     .hamburger-dialog[open] {
       opacity: 0;
-      transform: translateY(10px);
+      transform: translateY(8px);
     }
   }
   .hamburger-dialog::backdrop {
