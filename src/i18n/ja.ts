@@ -44,12 +44,6 @@ export default {
     mainNav: "メインナビゲーション",
     breadcrumb: "パンくずリスト",
   },
-  sections: {
-    home: "HOME",
-    schedule: "SCHEDULE",
-    tournaments: "TOURNAMENTS",
-    announcements: "NEWS",
-  },
   hero: {
     subtitle: "北海道のチェス愛好家が集うコミュニティです。初心者歓迎。",
   },

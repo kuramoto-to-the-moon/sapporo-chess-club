@@ -67,20 +67,14 @@ const anchors = [
     </div>
 
     <nav class="flex-1 min-h-0 w-full max-w-4xl mx-auto px-5 pt-5 overflow-y-auto overscroll-contain" aria-label={i.nav.mainNav}>
-      {pages.map((page, idx) => (
+      {pages.map((page) => (
         <a
           href={page.href}
           data-astro-prefetch
-          class="block mb-4 animate-fade-in-up [@media(hover:hover)]:hover:text-white transition-colors duration-150"
-          style={`animation-delay: ${idx * 0.05}s`}
+          class="block mb-4 [@media(hover:hover)]:hover:text-white transition-colors duration-150"
           aria-current={page.path === currentPath ? "page" : undefined}
         >
           <span class="text-3xl font-light">{page.label}</span>
-          {locale === "ja" && (
-            <span class="block text-2xs tracking-[1px] text-faint mt-0.5">
-              {page.section}
-            </span>
-          )}
         </a>
       ))}
 
@@ -90,11 +84,10 @@ const anchors = [
         {i.menu.sectionLabel}
       </p>
       <div class="flex flex-col gap-2">
-        {anchors.map((anchor, idx) => (
+        {anchors.map((anchor) => (
           <a
             href={anchor.href}
-            class="text-sm text-faint [@media(hover:hover)]:hover:text-surface transition-colors duration-150 animate-fade-in-up"
-            style={`animation-delay: ${(pages.length + idx) * 0.05}s`}
+            class="text-sm text-faint [@media(hover:hover)]:hover:text-surface transition-colors duration-150"
           >
             {anchor.label}
           </a>
@@ -132,6 +125,26 @@ const anchors = [
     background: transparent;
     color: inherit;
     overflow: hidden;
+    /* 開閉を穏やかに: シート全体を柔らかくフェード＋わずかに沈み込みから定位置へ。
+       @starting-style が開くたびの初期状態、allow-discrete が閉じ時のフェード継続を担う。
+       prefers-reduced-motion は globals.css が全体で無効化。 */
+    opacity: 0;
+    transform: translateY(10px);
+    transition:
+      opacity 0.42s ease,
+      transform 0.42s cubic-bezier(0.16, 1, 0.3, 1),
+      overlay 0.42s ease allow-discrete,
+      display 0.42s ease allow-discrete;
+  }
+  .hamburger-dialog[open] {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  @starting-style {
+    .hamburger-dialog[open] {
+      opacity: 0;
+      transform: translateY(10px);
+    }
   }
   .hamburger-dialog::backdrop {
     background: transparent;
@@ -139,8 +152,6 @@ const anchors = [
 </style>
 
 <script>
-  import { replayAnimations } from "@/lib/dialog";
-
   const openBtn = document.getElementById("hamburger-open") as HTMLButtonElement | null;
   const dialog = document.getElementById("hamburger-dialog") as HTMLDialogElement | null;
   if (openBtn && dialog) {
@@ -152,9 +163,8 @@ const anchors = [
     // 明示的に JS で制御する。
     const closeBtn = dialog.querySelector<HTMLButtonElement>("[data-hamburger-close]");
 
-    /** メニューを開く。*/
+    /** メニューを開く。開閉アニメは CSS (transition + @starting-style) が担う。*/
     function openMenu() {
-      replayAnimations(dialog, ".animate-fade-in-up");
       dialog.showModal();
       closeBtn?.focus({ preventScroll: true });
       openBtn.setAttribute("aria-expanded", "true");

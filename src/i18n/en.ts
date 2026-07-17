@@ -58,12 +58,6 @@ export default {
     mainNav: "Main navigation",
     breadcrumb: "Breadcrumb",
   },
-  sections: {
-    home: "HOME",
-    schedule: "SCHEDULE",
-    tournaments: "TOURNAMENTS",
-    announcements: "NEWS",
-  },
   hero: {
     subtitle: "A community for chess enthusiasts in Hokkaido. Beginners welcome.",
   },

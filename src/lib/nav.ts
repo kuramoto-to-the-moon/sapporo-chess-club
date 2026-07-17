@@ -28,8 +28,6 @@ import { t, getLocalePath, type Locale } from "@/i18n";
 export interface NavPage {
   /** 表示名 (ロケール依存) */
   label: string;
-  /** HamburgerMenu で表示するサブタイトル (セクション名) */
-  section: string;
   /** 遷移先 URL (base path 込み) */
   href: string;
   /** aria-current 判定に使う正規化済みパス。例: "/", "/schedule" */
@@ -39,10 +37,10 @@ export interface NavPage {
 export function getNavPages(locale: Locale): NavPage[] {
   const i = t(locale);
   return [
-    { label: i.nav.home, section: i.sections.home, href: getLocalePath(locale, "/"), path: "/" },
-    { label: i.announcements.label, section: i.sections.announcements, href: getLocalePath(locale, "/announcements"), path: "/announcements" },
-    { label: i.schedule.label, section: i.sections.schedule, href: getLocalePath(locale, "/schedule"), path: "/schedule" },
-    { label: i.nav.tournaments, section: i.sections.tournaments, href: getLocalePath(locale, "/tournaments"), path: "/tournaments" },
+    { label: i.nav.home, href: getLocalePath(locale, "/"), path: "/" },
+    { label: i.announcements.label, href: getLocalePath(locale, "/announcements"), path: "/announcements" },
+    { label: i.schedule.label, href: getLocalePath(locale, "/schedule"), path: "/schedule" },
+    { label: i.nav.tournaments, href: getLocalePath(locale, "/tournaments"), path: "/tournaments" },
   ];
 }
 
