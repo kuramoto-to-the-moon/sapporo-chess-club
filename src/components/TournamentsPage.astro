@@ -5,6 +5,7 @@ import TournamentList from "@/components/TournamentList.astro";
 import { t, getLocalePath, type Locale } from "@/i18n";
 import { withBase } from "@/lib/utils";
 import { parseDate, getDateParts } from "@/lib/date";
+import { formatAnnouncementDate } from "@/lib/announcement";
 import { buildBreadcrumbJsonLd, homeCrumb } from "@/lib/breadcrumb";
 
 interface Props {
@@ -24,7 +25,7 @@ const tournaments = sorted.map((t) => {
   const title = (locale === "en" && t.data.title.en) ? t.data.title.en : t.data.title.ja;
   return {
     title,
-    date: t.data.date,
+    date: formatAnnouncementDate(t.data.date),
     detailsPdf: withBase(t.data.detailsPdf),
     resultsPdf: withBase(t.data.resultsPdf),
     gamesPgn: withBase(t.data.gamesPgn),
