@@ -13,6 +13,14 @@ const i = t(locale);
 
 const siteData = await getCollection("site");
 const site = siteData[0].data;
+
+// 会場フロア表記の「又は / or」を弱く見せて区切りとして認識させる。
+// 前後空白ごと分割し、奇数要素が接続語になる。
+const floorText = site.venue.floor?.[locale] ?? "";
+const floorConnector = locale === "ja" ? "又は" : "or";
+const floorSegments = floorText
+  ? floorText.split(new RegExp(`\\s*(${floorConnector})\\s*`))
+  : [];
 ---
 
 <section id="info" class="px-5 py-10 border-t border-edge">
@@ -37,7 +45,13 @@ const site = siteData[0].data;
     <div class="flex flex-col">
       <SectionHeader label={i.clubInfo.venue} />
       <div class="flex flex-col gap-1 text-sm text-sub">
-        <p class="text-ink font-medium">{site.venue.name[locale]}{site.venue.floor ? ` ${site.venue.floor[locale]}` : ""}</p>
+        <p class="text-ink font-medium">
+          {site.venue.name[locale]}{floorText && " "}{floorSegments.map((seg, idx) =>
+            idx % 2 === 1
+              ? <span class="mx-1 text-muted font-normal">{seg}</span>
+              : seg
+          )}
+        </p>
         <p>{site.venue.address[locale]}</p>
         <p class="text-muted text-xs mt-1">{site.venue.access[locale]}</p>
         <a
