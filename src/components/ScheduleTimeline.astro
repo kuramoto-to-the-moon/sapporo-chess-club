@@ -1,6 +1,6 @@
 ---
 import { t, type Locale } from "@/i18n";
-import { getDateParts, getDayOfWeek } from "@/lib/date";
+import { getDateParts } from "@/lib/date";
 import { type ScheduleDate } from "@/lib/schedule";
 import ScheduleEventBody from "@/components/ScheduleEventBody.astro";
 
@@ -52,14 +52,8 @@ function formatMonthHeading(monthKey: string): string {
       </h2>
       <ul class="flex flex-col">
         {monthDates.map((date) => (
-          <li class="flex items-baseline gap-4 py-4 border-b border-hairline last:border-0">
-            <div class="flex items-baseline gap-1.5 min-w-[72px] shrink-0">
-              <time datetime={date.date} class="text-xl font-semibold text-ink tabular-nums">{getDateParts(date.date).day}</time>
-              <span class="text-xs text-muted">({getDayOfWeek(date.date, locale)})</span>
-            </div>
-            <div class="flex-1 min-w-0">
-              <ScheduleEventBody date={date} locale={locale} />
-            </div>
+          <li class="py-4 border-b border-hairline last:border-0">
+            <ScheduleEventBody date={date} locale={locale} />
           </li>
         ))}
       </ul>

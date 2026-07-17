@@ -1,38 +1,37 @@
 ---
 import { t, getLocalePath, type Locale } from "@/i18n";
 import { getEventName, formatScheduleMeta, type ScheduleDate } from "@/lib/schedule";
+import { formatMonthDay, getDateParts, getDayOfWeek } from "@/lib/date";
 import ExternalLinkIcon from "@/components/ExternalLinkIcon.astro";
 
 interface Props {
   date: ScheduleDate;
   locale: Locale;
+  /** true で日付に月を含める（月見出しの無い TOP 用）。既定は日のみ（月見出しがある一覧用） */
+  showMonth?: boolean;
 }
 
-const { date, locale } = Astro.props;
+const { date, locale, showMonth = false } = Astro.props;
 const i = t(locale);
-const isTournament = date.type === "tournament";
 const cancelled = date.cancelled === true;
 const { timeRange, roomLabel } = formatScheduleMeta(date, locale);
+const dayLabel = showMonth ? formatMonthDay(date.date) : String(getDateParts(date.date).day);
+const dateLabel = `${dayLabel}(${getDayOfWeek(date.date, locale)})`;
 ---
 
-<p class="text-sm font-semibold flex items-center gap-2 flex-wrap">
-  {isTournament && (
-    <span class="text-xs px-1.5 py-0.5 rounded bg-primary text-white font-semibold">
-      {i.badge.tournamentTag}
-    </span>
-  )}
-  {cancelled && (
-    <span class="text-xs px-1.5 py-0.5 rounded bg-hairline text-sub font-semibold">
-      {i.badge.cancelledTag}
-    </span>
-  )}
+<p class="flex flex-wrap items-center gap-x-2 gap-y-0.5 text-2xs text-muted">
+  <time datetime={date.date} class="tabular-nums">{dateLabel}</time>
+  {cancelled && <span class="font-bold tracking-wide">{i.badge.cancelledTag}</span>}
+</p>
+
+<p class={`text-sm font-semibold mt-0.5 ${cancelled ? "text-muted" : "text-ink"}`}>
   {date.announcementSlug ? (
     <a
       href={getLocalePath(locale, `/announcements/${date.announcementSlug}`)}
       data-astro-prefetch
-      class="text-primary [@media(hover:hover)]:hover:underline underline-offset-2"
+      class={`underline-offset-2 [@media(hover:hover)]:hover:underline ${cancelled ? "text-muted" : "text-primary"}`}
     >
-      {/* SR の「リンク一覧」読みはバッジ span を読まないため、リンク名にも状態を含める */}
+      {/* SR の「リンク一覧」読みはバッジ span を読まないため、リンク名にも中止状態を含める */}
       {cancelled && <span class="sr-only">{i.badge.cancelledTag}: </span>}
       {getEventName(date, locale)}
     </a>
@@ -40,22 +39,27 @@ const { timeRange, roomLabel } = formatScheduleMeta(date, locale);
     <span>{getEventName(date, locale)}</span>
   )}
 </p>
-<p class="text-xs text-muted mt-1 flex flex-wrap items-center gap-x-4 gap-y-1">
-  <span>{timeRange}</span>
-  <span>{roomLabel}</span>
-  {date.chessResults && (
+
+<p class="flex flex-wrap items-baseline gap-x-3.5 gap-y-0.5 text-xs mt-1">
+  <span class="text-ink">{roomLabel}</span>
+  <span class="text-muted">{timeRange}</span>
+</p>
+
+{date.note && (
+  <p class="text-xs text-sub mt-1.5">※ {date.note[locale]}</p>
+)}
+
+{date.chessResults && (
+  <p class="mt-1.5">
     <a
       href={date.chessResults}
       target="_blank"
       rel="noopener noreferrer"
-      class="inline-flex items-center gap-1 text-primary [@media(hover:hover)]:hover:underline underline-offset-2"
+      class="inline-flex items-center gap-1 text-xs text-primary [@media(hover:hover)]:hover:underline underline-offset-2"
     >
       {i.tournament.chessResults}
       <ExternalLinkIcon size={13} />
       <span class="sr-only">{i.nav.openInNewTab}</span>
     </a>
-  )}
-</p>
-{date.note && (
-  <p class="text-xs text-muted mt-1">{date.note[locale]}</p>
+  </p>
 )}

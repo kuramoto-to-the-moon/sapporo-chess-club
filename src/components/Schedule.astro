@@ -1,6 +1,5 @@
 ---
 import { t, getLocalePath, type Locale } from "@/i18n";
-import { formatMonthDay, getDayOfWeek } from "@/lib/date";
 import { getUpcomingScheduleDates } from "@/lib/schedule-data";
 import ScheduleEventBody from "@/components/ScheduleEventBody.astro";
 import SectionHeader from "@/components/SectionHeader.astro";
@@ -28,16 +27,8 @@ const upcoming = await getUpcomingScheduleDates(3);
       <ul class="flex flex-col">
         {upcoming.map((date) => {
           return (
-            <li class="flex items-baseline gap-4 py-4 border-b border-hairline last:border-0">
-              <div class="flex items-baseline gap-1.5 min-w-[104px] shrink-0">
-                <time datetime={date.date} class="text-xl font-semibold text-ink tabular-nums">
-                  {formatMonthDay(date.date)}
-                </time>
-                <span class="text-xs text-muted">({getDayOfWeek(date.date, locale)})</span>
-              </div>
-              <div class="flex-1 min-w-0">
-                <ScheduleEventBody date={date} locale={locale} />
-              </div>
+            <li class="py-4 border-b border-hairline last:border-0">
+              <ScheduleEventBody date={date} locale={locale} showMonth />
             </li>
           );
         })}
