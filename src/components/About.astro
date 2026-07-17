@@ -12,5 +12,7 @@ const i = t(locale);
 
 <section id="about" class="px-5 py-10 border-t border-edge">
   <SectionHeader label={i.about.label} />
-  <p class="text-sm leading-[1.8] text-sub">{i.about.body}</p>
+  {/* text-wrap:pretty (globals の p 既定) は Safari で長文を詰めて右に余白を残すため、
+      最長段落のここだけ greedy 折り返しに戻す */}
+  <p class="text-sm leading-[1.8] text-sub [text-wrap:auto]">{i.about.body}</p>
 </section>
