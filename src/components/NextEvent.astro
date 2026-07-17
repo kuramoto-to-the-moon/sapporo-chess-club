@@ -28,7 +28,7 @@ const showTitleRow = isTournament || cancelled;
     <SectionHeader label={isTournament ? i.nextEvent.event : i.nextEvent.meeting} />
     <p class="flex items-baseline gap-2">
       <time datetime={next.date} class="text-5xl font-extralight leading-none text-primary tabular-nums">{formatMonthDay(next.date)}</time>
-      <span class="text-lg text-muted">({getDayOfWeek(next.date, locale)})</span>
+      <span class="text-base text-muted">({getDayOfWeek(next.date, locale)})</span>
     </p>
     {showTitleRow && (
       <p class="text-base font-semibold mt-3 flex items-center gap-2">

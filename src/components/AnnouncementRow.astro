@@ -27,8 +27,8 @@ const href = getLocalePath(locale, `/announcements/${entry.id}`);
     href={href}
     class="group flex flex-col gap-1 py-4 border-b border-hairline last:border-0"
   >
-    <time datetime={entry.data.date} class="text-[12px] text-muted tabular-nums tracking-wide">{dateLabel}</time>
-    <span class="text-[17px] font-semibold text-primary [@media(hover:hover)]:group-hover:underline underline-offset-2 line-clamp-2">{pickTitle(entry, locale)}</span>
+    <time datetime={entry.data.date} class="text-2xs text-muted tabular-nums tracking-wide">{dateLabel}</time>
+    <span class="text-base font-semibold text-primary [@media(hover:hover)]:group-hover:underline underline-offset-2 line-clamp-2">{pickTitle(entry, locale)}</span>
     <p class="text-xs text-muted leading-[1.55] line-clamp-2">{pickDescription(entry, locale)}</p>
   </a>
 </li>
