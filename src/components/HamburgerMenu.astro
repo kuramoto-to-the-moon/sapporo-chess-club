@@ -44,7 +44,7 @@ const anchors = [
 </button>
 
 <dialog id="hamburger-dialog" class="hamburger-dialog" aria-label={i.menu.dialogLabel}>
-  <div class="flex flex-col w-full h-full bg-ink text-surface">
+  <div class="menu-sheet flex flex-col w-full h-full text-surface">
     <div class="w-full max-w-4xl mx-auto flex items-center justify-between px-5 pt-3 pb-2">
       <a
         href={homeHref}
@@ -122,30 +122,40 @@ const anchors = [
     width: 100vw;
     height: 100vh; /* fallback */
     height: 100dvh;
-    background: transparent;
+    /* 暗幕は dialog 側に。中身が動いても背後が暗いままで透けない。
+       prefers-reduced-motion は globals.css が全体で無効化。 */
+    background: var(--color-ink);
     color: inherit;
     overflow: hidden;
-    /* 開閉を穏やかに: シート全体を柔らかくフェード＋わずかに沈み込みから定位置へ。
-       @starting-style が開くたびの初期状態、allow-discrete が閉じ時のフェード継続を担う。
-       prefers-reduced-motion は globals.css が全体で無効化。 */
+    /* 暗幕は素早くフェードしてページを覆う（透け残り防止）。イージングはサイト共通。 */
     opacity: 0;
-    transform: translateY(8px);
-    /* イージングはサイト共通の cubic-bezier(0.16,1,0.3,1)（globals の fade-in-up と同じ）。
-       opacity だけ速くしてページを素早く覆い（透け残り防止）、動きは穏やかに残す。 */
     transition:
-      opacity 0.18s cubic-bezier(0.16, 1, 0.3, 1),
-      transform 0.34s cubic-bezier(0.16, 1, 0.3, 1),
-      overlay 0.34s cubic-bezier(0.16, 1, 0.3, 1) allow-discrete,
-      display 0.34s cubic-bezier(0.16, 1, 0.3, 1) allow-discrete;
+      opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+      overlay 0.2s cubic-bezier(0.16, 1, 0.3, 1) allow-discrete,
+      display 0.2s cubic-bezier(0.16, 1, 0.3, 1) allow-discrete;
   }
   .hamburger-dialog[open] {
     opacity: 1;
-    transform: translateY(0);
   }
   @starting-style {
     .hamburger-dialog[open] {
       opacity: 0;
-      transform: translateY(8px);
+    }
+  }
+
+  /* 中身は globals の fade-in-up と同じ滑らかさ（translateY 14px＋フェード, 同イージング）で
+     立ち上げる。暗幕が dialog 側なので中身が動いても透けない。開くたび @starting-style で再生。 */
+  .menu-sheet {
+    opacity: 1;
+    transform: translateY(0);
+    transition:
+      opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  @starting-style {
+    .hamburger-dialog[open] .menu-sheet {
+      opacity: 0;
+      transform: translateY(14px);
     }
   }
   .hamburger-dialog::backdrop {
