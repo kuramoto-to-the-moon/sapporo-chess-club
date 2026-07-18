@@ -127,15 +127,21 @@ const anchors = [
     background: var(--color-ink);
     color: inherit;
     overflow: hidden;
-    /* 暗幕は素早くフェードしてページを覆う（透け残り防止）。イージングはサイト共通。 */
     opacity: 0;
+    /* 閉じ時のトランジション。開きの expo-out は前半に動きが偏り、閉じに使うと一瞬で
+       消えて「アニメ無し」に見える。閉じは前のめりでない ease で滑らかにフェードアウト。 */
+    transition:
+      opacity 0.24s ease,
+      overlay 0.24s ease allow-discrete,
+      display 0.24s ease allow-discrete;
+  }
+  .hamburger-dialog[open] {
+    opacity: 1;
+    /* 開き時: 素早く覆う（サイト共通の easing） */
     transition:
       opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1),
       overlay 0.2s cubic-bezier(0.16, 1, 0.3, 1) allow-discrete,
       display 0.2s cubic-bezier(0.16, 1, 0.3, 1) allow-discrete;
-  }
-  .hamburger-dialog[open] {
-    opacity: 1;
   }
   @starting-style {
     .hamburger-dialog[open] {
@@ -175,6 +181,10 @@ const anchors = [
     // 明示的に JS で制御する。
     const closeBtn = dialog.querySelector<HTMLButtonElement>("[data-hamburger-close]");
 
+    // ページ遷移中フラグ。遷移リンクタップ時は覆いを維持したいので、
+    // その間の visibilitychange による即閉じをスキップさせる。
+    let navigating = false;
+
     /** メニューを開く。開閉アニメは CSS (transition + @starting-style) が担う。*/
     function openMenu() {
       dialog.showModal();
@@ -182,9 +192,22 @@ const anchors = [
       openBtn.setAttribute("aria-expanded", "true");
     }
 
-    /** メニューを閉じる。*/
+    /** メニューを閉じる（CSS のフェードアウト付き）。*/
     function closeMenu() {
       dialog.close();
+    }
+
+    /**
+     * transition を挟まず即座に閉じる。close() は exit transition (allow-discrete) を
+     * 走らせるため、bfcache 凍結や PWA バックグラウンドが transition の途中に起きると
+     * dialog が「暗幕フェード途中」の状態で捕捉され、復元時に画面が真っ暗になる。
+     * それを防ぐため、凍結/バックグラウンド時はアニメを外して即座に閉じる。
+     */
+    function closeInstant() {
+      if (!dialog.open) return;
+      dialog.style.transition = "none";
+      dialog.close();
+      requestAnimationFrame(() => { dialog.style.transition = ""; });
     }
 
     /**
@@ -213,26 +236,34 @@ const anchors = [
       }
       const link = target.closest("a[href]") as HTMLAnchorElement | null;
       const href = link?.getAttribute("href");
-      if (href?.includes("#")) {
+      if (!href) return;
+      if (href.includes("#")) {
         // 同一ページ内 (#id) でも cross-page (/path#id) でもアンカーなら閉じる
         closeMenuAndFreezeHeader();
         return;
       }
-      // その他のリンク (ページ遷移) では意図的に何もしない。
+      // その他のリンク (ページ遷移) では意図的に閉じない。
       // dialog を top-layer に残すことで、新ページが描画されるまで古いページを
-      // 覆い隠せて、リンクタップ時のちらつきを防げる。ここで close() すると
-      // 一瞬古いページが露出するので NG。
+      // 覆い隠せて、リンクタップ時のちらつきを防げる。
+      // 遷移中は覆いを維持したいので、visibilitychange 側の即閉じをスキップさせる
+      // （bfcache 対策は下の pagehide が担当）。
+      navigating = true;
     });
 
-    // bfcache 対策: ページ遷移時に dialog を開いたまま残す設計だが、
-    // そのままの状態で bfcache に凍結されると、復元時に dialog が画面を覆い続ける。
-    // pagehide (凍結直前) で閉じておくことで bfcache には正常状態が保存される。
-    // pageshow は復元時の safety net: pagehide で閉じ損ねたケースをカバー。
-    window.addEventListener("pagehide", () => {
-      if (dialog.open) dialog.close();
+    // 凍結/バックグラウンド時は即座に閉じ、真っ暗な状態で捕捉されるのを防ぐ。
+    // - pagehide: bfcache 凍結直前（通常のページ遷移や離脱）。
+    // - visibilitychange(hidden): PWA バックグラウンド（pagehide が発火しない環境）。
+    //   ただしページ遷移中(navigating)は覆いを維持したいのでスキップ。
+    // - pageshow(persisted): bfcache 復元時の safety net。
+    window.addEventListener("pagehide", closeInstant);
+    document.addEventListener("visibilitychange", () => {
+      if (document.visibilityState === "hidden" && !navigating) closeInstant();
     });
     window.addEventListener("pageshow", (e: PageTransitionEvent) => {
-      if (e.persisted && dialog.open) dialog.close();
+      if (e.persisted) {
+        navigating = false;
+        closeInstant();
+      }
     });
   }
 </script>
