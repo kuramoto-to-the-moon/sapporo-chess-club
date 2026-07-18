@@ -149,15 +149,26 @@ const anchors = [
     }
   }
 
-  /* 中身は globals の fade-in-up と同じ滑らかさ（translateY 14px＋フェード, 同イージング）で
-     立ち上げる。暗幕が dialog 側なので中身が動いても透けない。開くたび @starting-style で再生。 */
+  /* 中身の開閉アニメ。暗幕が dialog 側なので中身が動いても透けない。
+     既定（＝閉じた状態）を「沈んで透明」にし、閉じるときここへ戻る＝中身が下へ沈んで
+     消える（開きの逆）。これで開き＝上昇／閉じ＝下降の対称になり違和感が消える。 */
   .menu-sheet {
+    opacity: 0;
+    transform: translateY(14px);
+    /* 閉じ: 中身が沈んで消える。前のめりでない ease でやや速め。 */
+    transition:
+      opacity 0.24s ease,
+      transform 0.24s ease;
+  }
+  .hamburger-dialog[open] .menu-sheet {
     opacity: 1;
     transform: translateY(0);
+    /* 開き: globals の fade-in-up と同じ滑らかさで下から立ち上げる。 */
     transition:
       opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1),
       transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
   }
+  /* display:none からの初回描画に開きの transition を効かせる開始状態。開くたび再生。 */
   @starting-style {
     .hamburger-dialog[open] .menu-sheet {
       opacity: 0;
