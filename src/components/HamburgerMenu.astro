@@ -150,20 +150,22 @@ const anchors = [
   }
 
   /* 中身の開閉アニメ。暗幕が dialog 側なので中身が動いても透けない。
-     既定（＝閉じた状態）を「沈んで透明」にし、閉じるときここへ戻る＝中身が下へ沈んで
-     消える（開きの逆）。これで開き＝上昇／閉じ＝下降の対称になり違和感が消える。 */
+     既定を「表示状態」にするのが肝: dialog が [open] の間は中身が必ず可視になり、
+     「開いてるのに中身だけ透明＝暗幕だけ見えて真っ黒」という事故が起きない。 */
   .menu-sheet {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  /* 閉じ（[open] が外れた瞬間〜display:none までの間）: 中身が下へ沈んで消える（開きの逆）。 */
+  .hamburger-dialog:not([open]) .menu-sheet {
     opacity: 0;
     transform: translateY(14px);
-    /* 閉じ: 中身が沈んで消える。前のめりでない ease でやや速め。 */
     transition:
       opacity 0.24s ease,
       transform 0.24s ease;
   }
+  /* 開き: globals の fade-in-up と同じ滑らかさで下から立ち上げる。 */
   .hamburger-dialog[open] .menu-sheet {
-    opacity: 1;
-    transform: translateY(0);
-    /* 開き: globals の fade-in-up と同じ滑らかさで下から立ち上げる。 */
     transition:
       opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1),
       transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
@@ -220,6 +222,10 @@ const anchors = [
       dialog.close();
       requestAnimationFrame(() => { dialog.style.transition = ""; });
     }
+
+    // 起動/復元時に dialog が [open] のまま描画されると、暗幕(dark)が画面を覆って
+    // 真っ黒に見える。初期化時に開いていたら即座に閉じる（安全網）。
+    closeInstant();
 
     /**
      * 同一ページ内アンカー用: メニューを閉じ、ヘッダー headroom を一時凍結する。
