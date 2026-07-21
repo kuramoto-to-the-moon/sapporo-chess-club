@@ -115,6 +115,21 @@ export function formatAnnouncementDate(dateStr: string): string {
 }
 
 /**
+ * 大会の開催日表記。単日なら "2026.07.19"、複数日はレンジ表示。
+ * 同月なら終了は日のみ ("2026.07.19–20")、月跨ぎは月日 ("2026.07.31–08.01")、
+ * 年跨ぎは年から ("2025.12.31–2026.01.01")。区切りは en dash。
+ */
+export function formatTournamentDate(date: string, endDate?: string): string {
+  const start = formatAnnouncementDate(date);
+  if (!endDate || endDate === date) return start;
+  const s = getDateParts(date);
+  const e = getDateParts(endDate);
+  if (e.year !== s.year) return `${start}–${formatAnnouncementDate(endDate)}`;
+  if (e.month !== s.month) return `${start}–${formatMonthDay(endDate)}`;
+  return `${start}–${String(e.day).padStart(2, "0")}`;
+}
+
+/**
  * /announcements/[slug] ja/en route から共有して使う getStaticPaths 実装。
  * `prev` は古い側、`next` は新しい側 (sort が desc なので index が大 = 古い)。
  */

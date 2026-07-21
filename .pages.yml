@@ -138,6 +138,10 @@ content:
         label: 開催日
         type: date
         required: true
+      - name: endDate
+        label: 終了日（複数日大会）
+        type: date
+        description: "2日以上開催の大会のみ、最終日を入力。1日開催は空欄。入力すると一覧の日付がレンジ表示（例: 2026.07.19–20）になる。"
       - name: detailsPdf
         label: 要項 PDF
         type: file

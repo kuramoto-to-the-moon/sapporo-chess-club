@@ -24,6 +24,16 @@ const requiredDate = z.string().or(z.date())
   .transform((v) => v instanceof Date ? v.toISOString().split("T")[0] : v);
 
 /**
+ * 任意の date フィールド。空文字列 / null は undefined 化。
+ * 複数日大会の終了日など、あるときだけ設定される日付に使う。
+ */
+const optionalDate = z.string().or(z.date()).nullable().optional()
+  .transform((v) => {
+    if (v === null || v === undefined || v === "") return undefined;
+    return v instanceof Date ? v.toISOString().split("T")[0] : v;
+  });
+
+/**
  * YAML の型自動変換に対応する文字列フィールド。
  * 数値 (740) / 真偽値 (yes) / null を全て文字列に変換。
  */
@@ -111,6 +121,7 @@ const tournaments = defineCollection({
       en: z.string().nullable().optional().transform((v) => v ?? undefined),
     }),
     date: requiredDate,
+    endDate: optionalDate,
     detailsPdf: nullableString,
     resultsPdf: nullableString,
     gamesPgn: nullableString,
