@@ -194,10 +194,6 @@ const anchors = [
     // 明示的に JS で制御する。
     const closeBtn = dialog.querySelector<HTMLButtonElement>("[data-hamburger-close]");
 
-    // ページ遷移中フラグ。遷移リンクタップ時は覆いを維持したいので、
-    // その間の visibilitychange による即閉じをスキップさせる。
-    let navigating = false;
-
     /** メニューを開く。開閉アニメは CSS (transition + @starting-style) が担う。*/
     function openMenu() {
       dialog.showModal();
@@ -259,28 +255,22 @@ const anchors = [
         closeMenuAndFreezeHeader();
         return;
       }
-      // その他のリンク (ページ遷移) では意図的に閉じない。
-      // dialog を top-layer に残すことで、新ページが描画されるまで古いページを
-      // 覆い隠せて、リンクタップ時のちらつきを防げる。
-      // 遷移中は覆いを維持したいので、visibilitychange 側の即閉じをスキップさせる
-      // （bfcache 対策は下の pagehide が担当）。
-      navigating = true;
+      // ページ遷移リンク: メニューを閉じてから遷移する。ブラウザの paint holding が
+      // 新ページ描画まで古いページを保持するので白フラッシュは起きにくく、暗幕を残す
+      // より遅い遷移でも黒い時間が延びない。
+      closeMenu();
     });
 
     // 凍結/バックグラウンド時は即座に閉じ、真っ暗な状態で捕捉されるのを防ぐ。
-    // - pagehide: bfcache 凍結直前（通常のページ遷移や離脱）。
+    // - pagehide: bfcache 凍結直前。
     // - visibilitychange(hidden): PWA バックグラウンド（pagehide が発火しない環境）。
-    //   ただしページ遷移中(navigating)は覆いを維持したいのでスキップ。
     // - pageshow(persisted): bfcache 復元時の safety net。
     window.addEventListener("pagehide", closeInstant);
     document.addEventListener("visibilitychange", () => {
-      if (document.visibilityState === "hidden" && !navigating) closeInstant();
+      if (document.visibilityState === "hidden") closeInstant();
     });
     window.addEventListener("pageshow", (e: PageTransitionEvent) => {
-      if (e.persisted) {
-        navigating = false;
-        closeInstant();
-      }
+      if (e.persisted) closeInstant();
     });
   }
 </script>
