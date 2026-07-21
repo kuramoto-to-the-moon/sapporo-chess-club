@@ -6,4 +6,5 @@ date: "2021-03-27"
 resultsPdf: "/competition/2021HokkaidoSenshuken.pdf"
 gamesPgn: "/competition/HokkaidoCh2021_NoAnalysis.pgn"
 gamesPgnAnnotated: "/competition/HokkaidoCh2021_Analysis.pgn"
+chessResults: "https://s2.chess-results.com/tnr551668.aspx?lan=1&SNode=S0"
 ---

@@ -4,4 +4,5 @@ title:
   en: "2016 Hokkaido Chess Championship"
 date: "2016-03-26"
 resultsPdf: "/competition/2016HokkaidoSenshuken.pdf"
+chessResults: "https://s2.chess-results.com/tnr213960.aspx?lan=1&SNode=S0"
 ---

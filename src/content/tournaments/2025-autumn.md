@@ -6,4 +6,5 @@ date: "2025-10-12"
 resultsPdf: "/competition/SapporoAutumn2025_V1.0.pdf"
 gamesPgn: "/competition/SapporoAutumn2025NoAnalysis.pgn"
 gamesPgnAnnotated: "/competition/SapporoAutumn2025Analysis.pgn"
+chessResults: "https://s2.chess-results.com/tnr1233893.aspx?lan=1&SNode=S0"
 ---

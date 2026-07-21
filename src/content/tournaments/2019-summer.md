@@ -5,4 +5,5 @@ title:
 date: "2019-07-27"
 gamesPgn: "/competition/SapporoSummer2019NoAnalysis.pgn"
 gamesPgnAnnotated: "/competition/SapporoSummer2019Analysis.pgn"
+chessResults: "https://s2.chess-results.com/tnr458625.aspx?lan=1&SNode=S0"
 ---

@@ -6,4 +6,5 @@ date: "2024-07-14"
 resultsPdf: "/competition/SapporoSummer2024.pdf"
 gamesPgn: "/competition/SapporoSummer2024_NoAnalysis.pgn"
 gamesPgnAnnotated: "/competition/SapporoSummer2024_Analysis.pgn"
+chessResults: "https://s2.chess-results.com/tnr955459.aspx?lan=1&SNode=S0"
 ---

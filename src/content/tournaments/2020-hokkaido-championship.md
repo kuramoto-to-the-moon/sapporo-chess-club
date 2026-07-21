@@ -6,4 +6,5 @@ date: "2020-03-21"
 resultsPdf: "/competition/2020HokkaidoSenshuken.pdf"
 gamesPgn: "/competition/HokkaidoCh2020_NoAnalysis.pgn"
 gamesPgnAnnotated: "/competition/HokkaidoCh2020_Analysis.pgn"
+chessResults: "https://s2.chess-results.com/tnr511040.aspx?lan=1&SNode=S0"
 ---

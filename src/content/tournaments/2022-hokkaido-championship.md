@@ -6,4 +6,5 @@ date: "2022-03-26"
 resultsPdf: "/competition/2022HokkaidoSenshuken.pdf"
 gamesPgn: "/competition/HokkaidoCh2022_NoAnalysis.pgn"
 gamesPgnAnnotated: "/competition/HokkaidoCh2022_Anasysis.pgn"
+chessResults: "https://s2.chess-results.com/tnr608113.aspx?lan=1&SNode=S0"
 ---

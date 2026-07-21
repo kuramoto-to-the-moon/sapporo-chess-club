@@ -6,4 +6,5 @@ date: "2025-03-22"
 resultsPdf: "/competition/HokkaidoChessCh2025_V1.0.pdf"
 gamesPgn: "/competition/HokkaidoChessCh2025_NoAnalysis.pgn"
 gamesPgnAnnotated: "/competition/HokkaidoChessCh2025_Analysis.pgn"
+chessResults: "https://s2.chess-results.com/tnr1106926.aspx?lan=1&SNode=S0"
 ---

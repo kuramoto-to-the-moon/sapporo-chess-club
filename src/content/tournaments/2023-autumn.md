@@ -6,4 +6,5 @@ date: "2023-10-08"
 resultsPdf: "/competition/SapporoAutumn2023.pdf"
 gamesPgn: "/competition/SapporoAutumn2023_NoAnalysis.pgn"
 gamesPgnAnnotated: "/competition/SapporoAutumn2023_Analysis.pgn"
+chessResults: "https://s2.chess-results.com/tnr830715.aspx?lan=1&SNode=S0"
 ---

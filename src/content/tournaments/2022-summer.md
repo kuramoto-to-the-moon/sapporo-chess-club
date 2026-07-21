@@ -6,4 +6,5 @@ date: "2022-07-17"
 resultsPdf: "/competition/SapporoSummer2022.pdf"
 gamesPgn: "/competition/SapporoSummer2022NoAnasysis.pgn"
 gamesPgnAnnotated: "/competition/SapporoSummer2022Anasysis.pgn"
+chessResults: "https://s2.chess-results.com/tnr652360.aspx?lan=1&SNode=S0"
 ---

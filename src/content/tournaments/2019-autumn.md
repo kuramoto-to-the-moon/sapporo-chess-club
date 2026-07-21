@@ -5,4 +5,5 @@ title:
 date: "2019-10-13"
 gamesPgn: "/competition/SapporoAutumn2019_NoAnalysis.pgn"
 gamesPgnAnnotated: "/competition/SapporoAutumn2019_Analysis.pgn"
+chessResults: "https://s2.chess-results.com/tnr475916.aspx?lan=1&SNode=S0"
 ---
