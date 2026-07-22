@@ -272,12 +272,6 @@ content:
             fields:
               - { name: ja, label: 日本語, type: string, required: true }
               - { name: en, label: English, type: string, required: true }
-          - name: floor
-            label: フロア・部屋
-            type: object
-            fields:
-              - { name: ja, label: 日本語, type: text }
-              - { name: en, label: English, type: text }
           - name: address
             label: 住所
             type: object

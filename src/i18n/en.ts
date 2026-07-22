@@ -103,6 +103,8 @@ export default {
     observation: "Observation & First Visit",
     free: "Free",
     viewOnMap: "View on Google Maps",
+    roomNotice: "The room varies by date.",
+    checkSchedule: "Check the schedule",
   },
   lessons: {
     label: "Chess Lessons",

@@ -89,6 +89,8 @@ export default {
     observation: "見学・初回参加",
     free: "無料",
     viewOnMap: "Google マップで見る",
+    roomNotice: "部屋は開催日により異なります。",
+    checkSchedule: "スケジュールで確認",
   },
   lessons: {
     label: "チェス講座",

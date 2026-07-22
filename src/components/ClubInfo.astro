@@ -1,6 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import { t, type Locale } from "@/i18n";
+import { t, getLocalePath, type Locale } from "@/i18n";
 import ExternalLinkIcon from "@/components/ExternalLinkIcon.astro";
 import SectionHeader from "@/components/SectionHeader.astro";
 
@@ -14,8 +14,9 @@ const i = t(locale);
 const siteData = await getCollection("site");
 const site = siteData[0].data;
 
-// フロア表記は例会/大会を改行で分けたテキスト。white-space:pre-line で行を保つ。
-const floorText = site.venue.floor?.[locale] ?? "";
+// 部屋は開催日ごとに異なる (810A / 740 / 760 / 1010 …) ため会場欄には固定記載せず、
+// 各回の部屋番号を持つスケジュールへ誘導する。
+const scheduleHref = getLocalePath(locale, "/schedule/");
 ---
 
 <section id="info" class="px-5 py-10 border-t border-edge">
@@ -41,7 +42,15 @@ const floorText = site.venue.floor?.[locale] ?? "";
       <SectionHeader label={i.clubInfo.venue} />
       <div class="flex flex-col gap-1 text-sm text-sub">
         <p class="text-ink font-medium">{site.venue.name[locale]}</p>
-        {floorText && <p class="text-ink whitespace-pre-line">{floorText}</p>}
+        <p>
+          {i.clubInfo.roomNotice}
+          <a
+            href={scheduleHref}
+            class="text-primary [@media(hover:hover)]:hover:underline underline-offset-2"
+          >
+            {i.clubInfo.checkSchedule}
+          </a>
+        </p>
         <p>{site.venue.address[locale]}</p>
         <p class="text-muted text-xs mt-1">{site.venue.access[locale]}</p>
         <a
