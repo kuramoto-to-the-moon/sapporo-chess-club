@@ -69,7 +69,8 @@ const yamlBoolean = z.boolean().nullable().optional()
  * CMS が { ja: null, en: null } や { ja: "", en: "" } で保存するケースに対応。
  */
 const i18nString = z.string().nullable().transform((v) => v ?? "");
-const optionalI18n = z.object({ ja: i18nString, en: i18nString })
+const optionalI18nString = i18nString.optional().transform((v) => v ?? "");
+const optionalI18n = z.object({ ja: i18nString, en: optionalI18nString })
   .nullable()
   .optional()
   .transform((v) => {
