@@ -1,6 +1,6 @@
 ---
 import { t, getLocalePath, type Locale } from "@/i18n";
-import { getEventName, formatRoomLabel, type ScheduleGroup } from "@/lib/schedule";
+import { getEventName, formatRoomLabel, pickNote, type ScheduleGroup } from "@/lib/schedule";
 import { formatMonthDay, getDateParts, getDayOfWeek } from "@/lib/date";
 import ExternalLinkIcon from "@/components/ExternalLinkIcon.astro";
 
@@ -33,7 +33,7 @@ const weekday = isRange
 const roomLabel = formatRoomLabel(first, locale);
 const times = group.map((d) => `${d.startTime}–${d.endTime}`);
 const uniformTime = times.every((time) => time === times[0]);
-const note = first.note?.[locale];
+const note = pickNote(first, locale);
 ---
 
 <p class="flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
