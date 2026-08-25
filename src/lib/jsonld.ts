@@ -1,7 +1,7 @@
 import type { CollectionEntry } from "astro:content";
 import { t, type Locale } from "@/i18n";
 import { parseDate } from "@/lib/date";
-import { getEventName, type ScheduleDate } from "@/lib/schedule";
+import { getEventName, groupScheduleDates, type ScheduleDate } from "@/lib/schedule";
 
 type SiteData = CollectionEntry<"site">["data"];
 
@@ -72,7 +72,7 @@ export function buildClubJsonLd(locale: Locale, site: SiteData, astroSite: URL |
 
 /**
  * 大会を Event としてマークアップ（過去含む、スケジュールページ用）。
- * 同じ大会名の複数日エントリを 1 イベントにまとめる。
+ * 連続日の同一大会は groupScheduleDates で 1 イベントにまとめる（表示側と同じ規則）。
  * startDate = 初日の開始時刻, endDate = 最終日の終了時刻。
  * 大会が 1 件もなければ null。
  */
@@ -85,80 +85,66 @@ export function buildEventsJsonLd(
   const i = t(locale);
   const ogImage = new URL("/images/og.webp", astroSite).toString();
 
-  type MergedEvent = { name: string; startDate: string; startTime: string; endDate: string; endTime: string; cancelled: boolean };
-  const mergedTournaments: MergedEvent[] = [];
-  for (const t of tournaments) {
-    const name = getEventName(t, locale);
-    const existing = mergedTournaments.find((e) => e.name === name);
-    if (existing) {
-      if (t.date > existing.endDate) {
-        existing.endDate = t.date;
-        existing.endTime = t.endTime;
-      }
-      if (t.date < existing.startDate) {
-        existing.startDate = t.date;
-        existing.startTime = t.startTime;
-      }
-      // 全日程が中止の場合のみ Event 全体を中止扱いにする
-      existing.cancelled = existing.cancelled && t.cancelled === true;
-    } else {
-      mergedTournaments.push({
-        name,
-        startDate: t.date,
-        startTime: t.startTime,
-        endDate: t.date,
-        endTime: t.endTime,
-        cancelled: t.cancelled === true,
-      });
-    }
-  }
+  const groups = groupScheduleDates(tournaments);
+  if (groups.length === 0) return null;
 
-  if (mergedTournaments.length === 0) return null;
-  return JSON.stringify(mergedTournaments.map((t) => ({
-    "@context": "https://schema.org",
-    "@type": "Event",
-    name: t.name,
-    startDate: `${t.startDate}T${t.startTime}:00+09:00`,
-    endDate: `${t.endDate}T${t.endTime}:00+09:00`,
-    description: `${t.name} — ${site.venue.name[locale]}`,
-    image: ogImage,
-    location: {
-      "@type": "Place",
-      name: site.venue.name[locale],
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: site.venue.address[locale],
-        addressLocality: "Sapporo",
-        addressRegion: "Hokkaido",
-        addressCountry: "JP",
+  return JSON.stringify(groups.map((group) => {
+    const first = group[0];
+    const last = group[group.length - 1];
+    const name = getEventName(first, locale);
+    // groupScheduleDates は cancelled をキーに含めるのでグループ内で必ず一致する
+    const cancelled = first.cancelled === true;
+
+    return {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      name,
+      startDate: `${first.date}T${first.startTime}:00+09:00`,
+      endDate: `${last.date}T${last.endTime}:00+09:00`,
+      description: `${name} — ${site.venue.name[locale]}`,
+      image: ogImage,
+      location: {
+        "@type": "Place",
+        name: site.venue.name[locale],
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: site.venue.address[locale],
+          addressLocality: "Sapporo",
+          addressRegion: "Hokkaido",
+          addressCountry: "JP",
+        },
       },
-    },
-    organizer: {
-      "@type": "SportsClub",
-      name: i.site.name,
-      url: "https://sapporochessclub.com",
-    },
-    offers: {
-      "@type": "Offer",
-      price: String(site.fee.general),
-      priceCurrency: "JPY",
-      availability: "https://schema.org/InStock",
-      url: new URL(locale === "en" ? "/en/schedule" : "/schedule", astroSite).toString(),
-      // Google Rich Results は validFrom を要求する。
-      // 見学・当日参加 OK のため、開催日の 1 年前から有効とみなす（告知開始の近似）。
-      validFrom: new Date(parseDate(t.startDate).getTime() - 365 * 24 * 60 * 60 * 1000)
-        .toISOString()
-        .slice(0, 10),
-    },
-    performer: {
-      "@type": "SportsTeam",
-      name: i.site.name,
-    },
-    eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
-    eventStatus: t.cancelled
-      ? "https://schema.org/EventCancelled"
-      : "https://schema.org/EventScheduled",
-  })));
+      organizer: {
+        "@type": "SportsClub",
+        name: i.site.name,
+        url: "https://sapporochessclub.com",
+      },
+      // 中止した回に参加枠は無いので offers ごと落とす。
+      // InStock のまま残すと eventStatus: EventCancelled と矛盾する。
+      ...(cancelled ? {} : {
+        offers: {
+          "@type": "Offer",
+          price: String(site.fee.general),
+          priceCurrency: "JPY",
+          availability: "https://schema.org/InStock",
+          url: new URL(locale === "en" ? "/en/schedule" : "/schedule", astroSite).toString(),
+          // Google Rich Results は validFrom を要求する。
+          // 見学・当日参加 OK のため、開催日の 1 年前から有効とみなす（告知開始の近似）。
+          validFrom: new Date(parseDate(first.date).getTime() - 365 * 24 * 60 * 60 * 1000)
+            .toISOString()
+            .slice(0, 10),
+        },
+      }),
+      performer: {
+        "@type": "SportsTeam",
+        name: i.site.name,
+      },
+      eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+      eventStatus: cancelled
+        ? "https://schema.org/EventCancelled"
+        : "https://schema.org/EventScheduled",
+    };
+  }));
 }
 
 /**

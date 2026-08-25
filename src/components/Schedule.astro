@@ -1,8 +1,12 @@
 ---
+import { getCollection } from "astro:content";
 import { t, getLocalePath, type Locale } from "@/i18n";
+import { formatMonthDay, getDayOfWeek } from "@/lib/date";
 import { getUpcomingScheduleDates } from "@/lib/schedule-data";
+import { groupScheduleDates, formatRoomLabel, wrapNote, getEventName } from "@/lib/schedule";
 import ScheduleEventBody from "@/components/ScheduleEventBody.astro";
 import SectionHeader from "@/components/SectionHeader.astro";
+import ExternalLinkIcon from "@/components/ExternalLinkIcon.astro";
 
 interface Props {
   locale: Locale;
@@ -12,27 +16,96 @@ const { locale } = Astro.props;
 const i = t(locale);
 const scheduleHref = getLocalePath(locale, "/schedule");
 
-const upcoming = await getUpcomingScheduleDates(3);
+const siteData = await getCollection("site");
+const venueName = siteData[0].data.venue.name;
+
+// 先頭グループを「次回」として大きく見せ、続く 2 グループを通常行で並べる。
+// 複数日大会が 1 グループに畳まれるので、件数ではなくグループ数で切る。
+const groups = groupScheduleDates(await getUpcomingScheduleDates());
+const [next, ...rest] = groups;
+const upcoming = rest.slice(0, 2);
+
+const lead = next?.[0];
+const isTournament = lead?.type === "tournament";
+const leadNote = lead?.note?.[locale];
+const leadTimes = next?.map((d) => `${d.startTime}–${d.endTime}`) ?? [];
+const uniformTime = leadTimes.every((time) => time === leadTimes[0]);
 ---
 
-<section id="schedule" class="px-5 py-10 border-t border-edge">
+<section id="schedule" class="px-5 py-10 border-t border-edge animate-fade-in-up">
   <SectionHeader label={i.schedule.label} />
 
-  {upcoming.length === 0 ? (
-    <p class="text-sm text-muted">
-      {i.schedule.noUpcoming}
-    </p>
-  ) : (
+  {lead ? (
     <>
-      <ul class="flex flex-col">
-        {upcoming.map((date) => {
-          return (
-            <li class="py-5 border-b border-hairline last:border-0">
-              <ScheduleEventBody date={date} locale={locale} showMonth />
+      <p class="text-2xs tracking-wide text-muted">
+        {isTournament ? i.nextEvent.event : i.nextEvent.meeting}
+      </p>
+      <p class="flex flex-wrap items-baseline gap-x-2 gap-y-1 mt-1">
+        <span class="text-5xl font-extralight leading-none text-primary tabular-nums">
+          <time datetime={lead.date}>{formatMonthDay(lead.date)}</time>{next.length > 1 && (
+            <>–<time datetime={next[next.length - 1].date}>{formatMonthDay(next[next.length - 1].date)}</time></>
+          )}
+        </span>
+        <span class="text-base text-muted">({getDayOfWeek(lead.date, locale)})</span>
+      </p>
+
+      {isTournament && (
+        <p class="text-base font-semibold mt-3">
+          {lead.announcementSlug ? (
+            <a
+              href={getLocalePath(locale, `/announcements/${lead.announcementSlug}`)}
+              data-astro-prefetch
+              class="text-primary [@media(hover:hover)]:hover:underline underline-offset-2"
+            >
+              {getEventName(lead, locale)}
+            </a>
+          ) : (
+            <span>{getEventName(lead, locale)}</span>
+          )}
+        </p>
+      )}
+
+      <p class="text-sm text-muted mt-2 flex flex-wrap items-center gap-x-4 gap-y-1">
+        {uniformTime && <span>{leadTimes[0]}</span>}
+        <span>
+          {venueName[locale]} {formatRoomLabel(lead, locale)}
+          {leadNote && <span class="ml-1 text-xs">{wrapNote(leadNote, locale)}</span>}
+        </span>
+        {lead.chessResults && (
+          <a
+            href={lead.chessResults}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-1 text-primary [@media(hover:hover)]:hover:underline underline-offset-2"
+          >
+            {i.tournament.chessResults}
+            <ExternalLinkIcon size={13} />
+            <span class="sr-only">{i.nav.openInNewTab}</span>
+          </a>
+        )}
+      </p>
+
+      {!uniformTime && (
+        <p class="text-xs text-muted mt-1 tabular-nums">
+          {next.map((d, index) => (
+            <>
+              {index > 0 && <span class="inline-block w-3"></span>}
+              {getDayOfWeek(d.date, locale)} {d.startTime}–{d.endTime}
+            </>
+          ))}
+        </p>
+      )}
+
+      {upcoming.length > 0 && (
+        <ul class="flex flex-col mt-6 border-t border-hairline">
+          {upcoming.map((group) => (
+            <li class="py-4 border-b border-hairline last:border-0">
+              <ScheduleEventBody group={group} locale={locale} showMonth />
             </li>
-          );
-        })}
-      </ul>
+          ))}
+        </ul>
+      )}
+
       <a
         href={scheduleHref}
         data-astro-prefetch
@@ -41,5 +114,7 @@ const upcoming = await getUpcomingScheduleDates(3);
         {i.schedule.viewFullSchedule}
       </a>
     </>
+  ) : (
+    <p class="text-sm text-muted">{i.schedule.noUpcoming}</p>
   )}
 </section>

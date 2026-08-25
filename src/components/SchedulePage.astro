@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import ScheduleTimeline from "@/components/ScheduleTimeline.astro";
+import SectionHeader from "@/components/SectionHeader.astro";
 import { t, getLocalePath, type Locale } from "@/i18n";
 import { parseDate, startOfTodayJST } from "@/lib/date";
 import { getSortedScheduleDates } from "@/lib/schedule-data";
@@ -46,10 +47,7 @@ const breadcrumbJsonLd = buildBreadcrumbJsonLd([
   </section>
 
   <section class="px-5 pb-10">
-    <h2 class="text-sm font-semibold uppercase tracking-wider text-muted mb-3 flex items-center gap-2">
-      <span class="inline-block w-1 h-3 bg-primary"></span>
-      {i.schedule.recordsLabel}
-    </h2>
+    <SectionHeader label={i.schedule.recordsLabel} />
     <ul class="flex flex-col gap-2">
       <li>
         <a href={getLocalePath(locale, "/tournaments")} data-astro-prefetch class="text-sm text-primary [@media(hover:hover)]:hover:underline underline-offset-2 font-medium">
