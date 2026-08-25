@@ -17,6 +17,9 @@ const site = siteData[0].data;
 // 部屋は開催日ごとに異なる (810A / 740 / 760 / 1010 …) ため会場欄には固定記載せず、
 // 各回の部屋番号を持つスケジュールへ誘導する。
 const scheduleHref = getLocalePath(locale, "/schedule/");
+
+// 文中の {link} をリンクに置き換える。ja/en で語順が違うので前後に分割する。
+const [roomNoticeBefore, roomNoticeAfter] = i.clubInfo.roomNotice.split("{link}");
 ---
 
 <section id="info" class="px-5 py-10">
@@ -43,13 +46,10 @@ const scheduleHref = getLocalePath(locale, "/schedule/");
       <div class="flex flex-col gap-1 text-sm text-sub">
         <p class="text-ink font-medium">{site.venue.name[locale]}</p>
         <p>
-          {i.clubInfo.roomNotice}
-          <a
+          {roomNoticeBefore}<a
             href={scheduleHref}
             class="text-primary [@media(hover:hover)]:hover:underline underline-offset-2"
-          >
-            {i.clubInfo.checkSchedule}
-          </a>
+          >{i.clubInfo.checkSchedule}</a>{roomNoticeAfter}
         </p>
         <p>{site.venue.address[locale]}</p>
         <p class="text-muted text-xs mt-1">{site.venue.access[locale]}</p>
