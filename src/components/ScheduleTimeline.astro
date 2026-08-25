@@ -1,7 +1,7 @@
 ---
 import { t, type Locale } from "@/i18n";
 import { getDateParts } from "@/lib/date";
-import { type ScheduleDate } from "@/lib/schedule";
+import { groupScheduleDates, type ScheduleDate } from "@/lib/schedule";
 import ScheduleEventBody from "@/components/ScheduleEventBody.astro";
 
 interface Props {
@@ -18,13 +18,14 @@ function getMonthKey(dateStr: string): string {
   return `${year}-${String(month).padStart(2, "0")}`;
 }
 
-const monthMap = new Map<string, ScheduleDate[]>();
-for (const d of dates) {
-  const key = getMonthKey(d.date);
+// 月をまたぐレンジは初日の月に置く
+const monthMap = new Map<string, ReturnType<typeof groupScheduleDates>>();
+for (const group of groupScheduleDates(dates)) {
+  const key = getMonthKey(group[0].date);
   if (!monthMap.has(key)) monthMap.set(key, []);
-  monthMap.get(key)!.push(d);
+  monthMap.get(key)!.push(group);
 }
-const groupedByMonth = Array.from(monthMap.entries()).map(([key, dates]) => ({ key, dates }));
+const groupedByMonth = Array.from(monthMap.entries()).map(([key, groups]) => ({ key, groups }));
 
 function formatMonthHeading(monthKey: string): string {
   const [year, month] = monthKey.split("-");
@@ -45,15 +46,15 @@ function formatMonthHeading(monthKey: string): string {
 )}
 
 <div class="flex flex-col gap-8">
-  {groupedByMonth.map(({ key, dates: monthDates }) => (
+  {groupedByMonth.map(({ key, groups }) => (
     <div>
-      <h2 class="text-sm font-semibold uppercase tracking-wider text-muted mb-3 pb-2 border-b border-edge">
+      <h2 class="text-sm font-semibold tracking-wider text-muted mb-3 pb-2 border-b border-edge">
         {formatMonthHeading(key)}
       </h2>
       <ul class="flex flex-col">
-        {monthDates.map((date) => (
+        {groups.map((group) => (
           <li class="py-5 border-b border-hairline last:border-0">
-            <ScheduleEventBody date={date} locale={locale} />
+            <ScheduleEventBody group={group} locale={locale} />
           </li>
         ))}
       </ul>

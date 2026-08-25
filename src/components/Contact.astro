@@ -14,7 +14,7 @@ const siteData = await getCollection("site");
 const site = siteData[0].data;
 ---
 
-<section id="contact" class="px-5 py-10 border-t border-edge">
+<section id="contact" class="px-5 py-10">
   <SectionHeader label={i.contact.label} />
   <p class="text-sm leading-[1.8] text-sub flex flex-col gap-1">
     {site.email && (

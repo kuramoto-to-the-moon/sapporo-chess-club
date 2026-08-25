@@ -2,7 +2,6 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Hero from "@/components/Hero.astro";
-import NextEvent from "@/components/NextEvent.astro";
 import Announcements from "@/components/Announcements.astro";
 import Activities from "@/components/Activities.astro";
 import About from "@/components/About.astro";
@@ -37,12 +36,15 @@ const clubJsonLd = buildClubJsonLd(locale, site, Astro.site);
   <script type="application/ld+json" set:html={websiteJsonLd} />
   <script type="application/ld+json" set:html={clubJsonLd} />
   <Hero locale={locale} />
-  <NextEvent locale={locale} />
+  {/* 罫線はこの 3 ブロックの境界にだけ入る。ブロック内は余白で分ける。
+      境界は Schedule / About / ChessLessons が持つ border-t */}
+  <Schedule locale={locale} />
   <Announcements locale={locale} />
+
   <About locale={locale} />
   <Activities locale={locale} />
   <ClubInfo locale={locale} />
-  <Schedule locale={locale} />
+
   <ChessLessons locale={locale} />
   <Resources locale={locale} />
   <Contact locale={locale} />

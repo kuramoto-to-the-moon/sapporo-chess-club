@@ -32,9 +32,16 @@
     cursor: pointer;
   }
   html {
-    scroll-padding-top: 57px;
+    /* ヘッダー実高。md 未満はハンバーガー(40px)、md 以上はワードマーク(20px)が
+       高さを決めるため値が変わる。ズレるとアンカー先が隠れる */
+    scroll-padding-top: 61px;
     scrollbar-color: var(--color-faint) transparent;
     scrollbar-gutter: stable;
+  }
+  @media (width >= 48rem) {
+    html {
+      scroll-padding-top: 45px;
+    }
   }
   /* 組版: 見出しは行長バランス、本文は行末孤立語などを防ぐ。未対応ブラウザは無視するだけ */
   h1, h2, h3 {

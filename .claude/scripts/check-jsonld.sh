@@ -30,9 +30,17 @@ if not m:
 events = json.loads(m.group(1))
 rc = 0
 for e in events:
-    missing = [f for f in ['name','startDate','endDate','description','image','offers','performer','location','organizer','eventAttendanceMode','eventStatus'] if f not in e]
+    cancelled = e.get('eventStatus','').endswith('EventCancelled')
+    required = ['name','startDate','endDate','description','image','performer','location','organizer','eventAttendanceMode','eventStatus']
+    # 中止した回に参加枠は無いので offers を持たない。開催予定には必須。
+    if not cancelled:
+        required.append('offers')
+    missing = [f for f in required if f not in e]
     if missing:
         print(f'ERROR: {e.get(\"name\",\"?\")} に不足: {missing}')
+        rc = 1
+    if cancelled and 'offers' in e:
+        print(f'ERROR: {e.get(\"name\",\"?\")} は中止なのに offers を持っている')
         rc = 1
     offer = e.get('offers')
     if offer:
