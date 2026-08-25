@@ -88,6 +88,17 @@ export function formatRoomLabel(date: ScheduleDate, locale: Locale): string {
 }
 
 /**
+ * 注記を取り出す。en が空なら ja にフォールバックする。
+ * CMS は en を空のまま保存できるため、フォールバックが無いと英語版から
+ * 注意書きが丸ごと消える。ja へ落とす方針はサイト共通 (pickTitle と同じ)。
+ */
+export function pickNote(date: ScheduleDate, locale: Locale): string | undefined {
+  const note = date.note;
+  if (!note) return undefined;
+  return (locale === "en" ? note.en || note.ja : note.ja) || undefined;
+}
+
+/**
  * Pages CMS reference の保存値 (例: "src/content/announcements/2026-06-29-75.md")
  * から announcements の slug ("2026-06-29-75") を取り出す。
  * slug 単体が渡された場合もそのまま返る。

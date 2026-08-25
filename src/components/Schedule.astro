@@ -3,7 +3,7 @@ import { getCollection } from "astro:content";
 import { t, getLocalePath, type Locale } from "@/i18n";
 import { formatMonthDay, getDayOfWeek } from "@/lib/date";
 import { getUpcomingScheduleDates } from "@/lib/schedule-data";
-import { groupScheduleDates, formatRoomLabel, getEventName } from "@/lib/schedule";
+import { groupScheduleDates, formatRoomLabel, pickNote, getEventName } from "@/lib/schedule";
 import ScheduleEventBody from "@/components/ScheduleEventBody.astro";
 import SectionHeader from "@/components/SectionHeader.astro";
 import ExternalLinkIcon from "@/components/ExternalLinkIcon.astro";
@@ -27,7 +27,7 @@ const upcoming = rest.slice(0, 2);
 
 const lead = next?.[0];
 const isTournament = lead?.type === "tournament";
-const leadNote = lead?.note?.[locale];
+const leadNote = lead ? pickNote(lead, locale) : undefined;
 const leadTimes = next?.map((d) => `${d.startTime}–${d.endTime}`) ?? [];
 const uniformTime = leadTimes.every((time) => time === leadTimes[0]);
 ---
