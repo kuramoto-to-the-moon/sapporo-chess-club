@@ -60,7 +60,7 @@ export default {
     meetup: "例会",
     meetupDesc: "月2回の定期開催",
     tournament: "大会",
-    tournamentDesc: "年3回の公式戦",
+    tournamentDesc: "北海道選手権など年3回",
     lesson: "講座",
     lessonDesc: "メンバーが別会場で開講",
   },

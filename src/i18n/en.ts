@@ -74,7 +74,7 @@ export default {
     meetup: "Meetups",
     meetupDesc: "Twice a month",
     tournament: "Tournaments",
-    tournamentDesc: "3 per year",
+    tournamentDesc: "Hokkaido Championship, 3 per year",
     lesson: "Lessons",
     lessonDesc: "By a member, off-site",
   },
