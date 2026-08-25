@@ -87,11 +87,6 @@ export function formatRoomLabel(date: ScheduleDate, locale: Locale): string {
   return date.room ? `${date.room}${i.schedule.roomSuffix}` : i.schedule.roomTbd;
 }
 
-/** 部屋の補足などを括弧でくくる。日本語は全角、英語は半角。 */
-export function wrapNote(note: string, locale: Locale): string {
-  return locale === "ja" ? `（${note}）` : `(${note})`;
-}
-
 /**
  * Pages CMS reference の保存値 (例: "src/content/announcements/2026-06-29-75.md")
  * から announcements の slug ("2026-06-29-75") を取り出す。

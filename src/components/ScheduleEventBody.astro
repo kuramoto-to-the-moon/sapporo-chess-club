@@ -1,6 +1,6 @@
 ---
 import { t, getLocalePath, type Locale } from "@/i18n";
-import { getEventName, formatRoomLabel, wrapNote, type ScheduleGroup } from "@/lib/schedule";
+import { getEventName, formatRoomLabel, type ScheduleGroup } from "@/lib/schedule";
 import { formatMonthDay, getDateParts, getDayOfWeek } from "@/lib/date";
 import ExternalLinkIcon from "@/components/ExternalLinkIcon.astro";
 
@@ -73,10 +73,6 @@ const note = first.note?.[locale];
       {uniformTime && <span class="text-muted">{times[0]}</span>}
     </span>
   )}
-  {/* 注記は部屋・時刻どちらにも付くので、両方の後ろに置いて読み順を崩さない */}
-  {!cancelled && note && (
-    <span class="text-xs text-muted">{wrapNote(note, locale)}</span>
-  )}
 </p>
 
 {!cancelled && !uniformTime && (
@@ -90,7 +86,8 @@ const note = first.note?.[locale];
   </p>
 )}
 
-{cancelled && note && (
+{/* 中止理由も部屋・時刻の注意も同じ「注意書き」なので同じ形式で出す */}
+{note && (
   <p class="text-xs text-sub mt-1.5 pl-3 border-l-2 border-edge">{note}</p>
 )}
 

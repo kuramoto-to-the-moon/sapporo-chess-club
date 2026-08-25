@@ -126,7 +126,11 @@ check("line-through" in visible, "中止タイトルに取り消し線が無い"
 
 # ※ 行は廃止され、部屋変更は部屋の直後にインライン化されている
 check("※" not in text, "※ 行が残っている")
-check(re.search(r"760室.{0,40}（[^）]+）", text) is not None, "注記がメタ行にインライン化されていない")
+# 注意書きは中止理由も部屋・時刻の注記も同じ形式（左罫線つき独立行・括弧なし）
+notes = re.findall(r'<p class="([^"]*border-l-2[^"]*)"', visible)
+check(len(notes) >= 2, f"注記行が足りない ({len(notes)} 件)")
+check(len(set(notes)) == 1, f"注記行の形式が揃っていない: {set(notes)}")
+check("（" not in text, "注記に括弧が残っている")
 
 # 月見出しから uppercase が消えている
 check("uppercase" not in visible, "月見出しに uppercase が残っている")

@@ -3,7 +3,7 @@ import { getCollection } from "astro:content";
 import { t, getLocalePath, type Locale } from "@/i18n";
 import { formatMonthDay, getDayOfWeek } from "@/lib/date";
 import { getUpcomingScheduleDates } from "@/lib/schedule-data";
-import { groupScheduleDates, formatRoomLabel, wrapNote, getEventName } from "@/lib/schedule";
+import { groupScheduleDates, formatRoomLabel, getEventName } from "@/lib/schedule";
 import ScheduleEventBody from "@/components/ScheduleEventBody.astro";
 import SectionHeader from "@/components/SectionHeader.astro";
 import ExternalLinkIcon from "@/components/ExternalLinkIcon.astro";
@@ -68,7 +68,6 @@ const uniformTime = leadTimes.every((time) => time === leadTimes[0]);
       <p class="text-sm text-muted mt-2 flex flex-wrap items-center gap-x-4 gap-y-1">
         {uniformTime && <span>{leadTimes[0]}</span>}
         <span>{venueName[locale]} {formatRoomLabel(lead, locale)}</span>
-        {leadNote && <span class="text-xs">{wrapNote(leadNote, locale)}</span>}
         {lead.chessResults && (
           <a
             href={lead.chessResults}
@@ -82,6 +81,10 @@ const uniformTime = leadTimes.every((time) => time === leadTimes[0]);
           </a>
         )}
       </p>
+
+      {leadNote && (
+        <p class="text-xs text-sub mt-1.5 pl-3 border-l-2 border-edge">{leadNote}</p>
+      )}
 
       {!uniformTime && (
         <p class="text-xs text-muted mt-1 tabular-nums">
