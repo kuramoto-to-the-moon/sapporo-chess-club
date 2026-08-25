@@ -103,8 +103,9 @@ export default {
     observation: "Observation & First Visit",
     free: "Free",
     viewOnMap: "View on Google Maps",
-    roomNotice: "The room varies by date.",
-    checkSchedule: "Check the schedule",
+    // {link} は checkSchedule のリンクに置換される
+    roomNotice: "The room varies by {link}.",
+    checkSchedule: "schedule",
   },
   lessons: {
     label: "Chess Lessons",
