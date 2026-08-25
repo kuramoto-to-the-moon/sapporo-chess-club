@@ -67,10 +67,8 @@ const uniformTime = leadTimes.every((time) => time === leadTimes[0]);
 
       <p class="text-sm text-muted mt-2 flex flex-wrap items-center gap-x-4 gap-y-1">
         {uniformTime && <span>{leadTimes[0]}</span>}
-        <span>
-          {venueName[locale]} {formatRoomLabel(lead, locale)}
-          {leadNote && <span class="ml-1 text-xs">{wrapNote(leadNote, locale)}</span>}
-        </span>
+        <span>{venueName[locale]} {formatRoomLabel(lead, locale)}</span>
+        {leadNote && <span class="text-xs">{wrapNote(leadNote, locale)}</span>}
         {lead.chessResults && (
           <a
             href={lead.chessResults}

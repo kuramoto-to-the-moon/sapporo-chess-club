@@ -69,11 +69,13 @@ const note = first.note?.[locale];
   {/* 中止した回の部屋と時刻は行き先の無い情報なので出さない */}
   {!cancelled && (
     <span class="inline-flex items-baseline gap-x-3">
-      <span class="text-ink">
-        {roomLabel}{note && <span class="ml-1 text-xs text-muted">{wrapNote(note, locale)}</span>}
-      </span>
+      <span class="text-ink">{roomLabel}</span>
       {uniformTime && <span class="text-muted">{times[0]}</span>}
     </span>
+  )}
+  {/* 注記は部屋・時刻どちらにも付くので、両方の後ろに置いて読み順を崩さない */}
+  {!cancelled && note && (
+    <span class="text-xs text-muted">{wrapNote(note, locale)}</span>
   )}
 </p>
 

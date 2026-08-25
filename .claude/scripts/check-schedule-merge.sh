@@ -126,7 +126,7 @@ check("line-through" in visible, "中止タイトルに取り消し線が無い"
 
 # ※ 行は廃止され、部屋変更は部屋の直後にインライン化されている
 check("※" not in text, "※ 行が残っている")
-check(re.search(r"760室\s*（[^）]+）", text) is not None, "部屋の補足が部屋の直後にインライン化されていない")
+check(re.search(r"760室.{0,40}（[^）]+）", text) is not None, "注記がメタ行にインライン化されていない")
 
 # 月見出しから uppercase が消えている
 check("uppercase" not in visible, "月見出しに uppercase が残っている")
