@@ -18,11 +18,10 @@ const scheduleHref = getLocalePath(locale, "/schedule");
 const siteData = await getCollection("site");
 const venueName = siteData[0].data.venue.name;
 
-// 先頭グループを「次回」として大きく見せ、続く 2 グループを通常行で並べる。
-// 複数日大会が 1 グループに畳まれるので、件数ではなくグループ数で切る。
+// TOP は次回 1 件だけ。残りは年間スケジュールへ渡す。
+// 複数日大会は 1 グループに畳まれるので先頭グループがそのまま「次回」になる。
 const groups = groupScheduleDates(await getUpcomingScheduleDates());
-const [next, ...rest] = groups;
-const upcoming = rest.slice(0, 2);
+const [next] = groups;
 
 const lead = next?.[0];
 const isTournament = lead?.type === "tournament";
@@ -32,14 +31,11 @@ const uniformTime = leadTimes.every((time) => time === leadTimes[0]);
 ---
 
 <section id="schedule" class="px-5 py-10 border-t border-edge animate-fade-in-up">
-  <SectionHeader label={i.schedule.label} />
+  <SectionHeader label={isTournament ? i.nextEvent.event : i.nextEvent.meeting} />
 
   {lead ? (
     <>
-      <p class="text-2xs tracking-wide text-muted">
-        {isTournament ? i.nextEvent.event : i.nextEvent.meeting}
-      </p>
-      <p class="flex flex-wrap items-baseline gap-x-2 gap-y-1 mt-1">
+      <p class="flex flex-wrap items-baseline gap-x-2 gap-y-1">
         <span class="text-5xl font-extralight leading-none text-primary tabular-nums">
           <time datetime={lead.date}>{formatMonthDay(lead.date)}</time>{next.length > 1 && (
             <>–<time datetime={next[next.length - 1].date}>{formatMonthDay(next[next.length - 1].date)}</time></>
@@ -96,20 +92,6 @@ const uniformTime = leadTimes.every((time) => time === leadTimes[0]);
         </p>
       )}
 
-      {/* 部屋・時刻・注記はスケジュールページに任せ、TOP は日付だけ出す。
-          次回の大きな日付を主役のままにするため 1 行に畳む */}
-      {upcoming.length > 0 && (
-        <p class="flex flex-wrap items-baseline gap-x-4 gap-y-1 mt-6 pt-4 border-t border-hairline text-sm">
-          <span class="text-2xs tracking-wide text-muted">{i.schedule.upcomingLabel}</span>
-          {upcoming.map((group) => (
-            <span class="tabular-nums text-ink">
-              <time datetime={group[0].date}>{formatMonthDay(group[0].date)}</time>{group.length > 1 && (
-                <>–<time datetime={group[group.length - 1].date}>{formatMonthDay(group[group.length - 1].date)}</time></>
-              )}<span class="ml-1 text-xs font-normal text-muted">({getDayOfWeek(group[0].date, locale)})</span>
-            </span>
-          ))}
-        </p>
-      )}
 
       <a
         href={scheduleHref}

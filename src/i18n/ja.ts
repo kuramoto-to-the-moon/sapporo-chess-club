@@ -68,7 +68,6 @@ export default {
     label: "スケジュール",
     pageTitle: "スケジュール",
     pageSubtitle: "年間スケジュール",
-    upcomingLabel: "このあと",
     viewFullSchedule: "年間スケジュールを見る",
     noUpcoming: "予定されているイベントはありません。",
     filterByYear: "年で絞り込み",
