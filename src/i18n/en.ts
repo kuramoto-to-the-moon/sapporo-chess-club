@@ -87,6 +87,7 @@ export default {
     filterByYear: "Filter by year",
     allYears: "All years",
     all: "All",
+    moreYears: "More years",
     roomSuffix: "",
     roomTbd: "TBD",
     yearSuffix: "",

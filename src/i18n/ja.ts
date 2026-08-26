@@ -73,6 +73,7 @@ export default {
     filterByYear: "年で絞り込み",
     allYears: "すべての年",
     all: "すべて",
+    moreYears: "もっと見る",
     roomSuffix: "室",
     roomTbd: "未定",
     yearSuffix: "年",
