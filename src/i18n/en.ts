@@ -59,7 +59,7 @@ export default {
     breadcrumb: "Breadcrumb",
   },
   hero: {
-    subtitle: "A community for chess enthusiasts in Hokkaido. Beginners welcome.",
+    subtitle: "Chess enthusiasts in Hokkaido, meeting twice a month. Beginners welcome.",
   },
   nextEvent: {
     meeting: "Next Meeting",

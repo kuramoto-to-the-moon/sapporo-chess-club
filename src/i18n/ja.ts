@@ -45,7 +45,7 @@ export default {
     breadcrumb: "パンくずリスト",
   },
   hero: {
-    subtitle: "北海道のチェス愛好家が集うコミュニティです。初心者歓迎。",
+    subtitle: "北海道のチェス愛好家が、月2回集まっています。初心者歓迎。",
   },
   nextEvent: {
     meeting: "次回の例会",
