@@ -82,6 +82,7 @@ export default {
     label: "Schedule",
     pageTitle: "Schedule",
     pageSubtitle: "Annual Schedule",
+    upcomingLabel: "Coming up",
     viewFullSchedule: "View full schedule",
     noUpcoming: "No upcoming events.",
     filterByYear: "Filter by year",

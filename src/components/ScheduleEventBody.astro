@@ -8,11 +8,9 @@ interface Props {
   /** 連続日をまとめた 1 エントリ。単日イベントは要素 1 件 */
   group: ScheduleGroup;
   locale: Locale;
-  /** true で日付に月を含める（月見出しの無い TOP 用）。既定は日のみ（月見出しがある一覧用） */
-  showMonth?: boolean;
 }
 
-const { group, locale, showMonth = false } = Astro.props;
+const { group, locale } = Astro.props;
 const i = t(locale);
 
 const first = group[0];
@@ -21,7 +19,7 @@ const isRange = group.length > 1;
 const cancelled = first.cancelled === true;
 
 const dayOnly = (d: string) => String(getDateParts(d).day);
-const startLabel = showMonth ? formatMonthDay(first.date) : dayOnly(first.date);
+const startLabel = dayOnly(first.date);
 // 月をまたぐレンジは終端にも月を出す。同月なら日だけで足りる。
 const sameMonth = getDateParts(first.date).month === getDateParts(last.date).month;
 const endLabel = sameMonth ? dayOnly(last.date) : formatMonthDay(last.date);
