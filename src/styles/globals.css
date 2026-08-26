@@ -97,28 +97,39 @@
   }
 }
 
-/* Animation utilities */
-@keyframes fade-in-up {
-  from { opacity: 0; transform: translateY(12px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
+/* Animation utilities
+   既定を「表示状態」にし、隠れた状態は @starting-style だけに置くこと
+   (HamburgerMenu の .menu-sheet と同じ原則)。keyframes + fill-mode: both は
+   アニメ開始前の opacity: 0 を保持するため、iOS PWA のようにアニメが
+   開始されないまま描画される環境で中身が透明のまま残る。 */
 .animate-fade-in-up {
-  animation: fade-in-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@starting-style {
+  .animate-fade-in-up {
+    opacity: 0;
+    transform: translateY(12px);
+  }
 }
 
+/* transform は付けない: <main> に効くと position: fixed の含みブロックが変わる */
 .animate-fade-in {
-  animation: fade-in 0.3s cubic-bezier(0.16, 1, 0.3, 1) both;
+  opacity: 1;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@starting-style {
+  .animate-fade-in {
+    opacity: 0;
+  }
 }
 
-.stagger-1 { animation-delay: 0.05s; }
-.stagger-2 { animation-delay: 0.1s; }
-.stagger-3 { animation-delay: 0.15s; }
+.stagger-1 { transition-delay: 0.05s; }
+.stagger-2 { transition-delay: 0.1s; }
+.stagger-3 { transition-delay: 0.15s; }
 
 @layer base {
   :focus-visible {
