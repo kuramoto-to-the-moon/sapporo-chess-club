@@ -18,6 +18,13 @@ dist/
 # internal docs (keep docs/operations.md)
 docs/superpowers/
 
+# impeccable design skill scratch artifacts
+.impeccable/
+impeccable-evidence/
+impeccable-detect-*.txt
+impeccable-detect-*.json
+impeccable-live-server.json
+
 # environment variables
 .env
 .env.production

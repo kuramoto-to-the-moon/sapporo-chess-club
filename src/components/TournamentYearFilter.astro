@@ -22,10 +22,21 @@ const yearOptions: YearOption[] = years.map((y) => ({
 }));
 const selectOptions: YearOption[] = [allOption, ...yearOptions];
 
+// デスクトップ pill は直近 N 年だけを常時表示し、それ以前は <details> の
+// 折りたたみに逃がす。19 択を一度に並べると意思決定コストが跳ね上がるため。
+// years は新しい順に並んでいる前提 (TournamentsPage 側で降順ソート済み)。
+const RECENT_YEARS_COUNT = 4;
+const recentOptions: YearOption[] = [allOption, ...yearOptions.slice(0, RECENT_YEARS_COUNT)];
+const olderOptions: YearOption[] = yearOptions.slice(RECENT_YEARS_COUNT);
+
 const pillClass =
   "inline-flex items-center justify-center min-h-[44px] px-3.5 rounded-md text-sm font-medium transition-colors cursor-pointer " +
   "aria-[pressed=true]:bg-primary aria-[pressed=true]:text-white " +
-  "aria-[pressed=false]:bg-hairline aria-[pressed=false]:text-sub aria-[pressed=false]:hover:bg-edge";
+  "aria-[pressed=false]:bg-hairline aria-[pressed=false]:text-sub [@media(hover:hover)]:aria-[pressed=false]:hover:bg-edge";
+
+const moreClass =
+  "inline-flex items-center justify-center min-h-[44px] px-3.5 rounded-md text-sm font-medium transition-colors cursor-pointer " +
+  "bg-hairline text-sub [@media(hover:hover)]:hover:bg-edge";
 
 const optionClass =
   "w-full text-left px-3 py-2.5 text-sm text-ink cursor-pointer flex items-center justify-between [@media(hover:hover)]:hover:bg-hairline aria-[selected=true]:font-semibold";
@@ -78,7 +89,7 @@ const checkClass =
       role="listbox"
       aria-label={i.schedule.filterByYear}
       hidden
-      class="absolute left-0 right-0 top-full mt-1.5 z-20 bg-white border border-edge rounded-md shadow-lg overflow-y-auto py-1"
+      class="absolute left-0 right-0 top-full mt-1.5 z-20 bg-white border border-edge rounded-md shadow-lg max-h-72 overflow-y-auto py-1"
     >
       {/* li に role="presentation": listbox 直下は option でなければならず、
           li の暗黙 listitem role が挟まると SR が option 数を読めない */}
@@ -103,7 +114,7 @@ const checkClass =
   </div>
 
   <div class="hidden sm:flex flex-wrap gap-2" role="group" aria-label={i.schedule.filterByYear}>
-    {selectOptions.map((opt) => (
+    {recentOptions.map((opt) => (
       <button
         type="button"
         data-filter-pill={opt.value}
@@ -113,6 +124,23 @@ const checkClass =
         {opt.value === "all" ? i.schedule.all : opt.value}
       </button>
     ))}
+    {olderOptions.map((opt) => (
+      <button
+        type="button"
+        data-filter-pill={opt.value}
+        data-filter-pill-collapsed
+        aria-pressed="false"
+        hidden
+        class={pillClass}
+      >
+        {opt.value}
+      </button>
+    ))}
+    {olderOptions.length > 0 && (
+      <button type="button" data-filter-more-toggle class={moreClass}>
+        {i.schedule.moreYears} ({olderOptions.length})
+      </button>
+    )}
   </div>
 
   {/* スクリーンリーダー向けのライブリージョン。フィルタ変更を音声で告知する。 */}
@@ -184,9 +212,26 @@ const checkClass =
     b.addEventListener("click", () => applyYear(b.dataset.filterPill ?? "all"));
   });
 
+  // 「もっと見る」: 押したら過去年 pill を表示し、トグル自体は消す (片方向の開示。
+  // 一度開いたら閉じ直す UI は用意しない。<details> だと折りたたみが独立ブロック化し
+  // 行がズレて見えたため、同じ flex-wrap 行内で hidden を切り替える方式にしている)
+  const moreToggle = document.querySelector<HTMLButtonElement>("[data-filter-more-toggle]");
+  const collapsedPills = Array.from(
+    document.querySelectorAll<HTMLButtonElement>("[data-filter-pill-collapsed]")
+  );
+  function revealOlderYears() {
+    collapsedPills.forEach((p) => { p.hidden = false; });
+    if (moreToggle) moreToggle.hidden = true;
+  }
+  moreToggle?.addEventListener("click", revealOlderYears);
+
   // URL に年指定があれば初期状態として復元 (不正値は labelByValue 照合で無視)
   const initialYear = new URLSearchParams(location.search).get(YEAR_PARAM);
   if (initialYear && labelByValue.has(initialYear)) {
+    // 選択年が折りたたみ内にある場合は先に展開しておく
+    if (collapsedPills.some((p) => p.dataset.filterPill === initialYear)) {
+      revealOlderYears();
+    }
     applyYear(initialYear);
   }
 

@@ -37,7 +37,9 @@ const clubJsonLd = buildClubJsonLd(locale, site, Astro.site);
   <script type="application/ld+json" set:html={clubJsonLd} />
   <Hero locale={locale} />
   {/* 罫線はこの 3 ブロックの境界にだけ入る。ブロック内は余白で分ける。
-      境界は Schedule / About / ChessLessons が持つ border-t */}
+      境界は Schedule / About / ChessLessons が持つ border-t。
+      料金・会場は「クラブ紹介を読んだ後でいい」情報なので ClubInfo は
+      About/Activities の並びに置き、Schedule 直後には置かない */}
   <Schedule locale={locale} />
   <Announcements locale={locale} />
 
