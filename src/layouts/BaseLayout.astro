@@ -155,7 +155,7 @@ const enUrl = new URL(`/en${withTrailingSlash(pagePath)}`, Astro.site).toString(
       {i.nav.skipToMain}
     </a>
     <Header locale={locale} />
-    <main id="main-content" tabindex="-1" class="max-w-4xl w-full mx-auto flex-1 animate-fade-in focus:outline-none">
+    <main id="main-content" tabindex="-1" class="max-w-4xl w-full mx-auto flex-1 focus:outline-none">
       <slot />
     </main>
     <Footer locale={locale} />
@@ -201,9 +201,9 @@ const enUrl = new URL(`/en${withTrailingSlash(pagePath)}`, Astro.site).toString(
         translate: -50% 0;
         opacity: 1;
         transition:
-          opacity 300ms cubic-bezier(0.16, 1, 0.3, 1),
-          translate 300ms cubic-bezier(0.16, 1, 0.3, 1),
-          display 300ms allow-discrete;
+          opacity var(--dur-base) var(--ease-brisk),
+          translate var(--dur-base) var(--ease-brisk),
+          display var(--dur-base) allow-discrete;
       }
       #lang-pill[hidden] {
         display: none;

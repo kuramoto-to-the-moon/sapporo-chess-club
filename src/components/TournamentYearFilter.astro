@@ -76,7 +76,7 @@ const checkClass =
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        class="text-muted transition-transform duration-150"
+        class="text-muted transition-transform duration-[var(--dur-quick)]"
         aria-hidden="true"
       >
         <path d="m6 9 6 6 6-6"/>
@@ -250,3 +250,39 @@ const checkClass =
     });
   }
 </script>
+
+<style>
+  /* hidden 属性の出入りに動きを付ける。既定を「表示状態」にし、隠れた状態は
+     @starting-style だけに置くこと (globals.css の animate-* と同じ原則)。
+     退場は付けられない: preflight の [hidden]{display:none!important} が
+     allow-discrete を打ち切るため、閉じは常に瞬時になる。 */
+  [data-filter-listbox] {
+    opacity: 1;
+    translate: 0 0;
+    /* 尺は chevron と同じ --dur-quick。矢印だけ動いて中身が瞬間移動する
+       食い違いを消すのが目的なので、両者は同じトークンを参照すること */
+    transition:
+      opacity var(--dur-quick) var(--ease-brisk),
+      translate var(--dur-quick) var(--ease-brisk);
+  }
+  @starting-style {
+    [data-filter-listbox] {
+      opacity: 0;
+      translate: 0 -4px;
+    }
+  }
+
+  /* 「もっと見る」で現れる過去年 pill。pill は transition-colors を持つので
+     transition ではなく animation を使う (ユーティリティと衝突しない)。
+     fill-mode は付けない: アニメが走らないまま描画されても素の可視状態に
+     なるだけで、透明のまま残らない */
+  @keyframes reveal-year-pill {
+    from {
+      opacity: 0;
+      translate: 0 -4px;
+    }
+  }
+  [data-filter-pill-collapsed]:not([hidden]) {
+    animation: reveal-year-pill var(--dur-quick) var(--ease-brisk);
+  }
+</style>
