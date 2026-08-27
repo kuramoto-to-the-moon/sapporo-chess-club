@@ -24,17 +24,19 @@
   --color-dim: #a3a3a3; /* スクロールバー hover・暗色メニューの弱い文字 */
   --color-menu-line: #2a2a2a; /* 暗色メニューの区切り線 */
 
-  /* モーション。カーブは「動く面の大きさ」、尺は「役割」で選ぶ。
-     大きい面(ヘッダー・暗幕)に速い初速を与えると「バン」と鳴るので calm、
-     小さい要素(文字・行)は brisk で前半に動きを寄せる。退場は exit で前のめりに。 */
+  /* モーション。brisk は最初の 1/4 で移動の 8 割を終えるため、ページ入場に
+     使うと動きが読めず点滅にしか見えない (0.28s なら実質 65ms)。入場と
+     大きい面の開閉は calm、操作への即応 (ドロップダウン・押下) だけ brisk。
+     退場は exit で前のめりに。 */
   --ease-calm: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   --ease-brisk: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-exit: cubic-bezier(0.4, 0, 1, 1);
 
-  --dur-base: 0.28s; /* 入場・開き・ヘッダー追従 */
+  --dur-enter: 0.4s; /* ページ入場。読ませる動きなので長く取る */
+  --dur-base: 0.28s; /* 開き・ヘッダー追従 */
   --dur-exit: 0.18s; /* 退場全般 */
   --dur-quick: 0.15s; /* 小さい出入り (ドロップダウン・カード) */
-  --dur-stagger: 0.04s; /* stagger の 1 単位 */
+  --dur-stagger: 0.06s; /* stagger の 1 単位 */
 }
 
 @layer base {
@@ -127,13 +129,13 @@
   opacity: 1;
   transform: translateY(0);
   transition:
-    opacity var(--dur-base) var(--ease-brisk),
-    transform var(--dur-base) var(--ease-brisk);
+    opacity var(--dur-enter) var(--ease-calm),
+    transform var(--dur-enter) var(--ease-calm);
 }
 @starting-style {
   .animate-fade-in-up {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(14px);
   }
 }
 
