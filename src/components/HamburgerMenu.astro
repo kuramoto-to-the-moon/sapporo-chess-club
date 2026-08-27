@@ -48,7 +48,7 @@ const anchors = [
     <div class="w-full max-w-4xl mx-auto flex items-center justify-between px-5 pt-3 pb-2">
       <a
         href={homeHref}
-        class="text-xs tracking-[3px] text-dim [@media(hover:hover)]:hover:text-surface transition-colors duration-150"
+        class="text-xs tracking-[3px] text-dim [@media(hover:hover)]:hover:text-surface"
         aria-label={i.nav.homeLink}
       >
         SAPPORO CHESS CLUB
@@ -71,7 +71,7 @@ const anchors = [
         <a
           href={page.href}
           data-astro-prefetch
-          class="block mb-4 [@media(hover:hover)]:hover:text-white transition-colors duration-150"
+          class="block mb-4 [@media(hover:hover)]:hover:text-white"
           aria-current={page.path === currentPath ? "page" : undefined}
         >
           <span class="text-3xl font-light">{page.label}</span>
@@ -87,7 +87,7 @@ const anchors = [
         {anchors.map((anchor) => (
           <a
             href={anchor.href}
-            class="text-sm text-faint [@media(hover:hover)]:hover:text-surface transition-colors duration-150"
+            class="text-sm text-faint [@media(hover:hover)]:hover:text-surface"
           >
             {anchor.label}
           </a>
@@ -99,7 +99,7 @@ const anchors = [
       <div class="max-w-4xl mx-auto px-5 py-4">
         <a
           href={otherPath}
-          class="flex items-center gap-2.5 text-sm text-faint [@media(hover:hover)]:hover:text-surface transition-colors duration-150"
+          class="flex items-center gap-2.5 text-sm text-faint [@media(hover:hover)]:hover:text-surface"
           aria-label={i.nav.switchLanguage}
           hreflang={otherLocale}
         >
@@ -131,9 +131,9 @@ const anchors = [
     /* 閉じ時のトランジション。display/overlay の尺は .menu-sheet の退場以上に保つこと
        (短いと中身が消え切る前に display:none で切り落とされる)。 */
     transition:
-      opacity var(--dur-exit) var(--ease-exit),
-      overlay var(--dur-exit) var(--ease-exit) allow-discrete,
-      display var(--dur-exit) var(--ease-exit) allow-discrete;
+      opacity var(--dur-quick) var(--ease-exit),
+      overlay var(--dur-quick) var(--ease-exit) allow-discrete,
+      display var(--dur-quick) var(--ease-exit) allow-discrete;
   }
   .hamburger-dialog[open] {
     opacity: 1;
@@ -165,8 +165,8 @@ const anchors = [
     opacity: 0;
     transform: translateY(8px);
     transition:
-      opacity var(--dur-exit) var(--ease-exit),
-      transform var(--dur-exit) var(--ease-exit);
+      opacity var(--dur-quick) var(--ease-exit),
+      transform var(--dur-quick) var(--ease-exit);
   }
   /* 開き: 暗幕と尺を揃え、わずかに遅らせて置く。完全に同時だと黒い全画面と中身が
      一塊で飛び込んで派手になる。段取りが見えると同じ速さでも静かに感じる。 */

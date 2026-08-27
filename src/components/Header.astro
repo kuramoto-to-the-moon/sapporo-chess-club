@@ -23,7 +23,7 @@ const topNavPages = getTopNavPages(locale);
   <div class="max-w-4xl mx-auto flex items-center justify-between px-5 pt-3 pb-2">
     <a
       href={homeHref}
-      class="text-xs tracking-[3px] text-ink [@media(hover:hover)]:hover:text-primary transition-colors duration-150"
+      class="text-xs tracking-[3px] text-ink [@media(hover:hover)]:hover:text-primary"
       aria-label={i.nav.homeLink}
     >
       SAPPORO CHESS CLUB
@@ -33,7 +33,7 @@ const topNavPages = getTopNavPages(locale);
         <a
           href={page.href}
           data-astro-prefetch
-          class="inline-grid justify-items-center text-sm text-sub [@media(hover:hover)]:hover:text-primary transition-colors duration-150 px-3 py-2 -my-2 rounded aria-[current=page]:text-ink aria-[current=page]:font-semibold [@media(hover:hover)]:aria-[current=page]:hover:text-ink"
+          class="inline-grid justify-items-center text-sm text-sub [@media(hover:hover)]:hover:text-primary px-3 py-2 -my-2 rounded aria-[current=page]:text-ink aria-[current=page]:font-semibold [@media(hover:hover)]:aria-[current=page]:hover:text-ink"
           aria-current={currentPath === page.path ? "page" : undefined}
         >
           <span class="[grid-area:1/1]">{page.label}</span>
