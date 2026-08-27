@@ -272,8 +272,9 @@ const checkClass =
     }
   }
 
-  /* 「もっと見る」で現れる過去年 pill。pill は を持つので
-     transition ではなく animation を使う (ユーティリティと衝突しない)。
+  /* 「もっと見る」で現れる過去年 pill。pill は <button> なので globals.css の
+     base ルールが transition-property を持っている。ここで transition を書くと
+     それを上書きして押下の戻りが効かなくなるため animation を使う。
      fill-mode は付けない: アニメが走らないまま描画されても素の可視状態に
      なるだけで、透明のまま残らない */
   @keyframes reveal-year-pill {

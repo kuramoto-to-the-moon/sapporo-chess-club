@@ -170,26 +170,6 @@
   }
 }
 
-/* ページ遷移の白フラッシュを消す。CSS だけで完結させ、JS ルータは入れない
-   (Astro の ClientRouter は PWA まわりの既存の作り込みに影響が大きい)。
-   未対応ブラウザは通常のナビゲーションに戻るだけの純粋な上乗せ。 */
-@media (prefers-reduced-motion: no-preference) {
-  @view-transition {
-    navigation: auto;
-  }
-}
-::view-transition-old(root),
-::view-transition-new(root) {
-  animation-duration: var(--dur-base);
-  animation-timing-function: var(--ease-calm);
-}
-/* 遷移側がクロスフェードを担うので、着地したページの入場アニメは止める。
-   両方走ると新ページが薄いまま滞留して見える */
-:root:active-view-transition .animate-fade-in-up,
-:root:active-view-transition .animate-fade-in {
-  transition: none;
-}
-
 .stagger-1 { transition-delay: var(--dur-stagger); }
 .stagger-2 { transition-delay: calc(var(--dur-stagger) * 2); }
 .stagger-3 { transition-delay: calc(var(--dur-stagger) * 3); }
