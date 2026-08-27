@@ -68,11 +68,14 @@
     transition-duration: var(--dur-quick);
     transition-timing-function: var(--ease-calm);
   }
+  /* 沈みは即時にしないこと。タップは 80ms 程度しかないため、即時に 0.6 まで
+     落として戻すと全幅のボタンでは点滅に見える。短い尺を与えると、速いタップでは
+     途中までしか沈まず自然に和らぎ、押し続けたときだけ深く沈む */
   a:active,
   button:not(:disabled):active,
   [role="button"]:not(:disabled):active {
-    opacity: 0.6;
-    transition-duration: 0s; /* 沈むのは即時、戻りだけ --dur-quick で余韻 */
+    opacity: 0.7;
+    transition-duration: 90ms;
   }
   html {
     /* ヘッダー実高。md 未満はハンバーガー(40px)、md 以上はワードマーク(20px)が
@@ -140,11 +143,12 @@
   }
 }
 
-/* Animation utilities
-   既定を「表示状態」にし、隠れた状態は @starting-style だけに置くこと
-   (HamburgerMenu の .menu-sheet と同じ原則)。keyframes + fill-mode: both は
-   アニメ開始前の opacity: 0 を保持するため、iOS PWA のようにアニメが
-   開始されないまま描画される環境で中身が透明のまま残る。 */
+/* ページ入場。開始状態は html.motion-pending が持つ (BaseLayout の <head> で
+   body 描画前に付与)。@starting-style ではなくクラスで隠しているのは、
+   @starting-style だと通常状態が opacity:1 のため、開始値が適用される前に
+   1 フレーム描かれると「表示 -> 消える -> フェードイン」に見える回があるため。
+   クラスなら最初のフレームから opacity:0 で描かれる。
+   通常状態は opacity:1 のまま = クラスが外れれば必ず表示される。 */
 .animate-fade-in-up {
   opacity: 1;
   transform: translateY(0);
@@ -152,14 +156,14 @@
     opacity var(--dur-enter) var(--ease-calm),
     transform var(--dur-enter) var(--ease-calm);
 }
-@starting-style {
-  .animate-fade-in-up {
-    opacity: 0;
-    transform: translateY(14px);
-  }
+.motion-pending .animate-fade-in-up {
+  opacity: 0;
+  transform: translateY(14px);
 }
 
-/* 年フィルタで hidden が外れた大会カードなど、位置を動かさず出したいもの用 */
+/* 年フィルタで hidden が外れた大会カードなど、位置を動かさず出したいもの用。
+   こちらは display 切替のたびに再生する必要があるので @starting-style のまま
+   (motion-pending は初回しか外れない) */
 .animate-fade-in {
   opacity: 1;
   transition: opacity var(--dur-quick) var(--ease-calm);

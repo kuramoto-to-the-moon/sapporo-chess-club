@@ -44,6 +44,35 @@ const enUrl = new URL(`/en${withTrailingSlash(pagePath)}`, Astro.site).toString(
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
+    {/* 入場アニメの開始状態。<head> で同期実行し、body が描画される前に
+         html.motion-pending を付けることで、中身は最初のフレームから opacity:0 で
+         描かれる (見えている状態が一瞬出てから消える、という二度描きが起きない)。
+
+         隠す責任をアニメーションに持たせないこと。PR #54 で中身が透明のまま
+         残ったのは fill-mode:both でアニメ自身が opacity:0 を保持していたためで、
+         アニメが走らない環境では永久に透明だった。ここではクラスが隠し、
+         クラスを外す経路をアニメーションから独立させて 3 つ用意する:
+           1. rAF x2 — 通常。隠れた状態を 1 フレーム描かせて transition の開始点を作る
+           2. setTimeout — 保険。非表示/凍結中は rAF が止まるがタイマーは動く
+           3. pageshow — 保険。bfcache 復元
+         外れた後の通常状態は opacity:1 なので、最悪でも「アニメ無しで表示」に着地する。
+         スクリプトが動かなければクラス自体が付かず、やはり表示される。 */}
+    <script is:inline>
+      (function () {
+        var el = document.documentElement;
+        el.classList.add("motion-pending");
+        var revealed = false;
+        function reveal() {
+          if (revealed) return;
+          revealed = true;
+          el.classList.remove("motion-pending");
+        }
+        requestAnimationFrame(function () { requestAnimationFrame(reveal); });
+        setTimeout(reveal, 1000);
+        window.addEventListener("pageshow", reveal);
+      })();
+    </script>
+
     {/* Google Analytics 4
          gtag.js (~170KB) は LCP/FCP に不要。load を待って初期表示のネットワークと
          競合させず、さらに idle を待って load 直後の操作に 170KB のパースを
