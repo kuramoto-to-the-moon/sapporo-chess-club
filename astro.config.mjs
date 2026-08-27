@@ -19,12 +19,6 @@ export default defineConfig({
   integrations: [sitemap({ i18n: { defaultLocale: "ja", locales: { ja: "ja-JP", en: "en-US" } } })],
   vite: {
     plugins: [tailwindcss()],
-    build: {
-      // Vite 8 のデフォルトターゲットは -webkit-backdrop-filter を落とすが、
-      // ヘッダーのぼかしを iOS 17 以前でも維持するため prefix を保持させる
-      // (unprefixed backdrop-filter は Safari 18 から)
-      cssTarget: ["chrome111", "safari17", "firefox110"],
-    },
   },
   i18n: {
     locales: ["ja", "en"],

@@ -23,6 +23,18 @@
   --color-faint: #d4d4d4; /* スクロールバー・暗色メニューの前景 */
   --color-dim: #a3a3a3; /* スクロールバー hover・暗色メニューの弱い文字 */
   --color-menu-line: #2a2a2a; /* 暗色メニューの区切り線 */
+
+  /* モーション。カーブは「動く面の大きさ」、尺は「役割」で選ぶ。
+     大きい面(ヘッダー・暗幕)に速い初速を与えると「バン」と鳴るので calm、
+     小さい要素(文字・行)は brisk で前半に動きを寄せる。退場は exit で前のめりに。 */
+  --ease-calm: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-brisk: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-exit: cubic-bezier(0.4, 0, 1, 1);
+
+  --dur-base: 0.28s; /* 入場・開き・ヘッダー追従 */
+  --dur-exit: 0.18s; /* 退場全般 */
+  --dur-quick: 0.15s; /* 小さい出入り (ドロップダウン・カード) */
+  --dur-stagger: 0.04s; /* stagger の 1 単位 */
 }
 
 @layer base {
@@ -30,6 +42,15 @@
   button:not(:disabled),
   [role="button"]:not(:disabled) {
     cursor: pointer;
+  }
+  /* 押下フィードバック。preflight が -webkit-tap-highlight-color: transparent を
+     敷くため、これが無いとタッチでは押下が一切返らない (hover スタイルは
+     hover:hover ゲートでタッチに効かない)。transition は付けない:
+     transition-colors ユーティリティを持つ要素の hover 色送りを潰してしまう */
+  a:active,
+  button:not(:disabled):active,
+  [role="button"]:not(:disabled):active {
+    opacity: 0.6;
   }
   html {
     /* ヘッダー実高。md 未満はハンバーガー(40px)、md 以上はワードマーク(20px)が
@@ -106,20 +127,20 @@
   opacity: 1;
   transform: translateY(0);
   transition:
-    opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity var(--dur-base) var(--ease-brisk),
+    transform var(--dur-base) var(--ease-brisk);
 }
 @starting-style {
   .animate-fade-in-up {
     opacity: 0;
-    transform: translateY(12px);
+    transform: translateY(10px);
   }
 }
 
-/* transform は付けない: <main> に効くと position: fixed の含みブロックが変わる */
+/* 年フィルタで hidden が外れた大会カードなど、位置を動かさず出したいもの用 */
 .animate-fade-in {
   opacity: 1;
-  transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity var(--dur-quick) var(--ease-brisk);
 }
 @starting-style {
   .animate-fade-in {
@@ -127,9 +148,9 @@
   }
 }
 
-.stagger-1 { transition-delay: 0.05s; }
-.stagger-2 { transition-delay: 0.1s; }
-.stagger-3 { transition-delay: 0.15s; }
+.stagger-1 { transition-delay: var(--dur-stagger); }
+.stagger-2 { transition-delay: calc(var(--dur-stagger) * 2); }
+.stagger-3 { transition-delay: calc(var(--dur-stagger) * 3); }
 
 @layer base {
   :focus-visible {
@@ -144,7 +165,11 @@
 @media (prefers-reduced-motion: reduce) {
   * {
     transition-duration: 0.01ms !important;
+    /* delay も潰す。尺だけ 0 にしても stagger や開閉の遅延が残ると、
+       動かないまま順番に待たされるだけになる */
+    transition-delay: 0s !important;
     animation-duration: 0.01ms !important;
+    animation-delay: 0s !important;
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
   }
