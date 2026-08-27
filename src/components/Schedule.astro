@@ -30,7 +30,7 @@ const leadTimes = next?.map((d) => `${d.startTime}–${d.endTime}`) ?? [];
 const uniformTime = leadTimes.every((time) => time === leadTimes[0]);
 ---
 
-<section id="schedule" class="px-5 py-10 border-t border-edge animate-fade-in-up">
+<section id="schedule" class="px-5 py-10 border-t border-edge">
   <SectionHeader label={isTournament ? i.nextEvent.event : i.nextEvent.meeting} />
 
   {lead ? (
