@@ -45,7 +45,10 @@ const [roomNoticeBefore, roomNoticeAfter] = i.clubInfo.roomNotice.split("{link}"
       <SectionHeader label={i.clubInfo.venue} />
       <div class="flex flex-col gap-1 text-sm text-sub">
         <p class="text-ink font-medium">{site.venue.name[locale]}</p>
-        <p>
+        {/* リンクを色だけに頼らせないため、この段落だけ ink。
+             sub(#525252) 地では primary(#2563eb) との差が 1.51:1 しか取れず、
+             ink(#171717) 地なら 3.47:1 で WCAG の 3:1 を満たす */}
+        <p class="text-ink">
           {roomNoticeBefore}<a
             href={scheduleHref}
             class="text-primary [@media(hover:hover)]:hover:underline underline-offset-2"
