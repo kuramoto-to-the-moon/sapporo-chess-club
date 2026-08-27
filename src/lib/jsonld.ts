@@ -127,7 +127,7 @@ export function buildEventsJsonLd(
           price: String(site.fee.general),
           priceCurrency: "JPY",
           availability: "https://schema.org/InStock",
-          url: new URL(locale === "en" ? "/en/schedule" : "/schedule", astroSite).toString(),
+          url: new URL(locale === "en" ? "/en/schedule/" : "/schedule/", astroSite).toString(),
           // Google Rich Results は validFrom を要求する。
           // 見学・当日参加 OK のため、開催日の 1 年前から有効とみなす（告知開始の近似）。
           validFrom: new Date(parseDate(first.date).getTime() - 365 * 24 * 60 * 60 * 1000)
