@@ -184,7 +184,7 @@ const enUrl = new URL(`/en${withTrailingSlash(pagePath)}`, Astro.site).toString(
       {i.nav.skipToMain}
     </a>
     <Header locale={locale} />
-    <main id="main-content" tabindex="-1" class="max-w-4xl w-full mx-auto flex-1 focus:outline-none animate-enter">
+    <main id="main-content" tabindex="-1" class="max-w-4xl w-full mx-auto flex-1 focus:outline-none">
       <slot />
     </main>
     <Footer locale={locale} />

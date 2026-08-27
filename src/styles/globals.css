@@ -36,6 +36,7 @@
   --dur-enter: 0.4s; /* ページ入場。読ませる動きなので長く取る */
   --dur-base: 0.28s; /* 開き・ヘッダー追従 */
   --dur-quick: 0.18s; /* 色送り・小さい出入り・退場 */
+  --dur-stagger: 0.06s; /* stagger の 1 単位 */
 
   /* Tailwind の transition-* ユーティリティの既定もトークンに寄せる。
      これを敷くと duration/ease をクラス側に書く必要がなくなる */
@@ -142,26 +143,22 @@
   }
 }
 
-/* ページ入場。<main> に 1 つだけ付けること。個別の要素に散らさない:
-   一部のブロックだけが半透明で立ち上がると、既に不透明な周囲と混在して
-   「白くモヤつく」ように見える (実際 TOP は 9 セクション中 2 つだけが動いていた)。
-   静止したヘッダーを枠に、中身はひと塊で立ち上がる形にする。
-
-   開始状態は html.motion-pending が持つ (BaseLayout の <head> で body 描画前に付与)。
-   @starting-style を使わないのは、通常状態が opacity:1 のため開始値の適用前に
+/* ページ入場。開始状態は html.motion-pending が持つ (BaseLayout の <head> で
+   body 描画前に付与)。@starting-style ではなくクラスで隠しているのは、
+   @starting-style だと通常状態が opacity:1 のため、開始値が適用される前に
    1 フレーム描かれると「表示 -> 消える -> フェードイン」に見える回があるため。
    クラスなら最初のフレームから opacity:0 で描かれる。
    通常状態は opacity:1 のまま = クラスが外れれば必ず表示される。 */
-.animate-enter {
+.animate-fade-in-up {
   opacity: 1;
   transform: translateY(0);
   transition:
     opacity var(--dur-enter) var(--ease-calm),
     transform var(--dur-enter) var(--ease-calm);
 }
-.motion-pending .animate-enter {
+.motion-pending .animate-fade-in-up {
   opacity: 0;
-  transform: translateY(10px);
+  transform: translateY(14px);
 }
 
 /* 年フィルタで hidden が外れた大会カードなど、位置を動かさず出したいもの用。
@@ -176,6 +173,10 @@
     opacity: 0;
   }
 }
+
+.stagger-1 { transition-delay: var(--dur-stagger); }
+.stagger-2 { transition-delay: calc(var(--dur-stagger) * 2); }
+.stagger-3 { transition-delay: calc(var(--dur-stagger) * 3); }
 
 @layer base {
   :focus-visible {
