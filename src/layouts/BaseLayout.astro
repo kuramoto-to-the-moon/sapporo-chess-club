@@ -45,9 +45,13 @@ const enUrl = new URL(`/en${withTrailingSlash(pagePath)}`, Astro.site).toString(
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
     {/* Google Analytics 4
-         gtag.js (~157KB) は LCP/FCP に不要なので load 完了 + アイドル後に注入し、
-         初期表示のネットワークと競合させない。config は dataLayer に先積みされ、
-         スクリプト到着時にまとめて処理される (page_view も欠けない)。 */}
+         gtag.js (~170KB) は LCP/FCP に不要。load を待って初期表示のネットワークと
+         競合させず、さらに idle を待って load 直後の操作に 170KB のパースを
+         割り込ませない (INP 保護)。
+         timeout は両側から挟まれている: 長くすると発火時刻が読めなくなり、パースが
+         描画完了の途中に落ちる回が出る (実測 Speed Index +1.4s)。短くしすぎると
+         idle を待つ意味が消える。config は dataLayer に先積みされるが、送信は
+         スクリプト到着時なので、待つほど到着前に離脱したセッションを落とす。 */}
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -61,8 +65,8 @@ const enUrl = new URL(`/en${withTrailingSlash(pagePath)}`, Astro.site).toString(
           document.head.appendChild(s);
         }
         function onIdle() {
-          if ('requestIdleCallback' in window) requestIdleCallback(loadGtag, { timeout: 2000 });
-          else setTimeout(loadGtag, 1500);
+          if ('requestIdleCallback' in window) requestIdleCallback(loadGtag, { timeout: 200 });
+          else setTimeout(loadGtag, 200);
         }
         if (document.readyState === 'complete') onIdle();
         else window.addEventListener('load', onIdle);
