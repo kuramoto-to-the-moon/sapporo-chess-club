@@ -30,12 +30,12 @@ const recentOptions: YearOption[] = [allOption, ...yearOptions.slice(0, RECENT_Y
 const olderOptions: YearOption[] = yearOptions.slice(RECENT_YEARS_COUNT);
 
 const pillClass =
-  "inline-flex items-center justify-center min-h-[44px] px-3.5 rounded-md text-sm font-medium transition-colors cursor-pointer " +
+  "inline-flex items-center justify-center min-h-[44px] px-3.5 rounded-md text-sm font-medium cursor-pointer " +
   "aria-[pressed=true]:bg-primary aria-[pressed=true]:text-white " +
   "aria-[pressed=false]:bg-hairline aria-[pressed=false]:text-sub [@media(hover:hover)]:aria-[pressed=false]:hover:bg-edge";
 
 const moreClass =
-  "inline-flex items-center justify-center min-h-[44px] px-3.5 rounded-md text-sm font-medium transition-colors cursor-pointer " +
+  "inline-flex items-center justify-center min-h-[44px] px-3.5 rounded-md text-sm font-medium cursor-pointer " +
   "bg-hairline text-sub [@media(hover:hover)]:hover:bg-edge";
 
 const optionClass =
@@ -63,7 +63,7 @@ const checkClass =
       aria-expanded="false"
       aria-labelledby="year-filter-label year-filter-current"
       aria-controls="year-filter-listbox"
-      class="w-full min-h-[44px] rounded-md border border-edge bg-white px-3 flex items-center justify-between text-sm text-ink cursor-pointer [@media(hover:hover)]:hover:bg-surface transition-colors"
+      class="w-full min-h-[44px] rounded-md border border-edge bg-white px-3 flex items-center justify-between text-sm text-ink cursor-pointer [@media(hover:hover)]:hover:bg-surface"
     >
       <span id="year-filter-current" data-filter-trigger-label>{allOption.label}</span>
       <svg
@@ -262,8 +262,8 @@ const checkClass =
     /* 尺は chevron と同じ --dur-quick。矢印だけ動いて中身が瞬間移動する
        食い違いを消すのが目的なので、両者は同じトークンを参照すること */
     transition:
-      opacity var(--dur-quick) var(--ease-brisk),
-      translate var(--dur-quick) var(--ease-brisk);
+      opacity var(--dur-quick) var(--ease-calm),
+      translate var(--dur-quick) var(--ease-calm);
   }
   @starting-style {
     [data-filter-listbox] {
@@ -272,7 +272,7 @@ const checkClass =
     }
   }
 
-  /* 「もっと見る」で現れる過去年 pill。pill は transition-colors を持つので
+  /* 「もっと見る」で現れる過去年 pill。pill は を持つので
      transition ではなく animation を使う (ユーティリティと衝突しない)。
      fill-mode は付けない: アニメが走らないまま描画されても素の可視状態に
      なるだけで、透明のまま残らない */
@@ -283,6 +283,6 @@ const checkClass =
     }
   }
   [data-filter-pill-collapsed]:not([hidden]) {
-    animation: reveal-year-pill var(--dur-quick) var(--ease-brisk);
+    animation: reveal-year-pill var(--dur-quick) var(--ease-calm);
   }
 </style>

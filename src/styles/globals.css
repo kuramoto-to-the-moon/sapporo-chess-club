@@ -24,19 +24,24 @@
   --color-dim: #a3a3a3; /* スクロールバー hover・暗色メニューの弱い文字 */
   --color-menu-line: #2a2a2a; /* 暗色メニューの区切り線 */
 
-  /* モーション。brisk は最初の 1/4 で移動の 8 割を終えるため、ページ入場に
-     使うと動きが読めず点滅にしか見えない (0.28s なら実質 65ms)。入場と
-     大きい面の開閉は calm、操作への即応 (ドロップダウン・押下) だけ brisk。
-     退場は exit で前のめりに。 */
+  /* モーション。曲線は 2 本だけ。出るもの・動くものは calm、退場は exit。
+     expo-out 系 (前半に動きが偏る曲線) は使わない: 最初の 1/4 で移動の 8 割を
+     終えるため、0.28s でも実質 65ms、0.15s なら 35ms の点滅になり
+     「アニメが付いていない」ようにしか見えない。見せたい動きには使えない。 */
   --ease-calm: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  --ease-brisk: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-exit: cubic-bezier(0.4, 0, 1, 1);
 
+  /* 尺は 3 段。隣り合う段が 1.5 倍前後離れていないと区別が付かず、
+     段を増やしただけで「チグハグ」に見える */
   --dur-enter: 0.4s; /* ページ入場。読ませる動きなので長く取る */
   --dur-base: 0.28s; /* 開き・ヘッダー追従 */
-  --dur-exit: 0.18s; /* 退場全般 */
-  --dur-quick: 0.15s; /* 小さい出入り (ドロップダウン・カード) */
+  --dur-quick: 0.18s; /* 色送り・小さい出入り・退場 */
   --dur-stagger: 0.06s; /* stagger の 1 単位 */
+
+  /* Tailwind の transition-* ユーティリティの既定もトークンに寄せる。
+     これを敷くと duration/ease をクラス側に書く必要がなくなる */
+  --default-transition-duration: var(--dur-quick);
+  --default-transition-timing-function: var(--ease-calm);
 }
 
 @layer base {
@@ -45,14 +50,29 @@
   [role="button"]:not(:disabled) {
     cursor: pointer;
   }
-  /* 押下フィードバック。preflight が -webkit-tap-highlight-color: transparent を
-     敷くため、これが無いとタッチでは押下が一切返らない (hover スタイルは
-     hover:hover ゲートでタッチに効かない)。transition は付けない:
-     transition-colors ユーティリティを持つ要素の hover 色送りを潰してしまう */
+  /* 対話要素の色送りと押下フィードバックをここに集約する。
+     preflight が -webkit-tap-highlight-color: transparent を敷くため、
+     :active が無いとタッチでは押下が一切返らない (hover スタイルは
+     hover:hover ゲートでタッチに効かない)。
+     opacity を transition-property に含めるのが肝: これが無いと押下の戻りが
+     瞬間になり、タッチで明滅して見える。個別に transition-colors を書くと
+     この property 一覧を上書きして opacity が落ちるので、クラス側には書かない */
+  a,
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    transition-property: color, background-color, border-color, outline-color,
+      text-decoration-color, opacity;
+    /* duration/easing も明示すること: property だけ書くと初期値 0s に落ちて
+       色送りも押下の戻りも瞬間になる (--default-transition-* は Tailwind の
+       transition-* ユーティリティ経由でしか効かない) */
+    transition-duration: var(--dur-quick);
+    transition-timing-function: var(--ease-calm);
+  }
   a:active,
   button:not(:disabled):active,
   [role="button"]:not(:disabled):active {
     opacity: 0.6;
+    transition-duration: 0s; /* 沈むのは即時、戻りだけ --dur-quick で余韻 */
   }
   html {
     /* ヘッダー実高。md 未満はハンバーガー(40px)、md 以上はワードマーク(20px)が
@@ -142,12 +162,32 @@
 /* 年フィルタで hidden が外れた大会カードなど、位置を動かさず出したいもの用 */
 .animate-fade-in {
   opacity: 1;
-  transition: opacity var(--dur-quick) var(--ease-brisk);
+  transition: opacity var(--dur-quick) var(--ease-calm);
 }
 @starting-style {
   .animate-fade-in {
     opacity: 0;
   }
+}
+
+/* ページ遷移の白フラッシュを消す。CSS だけで完結させ、JS ルータは入れない
+   (Astro の ClientRouter は PWA まわりの既存の作り込みに影響が大きい)。
+   未対応ブラウザは通常のナビゲーションに戻るだけの純粋な上乗せ。 */
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition {
+    navigation: auto;
+  }
+}
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: var(--dur-base);
+  animation-timing-function: var(--ease-calm);
+}
+/* 遷移側がクロスフェードを担うので、着地したページの入場アニメは止める。
+   両方走ると新ページが薄いまま滞留して見える */
+:root:active-view-transition .animate-fade-in-up,
+:root:active-view-transition .animate-fade-in {
+  transition: none;
 }
 
 .stagger-1 { transition-delay: var(--dur-stagger); }

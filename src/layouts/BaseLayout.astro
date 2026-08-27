@@ -184,7 +184,7 @@ const enUrl = new URL(`/en${withTrailingSlash(pagePath)}`, Astro.site).toString(
           type="button"
           data-lang-pill-close
           aria-label={i.nav.close}
-          class="relative flex items-center justify-center w-7 h-7 rounded-full text-white [@media(hover:hover)]:hover:bg-white/15 cursor-pointer bg-transparent border-0 transition-colors duration-150 before:content-[''] before:absolute before:-inset-2"
+          class="relative flex items-center justify-center w-7 h-7 rounded-full text-white [@media(hover:hover)]:hover:bg-white/15 cursor-pointer bg-transparent border-0 before:content-[''] before:absolute before:-inset-2"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M18 6 6 18" />
@@ -201,8 +201,8 @@ const enUrl = new URL(`/en${withTrailingSlash(pagePath)}`, Astro.site).toString(
         translate: -50% 0;
         opacity: 1;
         transition:
-          opacity var(--dur-base) var(--ease-brisk),
-          translate var(--dur-base) var(--ease-brisk),
+          opacity var(--dur-base) var(--ease-calm),
+          translate var(--dur-base) var(--ease-calm),
           display var(--dur-base) allow-discrete;
       }
       #lang-pill[hidden] {
