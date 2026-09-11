@@ -119,22 +119,20 @@ export function buildEventsJsonLd(
         name: i.site.name,
         url: "https://sapporochessclub.com",
       },
-      // 中止した回に参加枠は無いので offers ごと落とす。
-      // InStock のまま残すと eventStatus: EventCancelled と矛盾する。
-      ...(cancelled ? {} : {
-        offers: {
-          "@type": "Offer",
-          price: String(site.fee.general),
-          priceCurrency: "JPY",
-          availability: "https://schema.org/InStock",
-          url: new URL(locale === "en" ? "/en/schedule/" : "/schedule/", astroSite).toString(),
-          // Google Rich Results は validFrom を要求する。
-          // 見学・当日参加 OK のため、開催日の 1 年前から有効とみなす（告知開始の近似）。
-          validFrom: new Date(parseDate(first.date).getTime() - 365 * 24 * 60 * 60 * 1000)
-            .toISOString()
-            .slice(0, 10),
-        },
-      }),
+      offers: {
+        "@type": "Offer",
+        price: String(site.fee.general),
+        priceCurrency: "JPY",
+        // offers を落とすと GSC が「offers がありません」警告を出す。
+        // 中止回は InStock だと eventStatus: EventCancelled と矛盾するので SoldOut。
+        availability: cancelled ? "https://schema.org/SoldOut" : "https://schema.org/InStock",
+        url: new URL(locale === "en" ? "/en/schedule/" : "/schedule/", astroSite).toString(),
+        // Google Rich Results は validFrom を要求する。
+        // 見学・当日参加 OK のため、開催日の 1 年前から有効とみなす（告知開始の近似）。
+        validFrom: new Date(parseDate(first.date).getTime() - 365 * 24 * 60 * 60 * 1000)
+          .toISOString()
+          .slice(0, 10),
+      },
       performer: {
         "@type": "SportsTeam",
         name: i.site.name,
