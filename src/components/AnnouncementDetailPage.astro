@@ -42,6 +42,7 @@ const canonicalUrl = new URL(
 ).toString();
 const articleJsonLd = buildNewsArticleJsonLd({
   locale,
+  contentLocale: locale === "en" && entry.data.bodyEn ? "en" : "ja",
   title,
   description,
   date: entry.data.date,
@@ -79,7 +80,7 @@ const breadcrumbJsonLd = buildBreadcrumbJsonLd([
       {title}
     </h1>
 
-    <div class="mt-8 prose prose-neutral max-w-none animate-fade-in-up stagger-3">
+    <div lang={locale === "en" && entry.data.bodyEn ? "en" : "ja"} class="mt-8 prose prose-neutral max-w-none animate-fade-in-up stagger-3">
       {locale === "ja" || !enBodyHtml ? (
         <Content />
       ) : (

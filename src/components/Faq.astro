@@ -1,0 +1,27 @@
+---
+import SectionHeader from "@/components/SectionHeader.astro";
+import { t, type Locale } from "@/i18n";
+import { getFaqItems } from "@/lib/faq";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const i = t(locale);
+const items = getFaqItems(locale);
+---
+
+<section id="faq" class="px-5 py-10">
+  <SectionHeader label={i.faq.label} />
+  <dl class="divide-y divide-edge text-sm">
+    {items.map((item) => (
+      <div id={`faq-${item.id}`} class="py-6 first:pt-0 last:pb-0">
+        <dt class="text-base font-medium text-ink leading-relaxed">{item.question}</dt>
+        <dd class="mt-2 max-w-xl space-y-1 text-sub leading-[1.8]">
+          {item.answer.split("\n").map((paragraph) => <p>{paragraph}</p>)}
+        </dd>
+      </div>
+    ))}
+  </dl>
+</section>

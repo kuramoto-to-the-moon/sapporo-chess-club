@@ -10,6 +10,7 @@ import ClubInfo from "@/components/ClubInfo.astro";
 import ChessLessons from "@/components/ChessLessons.astro";
 import Resources from "@/components/Resources.astro";
 import Contact from "@/components/Contact.astro";
+import Faq from "@/components/Faq.astro";
 import { t, type Locale } from "@/i18n";
 import { buildWebsiteJsonLd, buildClubJsonLd } from "@/lib/jsonld";
 
@@ -46,6 +47,7 @@ const clubJsonLd = buildClubJsonLd(locale, site, Astro.site);
   <About locale={locale} />
   <Activities locale={locale} />
   <ClubInfo locale={locale} />
+  <Faq locale={locale} />
 
   <ChessLessons locale={locale} />
   <Resources locale={locale} />

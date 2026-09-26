@@ -33,15 +33,14 @@ export function startOfTodayJST(): Date {
 
 /**
  * "2026-04-15" のような date 文字列から曜日を返す。
- * JST のカレンダー日として解釈し、locale に応じた短縮表記を返す。
- * 例: ja → "日" / "月" / "火" ..., en → "Sun" / "Mon" / "Tue" ...
+ * JST のカレンダー日として解釈し、locale に応じた曜日表記を返す。
+ * 既定は短縮形 (日 / Sun)。width="long" は 日曜日 / Sunday。
  */
-export function getDayOfWeek(s: string, locale: "ja" | "en"): string {
+export function getDayOfWeek(s: string, locale: "ja" | "en", width: "short" | "long" = "short"): string {
   const fmt = new Intl.DateTimeFormat(locale === "ja" ? "ja-JP" : "en-US", {
     timeZone: "Asia/Tokyo",
-    weekday: "short",
+    weekday: width,
   });
-  // "月曜日" → "月" のため ja は 1 文字に切り詰める (Intl の ja-JP short は "月" を返すので実質そのまま)
   return fmt.format(parseDate(s));
 }
 

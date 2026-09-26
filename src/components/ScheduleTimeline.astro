@@ -1,8 +1,9 @@
 ---
 import { t, type Locale } from "@/i18n";
-import { getDateParts } from "@/lib/date";
-import { groupScheduleDates, type ScheduleDate } from "@/lib/schedule";
+import { getDateParts, getDayOfWeek, parseDate } from "@/lib/date";
+import { groupScheduleDates, type ScheduleDate, type ScheduleGroup } from "@/lib/schedule";
 import ScheduleEventBody from "@/components/ScheduleEventBody.astro";
+import SectionHeader from "@/components/SectionHeader.astro";
 
 interface Props {
   /** 表示する日程（呼び出し側でフィルタ済みを渡す） */
@@ -25,14 +26,23 @@ for (const group of groupScheduleDates(dates)) {
   if (!monthMap.has(key)) monthMap.set(key, []);
   monthMap.get(key)!.push(group);
 }
-const groupedByMonth = Array.from(monthMap.entries()).map(([key, groups]) => ({ key, groups }));
+const groupedByMonth = Array.from(monthMap.entries()).map(([key, groups]) => {
+  // 同じ日に始まる例会と大会は、日付を共有して並べる。
+  const dayMap = new Map<string, ScheduleGroup[]>();
+  for (const group of groups) {
+    const date = group[0].date;
+    if (!dayMap.has(date)) dayMap.set(date, []);
+    dayMap.get(date)!.push(group);
+  }
+  return { key, days: Array.from(dayMap.entries()) };
+});
 
 function formatMonthHeading(monthKey: string): string {
   const [year, month] = monthKey.split("-");
   if (locale === "ja") {
     return `${year}${i.schedule.yearSuffix} ${parseInt(month)}${i.schedule.monthSuffix}`;
   }
-  const d = new Date(`${monthKey}-01T00:00:00+09:00`);
+  const d = parseDate(`${monthKey}-01`);
   return new Intl.DateTimeFormat("en-US", {
     timeZone: "Asia/Tokyo",
     year: "numeric",
@@ -46,15 +56,23 @@ function formatMonthHeading(monthKey: string): string {
 )}
 
 <div class="flex flex-col gap-8">
-  {groupedByMonth.map(({ key, groups }) => (
+  {groupedByMonth.map(({ key, days }) => (
     <div>
-      <h2 class="text-sm font-semibold tracking-wider text-muted mb-3 pb-2 border-b border-edge">
-        {formatMonthHeading(key)}
-      </h2>
+      <SectionHeader label={formatMonthHeading(key)} variant="group" />
       <ul class="flex flex-col">
-        {groups.map((group) => (
-          <li class="py-5 border-b border-hairline last:border-0">
-            <ScheduleEventBody group={group} locale={locale} />
+        {days.map(([date, groups]) => (
+          <li class="grid grid-cols-[3.5rem_minmax(0,1fr)] gap-4 py-5 border-b border-hairline last:border-0 sm:grid-cols-[6.25rem_minmax(0,1fr)] sm:gap-5">
+            <time datetime={date} class="block pt-0.5">
+              <span class="block text-xl font-bold leading-7 tabular-nums text-ink">{String(getDateParts(date).day).padStart(2, "0")}</span>
+              <span class="block mt-0.5 text-2xs text-muted">{getDayOfWeek(date, locale, "long")}</span>
+            </time>
+            <ul class="min-w-0">
+              {groups.map((group) => (
+                <li class="mt-4 pt-4 border-t border-hairline first:mt-0 first:pt-0 first:border-0">
+                  <ScheduleEventBody group={group} locale={locale} />
+                </li>
+              ))}
+            </ul>
           </li>
         ))}
       </ul>

@@ -1,7 +1,14 @@
 import type { CollectionEntry } from "astro:content";
-import { t, type Locale } from "@/i18n";
-import { parseDate } from "@/lib/date";
+import { t, getLocalePath, type Locale } from "@/i18n";
 import { getEventName, groupScheduleDates, type ScheduleDate } from "@/lib/schedule";
+
+const CLUB_ID = "https://sapporochessclub.com/#club";
+const WEBSITE_ID = "https://sapporochessclub.com/#website";
+
+/** HTML 内の script 終端として解釈されないようにする。 */
+function serializeJsonLd(value: unknown): string {
+  return JSON.stringify(value).replace(/</g, "\\u003c");
+}
 
 type SiteData = CollectionEntry<"site">["data"];
 
@@ -12,12 +19,14 @@ type SiteData = CollectionEntry<"site">["data"];
  */
 export function buildWebsiteJsonLd(locale: Locale): string {
   const i = t(locale);
-  return JSON.stringify({
+  return serializeJsonLd({
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": WEBSITE_ID,
+    publisher: { "@id": CLUB_ID },
     name: i.site.name,
     alternateName: i.site.alternateName,
-    url: "https://sapporochessclub.com",
+    url: "https://sapporochessclub.com/",
     inLanguage: locale === "ja" ? "ja-JP" : "en-US",
   });
 }
@@ -27,17 +36,18 @@ export function buildClubJsonLd(locale: Locale, site: SiteData, astroSite: URL |
   const i = t(locale);
   const clubLogoUrl = new URL("/icon-512.png", astroSite).toString();
   const clubImageUrl = new URL("/images/og.webp", astroSite).toString();
-  return JSON.stringify({
+  return serializeJsonLd({
     "@context": "https://schema.org",
     "@type": "SportsClub",
+    "@id": CLUB_ID,
     name: i.site.name,
     alternateName: i.site.alternateName,
     description: i.site.description,
-    url: "https://sapporochessclub.com",
+    url: "https://sapporochessclub.com/",
     logo: clubLogoUrl,
     image: clubImageUrl,
     sport: "Chess",
-    foundingDate: "1990",
+    // 本文で確認できるのは「1990年代」。設立年を推測して出力しない。
     sameAs: ["https://x.com/SapporoChess"],
     ...(site.email && { email: site.email }),
     address: {
@@ -88,7 +98,7 @@ export function buildEventsJsonLd(
   const groups = groupScheduleDates(tournaments);
   if (groups.length === 0) return null;
 
-  return JSON.stringify(groups.map((group) => {
+  return serializeJsonLd(groups.map((group) => {
     const first = group[0];
     const last = group[group.length - 1];
     const name = getEventName(first, locale);
@@ -99,8 +109,11 @@ export function buildEventsJsonLd(
       "@context": "https://schema.org",
       "@type": "Event",
       name,
-      startDate: `${first.date}T${first.startTime}:00+09:00`,
-      endDate: `${last.date}T${last.endTime}:00+09:00`,
+      ...(first.announcementSlug && {
+        url: new URL(getLocalePath(locale, `/announcements/${first.announcementSlug}/`), astroSite).toString(),
+      }),
+      startDate: first.startTime ? `${first.date}T${first.startTime}:00+09:00` : first.date,
+      endDate: last.endTime ? `${last.date}T${last.endTime}:00+09:00` : last.date,
       description: `${name} — ${site.venue.name[locale]}`,
       image: ogImage,
       location: {
@@ -116,27 +129,11 @@ export function buildEventsJsonLd(
       },
       organizer: {
         "@type": "SportsClub",
+        "@id": CLUB_ID,
         name: i.site.name,
-        url: "https://sapporochessclub.com",
+        url: "https://sapporochessclub.com/",
       },
-      offers: {
-        "@type": "Offer",
-        price: String(site.fee.general),
-        priceCurrency: "JPY",
-        // offers を落とすと GSC が「offers がありません」警告を出す。
-        // 中止回は InStock だと eventStatus: EventCancelled と矛盾するので SoldOut。
-        availability: cancelled ? "https://schema.org/SoldOut" : "https://schema.org/InStock",
-        url: new URL(locale === "en" ? "/en/schedule/" : "/schedule/", astroSite).toString(),
-        // Google Rich Results は validFrom を要求する。
-        // 見学・当日参加 OK のため、開催日の 1 年前から有効とみなす（告知開始の近似）。
-        validFrom: new Date(parseDate(first.date).getTime() - 365 * 24 * 60 * 60 * 1000)
-          .toISOString()
-          .slice(0, 10),
-      },
-      performer: {
-        "@type": "SportsTeam",
-        name: i.site.name,
-      },
+      // 大会別の料金・受付開始・空席は未管理。例会料金や推定値を流用しない。
       eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
       eventStatus: cancelled
         ? "https://schema.org/EventCancelled"
@@ -152,6 +149,7 @@ export function buildEventsJsonLd(
  */
 export function buildNewsArticleJsonLd(args: {
   locale: Locale;
+  contentLocale?: Locale;
   title: string;
   description: string;
   /** frontmatter の date ("YYYY-MM-DD") */
@@ -159,31 +157,34 @@ export function buildNewsArticleJsonLd(args: {
   canonicalUrl: string;
   astroSite: URL | undefined;
 }): string {
-  const { locale, title, description, date, canonicalUrl, astroSite } = args;
+  const { locale, contentLocale = locale, title, description, date, canonicalUrl, astroSite } = args;
   const i = t(locale);
   const ogImage = new URL("/images/og.webp", astroSite).toString();
   const datePublishedIso = `${date}T00:00:00+09:00`;
-  return JSON.stringify({
+  return serializeJsonLd({
     "@context": "https://schema.org",
     "@type": "NewsArticle",
+    "@id": `${canonicalUrl}#article`,
     headline: title,
     description,
     datePublished: datePublishedIso,
-    dateModified: datePublishedIso,
-    inLanguage: locale === "ja" ? "ja-JP" : "en-US",
+    // 更新日を管理していないため、公開日を更新日と見なさない。
+    inLanguage: contentLocale === "ja" ? "ja-JP" : "en-US",
     isAccessibleForFree: true,
     image: [ogImage],
     url: canonicalUrl,
     mainEntityOfPage: { "@type": "WebPage", "@id": canonicalUrl },
     author: {
-      "@type": "Organization",
+      "@type": "SportsClub",
+      "@id": CLUB_ID,
       name: i.site.name,
-      url: "https://sapporochessclub.com",
+      url: "https://sapporochessclub.com/",
     },
     publisher: {
-      "@type": "Organization",
+      "@type": "SportsClub",
+      "@id": CLUB_ID,
       name: i.site.name,
-      url: "https://sapporochessclub.com",
+      url: "https://sapporochessclub.com/",
       logo: {
         "@type": "ImageObject",
         url: new URL("/icon-512.png", astroSite).toString(),

@@ -90,6 +90,9 @@ export default {
     moreYears: "More years",
     roomSuffix: "",
     roomTbd: "TBD",
+    timeLabel: "Time",
+    roomLabel: "Room",
+    timeTbd: "TBD",
     yearSuffix: "",
     monthSuffix: "",
     recordsLabel: "Past event records",
@@ -107,6 +110,21 @@ export default {
     // {link} は checkSchedule のリンクに置換される
     roomNotice: "The room varies by {link}.",
     checkSchedule: "schedule",
+  },
+  faq: {
+    label: "FAQ",
+    belongings: {
+      question: "What should I bring to a meetup?",
+      answer: "Please bring a notepad and a pen to record your moves when playing.",
+    },
+    lateArrival: {
+      question: "Can I join a meetup late?",
+      answer: "You can join from any round.",
+    },
+  },
+  aiGuide: {
+    freshness: "See the schedule for dates, times, rooms, and cancellations, and each tournament announcement and regulations for entry requirements. Past news and tournament records do not describe upcoming events. All times are Japan Standard Time (JST, UTC+09:00).",
+    pages: "Official pages",
   },
   lessons: {
     label: "Chess Lessons",

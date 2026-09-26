@@ -83,12 +83,15 @@ export function pickDescription(entry: Announcement, locale: Locale, maxLen = 20
     ? entry.data.bodyEn
     : (entry.body ?? "");
   const plain = stripMarkdown(raw);
+  // 画像のみの告知でも空の description を出さない。
+  if (!plain) return pickTitle(entry, locale);
   return plain.length > maxLen ? plain.slice(0, maxLen) + "..." : plain;
 }
 
 /** Markdown 記法を除去してプレーンテキストにする */
 function stripMarkdown(md: string): string {
   return md
+    .replace(/<[^>]*>/g, " ")
     .replace(/^#{1,6}\s+/gm, "")
     .replace(/!\[.*?\]\(.*?\)/g, "")
     .replace(/\[([^\]]*)\]\(.*?\)/g, "$1")

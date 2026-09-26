@@ -76,6 +76,9 @@ export default {
     moreYears: "もっと見る",
     roomSuffix: "室",
     roomTbd: "未定",
+    timeLabel: "時間",
+    roomLabel: "部屋",
+    timeTbd: "未定",
     yearSuffix: "年",
     monthSuffix: "月",
     recordsLabel: "終了したイベントの記録",
@@ -93,6 +96,21 @@ export default {
     // {link} は checkSchedule のリンクに置換される
     roomNotice: "部屋は{link}により異なります。",
     checkSchedule: "スケジュール",
+  },
+  faq: {
+    label: "よくある質問",
+    belongings: {
+      question: "例会に必要な持ち物は？",
+      answer: "対局の記録用に、メモ用紙と筆記用具をお持ちください。",
+    },
+    lateArrival: {
+      question: "途中からでも参加できますか？",
+      answer: "どのラウンドからでも参加できます。",
+    },
+  },
+  aiGuide: {
+    freshness: "日程・時刻・部屋・中止情報はスケジュール、各大会の参加条件は大会のお知らせ・要項を確認してください。過去のお知らせ・大会記録は現在の開催予定ではありません。時刻は日本標準時（JST、UTC+09:00）です。",
+    pages: "公式ページ",
   },
   lessons: {
     label: "チェス講座",

@@ -29,6 +29,7 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - run: pnpm check
       - run: pnpm build
+      - run: pnpm check:search
 
       # ビルドが通っても「挙動不変」の保証はメジャーには無いので、
       # minor / patch のみ自動マージ。メジャーは PR を残して人間レビュー。

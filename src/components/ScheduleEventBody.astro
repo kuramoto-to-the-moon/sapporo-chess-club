@@ -1,7 +1,7 @@
 ---
 import { t, getLocalePath, type Locale } from "@/i18n";
-import { getEventName, formatRoomLabel, pickNote, type ScheduleGroup } from "@/lib/schedule";
-import { formatMonthDay, getDateParts, getDayOfWeek } from "@/lib/date";
+import { getEventName, formatRoomLabel, pickNote, type ScheduleDate, type ScheduleGroup } from "@/lib/schedule";
+import { formatMonthDay, getDayOfWeek } from "@/lib/date";
 import ExternalLinkIcon from "@/components/ExternalLinkIcon.astro";
 
 interface Props {
@@ -12,82 +12,81 @@ interface Props {
 
 const { group, locale } = Astro.props;
 const i = t(locale);
-
 const first = group[0];
 const last = group[group.length - 1];
 const isRange = group.length > 1;
 const cancelled = first.cancelled === true;
-
-const dayOnly = (d: string) => String(getDateParts(d).day);
-const startLabel = dayOnly(first.date);
-// 月をまたぐレンジは終端にも月を出す。同月なら日だけで足りる。
-const sameMonth = getDateParts(first.date).month === getDateParts(last.date).month;
-const endLabel = sameMonth ? dayOnly(last.date) : formatMonthDay(last.date);
-
-const weekday = isRange
-  ? `${getDayOfWeek(first.date, locale)}–${getDayOfWeek(last.date, locale)}`
-  : getDayOfWeek(first.date, locale);
-
-const roomLabel = formatRoomLabel(first, locale);
-const times = group.map((d) => `${d.startTime}–${d.endTime}`);
-const uniformTime = times.every((time) => time === times[0]);
 const note = pickNote(first, locale);
+
+const formatTime = (date: ScheduleDate) =>
+  [date.startTime, date.endTime].filter(Boolean).join("–") || i.schedule.timeTbd;
+const uniformTime = group.every((date) => formatTime(date) === formatTime(first));
+const uniformRoom = group.every((date) => date.room === first.room);
+// 時刻や部屋が日によって変わる大会は、日付を添えて各日を表示する。
+const perDay = !uniformTime || !uniformRoom;
+const sessions = perDay ? group : [first];
 ---
 
-<p class="flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
-  {/* datetime は範囲を表せないので、レンジは time 要素を 2 つに分ける */}
-  <span class={`tabular-nums text-xl font-bold ${cancelled ? "text-muted" : "text-ink"}`}>
-    <time datetime={first.date}>{startLabel}</time>{isRange && (
-      <>–<time datetime={last.date}>{endLabel}</time></>
-    )}<span class="ml-1 text-xs font-normal text-muted">({weekday})</span>
-  </span>
-  {cancelled && (
-    <span class="text-2xs font-semibold tracking-wide text-sub bg-hairline border border-edge rounded px-1.5 py-0.5">
-      {i.badge.cancelledTag}
-    </span>
-  )}
-</p>
+{(cancelled || isRange) && (
+  <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-1.5 text-2xs text-muted">
+    {cancelled && (
+      <span class="text-sub bg-surface border border-edge rounded-md px-1.5 py-0.5">
+        {i.badge.cancelledTag}
+      </span>
+    )}
+    {isRange && (
+      <span class="inline-flex flex-wrap items-baseline gap-x-1 tabular-nums">
+        {/* datetime は範囲を表せないので、開始日と終了日を分ける。 */}
+        <time datetime={first.date}>{formatMonthDay(first.date)} ({getDayOfWeek(first.date, locale)})</time>
+        <span>–</span>
+        <time datetime={last.date}>{formatMonthDay(last.date)} ({getDayOfWeek(last.date, locale)})</time>
+      </span>
+    )}
+  </div>
+)}
 
-<p class="flex flex-wrap items-baseline gap-x-3 gap-y-1 mt-1 text-sm">
+<p class="text-sm font-semibold">
   {first.announcementSlug ? (
     <a
       href={getLocalePath(locale, `/announcements/${first.announcementSlug}`)}
       data-astro-prefetch
-      class={`font-semibold underline-offset-2 [@media(hover:hover)]:hover:underline ${cancelled ? "text-muted line-through" : "text-primary"}`}
+      class={`underline-offset-2 [@media(hover:hover)]:hover:underline ${cancelled ? "text-muted" : "text-primary"}`}
     >
-      {/* SR の「リンク一覧」読みはバッジ span を読まないため、リンク名にも中止状態を含める */}
+      {/* リンク単独でも中止状態が伝わるようにする。 */}
       {cancelled && <span class="sr-only">{i.badge.cancelledTag}: </span>}
       {getEventName(first, locale)}
     </a>
   ) : (
-    <span class={`font-semibold ${cancelled ? "text-muted line-through" : "text-ink"}`}>
-      {getEventName(first, locale)}
-    </span>
-  )}
-  {/* 中止した回の部屋と時刻は行き先の無い情報なので出さない */}
-  {!cancelled && (
-    <span class="inline-flex items-baseline gap-x-3">
-      <span class="text-ink">{roomLabel}</span>
-      {uniformTime && <span class="text-muted">{times[0]}</span>}
-    </span>
+    <span class={cancelled ? "text-muted" : "text-ink"}>{getEventName(first, locale)}</span>
   )}
 </p>
 
-{!cancelled && !uniformTime && (
-  <p class="text-xs text-muted mt-1 tabular-nums">
-    {group.map((d, index) => (
-      <>
-        {index > 0 && <span class="inline-block w-3"></span>}
-        {getDayOfWeek(d.date, locale)} {d.startTime}–{d.endTime}
-      </>
+{/* 中止した回の部屋と時刻は行き先の無い情報なので出さない。 */}
+{!cancelled && (
+  <div class="mt-1 flex flex-col gap-1.5">
+    {sessions.map((date) => (
+      <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1">
+        {perDay && (
+          <time datetime={date.date} class="text-2xs text-muted tabular-nums">
+            {formatMonthDay(date.date)} ({getDayOfWeek(date.date, locale)})
+          </time>
+        )}
+        <dl class="flex flex-wrap items-baseline gap-x-5 gap-y-1 text-xs text-sub tabular-nums">
+          <div class="inline-flex items-baseline gap-2">
+            <dt class="text-2xs text-muted">{i.schedule.timeLabel}</dt>
+            <dd class="whitespace-nowrap">{formatTime(date)}</dd>
+          </div>
+          <div class="inline-flex items-baseline gap-2">
+            <dt class="text-2xs text-muted">{i.schedule.roomLabel}</dt>
+            <dd>{formatRoomLabel(date, locale)}</dd>
+          </div>
+        </dl>
+      </div>
     ))}
-  </p>
+  </div>
 )}
 
-{/* 中止理由も部屋・時刻の注意も同じ「注意書き」なので同じ形式で出す */}
-{note && (
-  <p class="text-xs text-sub mt-1.5 pl-3 border-l-2 border-edge">{note}</p>
-)}
+{note && <p class="text-xs text-muted mt-2 leading-relaxed">{note}</p>}
 
 {first.chessResults && (
   <p class="mt-1.5">
