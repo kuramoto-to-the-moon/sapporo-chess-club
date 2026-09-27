@@ -27,15 +27,11 @@ export function initListbox(config: ListboxConfig): void {
   const maxHeightRem = config.maxHeightRem ?? 20;
   const bottomMarginRem = config.bottomMarginRem ?? 1;
 
-  const rem = parseFloat(getComputedStyle(document.documentElement).fontSize);
   const isOpen = () => !listbox.hidden;
 
   function open(opts: { focusSelected: boolean } = { focusSelected: false }) {
-    // ドロップダウンが画面下を突き抜けないよう max-height を動的計算
-    const rect = trigger.getBoundingClientRect();
-    const available = window.innerHeight - rect.bottom - bottomMarginRem * rem;
-    listbox.style.maxHeight = `${Math.min(maxHeightRem * rem, available)}px`;
     listbox.hidden = false;
+    positionListbox();
     trigger.setAttribute("aria-expanded", "true");
     if (chevron instanceof HTMLElement || chevron instanceof SVGElement) {
       chevron.style.transform = "rotate(180deg)";
@@ -48,6 +44,28 @@ export function initListbox(config: ListboxConfig): void {
       (selected ?? options[0])?.focus();
     }
   }
+
+  function positionListbox() {
+    const rem = parseFloat(getComputedStyle(document.documentElement).fontSize);
+    const rect = trigger.getBoundingClientRect();
+    const viewport = window.visualViewport;
+    const bottom = viewport ? viewport.offsetTop + viewport.height : window.innerHeight;
+    const gap = parseFloat(getComputedStyle(listbox).marginTop) || 0;
+    const available = bottom - rect.bottom - gap - bottomMarginRem * rem;
+    listbox.style.maxHeight = `${Math.max(0, Math.min(maxHeightRem * rem, available))}px`;
+  }
+
+  // Fold 開閉・画面回転・ブラウザー UI の伸縮に追従する。
+  function onResize() {
+    if (!isOpen()) return;
+    if (!trigger.getClientRects().length) {
+      close();
+      return;
+    }
+    positionListbox();
+  }
+  window.addEventListener("resize", onResize);
+  window.visualViewport?.addEventListener("resize", onResize);
 
   function close() {
     listbox.hidden = true;

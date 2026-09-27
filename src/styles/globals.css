@@ -80,13 +80,13 @@
   html {
     /* ヘッダー実高。md 未満はハンバーガー(40px)、md 以上はワードマーク(20px)が
        高さを決めるため値が変わる。ズレるとアンカー先が隠れる */
-    scroll-padding-top: 61px;
+    scroll-padding-top: calc(61px + env(safe-area-inset-top, 0px));
     scrollbar-color: var(--color-faint) transparent;
     scrollbar-gutter: stable;
   }
   @media (width >= 48rem) {
     html {
-      scroll-padding-top: 45px;
+      scroll-padding-top: calc(45px + env(safe-area-inset-top, 0px));
     }
   }
   /* 組版: 見出しは行長バランス、本文は行末孤立語などを防ぐ。未対応ブラウザは無視するだけ */
@@ -199,4 +199,18 @@
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* viewport-fit=cover の表示領域でも、ノッチとホームインジケーターを避ける。
+   dialog は top-layer に出るため body とは別に余白を持たせる。 */
+body {
+  padding-left: env(safe-area-inset-left, 0px);
+  padding-right: env(safe-area-inset-right, 0px);
+  overflow-wrap: anywhere;
+}
+#site-header {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+body > footer {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
 }

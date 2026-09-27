@@ -95,7 +95,7 @@ const anchors = [
       </div>
     </nav>
 
-    <div class="border-t border-menu-line [@media(display-mode:standalone)]:pb-[env(safe-area-inset-bottom)]">
+    <div class="border-t border-menu-line">
       <div class="max-w-4xl mx-auto px-5 py-4">
         <a
           href={otherPath}
@@ -156,6 +156,8 @@ const anchors = [
     /* 暗幕を敷いてから中身を置くまでの間。完全に同時だと黒い全画面と中身が
        一塊で飛び込んで派手になる */
     --dur-sheet-delay: 0.06s;
+    padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px)
+      env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
     opacity: 1;
     transform: translateY(0);
   }
@@ -243,10 +245,20 @@ const anchors = [
 
     openBtn.addEventListener("click", openMenu);
 
+    // 回転・Fold の開閉でナビが切り替わったらモーダル状態を解除する。
+    // ブレークポイントの数値を JS に複製せず、実際のトリガー表示で判定する。
+    window.addEventListener("resize", () => {
+      if (dialog.open && !openBtn.getClientRects().length) closeInstant();
+    });
+
     // close: トリガーへフォーカス復帰 (ESC の a11y)
     dialog.addEventListener("close", () => {
       openBtn.setAttribute("aria-expanded", "false");
-      openBtn.focus({ preventScroll: true });
+      // Fold 展開後など、トリガーが非表示ならデスクトップ側へ戻す。
+      const focusTarget = openBtn.getClientRects().length
+        ? openBtn
+        : document.querySelector<HTMLAnchorElement>("#site-header nav a");
+      focusTarget?.focus({ preventScroll: true });
     });
 
     // dialog 内クリックのデリゲート処理
