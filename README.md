@@ -49,6 +49,7 @@ pnpm preview  # 本番ビルドをローカルプレビュー
 
 - **[AGENTS.md](./AGENTS.md)** — コード規約 (i18n・日付・デザイントークン・共有コンポーネント索引)。AI エージェント向けだが人間にも有効
 - **[docs/operations.md](./docs/operations.md)** — 非エンジニア向けの日常更新手順
+- **[docs/ownership-handover.md](./docs/ownership-handover.md)** — 管理者移譲時の設定・確認手順
 - **[docs/headroom-design.md](./docs/headroom-design.md)** — hide-on-scroll ヘッダーの設計判断 (触る前に必読)
 
 ## ライセンス
