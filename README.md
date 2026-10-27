@@ -23,7 +23,7 @@ pnpm preview  # 本番ビルドをローカルプレビュー
 
 ## コンテンツ更新
 
-通常運用は **[Pages CMS](https://app.pagescms.org/kuramoto-to-the-moon/sapporo-chess-club/main)** から行います。日常の編集手順は **[docs/operations.md](./docs/operations.md)** を参照。
+通常運用は **[Pages CMS](https://app.pagescms.org/moom98/sapporo-chess-club/main)** から行います。日常の編集手順は **[docs/operations.md](./docs/operations.md)** を参照。
 
 直接編集する場合の主なパス:
 

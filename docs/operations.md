@@ -2,7 +2,7 @@
 
 非エンジニア向けの日常更新手順をまとめています。
 
-すべての編集は **[Pages CMS](https://app.pagescms.org/kuramoto-to-the-moon/sapporo-chess-club/main)** から行います。GitHub アカウントとリポジトリへの招待が必要です。
+すべての編集は **[Pages CMS](https://app.pagescms.org/moom98/sapporo-chess-club/main)** から行います。GitHub アカウントと対象リポジトリへのアクセス権が必要です。新管理者は `moom98` でログインしてください。
 
 ---
 
